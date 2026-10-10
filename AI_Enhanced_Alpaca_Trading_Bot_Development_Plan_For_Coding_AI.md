@@ -694,6 +694,14 @@ Volume >= 0
 
 Bad data can create fake backtest performance.
 
+### Initial validation policy
+
+The initial implementation is for regular-session US equities. Candle timestamps must include an explicit timezone offset; internally they are normalized to UTC. `app/data/market_calendar.py` obtains scheduled sessions from Alpaca's calendar endpoint, so weekends, market holidays, early closes, and normal session boundaries are not guessed from a weekday-only rule. Alpaca intraday bars are clock-aligned (for example, an hourly bar during a 09:30 ET opening is timestamped 10:00 ET); daily bars are timestamped at midnight New York time. The validator uses those conventions when determining the expected candles.
+
+A candle outside a scheduled regular session, or an absent candle that should exist inside a scheduled session at the configured timeframe, is a hard validation error. No gap is filled, fabricated, or silently ignored. Structural problems (invalid/missing timestamp, duplicate symbol/timestamp, missing/non-numeric OHLCV, non-positive prices, invalid OHLC, and negative volume) are hard errors too.
+
+Zero volume and unusual positive volume are warnings. The initial anomaly threshold is configurable and defaults to more than ten times the symbol's positive median volume. This does not automatically reject a candle because legitimate high-volume events exist; strategies and monitoring can decide how to respond later.
+
 ---
 
 # 12. Phase 5 — SQLite Database

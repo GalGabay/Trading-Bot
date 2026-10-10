@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
@@ -18,7 +18,7 @@ from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
 from alpaca.trading.enums import QueryOrderStatus
-from alpaca.trading.requests import GetOrdersRequest, OrderRequest
+from alpaca.trading.requests import GetCalendarRequest, GetOrdersRequest, OrderRequest
 from dotenv import load_dotenv
 
 
@@ -89,6 +89,10 @@ class AlpacaClient:
         """Return all paper orders, including closed and canceled orders."""
         request = GetOrdersRequest(status=QueryOrderStatus.ALL)
         return self._trading.get_orders(filter=request)
+
+    def get_market_calendar(self, *, start: date, end: date) -> list[Any]:
+        """Return Alpaca's exchange sessions for the inclusive date range."""
+        return self._trading.get_calendar(GetCalendarRequest(start=start, end=end))
 
     def submit_order(self, order: OrderRequest) -> Any:
         """Submit an Alpaca order request to the paper account."""

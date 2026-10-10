@@ -13,12 +13,12 @@ dist/
 build/
 
 # Local runtime state and research artifacts
-data/
-logs/
+/data/
+/logs/
 *.db
 *.sqlite
 *.sqlite3
-models/
+/models/
 
 # Editor / OS files
 .vscode/
