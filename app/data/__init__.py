@@ -8,5 +8,6 @@ from app.data.market_data import (
     ValidationIssue,
     validate_candles,
 )
+from app.data.database import DataStorageError, TradingDatabase
 
-__all__ = ["CandleValidationError", "CandleValidationReport", "MarketDataService", "ValidationConfig", "ValidationIssue", "validate_candles"]
+__all__ = ["CandleValidationError", "CandleValidationReport", "DataStorageError", "MarketDataService", "TradingDatabase", "ValidationConfig", "ValidationIssue", "validate_candles"]

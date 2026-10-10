@@ -787,6 +787,12 @@ confidence
 
 The database should allow the entire trading decision history to be reconstructed later.
 
+### Initial SQLite implementation
+
+Use `app/data/database.py` with a local database path of `data/trading_bot.sqlite3` by default. The database file is machine-specific and must remain outside Git. Schema initialization is idempotent and records its schema version. The initial schema creates the tables listed above, while the initial repository API writes and reads candles only; later phases add repository methods for orders, fills, signals, features, and events when those modules exist.
+
+Store timestamps as canonical UTC ISO-8601 text. Candles are uniquely identified by timestamp, symbol, and timeframe. Candle upserts must be parameterized and atomic: a corrected source candle may update the same identity, but a batch containing invalid data must not partially write. Calendar-aware validation happens in the market-data service before persistence; the database repeats structural validation as a defensive check and never fills or fabricates missing values.
+
 ---
 
 # 13. Phase 6 — Feature Engineering
