@@ -5,13 +5,14 @@ roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`
 
 ## Current progress
 
-Phases 0–9 are implemented: centralized paper-only Alpaca access, validated
+Phases 0–10 are implemented: centralized paper-only Alpaca access, validated
 market data, SQLite persistence, technical features, a deterministic strategy,
-and a single-symbol historical backtester with cost scenarios, metrics, and
-expanding-year walk-forward evaluation.
+single-symbol historical backtesting and walk-forward evaluation, and a
+standalone risk-decision module.
 
 The project does not submit orders. `Signal` objects are recommendations only;
-risk, portfolio, and order execution are later phases.
+the risk gate does not call a broker. Portfolio state and order execution are
+later phases.
 
 ## Local setup on Windows
 
@@ -36,6 +37,7 @@ environments are excluded from Git.
 - `app/data/`: normalized market data, exchange-calendar validation, SQLite
 - `app/ai/`: technical feature calculations
 - `app/strategy/`: strategy contract and `trend_following_v1`
+- `app/risk/`: standalone risk decisions for proposed trades
 - `backtesting/`: local simulation, metrics, and dataset research commands
 - `tests/`: unit tests with no broker calls
 
@@ -113,6 +115,27 @@ define a future-return label separately, split chronologically, fit and tune
 on older windows only, and compare the model against this rule-based baseline
 on later unseen windows. Train on the Windows PC; deploy only a small inference
 artifact to the Pi. No ML training command exists yet.
+
+## Phase 10 risk gate
+
+`app/risk/risk_manager.py` evaluates a proposed whole-share BUY or a
+risk-reducing SELL using a complete, recent, long-only portfolio snapshot. A
+BUY must include a conservative estimated execution price and a stop price
+below it; the stop distance estimates initial risk but cannot guarantee the
+actual loss. Decisions contain reason codes and the exact policy limits used.
+Unknown, stale, or inconsistent account state is rejected. A future paper
+workflow must pass the actual evaluation time so a fresh account snapshot
+fetched after the signal can be used. Sector and
+volatility checks are available when trustworthy metadata is supplied.
+
+The provisional defaults mirror the plan's research examples: 70% maximum
+gross exposure, 10% per position, 1% initial risk per trade, and 3% daily
+loss. The module also defaults to a 10% drawdown ceiling, seven positions, and
+a five-minute snapshot and signal age. Sector and volatility ceilings are disabled by
+default. These numbers are unapproved placeholders; choose or accept your
+preferred limits before the risk gate is connected to paper-order submission.
+This module is not yet wired into the backtester or an order workflow, so the
+historical reports above do not reflect these risk checks.
 
 ## Cross-platform operation
 

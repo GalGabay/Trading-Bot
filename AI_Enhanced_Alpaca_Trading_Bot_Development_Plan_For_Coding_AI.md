@@ -1206,6 +1206,21 @@ The coding AI can implement and test the risk policy with clearly documented,
 configurable defaults. Before connecting it to any paper-order workflow, ask
 the project owner to choose or explicitly accept their preferred risk limits.
 
+### Initial Phase 10 implementation
+
+`app/risk/risk_manager.py` is a pure, long-only gate over a proposed whole-share
+trade and a complete, recent portfolio snapshot. It returns structured approval
+or rejection reasons and the exact limits used; it never sends orders. BUY
+checks include available cash, gross exposure, single-position exposure,
+number of positions, estimated loss to a required stop, daily loss, and
+drawdown. A risk-reducing SELL may pass after a loss threshold, but cannot
+exceed the current holding. Unknown, stale, duplicate, or inconsistent position
+state is rejected. Sector and annualized-volatility checks are optional until
+reliable metadata exists. The 70%/10%/1%/3% examples are provisional defaults;
+10% maximum drawdown, seven positions, and five-minute snapshot and signal ages are also
+provisional. A stop is an initial loss estimate, not a guarantee of execution
+at that price. This module is not yet connected to backtesting or paper orders.
+
 ---
 
 # 23. Position Sizing
@@ -3422,7 +3437,7 @@ For each completed milestone, record:
 - ...
 ```
 
-## Phases 0–9 and historical research / 2026-10-16
+## Phases 0–10 and historical research / 2026-10-16
 
 ### Implemented
 - Paper-only Alpaca client, calendar-aware market-data validation, and SQLite audit storage.
@@ -3431,12 +3446,13 @@ For each completed milestone, record:
 - Single-symbol backtesting with causal feature access, next-candle fills, configurable fees/spread/slippage, equity, drawdown, and the Section 17 metrics.
 - A historical downloader with feed/adjustment provenance, checksum manifest, strict interval review, and a local three-scenario backtest command.
 - Expanding-year walk-forward calibration of a declared strategy threshold grid, with later-year evaluation kept separate from parameter selection.
+- Standalone, fail-closed risk decisions for proposed trades with configurable exposure, loss, drawdown, position-count, optional sector, and volatility gates.
 
 ### Files changed
 - `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
-- 53 unit tests pass on Windows, covering the broker wrapper, validation, storage, features, strategy, simulation, metrics, dataset integrity, and walk-forward boundaries and selection.
+- 53 unit tests passed on Windows before Phase 10, covering the broker wrapper, validation, storage, features, strategy, simulation, metrics, dataset integrity, and walk-forward boundaries and selection. Phase 10 has not yet had new automated tests.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3446,10 +3462,10 @@ For each completed milestone, record:
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- The current backtester handles one symbol and one long position; multi-symbol portfolios, a separate risk policy, point-in-time historical universes, and ML training remain unimplemented.
+- The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Implement Phase 10 risk management with configurable limits; request the owner's preferred limits before any paper-order integration. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Implement Phase 11 portfolio state and reconciliation, then connect the risk policy when paper-order orchestration exists. Request the owner's preferred risk limits before that connection. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 
