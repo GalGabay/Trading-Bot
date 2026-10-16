@@ -37,6 +37,7 @@ environments are excluded from Git.
 - `app/ai/`: technical feature calculations
 - `app/strategy/`: strategy contract and `trend_following_v1`
 - `app/risk/`: standalone risk decisions for proposed trades
+- `config/risk_limits.example.json`: unapproved paper-risk configuration template
 - `app/portfolio/`: paper-account snapshots and reconciliation
 - `backtesting/`: local simulation, metrics, and dataset research commands
 - `tests/`: unit tests with no broker calls
@@ -136,6 +137,16 @@ default. These numbers are unapproved placeholders; choose or accept your
 preferred limits before the risk gate is connected to paper-order submission.
 This module is not yet wired into the backtester or an order workflow, so the
 historical reports above do not reflect these risk checks.
+
+Sections 23 and 24 are implemented as standalone safeguards:
+`app/risk/position_sizing.py` proposes whole-share BUY quantities under stop
+risk, position, exposure, cash, and optional sector limits;
+`app/risk/kill_switch.py` stores a persistent emergency stop in a separate
+SQLite file. A missing or unreadable kill-switch state denies new orders.
+Neither module submits or closes positions. Future Phase 12 orchestration must
+call both safeguards before paper orders. See [the risk-limit guide](docs/risk_limits.md)
+for the meaning of each percentage and how to record your decision in the
+tracked `config/risk_limits.json` file once you choose your limits.
 
 ## Phase 11 portfolio reconciliation
 

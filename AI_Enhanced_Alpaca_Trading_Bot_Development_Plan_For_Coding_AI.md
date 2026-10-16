@@ -1258,6 +1258,14 @@ available_cash
 
 The final size is the smallest amount permitted by all constraints.
 
+### Initial implementation
+
+`app/risk/position_sizing.py` calculates a whole-share BUY proposal from
+planned stop loss per share, then applies the single-position, gross-exposure,
+available-cash, and optional sector caps. It validates a one-share candidate
+and the final quantity through `RiskManager`. No order is sent. A stop fill is
+not guaranteed; the stop-distance risk is an estimate.
+
 ---
 
 # 24. Kill Switch
@@ -1286,6 +1294,17 @@ STOP NEW ORDERS
 Optionally close positions only according to a separately designed emergency policy.
 
 The default behavior should be conservative.
+
+### Initial implementation
+
+`app/risk/kill_switch.py` stores a latched emergency stop in its own SQLite
+file. Missing or unreadable state denies new orders. It can trip on an API
+failure streak, invalid reconciled account state, daily loss, drawdown, or an
+explicit event such as data-quality failure, model unavailability, database
+corruption, or duplicate-order detection failure. Only an explicit operator
+reset with a note clears it. It never liquidates positions. Phase 12 must
+check the latch immediately before every paper order; there is no order
+submission workflow yet.
 
 ---
 
@@ -2818,6 +2837,14 @@ ai:
 
 This allows controlled experimentation without editing application code.
 
+For the current paper-risk gate, `config/risk_limits.example.json` is the
+machine-readable template and `app/risk/config.py` requires a reviewed
+`config/risk_limits.json` with `approved_for_paper: true` before paper
+execution. JSON is used here to avoid adding a YAML dependency; the broader
+YAML example above remains a future configuration target. The actual risk
+limits file should be committed so Windows and Raspberry Pi use the same
+reviewed policy. API credentials remain only in each machine's `.env` file.
+
 ---
 
 # 66. Separation of Concerns
@@ -3478,8 +3505,7 @@ For each completed milestone, record:
 - `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `app/risk/`, `app/portfolio/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
-- 65 unit tests pass on Windows, including 12 focused Phase 10 risk-gate tests for approvals, limit failures, stale and inconsistent state, reducing exits, and optional sector/volatility checks.
-- Focused Phase 11 reconciliation tests have not yet been added or run.
+- 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3493,7 +3519,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Add focused Phase 11 unit tests, then implement Phase 12 order management. Ask the owner to choose or accept risk limits before any paper-order workflow connects to the risk gate. A complete fill/activity ledger is required for realized P&L. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Implement Phase 12 order management. Ask the owner to choose or accept risk limits in `config/risk_limits.json` before any paper-order workflow connects to the risk gate. Phase 12 must also require a healthy, explicitly reset kill switch and a complete reconciled account snapshot before submission. A complete fill/activity ledger is required for realized P&L. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 
