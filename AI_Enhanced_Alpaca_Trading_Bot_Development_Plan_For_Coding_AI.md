@@ -3385,6 +3385,30 @@ For each completed milestone, record:
 - ...
 ```
 
+## Phases 0–7 / 2026-10-16
+
+### Implemented
+- Paper-only Alpaca client, calendar-aware market-data validation, and SQLite audit storage.
+- Deterministic `technical_v1` features and `trend_following_v1` strategy with a reusable strategy interface.
+- Append-only signal recording for reproducible decisions.
+
+### Files changed
+- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `tests/`, `requirements.txt`, and `README.md`.
+
+### Tests
+- 32 unit tests pass on the Windows development PC.
+
+### Validation
+- Read-only Alpaca historical-data and calendar checks passed during Phase 4.
+- No order has been submitted, modified, or canceled by this implementation.
+
+### Known limitations
+- The project has not yet run its automated tests on Raspberry Pi OS.
+- No backtesting, risk, portfolio, order-management, or paper-order workflow exists yet.
+
+### Next step
+- Implement Phase 8 backtesting with next-candle execution, costs, and slippage.
+
 # Important Handoff Rule
 
 This document describes the **target system and development roadmap**. It does not mean every component should exist immediately.

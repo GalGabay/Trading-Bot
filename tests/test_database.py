@@ -9,6 +9,7 @@ import pandas as pd
 
 from app.data.database import DataStorageError, TradingDatabase
 from app.data.market_data import CandleValidationError
+from app.strategy.base import Signal, SignalAction
 
 
 def candle_frame() -> pd.DataFrame:
@@ -93,3 +94,23 @@ class TradingDatabaseTests(TestCase):
         finally:
             connection.close()
         self.assertIn('"rsi_14": 56.0', row[0])
+
+    def test_signal_is_recorded_as_an_append_only_audit_event(self) -> None:
+        signal = Signal(
+            symbol="aapl", action=SignalAction.HOLD, confidence=0.75,
+            reason="HOLD: volume ratio is not above 1.",
+            timestamp=pd.Timestamp("2026-01-02T16:00:00Z").to_pydatetime(),
+            strategy="trend_following_v1",
+        )
+        first_id = self.database.record_signal(signal)
+        second_id = self.database.record_signal(signal)
+        self.assertLess(first_id, second_id)
+        connection = sqlite3.connect(self.database_path)
+        try:
+            rows = connection.execute("SELECT symbol, signal, score, reason FROM signals ORDER BY id").fetchall()
+        finally:
+            connection.close()
+        self.assertEqual(rows, [
+            ("AAPL", "HOLD", 0.75, "HOLD: volume ratio is not above 1."),
+            ("AAPL", "HOLD", 0.75, "HOLD: volume ratio is not above 1."),
+        ])

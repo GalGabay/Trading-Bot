@@ -15,6 +15,7 @@ from pathlib import Path
 import pandas as pd
 
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
+from app.strategy.base import Signal
 
 SCHEMA_VERSION = 1
 
@@ -247,6 +248,30 @@ class TradingDatabase:
                 records,
             )
         return len(records)
+
+    def record_signal(self, signal: Signal) -> int:
+        """Append an immutable strategy decision to the audit trail.
+
+        Signals are deliberately recorded by the application/backtest caller,
+        rather than inside a strategy. That preserves the strategy's ability
+        to run without SQLite while ensuring each consumed decision can be
+        reconstructed later.
+        """
+        self.initialize()
+        with self._connection() as connection:
+            cursor = connection.execute(
+                """INSERT INTO signals (timestamp, symbol, strategy, signal, score, reason)
+                VALUES (?, ?, ?, ?, ?, ?)""",
+                (
+                    self._timestamp_text(signal.timestamp),
+                    signal.symbol.strip().upper(),
+                    signal.strategy,
+                    str(signal.action),
+                    signal.confidence,
+                    signal.reason,
+                ),
+            )
+        return int(cursor.lastrowid)
 
     @staticmethod
     def _timestamp_text(value: object) -> str:
