@@ -988,6 +988,14 @@ The backtester should simulate:
 
 Do not assume every order fills at the exact close price.
 
+### Initial backtesting implementation
+
+Implement the initial engine in `backtesting/engine.py`. It backtests one symbol at a time using validated candles and causal features. At each candle close, the strategy sees only feature rows through that completed candle. A BUY or SELL signal becomes a pending market order and can only fill at the following candle's open. A signal on the final candle remains unfilled and is recorded as such; no price is fabricated.
+
+The initial engine uses whole shares, tracks cash, one long position, simulated fills, fees, slippage, equity, and drawdown. Its initial position-size constraint is 10% of current equity per entry. Fee and slippage assumptions are explicit scenario inputs: the default commission is zero and default adverse slippage is 5 basis points. These are not claims about broker pricing and must be varied in later cost/stress scenarios. The engine is intentionally single-symbol until portfolio management and risk management exist.
+
+The result is an immutable audit record containing every generated signal, simulated fill, equity point, and skipped/unfilled-order event. No part of the engine connects to Alpaca or submits an order.
+
 ---
 
 # 17. Backtesting Metrics
@@ -3385,18 +3393,19 @@ For each completed milestone, record:
 - ...
 ```
 
-## Phases 0–7 / 2026-10-16
+## Phases 0–8 / 2026-10-16
 
 ### Implemented
 - Paper-only Alpaca client, calendar-aware market-data validation, and SQLite audit storage.
 - Deterministic `technical_v1` features and `trend_following_v1` strategy with a reusable strategy interface.
 - Append-only signal recording for reproducible decisions.
+- Single-symbol backtesting with causal feature access, next-candle fills, configurable fees/slippage, equity, and drawdown tracking.
 
 ### Files changed
-- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `tests/`, `requirements.txt`, and `README.md`.
+- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
-- 32 unit tests pass on the Windows development PC.
+- 39 unit tests pass on the Windows development PC.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3404,10 +3413,10 @@ For each completed milestone, record:
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- No backtesting, risk, portfolio, order-management, or paper-order workflow exists yet.
+- The current backtester handles one symbol and one long position; multi-symbol portfolios, risk policy, performance metrics, and walk-forward validation remain unimplemented.
 
 ### Next step
-- Implement Phase 8 backtesting with next-candle execution, costs, and slippage.
+- Define and run transaction-cost scenarios, add performance metrics, then implement walk-forward validation before relying on any backtest result.
 
 # Important Handoff Rule
 
