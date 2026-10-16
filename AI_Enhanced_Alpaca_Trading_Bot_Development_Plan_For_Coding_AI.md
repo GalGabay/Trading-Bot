@@ -898,6 +898,10 @@ This strategy is not expected to be "the best strategy."
 
 Its purpose is to validate the architecture.
 
+### Initial Strategy V1 implementation
+
+Implement `app/strategy/strategy_v1.py` as `trend_following_v1`. It evaluates one symbol's latest completed feature row and proposes `BUY` only when close is above EMA200, EMA20 is above EMA50, RSI14 is between 50 and 70 inclusive, and volume ratio is strictly above 1.0. Every other result is `HOLD`, including incomplete indicator warm-up data. It must state the failed condition(s) in its reason and must not submit orders, size positions, or decide exits. Thresholds are explicit configuration values and may be changed later through application configuration.
+
 ---
 
 # 15. Strategy Interface
@@ -937,6 +941,10 @@ Later:
 REDUCE
 CLOSE
 ```
+
+### Initial interface implementation
+
+Implement the generic `Strategy` interface in `app/strategy/base.py`. `generate_signal(market_data, portfolio)` receives features for exactly one symbol and returns an immutable `Signal` containing symbol, action, confidence from 0 to 1, reason, timezone-aware timestamp, and strategy name. The initial strategy does not use the portfolio argument because position sizing, risk decisions, exits, and order submission belong to later phases. This interface lets the backtester and future strategies use one stable contract without coupling a strategy to Alpaca or SQLite.
 
 ---
 
