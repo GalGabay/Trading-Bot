@@ -102,10 +102,20 @@ class MarketDataTests(TestCase):
 
     def test_missing_scheduled_candle_is_rejected(self) -> None:
         self.assert_error(
-            candles().iloc[[0]], "missing_candles", calendar=StaticCalendar([friday_session()]),
+            candles().iloc[[0]], "unobserved_intervals", calendar=StaticCalendar([friday_session()]),
+            config=ValidationConfig(require_all_scheduled_bars=True),
             requested_start=datetime(2026, 1, 2, 15, 0, tzinfo=UTC),
             requested_end=datetime(2026, 1, 2, 16, 0, tzinfo=UTC),
         )
+
+    def test_unobserved_interval_is_warning_without_complete_feed_assumption(self) -> None:
+        report = validate_candles(
+            candles().iloc[[0]], calendar=StaticCalendar([friday_session()]),
+            requested_start=datetime(2026, 1, 2, 15, 0, tzinfo=UTC),
+            requested_end=datetime(2026, 1, 2, 16, 0, tzinfo=UTC),
+        )
+        self.assertEqual(report.time_gaps, 1)
+        self.assertIn("unobserved_intervals", {issue.code for issue in report.warnings})
 
     def test_holiday_or_weekend_gap_is_not_a_missing_candle(self) -> None:
         short_friday = TradingSession(
@@ -119,7 +129,7 @@ class MarketDataTests(TestCase):
         self.assertEqual(report.time_gaps, 0)
 
     def test_outside_regular_session_is_rejected(self) -> None:
-        outside = candles(["2026-01-02T14:00:00Z"])
+        outside = candles(["2026-01-02T13:00:00Z"])
         self.assert_error(outside, "outside_market_session", calendar=StaticCalendar([friday_session()]))
 
     def test_impossible_ohlc_and_zero_price_are_rejected(self) -> None:
@@ -134,6 +144,11 @@ class MarketDataTests(TestCase):
         invalid = candles()
         invalid.loc[0, "volume"] = -1
         self.assert_error(invalid, "negative_volume")
+
+    def test_infinite_price_is_rejected(self) -> None:
+        invalid = candles()
+        invalid.loc[0, "high"] = float("inf")
+        self.assert_error(invalid, "invalid_ohlcv")
 
     def test_zero_and_anomalous_volume_are_warnings(self) -> None:
         frame = candles()

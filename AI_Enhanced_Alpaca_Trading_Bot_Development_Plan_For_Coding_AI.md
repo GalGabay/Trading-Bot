@@ -696,9 +696,9 @@ Bad data can create fake backtest performance.
 
 ### Initial validation policy
 
-The initial implementation is for regular-session US equities. Candle timestamps must include an explicit timezone offset; internally they are normalized to UTC. `app/data/market_calendar.py` obtains scheduled sessions from Alpaca's calendar endpoint, so weekends, market holidays, early closes, and normal session boundaries are not guessed from a weekday-only rule. Alpaca intraday bars are clock-aligned (for example, an hourly bar during a 09:30 ET opening is timestamped 10:00 ET); daily bars are timestamped at midnight New York time. The validator uses those conventions when determining the expected candles.
+The initial implementation is for regular-session US equities. Candle timestamps must include an explicit timezone offset; internally they are normalized to UTC. `app/data/market_calendar.py` obtains scheduled sessions from Alpaca's calendar endpoint, so weekends, market holidays, early closes, and normal session boundaries are not guessed from a weekday-only rule. Alpaca intraday bars are clock-aligned (an hourly bar can start at 09:00 ET and overlap the 09:30 ET opening); daily bars are timestamped at midnight New York time. The validator uses those conventions when determining the expected candles. Use 15-minute bars for the first regular-session research run to avoid the mixed premarket/opening hourly bar.
 
-A candle outside a scheduled regular session, or an absent candle that should exist inside a scheduled session at the configured timeframe, is a hard validation error. No gap is filled, fabricated, or silently ignored. Structural problems (invalid/missing timestamp, duplicate symbol/timestamp, missing/non-numeric OHLCV, non-positive prices, invalid OHLC, and negative volume) are hard errors too.
+A candle outside the selected regular-session bar timestamps is a hard validation error. An unobserved scheduled interval is a warning by default because Alpaca can omit bars when no qualifying trades occur; strict completeness can be requested explicitly. The historical research downloader stops when such intervals appear so they can be investigated. No gap is filled or fabricated. Structural problems (invalid/missing timestamp, duplicate symbol/timestamp, missing, non-numeric, or infinite OHLCV, non-positive prices, invalid OHLC, and negative volume) are hard errors.
 
 Zero volume and unusual positive volume are warnings. The initial anomaly threshold is configurable and defaults to more than ten times the symbol's positive median volume. This does not automatically reject a candle because legitimate high-volume events exist; strategies and monitoring can decide how to respond later.
 
@@ -900,7 +900,7 @@ Its purpose is to validate the architecture.
 
 ### Initial Strategy V1 implementation
 
-Implement `app/strategy/strategy_v1.py` as `trend_following_v1`. It evaluates one symbol's latest completed feature row and proposes `BUY` only when close is above EMA200, EMA20 is above EMA50, RSI14 is between 50 and 70 inclusive, and volume ratio is strictly above 1.0. Every other result is `HOLD`, including incomplete indicator warm-up data. It must state the failed condition(s) in its reason and must not submit orders, size positions, or decide exits. Thresholds are explicit configuration values and may be changed later through application configuration.
+Implement `app/strategy/strategy_v1.py` as `trend_following_v1`. It evaluates one symbol's latest completed feature row and proposes `BUY` only when close is above EMA200, EMA20 is above EMA50, RSI14 is between 50 and 70 inclusive, and volume ratio is strictly above 1.0. With an open position, close below EMA50 or EMA20 below EMA50 proposes `SELL`; otherwise it holds. Incomplete indicator warm-up data produces `HOLD`. It must state the reasons and must not submit orders or size positions. Thresholds are explicit configuration values and may be changed later through application configuration.
 
 ---
 
@@ -944,7 +944,7 @@ CLOSE
 
 ### Initial interface implementation
 
-Implement the generic `Strategy` interface in `app/strategy/base.py`. `generate_signal(market_data, portfolio)` receives features for exactly one symbol and returns an immutable `Signal` containing symbol, action, confidence from 0 to 1, reason, timezone-aware timestamp, and strategy name. The initial strategy does not use the portfolio argument because position sizing, risk decisions, exits, and order submission belong to later phases. This interface lets the backtester and future strategies use one stable contract without coupling a strategy to Alpaca or SQLite.
+Implement the generic `Strategy` interface in `app/strategy/base.py`. `generate_signal(market_data, portfolio)` receives features for exactly one symbol and returns an immutable `Signal` containing symbol, action, confidence from 0 to 1, reason, timezone-aware timestamp, and strategy name. The initial strategy reads only whether a position is open to propose a simple trend-reversal exit. Position sizing, risk decisions, and order submission belong to later phases. This interface lets the backtester and future strategies use one stable contract without coupling a strategy to Alpaca or SQLite.
 
 ---
 
@@ -992,7 +992,7 @@ Do not assume every order fills at the exact close price.
 
 Implement the initial engine in `backtesting/engine.py`. It backtests one symbol at a time using validated candles and causal features. At each candle close, the strategy sees only feature rows through that completed candle. A BUY or SELL signal becomes a pending market order and can only fill at the following candle's open. A signal on the final candle remains unfilled and is recorded as such; no price is fabricated.
 
-The initial engine uses whole shares, tracks cash, one long position, simulated fills, fees, slippage, equity, and drawdown. Its initial position-size constraint is 10% of current equity per entry. Fee and slippage assumptions are explicit scenario inputs: the default commission is zero and default adverse slippage is 5 basis points. These are not claims about broker pricing and must be varied in later cost/stress scenarios. The engine is intentionally single-symbol until portfolio management and risk management exist.
+The initial engine uses whole shares, tracks cash, one long position, simulated fills, fees, spread, slippage, equity, and drawdown. Its initial position-size constraint is 10% of current equity per entry. Cost assumptions are explicit scenario inputs: the default commission is zero, adverse slippage is 5 basis points, and quoted spread is 2 basis points (half charged on each side). These are research assumptions, not claims about broker pricing. The engine is intentionally single-symbol until portfolio management and risk management exist. An explicit trade window can include earlier candles for indicator warm-up without trading them.
 
 The result is an immutable audit record containing every generated signal, simulated fill, equity point, and skipped/unfilled-order event. No part of the engine connects to Alpaca or submits an order.
 
@@ -1028,6 +1028,8 @@ Average Holding Period
 
 A strategy with high return but catastrophic drawdown may be unusable.
 
+Implemented in `backtesting/metrics.py`. Portfolio returns and drawdown include an open position marked at the latest close; win rate, profit factor, and trade statistics include only completed buy/sell pairs net of fees and price costs. Undefined measures are returned as `None`. The intraday annualization factor is explicit: 6,552 periods for 15-minute bars, 1,764 for hourly bars, and 252 for daily bars in the initial runner. CAGR uses elapsed calendar time. These factors are approximations and short samples can make annualized figures unstable.
+
 ---
 
 # 18. Avoid Look-Ahead Bias
@@ -1060,6 +1062,8 @@ Next realistic execution
 
 Look-ahead bias can make a terrible strategy look excellent.
 
+Implemented guardrails: features are causal, only rows through the evaluated candle reach the strategy, signal symbol/timestamp must match that candle, and fills use the following bar's open. The research window uses older bars only for indicator warm-up. This does not replace a future walk-forward test or protect against repeated human tuning on the holdout years.
+
 ---
 
 # 19. Avoid Survivorship Bias
@@ -1075,6 +1079,8 @@ A robust research system should eventually account for:
 - corporate actions
 - splits
 - mergers
+
+The current runner labels every report `single_symbol_case_study` and states that survivorship and universe-selection bias are unresolved. One currently known stock cannot prove a universe-level edge. A genuine universe test requires point-in-time constituent membership, delisted symbols, and corporate-action histories from a suitable historical source. Do not claim this bias is solved until those data and a multi-symbol portfolio backtester exist.
 
 ---
 
@@ -1102,6 +1108,8 @@ Pessimistic
 ```
 
 A strategy that works only under optimistic assumptions is not robust.
+
+Implemented in `backtesting/engine.py` and `backtesting/research.py`: adverse spread and slippage adjust the next-open fill on each side, commission is charged per fill, and optimistic/base/pessimistic scenarios rerun the same dataset. No historical bid/ask quotes, market-impact model, latency distribution, or partial-fill model exists yet; the configurable assumptions approximate those costs.
 
 ---
 
@@ -3393,30 +3401,32 @@ For each completed milestone, record:
 - ...
 ```
 
-## Phases 0–8 / 2026-10-16
+## Phases 0–8 and historical research / 2026-10-16
 
 ### Implemented
 - Paper-only Alpaca client, calendar-aware market-data validation, and SQLite audit storage.
 - Deterministic `technical_v1` features and `trend_following_v1` strategy with a reusable strategy interface.
 - Append-only signal recording for reproducible decisions.
-- Single-symbol backtesting with causal feature access, next-candle fills, configurable fees/slippage, equity, and drawdown tracking.
+- Single-symbol backtesting with causal feature access, next-candle fills, configurable fees/spread/slippage, equity, drawdown, and the Section 17 metrics.
+- A historical downloader with feed/adjustment provenance, checksum manifest, strict interval review, and a local three-scenario backtest command.
 
 ### Files changed
 - `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
-- 39 unit tests pass on the Windows development PC.
+- 49 unit tests pass on Windows, covering the broker wrapper, validation, storage, features, strategy, simulation, metrics, and dataset integrity.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
+- Downloaded 6,540 adjusted AAPL SIP 15-minute regular-session bars for 2021. A February–December 2021 single-symbol case study returned +1.22% optimistic, +0.28% base, and -2.87% pessimistic on a $100,000 simulated account. This is an illustrative in-sample case study, not evidence of a robust strategy.
 - No order has been submitted, modified, or canceled by this implementation.
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- The current backtester handles one symbol and one long position; multi-symbol portfolios, risk policy, performance metrics, and walk-forward validation remain unimplemented.
+- The current backtester handles one symbol and one long position; multi-symbol portfolios, a separate risk policy, point-in-time historical universes, and walk-forward validation remain unimplemented.
 
 ### Next step
-- Define and run transaction-cost scenarios, add performance metrics, then implement walk-forward validation before relying on any backtest result.
+- Add walk-forward validation and obtain point-in-time universe data before relying on any backtest result or training a predictive model.
 
 # Important Handoff Rule
 

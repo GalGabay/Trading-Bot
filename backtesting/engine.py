@@ -7,7 +7,7 @@ from math import floor
 
 import pandas as pd
 
-from app.ai.features import build_features
+from app.ai.features import FeatureConfig, build_features
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
 from app.strategy.base import Signal, SignalAction, Strategy
 
@@ -25,14 +25,20 @@ class BacktestConfig:
     position_fraction: float = 0.10
     commission_per_order: float = 0.0
     slippage_bps: float = 5.0
+    spread_bps: float = 2.0
+    periods_per_year: int = 252
 
     def __post_init__(self) -> None:
         if self.initial_cash <= 0:
             raise ValueError("initial_cash must be positive")
         if not 0 < self.position_fraction <= 1:
             raise ValueError("position_fraction must be greater than 0 and at most 1")
-        if self.commission_per_order < 0 or self.slippage_bps < 0:
-            raise ValueError("commission_per_order and slippage_bps cannot be negative")
+        if self.commission_per_order < 0 or self.slippage_bps < 0 or self.spread_bps < 0:
+            raise ValueError("commission_per_order, slippage_bps, and spread_bps cannot be negative")
+        if self.slippage_bps + self.spread_bps / 2 >= 10_000:
+            raise ValueError("combined selling costs must stay below the entire open price")
+        if self.periods_per_year <= 0:
+            raise ValueError("periods_per_year must be positive")
 
 
 @dataclass(frozen=True)
@@ -103,7 +109,10 @@ class BacktestEngine:
         self._strategy = strategy
         self._config = config or BacktestConfig()
 
-    def run(self, candles: pd.DataFrame) -> BacktestResult:
+    def run(
+        self, candles: pd.DataFrame, *, trade_start: pd.Timestamp | None = None,
+        trade_end: pd.Timestamp | None = None,
+    ) -> BacktestResult:
         """Backtest validated candles for exactly one symbol.
 
         The supplied candle data is never modified. Feature calculations are
@@ -115,7 +124,18 @@ class BacktestEngine:
         ordered["timestamp"] = pd.to_datetime(ordered["timestamp"], utc=True)
         ordered["symbol"] = ordered["symbol"].astype(str).str.upper().str.strip()
         ordered = ordered.sort_values("timestamp", ignore_index=True)
-        features = build_features(ordered)
+        if trade_start is not None:
+            trade_start = self._utc_bound(trade_start)
+        if trade_end is not None:
+            trade_end = self._utc_bound(trade_end)
+            ordered = ordered.loc[ordered["timestamp"] < trade_end].reset_index(drop=True)
+        if trade_start is not None and trade_end is not None and trade_start >= trade_end:
+            raise ValueError("trade_start must precede trade_end")
+        if ordered.empty or (trade_start is not None and not (ordered["timestamp"] >= trade_start).any()):
+            raise ValueError("No candles fall within the requested trading window")
+        features = build_features(
+            ordered, config=FeatureConfig(periods_per_year=self._config.periods_per_year)
+        )
 
         cash = self._config.initial_cash
         quantity = 0
@@ -128,6 +148,8 @@ class BacktestEngine:
 
         for index, candle in ordered.iterrows():
             timestamp = candle["timestamp"]
+            if trade_start is not None and timestamp < trade_start:
+                continue  # Earlier rows warm up causal indicators without simulated trades.
             if pending is not None:
                 cash, quantity, fill, event = self._fill_pending_order(
                     pending, candle, cash=cash, quantity=quantity
@@ -141,7 +163,15 @@ class BacktestEngine:
             close = float(candle["close"])
             equity = cash + quantity * close
             portfolio = BacktestPortfolio(cash=cash, quantity=quantity, equity=equity)
-            signal = self._strategy.generate_signal(features.iloc[: index + 1], portfolio)
+            available_features = (
+                features.iloc[[index]] if self._strategy.latest_row_only
+                else features.iloc[: index + 1]
+            )
+            signal = self._strategy.generate_signal(available_features, portfolio)
+            if signal.symbol.strip().upper() != str(candle["symbol"]):
+                raise ValueError("Strategy signal symbol does not match the evaluated candle")
+            if pd.Timestamp(signal.timestamp) != timestamp:
+                raise ValueError("Strategy signal timestamp does not match the evaluated candle")
             signals.append(signal)
             if signal.action in {SignalAction.BUY, SignalAction.SELL}:
                 pending = _PendingOrder(signal)
@@ -166,7 +196,7 @@ class BacktestEngine:
     ) -> tuple[float, int, SimulatedFill | None, str | None]:
         signal = pending.signal
         open_price = float(candle["open"])
-        multiplier = self._config.slippage_bps / 10_000
+        multiplier = (self._config.slippage_bps + self._config.spread_bps / 2) / 10_000
         timestamp = pd.Timestamp(candle["timestamp"])
         if signal.action == SignalAction.BUY:
             if quantity:
@@ -204,3 +234,10 @@ class BacktestEngine:
         symbols = candles["symbol"].astype(str).str.upper().str.strip().unique()
         if len(symbols) != 1 or not symbols[0]:
             raise ValueError("A backtest run must contain candles for exactly one symbol")
+
+    @staticmethod
+    def _utc_bound(value: pd.Timestamp) -> pd.Timestamp:
+        timestamp = pd.Timestamp(value)
+        if timestamp.tzinfo is None:
+            raise ValueError("Backtest trading-window bounds must be timezone-aware")
+        return timestamp.tz_convert("UTC")

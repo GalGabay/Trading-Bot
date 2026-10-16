@@ -70,3 +70,11 @@ class TrendFollowingV1Tests(TestCase):
         strict = TrendFollowingV1(config=TrendFollowingV1Config(minimum_volume_ratio=1.5))
         signal = strict.generate_signal(feature_rows())
         self.assertEqual(signal.action, SignalAction.HOLD)
+
+    def test_open_position_exits_on_trend_reversal(self) -> None:
+        class Portfolio:
+            quantity = 10
+
+        signal = self.strategy.generate_signal(feature_rows(close=195.0), Portfolio())
+        self.assertEqual(signal.action, SignalAction.SELL)
+        self.assertIn("trend reversal", signal.reason)

@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from alpaca.data.historical import StockHistoricalDataClient
+from alpaca.data.enums import Adjustment, DataFeed
 from alpaca.data.live import StockDataStream
 from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
@@ -109,6 +110,8 @@ class AlpacaClient:
         start: datetime,
         end: datetime | None = None,
         timeframe: TimeFrame = TimeFrame.Hour,
+        adjustment: Adjustment | None = None,
+        feed: DataFeed | None = None,
     ) -> Any:
         """Fetch historical/recent stock bars for one symbol.
 
@@ -129,6 +132,8 @@ class AlpacaClient:
             timeframe=timeframe,
             start=start,
             end=end,
+            adjustment=adjustment,
+            feed=feed,
         )
         return self._historical_data.get_stock_bars(request)
 

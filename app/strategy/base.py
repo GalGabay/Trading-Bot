@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from datetime import datetime
 from enum import StrEnum
+from math import isfinite
 from typing import Any
 
 import pandas as pd
@@ -37,7 +38,9 @@ class Signal:
     def __post_init__(self) -> None:
         if not self.symbol.strip():
             raise ValueError("signal symbol must not be empty")
-        if not 0.0 <= self.confidence <= 1.0:
+        if not isinstance(self.action, SignalAction):
+            raise ValueError("signal action must be a SignalAction")
+        if not isfinite(self.confidence) or not 0.0 <= self.confidence <= 1.0:
             raise ValueError("signal confidence must be between 0 and 1")
         if self.timestamp.tzinfo is None or self.timestamp.utcoffset() is None:
             raise ValueError("signal timestamp must be timezone-aware")
@@ -47,12 +50,13 @@ class Strategy(ABC):
     """A replaceable component that turns completed features into a signal."""
 
     name: str
+    latest_row_only: bool = False
 
     @abstractmethod
     def generate_signal(self, market_data: pd.DataFrame, portfolio: Any | None = None) -> Signal:
         """Return a signal from data available at the latest completed candle.
 
-        ``portfolio`` is part of the stable interface for future strategies.
-        The first strategy does not use it: risk and position policy belong to
-        later phases, so a strategy must not submit orders or mutate it.
+        ``portfolio`` exposes read-only simulated state when backtesting. A
+        strategy may use it to avoid repeated entries or request an exit, but
+        must never submit orders or mutate the state.
         """

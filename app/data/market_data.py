@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from typing import Any
 from zoneinfo import ZoneInfo
 
+import numpy as np
 import pandas as pd
 from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
 
@@ -40,6 +41,7 @@ class ValidationConfig:
 
     timeframe: TimeFrame = TimeFrame.Hour
     volume_anomaly_multiple: float = 10.0
+    require_all_scheduled_bars: bool = False
 
     def __post_init__(self) -> None:
         if self.volume_anomaly_multiple <= 1:
@@ -123,7 +125,13 @@ def _expected_timestamps(
             else:
                 raise ValueError(f"Unsupported candle timeframe for validation: {timeframe}")
             interval = _timeframe_delta(timeframe)
-            current = session.opens_at.ceil(frequency)
+            # Hourly Alpaca bars are aligned to the wall clock; the first
+            # regular-session hour begins before the 09:30 ET opening.
+            current = (
+                session.opens_at.floor(frequency)
+                if timeframe.unit_value == TimeFrameUnit.Hour
+                else session.opens_at.ceil(frequency)
+            )
             while current < session.closes_at:
                 values.append(current)
                 current += interval
@@ -138,6 +146,7 @@ def _validate_sessions(
     timeframe: TimeFrame,
     requested_start: datetime | None,
     requested_end: datetime | None,
+    require_all_scheduled_bars: bool,
 ) -> int:
     observed_start, observed_end = candles["timestamp"].min(), candles["timestamp"].max()
     start = _as_utc(requested_start) if requested_start else observed_start
@@ -156,12 +165,13 @@ def _validate_sessions(
         )
     missing = expected - observed
     if missing:
-        _hard_error(
-            "missing_candles",
-            f"Missing {len(missing)} expected {timeframe} candle(s) inside scheduled market sessions.",
-            len(missing),
-        )
-    return 0
+        if require_all_scheduled_bars:
+            _hard_error(
+                "unobserved_intervals",
+                f"No bar was observed in {len(missing)} scheduled {timeframe} interval(s). Investigate feed coverage or no-trade intervals.",
+                len(missing),
+            )
+    return len(missing)
 
 
 def validate_candles(
@@ -197,8 +207,8 @@ def validate_candles(
     numeric_columns = ["open", "high", "low", "close", "volume"]
     for column in numeric_columns:
         checked[column] = pd.to_numeric(checked[column], errors="coerce")
-    if checked[numeric_columns].isna().any().any():
-        _hard_error("missing_ohlcv", "OHLCV values must be numeric and present.")
+    if not np.isfinite(checked[numeric_columns].to_numpy(dtype=float)).all():
+        _hard_error("invalid_ohlcv", "OHLCV values must be finite numbers and present.")
     if (checked[["open", "high", "low", "close"]] <= 0).any().any():
         _hard_error("invalid_price", "Open, high, low, and close values must be positive.")
     if (checked["volume"] < 0).any():
@@ -228,7 +238,14 @@ def validate_candles(
         gaps = _validate_sessions(
             checked, calendar=calendar, timeframe=config.timeframe,
             requested_start=requested_start, requested_end=requested_end,
+            require_all_scheduled_bars=config.require_all_scheduled_bars,
         )
+        if gaps:
+            warnings.append(ValidationIssue(
+                "unobserved_intervals",
+                f"No bar was observed in {gaps} scheduled interval(s); this can reflect no trades or missing data.",
+                gaps,
+            ))
     return CandleValidationReport(zero_volume_rows=zero_volume, time_gaps=gaps, warnings=tuple(warnings))
 
 
@@ -252,6 +269,26 @@ def _barset_to_candles(barset: Any, requested_symbol: str) -> pd.DataFrame:
     }).sort_values(["symbol", "timestamp"], ignore_index=True)
 
 
+def regular_session_candles(
+    candles: pd.DataFrame,
+    *,
+    calendar: MarketCalendar,
+    timeframe: TimeFrame,
+    requested_start: datetime,
+    requested_end: datetime,
+) -> pd.DataFrame:
+    """Select scheduled bar timestamps and exclude Alpaca extended-hours bars.
+
+    This filters source bars; it never creates a missing bar. The caller must
+    still validate the selected rows against the complete session calendar.
+    """
+    start, end = _as_utc(requested_start), _as_utc(requested_end)
+    sessions = list(calendar.sessions(start.date(), end.date()))
+    expected = _expected_timestamps(sessions, timeframe, start, end)
+    timestamps = _validate_raw_timestamps(candles["timestamp"])
+    return candles.loc[timestamps.isin(expected)].reset_index(drop=True)
+
+
 class MarketDataService:
     def __init__(self, broker: Any, *, calendar: MarketCalendar | None = None) -> None:
         self._broker = broker
@@ -260,10 +297,23 @@ class MarketDataService:
     def get_historical_candles(
         self, symbol: str, *, start: datetime, end: datetime | None = None,
         timeframe: TimeFrame = TimeFrame.Hour,
+        adjustment: Any | None = None, feed: Any | None = None,
     ) -> tuple[pd.DataFrame, CandleValidationReport]:
         normalized_symbol = symbol.strip().upper()
-        response = self._broker.get_market_data(normalized_symbol, start=start, end=end, timeframe=timeframe)
+        request_options = {}
+        if adjustment is not None:
+            request_options["adjustment"] = adjustment
+        if feed is not None:
+            request_options["feed"] = feed
+        response = self._broker.get_market_data(
+            normalized_symbol, start=start, end=end, timeframe=timeframe, **request_options
+        )
         candles = _barset_to_candles(response, normalized_symbol)
+        if end is not None:
+            candles = regular_session_candles(
+                candles, calendar=self._calendar, timeframe=timeframe,
+                requested_start=start, requested_end=end,
+            )
         report = validate_candles(
             candles, config=ValidationConfig(timeframe=timeframe), calendar=self._calendar,
             requested_start=start, requested_end=end,

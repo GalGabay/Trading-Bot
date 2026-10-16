@@ -7,6 +7,7 @@ import pandas as pd
 
 from app.strategy.base import Signal, SignalAction, Strategy
 from backtesting.engine import BacktestConfig, BacktestEngine
+from backtesting.metrics import calculate_metrics
 
 
 def candles() -> pd.DataFrame:
@@ -44,7 +45,8 @@ class BacktestEngineTests(TestCase):
     def test_buy_is_filled_at_next_open_not_signal_close(self) -> None:
         strategy = ScriptedStrategy([SignalAction.BUY, SignalAction.HOLD, SignalAction.HOLD, SignalAction.HOLD])
         result = BacktestEngine(strategy, config=BacktestConfig(
-            initial_cash=10_000, position_fraction=0.5, slippage_bps=10, commission_per_order=2
+            initial_cash=10_000, position_fraction=0.5, slippage_bps=10,
+            spread_bps=0, commission_per_order=2
         )).run(candles())
         self.assertEqual(len(result.fills), 1)
         fill = result.fills[0]
@@ -96,3 +98,44 @@ class BacktestEngineTests(TestCase):
             BacktestConfig(initial_cash=0)
         with self.assertRaisesRegex(ValueError, "position_fraction"):
             BacktestConfig(position_fraction=1.1)
+
+    def test_trade_window_uses_prior_candles_only_for_feature_warmup(self) -> None:
+        strategy = ScriptedStrategy([SignalAction.BUY, SignalAction.HOLD])
+        result = BacktestEngine(strategy, config=BacktestConfig(spread_bps=0)).run(
+            candles(), trade_start=pd.Timestamp("2026-01-02T17:00:00Z")
+        )
+        self.assertEqual(strategy.input_lengths, [3, 4])
+        self.assertEqual(len(result.equity_curve), 2)
+        self.assertEqual(result.fills[0].timestamp, pd.Timestamp("2026-01-02T18:00:00Z"))
+
+    def test_spread_and_slippage_are_adverse_on_both_sides(self) -> None:
+        strategy = ScriptedStrategy([SignalAction.BUY, SignalAction.SELL, SignalAction.HOLD, SignalAction.HOLD])
+        result = BacktestEngine(strategy, config=BacktestConfig(
+            initial_cash=10_000, position_fraction=0.5, spread_bps=10, slippage_bps=10
+        )).run(candles())
+        buy, sell = result.fills
+        self.assertGreater(buy.fill_price, buy.reference_open)
+        self.assertLess(sell.fill_price, sell.reference_open)
+
+    def test_rejects_mismatched_signal_identity(self) -> None:
+        class WrongSymbol(ScriptedStrategy):
+            def generate_signal(self, market_data, portfolio=None):
+                signal = super().generate_signal(market_data, portfolio)
+                return Signal("MSFT", signal.action, 1, "wrong symbol", signal.timestamp, self.name)
+
+        with self.assertRaisesRegex(ValueError, "symbol does not match"):
+            BacktestEngine(WrongSymbol([SignalAction.BUY] * 4)).run(candles())
+
+    def test_completed_trade_metrics_exclude_open_position(self) -> None:
+        strategy = ScriptedStrategy([SignalAction.BUY, SignalAction.SELL, SignalAction.HOLD, SignalAction.HOLD])
+        result = BacktestEngine(strategy, config=BacktestConfig(
+            initial_cash=10_000, position_fraction=0.5,
+            spread_bps=0, slippage_bps=0, commission_per_order=2,
+        )).run(candles())
+        metrics = calculate_metrics(result, periods_per_year=252 * 7)
+        self.assertEqual(metrics.number_of_trades, 1)
+        self.assertEqual(metrics.win_rate, 1)
+        self.assertIsNone(metrics.profit_factor)  # No losing trade occurred.
+        self.assertFalse(metrics.open_position)
+        self.assertAlmostEqual(metrics.average_trade, 45 * (120 - 110) - 4)
+        self.assertAlmostEqual(metrics.total_return, result.final_equity / 10_000 - 1)
