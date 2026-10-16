@@ -5,9 +5,10 @@ roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`
 
 ## Current progress
 
-Phases 0–8 are implemented: centralized paper-only Alpaca access, validated
+Phases 0–9 are implemented: centralized paper-only Alpaca access, validated
 market data, SQLite persistence, technical features, a deterministic strategy,
-and a single-symbol historical backtester with cost scenarios and metrics.
+and a single-symbol historical backtester with cost scenarios, metrics, and
+expanding-year walk-forward evaluation.
 
 The project does not submit orders. `Signal` objects are recommendations only;
 risk, portfolio, and order execution are later phases.
@@ -74,16 +75,40 @@ adjustment and feed in every report and do not mix datasets with different
 settings. The simulator uses whole shares, a 10% position cap, and fixed cost
 assumptions. It has no quote-level spread, partial-fill, or market-impact model.
 
-## Choosing years and training later
+## Walk-forward validation and training later
 
-Use earlier years to choose rules and cost assumptions. Keep later years
-untouched for a final test; do not repeatedly adjust thresholds after seeing
-that final result. The current 2021 AAPL run is a case study, not a universe
-test. A proper historical-universe test needs point-in-time membership and
-delisted stocks, which are not supplied by the current single-symbol workflow.
+Phase 9 uses earlier full calendar years to choose among three declared
+`trend_following_v1` threshold choices and evaluates the selected choice on
+the following year. Download a new multi-year dataset with a new filename:
 
-The next research milestone is walk-forward validation. After deterministic
-backtests and paper trading are stable, build an ML dataset from features,
+```powershell
+python -m backtesting.research download --symbol AAPL --start 2019-01-01 --end 2024-01-01 --timeframe 15Min --feed sip --adjustment all --output data/historical/AAPL_15Min_2019_2023.csv
+python -m backtesting.walk_forward --dataset data/historical/AAPL_15Min_2019_2023.csv --first-test-year 2022 --last-test-year 2023 --output data/reports/AAPL_walk_forward_2022_2023.json
+```
+
+With this example, 2019–2021 choose the 2022 settings; 2019–2022 choose the
+2023 settings. The selection score is base-cost training total return plus
+maximum drawdown; candidates need at least 20 completed training trades.
+The report includes each candidate's training metrics and every test year's
+optimistic, base, and pessimistic results. Each test year starts with fresh
+cash. Open positions are marked to market at year-end and are not carried to
+the next fold. This is parameter selection for a fixed rule-based strategy,
+not ML training. Keep a later year untouched for a final evaluation and do
+not repeatedly adjust the candidate grid after inspecting test results.
+
+The example dataset downloaded 32,600 AAPL bars with no scheduled gaps.
+The 2022 and 2023 folds both selected the narrow thresholds using earlier
+years. Base-cost returns were +0.20% and +0.46%; pessimistic-cost returns were
+-2.12% and -2.49%. These small, cost-sensitive results do not establish a
+reliable edge. An attempted 2018–2022 download was rejected because almost
+all 15-minute bars on May 2–3, 2018 were absent from the feed; no bars were
+fabricated to make that dataset pass.
+
+The 2021 AAPL run is a case study, not a universe test. A proper historical
+universe test needs point-in-time membership and delisted stocks, which are
+not supplied by the current single-symbol workflow.
+
+After deterministic backtests and paper trading are stable, build an ML dataset from features,
 define a future-return label separately, split chronologically, fit and tune
 on older windows only, and compare the model against this rule-based baseline
 on later unseen windows. Train on the Windows PC; deploy only a small inference

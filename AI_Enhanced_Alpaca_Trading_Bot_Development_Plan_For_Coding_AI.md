@@ -1137,6 +1137,23 @@ The exact years depend on the available dataset.
 
 This provides a more realistic estimate of out-of-sample behavior.
 
+### Initial Phase 9 implementation
+
+`backtesting/walk_forward.py` runs expanding, full-calendar-year windows on a
+checksum-verified single-symbol dataset. It evaluates the declared
+`trend_following_v1` threshold grid on earlier years only, selects by base-cost
+training total return plus maximum drawdown (subject to a minimum completed-trade
+count), and evaluates the next year once under optimistic, base, and pessimistic
+costs. Training results never choose settings for the same year's test. The
+machine-readable report records every candidate, the selection rule and chosen
+settings, each window, cost assumptions, metrics, and dataset provenance.
+
+This is deterministic rule calibration, not ML model training. Years already
+inspected as test results are no longer untouched holdouts. Each test year
+starts with fresh cash; positions at its end are marked to market but are not
+carried into the next fold. The current single-symbol data source still cannot
+remove survivorship bias. Do not claim a market-wide edge from these results.
+
 ---
 
 # 22. Phase 10 — Risk Management
@@ -3401,7 +3418,7 @@ For each completed milestone, record:
 - ...
 ```
 
-## Phases 0–8 and historical research / 2026-10-16
+## Phases 0–9 and historical research / 2026-10-16
 
 ### Implemented
 - Paper-only Alpaca client, calendar-aware market-data validation, and SQLite audit storage.
@@ -3409,6 +3426,7 @@ For each completed milestone, record:
 - Append-only signal recording for reproducible decisions.
 - Single-symbol backtesting with causal feature access, next-candle fills, configurable fees/spread/slippage, equity, drawdown, and the Section 17 metrics.
 - A historical downloader with feed/adjustment provenance, checksum manifest, strict interval review, and a local three-scenario backtest command.
+- Expanding-year walk-forward calibration of a declared strategy threshold grid, with later-year evaluation kept separate from parameter selection.
 
 ### Files changed
 - `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
@@ -3419,14 +3437,16 @@ For each completed milestone, record:
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
 - Downloaded 6,540 adjusted AAPL SIP 15-minute regular-session bars for 2021. A February–December 2021 single-symbol case study returned +1.22% optimistic, +0.28% base, and -2.87% pessimistic on a $100,000 simulated account. This is an illustrative in-sample case study, not evidence of a robust strategy.
+- Downloaded 32,600 adjusted AAPL SIP 15-minute bars for 2019–2023 and ran two expanding yearly folds. The 2022/2023 base-cost test returns were +0.20%/+0.46%; pessimistic-cost returns were -2.12%/-2.49%. Both folds selected the narrow candidate from earlier years. A separate 2018–2022 request was rejected after 50 unobserved scheduled intervals clustered on May 2–3, 2018.
 - No order has been submitted, modified, or canceled by this implementation.
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- The current backtester handles one symbol and one long position; multi-symbol portfolios, a separate risk policy, point-in-time historical universes, and walk-forward validation remain unimplemented.
+- Phase 9 has been exercised with the five-year AAPL dataset but has not yet received new unit tests.
+- The current backtester handles one symbol and one long position; multi-symbol portfolios, a separate risk policy, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Add walk-forward validation and obtain point-in-time universe data before relying on any backtest result or training a predictive model.
+- Run the walk-forward workflow on several full years, then obtain point-in-time universe data and a multi-symbol portfolio engine before making market-wide claims or training a predictive model.
 
 # Important Handoff Rule
 
