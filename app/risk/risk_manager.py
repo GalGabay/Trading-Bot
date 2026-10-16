@@ -240,11 +240,11 @@ class RiskManager:
             reject("single_position_limit", "Proposed position exceeds the single-position limit.")
         if projected_exposure > self.limits.max_portfolio_exposure:
             reject("portfolio_exposure_limit", "Projected gross exposure exceeds the portfolio limit.")
-        daily_loss = max(0.0, 1 - snapshot.equity / snapshot.day_start_equity)
-        drawdown = max(0.0, 1 - snapshot.equity / snapshot.peak_equity)
-        if daily_loss >= self.limits.max_daily_loss:
+        # Compare equity levels directly so a loss exactly at a decimal limit
+        # cannot slip through because 1 - equity / baseline rounds downward.
+        if snapshot.equity <= snapshot.day_start_equity * (1 - self.limits.max_daily_loss):
             reject("daily_loss_limit", "Current daily loss has reached the configured limit.")
-        if drawdown >= self.limits.max_drawdown:
+        if snapshot.equity <= snapshot.peak_equity * (1 - self.limits.max_drawdown):
             reject("drawdown_limit", "Current portfolio drawdown has reached the configured limit.")
 
         if self.limits.max_sector_exposure is not None:

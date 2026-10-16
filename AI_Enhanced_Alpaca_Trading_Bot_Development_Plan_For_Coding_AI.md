@@ -1220,6 +1220,10 @@ reliable metadata exists. The 70%/10%/1%/3% examples are provisional defaults;
 10% maximum drawdown, seven positions, and five-minute snapshot and signal ages are also
 provisional. A stop is an initial loss estimate, not a guarantee of execution
 at that price. This module is not yet connected to backtesting or paper orders.
+Focused offline unit tests cover approval, each configured gate, stale or
+incomplete state, reducing exits, optional metadata, and exact loss-limit
+boundaries. Loss and drawdown checks compare equity directly to threshold
+levels so rounding cannot admit a trade at the configured ceiling.
 
 ---
 
@@ -3452,12 +3456,13 @@ For each completed milestone, record:
 - `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
-- 53 unit tests passed on Windows before Phase 10, covering the broker wrapper, validation, storage, features, strategy, simulation, metrics, dataset integrity, and walk-forward boundaries and selection. Phase 10 has not yet had new automated tests.
+- 65 unit tests pass on Windows, including 12 focused Phase 10 risk-gate tests for approvals, limit failures, stale and inconsistent state, reducing exits, and optional sector/volatility checks.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
 - Downloaded 6,540 adjusted AAPL SIP 15-minute regular-session bars for 2021. A February–December 2021 single-symbol case study returned +1.22% optimistic, +0.28% base, and -2.87% pessimistic on a $100,000 simulated account. This is an illustrative in-sample case study, not evidence of a robust strategy.
 - Downloaded 32,600 adjusted AAPL SIP 15-minute bars for 2019–2023 and ran two expanding yearly folds. The 2022/2023 base-cost test returns were +0.20%/+0.46%; pessimistic-cost returns were -2.12%/-2.49%. Both folds selected the narrow candidate from earlier years. A separate 2018–2022 request was rejected after 50 unobserved scheduled intervals clustered on May 2–3, 2018.
+- Phase 10 tests exposed and fixed a floating-point boundary error at the exact maximum-drawdown threshold.
 - No order has been submitted, modified, or canceled by this implementation.
 
 ### Known limitations
