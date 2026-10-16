@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import sqlite3
 import json
+import math
+from typing import Any, Mapping
 from collections.abc import Iterator
 from contextlib import contextmanager
 from pathlib import Path
@@ -17,7 +19,7 @@ import pandas as pd
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
 from app.strategy.base import Signal
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 class DataStorageError(ValueError):
@@ -128,6 +130,27 @@ class TradingDatabase:
                     cash REAL NOT NULL,
                     buying_power REAL,
                     payload_json TEXT NOT NULL DEFAULT '{}'
+                );
+                CREATE TABLE IF NOT EXISTS broker_open_orders (
+                    alpaca_order_id TEXT PRIMARY KEY,
+                    client_order_id TEXT,
+                    symbol TEXT NOT NULL,
+                    side TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    quantity TEXT,
+                    notional TEXT,
+                    filled_quantity TEXT,
+                    observed_at TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS broker_current_positions (
+                    symbol TEXT PRIMARY KEY,
+                    side TEXT NOT NULL,
+                    quantity TEXT NOT NULL,
+                    average_entry_price TEXT NOT NULL,
+                    market_price TEXT NOT NULL,
+                    market_value TEXT NOT NULL,
+                    unrealized_pl TEXT,
+                    observed_at TEXT NOT NULL
                 );
                 CREATE TABLE IF NOT EXISTS strategy_runs (
                     id INTEGER PRIMARY KEY,
@@ -272,6 +295,100 @@ class TradingDatabase:
                 ),
             )
         return int(cursor.lastrowid)
+
+    def record_portfolio_state(self, state: Mapping[str, Any]) -> dict[str, Any] | None:
+        """Atomically append one broker-authoritative snapshot and its positions.
+
+        Return the previous snapshot for reconciliation reporting. The JSON
+        payload preserves decimal strings and open-order state; the existing
+        relational columns support simple time-series queries. Short position
+        quantities are stored as negative numbers in the positions table.
+        """
+        if state.get("source") != "alpaca_paper" or not isinstance(state.get("positions"), list):
+            raise DataStorageError("Portfolio state must contain Alpaca paper positions")
+        if not isinstance(state.get("account_id"), str) or not state["account_id"].strip():
+            raise DataStorageError("Portfolio state must identify the Alpaca paper account")
+        if not isinstance(state.get("open_orders"), list):
+            raise DataStorageError("Portfolio state must contain Alpaca paper open orders")
+        timestamp = self._timestamp_text(state.get("as_of"))
+        try:
+            payload_json = json.dumps(state, allow_nan=False, sort_keys=True)
+            equity = float(state["equity"])
+            cash = float(state["cash"])
+            buying_power = float(state["buying_power"])
+            positions = [
+                (
+                    timestamp, row["symbol"],
+                    float(row["quantity"]) * (-1 if row["side"] == "short" else 1),
+                    float(row["average_entry_price"]), float(row["market_price"]),
+                )
+                for row in state["positions"]
+            ]
+            orders = [
+                (
+                    row["order_id"], row.get("client_order_id"), row["symbol"],
+                    row["side"], row["status"], row.get("quantity"),
+                    row.get("notional"), row.get("filled_quantity"), timestamp,
+                )
+                for row in state["open_orders"]
+            ]
+            current_positions = [
+                (
+                    row["symbol"], row["side"], row["quantity"],
+                    row["average_entry_price"], row["market_price"],
+                    row["market_value"], row.get("unrealized_pl"), timestamp,
+                )
+                for row in state["positions"]
+            ]
+        except (KeyError, TypeError, ValueError, OverflowError) as exc:
+            raise DataStorageError("Portfolio state has invalid numeric or position fields") from exc
+        if not all(math.isfinite(value) for value in (equity, cash, buying_power)):
+            raise DataStorageError("Portfolio balances exceed SQLite's finite numeric range")
+        if any(not all(math.isfinite(value) for value in (row[2], row[3], row[4])) for row in positions):
+            raise DataStorageError("Portfolio positions exceed SQLite's finite numeric range")
+        self.initialize()
+        with self._connection() as connection:
+            connection.execute("BEGIN IMMEDIATE")
+            row = connection.execute(
+                "SELECT payload_json FROM portfolio_snapshots ORDER BY id DESC LIMIT 1"
+            ).fetchone()
+            previous = None if row is None else json.loads(row["payload_json"])
+            if previous is not None and previous.get("account_id") not in (None, state["account_id"]):
+                raise DataStorageError("This database contains snapshots for a different Alpaca account")
+            connection.execute(
+                """INSERT INTO portfolio_snapshots (timestamp, equity, cash, buying_power, payload_json)
+                VALUES (?, ?, ?, ?, ?)""",
+                (timestamp, equity, cash, buying_power, payload_json),
+            )
+            connection.executemany(
+                """INSERT INTO positions (timestamp, symbol, quantity, average_entry_price, market_price)
+                VALUES (?, ?, ?, ?, ?)""",
+                positions,
+            )
+            connection.execute("DELETE FROM broker_current_positions")
+            connection.executemany(
+                """INSERT INTO broker_current_positions
+                (symbol, side, quantity, average_entry_price, market_price, market_value, unrealized_pl, observed_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+                current_positions,
+            )
+            connection.execute("DELETE FROM broker_open_orders")
+            connection.executemany(
+                """INSERT INTO broker_open_orders
+                (alpaca_order_id, client_order_id, symbol, side, status, quantity, notional, filled_quantity, observed_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                orders,
+            )
+        return previous
+
+    def get_latest_portfolio_state(self) -> dict[str, Any] | None:
+        """Read the latest reconciled broker snapshot, if one exists."""
+        self.initialize()
+        with self._connection() as connection:
+            row = connection.execute(
+                "SELECT payload_json FROM portfolio_snapshots ORDER BY id DESC LIMIT 1"
+            ).fetchone()
+        return None if row is None else json.loads(row["payload_json"])
 
     @staticmethod
     def _timestamp_text(value: object) -> str:

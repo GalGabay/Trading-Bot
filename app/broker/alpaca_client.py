@@ -91,6 +91,18 @@ class AlpacaClient:
         request = GetOrdersRequest(status=QueryOrderStatus.ALL)
         return self._trading.get_orders(filter=request)
 
+    def get_open_orders(self) -> list[Any]:
+        """Return open paper orders; reject a potentially truncated response.
+
+        Alpaca caps one response at 500 orders. An apparently full response
+        cannot be treated as a complete inventory for reconciliation.
+        """
+        request = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=500)
+        orders = self._trading.get_orders(filter=request)
+        if len(orders) >= 500:
+            raise RuntimeError("Open-order response reached Alpaca's 500-order limit; reconciliation is incomplete.")
+        return orders
+
     def get_market_calendar(self, *, start: date, end: date) -> list[Any]:
         """Return Alpaca's exchange sessions for the inclusive date range."""
         return self._trading.get_calendar(GetCalendarRequest(start=start, end=end))

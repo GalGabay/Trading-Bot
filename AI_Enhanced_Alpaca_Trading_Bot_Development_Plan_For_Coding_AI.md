@@ -1317,6 +1317,28 @@ Reconciliation
 Correct local state
 ```
 
+### Initial Phase 11 implementation
+
+`app/portfolio/portfolio_manager.py` captures the Alpaca paper account, open
+positions, and open orders without sending orders. It normalizes decimal values,
+calculates gross/net exposure and unrealized P&L, and reports changes from the
+previous broker snapshot. `TradingDatabase.record_portfolio_state` writes the
+snapshot and position history in one SQLite transaction and replaces separate
+materialized `broker_current_positions` and `broker_open_orders` tables with
+the broker's latest complete state. A failed fetch, invalid response, or response at Alpaca's 500-order
+limit leaves local state untouched. The command
+`python -m app.portfolio.portfolio_manager` runs one reconciliation; schedule
+it periodically when the runtime service is designed.
+
+Realized P&L remains explicitly unknown because current account/position
+responses cannot reconstruct closed-trade profit after fills, fees, transfers,
+and corporate actions. Do not substitute change in equity or unrealized P&L
+for realized P&L. A complete broker activity/fill ledger is needed later.
+The capture uses sequential API calls and can observe a fill between them;
+an accounting-gap flag helps identify those temporary inconsistencies. The
+Phase 10 risk gate is not connected to order submission, and no snapshot is
+automatically certified as complete for risk checks.
+
 ---
 
 # 26. Phase 12 — Order Manager
@@ -3453,10 +3475,11 @@ For each completed milestone, record:
 - Standalone, fail-closed risk decisions for proposed trades with configurable exposure, loss, drawdown, position-count, optional sector, and volatility gates.
 
 ### Files changed
-- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
+- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `app/risk/`, `app/portfolio/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
 - 65 unit tests pass on Windows, including 12 focused Phase 10 risk-gate tests for approvals, limit failures, stale and inconsistent state, reducing exits, and optional sector/volatility checks.
+- Focused Phase 11 reconciliation tests have not yet been added or run.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3470,7 +3493,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Implement Phase 11 portfolio state and reconciliation, then connect the risk policy when paper-order orchestration exists. Request the owner's preferred risk limits before that connection. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Add focused Phase 11 unit tests, then implement Phase 12 order management. Ask the owner to choose or accept risk limits before any paper-order workflow connects to the risk gate. A complete fill/activity ledger is required for realized P&L. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 

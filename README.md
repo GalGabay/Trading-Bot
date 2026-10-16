@@ -5,14 +5,13 @@ roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`
 
 ## Current progress
 
-Phases 0–10 are implemented: centralized paper-only Alpaca access, validated
+Phases 0–11 are implemented: centralized paper-only Alpaca access, validated
 market data, SQLite persistence, technical features, a deterministic strategy,
 single-symbol historical backtesting and walk-forward evaluation, and a
-standalone risk-decision module.
+standalone risk-decision module, and read-only portfolio reconciliation.
 
 The project does not submit orders. `Signal` objects are recommendations only;
-the risk gate does not call a broker. Portfolio state and order execution are
-later phases.
+the risk gate does not call a broker. Order execution is a later phase.
 
 ## Local setup on Windows
 
@@ -38,6 +37,7 @@ environments are excluded from Git.
 - `app/ai/`: technical feature calculations
 - `app/strategy/`: strategy contract and `trend_following_v1`
 - `app/risk/`: standalone risk decisions for proposed trades
+- `app/portfolio/`: paper-account snapshots and reconciliation
 - `backtesting/`: local simulation, metrics, and dataset research commands
 - `tests/`: unit tests with no broker calls
 
@@ -136,6 +136,34 @@ default. These numbers are unapproved placeholders; choose or accept your
 preferred limits before the risk gate is connected to paper-order submission.
 This module is not yet wired into the backtester or an order workflow, so the
 historical reports above do not reflect these risk checks.
+
+## Phase 11 portfolio reconciliation
+
+From the repository root, run this read-only command with paper credentials:
+
+```powershell
+python -m app.portfolio.portfolio_manager --database data/trading_bot.sqlite3
+```
+
+The command fetches Alpaca paper account, open positions, and open orders. It
+normalizes balances and position values, calculates gross and net exposure,
+and writes a timestamped SQLite snapshot. The current position and open-order
+tables are replaced with the broker's complete responses. The output lists
+changes since the previous snapshot and flags any gap between equity and cash
+plus position market values. A failed or incomplete fetch does not update the
+database. Run this command periodically through your operating system's task
+scheduler once the service schedule is designed; the bot does not yet include
+a long-running scheduler.
+
+Alpaca account and position responses do not provide a complete realized P&L
+ledger, so `realized_pl` remains `null` until fill/activity ingestion is built.
+Unrealized P&L is `null` if any open position lacks it. Broker endpoints are
+queried sequentially, so a fill during capture can temporarily create an
+accounting gap; repeat reconciliation after the account settles. Balances and
+positions are broker-authoritative observations, not an order authorization.
+The Phase 10 risk gate is still disconnected from order submission.
+Use a separate SQLite file for each Alpaca paper account; reconciliation
+rejects snapshots from a different account ID in an existing database.
 
 ## Cross-platform operation
 
