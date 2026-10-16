@@ -1202,6 +1202,10 @@ Max daily loss         = 3%
 
 These are examples, not universal recommendations.
 
+The coding AI can implement and test the risk policy with clearly documented,
+configurable defaults. Before connecting it to any paper-order workflow, ask
+the project owner to choose or explicitly accept their preferred risk limits.
+
 ---
 
 # 23. Position Sizing
@@ -3432,7 +3436,7 @@ For each completed milestone, record:
 - `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
-- 49 unit tests pass on Windows, covering the broker wrapper, validation, storage, features, strategy, simulation, metrics, and dataset integrity.
+- 53 unit tests pass on Windows, covering the broker wrapper, validation, storage, features, strategy, simulation, metrics, dataset integrity, and walk-forward boundaries and selection.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3442,11 +3446,10 @@ For each completed milestone, record:
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- Phase 9 has been exercised with the five-year AAPL dataset but has not yet received new unit tests.
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, a separate risk policy, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Run the walk-forward workflow on several full years, then obtain point-in-time universe data and a multi-symbol portfolio engine before making market-wide claims or training a predictive model.
+- Implement Phase 10 risk management with configurable limits; request the owner's preferred limits before any paper-order integration. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 
