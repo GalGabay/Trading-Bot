@@ -7,6 +7,7 @@ stable audit storage for later phases without putting strategy logic here.
 from __future__ import annotations
 
 import sqlite3
+import json
 from collections.abc import Iterator
 from contextlib import contextmanager
 from pathlib import Path
@@ -216,6 +217,36 @@ class TradingDatabase:
         if not result.empty:
             result["timestamp"] = pd.to_datetime(result["timestamp"], utc=True)
         return result
+
+    def upsert_features(self, features: pd.DataFrame, *, timeframe: str, feature_version: str) -> int:
+        """Persist a feature row as JSON keyed by time, symbol, and version."""
+        if features.empty:
+            raise DataStorageError("features must not be empty")
+        if not timeframe.strip() or not feature_version.strip():
+            raise DataStorageError("timeframe and feature_version must not be empty")
+        required = {"timestamp", "symbol"}
+        if missing := required - set(features.columns):
+            raise DataStorageError(f"Feature table is missing required columns: {sorted(missing)}")
+        feature_columns = [column for column in features.columns if column not in CANONICAL_CANDLE_COLUMNS]
+        if not feature_columns:
+            raise DataStorageError("features must contain at least one calculated feature column")
+        records = []
+        for row in features.to_dict("records"):
+            values = {column: (None if pd.isna(row[column]) else float(row[column])) for column in feature_columns}
+            records.append({
+                "timestamp": self._timestamp_text(row["timestamp"]), "symbol": str(row["symbol"]).upper().strip(),
+                "timeframe": timeframe.strip(), "feature_version": feature_version.strip(),
+                "values_json": json.dumps(values, allow_nan=False, sort_keys=True),
+            })
+        self.initialize()
+        with self._connection() as connection:
+            connection.executemany(
+                """INSERT INTO features (timestamp, symbol, timeframe, feature_version, values_json)
+                VALUES (:timestamp, :symbol, :timeframe, :feature_version, :values_json)
+                ON CONFLICT(timestamp, symbol, timeframe, feature_version) DO UPDATE SET values_json = excluded.values_json""",
+                records,
+            )
+        return len(records)
 
     @staticmethod
     def _timestamp_text(value: object) -> str:

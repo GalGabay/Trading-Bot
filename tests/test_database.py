@@ -79,3 +79,17 @@ class TradingDatabaseTests(TestCase):
             "AAPL", timeframe="1Hour", start=pd.Timestamp("2026-01-02T16:00:00Z")
         )
         self.assertEqual(stored["timestamp"].tolist(), [pd.Timestamp("2026-01-02T16:00:00Z")])
+
+    def test_features_are_upserted_by_timestamp_symbol_and_version(self) -> None:
+        features = candle_frame().iloc[[0]].copy()
+        features["ema_20"] = [100.5]
+        features["rsi_14"] = [55.0]
+        self.assertEqual(self.database.upsert_features(features, timeframe="1Hour", feature_version="technical_v1"), 1)
+        features["rsi_14"] = [56.0]
+        self.database.upsert_features(features, timeframe="1Hour", feature_version="technical_v1")
+        connection = sqlite3.connect(self.database_path)
+        try:
+            row = connection.execute("SELECT values_json FROM features").fetchone()
+        finally:
+            connection.close()
+        self.assertIn('"rsi_14": 56.0', row[0])

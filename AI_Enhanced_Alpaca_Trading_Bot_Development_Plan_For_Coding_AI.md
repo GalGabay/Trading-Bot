@@ -864,6 +864,12 @@ Avoid creating hundreds of correlated indicators simply because they are availab
 
 The feature set should be explainable and tested.
 
+### Initial feature implementation
+
+Implement the initial feature set in `app/ai/features.py` as `technical_v1`: EMA20/50/200, MACD and signal/histogram, ADX14, RSI14, ROC10, stochastic %K14, ATR14, Bollinger Bands20, 20-period historical volatility, volume SMA20 and ratio, OBV, returns over 1/5/20 bars, and relative distance from each EMA. Calculate independently for each symbol in timestamp order. Do not backfill indicator warm-up values: unavailable history stays `NaN` and must be excluded or handled deliberately by later strategies/models.
+
+Use only the current and earlier candles for every feature. Persist feature rows through the SQLite `features` table with their timeframe and feature version, storing only calculated values in the versioned payload. The initial historical-volatility annualization factor is configurable and defaults to 252 periods; set it appropriately when using intraday timeframes in a later configuration phase.
+
 ---
 
 # 14. Phase 7 — First Rule-Based Strategy
