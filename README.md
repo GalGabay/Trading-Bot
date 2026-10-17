@@ -213,8 +213,39 @@ The `stop_price` in an order intent is used for risk sizing only; Phase 12
 does not place a protective stop or automate exits.
 
 Before any paper activation, complete the [owner risk-limit decision](docs/risk_limit_decision_workbook.md),
-review the paper account, and finish Phase 13 recovery,
-and the planned exit/stop workflow.
+review the paper account, and finish the planned exit/stop workflow.
+
+## Phase 13 startup recovery
+
+`app/recovery/state_recovery.py` provides a paper-only startup check. From the
+repository root, after configuring paper credentials on that machine, run:
+
+```powershell
+python -m app.recovery.state_recovery --database data/trading_bot.sqlite3 --kill-switch data/kill_switch.sqlite3 --risk-config config/risk_limits.json
+```
+
+This command does not submit, replace, or cancel orders. It checks SQLite
+integrity and schema, loads the risk file, looks up unfinished local orders by
+their stable client IDs, reconciles the broker account/positions/open orders,
+checks the market clock, and records a structured startup event. It prints a
+JSON report. A blocked report exits with code `2`. The first run with a new
+database establishes a baseline and requires operator review; recovery never
+automatically resets the kill switch. Unknown orders, changed holdings/order
+statuses, external open orders, account inconsistencies, broker outages, and
+database failures also block readiness and require investigation. A closed
+market or an unapproved risk file blocks order evaluation without placing an
+order. Re-running after review and an explicit kill-switch reset can clear a
+transient readiness condition, but the recovery module itself cannot enable
+paper submission.
+
+The report's `can_resume_order_evaluation` means the startup state checks
+passed at that moment. It is not an instruction to trade. The Phase 12 order
+manager still has its separate disabled-by-default submission flag and reruns
+fresh checks before any paper order. Recovery uses at most 100 broker order-ID
+lookups per run; a larger unfinished inventory blocks until reviewed. Order
+status and cumulative fills are available, but individual execution fills and
+realized P&L still require a broker activity ledger. Focused Phase 13 tests
+and Raspberry Pi validation remain to be done.
 
 ## Cross-platform operation
 

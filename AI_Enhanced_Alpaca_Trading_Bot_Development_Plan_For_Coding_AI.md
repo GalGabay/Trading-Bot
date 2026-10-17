@@ -1475,6 +1475,16 @@ Resume
 
 Never assume that the previous process ended cleanly.
 
+Current Phase 13 implementation: `python -m app.recovery.state_recovery`
+validates the local SQLite file before connecting to the paper broker, looks
+up every locally unfinished order by its stable client ID (up to a bounded
+limit), reconciles account positions and open orders, checks the market clock,
+and writes a structured startup report. It is read-only at the broker and
+never resets the kill switch or enables order submission. A missing baseline,
+unresolved order, changed holdings/order status, external open order, or
+inconsistent account state blocks readiness and requires operator review.
+Focused Phase 13 failure/recovery tests remain to be added.
+
 ---
 
 # 29. Phase 14 — Machine Learning
@@ -3503,13 +3513,15 @@ For each completed milestone, record:
 - Expanding-year walk-forward calibration of a declared strategy threshold grid, with later-year evaluation kept separate from parameter selection.
 - Standalone, fail-closed risk decisions for proposed trades with configurable exposure, loss, drawdown, position-count, optional sector, and volatility gates.
 - Phase 11 paper-account reconciliation and Phase 12 disabled-by-default order management with an unapproved risk configuration placeholder.
+- Phase 13 read-only startup recovery checks SQLite integrity, unfinished broker orders, portfolio changes, and market state before reporting whether order evaluation may resume.
 
 ### Files changed
-- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `app/risk/`, `app/portfolio/`, `app/orders/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
+- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `app/risk/`, `app/portfolio/`, `app/orders/`, `app/recovery/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
 - 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
 - 20 focused Phase 12 order/idempotency tests pass; 107 tests pass across the full Windows suite.
+- Focused Phase 13 recovery tests have not yet been added or run.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3523,7 +3535,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Phase 12 order management and Section 27 idempotency are implemented with offline preview, signal-stable client IDs, reconciled risk and portfolio checks, SQLite order reservations, broker client-order-ID lookup, and status events. The initial `config/risk_limits.json` is unapproved and has empty limits. The owner must choose or accept all limits before any paper-order workflow is enabled. Next implement Phase 13 startup recovery, an exit/stop workflow, and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Phase 13 startup recovery is implemented as an explicit paper-only command and readiness report. It never enables submission or resets the kill switch. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next add focused Phase 13 tests, then an exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 

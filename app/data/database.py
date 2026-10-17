@@ -425,6 +425,68 @@ class TradingDatabase:
             ).fetchone()
         return None if row is None else dict(row)
 
+    def validate_integrity(self) -> None:
+        """Validate the on-disk SQLite file before recovery reads broker state."""
+        if self.path.exists() and self.path.stat().st_size > 0:
+            with self._connection() as connection:
+                result = connection.execute("PRAGMA integrity_check").fetchone()
+                if result is None or result[0] != "ok":
+                    raise DataStorageError(f"SQLite integrity check failed: {None if result is None else result[0]}")
+                tables = {
+                    row[0] for row in connection.execute(
+                        "SELECT name FROM sqlite_master WHERE type = 'table'"
+                    )
+                }
+                required = {"schema_migrations", "orders", "portfolio_snapshots", "system_events"}
+                if not required.issubset(tables):
+                    raise DataStorageError(f"SQLite is missing required tables: {sorted(required - tables)}")
+                version = connection.execute("SELECT MAX(version) FROM schema_migrations").fetchone()[0]
+                if version is None or version > SCHEMA_VERSION:
+                    raise DataStorageError(f"Unsupported SQLite schema version: {version}")
+        self.initialize()
+        with self._connection() as connection:
+            result = connection.execute("PRAGMA integrity_check").fetchone()
+            if result is None or result[0] != "ok":
+                raise DataStorageError(f"SQLite integrity check failed: {None if result is None else result[0]}")
+            violations = connection.execute("PRAGMA foreign_key_check").fetchall()
+            if violations:
+                raise DataStorageError(f"SQLite has {len(violations)} foreign-key violations")
+            version = connection.execute("SELECT MAX(version) FROM schema_migrations").fetchone()[0]
+            if version != SCHEMA_VERSION:
+                raise DataStorageError(f"Unexpected SQLite schema version: {version}")
+
+    def list_unsettled_orders(self, *, limit: int = 501) -> list[dict[str, Any]]:
+        """Return locally nonterminal orders, including reserved/unknown IDs."""
+        if type(limit) is not int or limit < 1:
+            raise DataStorageError("Order lookup limit must be a positive integer")
+        self.initialize()
+        with self._connection() as connection:
+            rows = connection.execute(
+                """SELECT * FROM orders
+                WHERE LOWER(status) NOT IN ('filled', 'canceled', 'expired', 'rejected', 'replaced', 'blocked')
+                ORDER BY id LIMIT ?""",
+                (limit,),
+            ).fetchall()
+        return [dict(row) for row in rows]
+
+    def record_system_event(
+        self, *, level: str, event_type: str, message: str,
+        payload: Mapping[str, Any] | None = None, timestamp: object | None = None,
+    ) -> int:
+        """Append a small structured operational event without credentials."""
+        if level not in {"info", "warning", "error"} or not event_type or not message:
+            raise DataStorageError("Invalid system event")
+        timestamp_text = self._timestamp_text(timestamp or pd.Timestamp.now(tz="UTC"))
+        payload_json = json.dumps(payload or {}, allow_nan=False, sort_keys=True)
+        self.initialize()
+        with self._connection() as connection:
+            cursor = connection.execute(
+                """INSERT INTO system_events (timestamp, level, event_type, message, payload_json)
+                VALUES (?, ?, ?, ?, ?)""",
+                (timestamp_text, level, event_type, message, payload_json),
+            )
+        return int(cursor.lastrowid)
+
     def reserve_order(
         self, *, client_order_id: str, timestamp: object, symbol: str,
         side: str, quantity: int, limit_price: str,

@@ -111,9 +111,9 @@ def client_order_id_for(signal: Signal) -> str:
 class OrderManager:
     """Single entry point for controlled Alpaca paper order submission.
 
-    The caller must run only one active bot instance per paper account. Phase
-    13 will add startup recovery and service ownership. This class never
-    automatically resubmits a reserved or uncertain client order ID.
+    The caller must run only one active bot instance per paper account.
+    Startup reconciliation lives in ``app.recovery.state_recovery``. This
+    class never automatically resubmits a reserved or uncertain client ID.
     """
 
     def __init__(
