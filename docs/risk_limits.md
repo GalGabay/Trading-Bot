@@ -58,16 +58,19 @@ For stop-order behavior, read [FINRA's stop-order notice](https://www.finra.org/
 
 ## Where to put the decision
 
-Copy `config/risk_limits.example.json` to `config/risk_limits.json` in the
-repository. Edit the numeric values there, leave `approved_for_paper` as
+Open the existing `config/risk_limits.json` in the repository. It has empty
+`null` values for the limits. Replace them with your chosen numbers, leave `approved_for_paper` as
 `false` while undecided, and set it to `true` only after you have reviewed
-every field. Commit that reviewed JSON file so the Raspberry Pi gets the same
+every field. The optional sector and volatility fields may stay `null` if you
+choose not to use those gates. Commit that reviewed JSON file so the Raspberry Pi gets the same
 limits when it pulls the repository. It contains no API credentials. This is
 the machine-readable policy. A Markdown note can explain your reasoning, but
 editing Python source is unnecessary.
 
-Phase 12 must load the approved JSON, reconcile a complete portfolio, check
+Phase 12 loads the approved JSON, reconciles a complete portfolio, checks
 the persistent kill switch, and rerun the risk gate immediately before any
 paper order submission. The kill switch defaults to denied until an operator
 explicitly resets it after review. It stops new orders; it does not liquidate
-positions. No Phase 12 order workflow exists yet.
+positions. The order manager is present but disabled by default; no command or
+scheduler submits orders. Focused order tests and startup recovery still need
+to be completed before an automated paper workflow is enabled.

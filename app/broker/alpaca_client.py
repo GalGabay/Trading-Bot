@@ -20,6 +20,7 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
 from alpaca.trading.enums import QueryOrderStatus
 from alpaca.trading.requests import GetCalendarRequest, GetOrdersRequest, OrderRequest
+from alpaca.common.exceptions import APIError
 from dotenv import load_dotenv
 
 
@@ -102,6 +103,27 @@ class AlpacaClient:
         if len(orders) >= 500:
             raise RuntimeError("Open-order response reached Alpaca's 500-order limit; reconciliation is incomplete.")
         return orders
+
+    def get_order_by_client_id(self, client_order_id: str) -> Any | None:
+        """Look up one paper order; return None only for an explicit 404."""
+        try:
+            return self._trading.get_order_by_client_id(client_order_id)
+        except APIError as exc:
+            if exc.status_code == 404:
+                return None
+            raise
+
+    def get_order_by_id(self, order_id: str) -> Any:
+        """Return one paper order by Alpaca's identifier."""
+        return self._trading.get_order_by_id(order_id)
+
+    def get_market_clock(self) -> Any:
+        """Return Alpaca's US-equities market clock."""
+        return self._trading.get_clock()
+
+    def get_asset(self, symbol: str) -> Any:
+        """Return the broker's asset metadata for a proposed symbol."""
+        return self._trading.get_asset(symbol)
 
     def get_market_calendar(self, *, start: date, end: date) -> list[Any]:
         """Return Alpaca's exchange sessions for the inclusive date range."""

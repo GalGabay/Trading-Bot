@@ -193,7 +193,7 @@ The target architecture is:
                          │                          │
                          │ Construct / submit       │
                          │ Track / reconcile        │
-                         │ Retry / recover          │
+                         │ Investigate / recover    │
                          └────────────┬─────────────┘
                                       │
                                       ▼
@@ -1430,9 +1430,9 @@ Query Alpaca
         ↓
 Does order exist?
     ┌───┴────┐
-   YES       NO
+   YES       NO / UNKNOWN
    │          │
- Track      Retry
+ Track      Stop and investigate
 ```
 
 ---
@@ -2838,12 +2838,14 @@ ai:
 This allows controlled experimentation without editing application code.
 
 For the current paper-risk gate, `config/risk_limits.example.json` is the
-machine-readable template and `app/risk/config.py` requires a reviewed
+machine-readable example and `app/risk/config.py` requires a reviewed
 `config/risk_limits.json` with `approved_for_paper: true` before paper
 execution. JSON is used here to avoid adding a YAML dependency; the broader
 YAML example above remains a future configuration target. The actual risk
 limits file should be committed so Windows and Raspberry Pi use the same
 reviewed policy. API credentials remain only in each machine's `.env` file.
+The initial `config/risk_limits.json` contains empty `null` limits and
+`approved_for_paper: false`; fill it in only after the owner chooses the policy.
 
 ---
 
@@ -3500,12 +3502,14 @@ For each completed milestone, record:
 - A historical downloader with feed/adjustment provenance, checksum manifest, strict interval review, and a local three-scenario backtest command.
 - Expanding-year walk-forward calibration of a declared strategy threshold grid, with later-year evaluation kept separate from parameter selection.
 - Standalone, fail-closed risk decisions for proposed trades with configurable exposure, loss, drawdown, position-count, optional sector, and volatility gates.
+- Phase 11 paper-account reconciliation and Phase 12 disabled-by-default order management with an unapproved risk configuration placeholder.
 
 ### Files changed
-- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `app/risk/`, `app/portfolio/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
+- `app/broker/`, `app/data/`, `app/ai/`, `app/strategy/`, `app/risk/`, `app/portfolio/`, `app/orders/`, `backtesting/`, `tests/`, `requirements.txt`, and `README.md`.
 
 ### Tests
 - 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
+- Phase 12 tests have not been added or run yet.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3519,7 +3523,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Implement Phase 12 order management. Ask the owner to choose or accept risk limits in `config/risk_limits.json` before any paper-order workflow connects to the risk gate. Phase 12 must also require a healthy, explicitly reset kill switch and a complete reconciled account snapshot before submission. A complete fill/activity ledger is required for realized P&L. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Phase 12 order management is implemented as a disabled-by-default API with offline preview, reconciled risk and portfolio checks, SQLite order reservations, broker client-order-ID lookup, and status events. The initial `config/risk_limits.json` is unapproved and has empty limits. The owner must choose or accept all limits before any paper-order workflow is enabled. Add focused Phase 12 tests, then Phase 13 startup recovery, an exit/stop workflow, and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 

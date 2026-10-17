@@ -19,7 +19,7 @@ import pandas as pd
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
 from app.strategy.base import Signal
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 
 class DataStorageError(ValueError):
@@ -106,6 +106,17 @@ class TradingDatabase:
                     status TEXT NOT NULL,
                     alpaca_order_id TEXT UNIQUE
                 );
+                CREATE TABLE IF NOT EXISTS order_events (
+                    id INTEGER PRIMARY KEY,
+                    client_order_id TEXT NOT NULL REFERENCES orders(client_order_id),
+                    timestamp TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    filled_quantity TEXT,
+                    filled_average_price TEXT,
+                    details_json TEXT NOT NULL DEFAULT '{}'
+                );
+                CREATE INDEX IF NOT EXISTS ix_order_events_client_time
+                    ON order_events (client_order_id, id);
                 CREATE TABLE IF NOT EXISTS fills (
                     id INTEGER PRIMARY KEY,
                     order_id INTEGER NOT NULL REFERENCES orders(id),
@@ -389,6 +400,89 @@ class TradingDatabase:
                 "SELECT payload_json FROM portfolio_snapshots ORDER BY id DESC LIMIT 1"
             ).fetchone()
         return None if row is None else json.loads(row["payload_json"])
+
+    def get_peak_portfolio_equity(self) -> float | None:
+        """Highest observed broker equity in this database's snapshot history."""
+        self.initialize()
+        with self._connection() as connection:
+            value = connection.execute("SELECT MAX(equity) FROM portfolio_snapshots").fetchone()[0]
+        return None if value is None else float(value)
+
+    def get_order_record(self, client_order_id: str) -> dict[str, Any] | None:
+        """Return the current local order journal row, if present."""
+        self.initialize()
+        with self._connection() as connection:
+            row = connection.execute(
+                "SELECT * FROM orders WHERE client_order_id = ?", (client_order_id,)
+            ).fetchone()
+        return None if row is None else dict(row)
+
+    def reserve_order(
+        self, *, client_order_id: str, timestamp: object, symbol: str,
+        side: str, quantity: int, order_type: str = "limit",
+    ) -> tuple[bool, dict[str, Any]]:
+        """Reserve a stable client ID before any broker submission.
+
+        Return ``(created, row)``. Existing IDs are never overwritten here;
+        the caller must compare the stored identity and must not resubmit.
+        """
+        if not client_order_id or not symbol or side not in {"buy", "sell"} or type(quantity) is not int or quantity < 1:
+            raise DataStorageError("Invalid order reservation")
+        timestamp_text = self._timestamp_text(timestamp)
+        self.initialize()
+        with self._connection() as connection:
+            connection.execute("BEGIN IMMEDIATE")
+            cursor = connection.execute(
+                """INSERT OR IGNORE INTO orders
+                (client_order_id, timestamp, symbol, side, quantity, order_type, status)
+                VALUES (?, ?, ?, ?, ?, ?, 'reserved')""",
+                (client_order_id, timestamp_text, symbol, side, quantity, order_type),
+            )
+            row = connection.execute(
+                "SELECT * FROM orders WHERE client_order_id = ?", (client_order_id,)
+            ).fetchone()
+            if cursor.rowcount == 1:
+                connection.execute(
+                    "INSERT INTO order_events (client_order_id, timestamp, status) VALUES (?, ?, 'reserved')",
+                    (client_order_id, timestamp_text),
+                )
+        return cursor.rowcount == 1, dict(row)
+
+    def record_order_update(
+        self, *, client_order_id: str, timestamp: object, status: str,
+        alpaca_order_id: str | None = None, filled_quantity: str | None = None,
+        filled_average_price: str | None = None, details: Mapping[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        """Atomically update current order status and append an audit event."""
+        if not status:
+            raise DataStorageError("Order status must not be empty")
+        timestamp_text = self._timestamp_text(timestamp)
+        details_json = json.dumps(details or {}, allow_nan=False, sort_keys=True)
+        self.initialize()
+        with self._connection() as connection:
+            connection.execute("BEGIN IMMEDIATE")
+            row = connection.execute(
+                "SELECT * FROM orders WHERE client_order_id = ?", (client_order_id,)
+            ).fetchone()
+            if row is None:
+                raise DataStorageError("Order must be reserved before its status can be updated")
+            if row["alpaca_order_id"] and alpaca_order_id and row["alpaca_order_id"] != alpaca_order_id:
+                raise DataStorageError("Alpaca order ID changed for a stable client order ID")
+            connection.execute(
+                """UPDATE orders SET status = ?, alpaca_order_id = COALESCE(?, alpaca_order_id)
+                WHERE client_order_id = ?""",
+                (status, alpaca_order_id, client_order_id),
+            )
+            connection.execute(
+                """INSERT INTO order_events
+                (client_order_id, timestamp, status, filled_quantity, filled_average_price, details_json)
+                VALUES (?, ?, ?, ?, ?, ?)""",
+                (client_order_id, timestamp_text, status, filled_quantity, filled_average_price, details_json),
+            )
+            updated = connection.execute(
+                "SELECT * FROM orders WHERE client_order_id = ?", (client_order_id,)
+            ).fetchone()
+        return dict(updated)
 
     @staticmethod
     def _timestamp_text(value: object) -> str:

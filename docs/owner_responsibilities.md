@@ -9,15 +9,16 @@ paper orders. You also control your accounts and Raspberry Pi.
 
 ## Where we are now
 
-Phases 0–11 and the standalone safeguards in Sections 23–24 have been built.
-Phase 12 (Order Manager) has **not** been built. The current application does
-not submit orders. You can ask me to implement and test Phase 12 offline now;
-you do **not** need to choose risk percentages before that coding begins.
+Phases 0–12 and the standalone safeguards in Sections 23–24 have been built.
+Phase 12 has an order manager, but no command or scheduler calls it. Paper
+submission is disabled by default and has not been activated. You do **not**
+need to choose risk percentages to continue coding or review.
 
 The next owner decision becomes necessary **before Phase 12 is connected to
 paper-order submission**: choose or explicitly accept the risk limits in
-`config/risk_limits.json`. Until you do, the example config says
-`approved_for_paper: false`, and the loader will not approve it.
+`config/risk_limits.json`. It now exists with all limits set to `null` and
+`approved_for_paper: false`; the loader rejects it until you complete and
+approve it.
 
 ## Phase-by-phase checklist
 
@@ -27,8 +28,8 @@ paper-order submission**: choose or explicitly accept the risk limits in
 | **After Phase 1 — Alpaca Paper Account (§7), before any broker API call on a machine** | Maintain a paper account and its own API keys. | Put paper keys in that machine's `.env`, with `ALPACA_PAPER=true`. Keep Windows and Pi `.env` files separate. Never commit keys or paste them into a chat, screenshot, log, or Markdown file. | You have configured Windows keys. I can explain setup; I do not need to see the values. |
 | **After Phase 2 — Set Up Python (§8), whenever setting up a new machine** | Create that machine's Python environment and install dependencies. | Follow [README setup](../README.md). Use a new `.venv` on Windows and on the Pi; do not copy the Windows environment. | Windows setup is done. Pi setup is due at Phase 16. |
 | **After Phase 8 — Backtesting (§16–20) and Phase 9 — Walk-Forward (§21), before treating results as evidence for paper trading** | Choose the symbols, years, untouched evaluation period, and how much cost sensitivity you will tolerate. Review losses and drawdowns as well as returns. | Tell me the research scope; I can download permitted historical data and run the documented commands. Keep an untouched period for final evaluation. | Existing AAPL case studies are illustrative and cost-sensitive, not proof of an edge. You do not need to personally write the downloader or train a model. |
-| **After Phase 10 — Risk Management (§22), Sections 23–24, and Phase 11 — Portfolio Manager (§25), before enabling Phase 12 paper orders** | **Choose or explicitly accept every paper-risk limit.** Decide the paper-account size the policy is meant to represent. | Use the [risk-limit decision worksheet](risk_limit_decision_workbook.md). Tell me your choices or copy `config/risk_limits.example.json` to `config/risk_limits.json`, edit it, and set `approved_for_paper` to `true` only after review. Commit the reviewed JSON so the Pi receives the same policy. | I can implement Phase 12 offline while you decide. I will not treat provisional example values as your approval. |
-| **Before the first Phase 12 paper-order submission (§26–27)** | Confirm that the account's existing positions and open orders are understood, the approved risk config is loaded, and you want paper orders enabled. | Run or ask me to guide a read-only reconciliation: `python -m app.portfolio.portfolio_manager --database data/trading_bot.sqlite3`. Review the output; investigate unexpected holdings, orders, or an accounting gap. The kill switch must be healthy and explicitly reset after review. | I must implement the order manager, idempotency, risk/portfolio checks, and a dry-run path first. No order is sent merely by creating a config file. |
+| **After Phase 12 coding, before enabling any paper order** | **Choose or explicitly accept every required paper-risk limit** and decide whether to use the optional sector and volatility limits. Decide the paper-account size the policy is meant to represent. | Use the [risk-limit decision worksheet](risk_limit_decision_workbook.md). Edit the existing `config/risk_limits.json` or tell me your choices. Optional limits may remain `null`. Set `approved_for_paper` to `true` only after review. Commit the reviewed JSON so the Pi receives the same policy. | Phase 12 is built but disabled. The empty JSON blocks submission until you decide. |
+| **Before the first Phase 12 paper-order submission (§26–27)** | Confirm that the account's existing positions and open orders are understood, the approved risk config is loaded, and you want paper orders enabled. | Run or ask me to guide a read-only reconciliation: `python -m app.portfolio.portfolio_manager --database data/trading_bot.sqlite3`. Review the output; investigate unexpected holdings, orders, or an accounting gap. The kill switch must be healthy and explicitly reset after review. | Phase 12 has a preview and order journal. Focused tests and state recovery are still needed before connecting an automatic paper workflow. No order is sent merely by creating a config file. |
 | **After Phase 13 — State Recovery (§28), before unattended operation** | Review how the bot behaves after a restart or network outage, especially if an order's result is unknown. | Ask me to run the recovery tests and show you the state and order-reconciliation report. Resolve any unexplained paper orders in the Alpaca dashboard before resuming. | I can implement recovery logic and tests; your judgment is needed for unexplained broker activity. |
 | **After Phase 14 — Machine Learning (§29–36), if you decide to pursue ML** | Define what you want the model to predict and which later data must remain unseen; approve any paid data source before purchase. | Tell me the intended question, data budget, and acceptable complexity. I can construct the dataset, train on Windows, and compare against the fixed rule-based baseline. | ML is optional and is not required for the first paper bot. No training command exists yet. |
 | **After Phase 15 — Paper Trading Engine (§40–42), during the paper trial** | Decide when to start the paper trial and review operation over varied market conditions. Investigate unexplained orders, repeated kill-switch trips, gaps, and drawdowns. | Review broker activity, the bot's logs/reconciliation, and periodic performance reports. Record any decision to change risk limits or strategy settings; retest before restarting. | I can build monitoring, reports, and incident instructions. Paper fills do not prove how live fills will behave. |
@@ -37,12 +38,12 @@ paper-order submission**: choose or explicitly accept the risk limits in
 
 ## The decisions needed soon
 
-1. **For Phase 12 coding:** nothing is required from you yet. I can implement
-   an offline order manager and tests with submission disabled.
-2. **Before Phase 12 can submit a paper order:** give me your chosen risk limits
-   or explicitly say that you accept the example values after reading the
-   [worksheet](risk_limit_decision_workbook.md). We then create and review
-   `config/risk_limits.json` with `approved_for_paper: true`.
+1. **For the next coding and tests:** nothing is required from you yet. I can
+   add focused Phase 12 tests and Phase 13 recovery with submission disabled.
+2. **Before Phase 12 can submit a paper order:** enter your chosen risk limits
+   or explicitly accept the example values after reading the
+   [worksheet](risk_limit_decision_workbook.md). Review the existing
+   `config/risk_limits.json` and then set `approved_for_paper` to `true`.
 3. **Before the first paper order:** review the broker account's existing
    positions/open orders, approve enabling paper execution, and explicitly
    reset the kill switch after the order manager provides a safe workflow.

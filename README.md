@@ -148,8 +148,8 @@ Sections 23 and 24 are implemented as standalone safeguards:
 risk, position, exposure, cash, and optional sector limits;
 `app/risk/kill_switch.py` stores a persistent emergency stop in a separate
 SQLite file. A missing or unreadable kill-switch state denies new orders.
-Neither module submits or closes positions. Future Phase 12 orchestration must
-call both safeguards before paper orders. See [the risk-limit guide](docs/risk_limits.md)
+Neither module submits or closes positions. Phase 12 calls both safeguards
+before any explicitly enabled paper order. See [the risk-limit guide](docs/risk_limits.md)
 for the meaning of each percentage and how to record your decision in the
 tracked `config/risk_limits.json` file once you choose your limits.
 
@@ -177,9 +177,36 @@ Unrealized P&L is `null` if any open position lacks it. Broker endpoints are
 queried sequentially, so a fill during capture can temporarily create an
 accounting gap; repeat reconciliation after the account settles. Balances and
 positions are broker-authoritative observations, not an order authorization.
-The Phase 10 risk gate is still disconnected from order submission.
+The Phase 10 risk gate is connected in the Phase 12 order manager, with paper
+submission disabled by default.
 Use a separate SQLite file for each Alpaca paper account; reconciliation
 rejects snapshots from a different account ID in an existing database.
+
+## Phase 12 order management
+
+`app/orders/order_manager.py` provides an offline `preview()` and a guarded
+`submit()` API. There is no CLI, service, or scheduler that invokes submission.
+The `enable_paper_submission` constructor flag defaults to `False`. Even if it
+is deliberately enabled, `config/risk_limits.json` must contain valid limits
+and `approved_for_paper: true`; its initial values are `null` and approval is
+`false`. The persistent kill switch must be explicitly reset after review.
+
+The manager accepts only whole-share US equity DAY limit orders during regular
+market hours. It checks a fresh broker clock, tradable asset and active paper
+account, reconciles positions and open orders, checks buying power, position
+sizing, and the approved risk policy, then reserves a unique client order ID in
+SQLite before submission. Existing or uncertain IDs are never sent again
+automatically. `refresh_status()` records later broker statuses and cumulative
+fill quantities, including partial fills, cancellations, and rejections.
+Actual individual fills and realized P&L still require a broker activity
+ledger. The peak-equity safeguard uses the highest snapshot observed in this
+local database; earlier account history is not reconstructed.
+The `stop_price` in an order intent is used for risk sizing only; Phase 12
+does not place a protective stop or automate exits.
+
+Before any paper activation, complete the [owner risk-limit decision](docs/risk_limit_decision_workbook.md),
+review the paper account, and finish focused order tests, Phase 13 recovery,
+and the planned exit/stop workflow.
 
 ## Cross-platform operation
 

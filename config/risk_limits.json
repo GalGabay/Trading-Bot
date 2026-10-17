@@ -1,0 +1,13 @@
+{
+  "approved_for_paper": false,
+  "max_portfolio_exposure": null,
+  "max_single_position": null,
+  "max_risk_per_trade": null,
+  "max_daily_loss": null,
+  "max_drawdown": null,
+  "max_positions": null,
+  "max_snapshot_age_seconds": null,
+  "max_signal_age_seconds": null,
+  "max_sector_exposure": null,
+  "max_annualized_volatility": null
+}

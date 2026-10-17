@@ -115,11 +115,8 @@ state, and other safety events, then check its status before each order.
 
 On your Windows development computer:
 
-```powershell
-Copy-Item config/risk_limits.example.json config/risk_limits.json
-```
-
-Open `config/risk_limits.json` in VS Code. Enter fractions such as `0.02` for
+Open the existing `config/risk_limits.json` in VS Code. Its limits are empty
+(`null`) and `approved_for_paper` is `false`. Enter fractions such as `0.02` for
 2%, not `2`. Keep `approved_for_paper` as `false` while deciding. When you
 have reviewed every field and intentionally approve the paper policy, change
 it to `true`. The loader rejects an absent, unapproved, or invalid file.
@@ -131,9 +128,9 @@ numbers in plain language and I can create the JSON for your review.
 
 This workbook is for reasoning; `config/risk_limits.json` is the actual
 machine-readable policy. Editing Python source is unnecessary. Creating the
-JSON does not submit orders. Phase 12 still needs an explicitly enabled paper
-workflow, fresh reconciled account state, risk checks, and a healthy kill
-switch before any submission.
+JSON does not submit orders. Phase 12 also needs its submission flag explicitly
+enabled, fresh reconciled account state, risk checks, and a healthy kill switch
+before any submission. No command or scheduler currently enables it.
 
 ## Your decision record (optional notes)
 

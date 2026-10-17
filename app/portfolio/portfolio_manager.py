@@ -54,6 +54,7 @@ class PortfolioPosition:
     market_price: Decimal
     market_value: Decimal
     unrealized_pl: Decimal | None
+    asset_class: str | None = None
 
     def as_record(self) -> dict[str, str | None]:
         return {
@@ -61,6 +62,7 @@ class PortfolioPosition:
             "quantity": str(self.quantity), "average_entry_price": str(self.average_entry_price),
             "market_price": str(self.market_price), "market_value": str(self.market_value),
             "unrealized_pl": None if self.unrealized_pl is None else str(self.unrealized_pl),
+            "asset_class": self.asset_class,
         }
 
 
@@ -183,7 +185,9 @@ class PortfolioManager:
             quantity = abs(quantity)
             market_value = abs(market_value) * (1 if side == "long" else -1)
             symbols.add(symbol)
-            positions.append(PortfolioPosition(symbol, side, quantity, entry, price, market_value, unrealized))
+            raw_asset_class = getattr(raw, "asset_class", None)
+            asset_class = None if raw_asset_class is None else _label(raw_asset_class, f"{symbol}.asset_class")
+            positions.append(PortfolioPosition(symbol, side, quantity, entry, price, market_value, unrealized, asset_class))
 
         orders: list[OpenOrder] = []
         order_ids: set[str] = set()
