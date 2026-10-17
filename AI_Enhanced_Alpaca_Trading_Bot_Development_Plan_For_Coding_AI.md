@@ -3542,7 +3542,7 @@ For each completed milestone, record:
 - 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
 - 20 focused Phase 12 order/idempotency tests pass.
 - 17 focused Phase 13 recovery tests pass; 124 tests pass across the full Windows suite.
-- Focused Phase 14 ML tests and an end-to-end training run have not been performed yet.
+- 11 focused Phase 14 ML tests pass offline; 135 tests pass across the full Windows suite. A real XGBoost training run and Pi inference check have not been performed yet.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3556,7 +3556,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, and point-in-time historical universes remain unimplemented. The Phase 14 ML training pipeline exists but has not been run on an owner-reviewed research scope or validated on the Pi.
 
 ### Next step
-- Phase 13 startup recovery is implemented and covered by 17 offline tests. Phase 14 has an offline single-symbol ML research pipeline, but no reviewed training result or focused ML tests yet. Neither phase enables submission. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next add focused Phase 14 tests, then build a safe exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before broader market-wide predictive claims.
+- Phase 13 startup recovery is implemented and covered by 17 offline tests. Phase 14 has an offline single-symbol ML research pipeline and 11 focused tests, but no reviewed training result yet. Neither phase enables submission. The owner can use `docs/research_scope_decision_workbook.md` to specify the study and its untouched test period. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next build a safe exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before broader market-wide predictive claims.
 
 # Important Handoff Rule
 

@@ -127,6 +127,10 @@ Market and sector return inputs from the plan are omitted until aligned,
 point-in-time source data exists; they are not synthesized from the same stock.
 The command compares rule-only and filtered backtests under the same three
 cost scenarios. It never submits an order or enables paper execution.
+Run its offline unit tests with `python -m unittest tests.test_ml_research -v`.
+Choose or request proposed defaults using the
+[research-scope decision workbook](docs/research_scope_decision_workbook.md)
+before treating a new report as evidence.
 
 On Windows, install the optional research dependencies with
 `python -m pip install -r requirements-ml.txt`. Download and review a dataset
@@ -153,6 +157,8 @@ training or Pi compatibility run has been performed yet. Research artifacts in
 its verified `model.json` and `metadata.json` into a reviewed directory under
 the tracked repository and commit that directory; `ResearchModel.load()` can
 load from that path. This approval and deployment step is not automatic.
+The ML requirements cap NumPy below 2.5 for compatibility with SciPy 1.15;
+reinstall them in one environment before real training if local versions differ.
 
 ## Phase 10 risk gate
 
