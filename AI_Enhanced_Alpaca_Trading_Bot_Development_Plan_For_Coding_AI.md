@@ -1483,7 +1483,9 @@ and writes a structured startup report. It is read-only at the broker and
 never resets the kill switch or enables order submission. A missing baseline,
 unresolved order, changed holdings/order status, external open order, or
 inconsistent account state blocks readiness and requires operator review.
-Focused Phase 13 failure/recovery tests remain to be added.
+Seventeen focused Phase 13 failure/recovery tests use a fake broker and temporary
+SQLite files; they make no broker order calls. Run with
+`python -m unittest tests.test_recovery -v`.
 
 ---
 
@@ -3520,8 +3522,8 @@ For each completed milestone, record:
 
 ### Tests
 - 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
-- 20 focused Phase 12 order/idempotency tests pass; 107 tests pass across the full Windows suite.
-- Focused Phase 13 recovery tests have not yet been added or run.
+- 20 focused Phase 12 order/idempotency tests pass.
+- 17 focused Phase 13 recovery tests pass; 124 tests pass across the full Windows suite.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3535,7 +3537,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Phase 13 startup recovery is implemented as an explicit paper-only command and readiness report. It never enables submission or resets the kill switch. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next add focused Phase 13 tests, then an exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Phase 13 startup recovery is implemented and covered by 17 offline tests. It never enables submission or resets the kill switch. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next build a safe exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. A single-symbol ML research prototype can be built, but point-in-time universe data and a multi-symbol portfolio engine remain necessary before broader market-wide predictive claims.
 
 # Important Handoff Rule
 

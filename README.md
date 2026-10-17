@@ -244,8 +244,11 @@ manager still has its separate disabled-by-default submission flag and reruns
 fresh checks before any paper order. Recovery uses at most 100 broker order-ID
 lookups per run; a larger unfinished inventory blocks until reviewed. Order
 status and cumulative fills are available, but individual execution fills and
-realized P&L still require a broker activity ledger. Focused Phase 13 tests
-and Raspberry Pi validation remain to be done.
+realized P&L still require a broker activity ledger. The 17 offline Phase 13
+tests cover clean and blocked startup, order reconciliation, database and broker
+failures, accounting, market clock, and recovery after operator reset. Run them
+with `python -m unittest tests.test_recovery -v`. Raspberry Pi validation
+remains to be done.
 
 ## Cross-platform operation
 
