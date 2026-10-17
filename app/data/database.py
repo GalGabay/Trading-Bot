@@ -9,6 +9,7 @@ from __future__ import annotations
 import sqlite3
 import json
 import math
+from decimal import Decimal, InvalidOperation
 from typing import Any, Mapping
 from collections.abc import Iterator
 from contextlib import contextmanager
@@ -19,7 +20,7 @@ import pandas as pd
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
 from app.strategy.base import Signal
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 
 class DataStorageError(ValueError):
@@ -103,6 +104,7 @@ class TradingDatabase:
                     side TEXT NOT NULL,
                     quantity REAL NOT NULL CHECK (quantity > 0),
                     order_type TEXT NOT NULL,
+                    limit_price TEXT,
                     status TEXT NOT NULL,
                     alpaca_order_id TEXT UNIQUE
                 );
@@ -190,6 +192,12 @@ class TradingDatabase:
                 );
                 """
             )
+            # Existing Phase 12 databases have the original orders table.
+            # Keep those rows, but their unknown limit must not match a new
+            # intent with the same client ID.
+            columns = {row["name"] for row in connection.execute("PRAGMA table_info(orders)")}
+            if "limit_price" not in columns:
+                connection.execute("ALTER TABLE orders ADD COLUMN limit_price TEXT")
             connection.execute(
                 "INSERT OR IGNORE INTO schema_migrations (version) VALUES (?)", (SCHEMA_VERSION,)
             )
@@ -419,24 +427,31 @@ class TradingDatabase:
 
     def reserve_order(
         self, *, client_order_id: str, timestamp: object, symbol: str,
-        side: str, quantity: int, order_type: str = "limit",
+        side: str, quantity: int, limit_price: str,
+        order_type: str = "limit",
     ) -> tuple[bool, dict[str, Any]]:
         """Reserve a stable client ID before any broker submission.
 
         Return ``(created, row)``. Existing IDs are never overwritten here;
         the caller must compare the stored identity and must not resubmit.
         """
-        if not client_order_id or not symbol or side not in {"buy", "sell"} or type(quantity) is not int or quantity < 1:
+        if not client_order_id or not symbol or side not in {"buy", "sell"} or type(quantity) is not int or quantity < 1 or order_type != "limit":
             raise DataStorageError("Invalid order reservation")
+        try:
+            price = Decimal(str(limit_price))
+        except (InvalidOperation, ValueError, TypeError):
+            raise DataStorageError("Invalid order limit price") from None
+        if not price.is_finite() or price <= 0:
+            raise DataStorageError("Invalid order limit price")
         timestamp_text = self._timestamp_text(timestamp)
         self.initialize()
         with self._connection() as connection:
             connection.execute("BEGIN IMMEDIATE")
             cursor = connection.execute(
                 """INSERT OR IGNORE INTO orders
-                (client_order_id, timestamp, symbol, side, quantity, order_type, status)
-                VALUES (?, ?, ?, ?, ?, ?, 'reserved')""",
-                (client_order_id, timestamp_text, symbol, side, quantity, order_type),
+                (client_order_id, timestamp, symbol, side, quantity, order_type, limit_price, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?, 'reserved')""",
+                (client_order_id, timestamp_text, symbol, side, quantity, order_type, str(price)),
             )
             row = connection.execute(
                 "SELECT * FROM orders WHERE client_order_id = ?", (client_order_id,)

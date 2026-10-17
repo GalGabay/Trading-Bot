@@ -72,5 +72,5 @@ the persistent kill switch, and rerun the risk gate immediately before any
 paper order submission. The kill switch defaults to denied until an operator
 explicitly resets it after review. It stops new orders; it does not liquidate
 positions. The order manager is present but disabled by default; no command or
-scheduler submits orders. Focused order tests and startup recovery still need
-to be completed before an automated paper workflow is enabled.
+scheduler submits orders. Focused order tests pass; startup recovery and an
+exit/stop workflow still need to be completed before automated paper orders.

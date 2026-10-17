@@ -198,6 +198,14 @@ sizing, and the approved risk policy, then reserves a unique client order ID in
 SQLite before submission. Existing or uncertain IDs are never sent again
 automatically. `refresh_status()` records later broker statuses and cumulative
 fill quantities, including partial fills, cancellations, and rejections.
+Use `OrderIntent.for_signal(...)` to derive the same client order ID from the
+strategy, symbol, side, and original timezone-aware signal timestamp on both
+Windows and Raspberry Pi. The manager rejects a fresh/random ID for the same
+signal. Keep the original signal timestamp when recovering after a restart;
+creating a new timestamp represents a new decision. SQLite stores the order's
+limit price and refuses a changed request under an existing ID. If submission
+times out, broker lookup may confirm it; otherwise the order stays `unknown`,
+the kill switch trips, and an operator must investigate before any new order.
 Actual individual fills and realized P&L still require a broker activity
 ledger. The peak-equity safeguard uses the highest snapshot observed in this
 local database; earlier account history is not reconstructed.
@@ -205,7 +213,7 @@ The `stop_price` in an order intent is used for risk sizing only; Phase 12
 does not place a protective stop or automate exits.
 
 Before any paper activation, complete the [owner risk-limit decision](docs/risk_limit_decision_workbook.md),
-review the paper account, and finish focused order tests, Phase 13 recovery,
+review the paper account, and finish Phase 13 recovery,
 and the planned exit/stop workflow.
 
 ## Cross-platform operation

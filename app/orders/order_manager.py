@@ -8,9 +8,11 @@ are never retried automatically.
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
+from hashlib import sha256
 from math import isfinite
 from pathlib import Path
 from typing import Any
@@ -44,6 +46,18 @@ class OrderIntent:
     sector: str | None = None
     annualized_volatility: float | None = None
 
+    @classmethod
+    def for_signal(
+        cls, signal: Signal, quantity: int, estimated_price: float,
+        limit_price: float, *, stop_price: float | None = None,
+        sector: str | None = None, annualized_volatility: float | None = None,
+    ) -> OrderIntent:
+        """Build an intent whose broker ID survives a restart of this signal."""
+        return cls(
+            client_order_id_for(signal), signal, quantity, estimated_price,
+            limit_price, stop_price, sector, annualized_volatility,
+        )
+
 
 @dataclass(frozen=True)
 class OrderDecision:
@@ -76,6 +90,22 @@ def _same_decimal(left: Any, right: Any) -> bool:
         return Decimal(str(left)) == Decimal(str(right))
     except (InvalidOperation, ValueError, TypeError):
         return False
+
+
+def client_order_id_for(signal: Signal) -> str:
+    """One broker-visible ID per strategy, symbol, action and signal instant.
+
+    The signal time must be the original decision time, normally the closed
+    candle's timestamp. Regenerating a fresh timestamp creates a new decision.
+    """
+    if not isinstance(signal, Signal) or not _aware(signal.timestamp):
+        raise ValueError("A timezone-aware strategy signal is required")
+    key = [
+        signal.strategy, signal.symbol.strip().upper(), signal.action.value,
+        signal.timestamp.astimezone(timezone.utc).isoformat(timespec="microseconds"),
+    ]
+    digest = sha256(json.dumps(key, separators=(",", ":"), ensure_ascii=True).encode("ascii")).hexdigest()
+    return "tb1-" + digest[:40]
 
 
 class OrderManager:
@@ -138,6 +168,8 @@ class OrderManager:
         signal = intent.signal
         if not isinstance(signal, Signal) or signal.action not in {SignalAction.BUY, SignalAction.SELL}:
             reasons.append("not_actionable")
+        elif client_id != client_order_id_for(signal):
+            reasons.append("client_order_id_not_signal_stable")
         if type(intent.quantity) is not int or intent.quantity < 1:
             reasons.append("invalid_quantity")
         if isinstance(intent.estimated_price, bool) or not isinstance(intent.estimated_price, (int, float)) or not isfinite(intent.estimated_price) or intent.estimated_price <= 0:
@@ -195,9 +227,10 @@ class OrderManager:
             and str(getattr(order, "symbol", "")).strip().upper() == signal.symbol.strip().upper()
             and _value(getattr(order, "side", None)) == signal.action.value.lower()
             and _same_decimal(getattr(order, "qty", None), intent.quantity)
-            and _value(getattr(order, "type", None)) == "limit"
+            and _value(getattr(order, "type", None) or getattr(order, "order_type", None)) == "limit"
             and _value(getattr(order, "time_in_force", None)) == "day"
             and _same_decimal(getattr(order, "limit_price", None), intent.limit_price)
+            and getattr(order, "extended_hours", None) is False
         )
 
     def _record_broker_order(self, intent: OrderIntent, order: Any) -> OrderOutcome:
@@ -234,6 +267,7 @@ class OrderManager:
             or not all(char.isascii() and (char.isalnum() or char in "-_") for char in client_id)
             or not isinstance(intent.signal, Signal)
             or intent.signal.action not in {SignalAction.BUY, SignalAction.SELL}
+            or client_id != client_order_id_for(intent.signal)
             or type(intent.quantity) is not int or intent.quantity < 1
             or not isinstance(intent.limit_price, (int, float))
             or isinstance(intent.limit_price, bool) or not isfinite(intent.limit_price)
@@ -259,6 +293,8 @@ class OrderManager:
                 existing["symbol"] != intent.signal.symbol.strip().upper()
                 or existing["side"] != intent.signal.action.value.lower()
                 or existing["quantity"] != intent.quantity
+                or existing["order_type"] != "limit"
+                or not _same_decimal(existing["limit_price"], intent.limit_price)
             ):
                 self.kill_switch.trip("duplicate_order_identity_conflict")
                 return OrderOutcome(client_id, "identity_conflict", False, ("client_order_id_reused",))
@@ -269,7 +305,7 @@ class OrderManager:
                 created, _ = self.database.reserve_order(
                     client_order_id=client_id, timestamp=datetime.now(timezone.utc),
                     symbol=intent.signal.symbol.strip().upper(), side=intent.signal.action.value.lower(),
-                    quantity=intent.quantity,
+                    quantity=intent.quantity, limit_price=str(intent.limit_price),
                 )
                 if not created:
                     return OrderOutcome(client_id, "duplicate", False, ("already_reserved",))
@@ -311,7 +347,7 @@ class OrderManager:
             created, _ = self.database.reserve_order(
                 client_order_id=client_id, timestamp=datetime.now(timezone.utc),
                 symbol=intent.signal.symbol.strip().upper(), side=intent.signal.action.value.lower(),
-                quantity=intent.quantity,
+                quantity=intent.quantity, limit_price=str(intent.limit_price),
             )
         except Exception:
             self.kill_switch.trip("order_database_unavailable")
@@ -380,14 +416,19 @@ class OrderManager:
         if row["side"] not in {"buy", "sell"}:
             self.kill_switch.trip("invalid_local_order_record")
             return OrderOutcome(client_order_id, "unknown", False, ("invalid_local_order_record",))
-        # The original limit is not present in legacy order rows. Reconcile
-        # immutable identity fields here; never infer an execution price.
+        # Legacy rows without a stored limit cannot pass identity validation.
+        # Reserved/unknown rows may not yet have a broker order ID; capture it
+        # only after the full broker order identity matches.
         if not (
             str(getattr(order, "client_order_id", "")) == client_order_id
             and str(getattr(order, "symbol", "")).strip().upper() == row["symbol"]
             and _value(getattr(order, "side", None)) == row["side"]
             and _same_decimal(getattr(order, "qty", None), row["quantity"])
-            and str(getattr(order, "id", "")) == row["alpaca_order_id"]
+            and _value(getattr(order, "type", None) or getattr(order, "order_type", None)) == "limit"
+            and _value(getattr(order, "time_in_force", None)) == "day"
+            and getattr(order, "extended_hours", None) is False
+            and _same_decimal(getattr(order, "limit_price", None), row["limit_price"])
+            and (row["alpaca_order_id"] is None or str(getattr(order, "id", "")) == row["alpaca_order_id"])
         ):
             self.kill_switch.trip("order_reconciliation_identity_conflict")
             return OrderOutcome(client_order_id, "identity_conflict", False, ("broker_order_mismatch",))

@@ -3509,7 +3509,7 @@ For each completed milestone, record:
 
 ### Tests
 - 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
-- Phase 12 tests have not been added or run yet.
+- 20 focused Phase 12 order/idempotency tests pass; 107 tests pass across the full Windows suite.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3523,7 +3523,7 @@ For each completed milestone, record:
 - The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
 
 ### Next step
-- Phase 12 order management is implemented as a disabled-by-default API with offline preview, reconciled risk and portfolio checks, SQLite order reservations, broker client-order-ID lookup, and status events. The initial `config/risk_limits.json` is unapproved and has empty limits. The owner must choose or accept all limits before any paper-order workflow is enabled. Add focused Phase 12 tests, then Phase 13 startup recovery, an exit/stop workflow, and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
+- Phase 12 order management and Section 27 idempotency are implemented with offline preview, signal-stable client IDs, reconciled risk and portfolio checks, SQLite order reservations, broker client-order-ID lookup, and status events. The initial `config/risk_limits.json` is unapproved and has empty limits. The owner must choose or accept all limits before any paper-order workflow is enabled. Next implement Phase 13 startup recovery, an exit/stop workflow, and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before market-wide claims or predictive-model training.
 
 # Important Handoff Rule
 
