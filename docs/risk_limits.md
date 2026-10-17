@@ -1,5 +1,10 @@
 # Choosing paper-trading risk limits
 
+For a step-by-step decision worksheet with fill-in dollar amounts, see the
+[risk-limit decision workbook](risk_limit_decision_workbook.md). For the exact
+phase when your decision is needed, see the
+[owner responsibilities checklist](owner_responsibilities.md).
+
 The bot is paper-only. These limits are for a *paper account's equity*, not a
 percentage of household savings. The values in
 `config/risk_limits.example.json` are provisional development examples; they

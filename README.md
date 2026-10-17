@@ -3,6 +3,11 @@
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
+For decisions that only the project owner can make, use the
+[phase-by-phase responsibilities checklist](docs/owner_responsibilities.md).
+Before approving paper-order risk settings, use the
+[risk-limit decision workbook](docs/risk_limit_decision_workbook.md).
+
 ## Current progress
 
 Phases 0–11 are implemented: centralized paper-only Alpaca access, validated
