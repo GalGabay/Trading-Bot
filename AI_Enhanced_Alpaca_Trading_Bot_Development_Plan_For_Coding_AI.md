@@ -1493,6 +1493,17 @@ SQLite files; they make no broker order calls. Run with
 
 Only after the deterministic strategy and backtester work.
 
+Current implementation: `app/ai/ml_dataset.py`, `app/ai/ml_model.py`, and
+`backtesting/ml_research.py` form an offline, single-symbol research workflow.
+The deterministic strategy, feature builder, and backtester exist, but the
+observed AAPL results are cost-sensitive and do not establish an edge. The
+model is not connected to paper-order submission. The command requires
+explicit chronological train, tune, calibration, and test boundaries; it
+purges labels crossing each boundary, records data/model provenance, and
+compares the unchanged rule strategy with an ML-filtered version under the
+same backtest costs. The optional dependencies are in `requirements-ml.txt`.
+No reviewed model has been trained or deployed yet.
+
 Start with supervised learning.
 
 The model could predict:
@@ -1755,6 +1766,13 @@ Stability
 If the AI does not improve out-of-sample performance or robustness, do not use it.
 
 "AI" is not a goal by itself.
+
+The Phase 14 implementation defaults to a five-observed-bar, +0.5% label and
+a fixed 0.60 BUY-filter threshold solely for a prototype. They are not owner
+approved trading parameters. A model can veto a rule-based BUY, never create
+an independent BUY, and does not override exits or risk checks. Its research
+artifact is saved as XGBoost JSON rather than a Python pickle; Pi inference
+requires a supported 64-bit environment and validation on that Pi.
 
 ---
 
@@ -3524,6 +3542,7 @@ For each completed milestone, record:
 - 87 unit tests pass on Windows, including 12 Phase 10 risk-gate tests, 10 focused Phase 11 reconciliation tests, and 12 position-sizing, kill-switch, and risk-configuration tests.
 - 20 focused Phase 12 order/idempotency tests pass.
 - 17 focused Phase 13 recovery tests pass; 124 tests pass across the full Windows suite.
+- Focused Phase 14 ML tests and an end-to-end training run have not been performed yet.
 
 ### Validation
 - Read-only Alpaca historical-data and calendar checks passed during Phase 4.
@@ -3534,10 +3553,10 @@ For each completed milestone, record:
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, point-in-time historical universes, and ML training remain unimplemented.
+- The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, and point-in-time historical universes remain unimplemented. The Phase 14 ML training pipeline exists but has not been run on an owner-reviewed research scope or validated on the Pi.
 
 ### Next step
-- Phase 13 startup recovery is implemented and covered by 17 offline tests. It never enables submission or resets the kill switch. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next build a safe exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. A single-symbol ML research prototype can be built, but point-in-time universe data and a multi-symbol portfolio engine remain necessary before broader market-wide predictive claims.
+- Phase 13 startup recovery is implemented and covered by 17 offline tests. Phase 14 has an offline single-symbol ML research pipeline, but no reviewed training result or focused ML tests yet. Neither phase enables submission. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next add focused Phase 14 tests, then build a safe exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before broader market-wide predictive claims.
 
 # Important Handoff Rule
 

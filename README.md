@@ -116,11 +116,43 @@ The 2021 AAPL run is a case study, not a universe test. A proper historical
 universe test needs point-in-time membership and delisted stocks, which are
 not supplied by the current single-symbol workflow.
 
-After deterministic backtests and paper trading are stable, build an ML dataset from features,
-define a future-return label separately, split chronologically, fit and tune
-on older windows only, and compare the model against this rule-based baseline
-on later unseen windows. Train on the Windows PC; deploy only a small inference
-artifact to the Pi. No ML training command exists yet.
+Phase 14 now provides an optional **offline ML research command**. It trains an
+XGBoost classifier on existing causal features and a future close-to-close
+return label, selects among a small fixed model grid on a later tuning window,
+fits sigmoid calibration on a separate later window, and evaluates once on a
+final test window. Labels whose future endpoint crosses a window boundary are
+removed. No missing candle or feature value is filled. A filtered version of
+`trend_following_v1` only vetoes BUY candidates; its existing exits remain.
+Market and sector return inputs from the plan are omitted until aligned,
+point-in-time source data exists; they are not synthesized from the same stock.
+The command compares rule-only and filtered backtests under the same three
+cost scenarios. It never submits an order or enables paper execution.
+
+On Windows, install the optional research dependencies with
+`python -m pip install -r requirements-ml.txt`. Download and review a dataset
+covering your chosen windows first. For example, **only if 2024 is still an
+uninspected holdout for you**, a 2019–2024 15-minute CSV could be evaluated
+with the following exploratory settings:
+
+```powershell
+python -m backtesting.ml_research --dataset data/historical/AAPL_15Min_2019_2024.csv --artifact-dir models/aapl_15min_experiment_1 --train-start 2019-01-01 --tune-start 2022-01-01 --calibration-start 2023-01-01 --test-start 2024-01-01 --test-end 2025-01-01
+```
+
+The example target is a return greater than 0.5% after five observed bars;
+five 15-minute bars are **not** five trading days. Choose the target and
+untouched test period before interpreting performance. The model is saved as
+XGBoost JSON plus checksum, feature schema, calibration parameters, version
+metadata, and a report in the ignored artifact directory. Loading the model
+does not connect it to the order manager. Training is intended for Windows;
+XGBoost publishes Linux aarch64 wheels for a 64-bit Pi OS, while a 32-bit Pi
+environment needs a separately validated inference plan. The current single
+AAPL backtester remains a case study: it does not remove survivor bias, model
+portfolio-level risk, or simulate broker stops and actual fills. No Phase 14
+training or Pi compatibility run has been performed yet. Research artifacts in
+`models/` are ignored by Git. If you later approve a model for the Pi, copy
+its verified `model.json` and `metadata.json` into a reviewed directory under
+the tracked repository and commit that directory; `ResearchModel.load()` can
+load from that path. This approval and deployment step is not automatic.
 
 ## Phase 10 risk gate
 
