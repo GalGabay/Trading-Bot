@@ -4,6 +4,10 @@ This is your decision sheet for the historical study. You can answer in plain
 language and I can record the result and run the commands. No answer here
 enables paper orders or changes `config/risk_limits.json`.
 
+For the proposed four-study sequence across 15-minute and daily bars, see the
+[research program before paper trading](proposed_research_program.md). This
+workbook records the final scope choices after you review that proposal.
+
 ## 1. Decide what the first paper bot would study
 
 - **Asset class:** The implemented strategy, downloader, order manager, and

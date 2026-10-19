@@ -5,6 +5,8 @@ roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`
 
 For decisions that only the project owner can make, use the
 [phase-by-phase responsibilities checklist](docs/owner_responsibilities.md).
+The [proposed research program](docs/proposed_research_program.md) describes
+the planned rule/ML and timeframe comparisons before a paper trial.
 Before approving paper-order risk settings, use the
 [risk-limit decision workbook](docs/risk_limit_decision_workbook.md).
 

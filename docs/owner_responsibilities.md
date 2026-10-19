@@ -7,6 +7,11 @@ documentation, and deployment instructions. You make the choices about what
 the bot should study, the paper-account risk policy, and whether to enable
 paper orders. You also control your accounts and Raspberry Pi.
 
+For a proposed sequence of stock and timeframe studies and the conditions for
+starting a paper trial, review the
+[research program](proposed_research_program.md) before completing the
+[research-scope workbook](research_scope_decision_workbook.md).
+
 ## Where we are now
 
 Phases 0–13, the Phase 14 offline ML research workflow, and the standalone
