@@ -9,15 +9,20 @@ The [proposed research program](docs/proposed_research_program.md) describes
 the planned rule/ML and timeframe comparisons before a paper trial.
 The [Study A record](docs/study_a_research_record.md) contains the first
 15-minute rule-only data audit and exploratory results.
+The [Study C record](docs/study_c_research_record.md) contains the daily
+12-symbol screen and continuous shared-cash portfolio follow-up.
 Before approving paper-order risk settings, use the
 [risk-limit decision workbook](docs/risk_limit_decision_workbook.md).
 
 ## Current progress
 
-Phases 0–11 are implemented: centralized paper-only Alpaca access, validated
-market data, SQLite persistence, technical features, a deterministic strategy,
-single-symbol historical backtesting and walk-forward evaluation, and a
-standalone risk-decision module, and read-only portfolio reconciliation.
+The repository includes centralized paper-only Alpaca access, validated
+market data, SQLite persistence, technical features, deterministic and
+offline ML research, single-symbol backtesting and walk-forward evaluation,
+offline shared-cash daily portfolio research, a standalone risk gate, and
+read-only portfolio reconciliation. The shared-cash simulator implements
+configurable research entry/loss limits; it does not model protective stops
+or the complete paper risk policy.
 
 The project does not submit orders. `Signal` objects are recommendations only;
 the risk gate does not call a broker. Order execution is a later phase.
@@ -86,6 +91,25 @@ actions, not a replay of raw executable prices or cash dividends. Record the
 adjustment and feed in every report and do not mix datasets with different
 settings. The simulator uses whole shares, a 10% position cap, and fixed cost
 assumptions. It has no quote-level spread, partial-fill, or market-impact model.
+
+## Shared-cash daily portfolio research
+
+After downloading and validating daily datasets, run the offline
+`backtesting.portfolio_research` command with all desired CSV paths. It
+requires matching session timestamps and the same feed, adjustment, and
+date range. It uses one cash balance, keeps positions across year boundaries,
+and records every simulated fill and equity mark. The command never calls a
+broker order endpoint. The [Study C record](docs/study_c_research_record.md)
+has the exact 12-symbol reproduction command and results.
+
+Entry limits are configurable with `--max-portfolio-exposure`,
+`--max-single-position`, `--max-positions`, `--max-daily-loss`, and
+`--max-drawdown`; defaults are provisional research values, not paper
+approval. A BUY quantity is planned from the completed signal close and can
+only shrink at the next open. Loss limits halt new entries but do not force
+liquidation. The simulator has no protective stop, stop-risk sizing,
+cash-dividend ledger, or full paper risk-policy replay. CSV and JSON outputs
+remain in ignored `data/` on the machine where the command runs.
 
 ## Walk-forward validation and training later
 

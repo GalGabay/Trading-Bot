@@ -1,9 +1,10 @@
 # Study C: daily rule-only research record
 
-**Status:** Fixed-rule development screen completed on 2026-10-23. The
-preexisting walk-forward rule permitted daily tuning for only two symbols,
-so the tuned basket arm and shared-cash portfolio study remain incomplete.
-This is offline research; no order submission or paper activation is authorized.
+**Status:** Fixed-rule development screen and continuous shared-cash portfolio
+follow-up completed on 2026-10-23. The preexisting walk-forward rule permitted
+daily tuning for only two symbols, so a tuned basket, full risk-policy replay,
+and final evaluation remain incomplete. This is offline research; no order
+submission or paper activation is authorized.
 
 ## Predeclared scope
 
@@ -194,11 +195,129 @@ are not a point-in-time fill and cash ledger. Historical SIP bars may differ
 from the feed actually available to a paper process. The JNJ volume warning
 needs investigation, and the fixed present-day basket has survivorship bias.
 
-Before treating daily rules as a paper candidate, implement a shared-cash
-12-symbol portfolio backtest with the chosen risk policy, continuous
-year-to-year positions, broker-like exits, and data/feed sensitivity checks.
-Define a **new daily-specific selection protocol** on development data if
-daily tuning is still desired; report low sample size honestly instead of
-relaxing the gate until a winner appears. Compare a frozen daily rule against
-its matched ML filter in Study D only after this baseline is credible. Keep
-2024–2025 unopened until the strategy and comparison are frozen.
+The shared-cash follow-up below handles simultaneous positions and continuous
+year-to-year holdings, but still lacks protective exits, full risk-policy
+replay, and data/feed sensitivity checks. Define a **new daily-specific
+selection protocol** on development data if daily tuning is still desired;
+report low sample size honestly instead of relaxing the gate until a winner
+appears. Compare a frozen daily rule against its matched ML filter in Study D
+only after this baseline is credible. Keep 2024–2025 unopened until the
+strategy and comparison are frozen.
+
+## Predeclared shared-cash follow-up (recorded before portfolio results)
+
+The owner requested this follow-up after reading the fixed-rule screen. Use
+the same 12 validated daily datasets and the **unchanged default rule**.
+Warm up indicators with 2019–2021, then simulate one $100,000 cash account
+continuously from 2022-01-01 to 2024-01-01 exclusive. Carry positions and
+the equity peak across the 2022/2023 boundary. Fill actionable signals at
+the *following* session open, process sells before buys, and use alphabetical
+symbol order to resolve simultaneous buys that compete for shared cash. Run
+the same three cost scenarios, plus a reverse-alphabetical order sensitivity
+check under base costs. No borrowed cash or forced end-of-year liquidation.
+
+Research entry limits are configurable. For this first run, use the existing
+**provisional, unapproved** limits where the simulator can represent them:
+10% of equity per new position, 70% total exposure at entry, at most seven
+positions, 3% daily equity loss, and 10% drawdown. A breached loss/drawdown
+gate blocks future buys for the rest of the run; existing trend-rule sell
+signals may still exit. It does **not** place protective stops or immediately
+liquidate a holding. The 1% planned stop-risk cap cannot honestly be modeled
+without a specified stop and execution rule; snapshot/signal age and optional
+sector/volatility checks are also outside this historical simulation. These
+research assumptions do not approve `config/risk_limits.json` for paper use.
+
+Report whole-account 2022 and 2023 returns, total return, max drawdown,
+closed-trade count, costs, concentration, open positions, and any limit halt.
+Preserve separate Study A/C single-symbol findings rather than treating their
+sum as the portfolio. Any later change to the risk rules, universe, priority,
+or exits requires a separately labeled research run. Keep 2024–2025 closed.
+
+### 2026-10-23: continuous shared-cash results
+
+The new offline runner `backtesting.portfolio_research` verified all 12
+dataset checksums and matching daily session timestamps. It built each
+symbol's features from its own past bars, used one shared cash balance,
+filled prior-close signals at the next session's open, and carried five
+open positions from the end of 2022 into 2023. It did not reset equity or
+the loss/drawdown peak at the calendar boundary. The five positions were
+NEE, JNJ, PG, CAT, and JPM; all eventually received rule-based SELL fills
+in 2023. No daily-loss or drawdown entry halt occurred.
+
+**Execution-timing correction before the final report:** An initial local
+draft sized BUYs directly from the next session's opening price. That price
+is unknown when the signal forms. The final runner plans a maximum share
+count from the completed signal close, then reduces or skips at the next
+open if cash or exposure is insufficient. It never increases the planned
+count because of a favorable opening gap. The earlier local
+`study_c_shared_cash_alphabetical.json` and
+`study_c_shared_cash_reverse_base.json` drafts are superseded; use only the
+`close_planned` reports and figures below.
+
+| Cost case | 2022 account return | 2023 account return | Two-year return | Max drawdown | Closed trades |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Optimistic | -2.027% | +6.025% | +3.876% | -6.109% | 83 |
+| Base | -2.455% | +5.429% | +2.841% | -6.355% | 83 |
+| Pessimistic | -3.928% | +3.543% | **-0.524%** | -7.644% | 83 |
+
+These are **whole-account** returns on one initial $100,000 balance, with
+positions, costs, and cash shared across all symbols. Annual returns use the
+prior December's ending equity as the next year's starting equity, so the
+2022 and 2023 percentages compound rather than add. The base case ended at
+**$102,841.21**, with 23 winners among 83 completed trades, mean completed
+holding time 31.82 calendar days, and profit factor 0.901. The pessimistic
+case ended at **$99,475.62**. Each cost case had six open positions at the
+final 2023 close, valued at that close without a future sale or exit cost.
+
+The positive base-case account result is **not closed-trade profit**:
+completed positions realized **-$2,031.07** combined, while six remaining
+positions had **+$4,872.27** of marked unrealized P&L. Under pessimistic
+costs those amounts were **-$5,141.28** and **+$4,616.90**, respectively.
+Future exits could change the outcome. Base realized P&L from XOM alone was
++$3,879.91; this one favorable instrument offset losses elsewhere and is
+evidence of concentration rather than basket-wide consistency.
+
+The entry gate allowed at most seven positions and 70% exposure **when
+opening**. It rejected 38 base-case BUY attempts because the seven-position
+limit was full. The maximum *observed closing* exposure was 71.64%, because
+existing holdings can move above the entry-time ceiling; there is no forced
+rebalance. The 3% daily-loss and 10% drawdown gates never triggered in these
+runs. This does not establish that the portfolio is safe under larger gaps or
+different periods.
+
+Reversing the alphabetical priority for simultaneous BUYs under base costs
+gave **+2.786%** two-year return, with -2.177% in 2022, +5.073% in 2023,
+and 82 completed trades. This modest change shows that simultaneous order
+selection matters when cash or position slots are scarce. The predeclared
+alphabetical run remains the primary result.
+
+For a simple reference, buying 22 whole shares of adjusted SPY at the first
+2022 session open with approximately 10% of starting capital, then holding
+them through the last 2023 close, would produce about **+0.284%** whole-
+account return under base entry costs and no exit. That reference holds just
+one position at roughly 10% starting exposure, while this strategy may hold
+seven, so their risks are not matched. Both use adjusted bars as proxies.
+
+Reproduce the primary run locally after downloading the datasets listed
+above (the output path must be new):
+
+```powershell
+$symbols = @('AAPL','MSFT','JPM','JNJ','XOM','WMT','CAT','PG','NEE','SPY','QQQ','IWM')
+$datasets = @($symbols | ForEach-Object { "data/historical/${_}_1Day_2019_2023_study_c.csv" })
+.venv\Scripts\python.exe -m backtesting.portfolio_research --datasets $datasets --trade-start 2022-01-01 --trade-end 2024-01-01 --output data/reports/study_c_shared_cash_close_planned.json
+```
+
+The full ignored JSON report contains each cost case's fills, daily equity
+curve, skipped-order events, dataset hashes, provisional limits, and known
+policy gaps. The reverse-priority base report is
+`data/reports/study_c_shared_cash_close_planned_reverse_base.json`; repeat the command
+with `--buy-priority reverse --scenarios base` and that output filename.
+
+**Decision:** This portfolio check strengthens the conclusion that Study C
+is exploratory. The fixed daily rule survived base modeled costs over these
+two development years, but did not survive the pessimistic costs and most of
+its final gain is unrealized. The rule still lacks a protective stop and a
+complete risk-policy simulation. Do not open 2024–2025 or start paper
+trading based on this result. A next research change needs a separately
+registered design and later untouched evaluation; the owner must still
+choose risk limits before paper activation.
