@@ -140,6 +140,29 @@ holding time. The local ignored reports are
 These are **calendar hours between simulated fills**; nights, weekends, and
 holidays count. The 2023 first completed trade illustrates the mechanics:
 
+The original backtest reports also calculate the **mean** holding time for
+every validated symbol. Weighting the two annual means by the number of
+completed trades gives the following descriptive 2022–2023 averages:
+
+| Symbol | 2022 mean | 2023 mean | Combined mean | Completed trades | Winning trades, base costs |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| AAPL | 42.06 h | 50.02 h | 46.55 h | 147 | 52 |
+| SPY | 41.11 h | 48.59 h | 45.08 h | 149 | 45 |
+| QQQ | 35.39 h | 44.89 h | 40.75 h | 156 | 47 |
+| MSFT | 35.69 h | 38.23 h | 37.10 h | 171 | 50 |
+| IWM | 35.66 h | 40.73 h | 38.37 h | 165 | 48 |
+| **All completed trades** | | | **41.36 h** | **788** | **242** |
+
+This last row pools durations and win counts from **ten independent
+single-symbol/year simulations**. It is not a combined portfolio result.
+Only completed trades enter the holding-time and win statistics. An MSFT
+position was still open at the end of its 2023 window and is therefore
+excluded from those trade counts, although it is included in end-of-window
+equity. Across these separate simulations, about 30.7% of completed trades
+were winners under base costs. A shorter profit-taking rule might protect
+some gains, but it could also cut off the larger wins on which this strategy
+depends. Its effect must be tested, not inferred from one trade.
+
 1. The 2023-01-06 20:45 UTC candle produced a BUY after it completed. The
    next available open was 2023-01-09 14:30 UTC; the simulation bought 77
    AAPL shares at $128.266914 after base spread/slippage adjustments.
@@ -151,6 +174,7 @@ holidays count. The 2023 first completed trade illustrates the mechanics:
    hours between fills and lost about $26.47. This is a simulated historical
    trade, not a broker order or a quote-level execution claim.
 
+The optimistic scenario assumes zero spread, slippage, and commissions.
 The base cost scenario assumes 5 basis points of adverse slippage and a
 2-basis-point spread, charging half the spread on each side. The pessimistic
 scenario assumes 20 basis points of adverse slippage, a 10-basis-point
@@ -189,6 +213,32 @@ rule-only candidate from development data. Only then decide whether a final
 holdout evaluation is justified. The owner should review this weak baseline
 and later choose risk limits before any paper order. There is no reason to
 start the paper trial from these numbers.
+
+### Next registered research choice
+
+**Study C, daily rule-only, is the next planned baseline study; Study B (the
+15-minute ML filter) is deferred.** Daily signals should create fewer
+opportunities to trade, but neither lower turnover nor better results are
+assumed. Keep the same predeclared 12-symbol basket, audit daily data before
+using it, run only development years through 2023, and compare the same
+cost scenarios. Daily indicators represent days rather than 15-minute bars,
+so any rule adjustment must be specified and evaluated on development data.
+Do not inspect 2024–2025 while choosing those settings.
+
+Separately, register **one** explicit profit-protection exit variant before
+testing it on development data. For example, after a position has a measured
+unrealized gain, a faster trend-reversal condition could request an exit at
+the next bar's open. The precise gain threshold and reversal rule must be
+fixed before running that experiment. It is an additional rule-only
+comparison, not Study B or evidence that profits can be locked at the signal
+price. Do not tune many exit thresholds against the reserved final years.
+
+More symbols are desirable for robustness, but seven of the original 12
+failed the 15-minute data audit. Investigate their gaps and develop a
+shared-cash portfolio backtest before making a basket-level claim. A broad
+historical-market claim further requires point-in-time membership and
+delisted-symbol data. Never fill gaps or replace failed symbols merely
+because the survivors' results look better.
 
 ## Decision status
 
