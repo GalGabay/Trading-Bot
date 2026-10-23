@@ -11,6 +11,12 @@ unopened.
 For the original five strategy definitions and examples of breakout exits,
 see [the strategy guide](five_daily_strategies_explained.md).
 
+**Subsequent follow-up:** The proposed earlier-coverage work below is now
+complete in [Study C-R4](study_c_earlier_history_results.md). The frozen
+candidate passed that additional-history screen. This does not change the
+historical C-R3 figures or its limitations; the latest report records the
+next proposed work and owner decisions.
+
 ## Fixed design and reproducibility
 
 All six policy arms used the **same 55/20 breakout**, SPY/EMA200 filter,

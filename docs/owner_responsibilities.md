@@ -26,6 +26,15 @@ tested daily rules. The [latest allocation study](study_c_allocation_results.md)
 compares experimental position sizes and halt behavior. Those research
 numbers are not approvals or new defaults for your paper-risk JSON.
 
+The subsequent [earlier-history check](study_c_earlier_history_results.md)
+passed its ten predeclared checks for the same smaller candidate. The
+pessimistic seven-year return was modest (about 2.19% annually); losing years,
+backward selection, survivor-basket bias, and the earlier strategy failures
+remain relevant. Before a final 2024-2025 evaluation, review the proposed
+frozen criteria, acceptable losses, and whether this research scope fits
+your goals. You do not need to write code or personally fetch data. This
+review does not itself enable paper orders or approve risk settings.
+
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all
 limits set to `null` and `approved_for_paper: false`; the loader rejects it

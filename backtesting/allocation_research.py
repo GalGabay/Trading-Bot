@@ -52,12 +52,15 @@ ARMS = (
 )
 
 
-def simulate_policy(arm, data, context, costs, *, start, end, priority="alphabetical", delay=1, extra_stop_bps=0, signal_data=None):
+def simulate_policy(arm, data, context, costs, *, start, end, priority="alphabetical", delay=1, extra_stop_bps=0, signal_data=None, rule_config=None):
     if end > "2024-01-01":
         raise ValueError("Reserved holdout cannot enter allocation research")
     regime = market_regime(context)
+    rule_config = rule_config or DailyRuleConfig("breakout")
+    if rule_config.style != "breakout":
+        raise ValueError("Allocation-policy research requires breakout rules")
     return PortfolioBacktestEngine(
-        DailyResearchStrategy(DailyRuleConfig("breakout"), regime=regime),
+        DailyResearchStrategy(rule_config, regime=regime),
         costs=replace(costs, position_fraction=arm.position_cap),
         limits=ResearchPortfolioLimits(max_single_position=arm.position_cap, max_portfolio_exposure=arm.total_cap),
         protection=ProtectiveExitConfig(atr_multiple=3, max_risk_per_trade=arm.stop_risk_cap, trailing=False, extra_stop_slippage_bps=extra_stop_bps),

@@ -32,6 +32,15 @@ smaller sizing. The earlier-selected policy passed that allocation screen,
 while broader historical validation and the R2 strategy weaknesses remain
 unresolved. ML and final holdout evaluation remain deferred.
 
+The owner then authorized [C-R4's earlier-history protocol](study_c_earlier_history_protocol.md).
+Its [completed results](study_c_earlier_history_results.md) cover all twelve
+instruments, with 2016 warmup and 2017-2018 scores plus a continuous 2017-2023
+replay. The frozen smaller candidate passed the additional-history screen;
+pessimistic total returns were +2.972% and +16.392%, respectively. This is
+backward historical robustness research using a present-day survivor basket,
+not fresh forward validation. The next step is a frozen final-evaluation
+protocol and owner review of its criteria, before opening 2024-2025.
+
 ## The short answer: four matched strategy studies
 
 Start with **two timeframes** and **two versions of the same strategy**. That

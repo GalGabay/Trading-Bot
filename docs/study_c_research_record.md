@@ -11,6 +11,13 @@ smaller breakout position sizes and explicit daily halt/restart policies.
 Its selected research allocation reduced losses and gains; it does not
 approve paper trading.
 
+The subsequent [C-R4 earlier-history study](study_c_earlier_history_results.md)
+validated complete 2016-2018 daily coverage and kept the C-R3 candidate
+frozen. Its 40 simulations passed the ten additional-history checks, with
++2.972% pessimistic return in 2017-2018 and +16.392% over a continuous
+2017-2023 account. These backward checks retain the original evidence limits;
+2024-2025 remain unopened and paper trading remains unapproved.
+
 **Status:** Fixed-rule development screen and continuous shared-cash portfolio
 follow-up completed on 2026-10-23. The preexisting walk-forward rule permitted
 daily tuning for only two symbols, so a tuned basket, full risk-policy replay,

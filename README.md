@@ -24,6 +24,12 @@ The [Study C-R3 allocation results](docs/study_c_allocation_results.md)
 compare six sizing/halt policies. Smaller volatility-based sizing passed
 the allocation screen with lower gains and losses; broader strategy
 validation and paper approval remain outstanding.
+The [Study C-R4 earlier-history results](docs/study_c_earlier_history_results.md)
+audit 2016-2018 data and evaluate the frozen smaller breakout allocation on
+2017-2018 and continuously over 2017-2023. All ten additional-history checks
+passed; pessimistic seven-year return was +16.392% with -4.584% closing
+drawdown. This backward check does not clear the earlier strategy weaknesses
+or approve paper trading. 2024-2025 remain reserved.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the
