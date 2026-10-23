@@ -321,3 +321,8 @@ complete risk-policy simulation. Do not open 2024–2025 or start paper
 trading based on this result. A next research change needs a separately
 registered design and later untouched evaluation; the owner must still
 choose risk limits before paper activation.
+
+The separately registered [Study C-P1 protective-exit variant](study_c_protective_exit_variant.md)
+was subsequently tested on the same development window. Its fixed two-ATR
+trailing stop and 1% planned-risk sizing **failed** the predeclared screen,
+with worse pessimistic return and drawdown than this unchanged baseline.

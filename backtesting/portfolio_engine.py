@@ -17,6 +17,9 @@ from app.ai.features import FeatureConfig, build_features
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
 from app.strategy.base import Signal, SignalAction, Strategy
 from backtesting.engine import BacktestConfig, BacktestPortfolio, SimulatedFill
+from backtesting.protective_exits import (
+    ProtectiveExitConfig, initial_stop, raised_stop, stop_reference,
+)
 
 
 @dataclass(frozen=True)
@@ -61,6 +64,7 @@ class PortfolioBacktestResult:
     events: tuple[str, ...]
     final_positions: dict[str, int]
     final_closes: dict[str, float]
+    final_stops: dict[str, float]
     halted_at: str | None
 
 
@@ -68,6 +72,13 @@ class PortfolioBacktestResult:
 class _PendingOrder:
     signal: Signal
     planned_quantity: int | None = None
+    stop_price: float | None = None
+
+
+@dataclass(frozen=True)
+class _ActiveStop:
+    price: float
+    armed_at: pd.Timestamp
 
 
 class PortfolioBacktestEngine:
@@ -76,6 +87,7 @@ class PortfolioBacktestEngine:
     def __init__(
         self, strategy: Strategy, *, costs: BacktestConfig | None = None,
         limits: ResearchPortfolioLimits | None = None, buy_priority: str = "alphabetical",
+        protection: ProtectiveExitConfig | None = None,
     ) -> None:
         if buy_priority not in {"alphabetical", "reverse"}:
             raise ValueError("buy_priority must be alphabetical or reverse")
@@ -83,6 +95,11 @@ class PortfolioBacktestEngine:
         self.costs = costs or BacktestConfig()
         self.limits = limits or ResearchPortfolioLimits()
         self.buy_priority = buy_priority
+        self.protection = protection
+        if protection is not None and (
+            self.costs.slippage_bps + self.costs.spread_bps / 2 + protection.extra_stop_slippage_bps >= 10_000
+        ):
+            raise ValueError("Combined protective-stop selling costs must stay below 100%")
 
     def run(
         self, datasets: dict[str, pd.DataFrame], *, trade_start: pd.Timestamp,
@@ -122,6 +139,7 @@ class PortfolioBacktestEngine:
         symbols = sorted(bars)
         cash = self.costs.initial_cash
         positions: dict[str, int] = {}
+        stops: dict[str, _ActiveStop] = {}
         pending: dict[str, _PendingOrder] = {}
         fills: list[SimulatedFill] = []
         signals: list[Signal] = []
@@ -135,7 +153,28 @@ class PortfolioBacktestEngine:
         for index in indices:
             timestamp = dates.iloc[index]
             open_prices = {symbol: float(bars[symbol].iloc[index]["open"]) for symbol in symbols}
+            low_prices = {symbol: float(bars[symbol].iloc[index]["low"]) for symbol in symbols}
             close_prices = {symbol: float(bars[symbol].iloc[index]["close"]) for symbol in symbols}
+
+            exited_by_stop: set[str] = set()
+            if self.protection is not None:
+                # These stops were armed no later than the preceding close.
+                # Opening gaps are resolved before queued trend exits/buys.
+                for symbol in sorted(stops):
+                    state = stops[symbol]
+                    triggered = stop_reference(open_prices[symbol], low_prices[symbol], state.price)
+                    if triggered is None or open_prices[symbol] > state.price:
+                        continue
+                    quantity = positions.pop(symbol)
+                    fill = self._stop_fill(
+                        timestamp, symbol, quantity, state, open_prices[symbol], triggered[0], triggered[1]
+                    )
+                    cash += quantity * fill.fill_price - fill.commission
+                    fills.append(fill)
+                    exited_by_stop.add(symbol)
+                    events.append(f"{timestamp.isoformat()} {symbol}: protective stop at open, level={state.price:g}, fill={fill.fill_price:g}")
+                for symbol in exited_by_stop:
+                    del stops[symbol]
 
             # Orders originated at the previous completed close. Release cash
             # from all exits before considering competing entries.
@@ -143,10 +182,13 @@ class PortfolioBacktestEngine:
                 signal = pending[symbol].signal
                 if signal.action != SignalAction.SELL:
                     continue
+                if symbol in exited_by_stop:
+                    continue
                 quantity = positions.pop(symbol, 0)
                 if not quantity:
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped SELL; no position")
                     continue
+                stops.pop(symbol, None)
                 price = open_prices[symbol] * (1 - multiplier)
                 cash += quantity * price - self.costs.commission_per_order
                 fills.append(self._fill(timestamp, signal, quantity, open_prices[symbol], price))
@@ -178,6 +220,10 @@ class PortfolioBacktestEngine:
                 equity = cash + sum(quantity * open_prices[name] for name, quantity in positions.items())
                 gross = sum(quantity * open_prices[name] for name, quantity in positions.items())
                 price = open_prices[symbol] * (1 + multiplier)
+                stop = order.stop_price
+                if self.protection is not None and (stop is None or open_prices[symbol] <= stop or price <= stop):
+                    events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; open is at or below planned stop")
+                    continue
                 budget = min(
                     self.costs.position_fraction * equity,
                     self.limits.max_single_position * equity,
@@ -188,13 +234,38 @@ class PortfolioBacktestEngine:
                 # open cannot enlarge an order using information unavailable
                 # when the order was planned. Gaps can reduce or reject it.
                 quantity = min(order.planned_quantity or 0, floor(max(0.0, budget) / price))
+                if self.protection is not None:
+                    assert stop is not None
+                    risk_quantity = floor(
+                        self.protection.max_risk_per_trade * equity / (price - stop)
+                    )
+                    quantity = min(quantity, risk_quantity)
                 if quantity < 1:
-                    events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; cash or exposure limit")
+                    events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; cash, exposure, or stop-risk limit")
                     continue
                 cash -= quantity * price + self.costs.commission_per_order
                 positions[symbol] = quantity
+                if self.protection is not None:
+                    stops[symbol] = _ActiveStop(stop, pd.Timestamp(signal.timestamp))
                 fills.append(self._fill(timestamp, signal, quantity, open_prices[symbol], price))
             pending = {}
+
+            if self.protection is not None:
+                # A stop armed before this session can be touched after the
+                # open, including on the session in which the BUY filled.
+                for symbol in sorted(stops):
+                    state = stops[symbol]
+                    triggered = stop_reference(open_prices[symbol], low_prices[symbol], state.price)
+                    if triggered is None:
+                        continue
+                    quantity = positions.pop(symbol)
+                    fill = self._stop_fill(
+                        timestamp, symbol, quantity, state, open_prices[symbol], triggered[0], triggered[1]
+                    )
+                    cash += quantity * fill.fill_price - fill.commission
+                    fills.append(fill)
+                    events.append(f"{timestamp.isoformat()} {symbol}: protective stop touched, level={state.price:g}, fill={fill.fill_price:g}")
+                    del stops[symbol]
             if cash < -1e-6 or len(positions) > self.limits.max_positions:
                 raise ValueError("Shared cash or position-count invariant failed")
 
@@ -215,6 +286,15 @@ class PortfolioBacktestEngine:
                     events.append(f"{halted_at}: entry halt at close: {reason}; SELLs remain permitted")
             previous_close_equity = equity
 
+            if self.protection is not None:
+                for symbol in sorted(stops):
+                    state = stops[symbol]
+                    atr = float(features[symbol].iloc[index]["atr_14"])
+                    next_stop = raised_stop(state.price, close_prices[symbol], atr, self.protection)
+                    if next_stop > state.price:
+                        stops[symbol] = _ActiveStop(next_stop, timestamp)
+                        events.append(f"{timestamp.isoformat()} {symbol}: trailing stop raised to {next_stop:g}")
+
             # Every strategy call receives only that symbol's completed bars.
             for symbol in symbols:
                 available = (
@@ -229,24 +309,44 @@ class PortfolioBacktestEngine:
                 signals.append(signal)
                 if signal.action in {SignalAction.BUY, SignalAction.SELL}:
                     planned_quantity = None
+                    stop_price = None
                     if signal.action == SignalAction.BUY:
                         planned_budget = min(
                             self.costs.position_fraction * equity,
                             self.limits.max_single_position * equity,
                         )
+                        if self.protection is not None:
+                            atr = float(features[symbol].iloc[index]["atr_14"])
+                            stop_price = initial_stop(close_prices[symbol], atr, self.protection)
+                            if stop_price is None:
+                                events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; valid ATR stop unavailable")
+                                continue
+                            planned_entry = close_prices[symbol] * (1 + multiplier)
+                            planned_budget = min(
+                                planned_budget,
+                                self.protection.max_risk_per_trade * equity
+                                * planned_entry / (planned_entry - stop_price),
+                            )
                         planned_quantity = floor(
                             planned_budget / (close_prices[symbol] * (1 + multiplier))
                         )
-                    pending[symbol] = _PendingOrder(signal, planned_quantity)
+                        if planned_quantity < 1:
+                            events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; planned stop-risk size below one share")
+                            continue
+                    pending[symbol] = _PendingOrder(signal, planned_quantity, stop_price)
 
         for symbol, order in sorted(pending.items()):
             signal = order.signal
             events.append(f"{symbol}: unfilled {signal.action.value} signal at {signal.timestamp.isoformat()}; no next session")
+        if self.protection is not None and set(stops) != set(positions):
+            raise ValueError("Every open position must have exactly one active protective stop")
         return PortfolioBacktestResult(
             costs=self.costs, limits=self.limits, buy_priority=self.buy_priority,
             signals=tuple(signals), fills=tuple(fills), equity_curve=tuple(points),
             events=tuple(events), final_positions=dict(sorted(positions.items())),
-            final_closes=close_prices, halted_at=halted_at,
+            final_closes=close_prices,
+            final_stops={symbol: state.price for symbol, state in sorted(stops.items())},
+            halted_at=halted_at,
         )
 
     def _loss_breach(self, equity: float, prior_close: float, peak: float) -> str | None:
@@ -265,6 +365,26 @@ class PortfolioBacktestEngine:
             quantity=quantity, reference_open=reference_open, fill_price=price,
             commission=self.costs.commission_per_order,
             signal_timestamp=pd.Timestamp(signal.timestamp), signal_reason=signal.reason,
+        )
+
+    def _stop_fill(
+        self, timestamp: pd.Timestamp, symbol: str, quantity: int,
+        state: _ActiveStop, open_price: float, reference_price: float, gap: bool,
+    ) -> SimulatedFill:
+        assert self.protection is not None
+        multiplier = (
+            self.costs.slippage_bps + self.costs.spread_bps / 2
+            + self.protection.extra_stop_slippage_bps
+        ) / 10_000
+        reason = "PROTECTIVE_STOP_GAP_OPEN" if gap else "PROTECTIVE_STOP_TOUCH"
+        signal = Signal(
+            symbol=symbol, action=SignalAction.SELL, confidence=1.0,
+            reason=f"{reason}: active stop {state.price:g}",
+            timestamp=state.armed_at.to_pydatetime(), strategy=self.strategy.name,
+        )
+        return self._fill(
+            timestamp, signal, quantity, reference_open=open_price,
+            price=reference_price * (1 - multiplier),
         )
 
     @staticmethod
@@ -309,10 +429,13 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
             durations.append((fill.timestamp - entry.timestamp).total_seconds() / 86400)
     if set(entries) != set(result.final_positions):
         raise ValueError("Open fills do not match final positions")
+    if result.final_stops and set(result.final_stops) != set(entries):
+        raise ValueError("Protective stops do not match final positions")
     open_positions = {
         symbol: {
             "quantity": entry.quantity,
             "last_close": result.final_closes[symbol],
+            "stop_price": result.final_stops.get(symbol),
             "marked_unrealized_pnl": entry.quantity * (result.final_closes[symbol] - entry.fill_price) - entry.commission,
         }
         for symbol, entry in sorted(entries.items())
@@ -323,6 +446,10 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
     if abs(accounted_profit - (points[-1].equity - result.costs.initial_cash)) > 1e-6:
         raise ValueError("Realized plus marked P&L does not reconcile to final equity")
     max_exposure = max(point.gross_exposure for point in points)
+    stop_fills = [
+        fill for fill in result.fills
+        if fill.side == SignalAction.SELL and fill.signal_reason.startswith("PROTECTIVE_STOP_")
+    ]
     return {
         "initial_cash": result.costs.initial_cash,
         "final_equity": points[-1].equity,
@@ -332,6 +459,10 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
         "max_observed_gross_exposure": max_exposure,
         "max_observed_positions": max(point.position_count for point in points),
         "completed_trades": len(profits),
+        "protective_stop_exits": len(stop_fills),
+        "gap_open_stop_exits": sum(
+            fill.signal_reason.startswith("PROTECTIVE_STOP_GAP_OPEN") for fill in stop_fills
+        ),
         "winning_trades": sum(profit > 0 for profit in profits),
         "win_rate": sum(profit > 0 for profit in profits) / len(profits) if profits else None,
         "profit_factor": sum(p for p in profits if p > 0) / abs(sum(p for p in profits if p < 0))

@@ -11,6 +11,8 @@ The [Study A record](docs/study_a_research_record.md) contains the first
 15-minute rule-only data audit and exploratory results.
 The [Study C record](docs/study_c_research_record.md) contains the daily
 12-symbol screen and continuous shared-cash portfolio follow-up.
+The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
+one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the
 [risk-limit decision workbook](docs/risk_limit_decision_workbook.md).
 
@@ -21,8 +23,8 @@ market data, SQLite persistence, technical features, deterministic and
 offline ML research, single-symbol backtesting and walk-forward evaluation,
 offline shared-cash daily portfolio research, a standalone risk gate, and
 read-only portfolio reconciliation. The shared-cash simulator implements
-configurable research entry/loss limits; it does not model protective stops
-or the complete paper risk policy.
+configurable research entry/loss limits and an optional daily-OHLC stop
+proxy; it does not implement live broker stops or the complete paper policy.
 
 The project does not submit orders. `Signal` objects are recommendations only;
 the risk gate does not call a broker. Order execution is a later phase.
@@ -107,9 +109,15 @@ Entry limits are configurable with `--max-portfolio-exposure`,
 `--max-drawdown`; defaults are provisional research values, not paper
 approval. A BUY quantity is planned from the completed signal close and can
 only shrink at the next open. Loss limits halt new entries but do not force
-liquidation. The simulator has no protective stop, stop-risk sizing,
-cash-dividend ledger, or full paper risk-policy replay. CSV and JSON outputs
-remain in ignored `data/` on the machine where the command runs.
+liquidation. The optional `--protective-atr-multiple 2` variant adds a
+daily-bar stop proxy and `--max-risk-per-trade 0.01` planned-risk sizing;
+`--stop-extra-slippage-bps 50` stresses the stop fill. A daily low touching
+the stop is modeled at the stop level with adverse costs, while an opening
+gap below it exits at the open. These are approximations, not live stop
+orders or guaranteed fills. The [P1 record](docs/study_c_protective_exit_variant.md)
+shows that this particular stop variant failed its predeclared development
+screen. CSV and JSON outputs remain in ignored `data/` on the machine where
+the command runs.
 
 ## Walk-forward validation and training later
 

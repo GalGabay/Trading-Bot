@@ -15,6 +15,7 @@ from app.strategy.strategy_v1 import TrendFollowingV1
 from backtesting.portfolio_engine import (
     PortfolioBacktestEngine, ResearchPortfolioLimits, summarize_portfolio,
 )
+from backtesting.protective_exits import ProtectiveExitConfig
 from backtesting.research import COST_SCENARIOS, PERIODS_PER_YEAR, _utc_date, load_dataset
 
 
@@ -22,6 +23,7 @@ def run_portfolio_research(
     dataset_paths: list[Path], *, trade_start: str, trade_end: str,
     limits: ResearchPortfolioLimits | None = None,
     buy_priority: str = "alphabetical", scenarios: tuple[str, ...] = ("optimistic", "base", "pessimistic"),
+    protection: ProtectiveExitConfig | None = None,
 ) -> dict[str, object]:
     """Validate manifests, then score one continuously funded portfolio."""
     if not dataset_paths:
@@ -57,7 +59,8 @@ def run_portfolio_research(
     for name in scenarios:
         costs = replace(COST_SCENARIOS[name], periods_per_year=PERIODS_PER_YEAR["1Day"])
         result = PortfolioBacktestEngine(
-            TrendFollowingV1(), costs=costs, limits=limits, buy_priority=buy_priority
+            TrendFollowingV1(), costs=costs, limits=limits,
+            buy_priority=buy_priority, protection=protection,
         ).run(datasets, trade_start=_utc_date(trade_start), trade_end=_utc_date(trade_end))
         results[name] = {
             "costs": asdict(costs),
@@ -97,11 +100,17 @@ def run_portfolio_research(
         "timeframe": "1Day", "feed": next(iter(manifests.values()))["feed"],
         "adjustment": next(iter(manifests.values()))["adjustment"],
         "strategy": TrendFollowingV1.name, "feature_version": FEATURE_VERSION,
+        "variant": "baseline" if protection is None else "atr_trailing_stop",
+        "protective_exit": None if protection is None else asdict(protection),
         "trade_start_utc": trade_start, "trade_end_exclusive_utc": trade_end,
         "order_sizing": "Plan a maximum whole-share BUY quantity from the completed signal close; reduce or skip at the next open to honor shared cash and entry limits; never increase the planned quantity after an opening gap.",
         "buy_priority": buy_priority, "research_limits": asdict(limits),
         "policy_gaps": [
-            "No stop order or per-trade stop-risk cap; exits require a later trend-rule signal.",
+            (
+                "No stop order or per-trade stop-risk cap; exits require a later trend-rule signal."
+                if protection is None else
+                "ATR stop and 1% planned-risk sizing are daily-OHLC research proxies; broker stop execution, partial fills, and real-time protection are not modeled."
+            ),
             "No historical snapshot/signal freshness, sector, or volatility gate.",
             "A daily-loss or drawdown breach halts new entries but does not force liquidation.",
             "Adjusted daily OHLC and spread/slippage scenarios are proxies, not broker fill and cash-dividend records.",
@@ -123,10 +132,22 @@ def main() -> None:
     parser.add_argument("--max-positions", type=int, default=7)
     parser.add_argument("--max-daily-loss", type=float, default=0.03)
     parser.add_argument("--max-drawdown", type=float, default=0.10)
+    parser.add_argument("--protective-atr-multiple", type=float, help="Enable an ATR trailing-stop research variant")
+    parser.add_argument("--max-risk-per-trade", type=float, default=0.01)
+    parser.add_argument("--stop-extra-slippage-bps", type=float, default=0.0)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError("Report already exists; choose a fresh output path")
+    if args.protective_atr_multiple is None and args.stop_extra_slippage_bps:
+        raise ValueError("Extra stop slippage requires --protective-atr-multiple")
+    protection = (
+        None if args.protective_atr_multiple is None else ProtectiveExitConfig(
+            atr_multiple=args.protective_atr_multiple,
+            max_risk_per_trade=args.max_risk_per_trade,
+            extra_stop_slippage_bps=args.stop_extra_slippage_bps,
+        )
+    )
     report = run_portfolio_research(
         args.datasets, trade_start=args.trade_start, trade_end=args.trade_end,
         limits=ResearchPortfolioLimits(
@@ -136,7 +157,7 @@ def main() -> None:
             max_daily_loss=args.max_daily_loss,
             max_drawdown=args.max_drawdown,
         ),
-        buy_priority=args.buy_priority, scenarios=tuple(args.scenarios),
+        buy_priority=args.buy_priority, scenarios=tuple(args.scenarios), protection=protection,
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n", encoding="utf-8")

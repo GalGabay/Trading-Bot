@@ -14,9 +14,12 @@ The [Study C research record](study_c_research_record.md) now logs the daily
 rule-only development screen for all 12 symbols and a continuous shared-cash
 portfolio follow-up. Daily costs were less damaging, but the symbol/year
 results were mixed and the shared-cash result failed its pessimistic cost
-case. Daily tuning, stops, full risk-policy simulation, and final evaluation
-are still incomplete. Study B's ML filter remains deferred until the
-rule-only evidence is clearer.
+case. Daily tuning, broker stops, full risk-policy simulation, and final evaluation
+are still incomplete. The separately registered
+[Study C-P1 stop variant](study_c_protective_exit_variant.md) added an offline
+daily-bar stop proxy and failed its pessimistic-cost and drawdown screen;
+broker stops and full risk-policy simulation remain unbuilt. Study B's ML
+filter remains deferred until the rule-only evidence is clearer.
 
 ## The short answer: four matched strategy studies
 
@@ -157,7 +160,7 @@ performance ([Alpaca paper trading](https://docs.alpaca.markets/us/docs/paper-tr
 | Capability | Current status | Needed for this proposal |
 | --- | --- | --- |
 | Historical download, validation, and cost scenarios | Available for one symbol; 15-minute, hourly, and daily download choices | Download and audit the chosen scope; review feed/session handling |
-| Deterministic backtest and walk-forward | Single-symbol engine plus offline shared-cash daily engine with next-session fills and provisional entry/loss gates | Protective exits, complete risk-policy simulation, and later locked evaluation for a basket |
+| Deterministic backtest and walk-forward | Single-symbol engine plus offline shared-cash daily engine with next-session fills, provisional entry/loss gates, and an optional daily-OHLC stop proxy | Broker-like stop lifecycle, complete risk-policy simulation, and later locked evaluation for a basket |
 | ML research | Offline, single-symbol BUY filter; no reviewed trained model | Frame-specific targets, matched rule/ML reports, and wider-scope evaluation |
 | Historical-universe claim | Point-in-time membership and delisted data unavailable | Obtain approved data and implement universe-aware evaluation, if that claim is wanted |
 | Automated paper execution | Submission disabled; recovery checks exist | Safe exit/stop workflow, fill ledger, reviewed risk policy, and monitored engine |
