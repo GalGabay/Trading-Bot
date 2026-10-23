@@ -11,6 +11,8 @@ The [Study A record](docs/study_a_research_record.md) contains the first
 15-minute rule-only data audit and exploratory results.
 The [Study C record](docs/study_c_research_record.md) contains the daily
 12-symbol screen and continuous shared-cash portfolio follow-up.
+The [Study C feed audit](docs/study_c_feed_audit.md) compares SIP and IEX
+coverage, JNJ volume warnings, and a matched 2023-only research replay.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

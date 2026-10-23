@@ -56,7 +56,12 @@ scheduled-session, duplicate, OHLC, and nonnegative volume checks. Each has
 filled. JNJ has a **warning** for four daily volumes above 10 times its
 positive-volume median, on 2023-08-15, 08-16, 08-21, and 08-23. Their cause
 has not been verified, so treat JNJ's 2023 research result with extra care.
-No other dataset produced a validation warning.
+No other dataset produced a validation warning. The later
+[SIP/IEX and JNJ follow-up audit](study_c_feed_audit.md) found corresponding
+IEX activity and a contemporaneous Kenvue exchange offer, making an event
+spike plausible while leaving the exact SIP volumes unverified. It also found
+incomplete historical IEX coverage and material BUY-candidate differences.
+The four warning bars remain unchanged.
 
 | Symbol | Dataset SHA-256 |
 | --- | --- |
