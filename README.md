@@ -13,6 +13,17 @@ The [Study C record](docs/study_c_research_record.md) contains the daily
 12-symbol screen and continuous shared-cash portfolio follow-up.
 The [Study C feed audit](docs/study_c_feed_audit.md) compares SIP and IEX
 coverage, JNJ volume warnings, and a matched 2023-only research replay.
+The [Study C-R2 results](docs/study_c_daily_improvement_results.md) evaluate
+five fixed daily-rule arms and 86 simulations under a
+[registered improvement protocol](docs/study_c_daily_improvements.md).
+Slower breakout rules improved returns but failed the complete selection
+and development checks; no paper candidate has been approved.
+The [five-strategy guide](docs/five_daily_strategies_explained.md) explains
+the entry/exit rules and the fixed versus trailing breakout stops.
+The [Study C-R3 allocation results](docs/study_c_allocation_results.md)
+compare six sizing/halt policies. Smaller volatility-based sizing passed
+the allocation screen with lower gains and losses; broader strategy
+validation and paper approval remain outstanding.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

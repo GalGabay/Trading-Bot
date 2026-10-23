@@ -21,6 +21,11 @@ Phase 12 has an order manager, but no command or scheduler calls it. Paper
 submission is disabled by default and has not been activated. You do **not**
 need to choose risk percentages to continue coding or review.
 
+The [strategy guide](five_daily_strategies_explained.md) explains the five
+tested daily rules. The [latest allocation study](study_c_allocation_results.md)
+compares experimental position sizes and halt behavior. Those research
+numbers are not approvals or new defaults for your paper-risk JSON.
+
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all
 limits set to `null` and `approved_for_paper: false`; the loader rejects it

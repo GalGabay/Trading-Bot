@@ -21,6 +21,17 @@ daily-bar stop proxy and failed its pessimistic-cost and drawdown screen;
 broker stops and full risk-policy simulation remain unbuilt. Study B's ML
 filter remains deferred until the rule-only evidence is clearer.
 
+The owner subsequently authorized [Study C-R2's finite daily redesign
+study](study_c_daily_improvements.md). Its
+[results](study_c_daily_improvement_results.md) show better pessimistic
+returns for slower breakout rules, but no arm passed earlier-period
+selection and the full development screen. The separately registered
+[Study C-R3 allocation study](study_c_allocation_protocol.md) is now complete;
+its [results](study_c_allocation_results.md) show lower gains and losses with
+smaller sizing. The earlier-selected policy passed that allocation screen,
+while broader historical validation and the R2 strategy weaknesses remain
+unresolved. ML and final holdout evaluation remain deferred.
+
 ## The short answer: four matched strategy studies
 
 Start with **two timeframes** and **two versions of the same strategy**. That

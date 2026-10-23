@@ -1,5 +1,16 @@
 # Study C: daily rule-only research record
 
+**Later follow-up:** [Study C-R2](study_c_daily_improvement_results.md) evaluated
+five fixed daily-rule arms and 86 simulations. Breakout rules improved
+pessimistic returns to about +3.2%, but no candidate passed the full checks.
+Those new variants are separately labeled and do not replace this original
+Study C record.
+
+The later [C-R3 allocation study](study_c_allocation_results.md) tested
+smaller breakout position sizes and explicit daily halt/restart policies.
+Its selected research allocation reduced losses and gains; it does not
+approve paper trading.
+
 **Status:** Fixed-rule development screen and continuous shared-cash portfolio
 follow-up completed on 2026-10-23. The preexisting walk-forward rule permitted
 daily tuning for only two symbols, so a tuned basket, full risk-policy replay,
