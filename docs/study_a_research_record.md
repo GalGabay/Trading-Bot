@@ -107,6 +107,57 @@ are marked at the last close.
 | 2023 | MSFT | +1.634% | +0.512% | -3.215% | -1.439% | 95 |
 | 2023 | IWM | +0.989% | -0.056% | -3.486% | -1.294% | 88 |
 
+### How entries, exits, and holding times worked
+
+The strategy reads each completed 15-minute candle. If no position is open,
+it proposes a BUY only when the candle close is above EMA200, EMA20 is above
+EMA50, RSI14 is from 50 through 70, and the current volume is more than its
+20-bar average. The simulated order fills at the **next available candle's
+open**, with a whole-share quantity worth at most 10% of then-current equity.
+It does not buy at the close that produced the signal.
+
+While a position is open, the only strategy SELL trigger is a completed
+candle with **close below EMA50 OR EMA20 below EMA50**. The simulated SELL
+fills at the next available candle's open. There is no fixed one-day or
+fixed-number-of-bars holding period, automatic end-of-day close, protective
+stop, or trailing stop. If the signal arrives on the last candle of a day,
+the next available open may be the next trading day. If a position remains at
+the end of the requested annual window, it is marked to the last close for
+equity reporting and is not artificially sold. Separate annual runs start
+with fresh cash, so they do not carry such a position into the next year.
+
+The new offline `backtesting.trade_audit` command recomputes that same base
+scenario and lists every simulated BUY/SELL fill and its elapsed calendar
+holding time. The local ignored reports are
+`data/reports/study_a_AAPL_2022_trade_audit.json` and
+`data/reports/study_a_AAPL_2023_trade_audit.json`.
+
+| AAPL year | Closed positions | Median elapsed time | Range | Held overnight |
+| --- | ---: | ---: | ---: | ---: |
+| 2022 | 64 | 21.375 hours | 0.25 to 284.75 hours | 46 |
+| 2023 | 83 | 24 hours | 0.25 to 258 hours | 60 |
+
+These are **calendar hours between simulated fills**; nights, weekends, and
+holidays count. The 2023 first completed trade illustrates the mechanics:
+
+1. The 2023-01-06 20:45 UTC candle produced a BUY after it completed. The
+   next available open was 2023-01-09 14:30 UTC; the simulation bought 77
+   AAPL shares at $128.266914 after base spread/slippage adjustments.
+2. The 2023-01-09 20:45 UTC candle closed at $127.91, below its EMA50 of
+   about $128.0078. That triggered a SELL after the candle completed. EMA20
+   was still above EMA50, so the close-below-EMA50 condition was sufficient.
+3. The next available open was 2023-01-10 14:30 UTC. The simulation sold the
+   77 shares at $127.9232 after base costs. The position lasted 24 calendar
+   hours between fills and lost about $26.47. This is a simulated historical
+   trade, not a broker order or a quote-level execution claim.
+
+The base cost scenario assumes 5 basis points of adverse slippage and a
+2-basis-point spread, charging half the spread on each side. The pessimistic
+scenario assumes 20 basis points of adverse slippage, a 10-basis-point
+spread, and a $1 commission per order. These are research assumptions, not
+observed broker fills. The backtester does not model partial fills, latency,
+intra-bar stops, or a shared portfolio risk gate.
+
 For context, SPY's adjusted first-open-to-last-close change was -18.407%
 in 2022 and +25.551% in 2023. This is a fully invested reference; the
 strategy has a 10% single-position cap, so those figures are **not** a
@@ -118,6 +169,7 @@ needed:
 ```powershell
 python -m backtesting.research download --symbol SPY --start 2020-01-01 --end 2024-01-01 --timeframe 15Min --feed sip --adjustment all --output data/historical/SPY_15Min_2020_2023_study_a.csv
 python -m backtesting.research backtest --dataset data/historical/SPY_15Min_2020_2023_study_a.csv --trade-start 2023-01-01 --trade-end 2024-01-01 --output data/reports/study_a_SPY_2023_rule_only.json
+python -m backtesting.trade_audit --dataset data/historical/AAPL_15Min_2019_2023.csv --trade-start 2023-01-01 --trade-end 2024-01-01 --cost-scenario base --output data/reports/study_a_AAPL_2023_trade_audit.json
 ```
 
 ### Interpretation and stop condition
@@ -139,6 +191,12 @@ and later choose risk limits before any paper order. There is no reason to
 start the paper trial from these numbers.
 
 ## Decision status
+
+On 2026-10-23, the owner confirmed that 2024–2025 results have **not** been
+used to choose symbols or settings. This preserves those years as a planned
+final holdout for this research line; they have not been downloaded or run in
+Study A. We still must freeze the eventual candidate and audit the data
+before opening them.
 
 No paper candidate has been approved. No paper-order submission, risk
 configuration approval, or deployment decision follows from this study.
