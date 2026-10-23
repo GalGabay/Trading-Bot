@@ -10,9 +10,11 @@ every stock and timeframe for an attractive chart.
 The [Study A research record](study_a_research_record.md) logs the initial
 15-minute rule-only data audit and exploratory results. Its incomplete basket
 and single-symbol runs do not complete the program or authorize paper trading.
-Given Study A's cost sensitivity, the next planned baseline is Study C's
-daily rule-only comparison on development data. Study B's ML filter is
-deferred until the rule-only evidence is clearer.
+The [Study C research record](study_c_research_record.md) now logs the daily
+rule-only development screen for all 12 symbols. Daily costs were less
+damaging, but the symbol/year results were mixed; the tuned basket and
+shared-cash portfolio evaluation are still incomplete. Study B's ML filter
+remains deferred until the rule-only evidence is clearer.
 
 ## The short answer: four matched strategy studies
 
