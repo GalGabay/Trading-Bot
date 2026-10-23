@@ -1,9 +1,15 @@
 # Proposed research program before the first paper trial
 
-**Status:** Proposal for the project owner to review. It does not approve a
-strategy, risk limits, a data purchase, or paper orders. The current bot cannot
-run every study below yet. The goal is a finite, reproducible decision process,
-not a search through every stock and timeframe for an attractive chart.
+**Status:** The owner authorized starting Study A from this proposal on
+2026-10-19. The remaining studies and any later paper activation still need
+their stated checks; this authorization does not approve risk limits, a data
+purchase, or paper orders. The current bot cannot run every study below yet.
+The goal is a finite, reproducible decision process, not a search through
+every stock and timeframe for an attractive chart.
+
+The [Study A research record](study_a_research_record.md) logs the initial
+15-minute rule-only data audit and exploratory results. Its incomplete basket
+and single-symbol runs do not complete the program or authorize paper trading.
 
 ## The short answer: four matched strategy studies
 

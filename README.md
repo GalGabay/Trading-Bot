@@ -7,6 +7,8 @@ For decisions that only the project owner can make, use the
 [phase-by-phase responsibilities checklist](docs/owner_responsibilities.md).
 The [proposed research program](docs/proposed_research_program.md) describes
 the planned rule/ML and timeframe comparisons before a paper trial.
+The [Study A record](docs/study_a_research_record.md) contains the first
+15-minute rule-only data audit and exploratory results.
 Before approving paper-order risk settings, use the
 [risk-limit decision workbook](docs/risk_limit_decision_workbook.md).
 
