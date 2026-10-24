@@ -140,6 +140,14 @@ authorize paper activation.
 
 ## Execution status and responsibilities
 
+**Subsequent collection:** A [bounded free collection/event review](free_collection_results.md)
+has now saved 23,748 raw observations for representative ticker intervals and
+inventoried 249 provider events. The earlier inventory below describes what
+was on disk before that collection. The 506-stock register is still retained;
+the sample does not replace it or satisfy full-market evidence. Missing
+primary-confirmed events, unsupported claims/distributions and OTC valuation
+still block broader strategy scoring. Purchases and orders remain zero.
+
 **Latest data audit:** The [2016 cohort audit](cohort_2016_audit_results.md)
 identifies dated tickers for all 506 retained source rows and records ten
 company-event cases, retaining failures and unsupported securities. Of 33

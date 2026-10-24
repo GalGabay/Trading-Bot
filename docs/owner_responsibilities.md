@@ -14,13 +14,23 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Most recent work:** The [free collection/event review](free_collection_results.md)
+has saved 23,748 raw historical observations and inventoried 249 provider
+events using existing access. Three observed boundary issues are explained/
+resolved, including an actual recovered CBRE candle. Ten independently
+confirmed required events are missing from API responses; those histories
+remain blocked. Purchases, subscription changes and orders were zero.
+The next work is delayed cash/share claim and distribution accounting, using
+the saved representative cases. You need no payment card, new subscription,
+manual download or risk-setting change for that engineering work.
+
 **Latest engineering step:** The [2016 cohort source/coverage audit](cohort_2016_audit_results.md)
 identifies dated tickers for all 506 retained holdings, records ten event cases
 and checks 33 saved daily-price files. It uses free public/local sources with
 $0 in purchases and zero new broker/account requests. The earlier $9.69
 dividend figure was virtual simulation income, not a charge or real payment.
-My next work is a bounded no-purchase acquisition plan and remaining event/
-adapter evidence, starting with a representative small set. You need not gather
+That acquisition plan has subsequently been implemented and run; remaining
+event/adapter evidence is described in the latest update above. You need not gather
 stocks, edit the risk JSON, add a card or install ML dependencies for that work.
 Before scoring a materially revised research scope, I will present it for
 review. Installing the optional ML requirements on Windows can clear the two

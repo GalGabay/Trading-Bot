@@ -5,6 +5,13 @@ The owner explicitly requires no new charges, so continue with saved/free public
 sources. Do not subscribe, start a paid trial or upgrade an account to unblock
 research. Reconsider that policy only if the owner explicitly changes it.
 
+**Latest free collection:** The [historical collection/event review](free_collection_results.md)
+used 46 historical-data GETs through existing access, without billing/account
+queries, plan changes or purchases. It saved 23,748 raw observations and a
+249-event inventory, then resolved specific alias/lifetime gaps offline.
+The API omits ten independently sourced required events, so full action/claim
+handling remains a gate. A denied source never triggers a paid fallback.
+
 The [2016 cohort mapping/data audit](cohort_2016_audit_results.md) identifies
 dated tickers for all 506 retained holdings and records ten company-event
 cases. It audited 33 cached daily-price files without new price downloads,

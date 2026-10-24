@@ -3775,3 +3775,57 @@ representative ordinary/rename/terminal/complex-event cases and finishing
 the required evidence/adapters before scaling. Broader strategy scoring,
 scope review and eventual paper activation remain separate. No owner card,
 manual stock collection or risk JSON changes are required for that data work.
+
+## Free historical collection and event-gap review: 2026-10-24
+
+The [bounded collection and review](docs/free_collection_results.md) is now
+implemented and executed. The frozen 24-interval plan covers ordinary stocks,
+renames, cash/mixed acquisitions, spin-offs and bankruptcy without selecting
+by future returns. A separate GET-only transport reuses central credentials
+but has no trading client, account/billing/subscription operations, redirects,
+automatic retries, paid upgrades or feed fallback. It caps physical HTTP
+attempts, spaces requests and enforces 2016-2023 raw daily SIP data only.
+Automatic vendor ticker mapping is disabled with `asof="-"`; explicit alias
+intervals are retained. Existing general broker/download methods are unchanged.
+
+The run saved 23,747 raw candles; one additional observed boundary candle
+brings the collection to **23,748 observations**, using **46 historical-data
+GETs** including 21 distinct event queries. There are **249 unique provider
+event records**. New purchases, account requests, subscription changes, orders
+and package installations were zero. Reserved 2024-2025 candles were not used.
+
+Independent evidence explains 66 Under Armour Class C pre-issuance absences
+and establishes the May 3, 2023 Nasdaq suspension boundary for BBBY. The
+CBRE March 19, 2018 candle exists under vendor label CBG; a separate one-day
+query recovered it. The offline reviewer records that one label translation
+without changing any OHLCV or timestamp and writes new, separate observed
+alias streams: 2,012 Class A sessions, 1,946 Class C sessions and 2,012 CBRE
+sessions. Original files and hashes are preserved. Empty OTC data remains
+empty; no stale valuation, fabricated sale or early assumed zero is introduced.
+
+Of eleven independently required event cross-checks, **ten have no matching
+effective/ex-date provider record**. Sources establish distributions, renames
+and mergers omitted from the queried API responses. Processing dates are not
+publication times; missing API events are not an event-free-history declaration.
+Seventy-seven out-of-interval event references are quarantined for identity/
+date review, including a newer ARNC company's acquisition that cannot resolve
+the original company. Generic fractional split entries cannot replace proper
+spin-off/branch ownership accounting. Seven dated publication reviews retain
+conservative knowledge bounds and explicit same-day timing limitations;
+issuer payable dates are not certified broker cash availability.
+
+Actual source/calendar/data review completed; compilation and diff checks
+passed. No unit tests or strategy performance simulations were added/run in
+this increment. An archived executed collector preserves the initial report's
+source hash; later metadata fixes explicitly label reused action queries and
+empty responses without rewriting old evidence. Full data remain under ignored
+`data/reports/free_collection_v1` and `free_collection_review_v1`; reviewed
+summaries, plans and primary-source hashes are tracked in docs.
+
+**Next engineering work:** delayed terminal cash claims, cash/share acquisitions,
+spin-off branches, fractional claims and an explicit valuation convention,
+using saved representative cases before scaling. Complete dividend/publication
+evidence, unavailable OTC history and full 506-stock coverage remain gates.
+The broader entry/ranking study stays unscored. Purchases/plan upgrades are
+not a fallback; no owner card, download, configuration or risk-setting action
+is required now. Paper activation and Pi validation remain separate.

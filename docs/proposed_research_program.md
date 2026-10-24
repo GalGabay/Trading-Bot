@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Latest collection result:** The [no-purchase collection/event review](free_collection_results.md)
+now provides 23,748 raw observations and a 249-event provider inventory for
+24 representative ticker periods. Specific rename/issuance/suspension gaps
+have been resolved or explained independently. Ten required events are absent
+from the queried provider responses; claims/distributions, fractional shares,
+OTC valuation and complete cohort evidence remain gates. No strategy scoring,
+purchase, subscription change or paper order occurred.
+
 **Latest no-purchase audit:** The [2016 cohort mapping/results](cohort_2016_audit_results.md)
 identifies dated tickers for all 506 retained rows, records ten sourced event
 cases and checks 33 saved daily-price files. Full raw-price coverage and event

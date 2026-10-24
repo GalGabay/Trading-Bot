@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "purpose": "Bounded no-purchase raw-price/action collection and source-gap audit, not strategy scoring",
+  "new_purchases_budget_usd": 0,
+  "subscription_changes_authorized": false,
+  "endpoint_policy": [
+    "GET https://data.alpaca.markets/v2/stocks/bars",
+    "GET https://data.alpaca.markets/v1/corporate-actions"
+  ],
+  "feed": "sip",
+  "adjustment": "raw",
+  "timeframe": "1Day",
+  "asof": "-",
+  "dates": "2016-2023 only; never reserved 2024-2025",
+  "max_probes": 24,
+  "max_pages_per_resource": 4,
+  "max_http_attempts": 192,
+  "minimum_request_spacing_seconds": 0.4,
+  "automatic_retries": false,
+  "automatic_feed_fallback": false,
+  "automatic_paid_upgrade": false,
+  "cohort_review": "docs/2016_cohort_audit_summary.json",
+  "cohort_review_sha256": "524526e42c93c7f39eb54d65c093649ad60833714280b74312669c57b0944967",
+  "calendar_path": "data/reports/broad_universe_audit_final/calendar.json",
+  "calendar_sha256": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7",
+  "probes": [
+    {
+      "probe_id": "ordinary_aapl",
+      "symbol": "AAPL",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "role": "ordinary_cohort",
+      "identity_note": "Known 2020 split and ordinary dividends require full-period evidence.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ordinary_jpm",
+      "symbol": "JPM",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "role": "ordinary_cohort",
+      "identity_note": "Ordinary/dividend case; absence of other events is not assumed.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "market_context",
+      "symbol": "SPY",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "role": "context_only",
+      "identity_note": "ETF context, not an eligible stock in the broader study.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ua_class_a_old",
+      "symbol": "UA",
+      "start": "2016-01-01",
+      "end_exclusive": "2016-12-07",
+      "role": "rename",
+      "identity_note": "Original Class A only; stop before UA is reused for Class C.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ua_class_a_new",
+      "symbol": "UAA",
+      "start": "2016-12-07",
+      "end_exclusive": "2024-01-01",
+      "role": "rename",
+      "identity_note": "Class A continuation; publication bound reviewed separately.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ua_class_c_old",
+      "symbol": "UA.C",
+      "start": "2016-01-01",
+      "end_exclusive": "2016-12-07",
+      "role": "rename",
+      "identity_note": "Issuer spelling for Class C; starts before actual issuance so early absence is unresolved until listing review.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ua_class_c_new",
+      "symbol": "UA",
+      "start": "2016-12-07",
+      "end_exclusive": "2024-01-01",
+      "role": "rename",
+      "identity_note": "Class C only; must not concatenate into Class A.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "cbre_old",
+      "symbol": "CBG",
+      "start": "2016-01-01",
+      "end_exclusive": "2018-03-19",
+      "role": "rename",
+      "identity_note": "Same Class A identity, old ticker.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "cbre_new",
+      "symbol": "CBRE",
+      "start": "2018-03-19",
+      "end_exclusive": "2024-01-01",
+      "role": "rename",
+      "identity_note": "Same Class A identity, new ticker.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "whole_foods",
+      "symbol": "WFM",
+      "start": "2016-01-01",
+      "end_exclusive": "2017-08-28",
+      "role": "cash_acquisition",
+      "identity_note": "Stop before documented suspension/closing; no guessed cash availability.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "activision",
+      "symbol": "ATVI",
+      "start": "2016-01-01",
+      "end_exclusive": "2023-10-13",
+      "role": "cash_acquisition",
+      "identity_note": "Documented October 2023 cash acquisition; terminal availability still reviewed separately.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "aetna",
+      "symbol": "AET",
+      "start": "2016-01-01",
+      "end_exclusive": "2018-11-28",
+      "role": "cash_and_stock_acquisition",
+      "identity_note": "Requires CVS shares, cash, fractional claims and dated settlement.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "level3",
+      "symbol": "LVLT",
+      "start": "2016-01-01",
+      "end_exclusive": "2017-11-01",
+      "role": "cash_and_stock_acquisition",
+      "identity_note": "Requires CTL shares, cash and dated settlement.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "cvs_reference",
+      "symbol": "CVS",
+      "start": "2018-01-01",
+      "end_exclusive": "2019-01-01",
+      "role": "successor_context_only",
+      "identity_note": "Merger-year reference quotes, not an entry/selection signal.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ctl_reference",
+      "symbol": "CTL",
+      "start": "2017-01-01",
+      "end_exclusive": "2018-01-01",
+      "role": "successor_context_only",
+      "identity_note": "Merger-year reference quotes, no assumption about later Lumen aliases.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "alcoa_original",
+      "symbol": "AA",
+      "start": "2016-01-01",
+      "end_exclusive": "2016-11-01",
+      "role": "spinoff",
+      "identity_note": "Original Alcoa before separation, reverse split also needs review.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "arconic_original",
+      "symbol": "ARNC",
+      "start": "2016-11-01",
+      "end_exclusive": "2020-04-01",
+      "role": "spinoff",
+      "identity_note": "Original company after 2016 rename, before 2020 reuse of ARNC.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "howmet_parent",
+      "symbol": "HWM",
+      "start": "2020-04-01",
+      "end_exclusive": "2024-01-01",
+      "role": "spinoff",
+      "identity_note": "Original company continuing as Howmet; branch accounting not yet supported.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "alcoa_child",
+      "symbol": "AA",
+      "start": "2016-11-01",
+      "end_exclusive": "2024-01-01",
+      "role": "spinoff_child_context",
+      "identity_note": "New Alcoa issuer; must not be treated as the old AA security.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "fox_original_a",
+      "symbol": "FOXA",
+      "start": "2016-01-01",
+      "end_exclusive": "2019-03-19",
+      "role": "spinoff",
+      "identity_note": "Original Twenty-First Century Fox Class A only.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "fox_transition_a",
+      "symbol": "TFCFA",
+      "start": "2019-03-19",
+      "end_exclusive": "2019-03-20",
+      "role": "spinoff",
+      "identity_note": "Original company transition before Disney transaction.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "fox_child_a",
+      "symbol": "FOXA",
+      "start": "2019-03-19",
+      "end_exclusive": "2024-01-01",
+      "role": "spinoff_child_context",
+      "identity_note": "New Fox Class A; different security from old FOXA.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "bed_bath_listed",
+      "symbol": "BBBY",
+      "start": "2016-01-01",
+      "end_exclusive": "2023-09-30",
+      "role": "bankruptcy",
+      "identity_note": "NASDAQ suspension/OTC boundary needs independent evidence; SIP absence not zero recovery.",
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "bed_bath_otc",
+      "symbol": "BBBYQ",
+      "start": "2016-01-01",
+      "end_exclusive": "2023-09-30",
+      "role": "bankruptcy_otc_probe",
+      "identity_note": "SIP may lack OTC quotes; no paid OTC feed or assumed tradability.",
+      "ready_for_simulation": false
+    }
+  ],
+  "release_sources": [
+    "https://docs.alpaca.markets/us/docs/about-market-data-api",
+    "https://docs.alpaca.markets/us/reference/stockbars",
+    "https://docs.alpaca.markets/us/reference/corporateactions-1"
+  ],
+  "limitations": [
+    "Existing access is used; billing/subscription status is not inspected or changed.",
+    "Automatic ticker mapping is disabled; explicit intervals remain evidence to review, not full certified identity histories.",
+    "Provider process dates are not publication times, effective dates or cash availability.",
+    "No missing observations, payouts or fractional claims are invented.",
+    "Unresolved/unsupported rows remain blockers, never survivor-only exclusions."
+  ]
+}

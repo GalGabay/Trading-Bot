@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "collection_root": "data/reports/free_collection_v1",
+  "collection_report_sha256": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51",
+  "new_purchases_usd": 0,
+  "sources": {
+    "cbre_index": {
+      "path": "data/reports/free_collection_evidence_v1/cbre_index.html",
+      "sha256": "70dbad03d642f7a3f0c9824b2b8606213a78ae1d0f50c196693f06964fbf9bef",
+      "url": "https://www.sec.gov/Archives/edgar/data/1138118/000156459018004821/0001564590-18-004821-index.html"
+    },
+    "wfm_index": {
+      "path": "data/reports/free_collection_evidence_v1/wfm_index.html",
+      "sha256": "252d41e7e9a1e024fc532ffadb6ab776912cf77e92c4ac71121c216c8f72fe1a",
+      "url": "https://www.sec.gov/Archives/edgar/data/865436/000114420417045261/0001144204-17-045261-index.html"
+    },
+    "bbby_index": {
+      "path": "data/reports/free_collection_evidence_v1/bbby_index.html",
+      "sha256": "5249ea900dde9a5b10a4970a074b052960ef88705bc2ca12fae98726f5fbbe9c",
+      "url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523247428/0001193125-23-247428-index.html"
+    },
+    "aetna_index": {
+      "path": "data/reports/free_collection_evidence_v1/aetna_index.html",
+      "sha256": "c85059568ca589fbeea716f16e7cb57f50dc8672a849d328895c337fe1154e9c",
+      "url": "https://www.sec.gov/Archives/edgar/data/64803/000119312518336591/0001193125-18-336591-index.html"
+    },
+    "fox_index": {
+      "path": "data/reports/free_collection_evidence_v1/fox_index.html",
+      "sha256": "e8024badf229fa518764585f77a9fa233df6ce4d7627c3879ae52245767c766a",
+      "url": "https://www.sec.gov/Archives/edgar/data/1308161/000119312519079034/0001193125-19-079034-index.html"
+    },
+    "under_armour_2016_10k": {
+      "path": "data/reports/free_collection_evidence_v1/under_armour_2016_10k.html",
+      "sha256": "3f1b96064c27747cd382a388290bb0cc88a27cfe01c62a62d7daff87436cb8dc",
+      "url": "https://www.sec.gov/Archives/edgar/data/1336917/000133691717000017/ua-20161231x10k.htm"
+    },
+    "arconic_2020_announcement": {
+      "path": "data/reports/free_collection_evidence_v1/arconic_2020_announcement.html",
+      "sha256": "b92e54f7273497ad5e4206fb2e478767c2330443733a29cd14e4bbe6d794e33f",
+      "url": "https://www.sec.gov/Archives/edgar/data/4281/000110465920011945/tm206942d1_ex99-1.htm"
+    },
+    "arconic_2020_completion": {
+      "path": "data/reports/free_collection_evidence_v1/arconic_2020_completion.html",
+      "sha256": "b319d89001c37acb1433dcff17786d281628ad7be3f2b1e906df942873dc9553",
+      "url": "https://www.sec.gov/Archives/edgar/data/1790982/000110465920043138/tm2014707d1_ex99-2.htm"
+    },
+    "activision_2023_sec": {
+      "path": "data/reports/free_collection_evidence_v1/activision_2023_sec.html",
+      "sha256": "1addc924bebaf6f6b6e3ddc22cfa515233ec290cb882c33aa57a02584c2b525d",
+      "url": "https://www.sec.gov/Archives/edgar/data/718877/000110465923108985/tm2328253d1_8k.htm"
+    },
+    "bbby_notice_final": {
+      "path": "data/reports/free_collection_evidence_v1/bbby_notice_final.html",
+      "sha256": "a78a63a207497e2ed1c8f3425d7cadf18c99861dbd0465d6db6a85867f0d2894",
+      "url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523115523/d89202d8k.htm"
+    },
+    "ua_distribution_announcement": {
+      "path": "data/reports/free_collection_evidence_v1/ua_class_c_announcement.html",
+      "sha256": "3206ddd2a804c433104e8189d301691bce6ad322839936b8aab51a60a52d3ea7",
+      "url": "https://www.prnewswire.com/news-releases/under-armour-announces-class-c-stock-dividend-300237041.html"
+    },
+    "under_armour_2016_announcement": {
+      "path": "data/reports/historical_mapping_sources_v1/under_armour_2016_announcement.html",
+      "sha256": "5cd65b962186b85a49c930c0f98cbd592995c34216cc9803e1dac0ca916440a4",
+      "url": "https://www.prnewswire.com/news-releases/under-armour-announces-change-of-class-a-and-class-c-ticker-symbols-300368197.html"
+    },
+    "cbre_2018_announcement": {
+      "path": "data/reports/historical_mapping_sources_v1/cbre_2018_announcement.html",
+      "sha256": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+      "url": "https://www.sec.gov/Archives/edgar/data/1138118/000156459018004821/cbg-ex991_6.htm"
+    },
+    "whole_foods_2017": {
+      "path": "data/reports/historical_mapping_sources_v1/whole_foods_2017.html",
+      "sha256": "b38ebe712eddcf171986a768bed531254c086d5499d65d66145c3324dc7baca8",
+      "url": "https://www.sec.gov/Archives/edgar/data/865436/000114420417045261/v474128_8k.htm"
+    },
+    "aetna_2018": {
+      "path": "data/reports/historical_mapping_sources_v1/aetna_2018.html",
+      "sha256": "24b23468d292fc841e0f5ef6db2230367216458464e2424fd663fa764108b537",
+      "url": "https://www.sec.gov/Archives/edgar/data/64803/000119312518336591/d650950d8k.htm"
+    },
+    "level3_2017": {
+      "path": "data/reports/historical_mapping_sources_v1/level3_2017.html",
+      "sha256": "9783b47f4a498776e43b8a4fcd9051924b456d846bf04d85891a7d057f37bb63",
+      "url": "https://ir.lumen.com/news/news-details/2017/CenturyLink-completes-acquisition-of-Level-3/default.aspx"
+    },
+    "alcoa_2016_completion": {
+      "path": "data/reports/historical_mapping_sources_v1/alcoa_2016_completion.html",
+      "sha256": "694f442ac651e18ad4b78e3f73516c0e3a7b7a4ac8663524da1d4cd8de756542",
+      "url": "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm"
+    },
+    "fox_2019_spinoff": {
+      "path": "data/reports/historical_mapping_sources_v1/fox_2019_spinoff.html",
+      "sha256": "febbac2d9427555cd82803eb3795b64540656621c2fdcaa87e0ac2c6962f9c30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1308161/000119312519079034/d721340d8k.htm"
+    },
+    "bed_bath_2023": {
+      "path": "data/reports/historical_mapping_sources_v1/bed_bath_2023.html",
+      "sha256": "a7eb1d10a1f9469af411f45f5061343395fa87519a161a9220b5ad57a9ae1c86",
+      "url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523247428/d579010d8k.htm"
+    }
+  },
+  "unavailable_public_attempts": {
+    "bbby_suspension_2023": {
+      "url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523115532/d501803d8k.htm",
+      "exception": "HTTPError",
+      "http_status": 404
+    },
+    "bbby_notice_index_final": {
+      "url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523115523/0001193125-23-115523-index.html",
+      "exception": "HTTPError",
+      "http_status": 503
+    }
+  },
+  "boundary_response": {
+    "path": "data/reports/cbre_boundary_v1/response.json",
+    "sha256": "3a224602437c9f6fc3df66f4f8daef3b686341b04fcbc6d393097ba8fe456dad"
+  },
+  "checks": [
+    {
+      "source_id": "under_armour_2016_10k",
+      "terms": [
+        "April 8, 2016",
+        "December 7, 2016",
+        "June 29, 2016"
+      ]
+    },
+    {
+      "source_id": "ua_distribution_announcement",
+      "terms": [
+        "March 16, 2016",
+        "April 7, 2016",
+        "UA.C"
+      ]
+    },
+    {
+      "source_id": "bbby_notice_final",
+      "terms": [
+        "May 3, 2023",
+        "suspended"
+      ]
+    },
+    {
+      "source_id": "arconic_2020_completion",
+      "terms": [
+        "April 1, 2020",
+        "four shares",
+        "Howmet"
+      ]
+    },
+    {
+      "source_id": "activision_2023_sec",
+      "terms": [
+        "October 13, 2023",
+        "$95.00"
+      ]
+    }
+  ],
+  "publication_reviews": [
+    {
+      "event": "ua_class_a_and_c_rename",
+      "evidence_source": "under_armour_2016_announcement",
+      "publication_date": "2016-11-28",
+      "effective_date": "2016-12-07",
+      "date_source": "dated_issuer_release"
+    },
+    {
+      "event": "cbre_rename",
+      "evidence_source": "cbre_index",
+      "publication_date": "2018-03-08",
+      "effective_date": "2018-03-19",
+      "date_source": "SEC_index"
+    },
+    {
+      "event": "bbby_nasdaq_suspension",
+      "evidence_source": "bbby_notice_final",
+      "publication_date": "2023-04-25",
+      "effective_date": "2023-05-03",
+      "date_source": "dated_issuer_filing_text"
+    },
+    {
+      "event": "wfm_cash_merger",
+      "evidence_source": "wfm_index",
+      "publication_date": "2017-08-28",
+      "effective_date": "2017-08-28",
+      "date_source": "SEC_index"
+    },
+    {
+      "event": "aetna_mixed_merger",
+      "evidence_source": "aetna_index",
+      "publication_date": "2018-11-28",
+      "effective_date": "2018-11-28",
+      "date_source": "SEC_index"
+    },
+    {
+      "event": "fox_distribution",
+      "evidence_source": "fox_index",
+      "publication_date": "2019-03-19",
+      "effective_date": "2019-03-19",
+      "date_source": "SEC_index"
+    },
+    {
+      "event": "bbby_equity_cancellation",
+      "evidence_source": "bbby_index",
+      "publication_date": "2023-09-29",
+      "effective_date": "2023-09-29",
+      "date_source": "SEC_index"
+    }
+  ],
+  "expected_events": [
+    {
+      "name": "ua_class_c_issuance",
+      "probe": "ua_class_a_old",
+      "date": "2016-04-08",
+      "categories": [
+        "stock_dividends",
+        "spin_offs"
+      ],
+      "source": "ua_distribution_announcement"
+    },
+    {
+      "name": "ua_class_c_additional_distribution",
+      "probe": "ua_class_c_old",
+      "date": "2016-06-29",
+      "categories": [
+        "stock_dividends"
+      ],
+      "source": "under_armour_2016_10k"
+    },
+    {
+      "name": "ua_rename",
+      "probe": "ua_class_a_new",
+      "date": "2016-12-07",
+      "categories": [
+        "name_changes"
+      ],
+      "source": "under_armour_2016_announcement"
+    },
+    {
+      "name": "cbre_rename",
+      "probe": "cbre_new",
+      "date": "2018-03-19",
+      "categories": [
+        "name_changes"
+      ],
+      "source": "cbre_2018_announcement"
+    },
+    {
+      "name": "wfm_cash_merger",
+      "probe": "whole_foods",
+      "date": "2017-08-28",
+      "categories": [
+        "cash_mergers"
+      ],
+      "source": "whole_foods_2017"
+    },
+    {
+      "name": "aetna_mixed_merger",
+      "probe": "aetna",
+      "date": "2018-11-28",
+      "categories": [
+        "stock_and_cash_mergers"
+      ],
+      "source": "aetna_2018"
+    },
+    {
+      "name": "level3_mixed_merger",
+      "probe": "level3",
+      "date": "2017-11-01",
+      "categories": [
+        "stock_and_cash_mergers"
+      ],
+      "source": "level3_2017"
+    },
+    {
+      "name": "alcoa_distribution",
+      "probe": "alcoa_original",
+      "date": "2016-11-01",
+      "categories": [
+        "spin_offs"
+      ],
+      "source": "alcoa_2016_completion"
+    },
+    {
+      "name": "arconic_2020_distribution",
+      "probe": "arconic_original",
+      "date": "2020-04-01",
+      "categories": [
+        "spin_offs"
+      ],
+      "source": "arconic_2020_completion"
+    },
+    {
+      "name": "fox_distribution",
+      "probe": "fox_original_a",
+      "date": "2019-03-19",
+      "categories": [
+        "spin_offs"
+      ],
+      "source": "fox_2019_spinoff"
+    },
+    {
+      "name": "activision_cash_merger",
+      "probe": "activision",
+      "date": "2023-10-13",
+      "categories": [
+        "cash_mergers"
+      ],
+      "source": "activision_2023_sec"
+    }
+  ],
+  "cash_availability_convention": null,
+  "intraday_acceptance_time_assumed_as_publication": false,
+  "knowledge_convention": "Two calendar days after dated release/filing, then first saved session open; not an exact historical publication timestamp.",
+  "ready_for_strategy_scoring": false
+}

@@ -1,0 +1,323 @@
+{
+  "scope": "offline_source_and_gap_resolution_not_strategy_scoring",
+  "collection_report_sha256": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51",
+  "review_sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896",
+  "execution_sha256": {
+    "backtesting/event_gap_review.py": "7821d9c5c5272631b00ffb9a97472bde072edcf804ceb1fe567043d51502745c",
+    "backtesting/free_collection.py": "fb830e4cf32a66347ccfd9def5075c9fdc7054159648ea1b5bfb5294e1eb7773"
+  },
+  "source_sha256": {
+    "cbre_index": "70dbad03d642f7a3f0c9824b2b8606213a78ae1d0f50c196693f06964fbf9bef",
+    "wfm_index": "252d41e7e9a1e024fc532ffadb6ab776912cf77e92c4ac71121c216c8f72fe1a",
+    "bbby_index": "5249ea900dde9a5b10a4970a074b052960ef88705bc2ca12fae98726f5fbbe9c",
+    "aetna_index": "c85059568ca589fbeea716f16e7cb57f50dc8672a849d328895c337fe1154e9c",
+    "fox_index": "e8024badf229fa518764585f77a9fa233df6ce4d7627c3879ae52245767c766a",
+    "under_armour_2016_10k": "3f1b96064c27747cd382a388290bb0cc88a27cfe01c62a62d7daff87436cb8dc",
+    "arconic_2020_announcement": "b92e54f7273497ad5e4206fb2e478767c2330443733a29cd14e4bbe6d794e33f",
+    "arconic_2020_completion": "b319d89001c37acb1433dcff17786d281628ad7be3f2b1e906df942873dc9553",
+    "activision_2023_sec": "1addc924bebaf6f6b6e3ddc22cfa515233ec290cb882c33aa57a02584c2b525d",
+    "bbby_notice_final": "a78a63a207497e2ed1c8f3425d7cadf18c99861dbd0465d6db6a85867f0d2894",
+    "ua_distribution_announcement": "3206ddd2a804c433104e8189d301691bce6ad322839936b8aab51a60a52d3ea7",
+    "under_armour_2016_announcement": "5cd65b962186b85a49c930c0f98cbd592995c34216cc9803e1dac0ca916440a4",
+    "cbre_2018_announcement": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+    "whole_foods_2017": "b38ebe712eddcf171986a768bed531254c086d5499d65d66145c3324dc7baca8",
+    "aetna_2018": "24b23468d292fc841e0f5ef6db2230367216458464e2424fd663fa764108b537",
+    "level3_2017": "9783b47f4a498776e43b8a4fcd9051924b456d846bf04d85891a7d057f37bb63",
+    "alcoa_2016_completion": "694f442ac651e18ad4b78e3f73516c0e3a7b7a4ac8663524da1d4cd8de756542",
+    "fox_2019_spinoff": "febbac2d9427555cd82803eb3795b64540656621c2fdcaa87e0ac2c6962f9c30",
+    "bed_bath_2023": "a7eb1d10a1f9469af411f45f5061343395fa87519a161a9220b5ad57a9ae1c86"
+  },
+  "collected_candle_rows": 23747,
+  "additional_observed_boundary_candles": 1,
+  "data_http_attempts": 46,
+  "unique_symbol_action_queries": 21,
+  "unique_provider_events": 249,
+  "provider_categories": {
+    "cash_dividends": 239,
+    "forward_splits": 1,
+    "cash_mergers": 2,
+    "name_changes": 4,
+    "reverse_splits": 3
+  },
+  "alias_streams": {
+    "ua_class_a": {
+      "rows": 2012,
+      "file": "ua_class_a_observed_alias_stream.csv",
+      "sha256": "f067c2d9db69393f409526e28262867195af69eb0ed3df9df2f836e3aadf66cf",
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "missing_observations_in_reviewed_interval": 0,
+      "ready_for_simulation": false
+    },
+    "ua_class_c": {
+      "rows": 1946,
+      "file": "ua_class_c_observed_alias_stream.csv",
+      "sha256": "e6ceb83f9dd7785f85c8db1e2c2e426651327e6a735bc75764cbbac5a69bc1a4",
+      "first_bar": "2016-04-08T04:00:00+00:00",
+      "missing_observations_in_reviewed_interval": 0,
+      "ready_for_simulation": false
+    },
+    "cbre": {
+      "rows": 2012,
+      "file": "cbre_observed_alias_stream.csv",
+      "sha256": "d767f4c727eefcc09a58cd5221b4c8c555a63ab152cfa66c4a0c11b9f45d6c20",
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "missing_observations_in_reviewed_interval": 0,
+      "ready_for_simulation": false
+    }
+  },
+  "resolved_observation_issues": {
+    "ua_class_c_pre_issuance_sessions": 66,
+    "cbre_real_boundary_candle_recovered": 1,
+    "bbby_nasdaq_suspension_boundary": "2023-05-03",
+    "bbby_otc_source_status": "genuine_empty_response_still_blocks_valuation"
+  },
+  "required_event_checks": [
+    {
+      "name": "ua_class_c_issuance",
+      "probe": "ua_class_a_old",
+      "date": "2016-04-08",
+      "categories": [
+        "stock_dividends",
+        "spin_offs"
+      ],
+      "source": "ua_distribution_announcement",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "ua_class_c_additional_distribution",
+      "probe": "ua_class_c_old",
+      "date": "2016-06-29",
+      "categories": [
+        "stock_dividends"
+      ],
+      "source": "under_armour_2016_10k",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "ua_rename",
+      "probe": "ua_class_a_new",
+      "date": "2016-12-07",
+      "categories": [
+        "name_changes"
+      ],
+      "source": "under_armour_2016_announcement",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "cbre_rename",
+      "probe": "cbre_new",
+      "date": "2018-03-19",
+      "categories": [
+        "name_changes"
+      ],
+      "source": "cbre_2018_announcement",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "wfm_cash_merger",
+      "probe": "whole_foods",
+      "date": "2017-08-28",
+      "categories": [
+        "cash_mergers"
+      ],
+      "source": "whole_foods_2017",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "aetna_mixed_merger",
+      "probe": "aetna",
+      "date": "2018-11-28",
+      "categories": [
+        "stock_and_cash_mergers"
+      ],
+      "source": "aetna_2018",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "level3_mixed_merger",
+      "probe": "level3",
+      "date": "2017-11-01",
+      "categories": [
+        "stock_and_cash_mergers"
+      ],
+      "source": "level3_2017",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "alcoa_distribution",
+      "probe": "alcoa_original",
+      "date": "2016-11-01",
+      "categories": [
+        "spin_offs"
+      ],
+      "source": "alcoa_2016_completion",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "arconic_2020_distribution",
+      "probe": "arconic_original",
+      "date": "2020-04-01",
+      "categories": [
+        "spin_offs"
+      ],
+      "source": "arconic_2020_completion",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "fox_distribution",
+      "probe": "fox_original_a",
+      "date": "2019-03-19",
+      "categories": [
+        "spin_offs"
+      ],
+      "source": "fox_2019_spinoff",
+      "provider_matching_ids": [],
+      "provider_event_present": false,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    },
+    {
+      "name": "activision_cash_merger",
+      "probe": "activision",
+      "date": "2023-10-13",
+      "categories": [
+        "cash_mergers"
+      ],
+      "source": "activision_2023_sec",
+      "provider_matching_ids": [
+        "eca55553-3794-4802-9a86-5541ffc6aeb9"
+      ],
+      "provider_event_present": true,
+      "primary_evidence_preserved": true,
+      "execution_ready": false
+    }
+  ],
+  "publication_reviews": [
+    {
+      "event": "ua_class_a_and_c_rename",
+      "evidence_source": "under_armour_2016_announcement",
+      "publication_date": "2016-11-28",
+      "effective_date": "2016-12-07",
+      "date_source": "dated_issuer_release",
+      "conservative_known_at": "2016-11-30T14:30:00+00:00",
+      "known_by_effective_open_under_convention": true,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    },
+    {
+      "event": "cbre_rename",
+      "evidence_source": "cbre_index",
+      "publication_date": "2018-03-08",
+      "effective_date": "2018-03-19",
+      "date_source": "SEC_index",
+      "conservative_known_at": "2018-03-12T13:30:00+00:00",
+      "known_by_effective_open_under_convention": true,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    },
+    {
+      "event": "bbby_nasdaq_suspension",
+      "evidence_source": "bbby_notice_final",
+      "publication_date": "2023-04-25",
+      "effective_date": "2023-05-03",
+      "date_source": "dated_issuer_filing_text",
+      "conservative_known_at": "2023-04-27T13:30:00+00:00",
+      "known_by_effective_open_under_convention": true,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    },
+    {
+      "event": "wfm_cash_merger",
+      "evidence_source": "wfm_index",
+      "publication_date": "2017-08-28",
+      "effective_date": "2017-08-28",
+      "date_source": "SEC_index",
+      "conservative_known_at": "2017-08-30T13:30:00+00:00",
+      "known_by_effective_open_under_convention": false,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    },
+    {
+      "event": "aetna_mixed_merger",
+      "evidence_source": "aetna_index",
+      "publication_date": "2018-11-28",
+      "effective_date": "2018-11-28",
+      "date_source": "SEC_index",
+      "conservative_known_at": "2018-11-30T14:30:00+00:00",
+      "known_by_effective_open_under_convention": false,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    },
+    {
+      "event": "fox_distribution",
+      "evidence_source": "fox_index",
+      "publication_date": "2019-03-19",
+      "effective_date": "2019-03-19",
+      "date_source": "SEC_index",
+      "conservative_known_at": "2019-03-21T13:30:00+00:00",
+      "known_by_effective_open_under_convention": false,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    },
+    {
+      "event": "bbby_equity_cancellation",
+      "evidence_source": "bbby_index",
+      "publication_date": "2023-09-29",
+      "effective_date": "2023-09-29",
+      "date_source": "SEC_index",
+      "conservative_known_at": "2023-10-02T13:30:00+00:00",
+      "known_by_effective_open_under_convention": false,
+      "exact_historical_release_time_verified": false,
+      "cash_availability_verified": false
+    }
+  ],
+  "required_events_missing_from_provider": 10,
+  "quarantined_event_references": 77,
+  "new_purchases_usd": 0,
+  "subscription_changes": 0,
+  "account_requests": 0,
+  "orders": 0,
+  "offline_review_http_requests": 0,
+  "performance_scored": false,
+  "ready_for_broad_backtest": false,
+  "remaining_blockers": [
+    "Primary-confirmed events omitted from API; empty responses do not certify event-free histories.",
+    "UA class distributions, Alcoa/Arconic and Fox distributions require supported share/claim accounting or explicitly reviewed warmup boundaries.",
+    "Mixed cash/stock acquisitions and fractional claims lack an audited adapter.",
+    "WFM/ATVI cash rights need explicit conversion/payment/valuation conventions; payable date is not broker cash availability.",
+    "BBBY OTC quotes and suspension-to-cancellation valuation remain unsupported; no stale mark or assumed early zero.",
+    "Dividend publication and payment evidence require review over the full requested period.",
+    "A representative 24-interval collection is not complete coverage of all 506 retained stocks."
+  ],
+  "evidence_directory": "data/reports/free_collection_review_v1",
+  "evidence_report_sha256": "b1a47d350738ceb838ca27bd50ed0ab61559312b0254e9f3bba97668d67a39db",
+  "unit_tests_run_for_this_increment": false,
+  "raspberry_pi_execution_verified": false
+}

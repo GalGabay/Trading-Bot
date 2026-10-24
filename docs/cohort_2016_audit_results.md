@@ -2,6 +2,12 @@
 
 Updated 2026-10-24. **New purchases: $0. Broker requests: 0. Orders: 0.**
 
+**Subsequent step:** The [free historical collection and event review](free_collection_results.md)
+has run under existing access: 23,748 observed raw candles, 249 provider events,
+46 historical-data GETs, no account queries, orders or purchases. It resolves
+specific alias/lifecycle observation gaps and documents missing event evidence.
+The zero-request statement above describes this earlier offline audit only.
+
 ## First: what the earlier $9.69 meant
 
 The earlier Apple figure was **simulated dividend income in an offline

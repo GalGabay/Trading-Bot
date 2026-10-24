@@ -72,6 +72,14 @@ the broader basket. The audit is offline, uses no credentials and submits no
 orders. Source acquisition used free public downloads; new purchases and new
 broker/account requests were zero. Historical simulation dollar amounts,
 including the earlier $9.69 dividend example, are not charges or account money.
+The [free collection/event review](docs/free_collection_results.md) has now
+collected 23,748 raw daily observations across representative ticker periods,
+including one recovered vendor-label boundary candle, and inventoried 249
+provider events. Reviewed Under Armour/CBRE alias streams retain actual OHLCV.
+Ten independently required events are absent from the queried action responses;
+terminal claims, share distributions/mergers and OTC valuation remain blockers
+before broader strategy scoring. Collection used 46 historical-data GETs under
+existing access, with $0 in purchases, no subscription changes and no orders.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

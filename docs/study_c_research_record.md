@@ -1,5 +1,13 @@
 # Study C: daily rule-only research record
 
+**Most recent engineering follow-up:** The [free collection/event review](free_collection_results.md)
+has saved 23,748 raw observations and 249 provider event records across
+representative cases. It resolves specific observed alias boundaries and
+exposes ten required events missing from the API inventory. Claim/share
+distribution accounting and full cohort evidence remain due before broader
+strategy scoring. No returns were optimized, no orders placed, and no paid
+data or subscription change purchased.
+
 **Latest free-source audit:** [2016 cohort mapping and coverage](cohort_2016_audit_results.md)
 identifies dated tickers for all 506 retained holdings, records ten event cases,
 and checks 33 cached daily-price files. Complete raw/action-aware data remain
