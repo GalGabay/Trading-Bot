@@ -58,6 +58,13 @@ $10,000. The smaller account's pessimistic, estimated-liquidation CAGR was
 the candidate as a reference and keep the final holdout reserved; any next
 alternative study needs a separately defined finite scope before evaluation.
 
+The [holding-time/capital-reuse proposal](holding_period_study_proposal.md)
+now defines that next finite scope: unchanged control, a 30-session maximum,
+and a 30-session review with a 60-session hard maximum. It explicitly measures
+whether holding age actually blocks qualifying entries, since the prior
+account already held mostly cash. This is a proposal for review; no such
+strategy has been implemented or scored. The focused audit tests have passed.
+
 ## The short answer: four matched strategy studies
 
 Start with **two timeframes** and **two versions of the same strategy**. That

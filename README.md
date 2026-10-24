@@ -39,6 +39,11 @@ The [completed goal-fit audit](docs/study_c_goal_fit_results.md) ran twelve
 unchanged-strategy replays. The $10,000 account earned about 1.36% annually
 over 2017-2023 after pessimistic costs and estimated final exits, failing the
 6% hurdle. The candidate remains a reference; 2024-2025 stay reserved.
+The [holding-time study proposal](docs/holding_period_study_proposal.md)
+defines control, 30-session maximum, and 30-session review/60-session maximum
+arms for review. It has not been run. Forty-one new audit tests pass, and
+all twelve saved audit cases retain identical calculations after input checks
+were tightened.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

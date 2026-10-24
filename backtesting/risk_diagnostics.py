@@ -9,9 +9,14 @@ overstates possible excursions. It is not an observed intraday equity path.
 from __future__ import annotations
 
 from collections import defaultdict
-from math import isclose
+from math import isclose, isfinite
+from numbers import Real
 
 import pandas as pd
+
+
+def _finite_number(value):
+    return isinstance(value, Real) and not isinstance(value, bool) and isfinite(value)
 
 
 def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
@@ -39,12 +44,15 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
         day = pd.Timestamp(fill["timestamp"])
         if day not in allowed_dates or fill["symbol"] not in prices:
             raise ValueError("Fill lies outside declared dates or instruments")
-        if fill["side"] not in {"BUY", "SELL"} or fill["quantity"] <= 0 or int(fill["quantity"]) != fill["quantity"]:
+        if fill["side"] not in {"BUY", "SELL"} or not _finite_number(fill["quantity"]) or fill["quantity"] <= 0 or int(fill["quantity"]) != fill["quantity"]:
             raise ValueError("Invalid fill side or quantity")
-        if fill["fill_price"] <= 0 or fill["commission"] < 0:
+        if not _finite_number(fill["fill_price"]) or not _finite_number(fill["commission"]) or fill["fill_price"] <= 0 or fill["commission"] < 0:
             raise ValueError("Invalid fill price or commission")
         grouped[day].append(fill)
-    cash = float(case["costs"]["initial_cash"])
+    initial_cash = case["costs"]["initial_cash"]
+    if not _finite_number(initial_cash) or initial_cash <= 0:
+        raise ValueError("Initial cash must be finite and positive")
+    cash = float(initial_cash)
     positions = {}
     upper_peak = cash
     close_peak = cash
@@ -75,6 +83,13 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
         if any(day not in prices[symbol].index for symbol in needed):
             raise ValueError("Missing session prices for a held/traded instrument")
         bars = {symbol: prices[symbol].loc[day] for symbol in needed}
+        for symbol, bar in bars.items():
+            values = [bar[name] for name in ("open", "high", "low", "close")]
+            if not all(_finite_number(value) and value > 0 for value in values):
+                raise ValueError(f"{symbol}: OHLC prices must be finite and positive")
+            open_, high, low, close = values
+            if low > min(open_, close) or high < max(open_, close) or low > high:
+                raise ValueError(f"{symbol}: impossible OHLC relationships")
 
         def mark_open():
             return cash + sum(quantity * float(bars[symbol]["open"]) for symbol, quantity in positions.items())

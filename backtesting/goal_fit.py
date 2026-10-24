@@ -43,7 +43,9 @@ def frozen_source_path(name):
     for index, part in enumerate(parts):
         if part in {"backtesting", "app"}:
             candidate = Path(*parts[index:])
-            if candidate.is_file():
+            if ".." in candidate.parts or candidate.suffix != ".py":
+                continue
+            if candidate.is_file() and candidate.resolve().is_relative_to(Path(part).resolve()):
                 return candidate
     raise ValueError(f"Cannot resolve frozen repository source: {name}")
 
@@ -57,14 +59,14 @@ def load_policy(path):
     if policy["reserved_start"] != "2024-01-01" or policy["drawdown_basis"] != "running_account_equity_peak":
         raise ValueError("Unexpected holdout boundary or drawdown convention")
     for key in ("annual_return_cagr_minimum", "drawdown_rejection_level", "drawdown_review_level", "daily_loss_rejection_level"):
-        if isinstance(policy[key], bool) or not isfinite(policy[key]) or not 0 < policy[key] < 1:
+        if isinstance(policy[key], bool) or not isinstance(policy[key], (int, float)) or not isfinite(policy[key]) or not 0 < policy[key] < 1:
             raise ValueError(f"Invalid research fraction: {key}")
     if not policy["drawdown_review_level"] < policy["drawdown_rejection_level"]:
         raise ValueError("Review drawdown must be below the rejection level")
     for key in ("minimum_completed_trades", "minimum_instruments"):
         if type(policy[key]) is not int or policy[key] < 1:
             raise ValueError(f"Invalid evidence floor: {key}")
-    if isinstance(policy["minimum_profit_factor"], bool) or not isfinite(policy["minimum_profit_factor"]) or policy["minimum_profit_factor"] <= 1:
+    if isinstance(policy["minimum_profit_factor"], bool) or not isinstance(policy["minimum_profit_factor"], (int, float)) or not isfinite(policy["minimum_profit_factor"]) or policy["minimum_profit_factor"] <= 1:
         raise ValueError("Profit factor threshold must be finite and greater than one")
     if policy["audit_account_sizes"] != [100000, 10000]:
         raise ValueError("Account sizes differ from the registered audit")

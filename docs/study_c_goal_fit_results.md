@@ -244,10 +244,10 @@ Individual account/window files retain complete cases, fills, equity,
 envelope rows, checks, attribution, and benchmarks. The final environment
 was Python 3.12.3, NumPy 2.5.3, pandas 2.3.3, alpaca-py 0.10.0.
 
-Verification in this task consisted of the twelve authorized replays, six
+Verification in the original audit consisted of the twelve authorized replays, six
 exact original-reference comparisons, and all twelve complete ledger
-reconciliations. Unit tests were not added or run in this task; focused
-boundary/failure tests for these new reporting helpers remain future work.
+reconciliations. Unit tests were not added or run at that point; the follow-up
+below records their subsequent completion.
 No Pi execution, actual cash-yield validation, or intraday data acquisition
 was performed. Present-day survivor selection, adjusted historical prices,
 repeated development use, and execution assumptions remain limitations.
@@ -256,6 +256,33 @@ The first complete audit at `data/reports/study_c_goal_fit/` was followed
 by a final replay after improving legacy Windows-path resolution for Pi
 portability. Strategy parameters and acceptance criteria were unchanged.
 The final artifact path above supersedes that first run.
+
+### Subsequent focused verification and proposal
+
+The next authorized work added **41 focused audit tests** in
+`tests/test_goal_fit.py` and `tests/test_risk_diagnostics.py`.
+**115 focused/related tests passed**. The full suite ran **250 tests: 248
+passed and two errored**, both existing optional ML cases importing missing
+`scikit-learn`. No final test assertion failed.
+
+The tests exposed defensive-validation gaps: malformed numeric policy
+settings raised unclear type errors, legacy source paths could resolve
+outside the intended code folders, and the standalone envelope helper did
+not reject some nonfinite/impossible OHLC prices. The fixes reject these
+inputs while retaining the original calculation for valid inputs.
+
+Every risk envelope, goal decision, and attribution result in all twelve
+saved audit cases was recomputed with the stricter helpers and matched
+**exactly**. No new strategy simulation was needed, and the original JSON
+report and its original source hashes were preserved. The separate local
+verification record is `data/reports/study_c_goal_fit_helper_verification.json`.
+Its hashes identify the new reporting code. No 2024-2025 prices were read,
+paper settings changed, orders placed, or packages installed.
+
+The owner's suggestion about old holdings is now a concrete
+[holding-time/capital-reuse study proposal](holding_period_study_proposal.md).
+It defines three fixed arms, causal session counting, evidence requirements,
+and a finite replay budget. The study has not been implemented or evaluated.
 
 ## What comes next and who does it
 
@@ -269,8 +296,9 @@ windows, cost/risk checks, and stopping rule before evaluation. Record
 the accumulated trial history. Retiring this strategy line must remain a
 valid outcome; no candidate in this project has established that it meets
 all the approved criteria. This audit does not authorize a new strategy search.
-Focused unit tests for the new audit helpers' threshold and failure cases
-are also recommended before extending this reporting workflow.
+The focused audit tests above are complete. The concrete
+[holding-period study proposal](holding_period_study_proposal.md) is ready
+for review before implementation/evaluation, following the approved Step C.
 
 **Owner:** Nothing more needs configuring to finish this audit. Review this
 result, then decide whether the separate next study is worthwhile once its
