@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "spending_budget_usd": 0,
+  "network_mode": "public_source_acquisition_only; analysis_runner_is_offline",
+  "source_root": "data/reports/historical_mapping_sources_v1",
+  "asof": "2016-09-30",
+  "original_membership_review": "docs/historical_membership_source_review.json",
+  "crosswalk_review": "docs/research_data/spy_2016_name_crosswalk_review.json",
+  "sources": {
+    "dell_2016": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000119312516706567/d238698d8k.htm",
+      "path": "dell_2016.html",
+      "sha256": "10de67bca989d5aa206c19eec8ab2a1f529da9bb60eded2fe4eb94be362e5f5c",
+      "bytes": 141215,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/1571996/000119312516706567/d238698d8k.htm"
+    },
+    "fox_2016": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1308161/000156459016023961/fox-10k_20160630.htm",
+      "path": "fox_2016.html",
+      "sha256": "6f38a88ec0bfb6ddc5946864e59d4562ded88835133a770618b875b7cba78eae",
+      "bytes": 10234592,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/1308161/000156459016023961/fox-10k_20160630.htm"
+    },
+    "under_armour_2016_announcement": {
+      "url": "https://www.prnewswire.com/news-releases/under-armour-announces-change-of-class-a-and-class-c-ticker-symbols-300368197.html",
+      "path": "under_armour_2016_announcement.html",
+      "sha256": "5cd65b962186b85a49c930c0f98cbd592995c34216cc9803e1dac0ca916440a4",
+      "bytes": 207393,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.prnewswire.com/news-releases/under-armour-announces-change-of-class-a-and-class-c-ticker-symbols-300368197.html"
+    },
+    "cbre_2018_announcement": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1138118/000156459018004821/cbg-ex991_6.htm",
+      "path": "cbre_2018_announcement.html",
+      "sha256": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+      "bytes": 94585,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/1138118/000156459018004821/cbg-ex991_6.htm"
+    },
+    "aetna_2018": {
+      "url": "https://www.sec.gov/Archives/edgar/data/64803/000119312518336591/d650950d8k.htm",
+      "path": "aetna_2018.html",
+      "sha256": "24b23468d292fc841e0f5ef6db2230367216458464e2424fd663fa764108b537",
+      "bytes": 31172,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/64803/000119312518336591/d650950d8k.htm"
+    },
+    "level3_2017": {
+      "url": "https://ir.lumen.com/news/news-details/2017/CenturyLink-completes-acquisition-of-Level-3/default.aspx",
+      "path": "level3_2017.html",
+      "sha256": "9783b47f4a498776e43b8a4fcd9051924b456d846bf04d85891a7d057f37bb63",
+      "bytes": 121645,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://ir.lumen.com/news/news-details/2017/CenturyLink-completes-acquisition-of-Level-3/default.aspx"
+    },
+    "whole_foods_2017": {
+      "url": "https://www.sec.gov/Archives/edgar/data/865436/000114420417045261/v474128_8k.htm",
+      "path": "whole_foods_2017.html",
+      "sha256": "b38ebe712eddcf171986a768bed531254c086d5499d65d66145c3324dc7baca8",
+      "bytes": 54622,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/865436/000114420417045261/v474128_8k.htm"
+    },
+    "bed_bath_2023": {
+      "url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523247428/d579010d8k.htm",
+      "path": "bed_bath_2023.html",
+      "sha256": "a7eb1d10a1f9469af411f45f5061343395fa87519a161a9220b5ad57a9ae1c86",
+      "bytes": 37815,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/886158/000119312523247428/d579010d8k.htm"
+    },
+    "alcoa_2016_completion": {
+      "url": "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm",
+      "path": "alcoa_2016_completion.html",
+      "sha256": "694f442ac651e18ad4b78e3f73516c0e3a7b7a4ac8663524da1d4cd8de756542",
+      "bytes": 168739,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm"
+    },
+    "alcoa_2016_announcement": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1675149/000119312516735860/d48339dex991.htm",
+      "path": "alcoa_2016_announcement.html",
+      "sha256": "44cc34de8af899c7eba55fb0e6d031274c780113b2a80ccc641c60aa9e841333",
+      "bytes": 3739326,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/1675149/000119312516735860/d48339dex991.htm"
+    },
+    "fox_2019_spinoff": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1308161/000119312519079034/d721340d8k.htm",
+      "path": "fox_2019_spinoff.html",
+      "sha256": "febbac2d9427555cd82803eb3795b64540656621c2fdcaa87e0ac2c6962f9c30",
+      "bytes": 23126,
+      "content_type": "text/html",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/1308161/000119312519079034/d721340d8k.htm"
+    },
+    "ivv_20160930": {
+      "url": "https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239726&userType=individual&asOfDate=20160930&component=holdings",
+      "final_url": "https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239726&userType=individual&asOfDate=20160930&component=holdings",
+      "content_type": "text/csv",
+      "path": "ivv_20160930_new_api.csv",
+      "sha256": "613d9f459fa33c7223778a4a8c67585191efb71e1f139c2b4dec039a0fc4d37c",
+      "bytes": 82741
+    }
+  },
+  "unavailable_source_attempts": {
+    "harman_2017": {
+      "url": "https://news.samsung.com/us/samsung-electronics-completes-acquisition-of-harman/",
+      "exception": "TimeoutError",
+      "http_status": null
+    },
+    "activision_2023": {
+      "url": "https://investor.activision.com/static-files/6439fa79-7018-4f4d-adf5-192a2cd2007b",
+      "exception": "HTTPError",
+      "http_status": 403
+    },
+    "monsanto_2018": {
+      "url": "https://www.bayer.com/media/en-us/bayer-closes-monsanto-acquisition/",
+      "exception": "HTTPError",
+      "http_status": 403
+    },
+    "harman_2017_sec": {
+      "url": "https://www.sec.gov/Archives/edgar/data/800459/000119312517078203/d349687d8k.htm",
+      "exception": "HTTPError",
+      "http_status": 404
+    }
+  },
+  "rejected_legacy_download": {
+    "metadata_file": "downloads.json",
+    "reason": "Legacy CSV URL returned HTML despite CSV content-type; not accepted as historical holdings."
+  },
+  "cached_audit_root": "data/reports/broad_universe_audit_final",
+  "cached_audit_report_sha256": "944865a94658628b19ef93f377dc6bfc4904e14c004abae506a8fca65c5f6063",
+  "price_pilot_review": "docs/aapl_raw_action_pilot_review.json",
+  "class_identity_checks": [
+    {
+      "source_id": "fox_2016",
+      "terms": [
+        "Class A Common Stock",
+        "Class B Common Stock",
+        "FOXA",
+        "FOX"
+      ]
+    },
+    {
+      "source_id": "dell_2016",
+      "terms": [
+        "DVMT",
+        "tracking stock",
+        "September 7, 2016"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "membership_key": "SPY-2016-09-30-0454",
+      "kind": "alias_change",
+      "effective_date": "2016-12-07",
+      "source_id": "under_armour_2016_announcement",
+      "required_source_terms": [
+        "December 7, 2016",
+        "UAA",
+        "Class A"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "from_symbol": "UA",
+      "to_symbol": "UAA",
+      "impact": "Class A changed ticker; UA was reused for Class C. Never concatenate UA through this boundary."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0455",
+      "kind": "alias_change",
+      "effective_date": "2016-12-07",
+      "source_id": "under_armour_2016_announcement",
+      "required_source_terms": [
+        "December 7, 2016",
+        "Class C",
+        "UA.C"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "from_symbol": "UA.C",
+      "to_symbol": "UA",
+      "vendor_old_symbol": "UAC/C",
+      "impact": "Class C identity stays separate from Class A; issuer and fund spell old symbol differently."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0088",
+      "kind": "alias_change",
+      "effective_date": "2018-03-19",
+      "source_id": "cbre_2018_announcement",
+      "required_source_terms": [
+        "March 19",
+        "CBG",
+        "CBRE"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "from_symbol": "CBG",
+      "to_symbol": "CBRE",
+      "impact": "Same Class A security, dated rename; exact historical availability still to review."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0018",
+      "kind": "spinoff_and_alias_reuse",
+      "effective_date": "2016-11-01",
+      "source_id": "alcoa_2016_completion",
+      "required_source_terms": [
+        "November 1, 2016",
+        "Arconic",
+        "one share",
+        "three shares"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "from_symbol": "AA",
+      "to_symbol": "ARNC",
+      "successor_symbol": "AA",
+      "impact": "Original Alcoa becomes Arconic and distributes a distinct new Alcoa security; AA history is not one continuous identity. Warmup also crosses a reverse split."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0449",
+      "kind": "spinoff_and_alias_reuse",
+      "effective_date": "2019-03-19",
+      "source_id": "fox_2019_spinoff",
+      "required_source_terms": [
+        "March 19, 2019",
+        "TFCFA",
+        "TFCF"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "from_symbol": "FOXA",
+      "to_symbol": "TFCFA",
+      "impact": "Original 21CF distributes new Fox; original becomes TFCF/TFCFA before Disney transaction. Reused FOX/FOXA are different securities; complex distribution/merger adapter required."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0450",
+      "kind": "spinoff_and_alias_reuse",
+      "effective_date": "2019-03-19",
+      "source_id": "fox_2019_spinoff",
+      "required_source_terms": [
+        "March 19, 2019",
+        "TFCFA",
+        "TFCF"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "from_symbol": "FOX",
+      "to_symbol": "TFCF",
+      "impact": "Original 21CF distributes new Fox; original becomes TFCF/TFCFA before Disney transaction. Reused FOX/FOXA are different securities; complex distribution/merger adapter required."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0010",
+      "kind": "cash_and_stock_merger",
+      "effective_date": "2018-11-28",
+      "source_id": "aetna_2018",
+      "required_source_terms": [
+        "November 28, 2018",
+        "0.8378",
+        "$145.00"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "cash_per_share": 145,
+      "successor_symbol": "CVS",
+      "successor_shares_per_share": 0.8378,
+      "impact": "Cash plus successor stock and fractional cash: not supported by terminal-cash-only adapter."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0279",
+      "kind": "cash_and_stock_merger",
+      "effective_date": "2017-11-01",
+      "source_id": "level3_2017",
+      "required_source_terms": [
+        "November 1, 2017",
+        "1.4286",
+        "$26.50"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "cash_per_share": 26.5,
+      "successor_symbol": "CTL",
+      "successor_shares_per_share": 1.4286,
+      "impact": "Cash plus stock; cannot treat as a cash sale or drop the disappeared ticker."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0492",
+      "kind": "cash_merger",
+      "effective_date": "2017-08-28",
+      "source_id": "whole_foods_2017",
+      "required_source_terms": [
+        "August 28, 2017",
+        "$42.00"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "cash_per_share": 42,
+      "impact": "Amount and closing corroborated; actual cash availability/knowledge bound still needed for executable terminal event."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0066",
+      "kind": "equity_cancellation",
+      "effective_date": "2023-09-29",
+      "source_id": "bed_bath_2023",
+      "required_source_terms": [
+        "September 29, 2023",
+        "cancelled",
+        "without consideration"
+      ],
+      "historical_known_at": null,
+      "cash_available_session": null,
+      "ready_for_simulation": false,
+      "cash_per_share": 0,
+      "impact": "Original equity canceled without value; quote suspension/OTC life and knowledge timeline still need review. Not inferred from missing bars."
+    }
+  ]
+}

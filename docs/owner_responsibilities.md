@@ -14,10 +14,13 @@ starting a paper trial, review the
 
 ## Where we are now
 
-**Latest engineering step:** The [raw-price pilot and historical-stock lists](raw_action_pilot_and_historical_baskets.md)
-use existing/public sources with $0 in new purchases. My next work is mapping
-the 506 retained 2016 holdings to historical securities/tickers and auditing
-their raw prices, company actions and terminal outcomes. You need not gather
+**Latest engineering step:** The [2016 cohort source/coverage audit](cohort_2016_audit_results.md)
+identifies dated tickers for all 506 retained holdings, records ten event cases
+and checks 33 saved daily-price files. It uses free public/local sources with
+$0 in purchases and zero new broker/account requests. The earlier $9.69
+dividend figure was virtual simulation income, not a charge or real payment.
+My next work is a bounded no-purchase acquisition plan and remaining event/
+adapter evidence, starting with a representative small set. You need not gather
 stocks, edit the risk JSON, add a card or install ML dependencies for that work.
 Before scoring a materially revised research scope, I will present it for
 review. Installing the optional ML requirements on Windows can clear the two

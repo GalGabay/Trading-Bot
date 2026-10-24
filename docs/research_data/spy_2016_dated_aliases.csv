@@ -1,0 +1,507 @@
+membership_key,source_name,instrument_id,issuer_ticker,issuer_name,mapping_method,security_type,raw_cached_sessions,adjusted_candidate_sessions,reviewed_event_count,ready_for_simulation
+SPY-2016-09-30-0001,3M Co.,COHORT-2016-0001,MMM,3M CO,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0002,Abbott Laboratories,COHORT-2016-0002,ABT,ABBOTT LABORATORIES,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0003,"AbbVie, Inc.",COHORT-2016-0003,ABBV,ABBVIE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0004,Accenture PLC Class A,COHORT-2016-0004,ACN,ACCENTURE PLC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0005,"Activision Blizzard, Inc.",COHORT-2016-0005,ATVI,ACTIVISION BLIZZARD INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,1959,0,False
+SPY-2016-09-30-0006,"Acuity Brands, Inc.",COHORT-2016-0006,AYI,ACUITY BRANDS INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0007,"Adobe Systems, Inc.(a)",COHORT-2016-0007,ADBE,ADOBE SYSTEM INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0008,"Advance Auto Parts, Inc.",COHORT-2016-0008,AAP,ADVANCE AUTO PARTS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0009,AES Corp.,COHORT-2016-0009,AES,AES CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0010,"Aetna, Inc.",COHORT-2016-0010,AET,AETNA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0011,"Affiliated Managers Group, Inc.(a)",COHORT-2016-0011,AMG,AFFILIATED MANAGERS GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0012,"Aflac, Inc.",COHORT-2016-0012,AFL,AFLAC INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0013,"Agilent Technologies, Inc.",COHORT-2016-0013,A,AGILENT TECHNOLOGIES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0014,"Air Products & Chemicals, Inc.",COHORT-2016-0014,APD,AIR PRODUCTS AND CHEMICALS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0015,"Akamai Technologies, Inc.(a)",COHORT-2016-0015,AKAM,AKAMAI TECHNOLOGIES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0016,"Alaska Air Group, Inc.",COHORT-2016-0016,ALK,ALASKA AIR GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0017,Albemarle Corp.,COHORT-2016-0017,ALB,ALBEMARLE CORP.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0018,"Alcoa, Inc.",COHORT-2016-0018,AA,ALCOA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0019,"Alexion Pharmaceuticals, Inc.(a)",COHORT-2016-0019,ALXN,ALEXION PHARMACEUTICALS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0020,Allegion PLC,COHORT-2016-0020,ALLE,ALLEGION PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0021,Allergan PLC(a),COHORT-2016-0021,AGN,ALLERGAN,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0022,Alliance Data Systems Corp.(a),COHORT-2016-0022,ADS,ALLIANCE DATA SYSTEMS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0023,Alliant Energy Corp.,COHORT-2016-0023,LNT,ALLIANT ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0024,Allstate Corp.,COHORT-2016-0024,ALL,ALLSTATE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0025,"Alphabet, Inc. Class A(a)",COHORT-2016-0025,GOOGL,ALPHABET INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0026,"Alphabet, Inc. Class C(a)",COHORT-2016-0026,GOOG,ALPHABET INC CLASS C,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0027,"Altria Group, Inc.",COHORT-2016-0027,MO,ALTRIA GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0028,"Amazon.com, Inc.(a)",COHORT-2016-0028,AMZN,AMAZON COM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0029,Ameren Corp.,COHORT-2016-0029,AEE,AMEREN CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0030,"American Airlines Group, Inc.",COHORT-2016-0030,AAL,AMERICAN AIRLINES GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0031,"American Electric Power Co., Inc.",COHORT-2016-0031,AEP,AMERICAN ELECTRIC POWER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0032,American Express Co.,COHORT-2016-0032,AXP,AMERICAN EXPRESS,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0033,"American International Group, Inc.",COHORT-2016-0033,AIG,AMERICAN INTERNATIONAL GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0034,American Tower Corp. REIT,COHORT-2016-0034,AMT,AMERICAN TOWER REIT CORP,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0035,"American Water Works Co., Inc.",COHORT-2016-0035,AWK,AMERICAN WATER WORKS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0036,"Ameriprise Financial, Inc.",COHORT-2016-0036,AMP,AMERIPRISE FINANCE INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0037,AmerisourceBergen Corp.,COHORT-2016-0037,ABC,AMERISOURCEBERGEN CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0038,"AMETEK, Inc.",COHORT-2016-0038,AME,AMETEK INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0039,"Amgen, Inc.",COHORT-2016-0039,AMGN,AMGEN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0040,Amphenol Corp. Class A,COHORT-2016-0040,APH,AMPHENOL CORP CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0041,Anadarko Petroleum Corp.,COHORT-2016-0041,APC,ANADARKO PETROLEUM CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0042,"Analog Devices, Inc.",COHORT-2016-0042,ADI,ANALOG DEVICES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0043,"Anthem, Inc.",COHORT-2016-0043,ANTM,ANTHEM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0044,Aon PLC,COHORT-2016-0044,AON,AON PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0045,Apache Corp.,COHORT-2016-0045,APA,APACHE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0046,Apartment Investment & Management Co. Class A REIT,COHORT-2016-0046,AIV,APARTMENT INVESTMENT & MANAGEMENT,explicit_reviewed_name_pair,reit_common,0,0,0,False
+SPY-2016-09-30-0047,"Apple, Inc.",COHORT-2016-0047,AAPL,APPLE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,505,2012,0,False
+SPY-2016-09-30-0048,"Applied Materials, Inc.",COHORT-2016-0048,AMAT,APPLIED MATERIAL INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0049,Archer-Daniels-Midland Co.,COHORT-2016-0049,ADM,ARCHER DANIELS MIDLAND,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0050,Arthur J Gallagher & Co.,COHORT-2016-0050,AJG,ARTHUR J GALLAGHER,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0051,"Assurant, Inc.",COHORT-2016-0051,AIZ,ASSURANT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0052,"AT&T, Inc.",COHORT-2016-0052,T,AT&T INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0053,"Autodesk, Inc.(a)",COHORT-2016-0053,ADSK,AUTODESK INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0054,"Automatic Data Processing, Inc.",COHORT-2016-0054,ADP,AUTOMATIC DATA PROCESSING INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0055,"AutoNation, Inc.(a)",COHORT-2016-0055,AN,AUTONATION INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0056,"AutoZone, Inc.(a)",COHORT-2016-0056,AZO,AUTOZONE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0057,"AvalonBay Communities, Inc. REIT",COHORT-2016-0057,AVB,AVALONBAY COMMUNITIES REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0058,Avery Dennison Corp.,COHORT-2016-0058,AVY,AVERY DENNISON CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0059,"Baker Hughes, Inc.",COHORT-2016-0059,BHI,BAKER HUGHES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0060,Ball Corp.,COHORT-2016-0060,BLL,BALL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0061,Bank of America Corp.,COHORT-2016-0061,BAC,BANK OF AMERICA CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0062,Bank of New York Mellon Corp.,COHORT-2016-0062,BK,BANK OF NEW YORK MELLON CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0063,"Baxter International, Inc.",COHORT-2016-0063,BAX,BAXTER INTERNATIONAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0064,BB&T Corp.,COHORT-2016-0064,BBT,BB AND T CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0065,Becton Dickinson and Co.,COHORT-2016-0065,BDX,BECTON DICKINSON,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0066,"Bed Bath & Beyond, Inc.",COHORT-2016-0066,BBBY,BED BATH AND BEYOND INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0067,"Berkshire Hathaway, Inc.Class B(a)",COHORT-2016-0067,BRKB,BERKSHIRE HATHAWAY INC CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0068,"Best Buy Co., Inc.",COHORT-2016-0068,BBY,BEST BUY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0069,"Biogen, Inc.(a)",COHORT-2016-0069,BIIB,BIOGEN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0070,"BlackRock, Inc.",COHORT-2016-0070,BLK,BLACKROCK INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0071,Boeing Co.,COHORT-2016-0071,BA,BOEING,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0072,"BorgWarner, Inc.",COHORT-2016-0072,BWA,BORGWARNER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0073,"Boston Properties, Inc. REIT",COHORT-2016-0073,BXP,BOSTON PROPERTIES REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0074,Boston Scientific Corp.(a),COHORT-2016-0074,BSX,BOSTON SCIENTIFIC CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0075,Bristol-Myers Squibb Co.,COHORT-2016-0075,BMY,BRISTOL MYERS SQUIBB,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0076,"Broadcom, Ltd.",COHORT-2016-0076,AVGO,BROADCOM LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0077,Brown-Forman Corp. Class B,COHORT-2016-0077,BF.B,BROWN FORMAN CORP CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0078,"C.H. Robinson Worldwide, Inc.",COHORT-2016-0078,CHRW,CH ROBINSON WORLDWIDE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0079,"C.R. Bard, Inc.",COHORT-2016-0079,BCR,C R BARD INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0080,"CA, Inc.",COHORT-2016-0080,CA,CA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0081,Cabot Oil & Gas Corp.,COHORT-2016-0081,COG,CABOT OIL & GAS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0082,Campbell Soup Co.,COHORT-2016-0082,CPB,CAMPBELL SOUP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0083,Capital One Financial Corp.,COHORT-2016-0083,COF,CAPITAL ONE FINANCIAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0084,"Cardinal Health, Inc.",COHORT-2016-0084,CAH,CARDINAL HEALTH INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0085,"CarMax, Inc.(a)",COHORT-2016-0085,KMX,CARMAX INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0086,Carnival Corp.,COHORT-2016-0086,CCL,CARNIVAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0087,"Caterpillar, Inc.",COHORT-2016-0087,CAT,CATERPILLAR INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0088,"CBRE Group, Inc. Class AREIT(a)",COHORT-2016-0088,CBG,CBRE GROUP INC,explicit_reviewed_name_pair,reit_common,0,0,1,False
+SPY-2016-09-30-0089,CBS Corp. Class B,COHORT-2016-0089,CBS,CBS CORP- CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0090,Celgene Corp.(a),COHORT-2016-0090,CELG,CELGENE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0091,Centene Corp.(a),COHORT-2016-0091,CNC,CENTENE CORP.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0092,"CenterPoint Energy, Inc.",COHORT-2016-0092,CNP,CENTERPOINT ENERGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0093,"CenturyLink, Inc.",COHORT-2016-0093,CTL,CENTURYLINK INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0094,Cerner Corp.(a),COHORT-2016-0094,CERN,CERNER CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0095,"CF Industries Holdings, Inc.",COHORT-2016-0095,CF,CF INDUSTRIES HOLDINGS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0096,Charles Schwab Corp.,COHORT-2016-0096,SCHW,CHARLES SCHWAB CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0097,"Charter Communications, Inc.Class A(a)",COHORT-2016-0097,CHTR,CHARTER COMMUNICATIONS INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0098,Chesapeake Energy Corp.(a),COHORT-2016-0098,CHK,CHESAPEAKE ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0099,Chevron Corp.,COHORT-2016-0099,CVX,CHEVRON CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0100,"Chipotle Mexican Grill, Inc.(a)",COHORT-2016-0100,CMG,CHIPOTLE MEXICAN GRILL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0101,"Chubb, Ltd.",COHORT-2016-0101,CB,CHUBB LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0102,"Church & Dwight Co., Inc.",COHORT-2016-0102,CHD,CHURCH AND DWIGHT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0103,Cigna Corp.,COHORT-2016-0103,CI,CIGNA CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0104,Cimarex Energy Co.,COHORT-2016-0104,XEC,CIMAREX ENERGY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0105,Cincinnati Financial Corp.,COHORT-2016-0105,CINF,CINCINNATI FINANCIAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0106,Cintas Corp.,COHORT-2016-0106,CTAS,CINTAS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0107,"Cisco Systems, Inc.",COHORT-2016-0107,CSCO,CISCO SYSTEMS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0108,"Citigroup, Inc.",COHORT-2016-0108,C,CITIGROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0109,"Citizens Financial Group, Inc.",COHORT-2016-0109,CFG,CITIZENS FINANCIAL GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0110,"Citrix Systems, Inc.(a)",COHORT-2016-0110,CTXS,CITRIX SYSTEMS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0111,Clorox Co.,COHORT-2016-0111,CLX,CLOROX,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0112,"CME Group, Inc.",COHORT-2016-0112,CME,CME GROUP INC CLASS A,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0113,CMS Energy Corp.,COHORT-2016-0113,CMS,CMS ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0114,"Coach, Inc.",COHORT-2016-0114,COH,COACH INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0115,Coca-Cola Co.,COHORT-2016-0115,KO,COCA-COLA,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0116,Cognizant Technology Solutions Corp. Class A(a),COHORT-2016-0116,CTSH,COGNIZANT TECHNOLOGY SOLUTIONS COR,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0117,Colgate-Palmolive Co.,COHORT-2016-0117,CL,COLGATE-PALMOLIVE,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0118,Comcast Corp. Class A,COHORT-2016-0118,CMCSA,COMCAST A CORP,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0119,"Comerica, Inc.",COHORT-2016-0119,CMA,COMERICA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0120,"ConAgra Foods, Inc.",COHORT-2016-0120,CAG,CONAGRA FOODS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0121,"Concho Resources, Inc.(a)",COHORT-2016-0121,CXO,CONCHO RESOURCES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0122,ConocoPhillips,COHORT-2016-0122,COP,CONOCOPHILLIPS,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0123,"Consolidated Edison, Inc.",COHORT-2016-0123,ED,CONSOLIDATED EDISON INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0124,"Constellation Brands, Inc.Class A",COHORT-2016-0124,STZ,CONSTELLATION BRANDS INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0125,"Cooper Cos., Inc.",COHORT-2016-0125,COO,COOPER COS.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0126,"Corning, Inc.",COHORT-2016-0126,GLW,CORNING INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0127,Costco Wholesale Corp.,COHORT-2016-0127,COST,COSTCO WHOLESALE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0128,"Coty, Inc. Class A(a)",COHORT-2016-0128,COTY,COTY INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0129,Crown Castle International Corp. REIT,COHORT-2016-0129,CCI,CROWN CASTLE INTERNATIONAL REIT CO,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0130,"CSRA, Inc.",COHORT-2016-0130,CSRA,CSRA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0131,CSX Corp.,COHORT-2016-0131,CSX,CSX CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0132,"Cummins, Inc.",COHORT-2016-0132,CMI,CUMMINS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0133,CVS Health Corp.,COHORT-2016-0133,CVS,CVS HEALTH CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0134,"D.R. Horton, Inc.",COHORT-2016-0134,DHI,D R HORTON INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0135,Danaher Corp.,COHORT-2016-0135,DHR,DANAHER CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0136,"Darden Restaurants, Inc.",COHORT-2016-0136,DRI,DARDEN RESTAURANTS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0137,"DaVita, Inc.(a)",COHORT-2016-0137,DVA,DAVITA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0138,Deere & Co.,COHORT-2016-0138,DE,DEERE & CO,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0139,"Dell Technologies, Inc. — VMware, Inc. Class V(a)",COHORT-2016-0139,DVMT,"Dell Technologies, Inc. — VMware, Inc. Class V(a)",independent_SEC_identity_review,tracking_common_stock,0,0,0,False
+SPY-2016-09-30-0140,Delphi Automotive PLC,COHORT-2016-0140,DLPH,DELPHI AUTOMOTIVE PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0141,"Delta Air Lines, Inc.",COHORT-2016-0141,DAL,DELTA AIR LINES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0142,"DENTSPLY SIRONA, Inc.",COHORT-2016-0142,XRAY,DENTSPLY SIRONA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0143,Devon Energy Corp.,COHORT-2016-0143,DVN,DEVON ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0144,"Digital Realty Trust, Inc. REIT",COHORT-2016-0144,DLR,DIGITAL REALTY TRUST REIT INC TRUS,explicit_reviewed_name_pair,reit_common,0,0,0,False
+SPY-2016-09-30-0145,Discover Financial Services,COHORT-2016-0145,DFS,DISCOVER FINANCIAL SERVICES,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0146,"Discovery Communications, Inc.Class A(a)",COHORT-2016-0146,DISCA,DISCOVERY COMMUNICATIONS-A,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0147,"Discovery Communications, Inc.Class C(a)",COHORT-2016-0147,DISCK,DISCOVERY COMMUNICATIONS-C,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0148,Dollar General Corp.,COHORT-2016-0148,DG,DOLLAR GENERAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0149,"Dollar Tree, Inc.(a)",COHORT-2016-0149,DLTR,DOLLAR TREE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0150,"Dominion Resources, Inc.",COHORT-2016-0150,D,DOMINION RESOURCES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0151,Dover Corp.,COHORT-2016-0151,DOV,DOVER CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0152,Dow Chemical Co.,COHORT-2016-0152,DOW,DOW CHEMICAL,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0153,"Dr. Pepper Snapple Group, Inc.",COHORT-2016-0153,DPS,DR PEPPER SNAPPLE GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0154,DTE Energy Co.,COHORT-2016-0154,DTE,DTE ENERGY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0155,Duke Energy Corp.,COHORT-2016-0155,DUK,DUKE ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0156,Dun & Bradstreet Corp.,COHORT-2016-0156,DNB,DUN & BRADSTREET CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0157,E*TRADE Financial Corp.(a),COHORT-2016-0157,ETFC,E*TRADE FINANCIAL CORP.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0158,E.I. du Pont de Nemours & Co.,COHORT-2016-0158,DD,E I DU PONT DE NEMOURS,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0159,Eastman Chemical Co.,COHORT-2016-0159,EMN,EASTMAN CHEMICAL,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0160,Eaton Corp. PLC,COHORT-2016-0160,ETN,EATON CORPORATION PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0161,"eBay, Inc.(a)",COHORT-2016-0161,EBAY,EBAY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0162,"Ecolab, Inc.",COHORT-2016-0162,ECL,ECOLAB INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0163,Edison International,COHORT-2016-0163,EIX,EDISON INTERNATIONAL,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0164,Edwards Lifesciences Corp.(a),COHORT-2016-0164,EW,EDWARDS LIFESCIENCES CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0165,"Electronic Arts, Inc.(a)",COHORT-2016-0165,EA,ELECTRONIC ARTS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0166,Eli Lilly & Co.,COHORT-2016-0166,LLY,ELI LILLY,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0167,Emerson Electric Co.,COHORT-2016-0167,EMR,EMERSON ELECTRIC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0168,Endo International PLC(a),COHORT-2016-0168,ENDP,ENDO INTERNATIONAL PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0169,Entergy Corp.,COHORT-2016-0169,ETR,ENTERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0170,"EOG Resources, Inc.",COHORT-2016-0170,EOG,EOG RESOURCES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0171,EQT Corp.,COHORT-2016-0171,EQT,EQT CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0172,"Equifax, Inc.",COHORT-2016-0172,EFX,EQUIFAX INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0173,"Equinix, Inc. REIT",COHORT-2016-0173,EQIX,EQUINIX REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0174,Equity Residential REIT,COHORT-2016-0174,EQR,EQUITY RESIDENTIAL REIT,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0175,"Essex Property Trust, Inc. REIT",COHORT-2016-0175,ESS,ESSEX PROPERTY TRUST REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0176,"Estee Lauder Cos., Inc.Class A",COHORT-2016-0176,EL,ESTEE LAUDER INC CLASS A,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0177,Eversource Energy,COHORT-2016-0177,ES,EVERSOURCE ENERGY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0178,Exelon Corp.,COHORT-2016-0178,EXC,EXELON CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0179,"Expedia, Inc.",COHORT-2016-0179,EXPE,EXPEDIA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0180,"Expeditors International of Washington, Inc.",COHORT-2016-0180,EXPD,EXPEDITORS INTERNATIONAL OF WASHIN,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0181,Express Scripts Holding Co.(a),COHORT-2016-0181,ESRX,EXPRESS SCRIPTS HOLDING CO,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0182,"Extra Space Storage, Inc. REIT",COHORT-2016-0182,EXR,EXTRA SPACE STORAGE INC.,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0183,Exxon Mobil Corp.,COHORT-2016-0183,XOM,EXXON MOBIL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0184,"F5 Networks, Inc.(a)",COHORT-2016-0184,FFIV,F5 NETWORKS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0185,"Facebook, Inc. Class A(a)",COHORT-2016-0185,FB,FACEBOOK CLASS A INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,1620,0,False
+SPY-2016-09-30-0186,Fastenal Co.,COHORT-2016-0186,FAST,FASTENAL,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0187,Federal Realty Investment Trust REIT,COHORT-2016-0187,FRT,FEDERAL REALTY INVESTMENT TRUST RE,explicit_reviewed_name_pair,reit_common,0,0,0,False
+SPY-2016-09-30-0188,FedEx Corp.,COHORT-2016-0188,FDX,FEDEX CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0189,"Fidelity National Information Services, Inc.",COHORT-2016-0189,FIS,FIDELITY NATIONAL INFORMATION SERV,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0190,Fifth Third Bancorp,COHORT-2016-0190,FITB,FIFTH THIRD BANCORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0191,"First Solar, Inc.(a)",COHORT-2016-0191,FSLR,FIRST SOLAR INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0192,FirstEnergy Corp.,COHORT-2016-0192,FE,FIRSTENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0193,"Fiserv, Inc.(a)",COHORT-2016-0193,FISV,FISERV INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0194,"FLIR Systems, Inc.",COHORT-2016-0194,FLIR,FLIR SYSTEMS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0195,Flowserve Corp.,COHORT-2016-0195,FLS,FLOWSERVE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0196,Fluor Corp.,COHORT-2016-0196,FLR,FLUOR CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0197,FMC Corp.,COHORT-2016-0197,FMC,FMC CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0198,"FMC Technologies, Inc.(a)",COHORT-2016-0198,FTI,FMC TECHNOLOGIES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0199,"Foot Locker, Inc.",COHORT-2016-0199,FL,FOOT LOCKER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0200,Ford Motor Co.,COHORT-2016-0200,F,F MOTOR,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0201,Fortive Corp.,COHORT-2016-0201,FTV,FORTIVE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0202,"Fortune Brands Home & Security, Inc.",COHORT-2016-0202,FBHS,FORTUNE BRANDS HOME & SECURITY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0203,"Franklin Resources, Inc.",COHORT-2016-0203,BEN,FRANKLIN RESOURCES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0204,"Freeport-McMoRan, Inc.",COHORT-2016-0204,FCX,FREEPORT MCMORAN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0205,Frontier Communications Corp.,COHORT-2016-0205,FTR,FRONTIER COMMUNICATIONS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0206,"Gap, Inc.",COHORT-2016-0206,GPS,GAP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0207,"Garmin, Ltd.",COHORT-2016-0207,GRMN,GARMIN LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0208,General Dynamics Corp.,COHORT-2016-0208,GD,GENERAL DYNAMICS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0209,General Electric Co.,COHORT-2016-0209,GE,GENERAL ELECTRIC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0210,"General Growth Properties, Inc. REIT",COHORT-2016-0210,GGP,GENERAL GROWTH PROPERTIES REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0211,"General Mills, Inc.",COHORT-2016-0211,GIS,GENERAL MILLS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0212,General Motors Co.,COHORT-2016-0212,GM,GENERAL MOTORS,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0213,Genuine Parts Co.,COHORT-2016-0213,GPC,GENUINE PARTS,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0214,"Gilead Sciences, Inc.",COHORT-2016-0214,GILD,GILEAD SCIENCES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0215,"Global Payments, Inc.",COHORT-2016-0215,GPN,GLOBAL PAYMENTS INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0216,"Goldman Sachs Group, Inc.",COHORT-2016-0216,GS,GOLDMAN SACHS GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0217,Goodyear Tire & Rubber Co.,COHORT-2016-0217,GT,GOODYEAR TIRE & RUBBER,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0218,"H&R Block, Inc.",COHORT-2016-0218,HRB,H&R BLOCK INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0219,Halliburton Co.,COHORT-2016-0219,HAL,HALLIBURTON,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0220,"Hanesbrands, Inc.",COHORT-2016-0220,HBI,HANESBRANDS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0221,"Harley-Davidson, Inc.",COHORT-2016-0221,HOG,HARLEY DAVIDSON INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0222,"Harman International Industries, Inc.",COHORT-2016-0222,HAR,HARMAN INTERNATIONAL INDUSTRIES IN,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0223,Harris Corp.,COHORT-2016-0223,HRS,HARRIS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0224,"Hartford Financial Services Group, Inc.",COHORT-2016-0224,HIG,HARTFORD FINANCIAL SERVICES GROUP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0225,"Hasbro, Inc.",COHORT-2016-0225,HAS,HASBRO INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0226,"HCA Holdings, Inc.(a)",COHORT-2016-0226,HCA,HCA HOLDINGS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0227,"HCP, Inc. REIT",COHORT-2016-0227,HCP,HCP REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0228,"Helmerich & Payne, Inc.",COHORT-2016-0228,HP,HELMERICH & PAYNE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0229,"Henry Schein, Inc.(a)",COHORT-2016-0229,HSIC,HENRY SCHEIN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0230,Hershey Co.,COHORT-2016-0230,HSY,HERSHEY FOODS,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0231,Hess Corp.,COHORT-2016-0231,HES,HESS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0232,Hewlett Packard Enterprise Co.,COHORT-2016-0232,HPE,HEWLETT PACKARD ENTERPRISE,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0233,"Hologic, Inc.(a)",COHORT-2016-0233,HOLX,HOLOGIC INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0234,"Home Depot, Inc.",COHORT-2016-0234,HD,HOME DEPOT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0235,"Honeywell International, Inc.",COHORT-2016-0235,HON,HONEYWELL INTERNATIONAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0236,Hormel Foods Corp.,COHORT-2016-0236,HRL,HORMEL FOODS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0237,"Host Hotels & Resorts, Inc. REIT",COHORT-2016-0237,HST,HOST HOTELS & RESORTS REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0238,"HP, Inc.",COHORT-2016-0238,HPQ,HP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0239,"Humana, Inc.",COHORT-2016-0239,HUM,HUMANA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0240,"Huntington Bancshares, Inc.",COHORT-2016-0240,HBAN,HUNTINGTON BANCSHARES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0241,"Illinois Tool Works, Inc.",COHORT-2016-0241,ITW,ILLINOIS TOOL INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0242,"Illumina, Inc.(a)",COHORT-2016-0242,ILMN,ILLUMINA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0243,Ingersoll-Rand PLC,COHORT-2016-0243,IR,INGERSOLL-RAND PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0244,Intel Corp.,COHORT-2016-0244,INTC,INTEL CORPORATION CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0245,"Intercontinental Exchange, Inc.(b)",COHORT-2016-0245,ICE,INTERCONTINENTAL EXCHANGE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0246,International Business Machines Corp.,COHORT-2016-0246,IBM,INTERNATIONAL BUSINESS MACHINES CO,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0247,"International Flavors & Fragrances, Inc.",COHORT-2016-0247,IFF,INTERNATIONAL FLAVORS & FRAGRANCES,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0248,International Paper Co.,COHORT-2016-0248,IP,INTERNATIONAL PAPER,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0249,"Interpublic Group of Cos., Inc.",COHORT-2016-0249,IPG,INTERPUBLIC GROUP OF COMPANIES INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0250,"Intuit, Inc.",COHORT-2016-0250,INTU,INTUIT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0251,"Intuitive Surgical, Inc.(a)",COHORT-2016-0251,ISRG,INTUITIVE SURGICAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0252,"Invesco, Ltd.",COHORT-2016-0252,IVZ,INVESCO LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0253,"Iron Mountain, Inc. REIT",COHORT-2016-0253,IRM,IRON MOUNTAIN INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0254,J.M. Smucker Co.,COHORT-2016-0254,SJM,JM SMUCKER,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0255,"Jacobs Engineering Group, Inc.(a)",COHORT-2016-0255,JEC,JACOBS ENGINEERING GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0256,"JB Hunt Transport Services, Inc.",COHORT-2016-0256,JBHT,JB HUNT TRANSPORT SERVICES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0257,Johnson & Johnson,COHORT-2016-0257,JNJ,JOHNSON & JOHNSON,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0258,Johnson Controls International PLC,COHORT-2016-0258,JCI,JOHNSON CONTROLS INTERNATIONAL PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0259,JPMorgan Chase & Co.,COHORT-2016-0259,JPM,JPMORGAN CHASE & CO,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0260,"Juniper Networks, Inc.",COHORT-2016-0260,JNPR,JUNIPER NETWORKS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0261,Kansas City Southern,COHORT-2016-0261,KSU,KANSAS CITY SOUTHERN,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0262,Kellogg Co.,COHORT-2016-0262,K,KELLOGG,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0263,KeyCorp,COHORT-2016-0263,KEY,KEYCORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0264,Kimberly-Clark Corp.,COHORT-2016-0264,KMB,KIMBERLY CLARK CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0265,Kimco Realty Corp. REIT,COHORT-2016-0265,KIM,KIMCO REALTY REIT CORP,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0266,"Kinder Morgan, Inc.",COHORT-2016-0266,KMI,KINDER MORGAN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0267,KLA-Tencor Corp.,COHORT-2016-0267,KLAC,KLA TENCOR CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0268,Kohl’s Corp.,COHORT-2016-0268,KSS,KOHLS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0269,Kraft Heinz Co.,COHORT-2016-0269,KHC,KRAFT HEINZ,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0270,Kroger Co.,COHORT-2016-0270,KR,KROGER,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0271,"L Brands, Inc.",COHORT-2016-0271,LB,L BRANDS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0272,"L-3 Communications Holdings, Inc.",COHORT-2016-0272,LLL,L-3 COMMUNICATIONS HOLDINGS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0273,Laboratory Corp. of America Holdings(a),COHORT-2016-0273,LH,LABORATORY CORPORATION OF AMERICA,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0274,Lam Research Corp.,COHORT-2016-0274,LRCX,LAM RESEARCH CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0275,"Legg Mason, Inc.",COHORT-2016-0275,LM,LEGG MASON INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0276,"Leggett & Platt, Inc.",COHORT-2016-0276,LEG,LEGGETT & PLATT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0277,Lennar Corp. Class A,COHORT-2016-0277,LEN,LENNAR A CORP,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0278,Leucadia National Corp.,COHORT-2016-0278,LUK,LEUCADIA NATIONAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0279,"Level 3 Communications, Inc.(a)",COHORT-2016-0279,LVLT,LEVEL COMMUNICATIONS INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0280,Lincoln National Corp.,COHORT-2016-0280,LNC,LINCOLN NATIONAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0281,Linear Technology Corp.,COHORT-2016-0281,LLTC,LINEAR TECHNOLOGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0282,LKQ Corp.(a),COHORT-2016-0282,LKQ,LKQ CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0283,Lockheed Martin Corp.,COHORT-2016-0283,LMT,LOCKHEED MARTIN CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0284,Loews Corp.,COHORT-2016-0284,L,LOEWS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0285,"Lowe’s Cos., Inc.",COHORT-2016-0285,LOW,LOWES COMPANIES INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0286,LyondellBasell Industries NVClass A,COHORT-2016-0286,LYB,LYONDELLBASELL INDUSTRIES NV CLASS,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0287,M&T Bank Corp.,COHORT-2016-0287,MTB,M&T BANK CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0288,Macerich Co. REIT,COHORT-2016-0288,MAC,MACERICH REIT,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0289,"Macy’s, Inc.",COHORT-2016-0289,M,MACYS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0290,Mallinckrodt PLC(a),COHORT-2016-0290,MNK,MALLINCKRODT PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0291,Marathon Oil Corp.,COHORT-2016-0291,MRO,MARATHON OIL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0292,Marathon Petroleum Corp.,COHORT-2016-0292,MPC,MARATHON PETROLEUM CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0293,"Marriott International, Inc.Class A",COHORT-2016-0293,MAR,MARRIOTT INTERNATIONAL INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0294,"Marsh & McLennan Cos., Inc.",COHORT-2016-0294,MMC,MARSH & MCLENNAN INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0295,"Martin Marietta Materials, Inc.",COHORT-2016-0295,MLM,MARTIN MARIETTA MATERIALS INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0296,Masco Corp.,COHORT-2016-0296,MAS,MASCO CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0297,"MasterCard, Inc. Class A",COHORT-2016-0297,MA,MASTERCARD INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0298,"Mattel, Inc.",COHORT-2016-0298,MAT,MATTEL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0299,"McCormick & Co., Inc.",COHORT-2016-0299,MKC,MCCORMICK & CO NON-VOTING INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0300,McDonald’s Corp.,COHORT-2016-0300,MCD,MCDONALDS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0301,McKesson Corp.,COHORT-2016-0301,MCK,MCKESSON CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0302,Mead Johnson Nutrition Co.,COHORT-2016-0302,MJN,MEAD JOHNSON NUTRITION,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0303,Medtronic PLC,COHORT-2016-0303,MDT,MEDTRONIC PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0304,"Merck & Co., Inc.",COHORT-2016-0304,MRK,MERCK & CO INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0305,"MetLife, Inc.",COHORT-2016-0305,MET,METLIFE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0306,"Mettler-Toledo International, Inc.(a)",COHORT-2016-0306,MTD,METTLER TOLEDO INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0307,"Michael Kors Holdings, Ltd.(a)",COHORT-2016-0307,KORS,MICHAEL KORS HOLDINGS LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0308,"Microchip Technology, Inc.",COHORT-2016-0308,MCHP,MICROCHIP TECHNOLOGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0309,"Micron Technology, Inc.(a)",COHORT-2016-0309,MU,MICRON TECHNOLOGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0310,Microsoft Corp.,COHORT-2016-0310,MSFT,MICROSOFT CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0311,"Mohawk Industries, Inc.(a)",COHORT-2016-0311,MHK,MOHAWK INDUSTRIES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0312,Molson Coors Brewing Co.Class B,COHORT-2016-0312,TAP,MOLSON COORS BREWING CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0313,"Mondelez International, Inc.Class A",COHORT-2016-0313,MDLZ,MONDELEZ INTERNATIONAL INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0314,Monsanto Co.,COHORT-2016-0314,MON,MONSANTO,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0315,Monster Beverage Corp.(a),COHORT-2016-0315,MNST,MONSTER BEVERAGE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0316,Moody’s Corp.,COHORT-2016-0316,MCO,MOODYS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0317,Morgan Stanley,COHORT-2016-0317,MS,MORGAN STANLEY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0318,Mosaic Co.,COHORT-2016-0318,MOS,MOSAIC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0319,"Motorola Solutions, Inc.",COHORT-2016-0319,MSI,MOTOROLA SOLUTIONS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0320,Murphy Oil Corp.,COHORT-2016-0320,MUR,MURPHY OIL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0321,Mylan NV(a),COHORT-2016-0321,MYL,MYLAN NV,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0322,"Nasdaq, Inc.",COHORT-2016-0322,NDAQ,NASDAQ INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0323,"National Oilwell Varco, Inc.",COHORT-2016-0323,NOV,NATIONAL OILWELL VARCO INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0324,Navient Corp.,COHORT-2016-0324,NAVI,NAVIENT CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0325,"NetApp, Inc.",COHORT-2016-0325,NTAP,NETAPP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0326,"Netflix, Inc.(a)",COHORT-2016-0326,NFLX,NETFLIX INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0327,"Newell Brands, Inc.",COHORT-2016-0327,NWL,NEWELL BRANDS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0328,Newfield Exploration Co.(a),COHORT-2016-0328,NFX,NEWFIELD EXPLORATION,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0329,Newmont Mining Corp.,COHORT-2016-0329,NEM,NEWMONT MINING CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0330,News Corp. Class A,COHORT-2016-0330,NWSA,NEWS CORP CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0331,News Corp. Class B,COHORT-2016-0331,NWS,NEWS CORP CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0332,"NextEra Energy, Inc.",COHORT-2016-0332,NEE,NEXTERA ENERGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0333,Nielsen Holdings PLC,COHORT-2016-0333,NLSN,NIELSEN HOLDINGS PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0334,"NIKE, Inc. Class B",COHORT-2016-0334,NKE,NIKE INC CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0335,"NiSource, Inc.",COHORT-2016-0335,NI,NISOURCE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0336,"Noble Energy, Inc.",COHORT-2016-0336,NBL,NOBLE ENERGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0337,"Nordstrom, Inc.",COHORT-2016-0337,JWN,NORDSTROM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0338,Norfolk Southern Corp.,COHORT-2016-0338,NSC,NORFOLK SOUTHERN CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0339,Northern Trust Corp.,COHORT-2016-0339,NTRS,NORTHERN TRUST CORP TRUST,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0340,Northrop Grumman Corp.,COHORT-2016-0340,NOC,NORTHROP GRUMMAN CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0341,"NRG Energy, Inc.",COHORT-2016-0341,NRG,NRG ENERGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0342,Nucor Corp.,COHORT-2016-0342,NUE,NUCOR CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0343,NVIDIA Corp.,COHORT-2016-0343,NVDA,NVIDIA CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0344,"O’Reilly Automotive, Inc.(a)",COHORT-2016-0344,ORLY,OREILLY AUTOMOTIVE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0345,Occidental Petroleum Corp.,COHORT-2016-0345,OXY,OCCIDENTAL PETROLEUM CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0346,"Omnicom Group, Inc.",COHORT-2016-0346,OMC,OMNICOM GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0347,"ONEOK, Inc.",COHORT-2016-0347,OKE,ONEOK INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0348,Oracle Corp.,COHORT-2016-0348,ORCL,ORACLE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0349,"Owens-Illinois, Inc.(a)",COHORT-2016-0349,OI,OWENS ILLINOIS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0350,"PACCAR, Inc.",COHORT-2016-0350,PCAR,PACCAR INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0351,Parker-Hannifin Corp.,COHORT-2016-0351,PH,PARKER-HANNIFIN CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0352,"Patterson Cos., Inc.",COHORT-2016-0352,PDCO,PATTERSON COMPANIES INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0353,"Paychex, Inc.",COHORT-2016-0353,PAYX,PAYCHEX INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0354,"PayPal Holdings, Inc.(a)",COHORT-2016-0354,PYPL,PAYPAL HOLDINGS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0355,Pentair PLC,COHORT-2016-0355,PNR,PENTAIR,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0356,"People’s United Financial, Inc.",COHORT-2016-0356,PBCT,PEOPLES UNITED FINANCIAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0357,"PepsiCo, Inc.",COHORT-2016-0357,PEP,PEPSICO INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0358,"PerkinElmer, Inc.",COHORT-2016-0358,PKI,PERKINELMER INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0359,Perrigo Co. PLC,COHORT-2016-0359,PRGO,PERRIGO PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0360,"Pfizer, Inc.",COHORT-2016-0360,PFE,PFIZER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0361,PG&E Corp.,COHORT-2016-0361,PCG,PG&E CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0362,"Philip Morris International, Inc.",COHORT-2016-0362,PM,PHILIP MORRIS INTERNATIONAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0363,Phillips 66,COHORT-2016-0363,PSX,PHILLIPS 66,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0364,Pinnacle West Capital Corp.,COHORT-2016-0364,PNW,PINNACLE WEST CORP,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0365,Pioneer Natural Resources Co.,COHORT-2016-0365,PXD,PIONEER NATURAL RESOURCE,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0366,"Pitney Bowes, Inc.",COHORT-2016-0366,PBI,PITNEY BOWES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0367,"PNC Financial Services Group, Inc.",COHORT-2016-0367,PNC,PNC FINANCIAL SERVICES GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0368,"PPG Industries, Inc.",COHORT-2016-0368,PPG,PPG INDUSTRIES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0369,PPL Corp.,COHORT-2016-0369,PPL,PPL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0370,"Praxair, Inc.",COHORT-2016-0370,PX,PRAXAIR INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0371,"Priceline Group, Inc.(a)",COHORT-2016-0371,PCLN,PRICELINE GROUP INC/THE,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0372,"Principal Financial Group, Inc.",COHORT-2016-0372,PFG,PRINCIPAL FINANCIAL GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0373,Procter & Gamble Co.,COHORT-2016-0373,PG,PROCTER & GAMBLE,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0374,Progressive Corp.,COHORT-2016-0374,PGR,PROGRESSIVE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0375,"Prologis, Inc. REIT",COHORT-2016-0375,PLD,PROLOGIS REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0376,"Prudential Financial, Inc.",COHORT-2016-0376,PRU,PRUDENTIAL FINANCIAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0377,"Public Service Enterprise Group, Inc.",COHORT-2016-0377,PEG,PUBLIC SERVICE ENTERPRISE GROUP IN,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0378,Public Storage REIT,COHORT-2016-0378,PSA,PUBLIC STORAGE REIT,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0379,"PulteGroup, Inc.",COHORT-2016-0379,PHM,PULTEGROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0380,PVH Corp.,COHORT-2016-0380,PVH,PVH CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0381,"Qorvo, Inc.(a)",COHORT-2016-0381,QRVO,QORVO INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0382,"QUALCOMM, Inc.",COHORT-2016-0382,QCOM,QUALCOMM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0383,"Quanta Services, Inc.(a)",COHORT-2016-0383,PWR,QUANTA SERVICES INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0384,"Quest Diagnostics, Inc.",COHORT-2016-0384,DGX,QUEST DIAGNOSTICS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0385,Ralph Lauren Corp.,COHORT-2016-0385,RL,RALPH LAUREN CORPORATION,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0386,Range Resources Corp.,COHORT-2016-0386,RRC,RANGE RESOURCES CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0387,Raytheon Co.,COHORT-2016-0387,RTN,RAYTHEON,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0388,Realty Income Corp. REIT,COHORT-2016-0388,O,REALTY INCOME REIT CORP,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0389,"Red Hat, Inc.(a)",COHORT-2016-0389,RHT,RED HAT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0390,"Regeneron Pharmaceuticals, Inc.(a)",COHORT-2016-0390,REGN,REGENERON PHARMACEUTICALS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0391,Regions Financial Corp.,COHORT-2016-0391,RF,REGIONS FINANCIAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0392,"Republic Services, Inc.",COHORT-2016-0392,RSG,REPUBLIC SERVICES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0393,"Reynolds American, Inc.",COHORT-2016-0393,RAI,REYNOLDS AMERICAN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0394,"Robert Half International, Inc.",COHORT-2016-0394,RHI,ROBERT HALF,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0395,"Rockwell Automation, Inc.",COHORT-2016-0395,ROK,ROCKWELL AUTOMATION INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0396,"Rockwell Collins, Inc.",COHORT-2016-0396,COL,ROCKWELL COLLINS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0397,"Roper Technologies, Inc.",COHORT-2016-0397,ROP,ROPER TECHNOLOGIES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0398,"Ross Stores, Inc.",COHORT-2016-0398,ROST,ROSS STORES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0399,"Royal Caribbean Cruises, Ltd.",COHORT-2016-0399,RCL,ROYAL CARIBBEAN CRUISES LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0400,"Ryder System, Inc.",COHORT-2016-0400,R,RYDER SYSTEM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0401,"S&P Global, Inc.",COHORT-2016-0401,SPGI,S&P GLOBAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0402,"salesforce.com, Inc.(a)",COHORT-2016-0402,CRM,SALESFORCE.COM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0403,SCANA Corp.,COHORT-2016-0403,SCG,SCANA CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0404,"Schlumberger, Ltd.",COHORT-2016-0404,SLB,SCHLUMBERGER NV,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0405,"Scripps Networks Interactive, Inc. Class A",COHORT-2016-0405,SNI,SCRIPPS NETWORKS INTERACTIVE INC C,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0406,Seagate Technology PLC,COHORT-2016-0406,STX,SEAGATE TECHNOLOGY PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0407,Sealed Air Corp.,COHORT-2016-0407,SEE,SEALED AIR CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0408,Sempra Energy,COHORT-2016-0408,SRE,SEMPRA ENERGY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0409,Sherwin-Williams Co.,COHORT-2016-0409,SHW,SHERWIN WILLIAMS,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0410,"Signet Jewelers, Ltd.",COHORT-2016-0410,SIG,SIGNET JEWELERS LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0411,"Simon Property Group, Inc. REIT",COHORT-2016-0411,SPG,SIMON PROPERTY GROUP REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0412,"Skyworks Solutions, Inc.",COHORT-2016-0412,SWKS,SKYWORKS SOLUTIONS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0413,SL Green Realty Corp. REIT,COHORT-2016-0413,SLG,SL GREEN REALTY REIT CORP,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0414,"Snap-on, Inc.",COHORT-2016-0414,SNA,SNAP-ON INC.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0415,Southern Co.,COHORT-2016-0415,SO,SOUTHERN,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0416,Southwest Airlines Co.,COHORT-2016-0416,LUV,SOUTHWEST AIRLINES,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0417,Southwestern Energy Co.(a),COHORT-2016-0417,SWN,SOUTHWESTERN ENERGY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0418,Spectra Energy Corp.,COHORT-2016-0418,SE,SPECTRA ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0419,"St. Jude Medical, Inc.",COHORT-2016-0419,STJ,ST JUDE MEDICAL INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0420,"Stanley Black & Decker, Inc.",COHORT-2016-0420,SWK,STANLEY BLACK & DECKER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0421,"Staples, Inc.",COHORT-2016-0421,SPLS,STAPLES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0422,Starbucks Corp.,COHORT-2016-0422,SBUX,STARBUCKS CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0423,State Street Corp.(c),COHORT-2016-0423,STT,STATE STREET CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0424,"Stericycle, Inc.(a)",COHORT-2016-0424,SRCL,STERICYCLE INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0425,Stryker Corp.,COHORT-2016-0425,SYK,STRYKER CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0426,"SunTrust Banks, Inc.",COHORT-2016-0426,STI,SUNTRUST BANKS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0427,Symantec Corp.,COHORT-2016-0427,SYMC,SYMANTEC CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0428,Synchrony Financial,COHORT-2016-0428,SYF,SYNCHRONY FINANCIAL,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0429,Sysco Corp.,COHORT-2016-0429,SYY,SYSCO CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0430,"T Rowe Price Group, Inc.",COHORT-2016-0430,TROW,T ROWE PRICE GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0431,Target Corp.,COHORT-2016-0431,TGT,TARGET CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0432,"TE Connectivity, Ltd.",COHORT-2016-0432,TEL,TE CONNECTIVITY LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0433,"TEGNA, Inc.",COHORT-2016-0433,TGNA,TEGNA INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0434,Teradata Corp.(a),COHORT-2016-0434,TDC,TERADATA CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0435,Tesoro Corp.,COHORT-2016-0435,TSO,TESORO CORP.,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0436,"Texas Instruments, Inc.",COHORT-2016-0436,TXN,TEXAS INSTRUMENTS INCORPORATED,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0437,"Textron, Inc.",COHORT-2016-0437,TXT,TEXTRON INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0438,"Thermo Fisher Scientific, Inc.",COHORT-2016-0438,TMO,THERMO FISHER SCIENTIFIC INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0439,Tiffany & Co.,COHORT-2016-0439,TIF,TIFFANY,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0440,"Time Warner, Inc.",COHORT-2016-0440,TWX,TIME WARNER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0441,"TJX Cos., Inc.",COHORT-2016-0441,TJX,TJX INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0442,Torchmark Corp.,COHORT-2016-0442,TMK,TORCHMARK CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0443,"Total System Services, Inc.",COHORT-2016-0443,TSS,TOTAL SYSTEM SERVICES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0444,Tractor Supply Co.,COHORT-2016-0444,TSCO,TRACTOR SUPPLY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0445,"TransDigm Group, Inc.(a)",COHORT-2016-0445,TDG,TRANSDIGM GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0446,"Transocean, Ltd.",COHORT-2016-0446,RIG,TRANSOCEAN LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0447,"Travelers Cos., Inc.",COHORT-2016-0447,TRV,TRAVELERS COMPANIES INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0448,"TripAdvisor, Inc.(a)",COHORT-2016-0448,TRIP,TRIPADVISOR INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0449,"Twenty-First Century Fox, Inc. Class A",COHORT-2016-0449,FOXA,TWENTY FIRST CENTURY FOX INC CLASS,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0450,"Twenty-First Century Fox, Inc. Class B",COHORT-2016-0450,FOX,TWENTY-FIRST CENTURY FOX INC CLASS,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0451,"Tyson Foods, Inc. Class A",COHORT-2016-0451,TSN,TYSON FOODS INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0452,"UDR, Inc. REIT",COHORT-2016-0452,UDR,UDR INC.,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0453,"Ulta Salon Cosmetics &Fragrance, Inc.(a)",COHORT-2016-0453,ULTA,ULTA SALON COSMETICS & FRAGRANCE I,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0454,"Under Armour, Inc. Class A(a)",COHORT-2016-0454,UA,UNDER ARMOUR A INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0455,"Under Armour, Inc. Class C(a)",COHORT-2016-0455,UAC/C,UNDER ARMOUR INC CLASS C,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0456,Union Pacific Corp.,COHORT-2016-0456,UNP,UNION PACIFIC CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0457,"United Continental Holdings, Inc.(a)",COHORT-2016-0457,UAL,UNITED CONTINENTAL HOLDINGS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0458,"United Parcel Service, Inc.Class B",COHORT-2016-0458,UPS,UNITED PARCEL SERVICE INC CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0459,"United Rentals, Inc.(a)",COHORT-2016-0459,URI,UNITED RENTALS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0460,United Technologies Corp.,COHORT-2016-0460,UTX,UNITED TECHNOLOGIES CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0461,"UnitedHealth Group, Inc.",COHORT-2016-0461,UNH,UNITEDHEALTH GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0462,"Universal Health Services, Inc.Class B",COHORT-2016-0462,UHS,UNIVERSAL HEALTH SERVICES INC CLAS,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0463,Unum Group,COHORT-2016-0463,UNM,UNUM GROUP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0464,"Urban Outfitters, Inc.(a)",COHORT-2016-0464,URBN,URBAN OUTFITTERS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0465,US Bancorp,COHORT-2016-0465,USB,US BANCORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0466,Valero Energy Corp.,COHORT-2016-0466,VLO,VALERO ENERGY CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0467,"Varian Medical Systems, Inc.(a)",COHORT-2016-0467,VAR,VARIAN MEDICAL SYSTEMS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0468,"Ventas, Inc. REIT",COHORT-2016-0468,VTR,VENTAS REIT INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0469,"VeriSign, Inc.(a)",COHORT-2016-0469,VRSN,VERISIGN INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0470,"Verisk Analytics, Inc.(a)",COHORT-2016-0470,VRSK,VERISK ANALYTICS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0471,"Verizon Communications, Inc.",COHORT-2016-0471,VZ,VERIZON COMMUNICATIONS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0472,"Vertex Pharmaceuticals, Inc.(a)",COHORT-2016-0472,VRTX,VERTEX PHARMACEUTICALS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0473,VF Corp.,COHORT-2016-0473,VFC,VF CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0474,"Viacom, Inc. Class B",COHORT-2016-0474,VIAB,VIACOM INC CLASS B,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0475,"Visa, Inc. Class A",COHORT-2016-0475,V,VISA INC CLASS A,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0476,Vornado Realty Trust REIT,COHORT-2016-0476,VNO,VORNADO REALTY TRUST REIT,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0477,Vulcan Materials Co.,COHORT-2016-0477,VMC,VULCAN MATERIALS,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0478,"W.W. Grainger, Inc.",COHORT-2016-0478,GWW,WW GRAINGER INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0479,"Wal-Mart Stores, Inc.",COHORT-2016-0479,WMT,WALMART STORES INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,2012,0,False
+SPY-2016-09-30-0480,"Walgreens Boots Alliance, Inc.",COHORT-2016-0480,WBA,WALGREEN BOOTS ALLIANCE,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0481,Walt Disney Co.,COHORT-2016-0481,DIS,WALT DISNEY,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0482,"Waste Management, Inc.",COHORT-2016-0482,WM,WASTE MANAGEMENT INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0483,Waters Corp.(a),COHORT-2016-0483,WAT,WATER CORP CORP,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0484,"WEC Energy Group, Inc.",COHORT-2016-0484,WEC,WEC ENERGY GROUP INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0485,Wells Fargo & Co.,COHORT-2016-0485,WFC,WELLS FARGO,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0486,"Welltower, Inc. REIT",COHORT-2016-0486,HCN,WELLTOWER INC,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0487,Western Digital Corp.,COHORT-2016-0487,WDC,WESTERN DIGITAL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0488,Western Union Co.,COHORT-2016-0488,WU,WESTERN UNION,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0489,WestRock Co.,COHORT-2016-0489,WRK,WESTROCK,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0490,Weyerhaeuser Co. REIT,COHORT-2016-0490,WY,WEYERHAEUSER REIT,unique_normalized_name_and_same_date_price,reit_common,0,0,0,False
+SPY-2016-09-30-0491,Whirlpool Corp.,COHORT-2016-0491,WHR,WHIRLPOOL CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0492,"Whole Foods Market, Inc.",COHORT-2016-0492,WFM,WHOLE FOODS MARKET INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,1,False
+SPY-2016-09-30-0493,"Williams Cos., Inc.",COHORT-2016-0493,WMB,WILLIAMS INC,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0494,Willis Towers Watson PLC,COHORT-2016-0494,WLTW,WILLIS TOWERS WATSON PLC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0495,Wyndham Worldwide Corp.,COHORT-2016-0495,WYN,WYNDHAM WORLDWIDE CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0496,"Wynn Resorts, Ltd.",COHORT-2016-0496,WYNN,WYNN RESORTS LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0497,"Xcel Energy, Inc.",COHORT-2016-0497,XEL,XCEL ENERGY INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0498,Xerox Corp.,COHORT-2016-0498,XRX,XEROX CORP,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0499,"Xilinx, Inc.",COHORT-2016-0499,XLNX,XILINX INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0500,"XL Group, Ltd.",COHORT-2016-0500,XL,XL GROUP LTD,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0501,"Xylem, Inc.",COHORT-2016-0501,XYL,XYLEM INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0502,"Yahoo!, Inc.(a)",COHORT-2016-0502,YHOO,YAHOO! INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0503,"Yum! Brands, Inc.",COHORT-2016-0503,YUM,YUM BRANDS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0504,"Zimmer Biomet Holdings, Inc.",COHORT-2016-0504,ZBH,ZIMMER BIOMET HOLDINGS INC,unique_normalized_name_and_same_date_price,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0505,Zions Bancorp,COHORT-2016-0505,ZION,ZIONS BANCORPORATION,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False
+SPY-2016-09-30-0506,"Zoetis, Inc.",COHORT-2016-0506,ZTS,ZOETIS INC CLASS A,explicit_reviewed_name_pair,common_stock_source_schedule,0,0,0,False

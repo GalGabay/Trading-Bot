@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "asof": "2016-09-30",
+  "purpose": "Explicit name/class review for same-date source crosswalk, not full-history identity certification",
+  "manual_pairs": [
+    {
+      "membership_key": "SPY-2016-09-30-0004",
+      "source_name": "Accenture PLC Class A",
+      "issuer_ticker": "ACN",
+      "issuer_name": "ACCENTURE PLC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0007",
+      "source_name": "Adobe Systems, Inc.(a)",
+      "issuer_ticker": "ADBE",
+      "issuer_name": "ADOBE SYSTEM INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0036",
+      "source_name": "Ameriprise Financial, Inc.",
+      "issuer_ticker": "AMP",
+      "issuer_name": "AMERIPRISE FINANCE INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0046",
+      "source_name": "Apartment Investment & Management Co. Class A REIT",
+      "issuer_ticker": "AIV",
+      "issuer_name": "APARTMENT INVESTMENT & MANAGEMENT",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0048",
+      "source_name": "Applied Materials, Inc.",
+      "issuer_ticker": "AMAT",
+      "issuer_name": "APPLIED MATERIAL INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0050",
+      "source_name": "Arthur J Gallagher & Co.",
+      "issuer_ticker": "AJG",
+      "issuer_name": "ARTHUR J GALLAGHER",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0065",
+      "source_name": "Becton Dickinson and Co.",
+      "issuer_ticker": "BDX",
+      "issuer_name": "BECTON DICKINSON",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0088",
+      "source_name": "CBRE Group, Inc. Class AREIT(a)",
+      "issuer_ticker": "CBG",
+      "issuer_name": "CBRE GROUP INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0112",
+      "source_name": "CME Group, Inc.",
+      "issuer_ticker": "CME",
+      "issuer_name": "CME GROUP INC CLASS A",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0116",
+      "source_name": "Cognizant Technology Solutions Corp. Class A(a)",
+      "issuer_ticker": "CTSH",
+      "issuer_name": "COGNIZANT TECHNOLOGY SOLUTIONS COR",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0118",
+      "source_name": "Comcast Corp. Class A",
+      "issuer_ticker": "CMCSA",
+      "issuer_name": "COMCAST A CORP",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0144",
+      "source_name": "Digital Realty Trust, Inc. REIT",
+      "issuer_ticker": "DLR",
+      "issuer_name": "DIGITAL REALTY TRUST REIT INC TRUS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0146",
+      "source_name": "Discovery Communications, Inc.Class A(a)",
+      "issuer_ticker": "DISCA",
+      "issuer_name": "DISCOVERY COMMUNICATIONS-A",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0147",
+      "source_name": "Discovery Communications, Inc.Class C(a)",
+      "issuer_ticker": "DISCK",
+      "issuer_name": "DISCOVERY COMMUNICATIONS-C",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0158",
+      "source_name": "E.I. du Pont de Nemours & Co.",
+      "issuer_ticker": "DD",
+      "issuer_name": "E I DU PONT DE NEMOURS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0166",
+      "source_name": "Eli Lilly & Co.",
+      "issuer_ticker": "LLY",
+      "issuer_name": "ELI LILLY",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0176",
+      "source_name": "Estee Lauder Cos., Inc.Class A",
+      "issuer_ticker": "EL",
+      "issuer_name": "ESTEE LAUDER INC CLASS A",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0180",
+      "source_name": "Expeditors International of Washington, Inc.",
+      "issuer_ticker": "EXPD",
+      "issuer_name": "EXPEDITORS INTERNATIONAL OF WASHIN",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0187",
+      "source_name": "Federal Realty Investment Trust REIT",
+      "issuer_ticker": "FRT",
+      "issuer_name": "FEDERAL REALTY INVESTMENT TRUST RE",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0189",
+      "source_name": "Fidelity National Information Services, Inc.",
+      "issuer_ticker": "FIS",
+      "issuer_name": "FIDELITY NATIONAL INFORMATION SERV",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0200",
+      "source_name": "Ford Motor Co.",
+      "issuer_ticker": "F",
+      "issuer_name": "F MOTOR",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0222",
+      "source_name": "Harman International Industries, Inc.",
+      "issuer_ticker": "HAR",
+      "issuer_name": "HARMAN INTERNATIONAL INDUSTRIES IN",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0230",
+      "source_name": "Hershey Co.",
+      "issuer_ticker": "HSY",
+      "issuer_name": "HERSHEY FOODS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0241",
+      "source_name": "Illinois Tool Works, Inc.",
+      "issuer_ticker": "ITW",
+      "issuer_name": "ILLINOIS TOOL INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0249",
+      "source_name": "Interpublic Group of Cos., Inc.",
+      "issuer_ticker": "IPG",
+      "issuer_name": "INTERPUBLIC GROUP OF COMPANIES INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0273",
+      "source_name": "Laboratory Corp. of America Holdings(a)",
+      "issuer_ticker": "LH",
+      "issuer_name": "LABORATORY CORPORATION OF AMERICA",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0277",
+      "source_name": "Lennar Corp. Class A",
+      "issuer_ticker": "LEN",
+      "issuer_name": "LENNAR A CORP",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0279",
+      "source_name": "Level 3 Communications, Inc.(a)",
+      "issuer_ticker": "LVLT",
+      "issuer_name": "LEVEL COMMUNICATIONS INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0285",
+      "source_name": "Lowe\u2019s Cos., Inc.",
+      "issuer_ticker": "LOW",
+      "issuer_name": "LOWES COMPANIES INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0286",
+      "source_name": "LyondellBasell Industries NVClass A",
+      "issuer_ticker": "LYB",
+      "issuer_name": "LYONDELLBASELL INDUSTRIES NV CLASS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0294",
+      "source_name": "Marsh & McLennan Cos., Inc.",
+      "issuer_ticker": "MMC",
+      "issuer_name": "MARSH & MCLENNAN INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0299",
+      "source_name": "McCormick & Co., Inc.",
+      "issuer_ticker": "MKC",
+      "issuer_name": "MCCORMICK & CO NON-VOTING INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0306",
+      "source_name": "Mettler-Toledo International, Inc.(a)",
+      "issuer_ticker": "MTD",
+      "issuer_name": "METTLER TOLEDO INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0339",
+      "source_name": "Northern Trust Corp.",
+      "issuer_ticker": "NTRS",
+      "issuer_name": "NORTHERN TRUST CORP TRUST",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0352",
+      "source_name": "Patterson Cos., Inc.",
+      "issuer_ticker": "PDCO",
+      "issuer_name": "PATTERSON COMPANIES INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0364",
+      "source_name": "Pinnacle West Capital Corp.",
+      "issuer_ticker": "PNW",
+      "issuer_name": "PINNACLE WEST CORP",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0365",
+      "source_name": "Pioneer Natural Resources Co.",
+      "issuer_ticker": "PXD",
+      "issuer_name": "PIONEER NATURAL RESOURCE",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0371",
+      "source_name": "Priceline Group, Inc.(a)",
+      "issuer_ticker": "PCLN",
+      "issuer_name": "PRICELINE GROUP INC/THE",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0377",
+      "source_name": "Public Service Enterprise Group, Inc.",
+      "issuer_ticker": "PEG",
+      "issuer_name": "PUBLIC SERVICE ENTERPRISE GROUP IN",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0394",
+      "source_name": "Robert Half International, Inc.",
+      "issuer_ticker": "RHI",
+      "issuer_name": "ROBERT HALF",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0404",
+      "source_name": "Schlumberger, Ltd.",
+      "issuer_ticker": "SLB",
+      "issuer_name": "SCHLUMBERGER NV",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0405",
+      "source_name": "Scripps Networks Interactive, Inc. Class A",
+      "issuer_ticker": "SNI",
+      "issuer_name": "SCRIPPS NETWORKS INTERACTIVE INC C",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0439",
+      "source_name": "Tiffany & Co.",
+      "issuer_ticker": "TIF",
+      "issuer_name": "TIFFANY",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0441",
+      "source_name": "TJX Cos., Inc.",
+      "issuer_ticker": "TJX",
+      "issuer_name": "TJX INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0447",
+      "source_name": "Travelers Cos., Inc.",
+      "issuer_ticker": "TRV",
+      "issuer_name": "TRAVELERS COMPANIES INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0449",
+      "source_name": "Twenty-First Century Fox, Inc. Class A",
+      "issuer_ticker": "FOXA",
+      "issuer_name": "TWENTY FIRST CENTURY FOX INC CLASS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0450",
+      "source_name": "Twenty-First Century Fox, Inc. Class B",
+      "issuer_ticker": "FOX",
+      "issuer_name": "TWENTY-FIRST CENTURY FOX INC CLASS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0453",
+      "source_name": "Ulta Salon Cosmetics &Fragrance, Inc.(a)",
+      "issuer_ticker": "ULTA",
+      "issuer_name": "ULTA SALON COSMETICS & FRAGRANCE I",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0454",
+      "source_name": "Under Armour, Inc. Class A(a)",
+      "issuer_ticker": "UA",
+      "issuer_name": "UNDER ARMOUR A INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0462",
+      "source_name": "Universal Health Services, Inc.Class B",
+      "issuer_ticker": "UHS",
+      "issuer_name": "UNIVERSAL HEALTH SERVICES INC CLAS",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0480",
+      "source_name": "Walgreens Boots Alliance, Inc.",
+      "issuer_ticker": "WBA",
+      "issuer_name": "WALGREEN BOOTS ALLIANCE",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0483",
+      "source_name": "Waters Corp.(a)",
+      "issuer_ticker": "WAT",
+      "issuer_name": "WATER CORP CORP",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0485",
+      "source_name": "Wells Fargo & Co.",
+      "issuer_ticker": "WFC",
+      "issuer_name": "WELLS FARGO",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0493",
+      "source_name": "Williams Cos., Inc.",
+      "issuer_ticker": "WMB",
+      "issuer_name": "WILLIAMS INC",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0505",
+      "source_name": "Zions Bancorp",
+      "issuer_ticker": "ZION",
+      "issuer_name": "ZIONS BANCORPORATION",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    },
+    {
+      "membership_key": "SPY-2016-09-30-0506",
+      "source_name": "Zoetis, Inc.",
+      "issuer_ticker": "ZTS",
+      "issuer_name": "ZOETIS INC CLASS A",
+      "reason": "Reviewed corresponding security names in same-date SPY/IVV holdings; class retained where specified. No fuzzy matching used."
+    }
+  ],
+  "extra_primary_identity": {
+    "membership_key": "SPY-2016-09-30-0139",
+    "issuer_ticker": "DVMT",
+    "security_type": "tracking_common_stock",
+    "source_id": "dell_2016",
+    "reason": "SPY holds Dell Class V tracking common stock; absent from IVV equity roster, retained as unsupported tracking class."
+  }
+}

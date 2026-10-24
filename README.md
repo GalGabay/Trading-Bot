@@ -59,12 +59,19 @@ adds dated IPO/ticker lifetimes and verified terminal cash events. Focused
 tests and [corporate-action accounting](docs/corporate_action_progress.md)
 cover splits and ordinary dividends, with 36 exact prior financial replays.
 The [raw-price pilot and historical-basket update](docs/raw_action_pilot_and_historical_baskets.md)
-adds a successful real AAPL accounting pilot, action-aware risk reconciliation,
+adds an offline accounting pilot using historical AAPL data, action-aware risk reconciliation,
 36 exact legacy daily-envelope comparisons, and public 2016/2020 holdings
 registers with 506/505 security rows. Historical ticker/identity, action and
 price coverage must still be audited before broader strategy scoring; fixed
 fund holdings are not a daily all-US-stock universe. Optional ML tests still
 require `scikit-learn`; installation instructions are in the update.
+The [2016 cohort mapping/data audit](docs/cohort_2016_audit_results.md) now
+identifies all 506 dated ticker aliases and records ten sourced event cases.
+It checked 33 saved daily-price files: none provides complete raw history for
+the broader basket. The audit is offline, uses no credentials and submits no
+orders. Source acquisition used free public downloads; new purchases and new
+broker/account requests were zero. Historical simulation dollar amounts,
+including the earlier $9.69 dividend example, are not charges or account money.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

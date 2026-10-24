@@ -1,9 +1,16 @@
 # Data costs and historical-stock support
 
 Updated 2026-10-24. **Current spending policy: $0 in new data purchases.**
-The owner is unsure about paying, so continue with existing access and public
+The owner explicitly requires no new charges, so continue with saved/free public
 sources. Do not subscribe, start a paid trial or upgrade an account to unblock
 research. Reconsider that policy only if the owner explicitly changes it.
+
+The [2016 cohort mapping/data audit](cohort_2016_audit_results.md) identifies
+dated tickers for all 506 retained holdings and records ten company-event
+cases. It audited 33 cached daily-price files without new price downloads,
+broker/account requests, orders, purchases or package installations. Its data
+analysis command is entirely offline. The earlier $9.69 Apple result was
+virtual dividend income in a simulation; it was not a fee or real payment.
 
 **Latest result:** The [real accounting pilot and public historical-basket work](raw_action_pilot_and_historical_baskets.md)
 adds action-aware risk diagnostics and 506/505-row historical source lists.

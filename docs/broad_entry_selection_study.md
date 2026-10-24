@@ -140,6 +140,16 @@ authorize paper activation.
 
 ## Execution status and responsibilities
 
+**Latest data audit:** The [2016 cohort audit](cohort_2016_audit_results.md)
+identifies dated tickers for all 506 retained source rows and records ten
+company-event cases, retaining failures and unsupported securities. Of 33
+saved daily-price files, only the prior Apple pilot supplies partial raw
+coverage; no retained row has complete raw 2016-2023 calendar observations.
+This is an inventory finding, not permission to fabricate post-delisting
+candles or substitute adjusted survivor histories. No strategy scoring has
+occurred. Source acquisition was free/public; the audit runs offline with
+zero new broker/account requests, purchases or orders.
+
 **Engineering update:** Initial [historical-universe support](historical_universe_format.md)
 now exists for dated listings/aliases and verified terminal cash. Existing
 Alpaca access also returned company-event records. The

@@ -2,6 +2,17 @@
 
 Updated 2026-10-24. New data purchases: **$0**. No orders placed.
 
+**Money clarification:** Every dollar amount in this pilot's account/dividend
+results is simulated. The $9.69 was virtual historical dividend income, not
+a charge or an actual payment to/from the owner's account. “Real data” refers
+only to historical observations. No account money was invested or moved.
+
+**Subsequent work:** The [2016 cohort identity/coverage audit](cohort_2016_audit_results.md)
+identifies dated tickers for all 506 retained rows, records ten company-event
+cases, and audits 33 saved daily-price files. It uses free public sources and
+local files, with zero new broker/account requests or purchases. Historical
+identity/event completeness and raw-price acquisition remain due.
+
 ## What this accomplishes
 
 1. A real-data accounting pilot checks one Apple investment across its 2020
@@ -80,7 +91,7 @@ at a modeled $297.32829 each. The August split converted them into twelve
 shares without a sale, profit, or artificial loss. All four dividends were
 credited once, totaling **$9.69**, with no outstanding year-end receivable.
 
-Ending marked equity was **$10,709.99**: $700.30 marked stock gain plus $9.69
+Ending **simulated** marked equity was **$10,709.99**: $700.30 marked stock gain plus $9.69
 dividends. The position remained open; no final sale or final exit cost was
 executed. This is one deliberately selected accounting fixture, with zero
 completed trades, and cannot approve a strategy under the owner's criteria.

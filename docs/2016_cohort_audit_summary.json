@@ -1,0 +1,94 @@
+{
+  "scope": "offline_dated_alias_and_saved_data_audit_not_strategy_performance",
+  "spending": {
+    "new_purchases_usd": 0,
+    "broker_requests": 0,
+    "account_requests": 0,
+    "network_requests_by_audit_runner": 0,
+    "orders_submitted": 0,
+    "source_acquisition": "Unauthenticated free public issuer/SEC GET downloads saved separately; no purchases or upgrades."
+  },
+  "review_sha256": "52d5b1d56217498a421d0e37b14e9b0ccda58d7913a4efc8cf4c788d1244e3db",
+  "source_review_sha256": "b653c49633cc77e7307071841fde17973b055452b1f3f570588d38486223e866",
+  "crosswalk_sha256": "8d18723667550c617e7dfdd9b14dcb7cf26df6d8d4f88c1d1295592d0765ebe9",
+  "roster_sha256": "00b6c45423a1cfcae65fcfa83df996734a68e687fdd9b6af90afcdf027f6a02e",
+  "source_sha256": {
+    "dell_2016": "10de67bca989d5aa206c19eec8ab2a1f529da9bb60eded2fe4eb94be362e5f5c",
+    "fox_2016": "6f38a88ec0bfb6ddc5946864e59d4562ded88835133a770618b875b7cba78eae",
+    "under_armour_2016_announcement": "5cd65b962186b85a49c930c0f98cbd592995c34216cc9803e1dac0ca916440a4",
+    "cbre_2018_announcement": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+    "aetna_2018": "24b23468d292fc841e0f5ef6db2230367216458464e2424fd663fa764108b537",
+    "level3_2017": "9783b47f4a498776e43b8a4fcd9051924b456d846bf04d85891a7d057f37bb63",
+    "whole_foods_2017": "b38ebe712eddcf171986a768bed531254c086d5499d65d66145c3324dc7baca8",
+    "bed_bath_2023": "a7eb1d10a1f9469af411f45f5061343395fa87519a161a9220b5ad57a9ae1c86",
+    "alcoa_2016_completion": "694f442ac651e18ad4b78e3f73516c0e3a7b7a4ac8663524da1d4cd8de756542",
+    "alcoa_2016_announcement": "44cc34de8af899c7eba55fb0e6d031274c780113b2a80ccc641c60aa9e841333",
+    "fox_2019_spinoff": "febbac2d9427555cd82803eb3795b64540656621c2fdcaa87e0ac2c6962f9c30",
+    "ivv_20160930": "613d9f459fa33c7223778a4a8c67585191efb71e1f139c2b4dec039a0fc4d37c"
+  },
+  "execution_sha256": {
+    "backtesting/cohort_audit.py": "508bc86515271d58a58e49aee20443efac0d93fb0ca05274dc068b46c2bff766",
+    "backtesting/raw_action_pilot.py": "68864e7c9e6a084b6fdad9fe503cee799594335e36413880209e11f98b17adb1",
+    "backtesting/historical_holdings.py": "02f907909211d81bd5c1ebd9cf339ad816de5e10f7abbb8aa61c997c9de74407",
+    "app/data/market_data.py": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb"
+  },
+  "snapshot": {
+    "fund": "iShares Core S&P 500 ETF",
+    "asof": "2016-09-30",
+    "equity_rows": 505,
+    "non_equity_rows_not_used_for_identity": {
+      "Cash": 1,
+      "Money Market": 1,
+      "Cash Collateral and Margins": 1,
+      "Futures": 1
+    },
+    "historical_publication_time_verified": false
+  },
+  "checks": {
+    "all_506_original_rows_retained": true,
+    "all_505_issuer_equities_accounted_for": true,
+    "dated_aliases_distinct": true,
+    "no_row_silently_execution_ready": true
+  },
+  "all_checks_passed": true,
+  "mapping_counts": {
+    "unique_normalized_name_and_same_date_price": 449,
+    "explicit_reviewed_name_pair": 56,
+    "independent_SEC_identity_review": 1
+  },
+  "event_counts": {
+    "alias_change": 3,
+    "spinoff_and_alias_reuse": 3,
+    "cash_and_stock_merger": 2,
+    "cash_merger": 1,
+    "equity_cancellation": 1
+  },
+  "coverage": {
+    "required_calendar_sessions": 2012,
+    "calendar_sha256": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7",
+    "cached_daily_files_checked": 33,
+    "skipped_manifest_ranges": [],
+    "cohort_rows_with_candidate_raw_observations": 1,
+    "cohort_rows_with_candidate_adjusted_observations": 14,
+    "cohort_rows_with_complete_raw_calendar_observations": 0,
+    "observations_certify_security_identity_or_event_completeness": false
+  },
+  "market_wide_ready": false,
+  "cohort_backtest_ready": false,
+  "performance_scored": false,
+  "holdout_prices_opened": false,
+  "limitations": [
+    "Snapshot aliases do not certify full dated alias history, permanent IDs, or original publication times.",
+    "Fund holdings publication timing is not inferred from holdings date; membership remains anchored to the SEC filing bound.",
+    "No event evidence means unknown coverage, not an event-free security.",
+    "Adjusted cached candles cannot substitute for a raw corporate-action-aware run.",
+    "Known spin-offs/share mergers/OTC life and actual terminal cash availability need further adapters/evidence.",
+    "Ticker reuse prevents automatic attachment of current/adjusted quote series to old securities."
+  ],
+  "local_full_evidence_directory": "data/reports/cohort_2016_audit_v3",
+  "cohort_csv": "docs/research_data/spy_2016_dated_aliases.csv",
+  "cohort_csv_sha256": "d558aba9ebbb8bb22250bffbca4afa9e0f34652c4c8e65588d157d553bfd175b",
+  "data_audit_report_sha256": "33c55c4219a03d4a5f6b4057635607d4cdc9dc9fe4c3a49a090e40015d46b0fc",
+  "unit_tests_run_for_this_increment": false,
+  "note": "Executed actual source/coverage audit; no unit test suite or strategy simulation executed in this increment."
+}

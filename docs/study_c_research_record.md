@@ -1,5 +1,12 @@
 # Study C: daily rule-only research record
 
+**Latest free-source audit:** [2016 cohort mapping and coverage](cohort_2016_audit_results.md)
+identifies dated tickers for all 506 retained holdings, records ten event cases,
+and checks 33 cached daily-price files. Complete raw/action-aware data remain
+unavailable locally, so the broader study is not yet scored. No new purchases,
+broker requests or orders occurred. The earlier $9.69 Apple figure was virtual
+dividend income in an offline simulation, not a fee or an actual payment.
+
 **Latest data-engineering follow-up:** The [raw-price/action pilot and historical-basket report](raw_action_pilot_and_historical_baskets.md)
 checks real split/dividend accounting, extends daily risk diagnostics, and
 extracts public historical holdings lists with 506/505 security rows. These

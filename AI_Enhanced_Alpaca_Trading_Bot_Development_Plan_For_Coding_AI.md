@@ -3730,3 +3730,48 @@ Unsupported events still require adapters. Owner risk edits, payment/card
 setup and manual stock collection are unnecessary for this data work. Paper
 activation remains separate; 2024-2025 prices remain reserved, new purchases
 remain $0, and Pi validation is still due.
+
+## No-charge historical cohort mapping and cache audit: 2026-10-24
+
+The owner explicitly requires no new data/service charges. Continue with
+saved files and free public sources; no subscriptions, paid trials, upgrades
+or purchases are authorized. The prior Apple pilot's $9.69 was **simulated
+dividend income**, not a fee, actual account payment or purchase. That pilot
+placed neither paper nor live orders and moved no account money.
+
+The [2016 cohort audit](docs/cohort_2016_audit_results.md) identifies dated
+tickers for all 506 retained source securities: 449 unique normalized-name
+matches, 56 explicit reviewed name/share-class pairs and one independent SEC
+identity review for Dell Class V tracking stock. All 505 equity rows in the
+free issuer's same-date IVV download are accounted for, with corresponding
+historical prices corroborating identity. Original cohort rows remain intact.
+These local IDs/one-date aliases are not permanent market identifiers or a
+complete 2016-2023 alias history; all execution-readiness flags remain false.
+
+Ten sourced event cases cover Under Armour and CBRE renames, original Alcoa
+and Fox spin-offs/ticker reuse, Aetna and Level 3 mixed cash/share mergers,
+Whole Foods' cash acquisition and original Bed Bath & Beyond's cancellation.
+Historical knowledge/payment bounds and unsupported event mechanics remain
+explicit gates. A missing event is unknown coverage, never an assertion that
+a company is event-free or that a disappeared holding is worthless.
+
+The offline command `python -m backtesting.cohort_audit --output data/reports/a_fresh_cohort_audit`
+checked 33 saved daily-price files against hashes and the actual 2,012-session
+2016-2023 calendar. One retained row has partial raw observations; fourteen
+have candidate adjusted observations. None has complete raw calendar coverage.
+Counts do not certify ticker continuity; genuine listing lifetimes/outcomes
+must explain intervals instead of filling missing or post-delisting candles.
+
+Actual audit integrity checks all passed; Python compilation and diff checks
+passed. No unit tests or strategy performance simulations were added/run in
+this increment. Source acquisition used free unauthenticated public GETs;
+the analysis command itself is entirely offline and reads no credentials.
+New broker/account requests, orders, purchases and installations were zero.
+No old reports/hashes were rewritten; no reserved 2024-2025 candle datasets
+were opened. Raspberry Pi execution remains unverified.
+
+Next is a bounded no-purchase raw-price/action acquisition plan, starting with
+representative ordinary/rename/terminal/complex-event cases and finishing
+the required evidence/adapters before scaling. Broader strategy scoring,
+scope review and eventual paper activation remain separate. No owner card,
+manual stock collection or risk JSON changes are required for that data work.

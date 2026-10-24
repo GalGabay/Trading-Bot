@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Latest no-purchase audit:** The [2016 cohort mapping/results](cohort_2016_audit_results.md)
+identifies dated tickers for all 506 retained rows, records ten sourced event
+cases and checks 33 saved daily-price files. Full raw-price coverage and event
+identity/adapter completeness remain unresolved. No strategy returns were
+scored. The owner requires no new data/service spending; no paid trial,
+subscription or upgrade is authorized. The earlier Apple dividend dollars
+were simulated income, never a charge or actual account payment.
+
 **Most recent engineering result:** The [raw-price/action pilot and historical-basket work](raw_action_pilot_and_historical_baskets.md)
 provides a verified accounting example, supported action-aware risk diagnostics,
 and complete extracted public 2016/2020 fund holdings lists (506/505 securities).
