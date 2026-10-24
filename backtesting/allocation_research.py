@@ -52,7 +52,7 @@ ARMS = (
 )
 
 
-def simulate_policy(arm, data, context, costs, *, start, end, priority="alphabetical", delay=1, extra_stop_bps=0, signal_data=None, rule_config=None):
+def simulate_policy(arm, data, context, costs, *, start, end, priority="alphabetical", delay=1, extra_stop_bps=0, signal_data=None, rule_config=None, holding_policy=None, record_decisions=False):
     if end > "2024-01-01":
         raise ValueError("Reserved holdout cannot enter allocation research")
     regime = market_regime(context)
@@ -67,6 +67,8 @@ def simulate_policy(arm, data, context, costs, *, start, end, priority="alphabet
         reentry_cooldown_sessions=10, execution_delay_sessions=delay, buy_priority=priority,
         allocation=AllocationPolicy(arm.volatility_contribution),
         halt_policy=HaltPolicy(arm.pause_sessions), restart_review=regime if arm.pause_sessions is not None else None,
+        holding_policy=holding_policy, holding_market_review=regime if holding_policy is not None else None,
+        record_decisions=record_decisions,
     ).run(data, trade_start=_utc_date(start), trade_end=_utc_date(end), signal_datasets=signal_data)
 
 

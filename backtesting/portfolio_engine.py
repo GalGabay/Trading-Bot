@@ -21,6 +21,7 @@ from backtesting.protective_exits import (
     ProtectiveExitConfig, initial_stop, raised_stop, stop_reference,
 )
 from backtesting.research_policy import AllocationPolicy, HaltPolicy, ResearchHaltState
+from backtesting.holding_policy import HoldingEntry, HoldingPolicy
 
 
 @dataclass(frozen=True)
@@ -71,6 +72,8 @@ class PortfolioBacktestResult:
     blocked_sessions_at_open: int = 0
     permanent_halt_reason: str | None = None
     halt_active_at_end: bool = False
+    holding_reviews: tuple[dict, ...] = ()
+    buy_decisions: tuple[dict, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -98,6 +101,9 @@ class PortfolioBacktestEngine:
         reentry_cooldown_sessions: int = 0, execution_delay_sessions: int = 1,
         allocation: AllocationPolicy | None = None, halt_policy: HaltPolicy | None = None,
         restart_review: dict[pd.Timestamp, bool] | None = None,
+        holding_policy: HoldingPolicy | None = None,
+        holding_market_review: dict[pd.Timestamp, bool] | None = None,
+        record_decisions: bool = False,
     ) -> None:
         if buy_priority not in {"alphabetical", "reverse"}:
             raise ValueError("buy_priority must be alphabetical or reverse")
@@ -106,6 +112,15 @@ class PortfolioBacktestEngine:
         self.limits = limits or ResearchPortfolioLimits()
         self.buy_priority = buy_priority
         self.protection = protection
+        self.holding_policy = holding_policy
+        self.holding_market_review = dict(holding_market_review or {})
+        if holding_policy is not None and holding_policy.mode == "continuation" and holding_market_review is None:
+            raise ValueError("Continuation holding policy requires exact-date market context")
+        if any(type(value) is not bool for value in self.holding_market_review.values()):
+            raise ValueError("Holding market context values must be boolean")
+        if type(record_decisions) is not bool:
+            raise ValueError("record_decisions must be boolean")
+        self.record_decisions = record_decisions
         self.allocation = allocation or AllocationPolicy()
         self.halt_policy = halt_policy or HaltPolicy()
         if self.halt_policy.daily_pause_sessions is not None and restart_review is None:
@@ -181,6 +196,9 @@ class PortfolioBacktestEngine:
         symbols = sorted(bars)
         cash = self.costs.initial_cash
         positions: dict[str, int] = {}
+        entries: dict[str, HoldingEntry] = {}
+        holding_reviews: list[dict] = []
+        buy_decisions: list[dict] = []
         stops: dict[str, _ActiveStop] = {}
         pending: dict[str, _PendingOrder] = {}
         next_entry_index: dict[str, int] = {}
@@ -192,6 +210,20 @@ class PortfolioBacktestEngine:
         previous_close_equity = cash
         halt = ResearchHaltState(self.halt_policy, self.limits.max_daily_loss, self.limits.max_drawdown)
         multiplier = (self.costs.slippage_bps + self.costs.spread_bps / 2) / 10_000
+
+        def journal(symbol, phase, status, blockers=(), *, order=None, quantity=None, constraints=None):
+            if not self.record_decisions:
+                return
+            marks = open_prices if phase == "open" else close_prices
+            value = cash + sum(qty * marks[name] for name, qty in positions.items())
+            buy_decisions.append({
+                "timestamp": timestamp.isoformat(), "symbol": symbol, "phase": phase,
+                "status": status, "blockers": list(blockers), "cash": cash, "equity": value,
+                "position_count": len(positions), "held_ages": {name: index - entry.session_index + 1 for name, entry in entries.items()},
+                "signal_timestamp": None if order is None else pd.Timestamp(order.signal.timestamp).isoformat(),
+                "planned_quantity": None if order is None else order.planned_quantity,
+                "quantity": quantity, "quantity_constraints": constraints or {},
+            })
 
         def observe_loss(phase: str, value: float, index: int, timestamp: pd.Timestamp) -> None:
             prior_date = dates.iloc[index - 1] if index > 0 else None
@@ -225,6 +257,7 @@ class PortfolioBacktestEngine:
                     if triggered is None or open_prices[symbol] > state.price:
                         continue
                     quantity = positions.pop(symbol)
+                    entries.pop(symbol)
                     fill = self._stop_fill(
                         timestamp, symbol, quantity, state, open_prices[symbol], triggered[0], triggered[1]
                     )
@@ -249,6 +282,7 @@ class PortfolioBacktestEngine:
                 if not quantity:
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped SELL; no position")
                     continue
+                entries.pop(symbol)
                 stops.pop(symbol, None)
                 price = open_prices[symbol] * (1 - multiplier)
                 cash += quantity * price - self.costs.commission_per_order
@@ -270,15 +304,19 @@ class PortfolioBacktestEngine:
                 if signal.action != SignalAction.BUY:
                     continue
                 if halt.blocked:
+                    journal(symbol, "open", "blocked", ("entry_halt",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; entry halt active")
                     continue
                 if symbol in positions:
+                    journal(symbol, "open", "blocked", ("already_held",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; position already open")
                     continue
                 if index < next_entry_index.get(symbol, 0):
+                    journal(symbol, "open", "blocked", ("cooldown",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; reentry cooldown")
                     continue
                 if len(positions) >= self.limits.max_positions:
+                    journal(symbol, "open", "blocked", ("position_count",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; position-count limit")
                     continue
                 equity = cash + sum(quantity * open_prices[name] for name, quantity in positions.items())
@@ -286,6 +324,7 @@ class PortfolioBacktestEngine:
                 price = open_prices[symbol] * (1 + multiplier)
                 stop = order.stop_price
                 if self.protection is not None and (stop is None or open_prices[symbol] <= stop or price <= stop):
+                    journal(symbol, "open", "blocked", ("stop_at_or_above_open",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; open is at or below planned stop")
                     continue
                 budget = min(
@@ -300,17 +339,29 @@ class PortfolioBacktestEngine:
                 # open cannot enlarge an order using information unavailable
                 # when the order was planned. Gaps can reduce or reject it.
                 quantity = min(order.planned_quantity or 0, floor(max(0.0, budget) / price))
+                constraints = {
+                    "planned_quantity": order.planned_quantity or 0,
+                    "single_position_value": floor(min(self.costs.position_fraction, self.limits.max_single_position) * equity / price),
+                    "portfolio_exposure": floor(max(0, self.limits.max_portfolio_exposure * equity - gross) / price),
+                    "cash_after_commission": floor(max(0, cash - self.costs.commission_per_order) / price),
+                }
+                if order.allocation_fraction is not None:
+                    constraints["volatility_sizing"] = floor(order.allocation_fraction * equity / price)
                 if self.protection is not None:
                     assert stop is not None
                     risk_quantity = floor(
                         self.protection.max_risk_per_trade * equity / (price - stop)
                     )
                     quantity = min(quantity, risk_quantity)
+                    constraints["stop_risk"] = risk_quantity
                 if quantity < 1:
+                    journal(symbol, "open", "blocked", tuple(name for name, cap in constraints.items() if cap < 1), order=order, quantity=0, constraints=constraints)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; cash, exposure, or stop-risk limit")
                     continue
+                journal(symbol, "open", "filled", order=order, quantity=quantity, constraints=constraints)
                 cash -= quantity * price + self.costs.commission_per_order
                 positions[symbol] = quantity
+                entries[symbol] = HoldingEntry(index, quantity, quantity * price + self.costs.commission_per_order)
                 if self.protection is not None:
                     stops[symbol] = _ActiveStop(stop, pd.Timestamp(signal.timestamp))
                 fills.append(self._fill(timestamp, signal, quantity, open_prices[symbol], price))
@@ -324,6 +375,7 @@ class PortfolioBacktestEngine:
                     if triggered is None:
                         continue
                     quantity = positions.pop(symbol)
+                    entries.pop(symbol)
                     fill = self._stop_fill(
                         timestamp, symbol, quantity, state, open_prices[symbol], triggered[0], triggered[1]
                     )
@@ -371,6 +423,22 @@ class PortfolioBacktestEngine:
                 )
                 if signal.symbol.strip().upper() != symbol or pd.Timestamp(signal.timestamp) != timestamp:
                     raise ValueError(f"{symbol}: strategy returned a mismatched signal")
+                pending_sell = symbol in pending and pending[symbol].signal.action == SignalAction.SELL
+                if self.holding_policy is not None and symbol in positions and signal.action != SignalAction.SELL and not pending_sell:
+                    market_on = True
+                    if self.holding_policy.mode == "continuation":
+                        if timestamp not in self.holding_market_review:
+                            raise ValueError(f"Missing exact-date holding market context: {timestamp}")
+                        market_on = self.holding_market_review[timestamp]
+                    review = self.holding_policy.review(
+                        features[symbol].iloc[:index + 1], entries[symbol], index,
+                        market_on=market_on, sale_multiplier=multiplier,
+                        sale_commission=self.costs.commission_per_order,
+                    )
+                    if review is not None:
+                        holding_reviews.append(review)
+                        if review["decision"] == "exit":
+                            signal = Signal(symbol, SignalAction.SELL, 1.0, review["reason"], timestamp.to_pydatetime(), self.strategy.name)
                 signals.append(signal)
                 if signal.action in {SignalAction.BUY, SignalAction.SELL}:
                     if symbol in pending:
@@ -380,6 +448,7 @@ class PortfolioBacktestEngine:
                     fraction = None
                     if signal.action == SignalAction.BUY:
                         if halt.blocked and self.halt_policy.daily_pause_sessions is not None:
+                            journal(symbol, "close", "blocked", ("entry_halt",))
                             events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY planning; entry halt active")
                             continue
                         fraction = self.allocation.fraction(
@@ -387,6 +456,7 @@ class PortfolioBacktestEngine:
                             float(features[symbol].iloc[index]["historical_volatility_20"]),
                         )
                         if fraction is None:
+                            journal(symbol, "close", "blocked", ("missing_volatility",))
                             events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; valid completed volatility unavailable")
                             continue
                         planned_budget = fraction * equity
@@ -394,6 +464,7 @@ class PortfolioBacktestEngine:
                             atr = float(features[symbol].iloc[index]["atr_14"])
                             stop_price = initial_stop(signal_closes[symbol], atr, self.protection)
                             if stop_price is None:
+                                journal(symbol, "close", "blocked", ("missing_atr_stop",))
                                 events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; valid ATR stop unavailable")
                                 continue
                             planned_entry = signal_closes[symbol] * (1 + multiplier)
@@ -406,8 +477,10 @@ class PortfolioBacktestEngine:
                             planned_budget / (signal_closes[symbol] * (1 + multiplier))
                         )
                         if planned_quantity < 1:
+                            journal(symbol, "close", "blocked", ("planned_sizing_below_one_share",), quantity=0)
                             events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; planned stop-risk size below one share")
                             continue
+                        journal(symbol, "close", "queued", quantity=planned_quantity)
                     pending[symbol] = _PendingOrder(
                         signal, planned_quantity, stop_price, index + self.execution_delay_sessions,
                         fraction if self.allocation.annualized_risk_contribution is not None else None,
@@ -427,6 +500,7 @@ class PortfolioBacktestEngine:
             halted_at=halt.first_halted_at, risk_events=tuple(halt.events),
             blocked_sessions_at_open=halt.blocked_at_open,
             permanent_halt_reason=halt.permanent_reason, halt_active_at_end=halt.blocked,
+            holding_reviews=tuple(holding_reviews), buy_decisions=tuple(buy_decisions),
         )
 
     def _loss_breach(self, equity: float, prior_close: float, peak: float) -> str | None:

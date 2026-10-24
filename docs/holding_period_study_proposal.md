@@ -2,6 +2,13 @@
 
 Date: **2026-10-24**. Status: **prepared for owner review; not evaluated**.
 
+**Subsequent approval and amendment:** The owner approved implementation,
+allowing continuation beyond session 60 with further reviews every 30
+sessions. The original hard-maximum description below is retained as the
+proposal history and is superseded by the
+[approved amended protocol](holding_period_study_protocol.md). Implementation
+and evaluation use that amended protocol, not the old maximum-60 rule.
+
 The owner suggested selling an old holding to make room for another stock,
 unless there is unusually strong evidence to keep it. The authorized work
 in this turn is focused audit testing and this concrete next-study proposal.

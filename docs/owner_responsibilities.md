@@ -51,12 +51,14 @@ candidate for the approved investment goal. No further configuration is
 needed now. The next owner decision is whether to pursue a separately
 defined finite alternative study after reviewing its concrete proposal.
 
-That [holding-time study proposal](holding_period_study_proposal.md) is now
-available. It addresses your idea of freeing capital from old positions
-using explicit review rules rather than an uncalibrated confidence claim.
-The audit tests are complete. Your next action is to review or amend the
-three proposed arms before their implementation/evaluation, as agreed in
-Step C. No Python, JSON, account, or risk-limit changes are required from you.
+You approved the holding-time study with continuation beyond session 60 and
+subsequent reviews every 30 sessions. Its
+[36 completed simulations](holding_period_study_results.md) found that neither
+variant meets the investment criteria; the new policies are research only.
+Your next scope decision concerns broader-market data feasibility, explained
+in [the universe guide](stock_universe_research.md). No Python, JSON, account,
+or additional risk-limit changes are required now. Paid-data purchase or
+paper activation still requires its own explicit decision.
 
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all

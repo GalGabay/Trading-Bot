@@ -58,12 +58,15 @@ $10,000. The smaller account's pessimistic, estimated-liquidation CAGR was
 the candidate as a reference and keep the final holdout reserved; any next
 alternative study needs a separately defined finite scope before evaluation.
 
-The [holding-time/capital-reuse proposal](holding_period_study_proposal.md)
-now defines that next finite scope: unchanged control, a 30-session maximum,
-and a 30-session review with a 60-session hard maximum. It explicitly measures
-whether holding age actually blocks qualifying entries, since the prior
-account already held mostly cash. This is a proposal for review; no such
-strategy has been implemented or scored. The focused audit tests have passed.
+The owner approved the holding-time comparison with one amendment: positions
+may continue beyond 60 sessions when the continuation gates pass, with later
+reviews every 30 sessions. The [registered amended protocol](holding_period_study_protocol.md)
+and [completed results](holding_period_study_results.md) cover 36 simulations.
+Slot rejections declined, but neither variant meets the investment criteria.
+Do not run additional age thresholds automatically. A separate
+[broad-universe feasibility audit](stock_universe_research.md) is the proposed
+next research direction; small-basket results cannot approve whole-market
+paper behavior or imply greater future returns.
 
 ## The short answer: four matched strategy studies
 

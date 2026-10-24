@@ -281,8 +281,12 @@ paper settings changed, orders placed, or packages installed.
 
 The owner's suggestion about old holdings is now a concrete
 [holding-time/capital-reuse study proposal](holding_period_study_proposal.md).
-It defines three fixed arms, causal session counting, evidence requirements,
-and a finite replay budget. The study has not been implemented or evaluated.
+It defined three fixed arms, causal session counting, evidence requirements,
+and a finite replay budget. The owner subsequently approved an amendment
+allowing reviewed continuation beyond session 60; the
+[completed study](holding_period_study_results.md) found neither new variant
+met the approved investment criteria. Its amended protocol and new source
+hashes are separate from this original audit.
 
 ## What comes next and who does it
 
@@ -297,8 +301,9 @@ the accumulated trial history. Retiring this strategy line must remain a
 valid outcome; no candidate in this project has established that it meets
 all the approved criteria. This audit does not authorize a new strategy search.
 The focused audit tests above are complete. The concrete
-[holding-period study proposal](holding_period_study_proposal.md) is ready
-for review before implementation/evaluation, following the approved Step C.
+[holding-period study](holding_period_study_results.md) is now complete under
+the owner's amended approval. Its proposed next step is broader-universe
+data feasibility, rather than further automatic age-rule optimization.
 
 **Owner:** Nothing more needs configuring to finish this audit. Review this
 result, then decide whether the separate next study is worthwhile once its

@@ -24,10 +24,11 @@ replayed the unchanged candidate at $100,000 and $10,000. It does not meet
 the approved investment objective. This later decision preserves all earlier
 study results and keeps 2024-2025 unopened.
 
-The next [holding-time proposal](holding_period_study_proposal.md) defines
-three arms for review in response to the owner's capital-reuse suggestion.
-No time-exit results exist yet. Focused audit tests are now complete, and
-all saved audit calculations are unchanged after defensive checks were added.
+The approved [holding-time study](holding_period_study_results.md) has now
+completed 36 simulations, including the owner's amendment allowing reviewed
+continuation beyond 60 sessions. Both new variants freed slots but failed
+the approved investment criteria. A broader-universe feasibility audit is
+proposed next; no broad-market or paper-performance claim has been established.
 
 **Status:** Fixed-rule development screen and continuous shared-cash portfolio
 follow-up completed on 2026-10-23. The preexisting walk-forward rule permitted
