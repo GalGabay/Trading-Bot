@@ -45,6 +45,13 @@ session 60 is allowed, with later reviews every 30 sessions. Neither new
 arm meets the investment criteria. The [universe guide](docs/stock_universe_research.md)
 explains why a larger stock search needs matched historical validation before
 paper trading. 2024-2025 remain reserved.
+The [broad-universe feasibility audit](docs/broad_universe_audit_results.md)
+snapshotted 33,560 asset records and probed 56 historical histories. Broader
+daily data is accessible, but historical membership, identities and terminal
+outcomes remain unresolved. The [eight-arm entry/selection study](docs/broad_entry_selection_study.md)
+is scoped and awaits those inputs and dynamic-universe support; it has not
+produced new return results. Run the read-only auditor with
+`python -m backtesting.universe_audit --output data/reports/a_fresh_directory`.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

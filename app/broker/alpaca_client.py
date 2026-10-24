@@ -15,11 +15,12 @@ from typing import Any
 from alpaca.data.historical import StockHistoricalDataClient
 from alpaca.data.enums import Adjustment, DataFeed
 from alpaca.data.live import StockDataStream
+from alpaca.data.models import BarSet
 from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
-from alpaca.trading.enums import QueryOrderStatus
-from alpaca.trading.requests import GetCalendarRequest, GetOrdersRequest, OrderRequest
+from alpaca.trading.enums import AssetClass, QueryOrderStatus
+from alpaca.trading.requests import GetAssetsRequest, GetCalendarRequest, GetOrdersRequest, OrderRequest
 from alpaca.common.exceptions import APIError
 from dotenv import load_dotenv
 
@@ -125,6 +126,23 @@ class AlpacaClient:
         """Return the broker's asset metadata for a proposed symbol."""
         return self._trading.get_asset(symbol)
 
+    def get_assets(self) -> list[dict[str, Any]]:
+        """Snapshot US-equity assets, including inactive/nontradable entries.
+
+        This is current broker metadata, not historical universe membership.
+        Omitting status requests all statuses; it does not establish that
+        every historical delisting or ticker identity is represented.
+        """
+        # The pinned SDK's AssetExchange enum rejects some newer catalog
+        # exchanges. Preserve public metadata verbatim through the SDK's
+        # authenticated GET transport instead of dropping unknown exchanges
+        # or changing the trading client's global response mode.
+        request = GetAssetsRequest(asset_class=AssetClass.US_EQUITY)
+        response = self._trading.get("/assets", request.to_request_fields())
+        if not isinstance(response, list) or any(not isinstance(asset, dict) for asset in response):
+            raise ValueError("Alpaca asset catalog must be a list of metadata objects")
+        return response
+
     def get_market_calendar(self, *, start: date, end: date) -> list[Any]:
         """Return Alpaca's exchange sessions for the inclusive date range."""
         return self._trading.get_calendar(GetCalendarRequest(start=start, end=end))
@@ -180,3 +198,49 @@ class AlpacaClient:
                 credentials.secret_key,
             )
         return self._stream
+
+    def get_market_data_batch(
+        self, symbols: list[str], *, start: datetime, end: datetime,
+        timeframe: TimeFrame = TimeFrame.Day,
+        adjustment: Adjustment = Adjustment.ALL, feed: DataFeed = DataFeed.SIP,
+    ) -> BarSet:
+        """Read paginated bars using the multi-symbol endpoint.
+
+        The old SDK's single-symbol parser fails on some empty responses.
+        Keep a genuine empty result empty, reject malformed/repeated pages,
+        and retain every returned symbol for downstream identity validation.
+        This does not change the clients' global response modes.
+        """
+        if not symbols or any(not symbol.strip() for symbol in symbols):
+            raise ValueError("At least one nonempty symbol is required")
+        if any(value.tzinfo is None or value.utcoffset() is None for value in (start, end)):
+            raise ValueError("Market data bounds must be timezone-aware")
+        if start >= end:
+            raise ValueError("Market data end must follow start")
+        request = StockBarsRequest(
+            symbol_or_symbols=[s.strip().upper() for s in symbols], start=start,
+            end=end, timeframe=timeframe, adjustment=adjustment, feed=feed,
+        )
+        params = request.to_request_fields()
+        params["symbols"] = ",".join(params.pop("symbol_or_symbols"))
+        params["limit"] = 10000
+        collected: dict[str, list[Any]] = {}
+        tokens: set[str] = set()
+        for _ in range(100):
+            page = self._historical_data.get("/stocks/bars", params, api_version="v2")
+            if not isinstance(page, dict) or "bars" not in page:
+                raise ValueError("Historical response lacks bars")
+            bars = page["bars"]
+            if bars is not None:
+                if not isinstance(bars, dict) or any(not isinstance(rows, list) for rows in bars.values()):
+                    raise ValueError("Historical bars must be grouped by symbol")
+                for symbol, rows in bars.items():
+                    collected.setdefault(symbol, []).extend(rows)
+            token = page.get("next_page_token")
+            if token is None:
+                return BarSet(collected)
+            if not isinstance(token, str) or token in tokens:
+                raise ValueError("Invalid or repeated historical pagination token")
+            tokens.add(token)
+            params["page_token"] = token
+        raise ValueError("Historical response exceeded 100-page safety bound")

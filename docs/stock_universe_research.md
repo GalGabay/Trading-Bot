@@ -65,14 +65,13 @@ so extending it requires:
 
 ## Suggested sequence
 
-Finish and report the already approved holding-time comparison. Then make
-the next scope decision from its results. A sensible separate next proposal
-is a **broad-universe data-feasibility audit**, followed by a finite matched
-universe/entry study only if historical membership and coverage are adequate.
-The outcome may be a narrower, explicitly qualified universe rather than
-an unsupported "entire market" claim.
+The owner authorized the **broad-universe feasibility audit**, now
+[completed](broad_universe_audit_results.md): 33,560 catalog records and 56
+fixed historical coverage probes. Broader daily price access works, but the
+catalog does not supply complete historical membership or lifecycle outcomes.
 
-The owner does not need to collect thousands of CSVs manually. Codex can
-build the tooling after the scope is agreed. Any data subscription needs
-separate approval; no purchase, all-market download, entry tightening,
-ranking model, or paper activation was performed in this task.
+The finite [entry/selection study](broad_entry_selection_study.md) is scoped
+with eight matched arms. Simulation waits for audited historical inputs and
+dynamic-universe engine support. No owner risk settings are needed for the
+next engineering work. Any subscription purchase still requires separate
+approval. No whole-market performance claim or paper activation is approved.

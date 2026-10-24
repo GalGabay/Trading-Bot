@@ -55,10 +55,16 @@ You approved the holding-time study with continuation beyond session 60 and
 subsequent reviews every 30 sessions. Its
 [36 completed simulations](holding_period_study_results.md) found that neither
 variant meets the investment criteria; the new policies are research only.
-Your next scope decision concerns broader-market data feasibility, explained
-in [the universe guide](stock_universe_research.md). No Python, JSON, account,
-or additional risk-limit changes are required now. Paid-data purchase or
-paper activation still requires its own explicit decision.
+You subsequently authorized broader-market data feasibility and a scoped
+entry/selection study. The [completed audit](broad_universe_audit_results.md)
+checked 33,560 asset records and 56 coverage probes. Price access works;
+historical membership, identity and terminal outcomes remain unresolved.
+The [eight-arm study](broad_entry_selection_study.md) is defined but has not
+been simulated, because its historical-data gate is not met. Codex owns
+the source/adapter and dynamic-universe engineering work. No Python, JSON,
+account or additional risk-limit changes are required from you now.
+Before any purchase, I must give you a concrete source, licensing/coverage
+assessment and cost for approval. Paper activation remains a separate decision.
 
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all

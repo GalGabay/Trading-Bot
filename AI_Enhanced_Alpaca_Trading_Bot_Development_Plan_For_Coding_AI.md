@@ -3553,7 +3553,7 @@ For each completed milestone, record:
 
 ### Known limitations
 - The project has not yet run its automated tests on Raspberry Pi OS.
-- The current backtester handles one symbol and one long position; multi-symbol portfolios, risk integration, and point-in-time historical universes remain unimplemented. The Phase 14 ML training pipeline exists but has not been run on an owner-reviewed research scope or validated on the Pi.
+- Single-symbol backtesting and an offline shared-cash multi-symbol daily engine now exist. The daily engine includes research allocation/loss gates and an OHLC stop proxy, but requires identical instrument calendars. Dynamic historical universes, audited point-in-time membership/lifecycle outcomes and full broker-risk/execution parity remain incomplete. The Phase 14 ML pipeline has no reviewed research result or Pi validation.
 
 ### Next step
 - Phase 13 startup recovery is implemented and covered by 17 offline tests. Phase 14 has an offline single-symbol ML research pipeline and 11 focused tests, but no reviewed training result yet. Neither phase enables submission. The owner can use `docs/research_scope_decision_workbook.md` to specify the study and its untouched test period. The initial `config/risk_limits.json` is unapproved and has empty limits; the owner must choose or accept all required limits before any paper-order workflow is enabled. Next build a safe exit/stop workflow and a full broker fill/activity ledger before unattended paper trading or realized P&L reporting. A proposed stop price currently sizes risk but does not create a protective broker order. Point-in-time universe data and a multi-symbol portfolio engine remain necessary before broader market-wide predictive claims.
@@ -3599,3 +3599,28 @@ Robustness / walk-forward validation
 ```
 
 **Do not skip ahead simply because a later component is described in this document.**
+
+## Broad-universe research update: 2026-10-24
+
+The owner authorized the [broad-universe feasibility audit](docs/broad_universe_audit_protocol.md)
+and a subsequent finite entry/selection study. The
+[completed audit](docs/broad_universe_audit_results.md) snapshotted 33,560
+US-equity asset records and checked 56 preselected SIP daily histories in
+2016-2023. It demonstrates broad price access, not complete historical
+membership, common-stock classification or delisting outcomes. Current
+assets and symbols are not a point-in-time historical universe.
+
+`backtesting/universe_audit.py` and new read-only broker methods preserve
+metadata, pagination, empty histories, validation errors/warnings and hashes.
+No 2024-2025 prices, orders or paid purchases were involved. No new unit tests
+were added or run for this increment; the live coverage run and artifact
+hash checks passed as described in the results. Pi execution remains unverified.
+
+The [entry/selection study](docs/broad_entry_selection_study.md) defines eight
+matched arms, explicit stricter volume/relative-strength gates and causal
+ranking, with a maximum 92 simulations and early stopping. It is **scoped,
+not simulated**: historical data/lifecycle semantics and dynamic-universe
+engine support must meet its gate first. Codex owns that engineering work;
+no owner risk-limit edits are needed now. Any paid source requires a concrete
+reviewed proposal and explicit approval. Paper-risk approval, final reserved
+evaluation and paper activation remain separate later decisions.

@@ -1,5 +1,14 @@
 # Proposed research program before the first paper trial
 
+**Latest update, 2026-10-24:** After the goal-fit and holding-time studies,
+the owner authorized a broad-universe feasibility audit and scoped entry/
+selection research. The [completed audit](broad_universe_audit_results.md)
+demonstrates broader daily price access but not historical-universe
+completeness. The [eight-arm study](broad_entry_selection_study.md) separates
+universe size, stricter entries and ranking. Its simulations await audited
+lifecycle data and a dynamic-universe engine. No owner risk changes are due
+for this engineering work; purchases and paper activation need later approval.
+
 **Status:** The owner authorized starting Study A from this proposal on
 2026-10-19. The remaining studies and any later paper activation still need
 their stated checks; this authorization does not approve risk limits, a data
