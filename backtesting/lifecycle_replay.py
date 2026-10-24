@@ -16,10 +16,45 @@ from backtesting.allocation_research import ARMS, simulate_policy
 from backtesting.earlier_history import _pack_window
 from backtesting.holding_research import load_history, POLICIES
 from backtesting.research import COST_SCENARIOS
+from backtesting.risk_diagnostics import daily_risk_envelope
 
 
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def run_risk_replay(output: Path, *, data_dir=Path("data/historical"), reference=Path("data/reports/study_c_holding/report.json")):
+    """Recompute all old daily envelopes without rerunning strategy selection."""
+    if output.exists():
+        raise FileExistsError("Choose a fresh risk replay evidence directory")
+    original = json.loads(reference.read_text(encoding="utf-8"))
+    goal_path = Path("data/reports/study_c_goal_fit_final/report.json")
+    combined, later = load_history(data_dir, json.loads(goal_path.read_text(encoding="utf-8")))
+    report = {"purpose": "exact_legacy_daily_risk_regression_not_strategy_search",
+              "reference_sha256": digest(reference), "goal_reference_sha256": digest(goal_path),
+              "source_sha256": {name: digest(name) for name in ("backtesting/risk_diagnostics.py", "backtesting/lifecycle_replay.py")},
+              "cases": [], "holdout_opened": False, "orders_placed": False}
+    output.mkdir(parents=True, exist_ok=False)
+    for policy, accounts in original["arms"].items():
+        for capital, windows in accounts.items():
+            for window, scenarios in windows.items():
+                datasets = combined if window == "full_2017_2023" else later
+                for name, expected in scenarios.items():
+                    path = reference.parent / expected["artifact"]
+                    if path.resolve().parent != reference.parent.resolve() or digest(path) != expected["artifact_sha256"]:
+                        raise ValueError("Saved holding reference artifact checksum/path changed")
+                    artifact = json.loads(path.read_text(encoding="utf-8"))
+                    risk = daily_risk_envelope(artifact["financial"], datasets)
+                    exact = risk["daily_envelopes"] == artifact["daily_risk_envelopes"]
+                    report["cases"].append({"policy": policy, "capital": capital, "window": window, "costs": name,
+                                            "artifact_sha256": digest(path), "all_daily_envelopes_exact": exact})
+                    (output / "report.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+                    if not exact:
+                        raise ValueError("Historical daily-risk envelope changed; original evidence preserved")
+    report["all_36_cases_match"] = len(report["cases"]) == 36
+    (output / "report.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    print(f"{len(report['cases'])}/36 saved daily-risk cases match exactly", flush=True)
+    return report
 
 
 def run_replay(output: Path, *, data_dir=Path("data/historical"), reference=Path("data/reports/study_c_holding/report.json")):
@@ -72,8 +107,9 @@ def run_replay(output: Path, *, data_dir=Path("data/historical"), reference=Path
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--risk-only", action="store_true", help="Reconcile saved fills and compare every daily envelope")
     args = parser.parse_args()
-    run_replay(args.output)
+    (run_risk_replay if args.risk_only else run_replay)(args.output)
 
 
 if __name__ == "__main__":

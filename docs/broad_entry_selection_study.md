@@ -147,8 +147,14 @@ Alpaca access also returned company-event records. The
 the $0 new-purchase policy. The subsequent
 [action/accounting increment](corporate_action_progress.md) adds split and
 ordinary-dividend adapters, 69 passing focused tests and 36 exact historical
-replays. Complete historical membership/event coverage and supported risk
-diagnostics remain outstanding; the study's scoring gate is still closed.
+replays. The [reviewed raw-price pilot](raw_action_pilot_and_historical_baskets.md)
+now demonstrates supported action-aware risk reconciliation. Public 2016/2020
+fund holdings lists supply 506/505 historical security rows, with publication
+guards and exact disclosed-value reconciliation. They are fixed cohorts, not
+the daily all-eligible-US-stock scope registered above. Historical identity,
+action/raw-price coverage and unsupported outcomes remain outstanding; the
+study's scoring gate is still closed. A narrower fixed-2016-basket scope must
+be stated and reviewed before any strategy scoring, never substituted silently.
 
 **Scoped, not yet simulated.** The feasibility audit determines which data
 gates remain. Codex owns source/adapter evaluation, lifecycle-aware engine

@@ -1,0 +1,120 @@
+{
+  "purpose": "Accounting and causal raw-price/action pilot; no strategy selection or performance approval",
+  "instrument_id": "AAPL-COMMON-REVIEW-2020",
+  "source_root": "data/reports/raw_action_pilot_v1",
+  "sources": {
+    "listing": {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/a10-k20189292018.htm",
+      "path": "aapl_2018_10k.html",
+      "sha256": "c9474138d805d62acc01a4156b699651137481109b4db789b73aee6cd4150ce9",
+      "index_sha256": "683ec13f10590eb9eb0c973c7c19e596e341c479f57264ae757612160ac3199b"
+    },
+    "listing_index": {
+      "path": "aapl_2018_filing_index.html",
+      "sha256": "683ec13f10590eb9eb0c973c7c19e596e341c479f57264ae757612160ac3199b",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/0000320193-18-000145-index.html"
+    },
+    "january": {
+      "url": "https://www.apple.com/newsroom/2020/01/apple-reports-record-first-quarter-results/",
+      "path": "aapl_january_corrected.html",
+      "sha256": "142c48b78b83f99e710636daa4ac9ad74e4184226b113a84c9f963e158a0c07a"
+    },
+    "april": {
+      "url": "https://www.apple.com/newsroom/2020/04/apple-reports-second-quarter-results/",
+      "path": "aapl_april.html",
+      "sha256": "1f5adfe2f7c55ab95bc7c5966a6c3f813d0b77e0004fe28f7fb8ffc8621ba482",
+      "bytes": 142255
+    },
+    "july": {
+      "url": "https://www.apple.com/newsroom/2020/07/apple-reports-third-quarter-results/",
+      "path": "aapl_july.html",
+      "sha256": "a7f21b02893b6bceda598021a12a8f5b616f9c5a588028a5b0c42b2dd4fe5094",
+      "bytes": 142563
+    },
+    "october": {
+      "url": "https://www.apple.com/newsroom/2020/10/apple-reports-fourth-quarter-results/",
+      "path": "aapl_october.html",
+      "sha256": "2b3dda862079598c762a8a4031b95f4474fc6dc75fd3ed3cc18088c196756a63",
+      "bytes": 142194
+    }
+  },
+  "prices": {
+    "symbol": "AAPL",
+    "timeframe": "1Day",
+    "feed": "sip",
+    "adjustment": "raw",
+    "start": "2019-01-01",
+    "end_exclusive": "2021-01-01",
+    "rows": 505,
+    "sha256": "bc6df500ef7324514c74ca98a8e1bb046df749b14a785e4d23e3114ed9cdef1a",
+    "path": "AAPL_2019_2020_raw.csv"
+  },
+  "calendar": {
+    "path": "calendar_2019_2020.json",
+    "sha256": "102f7847b329671b3f2b79838aa155977cb0bf6c56fd9bbcc6bbe4a01ab69067"
+  },
+  "provider": {
+    "path": "data/reports/free_source_access_v1/AAPL_1.json",
+    "sha256": "5945fd7f9eed5a3c5b9ec03c54c71444a63b9412df763068f8a0b25b1f9f335a"
+  },
+  "dividends": [
+    {
+      "event_id": "23407e01-4eef-4c1e-a2dd-f585c7eabcd0",
+      "ex_session": "2020-02-07",
+      "cash_per_share": 0.77,
+      "issuer_payable_date": "2020-02-13",
+      "announcement": "2020-01-28",
+      "source": "january",
+      "provider_missing_payable": true
+    },
+    {
+      "event_id": "235946d4-2605-4e5c-9699-9bfd00452ec0",
+      "ex_session": "2020-05-08",
+      "cash_per_share": 0.82,
+      "issuer_payable_date": "2020-05-14",
+      "announcement": "2020-04-30",
+      "source": "april",
+      "provider_missing_payable": false
+    },
+    {
+      "event_id": "d09386ae-0c2b-4280-8aa0-295e545354b1",
+      "ex_session": "2020-08-07",
+      "cash_per_share": 0.82,
+      "issuer_payable_date": "2020-08-13",
+      "announcement": "2020-07-30",
+      "source": "july",
+      "provider_missing_payable": false
+    },
+    {
+      "event_id": "43032b74-6743-4fef-9a10-de51c464a480",
+      "ex_session": "2020-11-06",
+      "cash_per_share": 0.205,
+      "issuer_payable_date": "2020-11-12",
+      "announcement": "2020-10-29",
+      "source": "october",
+      "provider_missing_payable": false
+    }
+  ],
+  "split": {
+    "event_id": "d209b6c2-9231-474c-a80e-1a79dacadbb2",
+    "effective_session": "2020-08-31",
+    "new_shares": 4,
+    "old_shares": 1,
+    "announcement": "2020-07-30",
+    "source": "july"
+  },
+  "research_cash_convention": "first_actual_session_strictly_after_issuer_payable_date; not verified broker availability",
+  "knowledge_convention": "second_actual_session_strictly_after_dated_issuer_release; not exact publication time",
+  "listing_coverage": "2019-01-01 through 2020-12-31 is a clipped coverage interval, not IPO/end dates; 2018 Form 10-K verifies common stock, Nasdaq and AAPL",
+  "warmup_scope": "2019 is uninvested feature warmup; ordinary dividend price gaps remain raw; no pre-2020 entitlements are asserted",
+  "trade_start": "2020-01-01",
+  "trade_end_exclusive": "2021-01-01",
+  "strategy": "BUY on first completed 2020 close, next-session open; HOLD to end; 10% position cap; $10,000 initial; one base-cost run; no stops/optimization",
+  "limitations": [
+    "Payable date != verified broker cash availability; modeled next-session convention only.",
+    "Nominal dividend receivables are included in equity, unavailable for purchases until modeled payment.",
+    "AAPL selected for a known split, not as an unbiased investment sample.",
+    "No spin-offs, share mergers, fractional cash-in-lieu, taxes or actual intraday equity modeled.",
+    "No whole-market readiness or paper activation."
+  ]
+}

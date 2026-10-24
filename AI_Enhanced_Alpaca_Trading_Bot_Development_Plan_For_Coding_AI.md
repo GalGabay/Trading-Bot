@@ -3683,3 +3683,50 @@ build a reviewed raw-price/action data pilot and establish an honest broader
 historical scope using existing/public sources. Owner risk settings, paper
 activation, 2024-2025 evaluation and Pi execution remain unchanged/unapproved;
 new data purchases remain $0. No owner configuration is required now.
+
+## Reviewed raw-price pilot and historical baskets: 2026-10-24
+
+The [raw-price/action and historical-basket report](docs/raw_action_pilot_and_historical_baskets.md)
+supersedes the previous action-aware risk gate. The existing daily risk helper
+now reconstructs split share counts, ordinary dividend receivables/payments
+and terminal cash before marking the account. It rejects inconsistent ledgers
+and retains its conservative daily-OHLC bounds; real intraday equity remains
+unobserved. All 36 original holding-study daily-envelope cases match exactly,
+with original data and artifact hashes checked and no provenance rewritten.
+
+The reviewed Apple pilot uses 505 real SIP/raw daily candles and 505 saved
+exchange sessions from 2019-2020, with 2019 uninvested warmup and one predefined
+2020 BUY/HOLD accounting case. All seven checks pass: three shares become
+twelve at the effective 4-for-1 split, all four dividends pay once ($9.69),
+and financial/risk ledgers reconcile. Issuer announcements supply explicit
+payment evidence, including the missing February provider date. Cash is modeled
+at the first actual session after issuer payment, not claimed to be verified
+broker availability. This deliberately selected fixture is not strategy
+selection, acceptance of its marked return, or permission to trade.
+
+Public SEC fund filings establish complete fixed source baskets of **506
+security rows at 2016-09-30** and **505 at 2020-09-30**, with exact disclosed
+common-stock value reconciliation. Filing dates, not holdings dates, govern
+availability: conservative bounds are 2016-11-30 and 2020-12-02 UTC. The 2016
+list can precede a 2017 study; the 2020 list cannot be applied to 2017.
+Tracked extracted CSVs retain all rows and original share-class/footnote names,
+including later failures/acquisitions. Their row keys are not permanent
+security IDs. These are fixed historical fund baskets, not daily full-market
+membership. The extractor refuses wrong fund/period, missing rows/totals and
+duplicate source names; unresolved securities are not silently removed.
+
+**Verification:** 118 focused tests passed; full suite ran 381 tests, with
+379 passes and two existing optional ML import errors because `sklearn` is
+absent. The optional dependency was not installed. Python compilation and
+diff checks passed. The new report includes Windows installation instructions
+using the existing project `.venv` and `requirements-ml.txt`.
+
+**Next engineering work:** Resolve dated identities/ticker aliases and audit
+raw-price/action/terminal-outcome coverage for the retained 2016 cohort.
+Broader strategy scoring remains gated. A fixed-2016-basket scope is a concrete
+no-purchase candidate, not a silent replacement for the original all-eligible
+US-stock protocol; present any material scope amendment before scoring.
+Unsupported events still require adapters. Owner risk edits, payment/card
+setup and manual stock collection are unnecessary for this data work. Paper
+activation remains separate; 2024-2025 prices remain reserved, new purchases
+remain $0, and Pi validation is still due.

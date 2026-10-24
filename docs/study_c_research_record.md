@@ -1,5 +1,12 @@
 # Study C: daily rule-only research record
 
+**Latest data-engineering follow-up:** The [raw-price/action pilot and historical-basket report](raw_action_pilot_and_historical_baskets.md)
+checks real split/dividend accounting, extends daily risk diagnostics, and
+extracts public historical holdings lists with 506/505 security rows. These
+are fixed dated source baskets; broader identity/action/price coverage still
+needs review before strategy scoring. No new Study C strategy return result
+or paper approval follows from that accounting pilot.
+
 **Later follow-up:** [Study C-R2](study_c_daily_improvement_results.md) evaluated
 five fixed daily-rule arms and 86 simulations. Breakout rules improved
 pessimistic returns to about +3.2%, but no candidate passed the full checks.

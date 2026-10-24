@@ -173,10 +173,11 @@ class CorporateActionTests(UniverseFixture):
         with self.assertRaisesRegex(UniverseDataError, "precede"):
             self.dividend(pay=201)
 
-    def test_old_risk_helper_refuses_to_drop_corporate_actions(self):
+    def test_risk_helper_reconciles_corporate_actions(self):
         result = self.run_case(self.action_universe(dividends=[self.dividend()]))
-        with self.assertRaisesRegex(ValueError, "corporate-action"):
-            daily_risk_envelope(pack(result), {"ID-A": self.bars()})
+        risk = daily_risk_envelope(pack(result), {"ID-A": self.bars()})
+        self.assertTrue(risk["corporate_actions_reconciled"])
+        self.assertFalse(risk["intraday_equity_observed"])
 
     def test_tampered_dividend_ledger_is_rejected(self):
         result = self.run_case(self.action_universe(dividends=[self.dividend()]))

@@ -1,5 +1,11 @@
 # Lifecycle tests, historical replays and split/dividend accounting
 
+**Latest increment:** [Real raw-price pilot, action-aware risk diagnostics and historical baskets](raw_action_pilot_and_historical_baskets.md).
+The February payable-date evidence gap is resolved for the reviewed Apple
+pilot by the January issuer release. Broker cash availability remains an
+explicit research convention, not a verified account observation. Earlier
+test counts below describe the previous increment.
+
 ## What changed in ordinary language
 
 If ten $100 shares become twenty $50 shares in a split, the account has not
@@ -50,8 +56,9 @@ dates must be explicitly sourced for the actual event.
   equity and total return include earned ordinary dividends exactly once.
 - Summary checks reconcile entry quantities, split conversions, cash events,
   dividend entitlements/payments, outstanding claims, final cash and total P&L.
-  The legacy OHLC risk-envelope helper rejects corporate-action cases rather
-  than silently omitting their effects.
+  The OHLC risk-envelope helper now independently reconciles supported split,
+  dividend and terminal-cash ledgers, while retaining its conservative daily
+  bounds and the explicit limit that intraday equity was not observed.
 - No tax withholding, reinvestment, FX, stock mergers, spin-offs, fractional
   cash-in-lieu, uncertain recoveries, or delayed terminal-payment claim
   valuation is assumed. Nominal dividend claims are not discounted or insured;

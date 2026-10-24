@@ -1,0 +1,65 @@
+{
+  "purpose": "Reviewed historical membership sources, not executable stock universe",
+  "source_extractor_sha256": "02f907909211d81bd5c1ebd9cf339ad816de5e10f7abbb8aa61c997c9de74407",
+  "baskets": [
+    {
+      "scope": "fixed_disclosed_SPY_common_stock_holdings_not_entire_market_or_daily_index_history",
+      "asof": "2016-09-30",
+      "filed_on": "2016-11-28",
+      "not_before_utc": "2016-11-30T00:00:00+00:00",
+      "availability_convention": "Conservative two-calendar-day bound after SEC filing; never use report date as publication date",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "filing_sha256": "f1a89354106579e1b9668cd70f39da75a0fd4ee9f7724d06bf012b120b132eb1",
+      "filing_index_sha256": "4f5f041a2f1eea90921d9dc6b50e0d9bc1988e0f185de416b52ef83c3060ae9d",
+      "security_count": 506,
+      "common_stock_market_value_usd": 197172469106,
+      "all_disclosed_rows_retained": true,
+      "source_row_keys_are_permanent_security_ids": false,
+      "backtest_ready": false,
+      "blockers": [
+        "Resolve each security's historical symbol/share-class identity without survivor exclusions.",
+        "Audit listing/action/raw-price coverage and terminal outcomes for the retained cohort.",
+        "This is a fixed historical basket; daily full-market/index membership is not established."
+      ],
+      "holding_rows_csv": "docs/research_data/spy_2016_disclosed_holdings.csv",
+      "holding_rows_sha256": "00b6c45423a1cfcae65fcfa83df996734a68e687fdd9b6af90afcdf027f6a02e",
+      "example_retained_rows": [
+        "Activision Blizzard, Inc.",
+        "Aetna, Inc.",
+        "Bed Bath & Beyond, Inc.",
+        "Nielsen Holdings PLC"
+      ]
+    },
+    {
+      "scope": "fixed_disclosed_SPY_common_stock_holdings_not_entire_market_or_daily_index_history",
+      "asof": "2020-09-30",
+      "filed_on": "2020-11-30",
+      "not_before_utc": "2020-12-02T00:00:00+00:00",
+      "availability_convention": "Conservative two-calendar-day bound after SEC filing; never use report date as publication date",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000119312520305082/d72640dn30d.htm",
+      "filing_sha256": "6df43d7afcdf8d9f3c0057b2b92c9801a18044b56c3e926e9dfb139aa8da8213",
+      "filing_index_sha256": "504a1f81866878212b32d66dfc83854822cb49777bd56cd66070b00a369f5b2a",
+      "security_count": 505,
+      "common_stock_market_value_usd": 293908088428,
+      "all_disclosed_rows_retained": true,
+      "source_row_keys_are_permanent_security_ids": false,
+      "backtest_ready": false,
+      "blockers": [
+        "Resolve each security's historical symbol/share-class identity without survivor exclusions.",
+        "Audit listing/action/raw-price coverage and terminal outcomes for the retained cohort.",
+        "This is a fixed historical basket; daily full-market/index membership is not established."
+      ],
+      "holding_rows_csv": "docs/research_data/spy_2020_disclosed_holdings.csv",
+      "holding_rows_sha256": "5e6fefcbaf99125831447e2255e55c7fbc6bb2cfee727112149adc1e615e9c1c",
+      "example_retained_rows": [
+        "Activision Blizzard, Inc.",
+        "Nielsen Holdings PLC",
+        "SVB Financial Group(a)",
+        "Twitter, Inc.(a)"
+      ]
+    }
+  ],
+  "all_market_claim": false,
+  "backtest_ready": false,
+  "new_data_purchases_usd": 0
+}

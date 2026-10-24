@@ -57,11 +57,14 @@ records a $0 new-purchase policy, four successful company-event access checks
 and ten review candidates. Optional [historical-universe mode](docs/historical_universe_format.md)
 adds dated IPO/ticker lifetimes and verified terminal cash events. Focused
 tests and [corporate-action accounting](docs/corporate_action_progress.md)
-now cover splits and ordinary dividends: 69 focused tests pass, and all 36
-prior holding-study financial replays match exactly. The full suite has 346
-passes and two optional ML dependency errors (`sklearn` is not installed).
-Historical membership/event completeness and suitable corporate-action risk
-diagnostics are still required before broad-market performance scoring.
+cover splits and ordinary dividends, with 36 exact prior financial replays.
+The [raw-price pilot and historical-basket update](docs/raw_action_pilot_and_historical_baskets.md)
+adds a successful real AAPL accounting pilot, action-aware risk reconciliation,
+36 exact legacy daily-envelope comparisons, and public 2016/2020 holdings
+registers with 506/505 security rows. Historical ticker/identity, action and
+price coverage must still be audited before broader strategy scoring; fixed
+fund holdings are not a daily all-US-stock universe. Optional ML tests still
+require `scikit-learn`; installation instructions are in the update.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

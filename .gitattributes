@@ -1,0 +1,2 @@
+# Preserve reviewed membership CSV checksums on Windows and Raspberry Pi.
+docs/research_data/*.csv -text

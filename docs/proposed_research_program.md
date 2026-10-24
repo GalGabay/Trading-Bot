@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Most recent engineering result:** The [raw-price/action pilot and historical-basket work](raw_action_pilot_and_historical_baskets.md)
+provides a verified accounting example, supported action-aware risk diagnostics,
+and complete extracted public 2016/2020 fund holdings lists (506/505 securities).
+These are fixed dated cohorts, not a daily full-market security master.
+Historical identity, raw-price/action coverage and terminal outcomes for the
+larger cohort remain due. No strategy return search or paper activation has
+been approved by these accounting checks. New purchases remain $0.
+
 **Cost/lifecycle update:** The owner prefers no new data spending. The
 [free-source assessment](free_data_and_lifecycle_progress.md) records $0 in
 new purchases, four successful company-event queries and ten review records.
@@ -7,7 +15,8 @@ Initial [dated identity/lifecycle support](historical_universe_format.md) has
 been added to the simulator. The [subsequent action/accounting increment](corporate_action_progress.md)
 adds splits and ordinary dividends, with 69 passing focused tests and 36
 exact prior financial replays. Complete historical membership/event coverage
-and action-aware risk diagnostics remain due before broad scoring.
+remains due before broad scoring. Supported action-aware risk reconciliation
+is now implemented; the latest update above supersedes that earlier gate.
 
 **Latest update, 2026-10-24:** After the goal-fit and holding-time studies,
 the owner authorized a broad-universe feasibility audit and scoped entry/
@@ -15,7 +24,8 @@ selection research. The [completed audit](broad_universe_audit_results.md)
 demonstrates broader daily price access but not historical-universe
 completeness. The [eight-arm study](broad_entry_selection_study.md) separates
 universe size, stricter entries and ranking. Its simulations await audited
-lifecycle data and a dynamic-universe engine. No owner risk changes are due
+lifecycle data. The optional dynamic-universe engine exists; broader data
+completeness is still unverified. No owner risk changes are due
 for this engineering work; purchases and paper activation need later approval.
 
 **Status:** The owner authorized starting Study A from this proposal on

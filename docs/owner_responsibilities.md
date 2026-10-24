@@ -14,6 +14,16 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest engineering step:** The [raw-price pilot and historical-stock lists](raw_action_pilot_and_historical_baskets.md)
+use existing/public sources with $0 in new purchases. My next work is mapping
+the 506 retained 2016 holdings to historical securities/tickers and auditing
+their raw prices, company actions and terminal outcomes. You need not gather
+stocks, edit the risk JSON, add a card or install ML dependencies for that work.
+Before scoring a materially revised research scope, I will present it for
+review. Installing the optional ML requirements on Windows can clear the two
+ML dependency errors; commands are in the linked update. Raspberry Pi setup
+is still a later, separate task.
+
 Phases 0–13, the Phase 14 offline ML research workflow, and the standalone
 safeguards in Sections 23–24 have been built. The ML workflow has not been run
 against a newly chosen untouched evaluation period.
@@ -69,8 +79,9 @@ The [free-data/lifecycle update](free_data_and_lifecycle_progress.md) records
 four successful company-event queries under existing access and ten review
 candidates. The [subsequent action/accounting work](corporate_action_progress.md)
 adds split and ordinary-dividend support, 69 passing focused tests and 36
-exact historical replays. Complete historical membership/event coverage and
-supported risk diagnostics remain due before a broad return study. No Python,
+exact historical replays. Supported action-aware risk diagnostics now exist,
+along with a reviewed Apple pilot and historical fund holdings lists. Complete
+cohort identity/action/price coverage remains due before a broad return study. No Python,
 JSON, billing or manual stock-collection action is required from you now.
 Paper activation remains a separate decision.
 

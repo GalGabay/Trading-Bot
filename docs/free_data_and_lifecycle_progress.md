@@ -5,6 +5,12 @@ The owner is unsure about paying, so continue with existing access and public
 sources. Do not subscribe, start a paid trial or upgrade an account to unblock
 research. Reconsider that policy only if the owner explicitly changes it.
 
+**Latest result:** The [real accounting pilot and public historical-basket work](raw_action_pilot_and_historical_baskets.md)
+adds action-aware risk diagnostics and 506/505-row historical source lists.
+Company identity, full event/price coverage and unsupported events remain
+research gates. The owner reports having no billing card configured; no
+billing account inspection, subscription change or purchase was performed.
+
 **Subsequent engineering update:** [Lifecycle/action verification](corporate_action_progress.md)
 now includes 69 passing focused tests, 36 exact historical financial replays,
 split and ordinary-dividend accounting, and a reviewed AAPL split record.

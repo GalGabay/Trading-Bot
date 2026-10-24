@@ -29,8 +29,10 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
     reconstructed. Missing prices, inconsistent fills, and mismatched equity
     raise; no prices are filled and no path is fabricated.
     """
-    if any(case.get(key) for key in ("cash_settlements", "share_actions", "dividend_entitlements", "dividend_payments")):
-        raise ValueError("This OHLC risk helper cannot score corporate-action cash/share events; do not drop them from the ledger")
+    action_names = ("share_actions", "dividend_entitlements", "dividend_payments", "cash_settlements")
+    has_actions = any(case.get(key) for key in action_names)
+    if has_actions and not case.get("universe_metadata"):
+        raise ValueError("Corporate-action diagnostics require the explicit historical-universe metadata")
     curves = case["equity_curve"]
     if not curves:
         raise ValueError("Risk diagnostics require a nonempty equity curve")
@@ -56,6 +58,22 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
         raise ValueError("Initial cash must be finite and positive")
     cash = float(initial_cash)
     positions = {}
+    claims = {}
+    action_groups = {name: defaultdict(list) for name in action_names}
+    action_ids = set()
+    for name in action_names:
+        for event in case.get(name, ()):
+            day = pd.Timestamp(event["timestamp"])
+            if day not in allowed_dates or event["instrument_id"] not in prices:
+                raise ValueError("Corporate-action event lies outside declared dates or instruments")
+            event_id = event.get("event_id")
+            if not isinstance(event_id, str) or not event_id:
+                raise ValueError("Corporate-action event requires an identifier")
+            if name != "dividend_payments":
+                if event_id in action_ids:
+                    raise ValueError("Duplicate corporate-action entitlement/share/cash event")
+                action_ids.add(event_id)
+            action_groups[name][day].append(event)
     upper_peak = cash
     close_peak = cash
     previous_close = cash
@@ -78,6 +96,42 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
             raise ValueError("Negative cash in reconstructed ledger")
 
     for day, point in zip(dates, curves):
+        # All modeled corporate events occur at this open, in the same order
+        # as the engine. Never mark old share counts against post-split prices.
+        for event in action_groups["share_actions"][day]:
+            symbol = event["instrument_id"]
+            old, new = event["old_quantity"], event["new_quantity"]
+            numerator, denominator = event["new_shares"], event["old_shares"]
+            if any(type(n) is not int or n < 0 for n in (old, new)) or any(type(n) is not int or n <= 0 for n in (numerator, denominator)):
+                raise ValueError("Invalid split share quantities/ratio")
+            if positions.get(symbol, 0) != old or new * denominator != old * numerator:
+                raise ValueError("Split event does not reconcile owned shares")
+            if old:
+                positions[symbol] = new
+        for event in action_groups["dividend_entitlements"][day]:
+            quantity, rate, amount = event["quantity"], event["cash_per_share"], event["amount"]
+            if positions.get(event["instrument_id"]) != quantity or type(quantity) is not int or quantity <= 0:
+                raise ValueError("Dividend entitlement does not match prior shares")
+            if not all(_finite_number(x) and x > 0 for x in (rate, amount)) or not isclose(quantity * rate, amount, abs_tol=1e-6):
+                raise ValueError("Invalid dividend entitlement amount/rate")
+            if event["pay_session"] < day.date().isoformat():
+                raise ValueError("Dividend payment precedes ordinary ex-session")
+            claims[event["event_id"]] = event
+        for event in action_groups["dividend_payments"][day]:
+            claim = claims.pop(event["event_id"], None)
+            if claim is None or claim["pay_session"] != day.date().isoformat() or claim["instrument_id"] != event["instrument_id"] or claim["amount"] != event["amount"]:
+                raise ValueError("Dividend cash payment lacks a matching unpaid entitlement/date")
+            cash += event["amount"]
+        for event in action_groups["cash_settlements"][day]:
+            symbol, quantity = event["instrument_id"], event["quantity"]
+            if positions.get(symbol) != quantity or type(quantity) is not int or quantity <= 0:
+                raise ValueError("Terminal cash event does not resolve the complete held position")
+            rate, amount = event["cash_per_share"], event["total_cash"]
+            if not all(_finite_number(x) and x >= 0 for x in (rate, amount)) or not isclose(quantity * rate, amount, abs_tol=1e-6):
+                raise ValueError("Invalid terminal cash payment")
+            cash += amount
+            del positions[symbol]
+        claim_value = sum(item["amount"] for item in claims.values())
         day_fills = grouped[day]
         touches = [fill for fill in day_fills if fill["signal_reason"].startswith("PROTECTIVE_STOP_TOUCH:")]
         opens = [fill for fill in day_fills if fill not in touches]
@@ -94,7 +148,7 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
                 raise ValueError(f"{symbol}: impossible OHLC relationships")
 
         def mark_open():
-            return cash + sum(quantity * float(bars[symbol]["open"]) for symbol, quantity in positions.items())
+            return cash + claim_value + sum(quantity * float(bars[symbol]["open"]) for symbol, quantity in positions.items())
 
         open_marks = [mark_open()]
         for fill in opens:
@@ -103,7 +157,7 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
         stopped = {fill["symbol"]: fill for fill in touches}
         if len(stopped) != len(touches):
             raise ValueError("Duplicate intraday stop exits")
-        low_value = high_value = cash
+        low_value = high_value = cash + claim_value
         for symbol, quantity in positions.items():
             lower = quantity * float(bars[symbol]["low"])
             upper = quantity * float(bars[symbol]["high"])
@@ -119,7 +173,7 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
             raise ValueError("Intraday stop has no open position")
         for fill in touches:
             apply(fill)
-        close_equity = cash + sum(quantity * float(bars[symbol]["close"]) for symbol, quantity in positions.items())
+        close_equity = cash + claim_value + sum(quantity * float(bars[symbol]["close"]) for symbol, quantity in positions.items())
         if not isclose(close_equity, point["equity"], rel_tol=1e-11, abs_tol=1e-6):
             raise ValueError(f"Fill ledger and saved equity differ on {day}")
         lower = min(low_value, close_equity, *open_marks)
@@ -128,24 +182,36 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
             raise ValueError("Nonpositive conservative equity bound")
         close_peak = max(close_peak, close_equity)
         upper_peak = max(upper_peak, upper)
-        exposure = (close_equity - cash) / close_equity
+        exposure = (close_equity - cash - claim_value) / close_equity
         if not isclose(exposure, point["exposure"], abs_tol=1e-9):
             raise ValueError("Fill ledger and saved exposure differ")
+        if "cash" in point and not isclose(cash, point["cash"], abs_tol=1e-6):
+            raise ValueError("Cash ledger and saved cash differ")
+        if "dividend_receivable" in point and not isclose(claim_value, point["dividend_receivable"], abs_tol=1e-6):
+            raise ValueError("Dividend claim ledger and saved receivable differ")
         rows.append({"timestamp": day.isoformat(), "cash_at_close": cash,
                      "equity_at_close": close_equity, "equity_lower_envelope": lower,
                      "equity_upper_envelope": upper, "observed_closing_drawdown": close_equity / close_peak - 1,
                      "conservative_drawdown_bound": lower / upper_peak - 1,
                      "conservative_daily_return_bound": lower / previous_close - 1,
                      "model_open_equity_minimum": min(open_marks)})
+        if has_actions:
+            rows[-1]["dividend_receivable_at_close"] = claim_value
         previous_close = close_equity
     final_positions = {symbol: position["quantity"] for symbol, position in case["metrics"]["open_positions"].items()}
     if positions != final_positions:
         raise ValueError("Reconstructed final positions differ from report")
+    final_claims = {item["event_id"]: item for item in case.get("final_dividend_receivables", ())}
+    if claims != final_claims:
+        raise ValueError("Reconstructed final dividend claims differ from report")
     worst = min(rows, key=lambda row: row["conservative_drawdown_bound"])
-    return {"ledger_reconciled": True, "intraday_equity_observed": False,
+    result = {"ledger_reconciled": True, "intraday_equity_observed": False,
             "observed_max_closing_drawdown": min(row["observed_closing_drawdown"] for row in rows),
             "conservative_drawdown_bound": worst["conservative_drawdown_bound"],
             "conservative_drawdown_bound_date": worst["timestamp"],
             "conservative_daily_return_bound": min(row["conservative_daily_return_bound"] for row in rows),
             "limitation": "Daily extrema and pre/post-stop states need not coexist. A bound breach is not an observed breach; this does not reconstruct real intraday equity.",
             "daily_envelopes": rows}
+    if has_actions:
+        result.update(corporate_actions_reconciled=True, dividend_claim_valuation="nominal_USD_not_intraday_quotes")
+    return result

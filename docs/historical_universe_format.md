@@ -1,9 +1,11 @@
 # Historical-universe support: what the new code does
 
-**Latest update:** [Split/dividend accounting and lifecycle verification](corporate_action_progress.md)
-add version-2 action records, causal split feature views and separate
-ordinary-dividend entitlement/payment ledgers. All 36 prior holding-study
-replays match exactly; 69 focused lifecycle/action/source tests pass.
+**Latest update:** [Reviewed raw-price pilot, action-aware risk and historical baskets](raw_action_pilot_and_historical_baskets.md)
+adds a real-data accounting example, dated historical source lists and
+action-aware daily risk reconciliation. Version-2 action records retain
+causal split feature views and separate dividend entitlement/payment ledgers.
+All 36 prior financial replays and 36 daily-risk comparisons match exactly;
+current test totals and remaining data gates are in the linked update.
 
 ## In ordinary words
 
@@ -146,8 +148,10 @@ Payments appear in `cash_settlements`, **not as broker stock-sale fills**.
 equity, but trade win rate, profit factor, completed-trade counts and trade
 holding duration exclude these cash events. Separate settlement metrics show
 how positions were resolved. `daily_research.pack` preserves the full event
-ledger and universe metadata. The old OHLC risk-envelope helper explicitly
-rejects cash-event cases rather than dropping events and reporting false risk.
+ledger and universe metadata. The OHLC risk-envelope helper now independently
+reconstructs supported share conversions, dividend claims/payments and terminal
+cash, checking saved cash/equity/exposure and final holdings/claims. Daily
+envelopes remain conservative bounds, not observed intraday equity.
 
 ## Deliberate limits of this increment
 
