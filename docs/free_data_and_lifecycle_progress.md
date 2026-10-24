@@ -5,6 +5,13 @@ The owner is unsure about paying, so continue with existing access and public
 sources. Do not subscribe, start a paid trial or upgrade an account to unblock
 research. Reconsider that policy only if the owner explicitly changes it.
 
+**Subsequent engineering update:** [Lifecycle/action verification](corporate_action_progress.md)
+now includes 69 passing focused tests, 36 exact historical financial replays,
+split and ordinary-dividend accounting, and a reviewed AAPL split record.
+The earlier implementation/next-work notes below describe the original
+increment; current blockers are verified historical membership/event coverage
+and unsupported corporate-action/risk cases, not a required data purchase.
+
 ## Do I already have paid data?
 
 We have not inspected your billing/subscription screen, so we cannot establish

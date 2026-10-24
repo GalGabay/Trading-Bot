@@ -73,7 +73,9 @@ catalog does not supply complete historical membership or lifecycle outcomes.
 
 The finite [entry/selection study](broad_entry_selection_study.md) is scoped
 with eight matched arms. Simulation waits for audited historical inputs,
-validated dynamic-universe behavior and corporate-action coverage. The
+complete corporate-action coverage and suitable risk diagnostics. Initial
+split/dividend accounting now has [69 passing focused tests and 36 exact
+financial replays](corporate_action_progress.md). The
 [free-data update](free_data_and_lifecycle_progress.md) records the owner's
 $0 new-purchase policy and newly demonstrated company-event access. No owner
 risk settings or account upgrade are needed for the next engineering work.

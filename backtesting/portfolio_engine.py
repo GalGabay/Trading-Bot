@@ -8,7 +8,7 @@ implementation of the complete paper-trading risk policy.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from math import floor, isfinite
 
 import pandas as pd
@@ -23,6 +23,7 @@ from backtesting.protective_exits import (
 from backtesting.research_policy import AllocationPolicy, HaltPolicy, ResearchHaltState
 from backtesting.holding_policy import HoldingEntry, HoldingPolicy
 from backtesting.universe import HistoricalUniverse, UniverseDataError
+from backtesting.corporate_actions import feature_views, split_quantity
 
 
 @dataclass(frozen=True)
@@ -54,6 +55,7 @@ class PortfolioEquityPoint:
     gross_exposure: float
     position_count: int
     drawdown: float
+    dividend_receivable: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -77,6 +79,10 @@ class PortfolioBacktestResult:
     buy_decisions: tuple[dict, ...] = ()
     cash_settlements: tuple[dict, ...] = ()
     universe_metadata: dict | None = None
+    share_actions: tuple[dict, ...] = ()
+    dividend_entitlements: tuple[dict, ...] = ()
+    dividend_payments: tuple[dict, ...] = ()
+    final_dividend_receivables: tuple[dict, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -177,24 +183,14 @@ class PortfolioBacktestEngine:
         features: dict[str, pd.DataFrame] = {}
         dates: pd.Series | None = None if universe is None else universe.dates
         segment_starts: dict[str, dict[int, int]] = {}
+        feature_lookup: dict[str, dict[int, pd.DataFrame]] = {}
         for symbol, source in sorted(datasets.items()):
             if not symbol or symbol != symbol.strip().upper() or symbol in bars:
                 raise ValueError("Dataset keys must be unique uppercase symbols")
             if universe is not None:
                 frame = universe.prepare(symbol, source)
                 bars[symbol] = frame
-                # A zero-volume observation is preserved in source bars but
-                # cannot manufacture a tradable session or warmup continuity.
-                active = frame.loc[frame["volume"] > 0]
-                chunks = []
-                segment_starts[symbol] = {}
-                groups = pd.Series(active.index, index=active.index).diff().ne(1).cumsum()
-                for _, block in active.groupby(groups):
-                    built = build_features(block, config=FeatureConfig(periods_per_year=self.costs.periods_per_year))
-                    built.index = block.index
-                    chunks.append(built)
-                    segment_starts[symbol].update({int(i): int(block.index[0]) for i in block.index})
-                features[symbol] = pd.concat(chunks) if chunks else active.copy()
+                feature_lookup[symbol], segment_starts[symbol] = feature_views(frame, symbol, universe, self.costs.periods_per_year)
                 continue
             validate_candles(source)
             frame = source.loc[:, CANONICAL_CANDLE_COLUMNS].copy()
@@ -238,6 +234,10 @@ class PortfolioBacktestEngine:
         points: list[PortfolioEquityPoint] = []
         events: list[str] = []
         cash_settlements: list[dict] = []
+        share_actions: list[dict] = []
+        dividend_entitlements: list[dict] = []
+        dividend_payments: list[dict] = []
+        receivables: dict[str, dict] = {}
         peak = cash
         previous_close_equity = cash
         halt = ResearchHaltState(self.halt_policy, self.limits.max_daily_loss, self.limits.max_drawdown)
@@ -247,7 +247,7 @@ class PortfolioBacktestEngine:
             if not self.record_decisions:
                 return
             marks = open_prices if phase == "open" else close_prices
-            value = cash + sum(qty * marks[name] for name, qty in positions.items())
+            value = cash + sum(item["amount"] for item in receivables.values()) + sum(qty * marks[name] for name, qty in positions.items())
             buy_decisions.append({
                 "timestamp": timestamp.isoformat(), "symbol": symbol, "phase": phase,
                 "status": status, "blockers": list(blockers), "cash": cash, "equity": value,
@@ -272,7 +272,10 @@ class PortfolioBacktestEngine:
 
         for index in indices:
             timestamp = dates.iloc[index]
-            available_symbols = symbols if universe is None else [s for s in symbols if index in features[s].index]
+            available_symbols = symbols if universe is None else [s for s in symbols if index in feature_lookup[s]]
+            if universe is not None:
+                for symbol in available_symbols:
+                    features[symbol] = feature_lookup[symbol][index]
             open_prices = {symbol: float(bars[symbol].loc[index]["open"]) for symbol in available_symbols}
             low_prices = {symbol: float(bars[symbol].loc[index]["low"]) for symbol in available_symbols}
             close_prices = {symbol: float(bars[symbol].loc[index]["close"]) for symbol in available_symbols}
@@ -281,6 +284,44 @@ class PortfolioBacktestEngine:
             pending = {symbol: order for symbol, order in pending.items() if order.execute_index > index}
 
             if universe is not None:
+                for action in universe.splits_at(timestamp):
+                    symbol = action.instrument_id
+                    quantity = positions.get(symbol, 0)
+                    new_quantity = split_quantity(quantity, action.new_shares, action.old_shares)
+                    if quantity:
+                        positions[symbol] = new_quantity
+                        entries[symbol] = replace(entries[symbol], quantity=new_quantity)
+                    if symbol in stops:
+                        stops[symbol] = replace(stops[symbol], price=stops[symbol].price / action.ratio)
+                    for orders in (pending, due):
+                        if symbol in orders:
+                            order = orders[symbol]
+                            orders[symbol] = replace(
+                                order,
+                                planned_quantity=None if order.planned_quantity is None else order.planned_quantity * action.new_shares // action.old_shares,
+                                stop_price=None if order.stop_price is None else order.stop_price / action.ratio,
+                            )
+                    share_actions.append({
+                        "timestamp": timestamp.isoformat(), "event_id": action.event_id, "instrument_id": symbol,
+                        "old_quantity": quantity, "new_quantity": new_quantity, "new_shares": action.new_shares,
+                        "old_shares": action.old_shares, "source": action.source,
+                    })
+                # Ordinary ex-date entitlement belongs to prior holders, before
+                # today's discretionary sales/buys. Same-day splits apply first.
+                for dividend in universe.dividends_at(timestamp):
+                    quantity = positions.get(dividend.instrument_id, 0)
+                    if quantity:
+                        claim = {"timestamp": timestamp.isoformat(), "event_id": dividend.event_id,
+                                 "instrument_id": dividend.instrument_id, "quantity": quantity,
+                                 "cash_per_share": dividend.cash_per_share, "amount": quantity * dividend.cash_per_share,
+                                 "pay_session": dividend.pay_session, "source": dividend.source}
+                        receivables[dividend.event_id] = claim
+                        dividend_entitlements.append(dict(claim))
+                for event_id, claim in list(receivables.items()):
+                    if claim["pay_session"] == timestamp.date().isoformat():
+                        cash += claim["amount"]
+                        dividend_payments.append({**claim, "timestamp": timestamp.isoformat()})
+                        del receivables[event_id]
                 for outcome in universe.outcomes_at(timestamp):
                     symbol = outcome.instrument_id
                     pending.pop(symbol, None)
@@ -351,7 +392,8 @@ class PortfolioBacktestEngine:
                 fills.append(self._fill(timestamp, signal, quantity, open_prices[symbol], price))
                 next_entry_index[symbol] = index + self.reentry_cooldown_sessions + 1
 
-            open_equity = cash + sum(quantity * open_prices[symbol] for symbol, quantity in positions.items())
+            claim_value = sum(item["amount"] for item in receivables.values())
+            open_equity = cash + claim_value + sum(quantity * open_prices[symbol] for symbol, quantity in positions.items())
             if open_equity <= 0:
                 raise ValueError("Portfolio equity became nonpositive at an open")
             observe_loss("open", open_equity, index, timestamp)
@@ -381,7 +423,7 @@ class PortfolioBacktestEngine:
                     journal(symbol, "open", "blocked", ("position_count",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; position-count limit")
                     continue
-                equity = cash + sum(quantity * open_prices[name] for name, quantity in positions.items())
+                equity = cash + claim_value + sum(quantity * open_prices[name] for name, quantity in positions.items())
                 gross = sum(quantity * open_prices[name] for name, quantity in positions.items())
                 price = open_prices[symbol] * (1 + multiplier)
                 stop = order.stop_price
@@ -450,7 +492,7 @@ class PortfolioBacktestEngine:
             if cash < -1e-6 or len(positions) > self.limits.max_positions:
                 raise ValueError("Shared cash or position-count invariant failed")
 
-            equity = cash + sum(quantity * close_prices[symbol] for symbol, quantity in positions.items())
+            equity = cash + claim_value + sum(quantity * close_prices[symbol] for symbol, quantity in positions.items())
             if equity <= 0:
                 raise ValueError("Portfolio equity became nonpositive at a close")
             peak = max(peak, equity)
@@ -459,6 +501,7 @@ class PortfolioBacktestEngine:
                 timestamp=timestamp, cash=cash, equity=equity,
                 gross_exposure=gross_close / equity, position_count=len(positions),
                 drawdown=equity / peak - 1,
+                dividend_receivable=claim_value,
             ))
             observe_loss("close", equity, index, timestamp)
             if halt.blocked and self.halt_policy.daily_pause_sessions is not None:
@@ -572,6 +615,8 @@ class PortfolioBacktestEngine:
             holding_reviews=tuple(holding_reviews), buy_decisions=tuple(buy_decisions),
             cash_settlements=tuple(cash_settlements),
             universe_metadata=None if universe is None else universe.metadata(),
+            share_actions=tuple(share_actions), dividend_entitlements=tuple(dividend_entitlements),
+            dividend_payments=tuple(dividend_payments), final_dividend_receivables=tuple(receivables.values()),
         )
 
     def _loss_breach(self, equity: float, prior_close: float, peak: float) -> str | None:
@@ -642,7 +687,29 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
     settlement_profits: list[float] = []
     ledger = [(fill.timestamp, 1, i, fill) for i, fill in enumerate(result.fills)]
     ledger += [(pd.Timestamp(item["timestamp"]), 0, i, item) for i, item in enumerate(result.cash_settlements)]
+    ledger += [(pd.Timestamp(item["timestamp"]), -2, i, item) for i, item in enumerate(result.share_actions)]
+    ledger += [(pd.Timestamp(item["timestamp"]), -1, i, item) for i, item in enumerate(result.dividend_entitlements)]
+    claims: dict[str, dict] = {}
     for _, kind, _, fill in sorted(ledger, key=lambda item: item[:3]):
+        if kind == -2:
+            symbol = fill["instrument_id"]
+            entry = entries.get(symbol)
+            if (0 if entry is None else entry.quantity) != fill["old_quantity"]:
+                raise ValueError("Split ledger does not match owned shares")
+            expected = split_quantity(fill["old_quantity"], fill["new_shares"], fill["old_shares"])
+            if expected != fill["new_quantity"]:
+                raise ValueError("Split ledger has an inconsistent share conversion")
+            if entry is not None:
+                entries[symbol] = replace(entry, quantity=expected, fill_price=entry.fill_price * fill["old_shares"] / fill["new_shares"])
+            continue
+        if kind == -1:
+            entry = entries.get(fill["instrument_id"])
+            if entry is None or entry.quantity != fill["quantity"] or fill["event_id"] in claims:
+                raise ValueError("Dividend entitlement does not match prior owned shares or is duplicated")
+            if abs(fill["amount"] - entry.quantity * fill["cash_per_share"]) > 1e-6:
+                raise ValueError("Dividend entitlement amount differs from its share rate")
+            claims[fill["event_id"]] = fill
+            continue
         if kind == 0:
             symbol = fill["instrument_id"]
             entry = entries.pop(symbol, None)
@@ -670,6 +737,14 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
         raise ValueError("Open fills do not match final positions")
     if result.final_stops and set(result.final_stops) != set(entries):
         raise ValueError("Protective stops do not match final positions")
+    for payment in result.dividend_payments:
+        claim = claims.pop(payment["event_id"], None)
+        if claim is None or claim["amount"] != payment["amount"] or pd.Timestamp(payment["timestamp"]).date().isoformat() != claim["pay_session"]:
+            raise ValueError("Dividend payment has no matching unpaid entitlement/date")
+    if claims != {item["event_id"]: item for item in result.final_dividend_receivables}:
+        raise ValueError("Outstanding dividend receivables do not reconcile")
+    if abs(sum(item["amount"] for item in claims.values()) - points[-1].dividend_receivable) > 1e-6:
+        raise ValueError("Dividend receivables differ from final equity mark")
     open_positions = {
         symbol: {
             "quantity": entry.quantity,
@@ -679,11 +754,19 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
         }
         for symbol, entry in sorted(entries.items())
     }
-    accounted_profit = sum(realized.values()) + sum(
+    dividend_income = sum(item["amount"] for item in result.dividend_entitlements)
+    accounted_profit = dividend_income + sum(realized.values()) + sum(
         position["marked_unrealized_pnl"] for position in open_positions.values()
     )
     if abs(accounted_profit - (points[-1].equity - result.costs.initial_cash)) > 1e-6:
         raise ValueError("Realized plus marked P&L does not reconcile to final equity")
+    if result.universe_metadata is not None:
+        reconstructed_cash = result.costs.initial_cash + sum(
+            (-1 if fill.side == SignalAction.BUY else 1) * fill.quantity * fill.fill_price - fill.commission
+            for fill in result.fills
+        ) + sum(item["total_cash"] for item in result.cash_settlements) + sum(item["amount"] for item in result.dividend_payments)
+        if abs(reconstructed_cash - points[-1].cash) > 1e-6:
+            raise ValueError("Cash, trade fills and corporate-action payments do not reconcile")
     max_exposure = max(point.gross_exposure for point in points)
     stop_fills = [
         fill for fill in result.fills
@@ -719,5 +802,8 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
             cash_settlement_realized_pnl=sum(settlement_profits),
             resolved_positions_including_settlements=len(profits) + len(settlement_profits),
             trade_metrics_exclude_cash_settlements=True,
+            split_event_count=len(result.share_actions), dividend_income_earned=dividend_income,
+            dividend_cash_received=sum(item["amount"] for item in result.dividend_payments),
+            dividend_receivable=sum(item["amount"] for item in result.final_dividend_receivables),
         )
     return metrics

@@ -115,6 +115,57 @@ class CashOutcome:
             raise UniverseDataError("Verified cash per share must be finite and nonnegative")
 
 
+@dataclass(frozen=True)
+class SplitAction:
+    event_id: str
+    instrument_id: str
+    effective_session: str
+    new_shares: int
+    old_shares: int
+    known_at: str
+    source: str
+
+    def __post_init__(self):
+        for name in ("event_id", "instrument_id", "source"):
+            _text(getattr(self, name), name)
+        _date(self.effective_session)
+        _aware(self.known_at)
+        if self.instrument_id != self.instrument_id.strip().upper():
+            raise UniverseDataError("Split requires an uppercase stable instrument ID")
+        if any(type(value) is not int or value < 1 for value in (self.new_shares, self.old_shares)) or self.new_shares == self.old_shares:
+            raise UniverseDataError("Split requires distinct positive integer new/old share counts")
+
+    @property
+    def ratio(self) -> float:
+        return self.new_shares / self.old_shares
+
+
+@dataclass(frozen=True)
+class CashDividend:
+    event_id: str
+    instrument_id: str
+    ex_session: str
+    pay_session: str
+    cash_per_share: float
+    known_at: str
+    source: str
+    kind: str = "ordinary_cash"
+    share_basis: str = "post_split"
+
+    def __post_init__(self):
+        for name in ("event_id", "instrument_id", "source"):
+            _text(getattr(self, name), name)
+        if self.instrument_id != self.instrument_id.strip().upper():
+            raise UniverseDataError("Dividend requires an uppercase stable instrument ID")
+        if _date(self.pay_session) < _date(self.ex_session):
+            raise UniverseDataError("Ordinary dividend payment cannot precede its explicit ex-session")
+        _aware(self.known_at)
+        if isinstance(self.cash_per_share, bool) or not isinstance(self.cash_per_share, (int, float)) or not isfinite(self.cash_per_share) or self.cash_per_share <= 0:
+            raise UniverseDataError("Ordinary cash dividend must be finite and positive")
+        if self.kind != "ordinary_cash" or self.share_basis != "post_split":
+            raise UniverseDataError("Special/due-bill dividends and ambiguous split share bases are unsupported")
+
+
 class HistoricalUniverse:
     """Daily calendar plus independently sourced historical identity intervals.
 
@@ -127,11 +178,16 @@ class HistoricalUniverse:
         self, *, sessions: list[TradingSession], listings: list[ListingPeriod],
         cash_outcomes: list[CashOutcome] | None = None, currency: str = "USD",
         price_basis: str, action_scope: str,
+        splits: list[SplitAction] | None = None, dividends: list[CashDividend] | None = None,
     ):
         if currency != "USD" or not sessions or not listings:
             raise UniverseDataError("Universe requires USD, explicit sessions and listing evidence")
-        if price_basis != "raw" or action_scope != "event_free_except_terminal_cash":
-            raise UniverseDataError("Initial universe mode requires declared raw, event-free inputs except supported terminal cash; other action adapters are incomplete")
+        if price_basis != "raw" or action_scope not in {"event_free_except_terminal_cash", "explicit_splits_and_ordinary_cash_dividends"}:
+            raise UniverseDataError("Universe mode requires declared raw inputs and an explicit supported action scope")
+        if (splits or dividends) and action_scope != "explicit_splits_and_ordinary_cash_dividends":
+            raise UniverseDataError("Split/dividend records conflict with an event-free declaration")
+        self.splits, self.dividends = tuple(splits or ()), tuple(dividends or ())
+        self.action_scope = action_scope
         self.sessions = tuple(sessions)
         self.manifest_sha256: str | None = None
         self.listings = tuple(listings)
@@ -190,6 +246,33 @@ class HistoricalUniverse:
                 raise UniverseDataError("Terminal payment requires a documented ended identity")
             timestamp = self.dates.iloc[self._index[pd.Timestamp(day, tz="America/New_York").tz_convert("UTC")]]
             self._outcomes.setdefault(timestamp, []).append(outcome)
+        self._splits: dict[pd.Timestamp, list[SplitAction]] = {}
+        self._dividends: dict[pd.Timestamp, list[CashDividend]] = {}
+        split_dates: set[tuple[str, str]] = set()
+        for action in (*self.splits, *self.dividends):
+            if action.event_id in event_ids:
+                raise UniverseDataError("Duplicate corporate-action event ID")
+            event_ids.add(action.event_id)
+            effective = action.effective_session if isinstance(action, SplitAction) else action.ex_session
+            day = _date(effective)
+            if day not in self._by_day:
+                raise UniverseDataError("Action requires an explicit saved exchange session")
+            timestamp = pd.Timestamp(day, tz="America/New_York").tz_convert("UTC")
+            if self.listing_at(action.instrument_id, timestamp) is None:
+                raise UniverseDataError("Action has no matching listed stable security identity")
+            if _aware(action.known_at) > self._by_day[day].opens_at:
+                raise UniverseDataError("Action evidence was not known by its effective open")
+            if isinstance(action, SplitAction):
+                key = (action.instrument_id, effective)
+                if key in split_dates:
+                    raise UniverseDataError("Multiple same-security same-session splits need explicit consolidation")
+                split_dates.add(key)
+                self._splits.setdefault(timestamp, []).append(action)
+            else:
+                pay = _date(action.pay_session)
+                if self.dates.iloc[0].date() <= pay <= self.dates.iloc[-1].date() and pay not in self._by_day:
+                    raise UniverseDataError("Payment session inside the calendar must be an actual saved session")
+                self._dividends.setdefault(timestamp, []).append(action)
 
     @property
     def instrument_ids(self) -> set[str]:
@@ -201,6 +284,12 @@ class HistoricalUniverse:
 
     def outcomes_at(self, timestamp: pd.Timestamp) -> tuple[CashOutcome, ...]:
         return tuple(self._outcomes.get(timestamp, ()))
+
+    def splits_at(self, timestamp: pd.Timestamp) -> tuple[SplitAction, ...]:
+        return tuple(self._splits.get(timestamp, ()))
+
+    def dividends_at(self, timestamp: pd.Timestamp) -> tuple[CashDividend, ...]:
+        return tuple(self._dividends.get(timestamp, ()))
 
     def prepare(self, instrument_id: str, source: pd.DataFrame) -> pd.DataFrame:
         """Map dated source tickers to one stable key, preserving actual rows only."""
@@ -239,15 +328,17 @@ class HistoricalUniverse:
 
     def metadata(self) -> dict:
         return {
-            "schema_version": 1, "identity_keys": "stable instrument IDs; ticker aliases are dated metadata",
+            "schema_version": 2 if self.splits or self.dividends else 1, "identity_keys": "stable instrument IDs; ticker aliases are dated metadata",
             "currency": "USD", "instrument_count": len(self._listings),
             "calendar_sessions": len(self.sessions),
             "listing_sources": sorted({p.source for p in self.listings}),
             "listings": [asdict(p) for p in self.listings],
             "cash_outcomes": [asdict(p) for p in self.cash_outcomes],
+            "splits": [asdict(p) for p in self.splits], "dividends": [asdict(p) for p in self.dividends],
             "manifest_sha256": self.manifest_sha256,
             "market_wide_performance_ready": False,
-            "price_and_action_scope": "Engineering support only: raw/event-free inputs; split, dividend, share-exchange and receivable adapters remain unimplemented.",
+            "price_and_action_scope": self.action_scope,
+            "unsupported_actions": "Fractional-share cash-in-lieu, share exchanges, special/due-bill dividends, taxes and uncertain terminal recoveries.",
             "limitation": "Supplied evidence is validated, not independently certified; no market-wide completeness assertion.",
         }
 
@@ -256,7 +347,9 @@ class HistoricalUniverse:
         """Load an explicit versioned manifest. Never infer events from CSV gaps."""
         value = json.loads(path.read_text(encoding="utf-8"))
         required = {"schema_version", "currency", "price_basis", "action_scope", "sessions", "listings", "cash_outcomes"}
-        if set(value) != required or type(value["schema_version"]) is not int or value["schema_version"] != 1:
+        if type(value.get("schema_version")) is int and value["schema_version"] == 2:
+            required |= {"splits", "dividends"}
+        if set(value) != required or type(value["schema_version"]) is not int or value["schema_version"] not in {1, 2}:
             raise UniverseDataError("Unsupported or incomplete historical-universe manifest")
         universe = cls(
             currency=value["currency"],
@@ -264,6 +357,8 @@ class HistoricalUniverse:
             sessions=[TradingSession(_aware(s["opens_at"]), _aware(s["closes_at"])) for s in value["sessions"]],
             listings=[ListingPeriod(**item) for item in value["listings"]],
             cash_outcomes=[CashOutcome(**item) for item in value["cash_outcomes"]],
+            splits=[SplitAction(**item) for item in value.get("splits", ())],
+            dividends=[CashDividend(**item) for item in value.get("dividends", ())],
         )
         universe.manifest_sha256 = hashlib.sha256(path.read_bytes()).hexdigest()
         return universe

@@ -1,5 +1,10 @@
 # Historical-universe support: what the new code does
 
+**Latest update:** [Split/dividend accounting and lifecycle verification](corporate_action_progress.md)
+add version-2 action records, causal split feature views and separate
+ordinary-dividend entitlement/payment ledgers. All 36 prior holding-study
+replays match exactly; 69 focused lifecycle/action/source tests pass.
+
 ## In ordinary words
 
 We need a history of **which investment existed when**, not only a pile of
@@ -20,8 +25,8 @@ database, and it does not change paper-order permissions.
 
 ## Versioned format and evidence
 
-`backtesting/universe.py` defines `HistoricalUniverse`, `ListingPeriod` and
-`CashOutcome`. The version-1 [JSON example](examples/historical_universe.example.json)
+`backtesting/universe.py` defines `HistoricalUniverse`, `ListingPeriod`,
+`CashOutcome`, `SplitAction` and `CashDividend`. The version-1 [JSON example](examples/historical_universe.example.json)
 is fictional and demonstrates a ticker change, a later IPO and a terminal
 cash payment. It contains only four sessions, so it cannot satisfy the
 200-session entry warmup and is not a profit study.
@@ -34,8 +39,42 @@ cash payment. It contains only four sessions, so it cannot satisfy the
 | `start_session`, `end_session_exclusive` | Inclusive start and optional exclusive end of a documented listing interval |
 | `start_known_at`, `end_known_at` | When each historical boundary became public; not our later download time |
 | `source` | Evidence reference for independent review; a nonempty reference is required but not proof that its contents are correct |
-| `price_basis`, `action_scope` | Required declarations: `raw` and `event_free_except_terminal_cash`; adjusted inputs or other unimplemented action conventions are rejected |
+| `price_basis`, `action_scope` | Raw prices plus either the version-1 event-free declaration or version-2 explicit split/ordinary-dividend scope; adjusted inputs are rejected |
 | `cash_outcomes` | Unique documented terminal payments: stable ID, actual payment session, USD per share, publication time and evidence |
+
+Version 2 keeps those fields and requires `splits` and `dividends` arrays,
+plus `action_scope: explicit_splits_and_ordinary_cash_dividends`. Arrays may
+be empty; supplied events need independent evidence. Add records in this form
+to a full manifest (the snippet alone is not a complete manifest):
+
+```json
+{
+  "splits": [{
+    "event_id": "EXAMPLE-SPLIT",
+    "instrument_id": "EXAMPLE-001",
+    "effective_session": "2023-01-05",
+    "new_shares": 2,
+    "old_shares": 1,
+    "known_at": "2023-01-04T12:00:00Z",
+    "source": "FICTIONAL EXAMPLE: replace with reviewed evidence"
+  }],
+  "dividends": [{
+    "event_id": "EXAMPLE-DIVIDEND",
+    "instrument_id": "EXAMPLE-001",
+    "ex_session": "2023-01-05",
+    "pay_session": "2023-01-06",
+    "cash_per_share": 1.0,
+    "known_at": "2023-01-04T12:00:00Z",
+    "source": "FICTIONAL EXAMPLE: cash available at specified open",
+    "kind": "ordinary_cash",
+    "share_basis": "post_split"
+  }]
+}
+```
+
+`pay_session` means cash is available under an explicit reviewed convention;
+do not automatically copy a vendor date. `known_at` covers all supplied terms.
+A payment after the saved calendar remains an outstanding nominal USD claim.
 
 Only explicitly classified ordinary common stock and REIT common shares on
 NYSE/NASDAQ/NYSE American (`AMEX`) are supported. Unknown security types or
@@ -114,11 +153,11 @@ rejects cash-event cases rather than dropping events and reporting false risk.
 
 - This is initial lifecycle support, **not a finished broad-market research
   engine**. Dynamic metadata explicitly reports market-wide readiness false.
-- No split/share-count adjustment, cash-dividend entitlement, stock merger,
-  spin-off, delayed receivable, tax, or FX adapter has been implemented here.
-  Use only event-free raw price segments for engineering work; never combine
-  current all-adjusted bars with explicit cash/share events as if accounting
-  were complete. Real performance scoring waits for action coverage/adapters.
+- Splits and ordinary cash dividends now have explicit accounting adapters.
+  Stock mergers, spin-offs, fractional-share cash-in-lieu, special/due-bill
+  dividends, delayed terminal-payment claims, taxes and FX remain unsupported.
+  Never combine all-adjusted bars with explicit cash/share events. Real
+  performance scoring still needs verified action/membership coverage.
 - Payment is modeled only when known and available at a session open. A
   nontrading claim waiting for a later payout needs an explicit valuation and
   settlement model; absent quotes before payment currently block the run.
@@ -128,9 +167,9 @@ rejects cash-event cases rather than dropping events and reporting false risk.
 - Separate signal/execution feeds in dynamic mode are rejected until their
   dated action conventions are audited. Entry ranking and stricter volume/
   momentum gates from the eight-arm study are not implemented in this increment.
-- No existing study was rerun and no automated unit tests were added or run
-  in this task. Python compilation was checked. Focused lifecycle/accounting
-  tests and unchanged-control replays are required before research scoring.
-  Raspberry Pi execution remains unverified.
+- 69 focused lifecycle/action/source tests pass and 36 saved holding-study
+  financial replays match exactly. Full-suite results and the two missing
+  optional ML-dependency errors are in the progress report. Raspberry Pi
+  execution remains unverified.
 
 No 2024-2025 price data, order endpoints or paid products are involved.

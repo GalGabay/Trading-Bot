@@ -56,8 +56,12 @@ The [free-data/lifecycle update](docs/free_data_and_lifecycle_progress.md)
 records a $0 new-purchase policy, four successful company-event access checks
 and ten review candidates. Optional [historical-universe mode](docs/historical_universe_format.md)
 adds dated IPO/ticker lifetimes and verified terminal cash events. Focused
-tests, control replays, split/dividend adapters and historical membership
-verification are still required before broad-market performance scoring.
+tests and [corporate-action accounting](docs/corporate_action_progress.md)
+now cover splits and ordinary dividends: 69 focused tests pass, and all 36
+prior holding-study financial replays match exactly. The full suite has 346
+passes and two optional ML dependency errors (`sklearn` is not installed).
+Historical membership/event completeness and suitable corporate-action risk
+diagnostics are still required before broad-market performance scoring.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

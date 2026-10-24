@@ -144,9 +144,11 @@ authorize paper activation.
 now exists for dated listings/aliases and verified terminal cash. Existing
 Alpaca access also returned company-event records. The
 [free-data/source assessment](free_data_and_lifecycle_progress.md) records
-the $0 new-purchase policy. Unit validation, unchanged-control replays, split/
-dividend adapters and historical data completeness remain outstanding; the
-study's scoring gate is still closed.
+the $0 new-purchase policy. The subsequent
+[action/accounting increment](corporate_action_progress.md) adds split and
+ordinary-dividend adapters, 69 passing focused tests and 36 exact historical
+replays. Complete historical membership/event coverage and supported risk
+diagnostics remain outstanding; the study's scoring gate is still closed.
 
 **Scoped, not yet simulated.** The feasibility audit determines which data
 gates remain. Codex owns source/adapter evaluation, lifecycle-aware engine

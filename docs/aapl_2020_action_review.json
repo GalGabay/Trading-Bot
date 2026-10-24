@@ -1,0 +1,37 @@
+{
+  "review_scope": "One historical split record; not a complete instrument universe or account entitlement record",
+  "security_identity": {
+    "instrument_id": "AAPL-COMMON-REVIEW-2020",
+    "symbol": "AAPL",
+    "cusip_in_sources": "037833100",
+    "limit": "Local reviewed identity for this event, not certification of a permanent cross-history security master"
+  },
+  "provider_evidence": {
+    "local_file": "data/reports/free_source_access_v1/AAPL_1.json",
+    "sha256": "5945fd7f9eed5a3c5b9ec03c54c71444a63b9412df763068f8a0b25b1f9f335a",
+    "event_id": "d209b6c2-9231-474c-a80e-1a79dacadbb2"
+  },
+  "primary_sources": [
+    "https://www.apple.com/newsroom/2020/07/apple-reports-third-quarter-results/",
+    "https://infomemo.theocc.com/infomemos?number=47369"
+  ],
+  "split": {
+    "event_id": "d209b6c2-9231-474c-a80e-1a79dacadbb2",
+    "instrument_id": "AAPL-COMMON-REVIEW-2020",
+    "effective_session": "2020-08-31",
+    "new_shares": 4,
+    "old_shares": 1,
+    "known_at": "2020-08-03T13:30:00Z",
+    "source": "Apple press release dated 2020-07-30; OCC memo 47369 dated 2020-07-31; see primary_sources in this review"
+  },
+  "knowledge_convention": "Conservative availability bound at the next Monday open following both dated public announcements; not a claim of an exact release timestamp",
+  "split_review_status": "Ratio, security and split-basis trading date corroborated; cash-in-lieu and dividend broker availability not certified",
+  "dividend_review": {
+    "provider_2020_cash_dividend_records": 4,
+    "february_record_missing_cusip_and_payable_date": true,
+    "payment_session_automatically_inferred": false,
+    "limit": "Issuer payment date is not proof of cash availability at a particular broker session open"
+  },
+  "market_wide_readiness": false,
+  "new_price_data_downloaded": false
+}

@@ -3654,3 +3654,32 @@ no automated unit tests or strategy simulations were run. The eight-arm study
 stays unscored, 2024-2025 stay reserved, paper-risk approval stays disabled,
 and Pi validation remains due. No owner risk edits, account upgrade or
 manual data collection are needed for the next engineering work.
+
+## Lifecycle/action verification update: 2026-10-24
+
+The next [corporate-action increment](docs/corporate_action_progress.md)
+adds version-2 explicit splits and ordinary cash dividends under raw execution
+prices. Share counts, entry basis, pending order units and protective stops
+convert together at a split. Historical feature views use only splits already
+effective at each decision, never future factors. Dividend entitlements are
+separate nominal USD receivables until an explicit cash-availability session;
+they survive sales/terminal cash exits and are not counted twice. Ordinary
+trade statistics exclude cash income; account equity includes it.
+
+69 focused lifecycle/action/source tests pass. All 36 prior holding-study
+cases reproduce metrics, costs, fills, equity curves, events and risk events
+exactly in `data/reports/lifecycle_regression_v1/report.json`; original
+provenance/artifacts remain unchanged. Full-suite result: 348 tests, 346 passes,
+two existing optional ML errors because `sklearn` is not installed. No optional
+ML dependency was installed. The reviewed AAPL split record cross-checks
+saved free-source evidence against issuer/OCC announcements, without a new
+price download or a paid purchase.
+
+Historical membership/event completeness, fractional cash-in-lieu, special
+distributions and other unsupported events, and action-aware risk diagnostics
+remain gates before broad strategy scoring. Existing OHLC risk diagnostics
+explicitly reject corporate-action ledgers rather than omit events. Next
+build a reviewed raw-price/action data pilot and establish an honest broader
+historical scope using existing/public sources. Owner risk settings, paper
+activation, 2024-2025 evaluation and Pi execution remain unchanged/unapproved;
+new data purchases remain $0. No owner configuration is required now.

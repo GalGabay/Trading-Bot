@@ -4,8 +4,10 @@
 [free-source assessment](free_data_and_lifecycle_progress.md) records $0 in
 new purchases, four successful company-event queries and ten review records.
 Initial [dated identity/lifecycle support](historical_universe_format.md) has
-been added to the simulator. Unit validation, control replays, corporate-action
-adapters and complete historical membership remain due before broad scoring.
+been added to the simulator. The [subsequent action/accounting increment](corporate_action_progress.md)
+adds splits and ordinary dividends, with 69 passing focused tests and 36
+exact prior financial replays. Complete historical membership/event coverage
+and action-aware risk diagnostics remain due before broad scoring.
 
 **Latest update, 2026-10-24:** After the goal-fit and holding-time studies,
 the owner authorized a broad-universe feasibility audit and scoped entry/

@@ -103,7 +103,7 @@ def enriched_metrics(result: PortfolioBacktestResult) -> dict:
         "traded_notional": sum(fill.quantity * fill.fill_price for fill in result.fills),
         "realized_pnl": sum(metrics["realized_pnl_by_symbol"].values()),
         "marked_unrealized_pnl": sum(position["marked_unrealized_pnl"] for position in metrics["open_positions"].values()),
-        "instruments_with_closed_trades": len(metrics["realized_pnl_by_symbol"]),
+        "instruments_with_closed_trades": len({fill.symbol for fill in result.fills if fill.side.value == "SELL"}),
         "hypothetical_exit_cost": liquidation_cost,
         "hypothetical_liquidated_return": (metrics["final_equity"] - liquidation_cost) / result.costs.initial_cash - 1,
     }
@@ -122,6 +122,12 @@ def pack(result: PortfolioBacktestResult) -> dict:
     if result.universe_metadata is not None:
         packed["universe_metadata"] = result.universe_metadata
         packed["cash_settlements"] = list(result.cash_settlements)
+        packed["share_actions"] = list(result.share_actions)
+        packed["dividend_entitlements"] = list(result.dividend_entitlements)
+        packed["dividend_payments"] = list(result.dividend_payments)
+        packed["final_dividend_receivables"] = list(result.final_dividend_receivables)
+        for point, value in zip(result.equity_curve, packed["equity_curve"]):
+            value.update(cash=point.cash, dividend_receivable=point.dividend_receivable)
     return packed
 
 

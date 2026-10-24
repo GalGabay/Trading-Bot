@@ -67,9 +67,10 @@ account or additional risk-limit changes are required from you now.
 upgrade, paid trial or subscription is needed for the next engineering work.
 The [free-data/lifecycle update](free_data_and_lifecycle_progress.md) records
 four successful company-event queries under existing access and ten review
-candidates. Initial dated-identity, IPO and terminal-cash support has been
-added to the simulator. Focused tests, control replays and broader action
-coverage are still due before scoring a broad research study. No Python,
+candidates. The [subsequent action/accounting work](corporate_action_progress.md)
+adds split and ordinary-dividend support, 69 passing focused tests and 36
+exact historical replays. Complete historical membership/event coverage and
+supported risk diagnostics remain due before a broad return study. No Python,
 JSON, billing or manual stock-collection action is required from you now.
 Paper activation remains a separate decision.
 
