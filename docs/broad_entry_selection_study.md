@@ -140,12 +140,20 @@ authorize paper activation.
 
 ## Execution status and responsibilities
 
+**Engineering update:** Initial [historical-universe support](historical_universe_format.md)
+now exists for dated listings/aliases and verified terminal cash. Existing
+Alpaca access also returned company-event records. The
+[free-data/source assessment](free_data_and_lifecycle_progress.md) records
+the $0 new-purchase policy. Unit validation, unchanged-control replays, split/
+dividend adapters and historical data completeness remain outstanding; the
+study's scoring gate is still closed.
+
 **Scoped, not yet simulated.** The feasibility audit determines which data
 gates remain. Codex owns source/adapter evaluation, lifecycle-aware engine
 work, executable protocol details, downloads and simulations once inputs
 meet the gate. The owner need not select thousands of stocks, edit risk JSON
-or write code now. A paid purchase requires a concrete coverage/licensing/
-cost proposal and explicit owner approval first.
+or write code now. Continue with existing/public sources; do not assume a
+subscription purchase is the next step.
 
 If historical membership cannot be acquired without a purchase, the available
 no-purchase path is a **prospective read-only shadow study**: start recording

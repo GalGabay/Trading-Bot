@@ -1,4 +1,4 @@
-"""Offline, shared-cash backtester for aligned daily stock bars.
+"""Offline, shared-cash backtester for daily stock bars.
 
 No broker client or order endpoint is imported here. Historical daily bars
 are treated as completed only when their session ends; signals fill at the
@@ -22,6 +22,7 @@ from backtesting.protective_exits import (
 )
 from backtesting.research_policy import AllocationPolicy, HaltPolicy, ResearchHaltState
 from backtesting.holding_policy import HoldingEntry, HoldingPolicy
+from backtesting.universe import HistoricalUniverse, UniverseDataError
 
 
 @dataclass(frozen=True)
@@ -74,6 +75,8 @@ class PortfolioBacktestResult:
     halt_active_at_end: bool = False
     holding_reviews: tuple[dict, ...] = ()
     buy_decisions: tuple[dict, ...] = ()
+    cash_settlements: tuple[dict, ...] = ()
+    universe_metadata: dict | None = None
 
 
 @dataclass(frozen=True)
@@ -143,12 +146,18 @@ class PortfolioBacktestEngine:
         self, datasets: dict[str, pd.DataFrame], *, trade_start: pd.Timestamp,
         trade_end: pd.Timestamp,
         signal_datasets: dict[str, pd.DataFrame] | None = None,
+        universe: HistoricalUniverse | None = None,
     ) -> PortfolioBacktestResult:
         """Use execution OHLC for fills and optional separate bars for signals.
 
         Separate signal data must have exactly the same symbols and timestamps.
         Signal prices plan quantities/stops; execution prices mark holdings and
         constrain fills. This isolates feed effects without filling gaps.
+
+        Optional historical-universe mode uses stable IDs and the supplied
+        calendar, with actual sparse observations only. It never infers IPOs
+        or delisting proceeds. Separate signal feeds are not supported in
+        this mode until their dated corporate-action conventions are audited.
         """
         start = self._utc_bound(trade_start)
         end = self._utc_bound(trade_end)
@@ -158,13 +167,35 @@ class PortfolioBacktestEngine:
             raise ValueError("At least one symbol dataset is required")
         if signal_datasets is not None and set(signal_datasets) != set(datasets):
             raise ValueError("Signal and execution dataset symbols must match")
+        if universe is not None:
+            if signal_datasets is not None:
+                raise UniverseDataError("Historical-universe mode requires one audited execution/signal convention")
+            if set(datasets) != universe.instrument_ids:
+                raise UniverseDataError("Datasets must retain every declared stable instrument ID, including empty histories")
 
         bars: dict[str, pd.DataFrame] = {}
         features: dict[str, pd.DataFrame] = {}
-        dates: pd.Series | None = None
+        dates: pd.Series | None = None if universe is None else universe.dates
+        segment_starts: dict[str, dict[int, int]] = {}
         for symbol, source in sorted(datasets.items()):
             if not symbol or symbol != symbol.strip().upper() or symbol in bars:
                 raise ValueError("Dataset keys must be unique uppercase symbols")
+            if universe is not None:
+                frame = universe.prepare(symbol, source)
+                bars[symbol] = frame
+                # A zero-volume observation is preserved in source bars but
+                # cannot manufacture a tradable session or warmup continuity.
+                active = frame.loc[frame["volume"] > 0]
+                chunks = []
+                segment_starts[symbol] = {}
+                groups = pd.Series(active.index, index=active.index).diff().ne(1).cumsum()
+                for _, block in active.groupby(groups):
+                    built = build_features(block, config=FeatureConfig(periods_per_year=self.costs.periods_per_year))
+                    built.index = block.index
+                    chunks.append(built)
+                    segment_starts[symbol].update({int(i): int(block.index[0]) for i in block.index})
+                features[symbol] = pd.concat(chunks) if chunks else active.copy()
+                continue
             validate_candles(source)
             frame = source.loc[:, CANONICAL_CANDLE_COLUMNS].copy()
             frame["timestamp"] = pd.to_datetime(frame["timestamp"], utc=True)
@@ -206,6 +237,7 @@ class PortfolioBacktestEngine:
         signals: list[Signal] = []
         points: list[PortfolioEquityPoint] = []
         events: list[str] = []
+        cash_settlements: list[dict] = []
         peak = cash
         previous_close_equity = cash
         halt = ResearchHaltState(self.halt_policy, self.limits.max_daily_loss, self.limits.max_drawdown)
@@ -240,12 +272,42 @@ class PortfolioBacktestEngine:
 
         for index in indices:
             timestamp = dates.iloc[index]
-            open_prices = {symbol: float(bars[symbol].iloc[index]["open"]) for symbol in symbols}
-            low_prices = {symbol: float(bars[symbol].iloc[index]["low"]) for symbol in symbols}
-            close_prices = {symbol: float(bars[symbol].iloc[index]["close"]) for symbol in symbols}
-            signal_closes = {symbol: float(features[symbol].iloc[index]["close"]) for symbol in symbols}
+            available_symbols = symbols if universe is None else [s for s in symbols if index in features[s].index]
+            open_prices = {symbol: float(bars[symbol].loc[index]["open"]) for symbol in available_symbols}
+            low_prices = {symbol: float(bars[symbol].loc[index]["low"]) for symbol in available_symbols}
+            close_prices = {symbol: float(bars[symbol].loc[index]["close"]) for symbol in available_symbols}
+            signal_closes = {symbol: float(features[symbol].loc[index]["close"]) for symbol in available_symbols}
             due = {symbol: order for symbol, order in pending.items() if order.execute_index == index}
             pending = {symbol: order for symbol, order in pending.items() if order.execute_index > index}
+
+            if universe is not None:
+                for outcome in universe.outcomes_at(timestamp):
+                    symbol = outcome.instrument_id
+                    pending.pop(symbol, None)
+                    due.pop(symbol, None)
+                    quantity = positions.pop(symbol, 0)
+                    stops.pop(symbol, None)
+                    if quantity:
+                        entry = entries.pop(symbol)
+                        proceeds = quantity * outcome.cash_per_share
+                        cash += proceeds
+                        cash_settlements.append({
+                            "timestamp": timestamp.isoformat(), "event_id": outcome.event_id,
+                            "instrument_id": symbol, "quantity": quantity,
+                            "cash_per_share": outcome.cash_per_share, "total_cash": proceeds,
+                            "realized_pnl": proceeds - entry.cost_basis,
+                            "known_at": outcome.known_at, "source": outcome.source,
+                        })
+                        events.append(f"{timestamp.isoformat()} {symbol}: verified terminal cash payment {proceeds:g}; not a trade fill")
+                unavailable_held = set(positions) - set(available_symbols)
+                if unavailable_held:
+                    raise UniverseDataError(
+                        f"{timestamp.isoformat()}: held instruments lack a positive-volume bar or verified cash payment: "
+                        f"{sorted(unavailable_held)}. No stale mark, invented sale or assumed zero recovery is permitted."
+                    )
+                for symbol in sorted(set(due) - set(available_symbols)):
+                    events.append(f"{timestamp.isoformat()} {symbol}: expired {due[symbol].signal.action.value}; scheduled execution session unavailable")
+                    due.pop(symbol)
 
             exited_by_stop: set[str] = set()
             if self.protection is not None:
@@ -406,17 +468,20 @@ class PortfolioBacktestEngine:
             if self.protection is not None:
                 for symbol in sorted(stops):
                     state = stops[symbol]
-                    atr = float(features[symbol].iloc[index]["atr_14"])
+                    atr = float(features[symbol].loc[index]["atr_14"])
                     next_stop = raised_stop(state.price, signal_closes[symbol], atr, self.protection)
                     if next_stop > state.price:
                         stops[symbol] = _ActiveStop(next_stop, timestamp)
                         events.append(f"{timestamp.isoformat()} {symbol}: trailing stop raised to {next_stop:g}")
 
             # Every strategy call receives only that symbol's completed bars.
-            for symbol in symbols:
+            for symbol in available_symbols:
+                history = features[symbol].loc[:index]
+                if universe is not None:
+                    history = history.loc[segment_starts[symbol][index]:]
                 available = (
-                    features[symbol].iloc[[index]] if self.strategy.latest_row_only
-                    else features[symbol].iloc[:index + 1]
+                    features[symbol].loc[[index]] if self.strategy.latest_row_only
+                    else history
                 )
                 signal = self.strategy.generate_signal(
                     available, BacktestPortfolio(cash, positions.get(symbol, 0), equity)
@@ -431,7 +496,7 @@ class PortfolioBacktestEngine:
                             raise ValueError(f"Missing exact-date holding market context: {timestamp}")
                         market_on = self.holding_market_review[timestamp]
                     review = self.holding_policy.review(
-                        features[symbol].iloc[:index + 1], entries[symbol], index,
+                        history, entries[symbol], index,
                         market_on=market_on, sale_multiplier=multiplier,
                         sale_commission=self.costs.commission_per_order,
                     )
@@ -447,13 +512,17 @@ class PortfolioBacktestEngine:
                     stop_price = None
                     fraction = None
                     if signal.action == SignalAction.BUY:
+                        if universe is not None and len(history) < 200:
+                            journal(symbol, "close", "blocked", ("historical_universe_200_session_warmup",))
+                            events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; 200 continuous tradable sessions required")
+                            continue
                         if halt.blocked and self.halt_policy.daily_pause_sessions is not None:
                             journal(symbol, "close", "blocked", ("entry_halt",))
                             events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY planning; entry halt active")
                             continue
                         fraction = self.allocation.fraction(
                             min(self.costs.position_fraction, self.limits.max_single_position),
-                            float(features[symbol].iloc[index]["historical_volatility_20"]),
+                            float(features[symbol].loc[index]["historical_volatility_20"]),
                         )
                         if fraction is None:
                             journal(symbol, "close", "blocked", ("missing_volatility",))
@@ -461,7 +530,7 @@ class PortfolioBacktestEngine:
                             continue
                         planned_budget = fraction * equity
                         if self.protection is not None:
-                            atr = float(features[symbol].iloc[index]["atr_14"])
+                            atr = float(features[symbol].loc[index]["atr_14"])
                             stop_price = initial_stop(signal_closes[symbol], atr, self.protection)
                             if stop_price is None:
                                 journal(symbol, "close", "blocked", ("missing_atr_stop",))
@@ -501,6 +570,8 @@ class PortfolioBacktestEngine:
             blocked_sessions_at_open=halt.blocked_at_open,
             permanent_halt_reason=halt.permanent_reason, halt_active_at_end=halt.blocked,
             holding_reviews=tuple(holding_reviews), buy_decisions=tuple(buy_decisions),
+            cash_settlements=tuple(cash_settlements),
+            universe_metadata=None if universe is None else universe.metadata(),
         )
 
     def _loss_breach(self, equity: float, prior_close: float, peak: float) -> str | None:
@@ -568,7 +639,21 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
     realized: dict[str, float] = {}
     profits: list[float] = []
     durations: list[float] = []
-    for fill in result.fills:
+    settlement_profits: list[float] = []
+    ledger = [(fill.timestamp, 1, i, fill) for i, fill in enumerate(result.fills)]
+    ledger += [(pd.Timestamp(item["timestamp"]), 0, i, item) for i, item in enumerate(result.cash_settlements)]
+    for _, kind, _, fill in sorted(ledger, key=lambda item: item[:3]):
+        if kind == 0:
+            symbol = fill["instrument_id"]
+            entry = entries.pop(symbol, None)
+            if entry is None or entry.quantity != fill["quantity"]:
+                raise ValueError("Terminal cash settlement does not resolve its exact entry")
+            profit = entry.quantity * fill["cash_per_share"] - entry.quantity * entry.fill_price - entry.commission
+            if abs(profit - fill["realized_pnl"]) > 1e-6 or abs(fill["total_cash"] - entry.quantity * fill["cash_per_share"]) > 1e-6:
+                raise ValueError("Terminal cash settlement accounting differs from its entry")
+            settlement_profits.append(profit)
+            realized[symbol] = realized.get(symbol, 0.0) + profit
+            continue
         if fill.side == SignalAction.BUY:
             if fill.symbol in entries:
                 raise ValueError(f"{fill.symbol}: overlapping BUY fills")
@@ -604,7 +689,7 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
         fill for fill in result.fills
         if fill.side == SignalAction.SELL and fill.signal_reason.startswith("PROTECTIVE_STOP_")
     ]
-    return {
+    metrics = {
         "initial_cash": result.costs.initial_cash,
         "final_equity": points[-1].equity,
         "total_return": points[-1].equity / result.costs.initial_cash - 1,
@@ -628,3 +713,11 @@ def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
         "entry_halted_at": result.halted_at,
         "event_count": len(result.events),
     }
+    if result.universe_metadata is not None:
+        metrics.update(
+            cash_settlement_count=len(result.cash_settlements),
+            cash_settlement_realized_pnl=sum(settlement_profits),
+            resolved_positions_including_settlements=len(profits) + len(settlement_profits),
+            trade_metrics_exclude_cash_settlements=True,
+        )
+    return metrics

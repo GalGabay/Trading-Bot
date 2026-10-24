@@ -29,6 +29,8 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
     reconstructed. Missing prices, inconsistent fills, and mismatched equity
     raise; no prices are filled and no path is fabricated.
     """
+    if case.get("cash_settlements"):
+        raise ValueError("This OHLC risk helper cannot score terminal cash events; do not drop them from the ledger")
     curves = case["equity_curve"]
     if not curves:
         raise ValueError("Risk diagnostics require a nonempty equity curve")

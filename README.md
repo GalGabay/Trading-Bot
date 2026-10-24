@@ -52,6 +52,12 @@ outcomes remain unresolved. The [eight-arm entry/selection study](docs/broad_ent
 is scoped and awaits those inputs and dynamic-universe support; it has not
 produced new return results. Run the read-only auditor with
 `python -m backtesting.universe_audit --output data/reports/a_fresh_directory`.
+The [free-data/lifecycle update](docs/free_data_and_lifecycle_progress.md)
+records a $0 new-purchase policy, four successful company-event access checks
+and ten review candidates. Optional [historical-universe mode](docs/historical_universe_format.md)
+adds dated IPO/ticker lifetimes and verified terminal cash events. Focused
+tests, control replays, split/dividend adapters and historical membership
+verification are still required before broad-market performance scoring.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

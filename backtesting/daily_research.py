@@ -110,7 +110,7 @@ def enriched_metrics(result: PortfolioBacktestResult) -> dict:
 
 
 def pack(result: PortfolioBacktestResult) -> dict:
-    return {
+    packed = {
         "metrics": enriched_metrics(result), "costs": asdict(result.costs),
         "equity_curve": [{"timestamp": point.timestamp.isoformat(), "equity": point.equity,
                           "exposure": point.gross_exposure} for point in result.equity_curve],
@@ -119,6 +119,10 @@ def pack(result: PortfolioBacktestResult) -> dict:
                   for fill in result.fills],
         "events": list(result.events),
     }
+    if result.universe_metadata is not None:
+        packed["universe_metadata"] = result.universe_metadata
+        packed["cash_settlements"] = list(result.cash_settlements)
+    return packed
 
 
 def select_on_earlier_years(training: dict[str, dict]) -> tuple[str | None, dict]:

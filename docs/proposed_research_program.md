@@ -1,5 +1,12 @@
 # Proposed research program before the first paper trial
 
+**Cost/lifecycle update:** The owner prefers no new data spending. The
+[free-source assessment](free_data_and_lifecycle_progress.md) records $0 in
+new purchases, four successful company-event queries and ten review records.
+Initial [dated identity/lifecycle support](historical_universe_format.md) has
+been added to the simulator. Unit validation, control replays, corporate-action
+adapters and complete historical membership remain due before broad scoring.
+
 **Latest update, 2026-10-24:** After the goal-fit and holding-time studies,
 the owner authorized a broad-universe feasibility audit and scoped entry/
 selection research. The [completed audit](broad_universe_audit_results.md)

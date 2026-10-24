@@ -143,6 +143,29 @@ class AlpacaClient:
             raise ValueError("Alpaca asset catalog must be a list of metadata objects")
         return response
 
+    def get_corporate_actions_page(
+        self, *, symbols: list[str], start: date, end: date,
+        page_token: str | None = None,
+    ) -> dict[str, Any]:
+        """Read one company-event page under existing account entitlement.
+
+        Dates filter the provider's process date, not guaranteed announcement
+        or cash-payment dates. A 403 is not permission to upgrade a plan.
+        """
+        if not symbols or start > end or any(not s.strip() for s in symbols):
+            raise ValueError("Company-event query requires symbols and ordered explicit dates")
+        params = {
+            "symbols": ",".join(s.strip().upper() for s in symbols),
+            "start": start.isoformat(), "end": end.isoformat(),
+            "limit": 1000, "sort": "asc", "data_quality": "all",
+        }
+        if page_token is not None:
+            params["page_token"] = page_token
+        response = self._historical_data.get("/corporate-actions", params, api_version="v1")
+        if not isinstance(response, dict):
+            raise ValueError("Company-event response must be a JSON object")
+        return response
+
     def get_market_calendar(self, *, start: date, end: date) -> list[Any]:
         """Return Alpaca's exchange sessions for the inclusive date range."""
         return self._trading.get_calendar(GetCalendarRequest(start=start, end=end))

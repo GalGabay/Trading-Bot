@@ -3624,3 +3624,33 @@ engine support must meet its gate first. Codex owns that engineering work;
 no owner risk-limit edits are needed now. Any paid source requires a concrete
 reviewed proposal and explicit approval. Paper-risk approval, final reserved
 evaluation and paper activation remain separate later decisions.
+
+## No-purchase lifecycle increment: 2026-10-24
+
+The owner prefers not to buy data. Record **$0 in new data purchases** as the
+current policy; do not upgrade subscriptions or start paid trials. The
+[free-data/source report](docs/free_data_and_lifecycle_progress.md) explains
+that billing status is unknown and working historical SIP access is not
+proof of a paid plan. Four read-only company-event queries succeeded with
+existing access and yielded ten preserved review candidates. No historical
+publication/payment time is inferred from provider processing dates.
+
+`backtesting/universe.py` defines the versioned
+[historical identity/lifecycle format](docs/historical_universe_format.md).
+The existing portfolio engine now has optional sparse-history support for
+explicitly dated IPO/listing intervals, ticker aliases under stable IDs and
+verified terminal cash at a session open. It requires declared raw/event-free
+inputs except supported terminal cash. No prices are filled, unresolved
+in-lifetime gaps block scoring, and terminal cash has a separate ledger with
+account P&L reconciliation. Ordinary trade metrics exclude cash events.
+Legacy aligned-data mode remains the default.
+
+This is initial engineering support, not complete broad-market readiness.
+Focused unit/failure tests, unchanged-control replays, split/dividend and
+other corporate-action adapters, and independently audited membership/event
+coverage remain outstanding. Only Python compilation, source-access requests,
+offline candidate extraction and diff checks were performed in this increment;
+no automated unit tests or strategy simulations were run. The eight-arm study
+stays unscored, 2024-2025 stay reserved, paper-risk approval stays disabled,
+and Pi validation remains due. No owner risk edits, account upgrade or
+manual data collection are needed for the next engineering work.

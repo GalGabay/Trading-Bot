@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "currency": "USD",
+  "price_basis": "raw",
+  "action_scope": "event_free_except_terminal_cash",
+  "sessions": [
+    {"opens_at": "2023-01-03T14:30:00Z", "closes_at": "2023-01-03T21:00:00Z"},
+    {"opens_at": "2023-01-04T14:30:00Z", "closes_at": "2023-01-04T21:00:00Z"},
+    {"opens_at": "2023-01-05T14:30:00Z", "closes_at": "2023-01-05T21:00:00Z"},
+    {"opens_at": "2023-01-06T14:30:00Z", "closes_at": "2023-01-06T21:00:00Z"}
+  ],
+  "listings": [
+    {
+      "instrument_id": "EXAMPLE-001",
+      "symbol": "OLD",
+      "exchange": "NASDAQ",
+      "security_type": "common_stock",
+      "start_session": "2023-01-03",
+      "end_session_exclusive": "2023-01-05",
+      "start_known_at": "2023-01-02T12:00:00Z",
+      "end_known_at": "2023-01-04T12:00:00Z",
+      "source": "FICTIONAL FORMAT EXAMPLE: not verified historical evidence"
+    },
+    {
+      "instrument_id": "EXAMPLE-001",
+      "symbol": "NEW",
+      "exchange": "NASDAQ",
+      "security_type": "common_stock",
+      "start_session": "2023-01-05",
+      "end_session_exclusive": "2023-01-06",
+      "start_known_at": "2023-01-04T12:00:00Z",
+      "end_known_at": "2023-01-05T12:00:00Z",
+      "source": "FICTIONAL FORMAT EXAMPLE: not verified historical evidence"
+    },
+    {
+      "instrument_id": "EXAMPLE-002",
+      "symbol": "IPO",
+      "exchange": "NYSE",
+      "security_type": "common_stock",
+      "start_session": "2023-01-05",
+      "end_session_exclusive": null,
+      "start_known_at": "2023-01-04T12:00:00Z",
+      "end_known_at": null,
+      "source": "FICTIONAL FORMAT EXAMPLE: not verified historical evidence"
+    }
+  ],
+  "cash_outcomes": [
+    {
+      "event_id": "EXAMPLE-CASH-001",
+      "instrument_id": "EXAMPLE-001",
+      "effective_session": "2023-01-06",
+      "cash_per_share": 101.0,
+      "known_at": "2023-01-05T12:00:00Z",
+      "source": "FICTIONAL FORMAT EXAMPLE: payment available at this open"
+    }
+  ]
+}

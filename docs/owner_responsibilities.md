@@ -63,8 +63,15 @@ The [eight-arm study](broad_entry_selection_study.md) is defined but has not
 been simulated, because its historical-data gate is not met. Codex owns
 the source/adapter and dynamic-universe engineering work. No Python, JSON,
 account or additional risk-limit changes are required from you now.
-Before any purchase, I must give you a concrete source, licensing/coverage
-assessment and cost for approval. Paper activation remains a separate decision.
+**Your cost preference is now recorded as $0 in new data purchases.** No
+upgrade, paid trial or subscription is needed for the next engineering work.
+The [free-data/lifecycle update](free_data_and_lifecycle_progress.md) records
+four successful company-event queries under existing access and ten review
+candidates. Initial dated-identity, IPO and terminal-cash support has been
+added to the simulator. Focused tests, control replays and broader action
+coverage are still due before scoring a broad research study. No Python,
+JSON, billing or manual stock-collection action is required from you now.
+Paper activation remains a separate decision.
 
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all

@@ -44,9 +44,10 @@ membership, prior tradability, or complete delisting outcomes. Those must
 be separately obtained and audited; do not claim the endpoint solves
 historical survivor selection by itself.
 
-The current shared-cash engine requires identical candle dates for all
-symbols. A historical broad universe has IPOs, suspensions, and delistings,
-so extending it requires:
+The default shared-cash engine requires identical candle dates. Initial
+[optional historical-universe support](historical_universe_format.md) now
+accepts explicitly dated IPO/listing intervals and known terminal cash
+payments. Full historical-universe research still requires:
 
 1. Stable instrument identity, historical listing/eligibility dates, ticker
    changes, and delisting/corporate-action handling.
@@ -71,7 +72,9 @@ fixed historical coverage probes. Broader daily price access works, but the
 catalog does not supply complete historical membership or lifecycle outcomes.
 
 The finite [entry/selection study](broad_entry_selection_study.md) is scoped
-with eight matched arms. Simulation waits for audited historical inputs and
-dynamic-universe engine support. No owner risk settings are needed for the
-next engineering work. Any subscription purchase still requires separate
-approval. No whole-market performance claim or paper activation is approved.
+with eight matched arms. Simulation waits for audited historical inputs,
+validated dynamic-universe behavior and corporate-action coverage. The
+[free-data update](free_data_and_lifecycle_progress.md) records the owner's
+$0 new-purchase policy and newly demonstrated company-event access. No owner
+risk settings or account upgrade are needed for the next engineering work.
+No whole-market performance claim or paper activation is approved.
