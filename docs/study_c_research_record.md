@@ -18,6 +18,12 @@ frozen. Its 40 simulations passed the ten additional-history checks, with
 2017-2023 account. These backward checks retain the original evidence limits;
 2024-2025 remain unopened and paper trading remains unapproved.
 
+After the owner approved 6% annual return and 5% running-peak drawdown
+research criteria, the [investment goal-fit audit](study_c_goal_fit_results.md)
+replayed the unchanged candidate at $100,000 and $10,000. It does not meet
+the approved investment objective. This later decision preserves all earlier
+study results and keeps 2024-2025 unopened.
+
 **Status:** Fixed-rule development screen and continuous shared-cash portfolio
 follow-up completed on 2026-10-23. The preexisting walk-forward rule permitted
 daily tuning for only two symbols, so a tuned basket, full risk-policy replay,

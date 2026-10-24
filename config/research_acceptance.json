@@ -1,0 +1,17 @@
+{
+  "version": "owner_2026_10_24_v1",
+  "approved_for_development_audit": true,
+  "approved_on": "2026-10-24",
+  "annual_return_cagr_minimum": 0.06,
+  "drawdown_rejection_level": 0.05,
+  "drawdown_review_level": 0.04,
+  "drawdown_basis": "running_account_equity_peak",
+  "daily_loss_rejection_level": 0.02,
+  "minimum_completed_trades": 30,
+  "minimum_instruments": 5,
+  "minimum_profit_factor": 1.2,
+  "audit_account_sizes": [100000, 10000],
+  "reserved_start": "2024-01-01",
+  "approved_for_final_evaluation": false,
+  "approved_for_paper": false
+}

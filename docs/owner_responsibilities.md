@@ -38,13 +38,18 @@ review does not itself enable paper orders or approve risk settings.
 **Owner update, 2026-10-24:** You want attractive investment returns before
 paper trading, said approximately 2% annually is insufficient, and identified
 a $500 temporary decline on $10,000 as concerning. The
-[investment acceptance proposal](investment_acceptance_proposal.md) records
-these preferences and proposes a 6% annual return hurdle plus a 5% drawdown
-rejection level for review. These proposed numbers are not approved risk
-settings. The current candidate misses the proposed return hurdle, so the
-recommended next research is a development-only goal-fit audit, with
-2024-2025 kept reserved. Reply using the proposal's short template; no Python
-or JSON edits are needed for this review.
+[investment acceptance plan](investment_acceptance_proposal.md) records
+these preferences. You subsequently approved its 6% annual return hurdle,
+5% running-peak drawdown rejection level, other research criteria, and the
+development-only goal-fit audit. The versioned criteria are in
+`config/research_acceptance.json`; they are not paper-order risk approval.
+No further owner action is needed for the authorized audit. 2024-2025 stay
+reserved and `config/risk_limits.json` remains empty/unapproved.
+
+The [completed audit](study_c_goal_fit_results.md) rejects the frozen
+candidate for the approved investment goal. No further configuration is
+needed now. The next owner decision is whether to pursue a separately
+defined finite alternative study after reviewing its concrete proposal.
 
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all

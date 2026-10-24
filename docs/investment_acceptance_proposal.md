@@ -1,32 +1,36 @@
-# Investment acceptance plan: proposal for owner review
+# Investment acceptance plan
 
-Date: **2026-10-24**. Status: **DRAFT — NOT APPROVED**.
+Date: **2026-10-24**. Status: **research criteria and Step B audit approved**.
 
-This records the owner's goals and proposes research acceptance criteria.
-It does not authorize a historical holdout run, change strategy parameters,
-approve paper-risk settings, or enable orders. No new strategy simulations
-or 2024-2025 data inspection were performed to prepare this document.
+The owner approved "6% profit, and the 5% loss, and the other things" and
+requested: "Proceed with the development-only goal-fit audit."
+This records approval of the proposed **6% annual CAGR**, **5% running-peak
+drawdown rejection level**, and the other research criteria below. It does
+not authorize a final holdout run, approve paper-risk settings, or enable
+orders. The $10,000 amount remains a simulation example. The original
+proposal used only already inspected results; the authorized audit is
+separately registered in [its protocol](study_c_goal_fit_protocol.md).
 
 ## 1. What you have already told me
 
-| Owner statement | Recorded meaning | Still an assumption or proposal |
+| Owner statement | Recorded meaning | Approval / interpretation |
 | --- | --- | --- |
-| The strategy should demonstrate attractive investment returns first. | Learning/software reliability alone is insufficient to advance the strategy toward paper trading. | What numerical return is attractive remains your decision. |
-| A temporary $500 decline on a $10,000 paper account would concern me. | A 5% decline is a concern level, not permission to lose 5%. | I propose interpreting this as peak-to-trough account drawdown; confirm whether you instead mean $500 below starting capital or a fixed $500 ceiling. |
-| A 2% return is not enough. | Approximately 2% annually is below your objective in the context of the discussion. | This does not automatically approve a 6%, 8%, or other annual target. |
-| Propose the other criteria for review. | Prepare a concrete written proposal. | Approval of those criteria, final testing, and paper trading remain separate decisions. |
+| The strategy should demonstrate attractive investment returns first. | Learning/software reliability alone is insufficient to advance the strategy toward paper trading. | Owner subsequently approved the 6% annual research hurdle. |
+| A temporary $500 decline on a $10,000 paper account would concern me. | A 5% decline is a concern level, not a guaranteed loss cap. | Apply the approved proposal's running-peak drawdown definition; 5% is not a fixed $500 amount as equity grows. |
+| A 2% return is not enough. | Approximately 2% annually is below the objective. | The 6% hurdle concerns the whole account after pessimistic modeled costs. |
+| The other criteria and development-only audit are approved. | Apply the research checks and perform Step B. | Final testing, any new strategy study, paper-risk settings, and paper activation remain separate decisions. |
 
 At a $10,000 equity peak, 5% drawdown is $500. At a $12,000 peak, 5% is
 $600. Losing $500 from starting capital and losing 5% from an account peak
 are different policies. The $10,000 amount is an illustration; this message
 does not establish your actual Alpaca account balance or a deposit amount.
 
-## 2. Proposed numerical review standard
+## 2. Approved numerical research standard
 
-These are project-specific screening choices for your review, not industry
-standards, forecasts, or recommended personal investment allocations.
+These are approved project-specific research screening choices, not industry
+standards, forecasts, or approved personal paper-investment allocations.
 
-| Criterion | Proposed requirement | Why / how to interpret it |
+| Criterion | Approved research requirement | Why / how to interpret it |
 | --- | --- | --- |
 | Net annualized return | **At least 6% CAGR** on the entire starting account under pessimistic modeled costs, after estimated costs to exit remaining holdings. | A concrete hurdle materially above the roughly 2% you rejected. It is not a promise that this return is attainable at your loss tolerance. |
 | Account drawdown | **Reject at 5% or greater observed drawdown** from the running equity peak, including unrealized P&L and costs. | Treat your concern level as a ceiling for screening. A result below 5% is not evidence that future losses cannot exceed it. |
@@ -45,7 +49,7 @@ with compounding. It does not mean 6% every year, every trade, or on only the
 fraction temporarily invested. Inflation and personal taxes are excluded
 from this nominal research hurdle and must be identified as omissions.
 
-Propose using this standard on both the full development replay and its
+Apply this standard on both the full development replay and its
 latest two-year development window before spending the final holdout. This
 is intentionally demanding: the goal is to reject a strategy that does not
 meet your objective. Individual years may lose money; report every year and
@@ -57,7 +61,7 @@ combination, and taking more risk does not guarantee higher returns. See
 If no candidate qualifies, the valid decision is to stop or revise the goal,
 not to keep searching until a historical chart happens to pass.
 
-## 3. What the existing candidate says against this draft
+## 3. What the existing candidate says against these criteria
 
 These are comparisons with already inspected research, not new backtests or
 new independent evidence. The previous studies retain their original
@@ -92,18 +96,16 @@ The SEC explains that a [stop price is not a guaranteed execution price](https:/
 
 ## 4. Concrete sequence I propose
 
-### Step A — Review these goals before another strategy search
+### Step A — Review these goals before another strategy search (completed)
 
-**Owner:** Approve or amend the proposed 6% annual hurdle, the interpretation
-of the $500 concern, and the other acceptance criteria. No Python edits or
-account changes are required. The reply template below is enough.
+**Owner:** Approved on 2026-10-24 in chat. No account change was requested.
 
-**Codex:** Record the agreed criteria with a date and version. Do not put
-them into the paper-risk JSON as though you had approved order submission.
+**Codex:** Recorded the criteria as `owner_2026_10_24_v1` in the separate
+`config/research_acceptance.json`. They are not paper-order risk approval.
 
 ### Step B — Audit investment value using development data only
 
-**Codex's next proposed implementation**, after this review:
+**Codex's authorized implementation**, under the registered audit protocol:
 
 1. Produce an automated goal-fit report for the frozen candidate using
    existing 2017-2023 results, with 2022-2023 shown separately. Show every
@@ -141,7 +143,7 @@ with a named economic hypothesis, fixed variants, and a research budget;
 the owner decides whether it is worth pursuing. Define that study before
 running it. Keeping a full trial log is required because repeated reuse of
 2017-2023 increases selection bias; those years cannot become fresh evidence
-again. A new study is not automatically authorized by approving this draft.
+again. Approval of the criteria and Step B does not authorize a new study.
 
 Retiring this strategy line is a valid outcome. The already completed data,
 backtesting, risk, and order-management software remains useful.
@@ -204,20 +206,11 @@ Only after accepted research and execution readiness:
 
 Research approval never means permission to submit an order.
 
-## 5. How you can respond
+## 5. What you need to do now
 
-No file editing is necessary. Reply in chat, for example:
-
-```text
-Annual return hurdle: approve proposed 6% / change to ___%
-$500 concern: 5% below the running account peak /
-              $500 below starting capital / another interpretation: ___
-Other draft research criteria: approve / changes: ___
-Next work: prepare the development-only goal-fit audit from Step B.
-```
-
-Alternatively, ask for explanations or revisions before approving anything.
-An approval here is limited to the specified research criteria and work; it
-does not approve personal risk settings, a final holdout run, or paper
-orders. `config/risk_limits.json` remains empty and
-`approved_for_paper` remains `false`.
+No further owner action or file editing is required to complete Step B.
+Review its results afterward. Any new strategy study or eventual final
+evaluation needs its own concrete scope and decision; it is not authorized
+merely by approving the audit. The current approval does not approve personal
+risk settings, a final holdout run, or paper orders. `config/risk_limits.json`
+remains empty and `approved_for_paper` remains `false`.

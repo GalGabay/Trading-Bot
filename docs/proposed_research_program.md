@@ -44,12 +44,19 @@ protocol and owner review of its criteria, before opening 2024-2025.
 **2026-10-24 goal review:** The owner requires attractive investment returns,
 finds approximately 2% annually insufficient, and would be concerned by a
 $500 decline on $10,000. The new
-[draft investment acceptance plan](investment_acceptance_proposal.md)
-proposes 6% annualized return and a 5% drawdown rejection level for review.
-It recommends a development-only goal-fit audit before spending the reserved
-holdout, because the current candidate already misses the proposed return
-goal. No criterion, risk configuration, new strategy search, or final test
-has been approved by recording this proposal.
+[investment acceptance plan](investment_acceptance_proposal.md)
+was subsequently approved for its 6% annualized return hurdle, 5% running-peak
+drawdown rejection level, other research criteria, and development-only
+goal-fit audit. The [audit protocol](study_c_goal_fit_protocol.md) preserves
+the frozen strategy and reserved holdout. A new strategy search, paper-risk
+configuration, final evaluation, and paper orders remain separate decisions.
+
+The [completed goal-fit audit](study_c_goal_fit_results.md) found the frozen
+candidate inadequate under those approved criteria at both $100,000 and
+$10,000. The smaller account's pessimistic, estimated-liquidation CAGR was
+1.36% over 2017-2023 and 0.11% over the separate 2022-2023 window. Preserve
+the candidate as a reference and keep the final holdout reserved; any next
+alternative study needs a separately defined finite scope before evaluation.
 
 ## The short answer: four matched strategy studies
 
