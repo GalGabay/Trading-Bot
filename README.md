@@ -30,6 +30,10 @@ audit 2016-2018 data and evaluate the frozen smaller breakout allocation on
 passed; pessimistic seven-year return was +16.392% with -4.584% closing
 drawdown. This backward check does not clear the earlier strategy weaknesses
 or approve paper trading. 2024-2025 remain reserved.
+The [draft investment acceptance plan](docs/investment_acceptance_proposal.md)
+records the owner's return objective and $500-on-$10,000 loss concern.
+It proposes review criteria and a development-only goal-fit audit; the
+current candidate misses its proposed return hurdle. Owner review is pending.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

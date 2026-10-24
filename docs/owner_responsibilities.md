@@ -35,6 +35,17 @@ frozen criteria, acceptable losses, and whether this research scope fits
 your goals. You do not need to write code or personally fetch data. This
 review does not itself enable paper orders or approve risk settings.
 
+**Owner update, 2026-10-24:** You want attractive investment returns before
+paper trading, said approximately 2% annually is insufficient, and identified
+a $500 temporary decline on $10,000 as concerning. The
+[investment acceptance proposal](investment_acceptance_proposal.md) records
+these preferences and proposes a 6% annual return hurdle plus a 5% drawdown
+rejection level for review. These proposed numbers are not approved risk
+settings. The current candidate misses the proposed return hurdle, so the
+recommended next research is a development-only goal-fit audit, with
+2024-2025 kept reserved. Reply using the proposal's short template; no Python
+or JSON edits are needed for this review.
+
 Before Phase 12 is connected to paper-order submission, choose or explicitly
 accept the risk limits in `config/risk_limits.json`. It now exists with all
 limits set to `null` and `approved_for_paper: false`; the loader rejects it

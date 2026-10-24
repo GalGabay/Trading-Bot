@@ -9,6 +9,14 @@ remain unapproved. No orders were submitted and 2024-2025 remain unopened.
 **Result: all ten predeclared additional-history checks passed.** The modest
 returns and broader evidence limitations still prevent paper approval.
 
+**Subsequent owner-goal review, 2026-10-24:** The owner finds approximately
+2% annual returns insufficient and identified a $500 decline on $10,000 as
+concerning. The [draft acceptance plan](investment_acceptance_proposal.md)
+proposes a stricter investment-fit review and recommends keeping the final
+holdout reserved while assessing that mismatch. It supersedes the immediate
+next-step recommendation below, without changing any original results or
+the C-R4 screening decision.
+
 ## Data audit and interpretation limits
 
 All twelve declared instruments passed the primary coverage check:

@@ -41,6 +41,16 @@ backward historical robustness research using a present-day survivor basket,
 not fresh forward validation. The next step is a frozen final-evaluation
 protocol and owner review of its criteria, before opening 2024-2025.
 
+**2026-10-24 goal review:** The owner requires attractive investment returns,
+finds approximately 2% annually insufficient, and would be concerned by a
+$500 decline on $10,000. The new
+[draft investment acceptance plan](investment_acceptance_proposal.md)
+proposes 6% annualized return and a 5% drawdown rejection level for review.
+It recommends a development-only goal-fit audit before spending the reserved
+holdout, because the current candidate already misses the proposed return
+goal. No criterion, risk configuration, new strategy search, or final test
+has been approved by recording this proposal.
+
 ## The short answer: four matched strategy studies
 
 Start with **two timeframes** and **two versions of the same strategy**. That
