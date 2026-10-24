@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "purpose": "Offline accounting mechanics using saved source terms; not historical strategy scoring or settlement certification",
+  "event_review_path": "docs/free_collection_event_review.json",
+  "event_review_sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896",
+  "event_gap_report_path": "data/reports/free_collection_review_v1/report.json",
+  "event_gap_report_sha256": "b1a47d350738ceb838ca27bd50ed0ab61559312b0254e9f3bba97668d67a39db",
+  "initial_simulated_cash": "10000",
+  "hypothetical_entry_price": "50",
+  "mechanics_assumptions": [
+    "Each independent scenario starts with hypothetical holdings, not a strategy signal or actual investment.",
+    "Event terms are supplied to the mechanics scenario by the accounting instant. This assumption does not clear historical publication gaps.",
+    "Whole successor/child shares are modeled as delivered at the scenario instant. Actual delivery timing remains unverified.",
+    "Economic basis allocation uses relative component values at that session's close, not tax basis and not future prices.",
+    "No real-case cash availability or fractional payout is assumed. Those claims remain outstanding.",
+    "The Arconic child quote is unavailable locally. A separate explicitly synthetic quote checks arithmetic only after the missing-quote rejection is checked."
+  ],
+  "cases": [
+    {
+      "name": "whole_foods_delayed_cash_right",
+      "source_id": "whole_foods_2017",
+      "source_terms": ["$42.00", "August 28, 2017"],
+      "session": "2017-08-28",
+      "parent_id": "ORIGINAL-WFM",
+      "quantity": 3,
+      "kind": "exchange",
+      "cash_per_parent": "42",
+      "shares": [],
+      "blockers": ["Publication convention is later than event open", "Spendable payment time unverified"]
+    },
+    {
+      "name": "activision_delayed_cash_right",
+      "source_id": "activision_2023_sec",
+      "source_terms": ["$95.00", "October 13, 2023"],
+      "session": "2023-10-13",
+      "parent_id": "ORIGINAL-ATVI",
+      "quantity": 3,
+      "kind": "exchange",
+      "cash_per_parent": "95",
+      "shares": [],
+      "blockers": ["Exact public availability not reviewed", "Provider payable date does not prove spendable broker credit"]
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor",
+      "source_id": "aetna_2018",
+      "source_terms": ["$145.00", "0.8378", "No fractional shares"],
+      "session": "2018-11-28",
+      "parent_id": "ORIGINAL-AET",
+      "quantity": 3,
+      "kind": "exchange",
+      "cash_per_parent": "145",
+      "shares": [{"instrument_id": "CVS-SUCCESSOR", "ratio": "0.8378", "probe": "cvs_reference"}],
+      "blockers": ["Publication convention later than event open", "Share delivery, cash availability and fractional payout unverified"]
+    },
+    {
+      "name": "level3_cash_and_ctl_successor",
+      "source_id": "level3_2017",
+      "source_terms": ["$26.50", "1.4286", "November 1, 2017"],
+      "session": "2017-11-01",
+      "parent_id": "ORIGINAL-LVLT",
+      "quantity": 3,
+      "kind": "exchange",
+      "cash_per_parent": "26.50",
+      "shares": [{"instrument_id": "CTL-SUCCESSOR", "ratio": "1.4286", "probe": "ctl_reference"}],
+      "blockers": ["Historical publication/delivery time and fractional treatment need review", "Spendable payment time unverified"]
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child",
+      "source_id": "alcoa_2016_completion",
+      "source_terms": ["November 1, 2016", "one share", "every three shares"],
+      "session": "2016-11-01",
+      "parent_id": "ORIGINAL-AA-THEN-ARNC",
+      "parent_probe": "arconic_original",
+      "quantity": 10,
+      "kind": "spinoff",
+      "cash_per_parent": "0",
+      "shares": [{"instrument_id": "NEW-ALCOA-AA", "ratio": "1/3", "probe": "alcoa_child"}],
+      "blockers": ["Assumes eligible post-reverse-split pre-distribution holdings; record-date/due-bill entitlement not certified", "Actual delivery and fractional payout unverified"]
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch",
+      "source_id": "arconic_2020_completion",
+      "source_terms": ["April 1, 2020", "every four shares", "Howmet"],
+      "session": "2020-04-01",
+      "parent_id": "ORIGINAL-ARNC-THEN-HWM",
+      "parent_probe": "howmet_parent",
+      "quantity": 3,
+      "kind": "spinoff",
+      "cash_per_parent": "0",
+      "shares": [{"instrument_id": "NEW-ARCONIC-2020", "ratio": "1/4", "synthetic_close": "10"}],
+      "blockers": ["No saved new-Arconic child quote; explicitly synthetic mechanics check only", "Record-date/due-bill entitlement, delivery and fractional payout unverified"]
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership",
+      "source_id": "under_armour_2016_10k",
+      "source_terms": ["one-for-one", "April 7, 2016", "Class C"],
+      "session": "2016-04-08",
+      "parent_id": "UA-CLASS-A",
+      "parent_probe": "ua_class_a_old",
+      "quantity": 3,
+      "kind": "spinoff",
+      "cash_per_parent": "0",
+      "shares": [{"instrument_id": "UA-CLASS-C", "ratio": "1", "probe": "ua_class_c_old"}],
+      "blockers": ["Mechanical recognition uses first regular quote April 8, not actual April 7 distribution", "Annual report is retrospective, not advance-publication evidence", "Record-date/due-bill entitlement and delivery not certified"]
+    }
+  ],
+  "blocked_cases": [
+    {"name": "fox_disney_election_and_proration", "source_id": "fox_2019_spinoff", "reason": "Do not select an unreviewed election, proration, conversion ratio or fractional payout."},
+    {"name": "under_armour_additional_class_c_distribution", "source_id": "under_armour_2016_10k", "reason": "Saved annual report confirms aggregate shares/cash, not an approved per-share ratio or fractional allocation. Do not derive a ratio from aggregate totals."},
+    {"name": "bed_bath_suspension_and_cancellation", "source_id": "bbby_notice_final", "reason": "Missing OTC quotes and publication/cancellation valuation remain unresolved; no stale mark or assumed early zero."}
+  ],
+  "ready_for_strategy_scoring": false,
+  "new_purchases_usd": 0
+}

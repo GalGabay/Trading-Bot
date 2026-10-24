@@ -14,15 +14,23 @@ starting a paper trial, review the
 
 ## Where we are now
 
-**Most recent work:** The [free collection/event review](free_collection_results.md)
+**Most recent work:** The [ownership-claim accounting step](claim_accounting.md)
+implements a separate offline ledger for delayed cash rights, successor and
+spin-off shares, and fractional claims. All 111 focused unit tests and 84
+saved-case/timeline checks pass. Simulated amounts are not account money;
+this step made zero purchases, network requests or orders. Connecting the
+component to strategy execution and resolving timing/price evidence remain
+my engineering work before expanding the basket. You need no card, download,
+dependency installation or risk-setting change now.
+
+**Preceding work:** The [free collection/event review](free_collection_results.md)
 has saved 23,748 raw historical observations and inventoried 249 provider
 events using existing access. Three observed boundary issues are explained/
 resolved, including an actual recovered CBRE candle. Ten independently
 confirmed required events are missing from API responses; those histories
 remain blocked. Purchases, subscription changes and orders were zero.
-The next work is delayed cash/share claim and distribution accounting, using
-the saved representative cases. You need no payment card, new subscription,
-manual download or risk-setting change for that engineering work.
+The saved representative cases now feed the accounting checks above; unresolved
+historical evidence still blocks strategy scoring.
 
 **Latest engineering step:** The [2016 cohort source/coverage audit](cohort_2016_audit_results.md)
 identifies dated tickers for all 506 retained holdings, records ten event cases

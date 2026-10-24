@@ -29,6 +29,11 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
     reconstructed. Missing prices, inconsistent fills, and mismatched equity
     raise; no prices are filled and no path is fabricated.
     """
+    if "accounting_ledger_version" in case:
+        raise ValueError(
+            "Ownership-claim accounting uses ClaimLedger.mark risk bounds; "
+            "the strategy risk adapter must not omit its cash/fractional claims"
+        )
     action_names = ("share_actions", "dividend_entitlements", "dividend_payments", "cash_settlements")
     has_actions = any(case.get(key) for key in action_names)
     if has_actions and not case.get("universe_metadata"):

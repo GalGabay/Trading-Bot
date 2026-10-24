@@ -3829,3 +3829,55 @@ evidence, unavailable OTC history and full 506-stock coverage remain gates.
 The broader entry/ranking study stays unscored. Purchases/plan upgrades are
 not a fallback; no owner card, download, configuration or risk-setting action
 is required now. Paper activation and Pi validation remain separate.
+
+## Offline ownership-claim accounting: 2026-10-24
+
+The [ownership-claim component and case replay](docs/claim_accounting.md)
+implement delayed terminal cash rights, mixed cash/share acquisitions,
+retained-parent spin-offs, same-class stock distributions and exact fractional
+claims. The reusable `backtesting/claim_accounting.py` module uses the standard
+library only. It has no broker, HTTP, credential or strategy imports. The
+separate replay uses previously saved source terms, raw quotes and calendars;
+no new data request, purchase, subscription change, order or package
+installation occurred. All money in the checks is simulated.
+
+Fixed cash rights and unknown fractional payouts stay outstanding, never
+spendable. Fractional ownership has actual successor-price exposure until an
+explicit reviewed cash allocation replaces it. Payment requires a separate
+exact amount, known timestamp and availability timestamp; duplicate event/
+payment/fixing instructions raise without mutation. Cash, shares, claims,
+economic basis and realized/unrealized P&L reconcile exactly. Relative
+contemporaneous-close component values allocate economic basis; this is not
+tax accounting. Quotes must match the exact accounting instant and stable
+identity. No stale mark, forward fill, assumed payout or future-price basis
+allocation is permitted. Claim-aware OHLC bounds include fractional exposure
+but are not an observed intraday portfolio path or a full drawdown study.
+
+Verification: **111 focused unit tests pass**, including 26 new ledger tests
+and 85 existing universe/action/risk tests; **84 saved-case/timeline checks
+pass** across seven independent mechanics scenarios and a synthetic settlement
+timeline. [Pinned inputs and results](docs/claim_accounting_summary.json) retain
+source/code hashes and explicit assumptions. Detailed separate evidence is in
+`data/reports/claim_accounting_v2`; earlier reports are not rewritten. No
+2024-2025 candles were used; full optional-ML tests and Pi execution were not
+part of this check.
+
+Case timing/delivery assumptions do not certify actual historical eligibility
+or broker credit. Aetna/Level 3 fractions and Alcoa/Arconic branches are kept
+as rights rather than discarded. The newer Arconic child quote is absent:
+valuation fails without it, and a clearly labeled synthetic quote checks
+arithmetic only. Under Armour's initial branch check uses its first regular
+quoted session rather than pretending to price the earlier distribution.
+Fox election/conversion, the additional Under Armour distribution ratio,
+Bed Bath OTC prices, and real fractional-payment/cash-availability evidence
+remain unresolved. No strategy return study or paper readiness follows.
+
+**Next engineering work:** integrate this checked ledger through an explicit
+historical-event strategy adapter with entitlement/delivery gates, stop/order
+invalidation, inherited holding reviews, feature-history conventions and
+cash/exposure/risk reporting. Existing universe schemas still reject these
+unsupported strategy events, and legacy risk reporting rejects the new
+accounting format rather than ignoring claims. Preserve old event-free results
+and complete evidence checks before expanding/scoring the basket. This work
+is the coding agent's responsibility; no owner purchase, card, download or
+risk-setting change is required now. Paper activation stays disabled.

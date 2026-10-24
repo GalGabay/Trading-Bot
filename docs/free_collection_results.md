@@ -210,7 +210,14 @@ Git, credentials remain local, and 2024-2025 candles remain reserved.
 
 ## Next work and owner responsibilities
 
-The collection workflow now exists and has run. Next engineering work is
+The collection workflow now exists and has run. The subsequently completed
+[ownership-claim accounting component](claim_accounting.md) checks delayed
+cash rights, successor/spin-off shares and exact fractional ownership using
+the saved cases. Its standalone ledger passes 111 focused unit tests and 84
+saved-case/timeline checks. Integrating it with the strategy simulator and
+resolving the evidence below remain gates before larger strategy scoring.
+
+At the end of this collection increment, the next engineering work was
 **corporate-action accounting with delayed claims and branches**: terminal
 cash rights that are not yet spendable, mixed cash/share acquisitions,
 spin-off ownership, fractional claims and a documented valuation policy.

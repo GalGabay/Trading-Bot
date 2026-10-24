@@ -80,6 +80,13 @@ Ten independently required events are absent from the queried action responses;
 terminal claims, share distributions/mergers and OTC valuation remain blockers
 before broader strategy scoring. Collection used 46 historical-data GETs under
 existing access, with $0 in purchases, no subscription changes and no orders.
+The [ownership-claim ledger and saved-case checks](docs/claim_accounting.md)
+now cover delayed cash rights, cash/share mergers, spin-off branches and exact
+fractional claims. It separates spendable cash from receivables and includes
+claim-aware equity/risk bounds. The component is checked offline; connecting
+it to strategy execution and resolving historical timing/price gaps remain
+due before broader strategy scoring. This step makes no network requests or
+purchases and places no orders.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
 one fixed ATR protective-exit variant against that baseline.
 Before approving paper-order risk settings, use the

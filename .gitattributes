@@ -3,3 +3,6 @@ docs/research_data/*.csv -text
 # Preserve the frozen collection/review hashes across Windows/Pi checkouts.
 docs/free_collection_plan.json -text
 docs/free_collection_event_review.json -text
+# Preserve the new case protocol and tracked audit evidence byte for byte.
+docs/claim_accounting_cases.json -text
+docs/claim_accounting_summary.json -text

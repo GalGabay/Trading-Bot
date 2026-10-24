@@ -1,5 +1,12 @@
 # Historical-universe support: what the new code does
 
+**New accounting component:** [Delayed cash and branched ownership](claim_accounting.md)
+now have a checked standalone ledger and saved-case replay. This is not a
+version-3 universe manifest or a connected strategy adapter. The schemas below
+still reject unsupported share/fractional/late-payment events; do not encode
+them as immediate terminal cash or generic splits. Adapter integration and
+historical evidence gates remain due before broader strategy scoring.
+
 **Latest update:** [Reviewed raw-price pilot, action-aware risk and historical baskets](raw_action_pilot_and_historical_baskets.md)
 adds a real-data accounting example, dated historical source lists and
 action-aware daily risk reconciliation. Version-2 action records retain

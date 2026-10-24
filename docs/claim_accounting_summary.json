@@ -1,0 +1,501 @@
+{
+  "scope": "Offline accounting mechanics using saved source terms; not historical strategy scoring or settlement certification",
+  "accounting_ledger_version": 1,
+  "simulated_money": true,
+  "new_purchases_usd": 0,
+  "network_requests": 0,
+  "orders": 0,
+  "subscription_changes": 0,
+  "strategy_simulations": 0,
+  "reserved_holdout_read": false,
+  "input_sha256": {
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\docs\\free_collection_event_review.json": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_review_v1\\report.json": "b1a47d350738ceb838ca27bd50ed0ab61559312b0254e9f3bba97668d67a39db",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\report.json": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\docs\\free_collection_plan.json": "bf7ca6cece38e0a54eeff9a912efe8fc516971ab314aecb49714c14f6254f9d3",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\broad_universe_audit_final\\calendar.json": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7",
+    "docs\\claim_accounting_cases.json": "4e14a75178570db1463c3764722e3012ba21c4024235ca86435e49f9ddc404f4",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\historical_mapping_sources_v1\\alcoa_2016_completion.html": "694f442ac651e18ad4b78e3f73516c0e3a7b7a4ac8663524da1d4cd8de756542",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\historical_mapping_sources_v1\\fox_2019_spinoff.html": "febbac2d9427555cd82803eb3795b64540656621c2fdcaa87e0ac2c6962f9c30",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_evidence_v1\\activision_2023_sec.html": "1addc924bebaf6f6b6e3ddc22cfa515233ec290cb882c33aa57a02584c2b525d",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\historical_mapping_sources_v1\\aetna_2018.html": "24b23468d292fc841e0f5ef6db2230367216458464e2424fd663fa764108b537",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_evidence_v1\\under_armour_2016_10k.html": "3f1b96064c27747cd382a388290bb0cc88a27cfe01c62a62d7daff87436cb8dc",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_evidence_v1\\bbby_notice_final.html": "a78a63a207497e2ed1c8f3425d7cadf18c99861dbd0465d6db6a85867f0d2894",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\historical_mapping_sources_v1\\level3_2017.html": "9783b47f4a498776e43b8a4fcd9051924b456d846bf04d85891a7d057f37bb63",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\historical_mapping_sources_v1\\whole_foods_2017.html": "b38ebe712eddcf171986a768bed531254c086d5499d65d66145c3324dc7baca8",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_evidence_v1\\arconic_2020_completion.html": "b319d89001c37acb1433dcff17786d281628ad7be3f2b1e906df942873dc9553",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\014\\bars.csv": "3952df25bebdaa18b4cb00bf5dd769cbf4de0d2219573423837a94a65efd6920",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\015\\bars.csv": "bfb977b1249035c32873b5dfd594ff597298daed293f071e9c303c85c0615864",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\017\\bars.csv": "3c1fdea861bca23419fd243571d11b7f861b74e56e0648b1ba5eabd0d830b389",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\019\\bars.csv": "46badbea469b8eb942c10d665bb06ac6c05a7cc4c1cc79e2c2777530bcc60000",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\018\\bars.csv": "b21446011c84bd80378ac9d65c2f8eb8cf591fa18cedb71e49eeb4e9a7f8a645",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\004\\bars.csv": "bc3c20de2b582f19fcf288c3cf6e98dccd3e30c2d26e63584531f2c5222fafe5",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\free_collection_v1\\006\\bars.csv": "e7b6b807d7dac523a706b9fd1f9c7cef59f03248c3886f9fbc29e2676bde74c1"
+  },
+  "code_sha256": {
+    "backtesting\\claim_accounting.py": "1cdde35661c785be0e87d195332e4a26ad8598dd21c52ec1e2aa3a0c3f13d06d",
+    "backtesting\\claim_accounting_audit.py": "27e57fcc8b77fc8e5becea08bdbedf2b2571eaf4e5b34ee0024636c9b6dae13d",
+    "backtesting\\risk_diagnostics.py": "0c4093c044ed327108dcbef00d5efee6020b2ca77b5638c1070ce0248ed4a32d",
+    "backtesting\\cohort_audit.py": "508bc86515271d58a58e49aee20443efac0d93fb0ca05274dc068b46c2bff766",
+    "backtesting\\historical_holdings.py": "02f907909211d81bd5c1ebd9cf339ad816de5e10f7abbb8aa61c997c9de74407",
+    "tests\\test_claim_accounting.py": "c68c88cd54a31b8b10a1a8ab92f6be08883e12e85372e6529ee25a79e2083c41"
+  },
+  "checks_passed": 84,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "whole_foods_delayed_cash_right: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "whole_foods_delayed_cash_right: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "activision_delayed_cash_right: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: exact successor/child and fractional ownership",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: exact successor/child and fractional ownership",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "level3_cash_and_ctl_successor: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: exact successor/child and fractional ownership",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: missing child quote blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: exact successor/child and fractional ownership",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: source terms corroborated",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: unknown-at-event evidence blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: unresolved ownership terms blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: claims do not credit spendable cash",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: correct parent ownership",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: exact successor/child and fractional ownership",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: correct cash rights",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: economic basis conserved",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: equity and P&L reconcile",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: duplicate event blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership: no invented payment",
+      "passed": true
+    },
+    {
+      "name": "synthetic: claims cannot fund buys: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "synthetic: claims survive whole-share sale",
+      "passed": true
+    },
+    {
+      "name": "synthetic: fraction remains price exposed",
+      "passed": true
+    },
+    {
+      "name": "synthetic: duplicate payment blocked: rejected without mutation",
+      "passed": true
+    },
+    {
+      "name": "synthetic: fixing does not create buying power",
+      "passed": true
+    },
+    {
+      "name": "synthetic: known cash allocation removes fractional price exposure",
+      "passed": true
+    },
+    {
+      "name": "synthetic: exact final cash and no remaining rights",
+      "passed": true
+    },
+    {
+      "name": "synthetic: final realized P&L reconciles",
+      "passed": true
+    }
+  ],
+  "case_count": 7,
+  "cases": [
+    {
+      "name": "whole_foods_delayed_cash_right",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "saved_raw_quotes_or_cash_only",
+      "outstanding_claims": 1,
+      "blockers": [
+        "Publication convention is later than event open",
+        "Spendable payment time unverified"
+      ],
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "name": "activision_delayed_cash_right",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "saved_raw_quotes_or_cash_only",
+      "outstanding_claims": 1,
+      "blockers": [
+        "Exact public availability not reviewed",
+        "Provider payable date does not prove spendable broker credit"
+      ],
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "saved_raw_quotes_or_cash_only",
+      "outstanding_claims": 2,
+      "blockers": [
+        "Publication convention later than event open",
+        "Share delivery, cash availability and fractional payout unverified"
+      ],
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "name": "level3_cash_and_ctl_successor",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "saved_raw_quotes_or_cash_only",
+      "outstanding_claims": 2,
+      "blockers": [
+        "Historical publication/delivery time and fractional treatment need review",
+        "Spendable payment time unverified"
+      ],
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "saved_raw_quotes_or_cash_only",
+      "outstanding_claims": 1,
+      "blockers": [
+        "Assumes eligible post-reverse-split pre-distribution holdings; record-date/due-bill entitlement not certified",
+        "Actual delivery and fractional payout unverified"
+      ],
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "includes_explicit_synthetic_child_quote",
+      "outstanding_claims": 1,
+      "blockers": [
+        "No saved new-Arconic child quote; explicitly synthetic mechanics check only",
+        "Record-date/due-bill entitlement, delivery and fractional payout unverified"
+      ],
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership",
+      "source_terms_corroborated": true,
+      "mechanics_checks_passed": true,
+      "price_mode": "saved_raw_quotes_or_cash_only",
+      "outstanding_claims": 0,
+      "blockers": [
+        "Mechanical recognition uses first regular quote April 8, not actual April 7 distribution",
+        "Annual report is retrospective, not advance-publication evidence",
+        "Record-date/due-bill entitlement and delivery not certified"
+      ],
+      "ready_for_strategy_scoring": false
+    }
+  ],
+  "source_blocked_cases": [
+    {
+      "name": "fox_disney_election_and_proration",
+      "source_id": "fox_2019_spinoff",
+      "reason": "Do not select an unreviewed election, proration, conversion ratio or fractional payout."
+    },
+    {
+      "name": "under_armour_additional_class_c_distribution",
+      "source_id": "under_armour_2016_10k",
+      "reason": "Saved annual report confirms aggregate shares/cash, not an approved per-share ratio or fractional allocation. Do not derive a ratio from aggregate totals."
+    },
+    {
+      "name": "bed_bath_suspension_and_cancellation",
+      "source_id": "bbby_notice_final",
+      "reason": "Missing OTC quotes and publication/cancellation valuation remain unresolved; no stale mark or assumed early zero."
+    }
+  ],
+  "settlement_timeline": "Explicitly synthetic; no real-case payout/date inferred",
+  "assumptions": [
+    "Each independent scenario starts with hypothetical holdings, not a strategy signal or actual investment.",
+    "Event terms are supplied to the mechanics scenario by the accounting instant. This assumption does not clear historical publication gaps.",
+    "Whole successor/child shares are modeled as delivered at the scenario instant. Actual delivery timing remains unverified.",
+    "Economic basis allocation uses relative component values at that session's close, not tax basis and not future prices.",
+    "No real-case cash availability or fractional payout is assumed. Those claims remain outstanding.",
+    "The Arconic child quote is unavailable locally. A separate explicitly synthetic quote checks arithmetic only after the missing-quote rejection is checked."
+  ],
+  "legacy_strategy_adapter_connected": false,
+  "market_wide_performance_ready": false,
+  "ready_for_strategy_scoring": false,
+  "next_work": "Integrate the checked ledger with explicit universe/feature/order policies; resolve evidence gaps before any larger strategy study"
+}
