@@ -3881,3 +3881,50 @@ accounting format rather than ignoring claims. Preserve old event-free results
 and complete evidence checks before expanding/scoring the basket. This work
 is the coding agent's responsibility; no owner purchase, card, download or
 risk-setting change is required now. Paper activation stays disabled.
+
+## Ownership strategy adapter: 2026-10-27
+
+The [explicit ownership adapter](docs/ownership_adapter.md) now connects the
+exact ledger to the existing daily portfolio simulator. It requires a reviewed
+`OwnershipSchedule` and the version-2 raw universe action scope
+`explicit_ownership_splits_and_ordinary_dividends`. That scope without its
+schedule is rejected. Parent/child identity, prior-close eligibility, advance
+knowledge and whole-share delivery must be explicitly reviewed. Existing
+unverified saved scenarios are not automatically admitted to strategy scoring.
+
+In the opt-in mode, the ledger supplies cash/positions for every fill. Corporate
+actions precede opening fills and use opening component values for economic
+basis allocation. Affected queued orders are canceled, inherited stops use a
+documented proportional opening-value floor, and affected feature histories
+restart with a 200-session new-entry warmup. Holding age is inherited from the
+oldest lot. Existing destination holdings remain separate ledger lots. Genuine
+splits and ordinary dividend rights can apply to inherited whole holdings;
+unresolved fractional entitlement chains are rejected. Dividend issuer dates
+do not automatically become spendable cash availability in this mode.
+
+Fixed rights cannot fund purchases. Whole/fractional ownership contributes to
+exposure and beneficial position counts; passive distributions above an entry
+cap block new buys. Reports distinguish cash, dividend rights and fractional
+claims. Internal accounting replay reconstructs the journal and risk bounds;
+external risk diagnostics additionally compare used quotes with complete actual
+raw data and dated aliases. Neither process certifies source declarations or
+reruns strategy selection. Existing action scopes/run paths retain the earlier
+behavior; exact legacy-result preservation still needs execution regression.
+
+Verification in this increment is **compilation and code/diff review only**.
+No unit tests, saved-case replay, regression replay or strategy return study
+was run. Earlier 111-unit-test/84-mechanics-check evidence belongs to the
+preceding component version and is preserved, not relabeled as integration
+evidence. Windows integrated execution and Pi execution remain unverified.
+New purchases, network requests, account calls, orders, package installations
+and reserved 2024-2025 candle use were zero.
+
+**Next engineering work:** focused integration tests and regression replays,
+then remaining free-source entitlement/delivery/payment and price review,
+before expanding the basket. Broader strategy scoring is still blocked.
+The [paper-readiness checklist](docs/paper_trading_readiness.md) records the
+remaining data/simulation, investment-acceptance, paper-execution and owner
+activation gates. Earlier candidates fail the approved investment goal; a
+paper launch date is not established. No owner card, purchase, download or
+risk-setting change is required now. Personal paper-risk approval, account/
+startup recovery review and explicit activation remain due before paper orders.

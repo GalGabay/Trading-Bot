@@ -96,17 +96,22 @@ def enriched_metrics(result: PortfolioBacktestResult) -> dict:
         quantity * result.final_closes[symbol] * multiplier + result.costs.commission_per_order
         for symbol, quantity in result.final_positions.items()
     )
-    return {
+    values = {
         **metrics,
         "mean_closing_exposure": float(np.mean([point.gross_exposure for point in result.equity_curve])),
         "commissions_paid": sum(fill.commission for fill in result.fills),
         "traded_notional": sum(fill.quantity * fill.fill_price for fill in result.fills),
-        "realized_pnl": sum(metrics["realized_pnl_by_symbol"].values()),
-        "marked_unrealized_pnl": sum(position["marked_unrealized_pnl"] for position in metrics["open_positions"].values()),
+        "realized_pnl": metrics["total_realized_pnl"] if result.ownership_accounting is not None else sum(metrics["realized_pnl_by_symbol"].values()),
+        "marked_unrealized_pnl": metrics["marked_unrealized_pnl_including_claims"] if result.ownership_accounting is not None else sum(position["marked_unrealized_pnl"] for position in metrics["open_positions"].values()),
         "instruments_with_closed_trades": len({fill.symbol for fill in result.fills if fill.side.value == "SELL"}),
         "hypothetical_exit_cost": liquidation_cost,
         "hypothetical_liquidated_return": (metrics["final_equity"] - liquidation_cost) / result.costs.initial_cash - 1,
     }
+    if result.ownership_accounting is not None and metrics["ownership_claims"]:
+        values["hypothetical_whole_share_exit_marked_return"] = values["hypothetical_liquidated_return"]
+        values["hypothetical_liquidated_return"] = None
+        values["claims_not_liquidated"] = True
+    return values
 
 
 def pack(result: PortfolioBacktestResult) -> dict:
@@ -121,13 +126,19 @@ def pack(result: PortfolioBacktestResult) -> dict:
     }
     if result.universe_metadata is not None:
         packed["universe_metadata"] = result.universe_metadata
-        packed["cash_settlements"] = list(result.cash_settlements)
-        packed["share_actions"] = list(result.share_actions)
-        packed["dividend_entitlements"] = list(result.dividend_entitlements)
-        packed["dividend_payments"] = list(result.dividend_payments)
-        packed["final_dividend_receivables"] = list(result.final_dividend_receivables)
+        if result.ownership_accounting is None:
+            packed["cash_settlements"] = list(result.cash_settlements)
+            packed["share_actions"] = list(result.share_actions)
+            packed["dividend_entitlements"] = list(result.dividend_entitlements)
+            packed["dividend_payments"] = list(result.dividend_payments)
+            packed["final_dividend_receivables"] = list(result.final_dividend_receivables)
         for point, value in zip(result.equity_curve, packed["equity_curve"]):
             value.update(cash=point.cash, dividend_receivable=point.dividend_receivable)
+            if result.ownership_accounting is not None:
+                value.update(ownership_cash_receivable=point.ownership_cash_receivable, fractional_claim_value=point.fractional_claim_value)
+    if result.ownership_accounting is not None:
+        packed["accounting_ledger_version"] = 1
+        packed["ownership_accounting"] = result.ownership_accounting
     return packed
 
 

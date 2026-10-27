@@ -1,5 +1,12 @@
 # Delayed cash, successor shares and spin-off accounting
 
+**Subsequent integration, 2026-10-27:** The [ownership adapter](ownership_adapter.md)
+now connects this ledger to the simulator through a separate reviewed schedule.
+It uses opening reference values, inherited stop/order policies, feature resets
+and claim-aware report replay. Compilation is complete; new integration tests
+and regression execution remain due. The 111/84 results below are historical
+evidence from the preceding standalone component, not fresh integration results.
+
 ## What this step does
 
 The offline [ownership ledger](../backtesting/claim_accounting.py) now accounts
@@ -13,11 +20,12 @@ was purchased, paid to a broker, invested or traded in an account. This step
 uses saved files only: zero network requests, credentials, orders, subscription
 changes, package installations or new purchases. No 2024–2025 candles were read.
 
-This is a checked accounting component and replay command. It is **not yet
-connected to the strategy backtester**. Existing historical-universe schemas
+This increment provided a checked accounting component and replay command.
+It was subsequently connected through the optional adapter above. Earlier historical-universe action scopes
 remain restricted to their supported split/dividend/immediate-cash events;
-they continue rejecting unsupported event declarations. The old daily risk
-reporter also rejects the new ledger format instead of omitting its claims.
+they continue rejecting unsupported event declarations. Daily risk reporting
+still rejects standalone ledger snapshots; structured adapter reports now
+have a separate accounting replay instead of omitting their claims.
 The larger entry/selection study remains unscored.
 
 ## Accounting rules
@@ -155,7 +163,7 @@ mechanics report remains separate and is not rewritten after code changes.
 
 ## Next work and your responsibilities
 
-**My work:** connect this checked component to the portfolio simulator through
+**At the end of this component increment, my next work was:** connect the component to the portfolio simulator through
 an explicit historical-event adapter. That must cover event timing/eligibility,
 delivery, pending orders and stops, inherited-position holding reviews, feature
 history across distributions, ordinary dividends/splits on inherited holdings,
@@ -163,7 +171,9 @@ and cash/exposure/risk reporting. The adapter must reject unsupported inputs
 and preserve prior event-free results. Continue free-source evidence review
 for payment availability, fractional outcomes and missing child/OTC prices.
 
-Complete these gates before expanding/scoring the larger basket; passing
+That opt-in connection is now implemented in the subsequent adapter. Its
+focused integration/regression verification and remaining evidence review are
+still gates before expanding/scoring the larger basket; passing
 mechanical accounting checks is not proof of higher strategy returns.
 
 **Your work now:** nothing to configure, purchase, download or approve for

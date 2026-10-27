@@ -14,17 +14,20 @@ def split_quantity(quantity: int, new_shares: int, old_shares: int) -> int:
     return shares
 
 
-def feature_views(frame, instrument_id, universe: HistoricalUniverse, periods_per_year):
+def feature_views(frame, instrument_id, universe: HistoricalUniverse, periods_per_year, *, reset_indices=()):
     """One view per contiguous history and split regime, adjusted as of that open.
 
     Future splits never change past decision views. On an effective session,
     rebase only earlier OHLC/volume into the new share units and recompute the
     completed-history features. Dividends remain raw-price signal movements;
     entitlement accounting is separate and cannot double-adjust signal prices.
+    Explicit ownership-event resets start a fresh history at that session;
+    pre-event observations never supply post-event indicators or warmup.
     """
     active = frame.loc[frame["volume"] > 0]
     lookup, starts = {}, {}
-    groups = pd.Series(active.index, index=active.index).diff().ne(1).cumsum()
+    indices = pd.Series(active.index, index=active.index)
+    groups = (indices.diff().ne(1) | indices.isin(reset_indices)).cumsum()
     index_by_date = {t.date().isoformat(): i for i, t in enumerate(universe.dates)}
     splits = sorted((a for a in universe.splits if a.instrument_id == instrument_id), key=lambda a: a.effective_session)
     for _, block in active.groupby(groups):

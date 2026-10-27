@@ -14,12 +14,30 @@ starting a paper trial, review the
 
 ## Where we are now
 
-**Most recent work:** The [ownership-claim accounting step](claim_accounting.md)
+**Latest engineering work, 2026-10-27:** The [ownership adapter](ownership_adapter.md)
+connects the accounting component to the portfolio simulator under a separate
+reviewed event schedule. It covers inherited positions, canceled orders,
+stops, feature history and claim-aware reporting. Compilation is complete;
+integration tests and execution/regression replays are still due. Previous
+111-test/84-check totals below describe the preceding component increment,
+not the newly connected engine. No source case has been promoted or broader
+strategy study run. Purchases, network requests, account calls and orders in
+this step were zero.
+
+**How far to paper trading:** [This checklist](paper_trading_readiness.md)
+records four remaining gates: credible data/simulation, a passing research
+candidate, verified paper execution, and your activation review. The tested
+candidates have not met the approved investment goal, so no launch date is
+established. No risk-setting change or owner action is needed now. I will
+explicitly tell you when a concrete research review or paper-risk approval
+is due, before paper submission can be enabled.
+
+**Preceding component work:** The [ownership-claim accounting step](claim_accounting.md)
 implements a separate offline ledger for delayed cash rights, successor and
 spin-off shares, and fractional claims. All 111 focused unit tests and 84
 saved-case/timeline checks pass. Simulated amounts are not account money;
-this step made zero purchases, network requests or orders. Connecting the
-component to strategy execution and resolving timing/price evidence remain
+this step made zero purchases, network requests or orders. The component is
+now connected; integration verification and timing/price evidence remain
 my engineering work before expanding the basket. You need no card, download,
 dependency installation or risk-setting change now.
 

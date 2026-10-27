@@ -1,12 +1,20 @@
 # Study C: daily rule-only research record
 
-**Most recent engineering follow-up:** The [ownership-claim ledger](claim_accounting.md)
+**Latest engineering update, 2026-10-27:** The [ownership adapter](ownership_adapter.md)
+connects the separate accounting ledger to the existing simulator. It requires
+reviewed event eligibility/delivery and keeps unverified historical cases
+blocked. Compilation passed; integration/regression execution remains due.
+No larger study, revised return result, purchase, account call or order was
+made. See [paper readiness](paper_trading_readiness.md) for the remaining gates.
+
+**Preceding engineering follow-up:** The [ownership-claim ledger](claim_accounting.md)
 now handles delayed cash rights, successor/spin-off ownership and exact
 fractional claims in standalone offline accounting. The 111 focused unit tests
 and 84 saved-case/timeline checks pass. Historical payment/publication/delivery
 gaps and missing quotes remain explicit; one missing-child-price arithmetic
-check is synthetic. The strategy adapter is not connected, so there is no new
-strategy return result, broader scoring or paper approval. Purchases, network
+check is synthetic. That increment did not connect a strategy adapter; the
+latest update above adds the connection with verification still pending.
+There is no new strategy return result, broader scoring or paper approval. Purchases, network
 requests and orders in this increment were zero.
 
 **Preceding engineering follow-up:** The [free collection/event review](free_collection_results.md)

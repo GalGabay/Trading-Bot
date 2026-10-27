@@ -1,10 +1,17 @@
 # Historical-universe support: what the new code does
 
-**New accounting component:** [Delayed cash and branched ownership](claim_accounting.md)
+**Latest adapter, 2026-10-27:** The [ownership strategy adapter](ownership_adapter.md)
+now accepts a separate reviewed schedule with a version-2 raw universe using
+`explicit_ownership_splits_and_ordinary_dividends`. Engine integration compiles;
+integration/regression verification remains due. Other action scopes retain
+the earlier supported event types. New scope without its schedule is rejected.
+
+**Preceding accounting component:** [Delayed cash and branched ownership](claim_accounting.md)
 now have a checked standalone ledger and saved-case replay. This is not a
-version-3 universe manifest or a connected strategy adapter. The schemas below
+version-3 universe manifest. Its initial increment did not connect a strategy
+adapter; the separate opt-in mode above now implements that connection. The earlier scopes below
 still reject unsupported share/fractional/late-payment events; do not encode
-them as immediate terminal cash or generic splits. Adapter integration and
+them as immediate terminal cash or generic splits. Adapter verification and
 historical evidence gates remain due before broader strategy scoring.
 
 **Latest update:** [Reviewed raw-price pilot, action-aware risk and historical baskets](raw_action_pilot_and_historical_baskets.md)

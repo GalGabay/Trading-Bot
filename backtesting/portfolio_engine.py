@@ -9,6 +9,7 @@ implementation of the complete paper-trading risk policy.
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
+from fractions import Fraction
 from math import floor, isfinite
 
 import pandas as pd
@@ -22,8 +23,9 @@ from backtesting.protective_exits import (
 )
 from backtesting.research_policy import AllocationPolicy, HaltPolicy, ResearchHaltState
 from backtesting.holding_policy import HoldingEntry, HoldingPolicy
-from backtesting.universe import HistoricalUniverse, UniverseDataError
+from backtesting.universe import HistoricalUniverse, UniverseDataError, OWNERSHIP_SCOPE
 from backtesting.corporate_actions import feature_views, split_quantity
+from backtesting.ownership_adapter import OwnershipRuntime, OwnershipSchedule
 
 
 @dataclass(frozen=True)
@@ -56,6 +58,8 @@ class PortfolioEquityPoint:
     position_count: int
     drawdown: float
     dividend_receivable: float = 0.0
+    ownership_cash_receivable: float = 0.0
+    fractional_claim_value: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -83,6 +87,7 @@ class PortfolioBacktestResult:
     dividend_entitlements: tuple[dict, ...] = ()
     dividend_payments: tuple[dict, ...] = ()
     final_dividend_receivables: tuple[dict, ...] = ()
+    ownership_accounting: dict | None = None
 
 
 @dataclass(frozen=True)
@@ -153,6 +158,7 @@ class PortfolioBacktestEngine:
         trade_end: pd.Timestamp,
         signal_datasets: dict[str, pd.DataFrame] | None = None,
         universe: HistoricalUniverse | None = None,
+        ownership: OwnershipSchedule | None = None,
     ) -> PortfolioBacktestResult:
         """Use execution OHLC for fills and optional separate bars for signals.
 
@@ -164,6 +170,11 @@ class PortfolioBacktestEngine:
         calendar, with actual sparse observations only. It never infers IPOs
         or delisting proceeds. Separate signal feeds are not supported in
         this mode until their dated corporate-action conventions are audited.
+
+        Optional ownership accounting additionally requires an explicit reviewed
+        schedule and ownership action scope. Corporate actions use opening
+        quotes only; signal history resets at affected identities. No schedule
+        automatically admits the previously collected incomplete cases.
         """
         start = self._utc_bound(trade_start)
         end = self._utc_bound(trade_end)
@@ -173,6 +184,12 @@ class PortfolioBacktestEngine:
             raise ValueError("At least one symbol dataset is required")
         if signal_datasets is not None and set(signal_datasets) != set(datasets):
             raise ValueError("Signal and execution dataset symbols must match")
+        if ownership is not None:
+            if universe is None:
+                raise UniverseDataError("Ownership accounting requires the historical universe/calendar")
+            ownership.bind(universe)
+        elif universe is not None and universe.action_scope == OWNERSHIP_SCOPE:
+            raise UniverseDataError("Ownership action scope requires its reviewed schedule; events cannot be ignored")
         if universe is not None:
             if signal_datasets is not None:
                 raise UniverseDataError("Historical-universe mode requires one audited execution/signal convention")
@@ -190,7 +207,10 @@ class PortfolioBacktestEngine:
             if universe is not None:
                 frame = universe.prepare(symbol, source)
                 bars[symbol] = frame
-                feature_lookup[symbol], segment_starts[symbol] = feature_views(frame, symbol, universe, self.costs.periods_per_year)
+                feature_lookup[symbol], segment_starts[symbol] = feature_views(
+                    frame, symbol, universe, self.costs.periods_per_year,
+                    reset_indices=() if ownership is None else ownership.reset_indices(universe, symbol),
+                )
                 continue
             validate_candles(source)
             frame = source.loc[:, CANONICAL_CANDLE_COLUMNS].copy()
@@ -238,20 +258,36 @@ class PortfolioBacktestEngine:
         dividend_entitlements: list[dict] = []
         dividend_payments: list[dict] = []
         receivables: dict[str, dict] = {}
+        ownership_runtime = None if ownership is None else OwnershipRuntime(ownership, universe, self.costs.initial_cash)
         peak = cash
         previous_close_equity = cash
         halt = ResearchHaltState(self.halt_policy, self.limits.max_daily_loss, self.limits.max_drawdown)
         multiplier = (self.costs.slippage_bps + self.costs.spread_bps / 2) / 10_000
 
+        def claims_at(prices):
+            if ownership_runtime is None:
+                return sum(item["amount"] for item in receivables.values()), 0.0
+            fixed, fractional, _ = ownership_runtime.claim_values(prices)
+            return fixed + fractional, fractional
+
+        def position_count():
+            return len(positions) if ownership_runtime is None else ownership_runtime.position_count()
+
+        def account_fill(fill, *, phase="open"):
+            nonlocal cash
+            if ownership_runtime is not None:
+                ownership_runtime.record_fill(fill, phase=phase)
+                cash = float(ownership_runtime.ledger.cash)
+
         def journal(symbol, phase, status, blockers=(), *, order=None, quantity=None, constraints=None):
             if not self.record_decisions:
                 return
             marks = open_prices if phase == "open" else close_prices
-            value = cash + sum(item["amount"] for item in receivables.values()) + sum(qty * marks[name] for name, qty in positions.items())
+            value = cash + claims_at(marks)[0] + sum(qty * marks[name] for name, qty in positions.items())
             buy_decisions.append({
                 "timestamp": timestamp.isoformat(), "symbol": symbol, "phase": phase,
                 "status": status, "blockers": list(blockers), "cash": cash, "equity": value,
-                "position_count": len(positions), "held_ages": {name: index - entry.session_index + 1 for name, entry in entries.items()},
+                "position_count": position_count(), "held_ages": {name: index - entry.session_index + 1 for name, entry in entries.items()},
                 "signal_timestamp": None if order is None else pd.Timestamp(order.signal.timestamp).isoformat(),
                 "planned_quantity": None if order is None else order.planned_quantity,
                 "quantity": quantity, "quantity_constraints": constraints or {},
@@ -283,8 +319,53 @@ class PortfolioBacktestEngine:
             due = {symbol: order for symbol, order in pending.items() if order.execute_index == index}
             pending = {symbol: order for symbol, order in pending.items() if order.execute_index > index}
 
-            if universe is not None:
+            if ownership_runtime is not None:
+                prior_stops = dict(stops)
+                ownership_runtime.begin(index, {s: bars[s].loc[index] for s in available_symbols})
+                positions.clear()
+                positions.update(ownership_runtime.positions())
+                entries.clear()
+                entries.update(ownership_runtime.entries())
+                cash = float(ownership_runtime.ledger.cash)
+                # Genuine splits preserve stop units and the unfilled buy ceiling.
                 for action in universe.splits_at(timestamp):
+                    symbol = action.instrument_id
+                    if symbol in stops:
+                        stops[symbol] = replace(stops[symbol], price=stops[symbol].price / action.ratio)
+                    for orders in (pending, due):
+                        if symbol in orders:
+                            order = orders[symbol]
+                            orders[symbol] = replace(order,
+                                planned_quantity=None if order.planned_quantity is None else order.planned_quantity * action.new_shares // action.old_shares,
+                                stop_price=None if order.stop_price is None else order.stop_price / action.ratio)
+                for transition in ownership_runtime.transitions:
+                    parent, quantity = transition["parent"], transition["old_quantity"]
+                    for symbol in transition["affected"]:
+                        pending.pop(symbol, None)
+                        due.pop(symbol, None)
+                    if self.protection is not None and quantity:
+                        if parent not in prior_stops or transition["component_value"] <= 0:
+                            raise UniverseDataError("Inherited ownership lacks the prior protective floor or opening component value")
+                        factor = quantity * prior_stops[parent].price / transition["component_value"]
+                        if not isfinite(factor) or factor <= 0:
+                            raise UniverseDataError("Inherited protective floor has an invalid opening-value factor")
+                        for symbol in transition["affected"]:
+                            if symbol not in positions:
+                                continue
+                            proposed = open_prices[symbol] * factor
+                            # An existing destination stop can tighten, never loosen.
+                            if symbol != parent and symbol in prior_stops:
+                                proposed = max(proposed, prior_stops[symbol].price)
+                            if not isfinite(proposed) or proposed <= 0:
+                                raise UniverseDataError("Inherited stop cannot be nonpositive or nonfinite")
+                            stops[symbol] = _ActiveStop(proposed, universe.sessions[index].opens_at)
+                    events.append(f"{timestamp.isoformat()} {parent}: reviewed ownership transition; affected queued orders canceled")
+                stops = {symbol: state for symbol, state in stops.items() if symbol in positions}
+                if position_count() > self.limits.max_positions:
+                    events.append(f"{timestamp.isoformat()}: inherited ownership exceeds entry position cap; new BUYs blocked")
+
+            if universe is not None:
+                for action in (() if ownership_runtime is not None else universe.splits_at(timestamp)):
                     symbol = action.instrument_id
                     quantity = positions.get(symbol, 0)
                     new_quantity = split_quantity(quantity, action.new_shares, action.old_shares)
@@ -308,7 +389,7 @@ class PortfolioBacktestEngine:
                     })
                 # Ordinary ex-date entitlement belongs to prior holders, before
                 # today's discretionary sales/buys. Same-day splits apply first.
-                for dividend in universe.dividends_at(timestamp):
+                for dividend in (() if ownership_runtime is not None else universe.dividends_at(timestamp)):
                     quantity = positions.get(dividend.instrument_id, 0)
                     if quantity:
                         claim = {"timestamp": timestamp.isoformat(), "event_id": dividend.event_id,
@@ -322,7 +403,7 @@ class PortfolioBacktestEngine:
                         cash += claim["amount"]
                         dividend_payments.append({**claim, "timestamp": timestamp.isoformat()})
                         del receivables[event_id]
-                for outcome in universe.outcomes_at(timestamp):
+                for outcome in (() if ownership_runtime is not None else universe.outcomes_at(timestamp)):
                     symbol = outcome.instrument_id
                     pending.pop(symbol, None)
                     due.pop(symbol, None)
@@ -366,6 +447,7 @@ class PortfolioBacktestEngine:
                     )
                     cash += quantity * fill.fill_price - fill.commission
                     fills.append(fill)
+                    account_fill(fill)
                     exited_by_stop.add(symbol)
                     next_entry_index[symbol] = index + self.reentry_cooldown_sessions + 1
                     pending.pop(symbol, None)
@@ -390,9 +472,10 @@ class PortfolioBacktestEngine:
                 price = open_prices[symbol] * (1 - multiplier)
                 cash += quantity * price - self.costs.commission_per_order
                 fills.append(self._fill(timestamp, signal, quantity, open_prices[symbol], price))
+                account_fill(fills[-1])
                 next_entry_index[symbol] = index + self.reentry_cooldown_sessions + 1
 
-            claim_value = sum(item["amount"] for item in receivables.values())
+            claim_value, fraction_exposure = claims_at(open_prices)
             open_equity = cash + claim_value + sum(quantity * open_prices[symbol] for symbol, quantity in positions.items())
             if open_equity <= 0:
                 raise ValueError("Portfolio equity became nonpositive at an open")
@@ -411,7 +494,7 @@ class PortfolioBacktestEngine:
                     journal(symbol, "open", "blocked", ("entry_halt",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; entry halt active")
                     continue
-                if symbol in positions:
+                if symbol in positions or (ownership_runtime is not None and symbol in ownership_runtime.fraction_units()):
                     journal(symbol, "open", "blocked", ("already_held",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; position already open")
                     continue
@@ -419,12 +502,12 @@ class PortfolioBacktestEngine:
                     journal(symbol, "open", "blocked", ("cooldown",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; reentry cooldown")
                     continue
-                if len(positions) >= self.limits.max_positions:
+                if position_count() >= self.limits.max_positions:
                     journal(symbol, "open", "blocked", ("position_count",), order=order)
                     events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; position-count limit")
                     continue
                 equity = cash + claim_value + sum(quantity * open_prices[name] for name, quantity in positions.items())
-                gross = sum(quantity * open_prices[name] for name, quantity in positions.items())
+                gross = fraction_exposure + sum(quantity * open_prices[name] for name, quantity in positions.items())
                 price = open_prices[symbol] * (1 + multiplier)
                 stop = order.stop_price
                 if self.protection is not None and (stop is None or open_prices[symbol] <= stop or price <= stop):
@@ -469,7 +552,10 @@ class PortfolioBacktestEngine:
                 if self.protection is not None:
                     stops[symbol] = _ActiveStop(stop, pd.Timestamp(signal.timestamp))
                 fills.append(self._fill(timestamp, signal, quantity, open_prices[symbol], price))
+                account_fill(fills[-1])
 
+            if ownership_runtime is not None:
+                ownership_runtime.capture_intraday()
             if self.protection is not None:
                 # A stop armed before this session can be touched after the
                 # open, including on the session in which the BUY filled.
@@ -485,23 +571,31 @@ class PortfolioBacktestEngine:
                     )
                     cash += quantity * fill.fill_price - fill.commission
                     fills.append(fill)
+                    account_fill(fill, phase="intraday")
                     next_entry_index[symbol] = index + self.reentry_cooldown_sessions + 1
                     pending.pop(symbol, None)
                     events.append(f"{timestamp.isoformat()} {symbol}: protective stop touched, level={state.price:g}, fill={fill.fill_price:g}")
                     del stops[symbol]
-            if cash < -1e-6 or len(positions) > self.limits.max_positions:
+            if cash < -1e-6 or (ownership_runtime is None and len(positions) > self.limits.max_positions):
                 raise ValueError("Shared cash or position-count invariant failed")
 
+            claim_value, fraction_exposure = claims_at(close_prices)
             equity = cash + claim_value + sum(quantity * close_prices[symbol] for symbol, quantity in positions.items())
+            if ownership_runtime is not None:
+                accounting_mark = ownership_runtime.finish()
+                if abs(float(Fraction(accounting_mark["equity"])) - equity) > 1e-6:
+                    raise UniverseDataError("Simulator and ownership ledger equity differ")
             if equity <= 0:
                 raise ValueError("Portfolio equity became nonpositive at a close")
             peak = max(peak, equity)
-            gross_close = sum(quantity * close_prices[symbol] for symbol, quantity in positions.items())
+            gross_close = fraction_exposure + sum(quantity * close_prices[symbol] for symbol, quantity in positions.items())
+            fixed, fractional, dividend = (claim_value, 0.0, claim_value) if ownership_runtime is None else ownership_runtime.claim_values(close_prices)
             points.append(PortfolioEquityPoint(
                 timestamp=timestamp, cash=cash, equity=equity,
-                gross_exposure=gross_close / equity, position_count=len(positions),
+                gross_exposure=gross_close / equity, position_count=position_count(),
                 drawdown=equity / peak - 1,
-                dividend_receivable=claim_value,
+                dividend_receivable=dividend,
+                ownership_cash_receivable=fixed - dividend, fractional_claim_value=fractional,
             ))
             observe_loss("close", equity, index, timestamp)
             if halt.blocked and self.halt_policy.daily_pause_sessions is not None:
@@ -555,6 +649,9 @@ class PortfolioBacktestEngine:
                     stop_price = None
                     fraction = None
                     if signal.action == SignalAction.BUY:
+                        if ownership is not None and symbol not in ownership.entry_instrument_ids:
+                            journal(symbol, "close", "blocked", ("not_in_research_entry_universe",))
+                            continue
                         if universe is not None and len(history) < 200:
                             journal(symbol, "close", "blocked", ("historical_universe_200_session_warmup",))
                             events.append(f"{timestamp.isoformat()} {symbol}: skipped BUY; 200 continuous tradable sessions required")
@@ -617,6 +714,7 @@ class PortfolioBacktestEngine:
             universe_metadata=None if universe is None else universe.metadata(),
             share_actions=tuple(share_actions), dividend_entitlements=tuple(dividend_entitlements),
             dividend_payments=tuple(dividend_payments), final_dividend_receivables=tuple(receivables.values()),
+            ownership_accounting=None if ownership_runtime is None else ownership_runtime.report(),
         )
 
     def _loss_breach(self, equity: float, prior_close: float, peak: float) -> str | None:
@@ -667,6 +765,9 @@ class PortfolioBacktestEngine:
 
 def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
     """Summarize a continuous account, including realized and open P&L."""
+    if result.ownership_accounting is not None:
+        from backtesting.ownership_adapter import summarize_ownership
+        return summarize_ownership(result)
     points = result.equity_curve
     if not points:
         raise ValueError("No equity observations")

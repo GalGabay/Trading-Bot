@@ -21,6 +21,9 @@ from app.data.market_calendar import TradingSession
 from app.data.market_data import CANONICAL_CANDLE_COLUMNS, validate_candles
 
 
+OWNERSHIP_SCOPE = "explicit_ownership_splits_and_ordinary_dividends"
+
+
 class UniverseDataError(ValueError):
     """Missing, contradictory or unsupported historical-universe evidence."""
 
@@ -182,9 +185,9 @@ class HistoricalUniverse:
     ):
         if currency != "USD" or not sessions or not listings:
             raise UniverseDataError("Universe requires USD, explicit sessions and listing evidence")
-        if price_basis != "raw" or action_scope not in {"event_free_except_terminal_cash", "explicit_splits_and_ordinary_cash_dividends"}:
+        if price_basis != "raw" or action_scope not in {"event_free_except_terminal_cash", "explicit_splits_and_ordinary_cash_dividends", OWNERSHIP_SCOPE}:
             raise UniverseDataError("Universe mode requires declared raw inputs and an explicit supported action scope")
-        if (splits or dividends) and action_scope != "explicit_splits_and_ordinary_cash_dividends":
+        if (splits or dividends) and action_scope not in {"explicit_splits_and_ordinary_cash_dividends", OWNERSHIP_SCOPE}:
             raise UniverseDataError("Split/dividend records conflict with an event-free declaration")
         self.splits, self.dividends = tuple(splits or ()), tuple(dividends or ())
         self.action_scope = action_scope
@@ -327,8 +330,8 @@ class HistoricalUniverse:
         return frame
 
     def metadata(self) -> dict:
-        return {
-            "schema_version": 2 if self.splits or self.dividends else 1, "identity_keys": "stable instrument IDs; ticker aliases are dated metadata",
+        value = {
+            "schema_version": 2 if self.splits or self.dividends or self.action_scope == OWNERSHIP_SCOPE else 1, "identity_keys": "stable instrument IDs; ticker aliases are dated metadata",
             "currency": "USD", "instrument_count": len(self._listings),
             "calendar_sessions": len(self.sessions),
             "listing_sources": sorted({p.source for p in self.listings}),
@@ -341,6 +344,10 @@ class HistoricalUniverse:
             "unsupported_actions": "Fractional-share cash-in-lieu, share exchanges, special/due-bill dividends, taxes and uncertain terminal recoveries.",
             "limitation": "Supplied evidence is validated, not independently certified; no market-wide completeness assertion.",
         }
+        if self.action_scope == OWNERSHIP_SCOPE:
+            value["ownership_adapter_required"] = True
+            value["unsupported_actions"] = "Unreviewed entitlement/due bills, delayed whole-share delivery, chained fractional actions, installments, FX, taxes and uncertain recoveries."
+        return value
 
     @classmethod
     def load(cls, path: Path) -> HistoricalUniverse:
@@ -351,6 +358,8 @@ class HistoricalUniverse:
             required |= {"splits", "dividends"}
         if set(value) != required or type(value["schema_version"]) is not int or value["schema_version"] not in {1, 2}:
             raise UniverseDataError("Unsupported or incomplete historical-universe manifest")
+        if value["action_scope"] == OWNERSHIP_SCOPE and value["schema_version"] != 2:
+            raise UniverseDataError("Ownership action scope requires a version-2 universe manifest and separate reviewed schedule")
         universe = cls(
             currency=value["currency"],
             price_basis=value["price_basis"], action_scope=value["action_scope"],

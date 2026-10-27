@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "entry_instrument_ids": ["DEMO-PARENT"],
+  "events": [
+    {
+      "event": {
+        "event_id": "EXAMPLE-MIXED", "instrument_id": "DEMO-PARENT", "kind": "exchange",
+        "effective_at": "2023-01-05T14:30:00Z", "known_at": "2023-01-04T12:00:00Z",
+        "source": "FICTIONAL FORMAT ONLY: hypothetical mixed acquisition",
+        "cash_per_parent": "1",
+        "shares": [{"instrument_id": "DEMO-CHILD", "shares_per_parent": "1/2"}],
+        "terms_complete": true
+      },
+      "eligibility_policy": "prior_close_holders_confirmed",
+      "eligibility_source": "FICTIONAL FORMAT ONLY: hypothetical reviewed entitlement",
+      "eligibility_known_at": "2023-01-04T12:00:00Z",
+      "delivery_source": "FICTIONAL FORMAT ONLY: hypothetical confirmed delivery",
+      "delivered_at": "2023-01-05T14:30:00Z",
+      "delivery_known_at": "2023-01-04T12:00:00Z",
+      "reviewed_for_research": true
+    }
+  ],
+  "fixings": [],
+  "payments": [
+    {
+      "instruction_id": "EXAMPLE-PAYMENT", "claim_id": "action:EXAMPLE-MIXED:0",
+      "at": "2023-01-06T14:30:00Z", "known_at": "2023-01-05T12:00:00Z",
+      "amount": "outstanding_claim",
+      "source": "FICTIONAL FORMAT ONLY: hypothetical confirmed spendable availability"
+    }
+  ]
+}

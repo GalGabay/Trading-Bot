@@ -29,6 +29,11 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
     reconstructed. Missing prices, inconsistent fills, and mismatched equity
     raise; no prices are filled and no path is fabricated.
     """
+    if "ownership_accounting" in case:
+        if type(case.get("accounting_ledger_version")) is not int or case["accounting_ledger_version"] != 1:
+            raise ValueError("Ownership report requires its explicit accounting format version")
+        from backtesting.ownership_adapter import ownership_risk_envelope
+        return ownership_risk_envelope(case, datasets)
     if "accounting_ledger_version" in case:
         raise ValueError(
             "Ownership-claim accounting uses ClaimLedger.mark risk bounds; "

@@ -94,7 +94,7 @@ class OwnershipEvent:
     def __post_init__(self):
         for name in ("event_id", "instrument_id", "source"):
             text(getattr(self, name), name)
-        if self.kind not in {"exchange", "spinoff", "stock_dividend"}:
+        if self.kind not in {"exchange", "spinoff", "stock_dividend", "split"}:
             raise AccountingError("Unsupported ownership event kind")
         for name in ("effective_at", "known_at"):
             object.__setattr__(self, name, instant(getattr(self, name)))
@@ -105,9 +105,11 @@ class OwnershipEvent:
             raise AccountingError("Consolidate duplicate destination legs explicitly")
         if not self.cash_per_parent and not self.shares:
             raise AccountingError("Empty terms are not evidence of a zero recovery")
-        if self.kind == "stock_dividend":
+        if self.kind in {"stock_dividend", "split"}:
             if len(self.shares) != 1 or self.shares[0].instrument_id != self.instrument_id or self.cash_per_parent:
-                raise AccountingError("Stock dividend requires one same-identity share leg and no cash")
+                raise AccountingError("Split/stock dividend requires one same-identity share leg and no cash")
+            if self.kind == "split" and self.shares[0].shares_per_parent == 1:
+                raise AccountingError("Split ratio must change share units")
         elif any(leg.instrument_id == self.instrument_id for leg in self.shares):
             raise AccountingError("An exchange/spinoff needs distinct stable successor/child identities")
         if self.kind == "spinoff" and (not self.shares or self.cash_per_parent):
@@ -245,7 +247,7 @@ class ClaimLedger:
                                       quantity=quantity, price=exact(price), fee=exact(fee),
                                       proceeds=exact(proceeds), basis=exact(basis)))
 
-    def recognize(self, event: OwnershipEvent, quotes: dict[str, Quote], *, at):
+    def recognize(self, event: OwnershipEvent, quotes: dict[str, Quote], *, at, reference="close"):
         """Recognize rights before subsequent fills at this accounting instant.
 
         Basis is allocated by contemporaneous close fair values, solely for
@@ -254,6 +256,8 @@ class ClaimLedger:
         """
         if not isinstance(event, OwnershipEvent):
             raise AccountingError("An explicit OwnershipEvent is required")
+        if reference not in {"open", "close"}:
+            raise AccountingError("Basis reference must identify open or close quotes")
         with self._operation(at) as at:
             if event.event_id in self._events:
                 raise AccountingError("Duplicate ownership event")
@@ -280,7 +284,7 @@ class ClaimLedger:
                                           parent_id=event.instrument_id, timestamp=at.isoformat(),
                                           known_at=event.known_at.isoformat(), source=event.source))
                 return
-            retained = event.kind != "exchange"
+            retained = event.kind not in {"exchange", "split"}
             required = {leg.instrument_id for leg in event.shares}
             if retained:
                 required.add(event.instrument_id)
@@ -323,7 +327,7 @@ class ClaimLedger:
             # Existing successor holdings remain separate lots. Identity changes
             # do not fabricate buys or credit spendable cash. A converted parent
             # holding is aggregated with its oldest age (not tax-lot continuity).
-            self._journal.append(dict(
+            record = dict(
                 kind="ownership_event", event_id=event.event_id, event_kind=event.kind,
                 timestamp=at.isoformat(), source=event.source, parent_id=event.instrument_id,
                 known_at=event.known_at.isoformat(), cash_per_parent=exact(event.cash_per_parent),
@@ -334,7 +338,64 @@ class ClaimLedger:
                 claims_created=created_claims,
                 invalidated_execution_state=sorted({event.instrument_id, *required}),
                 basis_policy="contemporaneous_close_relative_fair_value_not_tax_basis",
-            ))
+            )
+            if reference == "open":
+                record["basis_policy"] = "contemporaneous_open_relative_fair_value_not_tax_basis"
+            self._journal.append(record)
+
+    def dividend(self, event_id, instrument_id, cash_per_share, *, known_at, at, source):
+        """Ordinary ex-date right, before fills; availability is a separate input.
+
+        Fractional ownership with unresolved distribution rights is rejected.
+        Dividend income has zero economic book basis; it is not a stock sale.
+        """
+        with self._operation(at) as at:
+            text(event_id, "Dividend event ID")
+            text(instrument_id, "Dividend identity")
+            text(source, "Dividend evidence")
+            if event_id in self._events or instant(known_at) > at:
+                raise AccountingError("Duplicate dividend or evidence not yet known")
+            if any(c.kind == "fractional_shares" and c.instrument_id == instrument_id for c in self.claims):
+                raise AccountingError("Dividend on fractional ownership needs reviewed entitlement terms")
+            rate = number(cash_per_share, positive=True)
+            self._events.add(event_id)
+            quantity = self.quantity(instrument_id)
+            amount = quantity * rate
+            if quantity:
+                key = f"dividend:{event_id}"
+                self._claims[key] = Claim(key, event_id, "cash", instrument_id, Fraction(0), amount,
+                                          Fraction(0), at, source)
+            self._journal.append(dict(kind="ordinary_dividend_right", event_id=event_id,
+                                      instrument_id=instrument_id, timestamp=at.isoformat(),
+                                      known_at=instant(known_at).isoformat(), source=source,
+                                      quantity=quantity, cash_per_share=exact(rate), amount=exact(amount)))
+
+    def terminal_cash(self, event_id, instrument_id, cash_per_share, *, known_at, at, source):
+        """An already verified immediate cash outcome, including evidenced zero.
+
+        This adapter retains legacy immediate-availability semantics; a delayed
+        cash outcome must instead create a right via OwnershipEvent.
+        """
+        with self._operation(at) as at:
+            text(event_id, "Terminal event ID")
+            text(instrument_id, "Terminal identity")
+            text(source, "Terminal cash availability evidence")
+            if event_id in self._events or instant(known_at) > at:
+                raise AccountingError("Duplicate terminal cash or evidence not yet known")
+            if any(c.kind == "fractional_shares" and c.instrument_id == instrument_id for c in self.claims):
+                raise AccountingError("Terminal event on fractional ownership needs reviewed terms")
+            rate = number(cash_per_share)
+            self._events.add(event_id)
+            quantity = self.quantity(instrument_id)
+            basis = sum((lot.basis for lot in self.lots if lot.instrument_id == instrument_id), Fraction(0))
+            amount = quantity * rate
+            self._lots = [lot for lot in self._lots if lot.instrument_id != instrument_id]
+            self.cash += amount
+            self.realized_pnl += amount - basis
+            self._journal.append(dict(kind="immediate_terminal_cash", event_id=event_id,
+                                      instrument_id=instrument_id, timestamp=at.isoformat(),
+                                      known_at=instant(known_at).isoformat(), source=source,
+                                      quantity=quantity, cash_per_share=exact(rate), amount=exact(amount), basis=exact(basis)))
 
     def fix_fraction(self, instruction_id, claim_id, total_cash, *, known_at, at, source):
         """Replace fractional ownership with a documented fixed cash right.
