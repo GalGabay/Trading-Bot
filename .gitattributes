@@ -21,3 +21,5 @@ docs/pilot_public_source_review.json -text
 docs/pilot_public_source_summary.json -text
 # Preserve the fresh offline test/replay evidence separately from old reports.
 docs/public_source_test_summary.json -text
+# Preserve the separately capped JPMorgan follow-up input pins.
+docs/jpm_dividend_followup_plan.json -text

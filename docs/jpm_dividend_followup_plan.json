@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "status": "planned_not_executed",
+  "created_date": "2026-10-27",
+  "purpose": "One final bounded issuer-evidence follow-up; planning artifact, not an executable collector queue or trading configuration",
+  "scope": {
+    "symbol": "JPM",
+    "event_ex_date_start_inclusive": "2016-01-01",
+    "event_ex_date_end_exclusive": "2024-01-01",
+    "declaration_metadata_start_inclusive": "2015-12-01",
+    "declaration_metadata_end_exclusive": "2024-01-01",
+    "later_payable_metadata_permitted": true,
+    "price_requests": 0,
+    "provider_event_count": 32,
+    "already_collected_primary_declarations": 2,
+    "remaining_primary_declaration_targets": 30,
+    "remaining_targets_missing_provider_payable": 16
+  },
+  "targets": {
+    "path": "docs/research_data/jpm_dividend_followup_targets.csv",
+    "sha256": "241afb13632e18e30baa25810b45eefe425e07df49d7ed11d87828ac713e9ce3"
+  },
+  "preserved_inputs": [
+    {
+      "path": "docs/free_data_pilot_source_collection.json",
+      "sha256": "193811971c13debad221900028fe9aeb305e4f02f1209ab7d40b6ca7cd102302"
+    },
+    {
+      "path": "docs/pilot_public_source_review.json",
+      "sha256": "ed9b451155df0ddfdf277fb19ecd3cf602fe773d8a1f70317b32244bf9870545"
+    },
+    {
+      "path": "docs/pilot_public_source_summary.json",
+      "sha256": "0c7267e67a6ad63a378f532e8209246f4c267b2691c0cbdc4f4dd142a9656e45"
+    },
+    {
+      "path": "docs/public_source_test_summary.json",
+      "sha256": "0da97df9d66c5e10c504f8427cd1caf4aff6076e7d1167083f471127abca5ac9"
+    },
+    {
+      "path": "docs/free_data_pilot_proposal.json",
+      "sha256": "932b1e7dddc5b1d7b9b0571a8e337cf5facd824ac2fc694a6a048756fc898d17"
+    },
+    {
+      "path": "docs/research_data/free_data_pilot_actions.csv",
+      "sha256": "af07ef1b5de7d301477bcf955b0ad4b774dbad92496fe27f06338db1d18bbedf"
+    },
+    {
+      "path": "docs/research_data/pilot_collected_dividends.csv",
+      "sha256": "5ac1f11660d6d20d951d577a7d388862915e924be126dcdf51871225235b4dce"
+    },
+    {
+      "path": "config/research_acceptance.json",
+      "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+    }
+  ],
+  "earlier_barrier": {
+    "status": 403,
+    "url": "https://jpmorganchaseco.gcs-web.com/ir/shareholder-information/dividend-history",
+    "stopped": true,
+    "not_retried": true,
+    "prior_discovery_calls": 5,
+    "prior_direct_get_attempts": 18,
+    "report": {
+      "path": "data/reports/pilot_public_sources_v1/batch_05/report.json",
+      "sha256": "f5c7f279d3b0805d48359932794b78febecccf4f10d384684005fcc135d3302e"
+    },
+    "original_batch_budget_not_reopened": true
+  },
+  "source_policy": {
+    "allowed_exact_hosts": [
+      "www.jpmorganchase.com",
+      "jpmorganchase.com"
+    ],
+    "denied_hosts": [
+      "jpmorganchaseco.gcs-web.com"
+    ],
+    "scheme": "https",
+    "cached_source_reuse": true,
+    "current_accessibility_verified": false,
+    "discovery_seeds": [
+      "https://www.jpmorganchase.com/ir/news",
+      "https://www.jpmorganchase.com/ir/news/2016"
+    ],
+    "cached_sources": [
+      {
+        "path": "data/reports/pilot_public_sources_v1/batch_02/jpm_2016_dividend.html",
+        "sha256": "029e9da84e8b046f934822669008b0d522406f80f2cd158b21881301b76d817c",
+        "url": "https://www.jpmorganchase.com/ir/news/2016/common-stock-dividend-051716",
+        "targets": [
+          "JPM-identity",
+          "JPM-dated-terms"
+        ],
+        "retrieved_utc": "2026-10-27T15:30:01.302089+00:00"
+      },
+      {
+        "path": "data/reports/pilot_public_sources_v1/batch_02/jpm_2021_dividend.html",
+        "sha256": "bbf74712231f68fbfe20f476326e20a84eecf86d69b08299351a9b23b43f4700",
+        "url": "https://www.jpmorganchase.com/ir/news/2021/jpmorgan-chase-declares-increased-common-stock-dividend",
+        "targets": [
+          "JPM-dated-terms"
+        ],
+        "retrieved_utc": "2026-10-27T15:30:04.277816+00:00"
+      },
+      {
+        "path": "data/reports/pilot_public_sources_v1/batch_02/jpm_2016_news_index.html",
+        "sha256": "abe03ab134b81b8a6642ba322b6b637abac49deebb62f6cfa0f057711aa324f3",
+        "url": "https://www.jpmorganchase.com/ir/news/2016",
+        "targets": [
+          "JPM-dated-terms"
+        ],
+        "retrieved_utc": "2026-10-27T15:30:11.040916+00:00"
+      },
+      {
+        "path": "data/reports/pilot_public_sources_v1/batch_03/jpm_ir_index.html",
+        "sha256": "f75cefe55fdb578fa7163c6a067eca88b8808ebcc4b240f27bfe233102de401b",
+        "url": "https://www.jpmorganchase.com/ir",
+        "targets": [
+          "JPM-identity",
+          "JPM-complete-actions"
+        ],
+        "retrieved_utc": "2026-10-27T15:31:32.826551+00:00"
+      }
+    ],
+    "leaf_urls_require_recorded_primary_link_or_discovery_and_review": true,
+    "guess_urls": false,
+    "automatic_redirects": false,
+    "reviewed_redirect_hops_count_as_get_attempts": true,
+    "proxy_mirror_or_login_bypass": false,
+    "prefer_multi_event_primary_documents": true
+  },
+  "limits": {
+    "max_public_discovery_tool_calls": 4,
+    "max_direct_get_attempts": 8,
+    "max_wall_clock_seconds": 600,
+    "wall_clock_starts": "Before first online discovery or GET; cumulative across queues including reviews and pauses; do not begin another request at expiry",
+    "timeout_seconds": 30,
+    "minimum_get_spacing_seconds": 1.1,
+    "max_response_bytes": 16777216,
+    "max_followup_runs": 1,
+    "automatic_retries": false,
+    "limits_apply_cumulatively_across_subqueues": true,
+    "failed_attempts_count": true,
+    "purchases_budget_usd": 0,
+    "paid_fallback": false,
+    "credentials": false,
+    "broker_or_account_requests": 0,
+    "orders": 0,
+    "performance_runs": 0,
+    "reserved_price_reads": 0
+  },
+  "stop_policy": {
+    "http_statuses": [
+      401,
+      402,
+      403,
+      407,
+      429
+    ],
+    "other_stops": [
+      "Payment, login or credential requirement",
+      "Transport failure",
+      "Request or elapsed-time cap",
+      "Ambiguous or contradictory evidence requiring investigation"
+    ],
+    "after_stop": "Archive partial results and park unresolved JPM engineering work; no new automatic run or raised budget"
+  },
+  "evidence_required_per_target": [
+    "Provider event ID and original terms retained",
+    "Exact primary source URL, retrieval UTC and SHA-256 of saved bytes",
+    "Common-share class and nominal amount/share basis",
+    "Declaration, record and contractual payable dates as actually stated",
+    "Independent ex-date only if explicitly supplied; otherwise gap remains",
+    "Conflicts, absent fields, retrospective publication and precision warnings retained"
+  ],
+  "forbidden_inferences": [
+    "Quarterly patterns or process dates cannot create payable dates",
+    "Issuer payable date is not broker cash credit",
+    "New source collection does not approve modeled knowledge timing",
+    "Complete declaration coverage does not certify full-period actions, identity, entitlement or scoring"
+  ],
+  "outcome_policy": {
+    "if_all_30_terms_resolved": "Report source reconciliation; independently review ex-dates, identity/action completeness and modeled timing before any scoring",
+    "if_any_unresolved_or_stopped": "User-authorized parking of JPM outside active engineering-pilot work; retain all historical evidence and original universe membership",
+    "continuing_engineering_candidates": [
+      "AAPL",
+      "CBRE"
+    ],
+    "context_only": [
+      "SPY"
+    ],
+    "remaining_candidates_automatically_qualified": false,
+    "original_506_row_register_unchanged": true,
+    "registered_nine_stock_control_unchanged": true,
+    "new_strategy_universe_requires_separate_frozen_scope_review": true,
+    "investment_acceptance_minimum_instruments_unchanged": 5,
+    "investment_acceptance_minimum_completed_trades_unchanged": 30,
+    "ready_for_strategy_scoring": false,
+    "paper_activation_approved": false
+  },
+  "future_output_policy": {
+    "new_directory": "data/reports/jpm_dividend_followup_v1 (must not exist before execution)",
+    "preserve_all_prior_artifacts": true,
+    "required_records": [
+      "Pinned plan and input hashes",
+      "Discovery calls and returned URL provenance",
+      "Reviewed exact-URL queues and cumulative attempts/elapsed-time log",
+      "HTTP errors/access stops and saved response hashes",
+      "Exact Decimal amount/date reconciliation and unresolved target list",
+      "Final stopped/complete/parked status and zero-purchase/order counters"
+    ]
+  },
+  "owner_action_now": "None; no credentials, purchase or personal risk-limit changes needed. Proposed timing review remains required before performance use."
+}

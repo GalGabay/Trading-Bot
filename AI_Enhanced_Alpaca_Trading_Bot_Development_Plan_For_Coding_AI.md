@@ -4123,3 +4123,35 @@ and other ex-date/identity/precision gaps. Do not automatically resume the
 previous collection. No owner setup or personal risk-limit change is due.
 Modeled timing and any later narrower strategy universe still require review
 before performance use; paper activation remains separate.
+
+## Separate JPMorgan evidence follow-up plan: 2026-10-27
+
+The [follow-up plan](docs/jpm_dividend_followup_plan.md),
+[pinned non-executable specification](docs/jpm_dividend_followup_plan.json)
+and [30-event checklist](docs/research_data/jpm_dividend_followup_targets.csv)
+are prepared, not executed. Thirty JPMorgan provider dividends still lack
+collected primary declarations, including 16 with absent provider payable
+dates. Two previously collected issuer declarations are reused from cache.
+The earlier access-barrier record, sources and reconciliation remain unchanged.
+
+One final attempt is capped at four public discovery tool calls, eight direct
+document GET attempts and ten elapsed minutes. Exact main-issuer hosts only;
+no retry of the blocked consolidated-history host, automatic retries,
+redirect following, payment/login bypass, purchases, broker/account access,
+orders, strategy runs or holdout-price access. Failed requests and reviewed
+redirect hops count toward the cumulative cap. First access/payment barrier,
+transport failure, conflicting evidence or exhausted cap ends the attempt.
+
+The owner authorizes parking unresolved JPMorgan work after that attempt.
+Continue AAPL/CBRE engineering qualification with SPY context; do not erase
+JPMorgan from the historical register or registered strategy control, select
+a replacement based on returns, or declare the remaining two stocks a passing
+investment study. Five-instrument/30-trade acceptance requirements are
+unchanged. Full identity/action, ex-date/entitlement and timing/precision gaps
+remain independently visible. Changed performance scope needs separate review.
+
+**Next engineering work:** execute the single capped attempt and apply that
+fallback. No owner setup, purchase or personal risk-limit choice is due now.
+Modeled timing review remains required before performance use, with paper
+activation a later separate decision. This planning step made no network
+requests and ran no unit tests; preceding test results remain historical.

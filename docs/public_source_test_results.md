@@ -116,11 +116,15 @@ were read. Mocked response counters in tests do not represent actual HTTP calls.
 
 ## Next work and your responsibility
 
-**My work:** prepare a separately bounded JPMorgan issuer-news follow-up for
-the remaining declaration terms, using the accessible main issuer site and
-explicitly reviewed URLs. The consolidated-history HTTP 403 stays recorded;
-the stopped batch is not automatically retried or bypassed. Remaining ex-date,
-full-period identity/action and precision-policy gaps stay visible.
+**Update:** the [separate JPMorgan plan](jpm_dividend_followup_plan.md) is now
+prepared, not executed. **My next work:** one attempt capped at four discovery
+calls, eight direct document GETs and ten minutes on the main issuer site;
+current access is not yet verified. The consolidated-history HTTP 403 stays
+recorded, and that host is excluded. If gaps remain, park JPMorgan's active
+engineering-pilot work as the owner requested and continue other pilot
+histories. Original historical membership and strategy controls stay intact.
+Remaining ex-date, full-period identity/action and precision-policy gaps stay
+visible; narrower performance scope is a separate review.
 
 **Your part now:** no configuration, purchase or personal risk-limit decision.
 Before a new performance study uses modeled knowledge/payment timing, review

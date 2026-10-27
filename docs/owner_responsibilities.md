@@ -14,12 +14,22 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest plan, 2026-10-27:** The [separate JPMorgan follow-up](jpm_dividend_followup_plan.md)
+is prepared, not executed: at most four public discovery calls, eight direct
+document requests and ten minutes, with $0 purchases. The earlier HTTP 403
+and its stopped batch remain preserved. If this final attempt is incomplete,
+your instruction authorizes parking JPMorgan's engineering-pilot work and
+continuing AAPL/CBRE qualification with SPY context. Original historical
+membership, strategy controls and acceptance criteria remain unchanged.
+My next work is that single attempt and fallback. You have no setup or
+risk-limit task now; timing/scope review remains due before performance use.
+
 **Latest verification, 2026-10-27:** The [collector/parser tests](public_source_test_results.md)
 pass 99 tests (57 new, 42 related) with no failures, errors or skips. Input,
 precision and provenance safeguards were strengthened; a fresh offline source
 replay exactly matches the previous CSV/JSON. No real network or orders were
-used. My next work is a separately bounded JPMorgan issuer-news follow-up
-plan, not an automatic retry of the blocked host. No owner setup, purchase or
+used. The separately bounded JPMorgan issuer-news follow-up plan is now
+linked above; it does not automatically retry the blocked host. No owner setup, purchase or
 personal risk-limit change is due; timing approval remains due before
 performance use.
 
