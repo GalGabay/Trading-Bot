@@ -14,14 +14,24 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest result, 2026-10-27:** The [single JPMorgan attempt](jpm_dividend_followup_results.md)
+has finished: four discovery calls, one successful document GET and $0 spent.
+One additional declaration supplies a missing payable date; 29 declaration
+targets and 15 original payable omissions remain. The discovery cap ended
+collection. As you authorized, JPMorgan's engineering-pilot collection is now
+parked, with no further search scheduled. My next work is cached evidence
+qualification for AAPL/CBRE and SPY context. You have nothing to configure or
+buy now. Previous universe records, research criteria and paper-risk settings
+remain unchanged; timing/scope review stays due before performance use.
+
 **Latest plan, 2026-10-27:** The [separate JPMorgan follow-up](jpm_dividend_followup_plan.md)
-is prepared, not executed: at most four public discovery calls, eight direct
+was prepared with at most four public discovery calls, eight direct
 document requests and ten minutes, with $0 purchases. The earlier HTTP 403
 and its stopped batch remain preserved. If this final attempt is incomplete,
 your instruction authorizes parking JPMorgan's engineering-pilot work and
 continuing AAPL/CBRE qualification with SPY context. Original historical
 membership, strategy controls and acceptance criteria remain unchanged.
-My next work is that single attempt and fallback. You have no setup or
+The result above records that completed attempt and fallback. You have no setup or
 risk-limit task now; timing/scope review remains due before performance use.
 
 **Latest verification, 2026-10-27:** The [collector/parser tests](public_source_test_results.md)

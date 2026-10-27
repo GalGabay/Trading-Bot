@@ -23,3 +23,5 @@ docs/pilot_public_source_summary.json -text
 docs/public_source_test_summary.json -text
 # Preserve the separately capped JPMorgan follow-up input pins.
 docs/jpm_dividend_followup_plan.json -text
+# Preserve the final capped attempt's source and output evidence pins.
+docs/jpm_dividend_followup_summary.json -text

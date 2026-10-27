@@ -1,5 +1,10 @@
 # JPMorgan: one final bounded evidence follow-up
 
+**Execution update:** the [single attempt is complete](jpm_dividend_followup_results.md).
+It stopped at the four-discovery-call cap after one successful document GET.
+One additional dividend is reconciled; the remaining JPMorgan work is parked.
+The original planning specification below is retained; its JSON stays unchanged.
+
 **Prepared 2026-10-27; not executed.** This is a free public-document plan,
 not a backtest, order command or trading configuration. Your instruction to
 leave JPMorgan behind if this does not work is recorded in the fallback below.

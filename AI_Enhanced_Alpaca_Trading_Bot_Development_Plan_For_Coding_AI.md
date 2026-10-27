@@ -4155,3 +4155,37 @@ fallback. No owner setup, purchase or personal risk-limit choice is due now.
 Modeled timing review remains required before performance use, with paper
 activation a later separate decision. This planning step made no network
 requests and ran no unit tests; preceding test results remain historical.
+
+## JPMorgan capped attempt completed and parked: 2026-10-27
+
+The [execution result](docs/jpm_dividend_followup_results.md) and
+[pinned summary](docs/jpm_dividend_followup_summary.json) record four public
+discovery calls and one successful direct public-document GET. Collection
+ended after 117.42 seconds when the four-call discovery cap was reached;
+unused direct-GET capacity was not used to extend the attempt. No further
+JPMorgan collection is scheduled. The earlier HTTP 403 remains preserved;
+that blocked host was not retried. The new request returned HTTP 200.
+
+One additional issuer declaration matches the January 4, 2016 provider event
+at $0.44 per common share and supplies a January 31, 2016 contractual payable
+date. It is a separate one-row overlay; the original source matrices and
+summaries remain unchanged. JPMorgan now has three collected declarations
+out of 32 provider events, with 29 declaration targets and 15 original
+provider payable omissions unresolved. Search-only leads were not promoted
+to archived confirmation. Ex-date, entitlement, historical public timing and
+broker-credit approval remain false.
+
+As the owner authorized, unresolved JPMorgan collection is parked outside
+active engineering-pilot work. The 506-row register, registered nine-stock
+strategy control, past returns and five-instrument/30-trade acceptance
+requirements remain unchanged. No substitute was selected for better returns.
+Next: qualify remaining AAPL/CBRE identity/action evidence and SPY context
+from cache, then report precise eligible dates and blockers before proposing
+any performance run. Their readiness is not assumed from JPMorgan's removal
+from active collection. Research timing/scope review is still needed before
+performance use; personal risk and paper activation are later decisions.
+
+Offline source/hash/counter checks and exact amount/date reconciliation
+passed. No unit-test suite, dependency installation, Pi execution, new candle
+request, strategy run, purchase, subscription change, broker/account request
+or order occurred. Owner setup is not needed for the next cached review.

@@ -1,5 +1,13 @@
 # Study C: daily rule-only research record
 
+**Latest data outcome, 2026-10-27:** The [single capped JPMorgan follow-up](jpm_dividend_followup_results.md)
+saved one additional declaration and stopped at four discovery calls. Twenty-nine
+declaration targets and 15 original payable omissions remain. JPMorgan's active
+engineering collection is now parked under the owner's fallback; continue
+AAPL/CBRE qualification with SPY context. The historical register, registered
+strategy control and old return results are unchanged. No new backtest, order,
+purchase or holdout-candle read occurred.
+
 **Latest verification, 2026-10-27:** The [offline collector/parser checks](public_source_test_results.md)
 pass 99 tests with no failures, errors or skips. Stronger validation preserves
 the previous 66 source-reconciliation rows byte for byte in CSV/JSON, with

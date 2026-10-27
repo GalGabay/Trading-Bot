@@ -116,8 +116,14 @@ were read. Mocked response counters in tests do not represent actual HTTP calls.
 
 ## Next work and your responsibility
 
-**Update:** the [separate JPMorgan plan](jpm_dividend_followup_plan.md) is now
-prepared, not executed. **My next work:** one attempt capped at four discovery
+**Execution update:** the [single JPMorgan follow-up](jpm_dividend_followup_results.md)
+has now stopped at its discovery cap, with one newly archived declaration.
+Remaining JPMorgan collection is parked as the owner authorized. My next work
+is qualification of the remaining pilot histories from cached evidence; no
+further JPMorgan collection is scheduled. This execution did not rerun tests.
+
+**Preceding plan:** the [separate JPMorgan plan](jpm_dividend_followup_plan.md)
+prepared one attempt capped at four discovery
 calls, eight direct document GETs and ten minutes on the main issuer site;
 current access is not yet verified. The consolidated-history HTTP 403 stays
 recorded, and that host is excluded. If gaps remain, park JPMorgan's active

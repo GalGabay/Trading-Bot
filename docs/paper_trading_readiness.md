@@ -2,6 +2,14 @@
 
 Status: 2026-10-27.
 
+The [final capped JPMorgan attempt](jpm_dividend_followup_results.md) has ended
+with one additional dividend declaration and unresolved gaps. JPMorgan's active
+engineering collection is parked; qualification can continue for AAPL/CBRE
+with SPY context. This does not clear the data or strategy gate, alter the
+registered strategy control, or satisfy the five-instrument research minimum.
+No purchase, account access, order or new backtest occurred. You have no setup
+task now; the remaining gates below still apply.
+
 We have a substantial research and safety codebase. **Several substantial
 milestones remain before an approved paper trial.** The main uncertainty is
 finding a strategy that satisfies the approved investment criteria. More

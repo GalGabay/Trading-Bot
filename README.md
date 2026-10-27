@@ -117,11 +117,13 @@ The [collector/parser verification](docs/public_source_test_results.md) adds
 Malformed budgets, source formats, event joins and provenance are rejected;
 the saved-source replay preserves the prior CSV/JSON exactly. No acquisition
 was resumed and research approval remains separate.
-The [separate JPMorgan follow-up plan](docs/jpm_dividend_followup_plan.md)
-limits the next evidence attempt to four public discovery calls, eight direct
-document requests and ten minutes, with no purchases. It has not run. If
-incomplete, JPMorgan's active engineering-pilot work will be parked and the
-other histories can progress; original universe/strategy records remain intact.
+The [JPMorgan follow-up result](docs/jpm_dividend_followup_results.md)
+records four discovery calls and one successful public-document GET before
+the discovery cap stopped collection. One additional declaration supplies a
+missing payable date; 29 declaration targets and 15 original payable gaps
+remain. JPMorgan's active engineering-pilot collection is now parked. Continue
+AAPL/CBRE qualification with SPY context; original universe/strategy records
+remain intact. No purchases, broker/account calls, trades or backtests occurred.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates

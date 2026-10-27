@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Latest result, 2026-10-27:** The [final capped JPMorgan attempt](jpm_dividend_followup_results.md)
+collected one additional declaration, then stopped at four discovery calls
+(one direct GET, $0 purchases). Twenty-nine declaration targets and 15 original
+payable omissions remain. JPMorgan collection is parked; active engineering
+qualification continues with AAPL/CBRE and SPY context. Original universe and
+strategy-control membership, prior results and five-instrument/30-trade
+requirements remain intact. This is not performance-scope or paper approval.
+
 **Latest verification, 2026-10-27:** [Collector/parser tests](public_source_test_results.md)
 pass 99 cases (57 new and 42 related). A fresh source replay preserves the
 previous 66-row CSV/JSON exactly, including unresolved gaps and unapproved
