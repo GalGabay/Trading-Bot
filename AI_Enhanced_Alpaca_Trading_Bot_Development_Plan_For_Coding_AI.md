@@ -3965,3 +3965,36 @@ Any change to today's verified-evidence contract needs separate review, not
 silently weakened flags. Broader scoring remains blocked. No owner action or
 personal paper-risk configuration is due now; present the concrete research
 proposal for review when ready. Paper activation remains a separate gate.
+
+## Free-data pilot proposal: 2026-10-27
+
+The [concrete pilot proposal](docs/free_data_pilot_proposal.md) and
+[non-executable input specification](docs/free_data_pilot_proposal.json) define
+cached-source qualification for AAPL, JPM and CBRE, plus SPY market context,
+over `[2016-01-01, 2024-01-01)`. The four saved streams contain 2,012 observed
+sessions each (8,048 rows total). Complete observed coverage does not certify
+full-period security identity, actions or executable performance. Provider
+event inventories and the imported CBRE classification still require review.
+
+This convenience sample is for data engineering, not an unbiased investment
+universe or replacement for the retained 506-row register. It cannot meet the
+approved five-instrument acceptance requirement and schedules zero strategy
+runs or ML training. The existing eight-arm market-wide study remains scoped
+and blocked; a fixed 2016-cohort alternative requires separate scope review.
+
+The proposal distinguishes primary-source facts from unapproved research
+conventions: second actual session after a date-only announcement; modeled
+cash availability after an issuer payable date; delayed/no-credit sensitivities;
+nominal rights versus spendable cash; causal split views. Do not relabel these
+assumptions as confirmed broker delivery/payment or weaken today's adapter
+evidence gates. Difficult merger, distribution, fractional and OTC cases
+remain explicit blockers; no survivor-only replacement or event-driven
+censoring is authorized.
+
+**Next engineering work:** qualify the four cached identity/action histories,
+produce a fact/assumption/gap matrix, then a finite free-source collection
+list if required. This step needs no new HTTP requests or owner configuration.
+Owner review is needed before proposed assumptions or a changed strategy
+universe are used for performance research. No personal risk settings,
+purchase, card or paper activation is due. This increment is documentation
+only; no tests, new backtests, downloads or API calls were run.

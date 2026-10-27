@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "status": "proposed_non_executable_planning_artifact",
+  "date": "2026-10-27",
+  "purpose": "Bounded cached-data qualification, not strategy performance or market-wide inference",
+  "related_document": "docs/free_data_pilot_proposal.md",
+  "scope": {
+    "candidate_stock_ids": [
+      "COHORT-2016-0047",
+      "COHORT-2016-0259",
+      "COHORT-2016-0088"
+    ],
+    "context_symbols": [
+      "SPY"
+    ],
+    "new_stock_entry_authorized": false,
+    "fixed_2016_cohort_replaced": false,
+    "full_market_membership_claim": false,
+    "selection_basis": "Previously collected engineering cases and event diversity; convenience sample, not unbiased performance universe",
+    "timeframe": "1Day",
+    "feed": "sip",
+    "adjustment": "raw",
+    "currency": "USD",
+    "asof": "-",
+    "start_inclusive": "2016-01-01",
+    "end_exclusive": "2024-01-01",
+    "sessions_per_stream": 2012,
+    "total_observed_rows": 8048
+  },
+  "calendar": {
+    "path": "data/reports/broad_universe_audit_final/calendar.json",
+    "sha256": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7"
+  },
+  "streams": [
+    {
+      "probe_id": "ordinary_aapl",
+      "instrument_id": "COHORT-2016-0047",
+      "symbol": "AAPL",
+      "role": "candidate_stock",
+      "observed_rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "csv": {
+        "path": "data/reports/free_collection_v1/001/bars.csv",
+        "sha256": "c36a2c5b248665dad477a0e9315c9584f1829d3bf801dd4ec2ea8dd0901cc8fb"
+      },
+      "raw_bar_pages": [
+        {
+          "path": "data/reports/free_collection_v1/001/bars_1.json",
+          "sha256": "b36f7a838f56a4a30e4a736637cad3161503a976c545f1f86dcb23ffbd82aeba"
+        }
+      ],
+      "raw_action_pages": [
+        {
+          "path": "data/reports/free_collection_v1/001/actions_1.json",
+          "sha256": "5c3efb7c6876a2d85cf205aa1786587b24fbc619944263cf9c56d40af5610a1f"
+        }
+      ],
+      "provider_event_counts": {
+        "cash_dividends": 32,
+        "forward_splits": 1
+      },
+      "identity_and_action_history_certified": false,
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "ordinary_jpm",
+      "instrument_id": "COHORT-2016-0259",
+      "symbol": "JPM",
+      "role": "candidate_stock",
+      "observed_rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "csv": {
+        "path": "data/reports/free_collection_v1/002/bars.csv",
+        "sha256": "b55932b87b47d4570f8203a6bee77e8c986e418b352ce8c3efd2509f3f3f1862"
+      },
+      "raw_bar_pages": [
+        {
+          "path": "data/reports/free_collection_v1/002/bars_1.json",
+          "sha256": "4a834f0e4ccb17e353d4bad9c9ad042997d4144f88ac6574690f9806c4217d2f"
+        }
+      ],
+      "raw_action_pages": [
+        {
+          "path": "data/reports/free_collection_v1/002/actions_1.json",
+          "sha256": "78157d5814125cdb9fe85ef4b8297234b911a736c1bbe3e3bfcf7a74b2320986"
+        }
+      ],
+      "provider_event_counts": {
+        "cash_dividends": 32
+      },
+      "identity_and_action_history_certified": false,
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0088",
+      "aliases": [
+        "CBG",
+        "CBRE"
+      ],
+      "role": "candidate_stock",
+      "observed_rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "csv": {
+        "path": "data/reports/ownership_evidence_review_v1/collection_review/cbre_observed_alias_stream.csv",
+        "sha256": "d767f4c727eefcc09a58cd5221b4c8c555a63ab152cfa66c4a0c11b9f45d6c20"
+      },
+      "derivation_report": {
+        "path": "data/reports/ownership_evidence_review_v1/collection_review/report.json",
+        "sha256": "31dcae91b1166da6ad5701e014bf8d65e9141b5e1d948ea1c4d1b547ab2aef0f"
+      },
+      "original_collection_probe_ids": [
+        "cbre_old",
+        "cbre_new"
+      ],
+      "known_boundary": "2018-03-19; observed vendor CBG candle separately translated to market alias CBRE, original values retained",
+      "provider_event_counts": {},
+      "classification_review_required": "Imported reit_common tag must not be accepted without independent review",
+      "identity_and_action_history_certified": false,
+      "ready_for_simulation": false
+    },
+    {
+      "probe_id": "market_context",
+      "instrument_id": "CONTEXT-SPY-PENDING-IDENTITY-REVIEW",
+      "symbol": "SPY",
+      "role": "context_only",
+      "observed_rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "csv": {
+        "path": "data/reports/free_collection_v1/003/bars.csv",
+        "sha256": "fcd7390edbd7646a520a49669120bb4ef72d9ce08fdf85837a029ee0a7b996cc"
+      },
+      "raw_bar_pages": [
+        {
+          "path": "data/reports/free_collection_v1/003/bars_1.json",
+          "sha256": "e5ef58d02e7098820ad8e3d4be3f818e220dc0f136c901e563dac4cd42c26c94"
+        }
+      ],
+      "raw_action_pages": [
+        {
+          "path": "data/reports/free_collection_v1/003/actions_1.json",
+          "sha256": "be26e4915d0a4eb9ee029d53b0b4d5f28a3e3103a59fde920c7b1f8f4bd91e20"
+        }
+      ],
+      "provider_event_counts": {
+        "cash_dividends": 29
+      },
+      "identity_and_action_history_certified": false,
+      "ready_for_simulation": false
+    }
+  ],
+  "evidence_inputs": [
+    {
+      "path": "docs/historical_membership_source_review.json",
+      "sha256": "b653c49633cc77e7307071841fde17973b055452b1f3f570588d38486223e866"
+    },
+    {
+      "path": "docs/research_data/spy_2016_dated_aliases.csv",
+      "sha256": "d558aba9ebbb8bb22250bffbca4afa9e0f34652c4c8e65588d157d553bfd175b"
+    },
+    {
+      "path": "docs/ownership_evidence_summary.json",
+      "sha256": "598345717d4362464362490c1961a69d71acdb490ec0fab82d7ed864143d22f6"
+    },
+    {
+      "path": "docs/free_collection_event_review.json",
+      "sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896"
+    },
+    {
+      "path": "data/reports/free_collection_v1/report.json",
+      "sha256": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51"
+    },
+    {
+      "path": "config/research_acceptance.json",
+      "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+    }
+  ],
+  "proposed_assumptions": {
+    "owner_approved": false,
+    "public_knowledge_if_only_release_date_known": "Second actual exchange-session open after the release local date; exclude release day; block if unavailable by required boundary",
+    "ordinary_dividend_entitlement": "Reviewed held whole shares and ex-date/share-basis terms; no unreviewed due bills or fractions",
+    "cash_availability_base": "First exchange-session open whose New York date is strictly after issuer payable date; modeled, not broker verified",
+    "cash_availability_sensitivity": [
+      "Five additional exchange-session opens after base",
+      "No credit before evaluation window end; rights remain outstanding"
+    ],
+    "fixed_cash_valuation": "Nominal contractual USD right reported separately; no guaranteed recovery or fully liquidated return",
+    "features": "Causal effective split adjustment only; raw dividend gaps retained",
+    "idle_cash_interest": 0,
+    "verified_evidence_flags_may_be_set_from_assumptions": false
+  },
+  "hard_exclusions": [
+    {
+      "case": "WFM/ATVI",
+      "reason": "Eligibility/spendable cash timing unverified"
+    },
+    {
+      "case": "Aetna/CVS; Level3/CTL",
+      "reason": "Delivery, cash and fractional allocations unresolved"
+    },
+    {
+      "case": "Alcoa/Arconic/Howmet/new Arconic",
+      "reason": "Ownership/entitlement/delivery; new child quotes and Alcoa advance publication missing"
+    },
+    {
+      "case": "UA/UAA/UA.C",
+      "reason": "Distinct classes/alias reuse; additional distribution allocation unresolved"
+    },
+    {
+      "case": "Fox/Disney",
+      "reason": "Election/proration/conversion/fractions unresolved"
+    },
+    {
+      "case": "BBBY/BBBYQ",
+      "reason": "OTC prices and suspension-to-cancellation valuation missing"
+    },
+    {
+      "case": "Other retained cohort rows and later IPOs",
+      "reason": "Outside engineering sample; retain blockers and original membership, no survivor-only replacement"
+    }
+  ],
+  "next_cached_qualification": {
+    "stream_limit": 4,
+    "new_http_requests": 0,
+    "new_price_requests": 0,
+    "strategy_simulations": 0,
+    "ml_training_runs": 0,
+    "outputs": [
+      "Identity/alias/classification matrix",
+      "Full-period action/source/knowledge/payment matrix",
+      "Per-stream facts, assumptions and gaps",
+      "Finite free-source collection list if cached evidence is insufficient"
+    ],
+    "stop_conditions": [
+      "Changed pinned input",
+      "Unexplained calendar or OHLCV defects",
+      "Ambiguous security identity or classification",
+      "Unreviewed, contradictory or unsupported corporate action"
+    ],
+    "auto_replacement_stock": false,
+    "auto_shortened_period": false
+  },
+  "later_study": {
+    "approved": false,
+    "performance_runs_scheduled": 0,
+    "development_windows_for_separate_proposal": [
+      {
+        "warmup_start": "2016-01-01",
+        "evaluation_start": "2017-01-01",
+        "end_exclusive": "2022-01-01"
+      },
+      {
+        "warmup_start": "2019-01-01",
+        "evaluation_start": "2022-01-01",
+        "end_exclusive": "2024-01-01"
+      }
+    ],
+    "small_pilot_can_meet_minimum_five_instrument_criterion": false,
+    "fixed_506_scope_requires_review": true,
+    "existing_eight_arm_protocol_unchanged": true
+  },
+  "controls": {
+    "new_purchases_budget_usd": 0,
+    "subscription_changes_authorized": false,
+    "automatic_paid_fallback": false,
+    "automatic_feed_fallback": false,
+    "dependency_installation": false,
+    "orders_authorized": false,
+    "broker_account_access": false,
+    "holdout_prices_authorized": false
+  },
+  "owner_action_now": "No configuration task; review proposed assumptions before performance use and a separate narrower universe scope before larger scoring.",
+  "current_increment": {
+    "documentation_only": true,
+    "network_requests": 0,
+    "tests_run": 0,
+    "strategy_simulations": 0,
+    "orders": 0,
+    "purchases_usd": 0
+  }
+}

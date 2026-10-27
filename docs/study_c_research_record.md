@@ -1,5 +1,12 @@
 # Study C: daily rule-only research record
 
+**Current planning update, 2026-10-27:** The [free-data pilot proposal](free_data_pilot_proposal.md)
+specifies four cached histories (AAPL, JPM, CBRE and SPY context), exact dates,
+proposed knowledge/payment conventions and hard exclusions. It schedules
+data qualification only, with no new return calculation or strategy search.
+The full historical register remains intact; research assumptions and a
+later narrower basket scope are not automatically approved.
+
 **Latest engineering update, 2026-10-27:** The [ownership verification and evidence review](ownership_verification_results.md)
 passed 183 focused unit tests, 36 exact financial replays, 36 exact daily-risk
 comparisons and 84 component checks. The risk reporter now rejects inconsistent

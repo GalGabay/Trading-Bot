@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Current next step, 2026-10-27:** The [free-data pilot proposal](free_data_pilot_proposal.md)
+defines cached-source qualification for AAPL, JPM and CBRE, with SPY context,
+over 2016-2023. Its three-stock convenience sample is for data engineering;
+it cannot satisfy the five-instrument investment acceptance criterion or
+replace the eight-arm broader-universe study. Timing assumptions and any
+later fixed-2016-basket scope require review before performance use. No
+strategy runs, purchases or paper activation are scheduled by the proposal.
+
 **Latest collection result:** The [no-purchase collection/event review](free_collection_results.md)
 now provides 23,748 raw observations and a 249-event provider inventory for
 24 representative ticker periods. Specific rename/issuance/suspension gaps

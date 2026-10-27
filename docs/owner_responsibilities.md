@@ -14,6 +14,15 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Current proposal, 2026-10-27:** The [free-data pilot](free_data_pilot_proposal.md)
+names AAPL, JPM and CBRE with SPY context over 2016-2023. My next step is to
+qualify their cached identity/action evidence and report exact gaps. You have
+no configuration task for that work. Review the proposed knowledge/payment
+assumptions in section 3 before they are used in performance research; they
+are not yet approved. Any later fixed-2016-basket strategy scope also needs
+review. The three-stock engineering sample cannot approve a paper candidate.
+Personal risk settings and paper activation remain later, separate decisions.
+
 **Latest engineering work, 2026-10-27:** The [ownership integration verification](ownership_verification_results.md)
 passed 183 focused unit tests, 36 exact financial replays, 36 exact daily-risk
 comparisons and 84 component checks. Report validation was strengthened.

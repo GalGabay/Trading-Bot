@@ -95,6 +95,10 @@ and 84 component checks. Report-summary corruption checks were strengthened.
 Twenty saved primary sources were revalidated; historical delivery/payment
 and price gaps still block the broader study. No incomplete source case has
 been promoted or larger strategy study run.
+The [free-data pilot proposal](docs/free_data_pilot_proposal.md) specifies
+AAPL, JPM and CBRE plus SPY context for cached-data qualification over
+2016-2023. It separates proposed timing assumptions from verified facts;
+it schedules no performance runs and does not replace the broader universe.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates

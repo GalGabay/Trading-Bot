@@ -10,3 +10,5 @@ docs/claim_accounting_summary.json -text
 docs/ownership_evidence_review.json -text
 docs/ownership_evidence_summary.json -text
 docs/ownership_verification_summary.json -text
+# Preserve the non-executable pilot proposal's pinned input metadata.
+docs/free_data_pilot_proposal.json -text

@@ -13,6 +13,12 @@ that completing Phase 14 leaves only one small action before paper trading.
 Data reliability, research acceptance and operational readiness are separate
 gates.
 
+The [current free-data pilot proposal](free_data_pilot_proposal.md) makes the
+next data step concrete: qualify AAPL/JPM/CBRE and SPY context from saved
+2016-2023 files. It is an engineering sample, not a candidate-selection study.
+Its timing assumptions need review before performance use. No personal risk
+configuration is due for that cached-source review.
+
 | Gate | Current position | Work still needed | Who does it? |
 | --- | --- | --- | --- |
 | Reliable historical data and simulation | The ownership adapter passed 183 focused tests, 36 exact financial replays, 36 exact risk comparisons and 84 component checks. Twenty primary sources were revalidated. Broader company-event evidence is incomplete. | Reviewed eligibility/delivery/payment facts or separately proposed research assumptions; required child/OTC prices or explicit blockers; complete the scoped dataset without purchases. | Coding agent. No owner configuration due now. |
