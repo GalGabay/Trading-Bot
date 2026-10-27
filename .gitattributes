@@ -12,3 +12,7 @@ docs/ownership_evidence_summary.json -text
 docs/ownership_verification_summary.json -text
 # Preserve the non-executable pilot proposal's pinned input metadata.
 docs/free_data_pilot_proposal.json -text
+# Preserve the cached qualification protocol and exported evidence.
+docs/free_data_pilot_review.json -text
+docs/free_data_pilot_qualification_summary.json -text
+docs/free_data_pilot_source_collection.json -text

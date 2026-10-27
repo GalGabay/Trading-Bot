@@ -19,6 +19,12 @@ next data step concrete: qualify AAPL/JPM/CBRE and SPY context from saved
 Its timing assumptions need review before performance use. No personal risk
 configuration is due for that cached-source review.
 
+That [cached-source review is now complete](free_data_pilot_qualification.md):
+all four price streams pass the documented checks, while full-period identity/
+action completeness remains blocked. A bounded free/public document collection
+list is next. Personal paper-risk settings remain separate; the proposed
+research timing conventions are not accepted by this data review.
+
 | Gate | Current position | Work still needed | Who does it? |
 | --- | --- | --- | --- |
 | Reliable historical data and simulation | The ownership adapter passed 183 focused tests, 36 exact financial replays, 36 exact risk comparisons and 84 component checks. Twenty primary sources were revalidated. Broader company-event evidence is incomplete. | Reviewed eligibility/delivery/payment facts or separately proposed research assumptions; required child/OTC prices or explicit blockers; complete the scoped dataset without purchases. | Coding agent. No owner configuration due now. |

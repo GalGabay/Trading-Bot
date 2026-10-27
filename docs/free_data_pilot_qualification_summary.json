@@ -1,0 +1,311 @@
+{
+  "scope": "Offline fact/assumption/gap qualification for four frozen pilot streams; no performance admission",
+  "input_sha256": {
+    "docs/free_data_pilot_review.json": "b428fa934f89480927059d8537043caba863e8f60a598fed93e2108a9fb7ec0f",
+    "docs/free_data_pilot_proposal.json": "932b1e7dddc5b1d7b9b0571a8e337cf5facd824ac2fc694a6a048756fc898d17",
+    "docs/aapl_raw_action_pilot_review.json": "36ca285d69a40b6cc465c09a7e58d024ae9f20b5c0bfdbbc1c8b285846ba4fb3",
+    "docs/free_collection_event_review.json": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896",
+    "docs/historical_membership_source_review.json": "b653c49633cc77e7307071841fde17973b055452b1f3f570588d38486223e866",
+    "docs/research_data/spy_2016_dated_aliases.csv": "d558aba9ebbb8bb22250bffbca4afa9e0f34652c4c8e65588d157d553bfd175b",
+    "docs/ownership_evidence_summary.json": "598345717d4362464362490c1961a69d71acdb490ec0fab82d7ed864143d22f6",
+    "data/reports/free_collection_v1/report.json": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51",
+    "config/research_acceptance.json": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d",
+    "data/reports/raw_action_pilot_v1/aapl_2018_10k.html": "c9474138d805d62acc01a4156b699651137481109b4db789b73aee6cd4150ce9",
+    "data/reports/raw_action_pilot_v1/aapl_2018_filing_index.html": "683ec13f10590eb9eb0c973c7c19e596e341c479f57264ae757612160ac3199b",
+    "data/reports/raw_action_pilot_v1/aapl_january_corrected.html": "142c48b78b83f99e710636daa4ac9ad74e4184226b113a84c9f963e158a0c07a",
+    "data/reports/raw_action_pilot_v1/aapl_april.html": "1f5adfe2f7c55ab95bc7c5966a6c3f813d0b77e0004fe28f7fb8ffc8621ba482",
+    "data/reports/raw_action_pilot_v1/aapl_july.html": "a7f21b02893b6bceda598021a12a8f5b616f9c5a588028a5b0c42b2dd4fe5094",
+    "data/reports/raw_action_pilot_v1/aapl_october.html": "2b3dda862079598c762a8a4031b95f4474fc6dc75fd3ed3cc18088c196756a63",
+    "data/reports/raw_action_pilot_v1/spy_2016_filing.html": "f1a89354106579e1b9668cd70f39da75a0fd4ee9f7724d06bf012b120b132eb1",
+    "data/reports/raw_action_pilot_v1/spy_2016_filing_index.html": "4f5f041a2f1eea90921d9dc6b50e0d9bc1988e0f185de416b52ef83c3060ae9d",
+    "data/reports/raw_action_pilot_v1/spy_2020_filing.html": "6df43d7afcdf8d9f3c0057b2b92c9801a18044b56c3e926e9dfb139aa8da8213",
+    "data/reports/raw_action_pilot_v1/spy_filing_index.html": "504a1f81866878212b32d66dfc83854822cb49777bd56cd66070b00a369f5b2a",
+    "data/reports/historical_mapping_sources_v1/cbre_2018_announcement.html": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+    "data/reports/free_collection_evidence_v1/cbre_index.html": "70dbad03d642f7a3f0c9824b2b8606213a78ae1d0f50c196693f06964fbf9bef",
+    "data/reports/broad_universe_audit_final/calendar.json": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7",
+    "data/reports/free_collection_v1/001/bars.csv": "c36a2c5b248665dad477a0e9315c9584f1829d3bf801dd4ec2ea8dd0901cc8fb",
+    "data/reports/free_collection_v1/001/bars_1.json": "b36f7a838f56a4a30e4a736637cad3161503a976c545f1f86dcb23ffbd82aeba",
+    "data/reports/free_collection_v1/001/actions_1.json": "5c3efb7c6876a2d85cf205aa1786587b24fbc619944263cf9c56d40af5610a1f",
+    "data/reports/free_collection_v1/002/bars.csv": "b55932b87b47d4570f8203a6bee77e8c986e418b352ce8c3efd2509f3f3f1862",
+    "data/reports/free_collection_v1/002/bars_1.json": "4a834f0e4ccb17e353d4bad9c9ad042997d4144f88ac6574690f9806c4217d2f",
+    "data/reports/free_collection_v1/002/actions_1.json": "78157d5814125cdb9fe85ef4b8297234b911a736c1bbe3e3bfcf7a74b2320986",
+    "data/reports/ownership_evidence_review_v1/collection_review/cbre_observed_alias_stream.csv": "d767f4c727eefcc09a58cd5221b4c8c555a63ab152cfa66c4a0c11b9f45d6c20",
+    "data/reports/ownership_evidence_review_v1/collection_review/report.json": "31dcae91b1166da6ad5701e014bf8d65e9141b5e1d948ea1c4d1b547ab2aef0f",
+    "data/reports/cbre_boundary_v1/response.json": "3a224602437c9f6fc3df66f4f8daef3b686341b04fcbc6d393097ba8fe456dad",
+    "data/reports/free_collection_v1/008/bars_1.json": "5d527b8307f755523ac945a157cd4f8a2b6e0eea5a23e2fdec278e05c421da75",
+    "data/reports/free_collection_v1/009/bars_1.json": "3867df17a8b8e1a08eb76940516461cb367a63317b13f6e4c9dfbd79111bfa65",
+    "data/reports/free_collection_v1/008/actions_1.json": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3",
+    "data/reports/free_collection_v1/009/actions_1.json": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3",
+    "data/reports/free_collection_v1/003/bars.csv": "fcd7390edbd7646a520a49669120bb4ef72d9ce08fdf85837a029ee0a7b996cc",
+    "data/reports/free_collection_v1/003/bars_1.json": "e5ef58d02e7098820ad8e3d4be3f818e220dc0f136c901e563dac4cd42c26c94",
+    "data/reports/free_collection_v1/003/actions_1.json": "be26e4915d0a4eb9ee029d53b0b4d5f28a3e3103a59fde920c7b1f8f4bd91e20"
+  },
+  "code_sha256": {
+    "backtesting/pilot_qualification.py": "87cf334f3e4a49a114538d3759586708894a48e4fc43723eccad2c68fa8eb19d",
+    "app/data/market_data.py": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb",
+    "backtesting/cohort_audit.py": "508bc86515271d58a58e49aee20443efac0d93fb0ca05274dc068b46c2bff766"
+  },
+  "primary_files_revalidated": 12,
+  "source_checks": [
+    {
+      "name": "aapl_listing",
+      "source": "aapl_listing",
+      "terms": [
+        "Apple Inc.",
+        "Common Stock",
+        "Nasdaq",
+        "symbol AAPL"
+      ],
+      "supports": "Common stock/Nasdaq/AAPL identity at the 2018 filing, not every date in 2016-2023",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "aapl_listing_publication",
+      "source": "aapl_listing_index",
+      "terms": [
+        "Filing Date 2018-11-05"
+      ],
+      "supports": "Filing date, not actual release or broker credit time",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "dated_2016_basket",
+      "source": "spy_2016_filing",
+      "terms": [
+        "September 30, 2016",
+        "Apple, Inc.",
+        "JPMorgan Chase & Co.",
+        "CBRE Group, Inc. Class A REIT"
+      ],
+      "supports": "Dated source holdings and literal CBRE label; not continuous identity/action coverage",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "dated_2016_publication",
+      "source": "spy_2016_index",
+      "terms": [
+        "Filing Date 2016-11-28"
+      ],
+      "supports": "Publication date for source membership",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "spy_fund_2020",
+      "source": "spy_2020_filing",
+      "terms": [
+        "Exchange-Traded Fund",
+        "symbol",
+        "SPY",
+        "quarterly",
+        "if any"
+      ],
+      "supports": "Fund/units identity and conditional distribution policy; no complete per-event schedule",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "cbre_class_2020",
+      "source": "spy_2020_filing",
+      "terms": [
+        "CBRE Group, Inc. Class A(a)"
+      ],
+      "supports": "Later source class label; does not resolve 2016 REIT tag",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "spy_2020_publication",
+      "source": "spy_2020_index",
+      "terms": [
+        "Filing Date 2020-11-30"
+      ],
+      "supports": "Publication date; not available to a 2016 decision",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "cbre_rename",
+      "source": "cbre_2018_announcement",
+      "terms": [
+        "Changing Our Ticker",
+        "CBG",
+        "Starting March 19",
+        "2018"
+      ],
+      "supports": "Old/new alias and March 19, 2018 effective boundary",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    },
+    {
+      "name": "cbre_publication",
+      "source": "cbre_index",
+      "terms": [
+        "Filing Date 2018-03-08"
+      ],
+      "supports": "Dated public filing, not broker metadata",
+      "literal_terms_match": true,
+      "full_period_identity_certified": false
+    }
+  ],
+  "streams": [
+    {
+      "symbol": "AAPL",
+      "instrument_id": "COHORT-2016-0047",
+      "role": "candidate_stock",
+      "rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "raw_payload_reconstruction_matches": true,
+      "errors": [],
+      "warnings": [],
+      "observed_calendar_and_ohlcv_pass": true,
+      "zero_volume_rows": 0,
+      "provider_event_counts": {
+        "cash_dividends": 32,
+        "forward_splits": 1
+      },
+      "provider_missing_payable_date": 17,
+      "source_supported_provider_events": 5,
+      "independent_source_supported_alias_events": 0,
+      "quarters_without_provider_dividend_record": [],
+      "missing_quarter_implies_event": false,
+      "full_period_identity_certified": false,
+      "full_period_action_completeness_certified": false,
+      "ready_for_context_signals": false,
+      "ready_for_total_return_benchmark": false,
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "symbol": "JPM",
+      "instrument_id": "COHORT-2016-0259",
+      "role": "candidate_stock",
+      "rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "raw_payload_reconstruction_matches": true,
+      "errors": [],
+      "warnings": [],
+      "observed_calendar_and_ohlcv_pass": true,
+      "zero_volume_rows": 0,
+      "provider_event_counts": {
+        "cash_dividends": 32
+      },
+      "provider_missing_payable_date": 17,
+      "source_supported_provider_events": 0,
+      "independent_source_supported_alias_events": 0,
+      "quarters_without_provider_dividend_record": [],
+      "missing_quarter_implies_event": false,
+      "full_period_identity_certified": false,
+      "full_period_action_completeness_certified": false,
+      "ready_for_context_signals": false,
+      "ready_for_total_return_benchmark": false,
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "symbol": "CBRE",
+      "instrument_id": "COHORT-2016-0088",
+      "role": "candidate_stock",
+      "rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "raw_payload_reconstruction_matches": true,
+      "errors": [],
+      "warnings": [],
+      "observed_calendar_and_ohlcv_pass": true,
+      "zero_volume_rows": 0,
+      "provider_event_counts": {},
+      "provider_missing_payable_date": 0,
+      "source_supported_provider_events": 0,
+      "independent_source_supported_alias_events": 1,
+      "quarters_without_provider_dividend_record": [],
+      "missing_quarter_implies_event": false,
+      "full_period_identity_certified": false,
+      "full_period_action_completeness_certified": false,
+      "ready_for_context_signals": false,
+      "ready_for_total_return_benchmark": false,
+      "ready_for_strategy_scoring": false
+    },
+    {
+      "symbol": "SPY",
+      "instrument_id": "CONTEXT-SPY-PENDING-IDENTITY-REVIEW",
+      "role": "context_only",
+      "rows": 2012,
+      "first_bar": "2016-01-04T05:00:00+00:00",
+      "last_bar": "2023-12-29T05:00:00+00:00",
+      "raw_payload_reconstruction_matches": true,
+      "errors": [],
+      "warnings": [],
+      "observed_calendar_and_ohlcv_pass": true,
+      "zero_volume_rows": 0,
+      "provider_event_counts": {
+        "cash_dividends": 29
+      },
+      "provider_missing_payable_date": 14,
+      "source_supported_provider_events": 0,
+      "independent_source_supported_alias_events": 0,
+      "quarters_without_provider_dividend_record": [
+        "2016-Q1",
+        "2018-Q2",
+        "2023-Q4"
+      ],
+      "missing_quarter_implies_event": false,
+      "full_period_identity_certified": false,
+      "full_period_action_completeness_certified": false,
+      "ready_for_context_signals": false,
+      "ready_for_total_return_benchmark": false,
+      "ready_for_strategy_scoring": false
+    }
+  ],
+  "total_rows": 8048,
+  "provider_events": 94,
+  "independent_rename_events": 1,
+  "action_matrix_rows": 95,
+  "primary_economic_terms_corroborated": 6,
+  "provider_dividends_missing_payable": 48,
+  "full_period_streams_qualified_for_scoring": 0,
+  "assumptions_owner_approved": false,
+  "identity_limits": {
+    "AAPL": "2016 basket and 2018 issuer listing anchors, not continuous 2016-2023 certification",
+    "JPM": "Dated 2016 fund holding/crosswalk; no cached JPM issuer listing/action source",
+    "CBRE": "Rename and 2016/2020 Class A source labels; 2016 REIT classification unresolved, no silent correction",
+    "SPY": "2016/2020 fund identity anchors; no complete distribution/ex-date/split review"
+  },
+  "reconstruction_tolerance": {
+    "relative": 1e-12,
+    "absolute": 1e-08
+  },
+  "volume_warning_scope": "Retrospective 10x full-stream positive median; not a causal entry filter",
+  "no_new_company_events_automatically_approved": true,
+  "ready_for_strategy_scoring": false,
+  "network_requests": 0,
+  "broker_requests": 0,
+  "account_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "strategy_simulations": 0,
+  "ml_training_runs": 0,
+  "unit_tests_run": 0,
+  "holdout_prices_read": false,
+  "next_work": "Review bounded free primary-source discovery targets; no implicit acceptance of modeled timing or narrowed strategy scope",
+  "output_sha256": {
+    "action_matrix.json": "0745870a81c17727139bb6903d5e68673baaa8bd717721e22a81efaf35e6dd04",
+    "collection_targets.json": "193811971c13debad221900028fe9aeb305e4f02f1209ab7d40b6ca7cd102302"
+  },
+  "local_report": {
+    "path": "data/reports/free_data_pilot_qualification_v2/report.json",
+    "sha256": "82e83cb4377085d0070971c18c63567e7511d60fc43b8fd03aeb07b4c409a38f"
+  },
+  "tracked_action_matrix": {
+    "path": "docs/research_data/free_data_pilot_actions.csv",
+    "sha256": "af07ef1b5de7d301477bcf955b0ad4b774dbad92496fe27f06338db1d18bbedf"
+  },
+  "tracked_collection_targets": {
+    "path": "docs/free_data_pilot_source_collection.json",
+    "sha256": "193811971c13debad221900028fe9aeb305e4f02f1209ab7d40b6ca7cd102302"
+  },
+  "review_protocol": "docs/free_data_pilot_review.json"
+}

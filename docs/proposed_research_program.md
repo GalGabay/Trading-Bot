@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Latest data result, 2026-10-27:** The [four-history cached qualification](free_data_pilot_qualification.md)
+passes all 8,048 observed candle checks and raw-payload comparisons, while
+keeping full-period identity/action approval blocked. Its 95-row matrix
+separates provider fields, supported terms, proposed timing and exact gaps.
+The next step is a bounded free/public primary-source collection, with no new
+price requests, strategy scoring or paper activation. Proposed timing and
+any narrower later strategy universe still require review before use.
+
 **Current next step, 2026-10-27:** The [free-data pilot proposal](free_data_pilot_proposal.md)
 defines cached-source qualification for AAPL, JPM and CBRE, with SPY context,
 over 2016-2023. Its three-stock convenience sample is for data engineering;

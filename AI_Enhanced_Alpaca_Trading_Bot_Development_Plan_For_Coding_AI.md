@@ -3998,3 +3998,44 @@ Owner review is needed before proposed assumptions or a changed strategy
 universe are used for performance research. No personal risk settings,
 purchase, card or paper activation is due. This increment is documentation
 only; no tests, new backtests, downloads or API calls were run.
+
+## Cached four-history qualification: 2026-10-27
+
+The [qualification report](docs/free_data_pilot_qualification.md),
+[pinned summary](docs/free_data_pilot_qualification_summary.json) and
+[95-row action matrix](docs/research_data/free_data_pilot_actions.csv) now
+complete the pilot's cached-source review. The offline command is
+`python -m backtesting.pilot_qualification --output data/reports/a_fresh_directory`.
+It preserves original evidence, refuses changed hashes/existing outputs,
+reconstructs actual bars from saved payloads (including the documented CBRE
+boundary translation) and uses the existing calendar/OHLCV validator.
+
+All four streams' 8,048 candles pass with no errors, volume warnings or
+zero-volume rows. Twelve primary files and nine explicit source checks were
+revalidated. The matrix covers 94 provider events plus the independent CBRE
+rename, with six supported primary event cross-checks: Apple's four 2020
+dividend announcements, its split, and CBRE's rename. Those dividend checks
+do not independently establish every ex-date/entitlement or broker credit.
+
+Forty-eight of 93 provider dividend records omit payable dates. A saved Apple
+announcement supplies one omitted field in the new matrix; remaining absent
+terms are not inferred. SPY has no provider record in 2016 Q1, 2018 Q2 and
+2023 Q4; these are investigation targets, not proof of an exact missing count
+or permission to fabricate dividends. CBRE's 2016 REIT marker is in the saved
+original fund filing; conflicting later classification evidence needs review,
+not a silent edit to the source register.
+
+Zero full-period histories are approved for scoring. Modeled knowledge/cash
+timestamps remain explicitly proposed and unapproved. No strategy backtest,
+unit-test suite, payment-delay replay, ML training, network call, purchase,
+account/broker request, order or reserved-price read was performed. Earlier
+unit/regression evidence is preserved, not relabeled as testing this new runner.
+
+**Next engineering work:** the [finite primary-source collection list](docs/free_data_pilot_source_collection.json)
+defines 12 discovery targets, capped at 12 public discovery tool calls and
+40 direct public-document GET attempts, without automatic retries, paid
+fallback, credentials or new stock-price requests. Download URLs still need
+primary-domain review. Stop at access/payment requirements or the cap and
+retain unresolved gaps. No owner configuration is due for that collection;
+review of modeled timing and any changed strategy scope is needed before
+later performance use. Personal paper-risk settings/activation remain separate.

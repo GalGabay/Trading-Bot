@@ -99,6 +99,12 @@ The [free-data pilot proposal](docs/free_data_pilot_proposal.md) specifies
 AAPL, JPM and CBRE plus SPY context for cached-data qualification over
 2016-2023. It separates proposed timing assumptions from verified facts;
 it schedules no performance runs and does not replace the broader universe.
+The [completed cached-source qualification](docs/free_data_pilot_qualification.md)
+reconstructs and validates all 8,048 candles, reviews 95 action-matrix rows,
+and separates six supported event cross-checks from remaining evidence gaps.
+Forty-eight provider dividend rows omit payable dates; full-period identity/
+action completeness remains blocked. A finite free primary-source collection
+list is prepared; no new strategy return has been calculated.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates

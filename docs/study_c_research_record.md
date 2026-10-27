@@ -1,5 +1,12 @@
 # Study C: daily rule-only research record
 
+**Current data update, 2026-10-27:** The [cached four-history qualification](free_data_pilot_qualification.md)
+validated 8,048 actual candles and recorded 94 provider events plus CBRE's
+independent rename. Six specific primary event cross-checks are supported;
+full-period identity/action completeness remains blocked. Forty-eight provider
+dividend rows omit payable dates. No strategy return, broader backtest,
+network request, purchase or order was produced by this review.
+
 **Current planning update, 2026-10-27:** The [free-data pilot proposal](free_data_pilot_proposal.md)
 specifies four cached histories (AAPL, JPM, CBRE and SPY context), exact dates,
 proposed knowledge/payment conventions and hard exclusions. It schedules

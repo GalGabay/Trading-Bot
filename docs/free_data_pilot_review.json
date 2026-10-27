@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "purpose": "Offline fact/assumption/gap qualification for four frozen pilot streams; no performance admission",
+  "proposal": {
+    "path": "docs/free_data_pilot_proposal.json",
+    "sha256": "932b1e7dddc5b1d7b9b0571a8e337cf5facd824ac2fc694a6a048756fc898d17"
+  },
+  "apple_review": {
+    "path": "docs/aapl_raw_action_pilot_review.json",
+    "sha256": "36ca285d69a40b6cc465c09a7e58d024ae9f20b5c0bfdbbc1c8b285846ba4fb3"
+  },
+  "event_review": {
+    "path": "docs/free_collection_event_review.json",
+    "sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896"
+  },
+  "sources": {
+    "aapl_listing": {
+      "path": "data/reports/raw_action_pilot_v1/aapl_2018_10k.html",
+      "sha256": "c9474138d805d62acc01a4156b699651137481109b4db789b73aee6cd4150ce9",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/a10-k20189292018.htm"
+    },
+    "aapl_listing_index": {
+      "path": "data/reports/raw_action_pilot_v1/aapl_2018_filing_index.html",
+      "sha256": "683ec13f10590eb9eb0c973c7c19e596e341c479f57264ae757612160ac3199b",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/0000320193-18-000145-index.html"
+    },
+    "aapl_january": {
+      "path": "data/reports/raw_action_pilot_v1/aapl_january_corrected.html",
+      "sha256": "142c48b78b83f99e710636daa4ac9ad74e4184226b113a84c9f963e158a0c07a",
+      "url": "https://www.apple.com/newsroom/2020/01/apple-reports-record-first-quarter-results/"
+    },
+    "aapl_april": {
+      "path": "data/reports/raw_action_pilot_v1/aapl_april.html",
+      "sha256": "1f5adfe2f7c55ab95bc7c5966a6c3f813d0b77e0004fe28f7fb8ffc8621ba482",
+      "url": "https://www.apple.com/newsroom/2020/04/apple-reports-second-quarter-results/"
+    },
+    "aapl_july": {
+      "path": "data/reports/raw_action_pilot_v1/aapl_july.html",
+      "sha256": "a7f21b02893b6bceda598021a12a8f5b616f9c5a588028a5b0c42b2dd4fe5094",
+      "url": "https://www.apple.com/newsroom/2020/07/apple-reports-third-quarter-results/"
+    },
+    "aapl_october": {
+      "path": "data/reports/raw_action_pilot_v1/aapl_october.html",
+      "sha256": "2b3dda862079598c762a8a4031b95f4474fc6dc75fd3ed3cc18088c196756a63",
+      "url": "https://www.apple.com/newsroom/2020/10/apple-reports-fourth-quarter-results/"
+    },
+    "spy_2016_filing": {
+      "path": "data/reports/raw_action_pilot_v1/spy_2016_filing.html",
+      "sha256": "f1a89354106579e1b9668cd70f39da75a0fd4ee9f7724d06bf012b120b132eb1",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm"
+    },
+    "spy_2016_index": {
+      "path": "data/reports/raw_action_pilot_v1/spy_2016_filing_index.html",
+      "sha256": "4f5f041a2f1eea90921d9dc6b50e0d9bc1988e0f185de416b52ef83c3060ae9d",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/0001193125-16-777823-index.html"
+    },
+    "spy_2020_filing": {
+      "path": "data/reports/raw_action_pilot_v1/spy_2020_filing.html",
+      "sha256": "6df43d7afcdf8d9f3c0057b2b92c9801a18044b56c3e926e9dfb139aa8da8213",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312520305082/d72640dn30d.htm"
+    },
+    "spy_2020_index": {
+      "path": "data/reports/raw_action_pilot_v1/spy_filing_index.html",
+      "sha256": "504a1f81866878212b32d66dfc83854822cb49777bd56cd66070b00a369f5b2a",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312520305082/0001193125-20-305082-index.html"
+    },
+    "cbre_2018_announcement": {
+      "path": "data/reports/historical_mapping_sources_v1/cbre_2018_announcement.html",
+      "sha256": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+      "url": "https://www.sec.gov/Archives/edgar/data/1138118/000156459018004821/cbg-ex991_6.htm"
+    },
+    "cbre_index": {
+      "path": "data/reports/free_collection_evidence_v1/cbre_index.html",
+      "sha256": "70dbad03d642f7a3f0c9824b2b8606213a78ae1d0f50c196693f06964fbf9bef",
+      "url": "https://www.sec.gov/Archives/edgar/data/1138118/000156459018004821/0001564590-18-004821-index.html"
+    }
+  },
+  "source_checks": [
+    {
+      "name": "aapl_listing",
+      "source": "aapl_listing",
+      "terms": [
+        "Apple Inc.",
+        "Common Stock",
+        "Nasdaq",
+        "symbol AAPL"
+      ],
+      "supports": "Common stock/Nasdaq/AAPL identity at the 2018 filing, not every date in 2016-2023"
+    },
+    {
+      "name": "aapl_listing_publication",
+      "source": "aapl_listing_index",
+      "terms": [
+        "Filing Date 2018-11-05"
+      ],
+      "supports": "Filing date, not actual release or broker credit time"
+    },
+    {
+      "name": "dated_2016_basket",
+      "source": "spy_2016_filing",
+      "terms": [
+        "September 30, 2016",
+        "Apple, Inc.",
+        "JPMorgan Chase & Co.",
+        "CBRE Group, Inc. Class A REIT"
+      ],
+      "supports": "Dated source holdings and literal CBRE label; not continuous identity/action coverage"
+    },
+    {
+      "name": "dated_2016_publication",
+      "source": "spy_2016_index",
+      "terms": [
+        "Filing Date 2016-11-28"
+      ],
+      "supports": "Publication date for source membership"
+    },
+    {
+      "name": "spy_fund_2020",
+      "source": "spy_2020_filing",
+      "terms": [
+        "Exchange-Traded Fund",
+        "symbol",
+        "SPY",
+        "quarterly",
+        "if any"
+      ],
+      "supports": "Fund/units identity and conditional distribution policy; no complete per-event schedule"
+    },
+    {
+      "name": "cbre_class_2020",
+      "source": "spy_2020_filing",
+      "terms": [
+        "CBRE Group, Inc. Class A(a)"
+      ],
+      "supports": "Later source class label; does not resolve 2016 REIT tag"
+    },
+    {
+      "name": "spy_2020_publication",
+      "source": "spy_2020_index",
+      "terms": [
+        "Filing Date 2020-11-30"
+      ],
+      "supports": "Publication date; not available to a 2016 decision"
+    },
+    {
+      "name": "cbre_rename",
+      "source": "cbre_2018_announcement",
+      "terms": [
+        "Changing Our Ticker",
+        "CBG",
+        "Starting March 19",
+        "2018"
+      ],
+      "supports": "Old/new alias and March 19, 2018 effective boundary"
+    },
+    {
+      "name": "cbre_publication",
+      "source": "cbre_index",
+      "terms": [
+        "Filing Date 2018-03-08"
+      ],
+      "supports": "Dated public filing, not broker metadata"
+    }
+  ],
+  "full_period_identity_and_action_histories_certified": false,
+  "research_assumptions_owner_approved": false,
+  "ready_for_strategy_scoring": false,
+  "collection_targets_executed": false
+}

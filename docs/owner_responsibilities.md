@@ -14,12 +14,15 @@ starting a paper trial, review the
 
 ## Where we are now
 
-**Current proposal, 2026-10-27:** The [free-data pilot](free_data_pilot_proposal.md)
-names AAPL, JPM and CBRE with SPY context over 2016-2023. My next step is to
-qualify their cached identity/action evidence and report exact gaps. You have
-no configuration task for that work. Review the proposed knowledge/payment
+**Current data review, 2026-10-27:** The [cached pilot qualification](free_data_pilot_qualification.md)
+reconstructs and validates 8,048 saved candles, provides a 95-row action matrix,
+and identifies the missing primary identity/action evidence. All four price
+streams pass the documented checks; none has complete full-period scoring
+approval. My next step is the bounded free/public source collection list.
+You have no configuration task for that work. Review the proposed knowledge/payment
 assumptions in section 3 before they are used in performance research; they
-are not yet approved. Any later fixed-2016-basket strategy scope also needs
+are in the [pilot proposal](free_data_pilot_proposal.md) and are not yet approved.
+Any later fixed-2016-basket strategy scope also needs
 review. The three-stock engineering sample cannot approve a paper candidate.
 Personal risk settings and paper activation remain later, separate decisions.
 

@@ -3,6 +3,12 @@
 Date: 2026-10-27. Status: **proposal; no performance runs scheduled or executed
 by this increment**.
 
+**Follow-up:** [Cached-source qualification is complete](free_data_pilot_qualification.md).
+All four price streams pass the documented checks; full-period identity/action
+evidence is still incomplete. The report supplies the action matrix and
+bounded free-source collection targets. The proposal and assumptions below
+remain unapproved for performance use.
+
 ## My recommendation
 
 First qualify **AAPL, JPM and CBRE**, with **SPY as market context**, using
@@ -227,6 +233,7 @@ reported 183 tests/36 financial/36 risk/84 mechanics results remain historical
 evidence for that preceding increment, not new results for this proposal.
 No purchases, orders, account access or 2024-2025 price reads occurred.
 
-**Next:** I perform Step A and present a concrete source/action qualification
-report. You have no configuration task now; assumption and research-scope
-approval are needed before their later use in performance research.
+**Next after the completed Step A:** collect the bounded free/public primary
+sources listed in the qualification report. You have no configuration task;
+assumption and research-scope approval are needed before their later use in
+performance research.
