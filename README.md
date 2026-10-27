@@ -105,6 +105,13 @@ and separates six supported event cross-checks from remaining evidence gaps.
 Forty-eight provider dividend rows omit payable dates; full-period identity/
 action completeness remains blocked. A finite free primary-source collection
 list is prepared; no new strategy return has been calculated.
+The [bounded public-source collection](docs/pilot_public_source_results.md)
+saved 11 files and reconciles 32 Apple declarations, 32 SPY distributions and
+two JPMorgan releases. It confirms three SPY events omitted by the provider;
+reviewed issuer terms supply 32 of the original 48 absent payable fields.
+Collection stopped at the JPMorgan history host's HTTP 403, within the
+request limits. Sixteen payable gaps and other readiness checks remain;
+no purchases, orders or strategy performance runs occurred.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates

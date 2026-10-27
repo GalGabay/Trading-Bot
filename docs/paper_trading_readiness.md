@@ -25,6 +25,12 @@ action completeness remains blocked. A bounded free/public document collection
 list is next. Personal paper-risk settings remain separate; the proposed
 research timing conventions are not accepted by this data review.
 
+The subsequent [bounded public-source batch](pilot_public_source_results.md)
+saved 11 files and resolves additional dividend evidence gaps. It stopped at
+an HTTP access barrier with 16 original payable omissions still unresolved.
+Source facts do not approve modeled timing or verify broker credit; paper
+activation and personal risk settings remain separate.
+
 | Gate | Current position | Work still needed | Who does it? |
 | --- | --- | --- | --- |
 | Reliable historical data and simulation | The ownership adapter passed 183 focused tests, 36 exact financial replays, 36 exact risk comparisons and 84 component checks. Twenty primary sources were revalidated. Broader company-event evidence is incomplete. | Reviewed eligibility/delivery/payment facts or separately proposed research assumptions; required child/OTC prices or explicit blockers; complete the scoped dataset without purchases. | Coding agent. No owner configuration due now. |

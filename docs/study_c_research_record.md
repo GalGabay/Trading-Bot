@@ -1,5 +1,12 @@
 # Study C: daily rule-only research record
 
+**Latest source update, 2026-10-27:** The [bounded public collection](pilot_public_source_results.md)
+saved 11 files, confirms three omitted SPY distributions and supplies primary
+payable terms for 32 of 48 original provider omissions (one already known).
+Sixteen omissions remain. The source comparison preserves one SPY precision
+difference and unapproved timing flags. Collection stopped at HTTP 403 without
+paid fallback. No strategy return, order or reserved price read occurred.
+
 **Current data update, 2026-10-27:** The [cached four-history qualification](free_data_pilot_qualification.md)
 validated 8,048 actual candles and recorded 94 provider events plus CBRE's
 independent rename. Six specific primary event cross-checks are supported;

@@ -2,6 +2,13 @@
 
 Date: 2026-10-27. **Cached-data review completed. No strategy backtest run.**
 
+**Subsequent acquisition:** The [public-source batch](pilot_public_source_results.md)
+has now run within the limits below. It adds primary tables/filings, confirms
+the three SPY omissions and reduces unresolved original payable fields to 16.
+The cached-only findings below remain the preserved baseline, not current
+claims that these newly acquired documents are still absent. Scoring remains
+blocked; collection stopped at the first HTTP access barrier.
+
 ## The result in plain language
 
 We already have the daily price files for **AAPL, JPM, CBRE and SPY** over

@@ -14,6 +14,15 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest source collection, 2026-10-27:** The [bounded public batch](pilot_public_source_results.md)
+saved 11 files and reconciles 66 primary dividend records, including three
+SPY distributions missing from provider data. Sixteen original payable-field
+gaps remain, with full-period identity/action and proposed timing review still
+due. The batch stopped at HTTP 403; no paid fallback or account access occurred.
+My next work is focused offline tests for the new helpers. You have no setup
+or purchase task. Research timing approval is still needed before performance
+use; personal paper-risk settings remain a later separate decision.
+
 **Current data review, 2026-10-27:** The [cached pilot qualification](free_data_pilot_qualification.md)
 reconstructs and validates 8,048 saved candles, provides a 95-row action matrix,
 and identifies the missing primary identity/action evidence. All four price

@@ -16,3 +16,6 @@ docs/free_data_pilot_proposal.json -text
 docs/free_data_pilot_review.json -text
 docs/free_data_pilot_qualification_summary.json -text
 docs/free_data_pilot_source_collection.json -text
+# Preserve the new bounded acquisition review and reconciliation hashes.
+docs/pilot_public_source_review.json -text
+docs/pilot_public_source_summary.json -text

@@ -1,5 +1,12 @@
 # Proposed research program before the first paper trial
 
+**Latest free-source collection, 2026-10-27:** The [bounded public batch](pilot_public_source_results.md)
+saved 11 source files and reconciles 32 Apple, 32 SPY and two JPMorgan dividend
+records. Three missing-provider SPY events are independently sourced; 16 of
+the original 48 payable omissions remain unresolved. The batch stopped at the
+first HTTP access barrier. Full scoring gates and proposed timing approval
+remain; no paid service or strategy performance run was used.
+
 **Latest data result, 2026-10-27:** The [four-history cached qualification](free_data_pilot_qualification.md)
 passes all 8,048 observed candle checks and raw-payload comparisons, while
 keeping full-period identity/action approval blocked. Its 95-row matrix

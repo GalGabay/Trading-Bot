@@ -4039,3 +4039,50 @@ primary-domain review. Stop at access/payment requirements or the cap and
 retain unresolved gaps. No owner configuration is due for that collection;
 review of modeled timing and any changed strategy scope is needed before
 later performance use. Personal paper-risk settings/activation remain separate.
+
+## Bounded public-document collection: 2026-10-27
+
+The [collection/reconciliation results](docs/pilot_public_source_results.md)
+and [pinned review](docs/pilot_public_source_review.json) record 11 saved
+public source files: six substantive documents and five index pages. Five
+public discovery tool calls and 18 direct GET attempts stayed within the
+12/40 limits. The first six direct attempts failed in the sandbox; explicit
+reexecution after approved network permission was counted separately, not
+hidden as automatic retries. The final JPMorgan issuer-linked history host
+returned HTTP 403 and all acquisition stopped. No paid fallback, account
+access, credential use or new candle requests occurred.
+
+The [66-row primary reconciliation](docs/research_data/pilot_collected_dividends.csv)
+covers 32 Apple declarations, 32 SPY distributions and two dated JPMorgan
+releases. All 32 Apple nominal amounts match the provider cross-references;
+the issuer table does not independently supply ex-dates. SPY's workbook
+confirms omitted March 18, 2016, June 15, 2018 and December 15, 2023 events.
+The last has a January 31, 2024 payable date; this is source metadata, not
+permission to read holdout prices or credit cash in 2023. One shared SPY
+amount differs by $0.0000001 per unit; both displayed values remain visible.
+Blank capital-gain cells are not silently changed to zero.
+
+Primary sources supply 32 of the original 48 missing provider payable fields,
+including one Apple field already known from the preceding audit. Sixteen
+remain unresolved. CBRE's 2016/2023 issuer filings support its common-share
+listing, alias lineage and stated absence of common cash dividends; historical
+REIT tax subtype and other action completeness are not automatically certified.
+
+The offline command is:
+
+```powershell
+python -m backtesting.public_source_review --output data/reports/a_fresh_directory
+```
+
+It checks pinned acquisition/source files and reconstructs the comparisons without HTTP. The new helpers have
+executed on Windows; unit-test suites, Pi execution and strategy performance
+were not run. No previously reported unit-test totals are relabeled for them.
+Purchases, subscription changes, broker/account calls, orders and reserved
+2024-2025 price use were zero. Proposed research timing/scoring flags stay false.
+
+**Next engineering work:** focused offline tests for collector/parser bounds,
+access stops, source-format changes, joins, precision and date limits. Mock
+network behaviour. Keep remaining source acquisition separately scoped rather
+than silently resuming the stopped batch. No owner setup or risk-limit change
+is due; proposed timing and any narrowed strategy scope require review before
+their later use in performance research. Paper activation remains separate.
