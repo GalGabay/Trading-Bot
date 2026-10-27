@@ -89,8 +89,12 @@ network requests, purchases or orders.
 The subsequent [ownership adapter](docs/ownership_adapter.md) now connects
 that ledger to the portfolio engine through an explicit reviewed schedule,
 with inherited stops/orders, feature resets, claims and report reconciliation.
-The integration compiles; focused integration tests and regression replays
-remain due. No incomplete source case has been promoted or larger study run.
+The [integration verification and evidence review](docs/ownership_verification_results.md)
+passed 183 focused tests, 36 exact financial replays, 36 exact risk replays
+and 84 component checks. Report-summary corruption checks were strengthened.
+Twenty saved primary sources were revalidated; historical delivery/payment
+and price gaps still block the broader study. No incomplete source case has
+been promoted or larger strategy study run.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates

@@ -3928,3 +3928,40 @@ activation gates. Earlier candidates fail the approved investment goal; a
 paper launch date is not established. No owner card, purchase, download or
 risk-setting change is required now. Personal paper-risk approval, account/
 startup recovery review and explicit activation remain due before paper orders.
+
+## Ownership integration verification and source review: 2026-10-27
+
+The [verification results](docs/ownership_verification_results.md) record a
+fresh Windows run of **183 focused tests: 45 new integration, nine new
+evidence-review and 129 existing related tests**, all passing without skips.
+Fresh replays match **all 36 financial cases and all 36 daily-risk cases**
+exactly; the standalone component replay passes **84 checks across seven
+cases**. Prior artifacts are preserved. These checks are not a larger strategy
+search or a revised return estimate. Pi execution and the full optional-ML
+suite were not run.
+
+Testing found that the external ownership-risk replay could accept corrupted
+headline metrics even after reconciling curves and source prices. It now
+checks capital, return, drawdown, exposure, P&L, trade statistics and final
+position values against the ledger. The new tests cover missing/false
+evidence, delayed payments, fractions, stops/holding ages, order cancellation,
+warmup, later splits/dividends, serialization and report corruption.
+
+The [pinned evidence review](docs/ownership_evidence_summary.json) revalidated
+20 primary sources and the saved collection. Advance planned terms are
+supported for initial Under Armour Class C and Arconic 2020, but they do not
+certify actual delivery, entitled holders or spendable cash. Ten required
+events remain missing from provider responses, 77 out-of-interval event
+references remain quarantined, and child/OTC prices and complex allocations
+remain incomplete. No mechanics case was automatically approved for scoring.
+Three bounded free public-web tool calls established no missing Alcoa filing
+date. Purchases, subscriptions changed, broker/account calls and orders were
+zero; no reserved 2024-2025 prices were used.
+
+**Next engineering work:** prepare a concrete bounded free-data pilot proposal
+that distinguishes source facts from any research timing/valuation assumptions,
+defines sensitivity checks and exclusions, and identifies collectable prices.
+Any change to today's verified-evidence contract needs separate review, not
+silently weakened flags. Broader scoring remains blocked. No owner action or
+personal paper-risk configuration is due now; present the concrete research
+proposal for review when ready. Paper activation remains a separate gate.

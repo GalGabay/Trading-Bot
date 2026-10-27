@@ -200,8 +200,8 @@ def review_gaps(output, *, review_path=REVIEW):
               "offline_review_http_requests": 0, "performance_scored": False, "ready_for_broad_backtest": False,
               "remaining_blockers": [
                   "Primary-confirmed events omitted from API; empty responses do not certify event-free histories.",
-                  "UA class distributions, Alcoa/Arconic and Fox distributions require supported share/claim accounting or explicitly reviewed warmup boundaries.",
-                  "Mixed cash/stock acquisitions and fractional claims lack an audited adapter.",
+                  "UA class distributions, Alcoa/Arconic and Fox distributions require reviewed share/claim evidence and explicit warmup boundaries.",
+                  "Mixed cash/stock acquisitions and fractional claims require reviewed terms, entitlement, delivery and payment evidence alongside adapter verification.",
                   "WFM/ATVI cash rights need explicit conversion/payment/valuation conventions; payable date is not broker cash availability.",
                   "BBBY OTC quotes and suspension-to-cancellation valuation remain unsupported; no stale mark or assumed early zero.",
                   "Dividend publication and payment evidence require review over the full requested period.",

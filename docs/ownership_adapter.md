@@ -1,17 +1,18 @@
 # Ownership accounting connected to the portfolio simulator
 
-Date: 2026-10-27. This is offline engineering, with no purchases, network
-requests, account access, orders or dependency installation. The 2024–2025
-candle holdout remains reserved. Paper submission remains disabled.
+Date: 2026-10-27. Simulator verification is offline, with no purchases, account
+access, orders or dependency installation. The follow-up evidence review
+records three separate free public-web tool calls in the linked results.
+The 2024–2025 candle holdout remains reserved. Paper submission remains disabled.
 
 ## What changed
 
 The existing `PortfolioBacktestEngine.run` now accepts an optional reviewed
 `OwnershipSchedule`. In this mode, the exact ownership ledger supplies cash
 and positions throughout the simulation, including every simulated fill.
-Legacy runs retain their existing path and report shape. Exact legacy-result
-preservation still requires the regression replays below; it is not claimed
-from code inspection alone.
+Legacy runs retain their existing path and report shape. The subsequent
+[verification](ownership_verification_results.md) confirmed exact preservation
+in 36 saved financial cases and 36 saved daily-risk cases.
 
 The adapter connects:
 
@@ -193,23 +194,25 @@ investment decisions. A report with outstanding claims has no purported fully
 liquidated return; it separately labels a marked return after whole-share exit
 costs.
 
-**This increment:** Python compilation and whitespace/diff checks were performed.
-No unit tests, saved-case replay, historical regression replay or strategy
-performance study was run. In particular, the previous **111 unit tests / 84
-mechanics checks** are historical results for the preceding component version;
-they are not fresh integration results. Previous source/report snapshots remain
-unchanged. Windows execution of the integrated engine and Pi execution both
-remain to be verified.
+**Verification follow-up, 2026-10-27:** All 183 focused unit tests pass on
+Windows (45 new integration, nine new evidence-review, 129 existing related
+tests). All 36 saved financial replays, 36 daily-risk comparisons and 84
+standalone mechanics checks pass in fresh output directories. The risk-report
+replay now also checks headline capital, return, drawdown, trade statistics,
+exposure and final position values. See the linked results for exact scope,
+commands and pinned evidence. Earlier reports remain unchanged. Pi execution,
+full optional-ML testing and historical admission of the real company cases
+remain unverified. These checks do not establish a profitable strategy.
 
 ## Next work
 
-The next engineering step is focused integration tests and regression replays:
-cash/share mergers, spin-offs, fractional payment delays, inherited holding
-reviews/stops, canceled queued orders, fresh entry warmup, split/dividend
-handling, missing quotes, false evidence approvals, report corruption and
-event-free result preservation. That verification is a gate before expanding
-the historical study. Then continue reviewing the free source gaps; unavailable
-evidence stays blocked and never triggers a purchase.
+Integration and regression verification is complete for the documented scope.
+The remaining evidence review revalidated 20 saved primary sources, separating
+advance planned terms from unverified eligibility, actual delivery, spendable
+cash and missing prices. The next step is a concrete free-data pilot proposal
+with explicit timing/valuation assumptions and exclusion rules, for review
+before any broader scoring. An assumption must never be relabeled as a verified
+historical fact. Unavailable evidence stays blocked and never triggers a purchase.
 
 Your action now: none. The [paper-readiness checklist](paper_trading_readiness.md)
 explains the later owner decisions and why a launch date is not established.

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "Review remaining source gates after ownership integration verification; no strategy scoring or automatic event approval",
+  "parent_review": {"path": "docs/free_collection_event_review.json", "sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896"},
+  "mechanics_cases": {"path": "docs/claim_accounting_cases.json", "sha256": "4e14a75178570db1463c3764722e3012ba21c4024235ca86435e49f9ddc404f4"},
+  "cohort_review": {"path": "docs/2016_cohort_source_review.json", "sha256": "52d5b1d56217498a421d0e37b14e9b0ccda58d7913a4efc8cf4c788d1244e3db"},
+  "advance_terms_checks": [
+    {
+      "case_name": "under_armour_distinct_class_c_ownership",
+      "source_id": "ua_distribution_announcement",
+      "publication_date": "2016-03-16",
+      "recognition_session": "2016-04-08",
+      "planned_distribution_date": "2016-04-07",
+      "shares_per_parent": "1",
+      "terms": ["March 16, 2016", "one-for-one", "April 7, 2016", "March 28, 2016"],
+      "limitation": "Advance planned ratio/date and record date; first quoted session differs from planned distribution date. This does not certify due-bill entitlement or broker delivery."
+    },
+    {
+      "case_name": "arconic_howmet_and_new_arconic_branch",
+      "source_id": "arconic_2020_announcement",
+      "publication_date": "2020-02-06",
+      "recognition_session": "2020-04-01",
+      "planned_distribution_date": "2020-04-01",
+      "shares_per_parent": "1/4",
+      "terms": ["February 6, 2020", "every four shares", "April 1, 2020", "regular-way", "without an entitlement"],
+      "limitation": "Regular-way entitlement and ex-distribution markets are described; the actual vendor market stream, delivery and missing child quote still need review."
+    }
+  ],
+  "undated_source_check": {
+    "source_id": "alcoa_2016_announcement",
+    "terms": ["[ ], 2016", "every three shares", "November 1, 2016"],
+    "limitation": "The cached cover letter contains an undated placeholder. Do not infer publication from the accession number or from later completion."
+  },
+  "free_public_lookup_attempts": [
+    {"kind": "web_open", "url": "https://www.sec.gov/Archives/edgar/data/1675149/000119312516735860/0001193125-16-735860-index.html", "result": "Tool reported inaccessible; no filing date established"},
+    {"kind": "web_search", "query": "site:sec.gov/Archives/edgar/data/1675149/000119312516735860 Filing Date", "result": "No matching filing index established; general SEC help results are not event evidence"},
+    {"kind": "web_open", "urls": ["https://www.sec.gov/Archives/edgar/data/1675149/000119312516735860/0001193125-16-735860-index.htm", "https://www.sec.gov/Archives/edgar/data/1675149/0001193125-16-735860-index.htm"], "result": "Both alternative index addresses reported inaccessible; no filing date established"}
+  ],
+  "broker_data_requests": 0,
+  "new_purchases_usd": 0,
+  "automatic_paid_fallback": false,
+  "approved_for_strategy_scoring": false
+}

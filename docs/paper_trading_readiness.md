@@ -15,7 +15,7 @@ gates.
 
 | Gate | Current position | Work still needed | Who does it? |
 | --- | --- | --- | --- |
-| Reliable historical data and simulation | Validation, portfolio backtesting, ownership ledger and an opt-in event adapter exist. The new adapter has compiled but has not had integration tests or execution replays. Broader company-event evidence is incomplete. | Focused integration/regression verification; reviewed eligibility/delivery/payment facts; required child/OTC prices or explicit blockers; complete the scoped dataset without purchases. | Coding agent. No owner configuration due now. |
+| Reliable historical data and simulation | The ownership adapter passed 183 focused tests, 36 exact financial replays, 36 exact risk comparisons and 84 component checks. Twenty primary sources were revalidated. Broader company-event evidence is incomplete. | Reviewed eligibility/delivery/payment facts or separately proposed research assumptions; required child/OTC prices or explicit blockers; complete the scoped dataset without purchases. | Coding agent. No owner configuration due now. |
 | A strategy accepted for the investment goal | Earlier candidates did not pass. The broader entry/selection study remains unscored. | Evaluate the separately scoped finite study on credible development data, assess costs/risk and the approved criteria. Reserve final evaluation until a candidate and protocol are frozen. | Coding agent runs research; owner reviews results and any materially changed scope. |
 | Verified paper execution workflow | Risk gate, idempotent order manager, recovery and kill-switch components exist. Submission is disabled. The unattended paper loop, complete fill/activity accounting and safe exit/stop workflow still need work. | Complete the Phase 15 workflow, exercise failures/restarts, reconcile fills/cash/positions, and verify that protection and shutdown behavior operate correctly. | Coding agent builds it; owner later reviews the operational result. |
 | Deliberate activation | No approved paper candidate or launch decision. Paper-risk JSON remains unapproved. | Choose/approve personal paper-risk limits, review research results and cost sensitivity, understand existing paper positions/open orders, review a successful startup/recovery report, and explicitly authorize the trial. | Owner with guidance from the coding agent. |
@@ -41,6 +41,8 @@ The Pi's setup and execution checks remain separate. We can first establish
 paper operation on Windows; moving unattended operation to the Pi also
 requires that machine's deployment and recovery checks.
 
-All work in the current increment is offline. Historical simulated cash,
-dividends and event payments are accounting values; no money has been invested
-or moved in an account by this work.
+Tests, replays and the saved-source audit ran offline. Three bounded free
+public-web tool calls sought an unavailable filing date; they established no
+new event evidence. No broker/account requests, orders, purchases or subscription
+changes occurred. Historical simulated cash, dividends and event payments are
+accounting values; no money has been invested or moved in an account by this work.

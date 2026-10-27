@@ -14,15 +14,14 @@ starting a paper trial, review the
 
 ## Where we are now
 
-**Latest engineering work, 2026-10-27:** The [ownership adapter](ownership_adapter.md)
-connects the accounting component to the portfolio simulator under a separate
-reviewed event schedule. It covers inherited positions, canceled orders,
-stops, feature history and claim-aware reporting. Compilation is complete;
-integration tests and execution/regression replays are still due. Previous
-111-test/84-check totals below describe the preceding component increment,
-not the newly connected engine. No source case has been promoted or broader
-strategy study run. Purchases, network requests, account calls and orders in
-this step were zero.
+**Latest engineering work, 2026-10-27:** The [ownership integration verification](ownership_verification_results.md)
+passed 183 focused unit tests, 36 exact financial replays, 36 exact daily-risk
+comparisons and 84 component checks. Report validation was strengthened.
+The evidence review revalidated 20 primary sources but did not approve any
+incomplete historical case. Delivery/payment facts and price gaps still block
+the broader strategy study. Purchases, broker/account requests and orders were
+zero. Three bounded free public-web tool calls did not establish the missing
+filing date. No source was automatically approved.
 
 **How far to paper trading:** [This checklist](paper_trading_readiness.md)
 records four remaining gates: credible data/simulation, a passing research
@@ -37,8 +36,8 @@ implements a separate offline ledger for delayed cash rights, successor and
 spin-off shares, and fractional claims. All 111 focused unit tests and 84
 saved-case/timeline checks pass. Simulated amounts are not account money;
 this step made zero purchases, network requests or orders. The component is
-now connected; integration verification and timing/price evidence remain
-my engineering work before expanding the basket. You need no card, download,
+now connected and verified for the documented test scope; timing/price evidence
+remains my engineering work before expanding the basket. You need no card, download,
 dependency installation or risk-setting change now.
 
 **Preceding work:** The [free collection/event review](free_collection_results.md)

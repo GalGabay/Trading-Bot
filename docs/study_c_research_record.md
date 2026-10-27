@@ -1,11 +1,13 @@
 # Study C: daily rule-only research record
 
-**Latest engineering update, 2026-10-27:** The [ownership adapter](ownership_adapter.md)
-connects the separate accounting ledger to the existing simulator. It requires
-reviewed event eligibility/delivery and keeps unverified historical cases
-blocked. Compilation passed; integration/regression execution remains due.
-No larger study, revised return result, purchase, account call or order was
-made. See [paper readiness](paper_trading_readiness.md) for the remaining gates.
+**Latest engineering update, 2026-10-27:** The [ownership verification and evidence review](ownership_verification_results.md)
+passed 183 focused unit tests, 36 exact financial replays, 36 exact daily-risk
+comparisons and 84 component checks. The risk reporter now rejects inconsistent
+headline summaries. Twenty saved primary sources were revalidated; incomplete
+historical cases remain blocked. No larger strategy study, revised return
+result, purchase, broker/account call or order was made. Three free public-web
+tool calls established no missing filing date. See [paper readiness](paper_trading_readiness.md)
+for the remaining gates.
 
 **Preceding engineering follow-up:** The [ownership-claim ledger](claim_accounting.md)
 now handles delayed cash rights, successor/spin-off ownership and exact
@@ -13,7 +15,7 @@ fractional claims in standalone offline accounting. The 111 focused unit tests
 and 84 saved-case/timeline checks pass. Historical payment/publication/delivery
 gaps and missing quotes remain explicit; one missing-child-price arithmetic
 check is synthetic. That increment did not connect a strategy adapter; the
-latest update above adds the connection with verification still pending.
+latest update above records verification of that connection.
 There is no new strategy return result, broader scoring or paper approval. Purchases, network
 requests and orders in this increment were zero.
 

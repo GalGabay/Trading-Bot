@@ -617,9 +617,53 @@ def summarize_ownership(result):
 
 def ownership_risk_envelope(case, datasets):
     runtime = replay_accounting(case["ownership_accounting"], case["fills"], case["equity_curve"], datasets=datasets)
+    # Reconciled curves are insufficient when a caller displays a separately
+    # corrupted headline summary or starting-capital assumption.
+    capital = float(runtime.ledger.initial_cash)
+    last = runtime.marks[-1]
+    equity = float(Fraction(last["equity"]))
+    exits = [item for item in runtime.fill_details if item["side"] == "SELL"]
+    profits = [item["profit"] for item in exits]
+    position_counts = [len({lot["instrument_id"] for lot in mark["lots"]} |
+                           {c["instrument_id"] for c in mark["claims"] if c["kind"] == "fractional_shares"})
+                       for mark in runtime.marks]
+    expected = {
+        "initial_cash": capital, "final_equity": equity, "total_return": equity / capital - 1,
+        "max_drawdown": min(row["observed_closing_drawdown"] for row in runtime.risk_rows),
+        "max_observed_gross_exposure": max(float(Fraction(mark["gross_exposure"])) for mark in runtime.marks),
+        "total_realized_pnl": float(runtime.ledger.realized_pnl),
+        "marked_unrealized_pnl_including_claims": float(Fraction(last["unrealized_pnl"])),
+        "fill_count": len(runtime.fill_details),
+        "max_observed_positions": max(position_counts),
+        "completed_trades": len(exits), "winning_trades": sum(p > 0 for p in profits),
+        "win_rate": sum(p > 0 for p in profits) / len(profits) if profits else None,
+        "profit_factor": sum(p for p in profits if p > 0) / abs(sum(p for p in profits if p < 0)) if any(p < 0 for p in profits) else None,
+        "average_holding_days": sum(item["holding_days"] for item in exits) / len(exits) if exits else None,
+    }
+    for key, value in expected.items():
+        actual = case["metrics"].get(key)
+        if value is None:
+            if key not in case["metrics"] or actual is not None:
+                raise UniverseDataError(f"Reported {key} differs from reconciled ownership accounting")
+        elif (isinstance(actual, bool) or not isinstance(actual, (int, float))
+                or not isfinite(actual) or not isclose(actual, value, rel_tol=1e-11, abs_tol=1e-8)):
+            raise UniverseDataError(f"Reported {key} differs from reconciled ownership accounting")
+    cost_capital = case.get("costs", {}).get("initial_cash")
+    if (isinstance(cost_capital, bool) or not isinstance(cost_capital, (int, float))
+            or not isfinite(cost_capital) or not isclose(cost_capital, capital, rel_tol=1e-11, abs_tol=1e-8)):
+        raise UniverseDataError("Execution-cost starting capital differs from the ownership ledger")
     final = {key: p["quantity"] for key, p in case["metrics"]["open_positions"].items()}
     if final != runtime.positions():
         raise UniverseDataError("Final reported positions differ from external-price ownership reconciliation")
+    for key, quantity in final.items():
+        details = case["metrics"]["open_positions"][key]
+        close = float(runtime._bars[key]["close"])
+        basis = float(sum(lot.basis for lot in runtime.ledger.lots if lot.instrument_id == key))
+        for field, value in {"last_close": close, "marked_unrealized_pnl": quantity * close - basis}.items():
+            actual = details.get(field)
+            if (isinstance(actual, bool) or not isinstance(actual, (int, float)) or not isfinite(actual)
+                    or not isclose(actual, value, rel_tol=1e-11, abs_tol=1e-8)):
+                raise UniverseDataError(f"Open-position {field} differs from the reconciled ledger")
     rows = runtime.risk_rows
     worst = min(rows, key=lambda row: row["conservative_drawdown_bound"])
     return dict(ledger_reconciled=True, corporate_actions_reconciled=True, external_source_prices_verified=True,

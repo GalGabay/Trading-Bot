@@ -1,0 +1,247 @@
+{
+  "scope": "Review remaining source gates after ownership integration verification; no strategy scoring or automatic event approval",
+  "primary_sources_revalidated": 20,
+  "input_sha256": {
+    "docs\\ownership_evidence_review.json": "9804975cbcfa5243d32e2ade692d8323ceb58d9ce307c22675ad6c413b418897",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\docs\\free_collection_event_review.json": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\docs\\claim_accounting_cases.json": "4e14a75178570db1463c3764722e3012ba21c4024235ca86435e49f9ddc404f4",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\docs\\2016_cohort_source_review.json": "52d5b1d56217498a421d0e37b14e9b0ccda58d7913a4efc8cf4c788d1244e3db",
+    "docs\\free_collection_plan.json": "bf7ca6cece38e0a54eeff9a912efe8fc516971ab314aecb49714c14f6254f9d3",
+    "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\reports\\broad_universe_audit_final\\calendar.json": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7"
+  },
+  "primary_source_sha256": {
+    "cbre_index": "70dbad03d642f7a3f0c9824b2b8606213a78ae1d0f50c196693f06964fbf9bef",
+    "wfm_index": "252d41e7e9a1e024fc532ffadb6ab776912cf77e92c4ac71121c216c8f72fe1a",
+    "bbby_index": "5249ea900dde9a5b10a4970a074b052960ef88705bc2ca12fae98726f5fbbe9c",
+    "aetna_index": "c85059568ca589fbeea716f16e7cb57f50dc8672a849d328895c337fe1154e9c",
+    "fox_index": "e8024badf229fa518764585f77a9fa233df6ce4d7627c3879ae52245767c766a",
+    "under_armour_2016_10k": "3f1b96064c27747cd382a388290bb0cc88a27cfe01c62a62d7daff87436cb8dc",
+    "arconic_2020_announcement": "b92e54f7273497ad5e4206fb2e478767c2330443733a29cd14e4bbe6d794e33f",
+    "arconic_2020_completion": "b319d89001c37acb1433dcff17786d281628ad7be3f2b1e906df942873dc9553",
+    "activision_2023_sec": "1addc924bebaf6f6b6e3ddc22cfa515233ec290cb882c33aa57a02584c2b525d",
+    "bbby_notice_final": "a78a63a207497e2ed1c8f3425d7cadf18c99861dbd0465d6db6a85867f0d2894",
+    "ua_distribution_announcement": "3206ddd2a804c433104e8189d301691bce6ad322839936b8aab51a60a52d3ea7",
+    "under_armour_2016_announcement": "5cd65b962186b85a49c930c0f98cbd592995c34216cc9803e1dac0ca916440a4",
+    "cbre_2018_announcement": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+    "whole_foods_2017": "b38ebe712eddcf171986a768bed531254c086d5499d65d66145c3324dc7baca8",
+    "aetna_2018": "24b23468d292fc841e0f5ef6db2230367216458464e2424fd663fa764108b537",
+    "level3_2017": "9783b47f4a498776e43b8a4fcd9051924b456d846bf04d85891a7d057f37bb63",
+    "alcoa_2016_completion": "694f442ac651e18ad4b78e3f73516c0e3a7b7a4ac8663524da1d4cd8de756542",
+    "fox_2019_spinoff": "febbac2d9427555cd82803eb3795b64540656621c2fdcaa87e0ac2c6962f9c30",
+    "bed_bath_2023": "a7eb1d10a1f9469af411f45f5061343395fa87519a161a9220b5ad57a9ae1c86",
+    "alcoa_2016_announcement": "44cc34de8af899c7eba55fb0e6d031274c780113b2a80ccc641c60aa9e841333"
+  },
+  "code_sha256": {
+    "backtesting/ownership_evidence_review.py": "a88cf679df829577cae90fe230ec53a3a98e279940ba6892abf9113724cbfac3",
+    "backtesting/event_gap_review.py": "c2c49e50b89284ccf6ef5d5e67f8d3e546364b4dd02c1cc986a3cfc26f840107"
+  },
+  "inventory_report_sha256": "31dcae91b1166da6ad5701e014bf8d65e9141b5e1d948ea1c4d1b547ab2aef0f",
+  "required_provider_events_missing": 10,
+  "quarantined_event_references": 77,
+  "advance_planned_terms": [
+    {
+      "case_name": "under_armour_distinct_class_c_ownership",
+      "source_id": "ua_distribution_announcement",
+      "publication_date": "2016-03-16",
+      "recognition_session": "2016-04-08",
+      "planned_distribution_date": "2016-04-07",
+      "shares_per_parent": "1",
+      "terms": [
+        "March 16, 2016",
+        "one-for-one",
+        "April 7, 2016",
+        "March 28, 2016"
+      ],
+      "limitation": "Advance planned ratio/date and record date; first quoted session differs from planned distribution date. This does not certify due-bill entitlement or broker delivery.",
+      "conservative_known_at": "2016-03-18T13:30:00+00:00",
+      "planned_terms_known_by_recognition_open": true,
+      "actual_delivery_verified": false,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "case_name": "arconic_howmet_and_new_arconic_branch",
+      "source_id": "arconic_2020_announcement",
+      "publication_date": "2020-02-06",
+      "recognition_session": "2020-04-01",
+      "planned_distribution_date": "2020-04-01",
+      "shares_per_parent": "1/4",
+      "terms": [
+        "February 6, 2020",
+        "every four shares",
+        "April 1, 2020",
+        "regular-way",
+        "without an entitlement"
+      ],
+      "limitation": "Regular-way entitlement and ex-distribution markets are described; the actual vendor market stream, delivery and missing child quote still need review.",
+      "conservative_known_at": "2020-02-10T14:30:00+00:00",
+      "planned_terms_known_by_recognition_open": true,
+      "actual_delivery_verified": false,
+      "approved_for_strategy_scoring": false
+    }
+  ],
+  "undated_source_review": {
+    "source_id": "alcoa_2016_announcement",
+    "terms": [
+      "[ ], 2016",
+      "every three shares",
+      "November 1, 2016"
+    ],
+    "limitation": "The cached cover letter contains an undated placeholder. Do not infer publication from the accession number or from later completion."
+  },
+  "cases": [
+    {
+      "name": "whole_foods_delayed_cash_right",
+      "primary_terms_corroborated": true,
+      "provider_event_present": false,
+      "advance_planned_terms_supported": false,
+      "event_quotes": "saved_event_quotes_or_cash_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": null,
+      "spendable_cash_availability_verified": false,
+      "fractional_allocation_verified": null,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "name": "activision_delayed_cash_right",
+      "primary_terms_corroborated": true,
+      "provider_event_present": true,
+      "advance_planned_terms_supported": false,
+      "event_quotes": "saved_event_quotes_or_cash_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": null,
+      "spendable_cash_availability_verified": false,
+      "fractional_allocation_verified": null,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "name": "aetna_cash_and_cvs_successor",
+      "primary_terms_corroborated": true,
+      "provider_event_present": false,
+      "advance_planned_terms_supported": false,
+      "event_quotes": "saved_event_quotes_or_cash_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": false,
+      "spendable_cash_availability_verified": false,
+      "fractional_allocation_verified": false,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "name": "level3_cash_and_ctl_successor",
+      "primary_terms_corroborated": true,
+      "provider_event_present": false,
+      "advance_planned_terms_supported": false,
+      "event_quotes": "saved_event_quotes_or_cash_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": false,
+      "spendable_cash_availability_verified": false,
+      "fractional_allocation_verified": false,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "name": "alcoa_retained_parent_and_distinct_child",
+      "primary_terms_corroborated": true,
+      "provider_event_present": false,
+      "advance_planned_terms_supported": false,
+      "event_quotes": "saved_event_quotes_or_cash_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": false,
+      "spendable_cash_availability_verified": null,
+      "fractional_allocation_verified": false,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "name": "arconic_howmet_and_new_arconic_branch",
+      "primary_terms_corroborated": true,
+      "provider_event_present": false,
+      "advance_planned_terms_supported": true,
+      "event_quotes": "missing_child_quote_synthetic_mechanics_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": false,
+      "spendable_cash_availability_verified": null,
+      "fractional_allocation_verified": false,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    },
+    {
+      "name": "under_armour_distinct_class_c_ownership",
+      "primary_terms_corroborated": true,
+      "provider_event_present": false,
+      "advance_planned_terms_supported": true,
+      "event_quotes": "saved_event_quotes_or_cash_only",
+      "prior_close_entitlement_verified": false,
+      "share_delivery_verified": false,
+      "spendable_cash_availability_verified": null,
+      "fractional_allocation_verified": null,
+      "full_lifecycle_price_and_action_coverage_certified": false,
+      "primary_evidence_is_not_broker_credit_proof": true,
+      "approved_for_strategy_scoring": false
+    }
+  ],
+  "unresolved_cases": [
+    {
+      "name": "fox_disney_election_and_proration",
+      "source_id": "fox_2019_spinoff",
+      "reason": "Do not select an unreviewed election, proration, conversion ratio or fractional payout."
+    },
+    {
+      "name": "under_armour_additional_class_c_distribution",
+      "source_id": "under_armour_2016_10k",
+      "reason": "Saved annual report confirms aggregate shares/cash, not an approved per-share ratio or fractional allocation. Do not derive a ratio from aggregate totals."
+    },
+    {
+      "name": "bed_bath_suspension_and_cancellation",
+      "source_id": "bbby_notice_final",
+      "reason": "Missing OTC quotes and publication/cancellation valuation remain unresolved; no stale mark or assumed early zero."
+    }
+  ],
+  "data_gaps": {
+    "new_arconic_child_quote_missing": true,
+    "bed_bath_otc_quotes_unavailable": true,
+    "additional_class_c_per_unit_ratio_not_certified": true,
+    "fox_election_and_proration_unresolved": true,
+    "full_506_security_coverage_certified": false
+  },
+  "cash_availability_convention": null,
+  "free_public_lookup_attempts": [
+    {
+      "kind": "web_open",
+      "url": "https://www.sec.gov/Archives/edgar/data/1675149/000119312516735860/0001193125-16-735860-index.html",
+      "result": "Tool reported inaccessible; no filing date established"
+    },
+    {
+      "kind": "web_search",
+      "query": "site:sec.gov/Archives/edgar/data/1675149/000119312516735860 Filing Date",
+      "result": "No matching filing index established; general SEC help results are not event evidence"
+    },
+    {
+      "kind": "web_open",
+      "urls": [
+        "https://www.sec.gov/Archives/edgar/data/1675149/000119312516735860/0001193125-16-735860-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1675149/0001193125-16-735860-index.htm"
+      ],
+      "result": "Both alternative index addresses reported inaccessible; no filing date established"
+    }
+  ],
+  "public_web_tool_calls_recorded": 3,
+  "offline_review_network_requests": 0,
+  "broker_data_requests": 0,
+  "account_requests": 0,
+  "orders": 0,
+  "new_purchases_usd": 0,
+  "subscriptions_changed": 0,
+  "strategy_simulations": 0,
+  "reserved_holdout_prices_read": false,
+  "events_automatically_approved": 0,
+  "ready_for_broad_backtest": false
+}
