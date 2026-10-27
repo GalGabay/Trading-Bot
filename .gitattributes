@@ -25,3 +25,7 @@ docs/public_source_test_summary.json -text
 docs/jpm_dividend_followup_plan.json -text
 # Preserve the final capped attempt's source and output evidence pins.
 docs/jpm_dividend_followup_summary.json -text
+# Preserve the remaining-history evidence review and proposed experiment pins.
+docs/remaining_pilot_review.json -text
+docs/remaining_pilot_summary.json -text
+docs/next_pilot_experiment_proposal.json -text

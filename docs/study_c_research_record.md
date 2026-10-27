@@ -1,5 +1,13 @@
 # Study C: daily rule-only research record
 
+**Latest readiness outcome, 2026-10-27:** The [Apple/CBRE/SPY cached review](remaining_pilot_readiness.md)
+revalidates 6,036 candles and reconciles 66 events, with 11 source checks.
+It distinguishes usable price observations, supported issuer terms and
+remaining independent evidence gaps. No new return result was produced.
+The [finite next diagnostic proposal](next_pilot_experiment_proposal.md)
+requires explicit scope/vendor/timing review and a separate mode before any
+performance run. JPMorgan remains parked; old scores and membership are intact.
+
 **Latest data outcome, 2026-10-27:** The [single capped JPMorgan follow-up](jpm_dividend_followup_results.md)
 saved one additional declaration and stopped at four discovery calls. Twenty-nine
 declaration targets and 15 original payable omissions remain. JPMorgan's active

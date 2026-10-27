@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Latest readiness review, 2026-10-27:** The [remaining three histories](remaining_pilot_readiness.md)
+have 6,036 revalidated candles and a 66-event evidence inventory. Strict
+evidence admission remains blocked, with no new strategy returns. A
+[separately labeled 24-run diagnostic](next_pilot_experiment_proposal.md)
+is proposed for AAPL/CBRE and SPY context, using named vendor/timing assumptions
+only after owner review and implementation/verification. The five-instrument
+gate and broad-study control remain unchanged; JPMorgan collection stays parked.
+
 **Latest result, 2026-10-27:** The [final capped JPMorgan attempt](jpm_dividend_followup_results.md)
 collected one additional declaration, then stopped at four discovery calls
 (one direct GET, $0 purchases). Twenty-nine declaration targets and 15 original

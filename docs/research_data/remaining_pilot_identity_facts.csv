@@ -1,0 +1,12 @@
+fact,full_period_certified,scope,source_path,supported
+aapl_listing,False,"Common stock/Nasdaq/AAPL identity at the 2018 filing, not every date in 2016-2023",data/reports/raw_action_pilot_v1/aapl_2018_10k.html,True
+aapl_listing_publication,False,"Filing date, not actual release or broker credit time",data/reports/raw_action_pilot_v1/aapl_2018_filing_index.html,True
+dated_2016_basket,False,Dated source holdings and literal CBRE label; not continuous identity/action coverage,data/reports/raw_action_pilot_v1/spy_2016_filing.html,True
+dated_2016_publication,False,Publication date for source membership,data/reports/raw_action_pilot_v1/spy_2016_filing_index.html,True
+spy_fund_2020,False,Fund/units identity and conditional distribution policy; no complete per-event schedule,data/reports/raw_action_pilot_v1/spy_2020_filing.html,True
+cbre_class_2020,False,Later source class label; does not resolve 2016 REIT tag,data/reports/raw_action_pilot_v1/spy_2020_filing.html,True
+spy_2020_publication,False,Publication date; not available to a 2016 decision,data/reports/raw_action_pilot_v1/spy_filing_index.html,True
+cbre_rename,False,"Old/new alias and March 19, 2018 effective boundary",data/reports/historical_mapping_sources_v1/cbre_2018_announcement.html,True
+cbre_publication,False,"Dated public filing, not broker metadata",data/reports/free_collection_evidence_v1/cbre_index.html,True
+cbre_2016_10k,False,"Issuer common Class A/listing and no common cash dividends since inception; retrospective, not an all-action certificate",data/reports/pilot_public_sources_v1/batch_02/cbre_2016_10k.html,True
+cbre_2023_10k,False,"Issuer common Class A/listing and no common cash dividends since inception; retrospective, not an all-action certificate",data/reports/pilot_public_sources_v1/batch_04/cbre_2023_10k.html,True

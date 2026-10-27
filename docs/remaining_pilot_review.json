@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "purpose": "Offline review of remaining AAPL/CBRE evidence and SPY context; no strategy scores or evidence approvals",
+  "inputs": {
+    "proposal": {
+      "path": "docs/free_data_pilot_proposal.json",
+      "sha256": "932b1e7dddc5b1d7b9b0571a8e337cf5facd824ac2fc694a6a048756fc898d17"
+    },
+    "qualification_review": {
+      "path": "docs/free_data_pilot_review.json",
+      "sha256": "b428fa934f89480927059d8537043caba863e8f60a598fed93e2108a9fb7ec0f"
+    },
+    "qualification_summary": {
+      "path": "docs/free_data_pilot_qualification_summary.json",
+      "sha256": "f2db8669726b63a0b2dd61a10a54bb4cb2370d09738bba7fa3e4d215b39939a9"
+    },
+    "primary_review": {
+      "path": "docs/pilot_public_source_review.json",
+      "sha256": "ed9b451155df0ddfdf277fb19ecd3cf602fe773d8a1f70317b32244bf9870545"
+    },
+    "primary_summary": {
+      "path": "docs/pilot_public_source_summary.json",
+      "sha256": "0c7267e67a6ad63a378f532e8209246f4c267b2691c0cbdc4f4dd142a9656e45"
+    },
+    "jpm_outcome": {
+      "path": "docs/jpm_dividend_followup_summary.json",
+      "sha256": "e3c70f1b50da9e6b82e6313fe63bad891ae7310c3d8f3e7a039459eaef78aed3"
+    },
+    "acceptance": {
+      "path": "config/research_acceptance.json",
+      "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+    },
+    "register": {
+      "path": "docs/research_data/spy_2016_dated_aliases.csv",
+      "sha256": "d558aba9ebbb8bb22250bffbca4afa9e0f34652c4c8e65588d157d553bfd175b"
+    },
+    "original_action_matrix": {
+      "path": "docs/research_data/free_data_pilot_actions.csv",
+      "sha256": "af07ef1b5de7d301477bcf955b0ad4b774dbad92496fe27f06338db1d18bbedf"
+    }
+  },
+  "active_symbols": [
+    "AAPL",
+    "CBRE",
+    "SPY"
+  ],
+  "candidate_symbols": [
+    "AAPL",
+    "CBRE"
+  ],
+  "context_only": [
+    "SPY"
+  ],
+  "start_inclusive": "2016-01-01",
+  "end_exclusive": "2024-01-01",
+  "stream_count": 3,
+  "expected_sessions_per_stream": 2012,
+  "event_counts": {
+    "AAPL": 33,
+    "CBRE": 1,
+    "SPY": 32
+  },
+  "assumptions_owner_approved": false,
+  "ready_for_strategy_scoring": false,
+  "parked_jpm_collection_reopened": false,
+  "auto_replacement": false,
+  "controls": {
+    "network_requests": 0,
+    "purchases_usd": 0,
+    "broker_requests": 0,
+    "orders": 0,
+    "strategy_runs": 0,
+    "unit_tests_run": 0
+  }
+}

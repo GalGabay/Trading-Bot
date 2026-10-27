@@ -14,6 +14,19 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest cached review, 2026-10-27:** The [Apple/CBRE/SPY review](remaining_pilot_readiness.md)
+passes actual price/calendar/raw-response checks for 6,036 candles and
+reconciles 66 events. JPMorgan remains parked. Strict evidence gaps remain;
+no new backtest or paper approval follows. A finite
+[24-run diagnostic proposal](next_pilot_experiment_proposal.md) now spells out
+the vendor reliance, modeled knowledge/payment timing and smaller research
+scope. **Your next research decision:** review that proposal before its
+implementation and performance use; you can approve it in chat using the
+phrase at its end. This follows the existing pilot proposal's sections 3/6
+approval requirement. No purchase, personal risk-limit setting or paper
+activation is requested. After approval, my work is the separate diagnostic
+mode, its verification and the bounded runs if checks pass.
+
 **Latest result, 2026-10-27:** The [single JPMorgan attempt](jpm_dividend_followup_results.md)
 has finished: four discovery calls, one successful document GET and $0 spent.
 One additional declaration supplies a missing payable date; 29 declaration

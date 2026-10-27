@@ -3,6 +3,13 @@
 Date: 2026-10-27. Status: **proposal; no performance runs scheduled or executed
 by this increment**.
 
+**Current follow-up:** JPMorgan collection is parked. The
+[remaining Apple/CBRE/SPY review](remaining_pilot_readiness.md) revalidated the
+saved inputs and identified what supports a next diagnostic versus what
+remains blocked. The [new finite proposal](next_pilot_experiment_proposal.md)
+requests explicit review of narrower scope and vendor/timing assumptions;
+it does not approve the strict evidence flags or change the frozen JSON below.
+
 **Follow-up:** [Cached-source qualification is complete](free_data_pilot_qualification.md).
 All four price streams pass the documented checks; full-period identity/action
 evidence is still incomplete. The report supplies the action matrix and

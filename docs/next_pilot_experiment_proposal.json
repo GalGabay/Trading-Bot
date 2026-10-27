@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "status": "proposed_not_approved_not_executed",
+  "purpose": "Finite exploratory vendor-reliance accounting/strategy diagnostic; not investment acceptance or replacement of the broad study",
+  "inputs": [
+    {
+      "path": "backtesting/daily_strategies.py",
+      "sha256": "3dc5d5028e67f3394074516b6d5c2ea6d0f1ae8cbf9a7a1d9d2f7584be7b76bb"
+    },
+    {
+      "path": "backtesting/holding_policy.py",
+      "sha256": "59d267c833caff38a376d3cb5a72993ee15cb71ee2563235685ede22d58624aa"
+    },
+    {
+      "path": "backtesting/research_policy.py",
+      "sha256": "e08b23c2c182507ea769b77044668caf5bea9a1607fc9377a6f2eae274bd5f3e"
+    },
+    {
+      "path": "backtesting/allocation_research.py",
+      "sha256": "ec79a35c2f64e81843f837a348da44f507df59354f8424f1d244061bc52f8ca4"
+    },
+    {
+      "path": "backtesting/holding_research.py",
+      "sha256": "1c3d605afa30b5b27072a7a85ae14ec4e4d799db357e9d27c6bfb7dc17b2f3a4"
+    },
+    {
+      "path": "backtesting/portfolio_engine.py",
+      "sha256": "bc5f7be52b9e0e6ae9e0c173039749a04fb2b4ae82afb58f13573087bc4bebfc"
+    },
+    {
+      "path": "backtesting/ownership_adapter.py",
+      "sha256": "ae3c0063c5af9a9c28827f23abb3fa1859cdc34132674b1b7e26e18a99ef05fc"
+    },
+    {
+      "path": "docs/holding_period_study_protocol.md",
+      "sha256": "0db6942cdd0e03c278f85acb568d7b360994a0436b08b87c0568c92043f86685"
+    },
+    {
+      "path": "docs/free_data_pilot_proposal.json",
+      "sha256": "932b1e7dddc5b1d7b9b0571a8e337cf5facd824ac2fc694a6a048756fc898d17"
+    },
+    {
+      "path": "config/research_acceptance.json",
+      "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+    },
+    {
+      "path": "docs/remaining_pilot_review.json",
+      "sha256": "c4412fb04eb57f547e5c5cda1099ff36f6ff2b40c45480c03f6b0f31141bbf7c"
+    },
+    {
+      "path": "docs/remaining_pilot_summary.json",
+      "sha256": "f37ea9797eb49a3e6c754284c846e333f3a45acd9b0528cb3f5333569a70d546"
+    }
+  ],
+  "evidence_report": {
+    "path": "docs/remaining_pilot_summary.json",
+    "sha256": "f37ea9797eb49a3e6c754284c846e333f3a45acd9b0528cb3f5333569a70d546"
+  },
+  "candidate_symbols": [
+    "AAPL",
+    "CBRE"
+  ],
+  "context_only": [
+    "SPY"
+  ],
+  "timeframe": "1Day",
+  "feed": "sip",
+  "adjustment": "raw",
+  "currency": "USD",
+  "universe_selection": "Previously collected engineering cases; JPM parked for unresolved evidence, not ranked by returns; survivor/convenience bias disclosed",
+  "windows": [
+    {
+      "id": "development_2017_2021",
+      "warmup_start": "2016-01-01",
+      "evaluation_start": "2017-01-01",
+      "end_exclusive": "2022-01-01"
+    },
+    {
+      "id": "development_robustness_2022_2023",
+      "warmup_start": "2019-01-01",
+      "evaluation_start": "2022-01-01",
+      "end_exclusive": "2024-01-01"
+    }
+  ],
+  "strategy": {
+    "id": "existing_breakout55_exit20_vol_latched_continuation30",
+    "entry_sessions": 55,
+    "exit_sessions": 20,
+    "stock_and_market_filter": "EMA200",
+    "initial_fixed_stop_atr14_multiple": 3,
+    "reentry_cooldown_sessions": 10,
+    "holding_policy": "Existing continuation_30: reviews 30,35,40,45,50,55,60,90,120,...; retain only with fresh prior-20-session high, positive estimated net sale profit, stock/SPY above EMA200; no hard maximum",
+    "position_cap": 0.05,
+    "portfolio_cap": 0.35,
+    "stop_risk_cap": 0.005,
+    "annualized_volatility_contribution": 0.01,
+    "max_positions": 7,
+    "daily_loss_latched_halt": 0.03,
+    "drawdown_latched_halt": 0.1,
+    "risk_settings_role": "Frozen old research controls; not personal paper-risk approval and not a guarantee of 5% maximum loss",
+    "buy_priority": "alphabetical",
+    "fill_timing": "Next actual session open after a completed-close signal; ordinary stop conventions retained",
+    "parameter_search": false,
+    "ml": false
+  },
+  "account_sizes_usd": [
+    10000,
+    100000
+  ],
+  "costs": [
+    {
+      "id": "base",
+      "slippage_bps_per_side": 5,
+      "full_spread_bps": 2,
+      "commission_per_order_usd": 0
+    },
+    {
+      "id": "pessimistic",
+      "slippage_bps_per_side": 20,
+      "full_spread_bps": 10,
+      "commission_per_order_usd": 1
+    }
+  ],
+  "cash_scenarios": [
+    "First actual open strictly after issuer payable New York date",
+    "Five further exchange-session opens after base",
+    "No credit within evaluation window; earned rights remain outstanding"
+  ],
+  "strategy_arms": 1,
+  "max_strategy_runs": 24,
+  "run_count_formula": "1 strategy x 2 windows x 2 account sizes x 2 costs x 3 cash scenarios",
+  "proposed_assumptions": {
+    "owner_approved": false,
+    "vendor_reliance": "Explicitly accept provider AAPL ex-dates, stable ticker/identity mappings and limited action inventory as exploratory inputs with independent-review gaps retained; not certified complete histories",
+    "identity": "Issuer common-share/fund anchors and CBRE documented alias continuity; do not treat unresolved historical tax subtype as false or use a REIT filter",
+    "known_at": "Second actual session open after date-only Apple declaration; block if this is later than required boundary. CBRE rename uses dated filing; split uses July 30 2020 issuer release.",
+    "entitlement": "Model ordinary Apple dividends for held whole shares at the provider ex-date; no verified broker entitlement claim, no unreviewed special/due-bill/fractional events",
+    "cash": "Three declared scenarios; issuer payable is not actual broker availability",
+    "economic_rights": "Nominal fixed USD receivables separately reported; do not call unpaid rights settled cash or fully liquidated profit",
+    "features": "Raw dividend gaps; effective split rebasing only once effective; raw SPY price-only EMA context without cash/dividend inputs",
+    "spy_passive_total_return": "Not produced; no zero-filling gain blanks or selecting a precision policy needed for context-only use",
+    "idle_cash_interest": 0
+  },
+  "implementation_required": [
+    "Separate versioned diagnostic mode and assumption journal; preserve strict ownership/evidence flags",
+    "Derive reviewed input schedule from pinned event matrix and calendar, without modifying originals",
+    "Verify split share/feature/stop handling, cash rights, duplicate protection, delays, alias boundary and ledger reconciliation before performance runs",
+    "Stop all runs on contradictory dates/terms, calendar gaps, unexpected action kinds, unavailable required knowledge bounds or failed accounting checks"
+  ],
+  "diagnostics": [
+    "Net marked portfolio return and CAGR; separately estimate final sale costs",
+    "Realized P&L, open holdings, unpaid rights and spendable cash reported separately",
+    "Closing drawdown, daily-OHLC risk bounds, loss halts, fees, slippage and spread",
+    "Trade count, holding durations, per-stock contribution, exposure and idle cash",
+    "All 24 results retained; no choosing a cash scenario, rule, dates or replacement stock for its return"
+  ],
+  "acceptance": {
+    "minimum_instruments_unchanged": 5,
+    "minimum_completed_trades_unchanged": 30,
+    "can_qualify_for_paper": false,
+    "reason": "Only two traded stocks and unclosed evidence assumptions; report exploratory outcomes without acceptance claims",
+    "owner_research_return_drawdown_targets_unchanged": true
+  },
+  "safeguards": {
+    "network_requests": 0,
+    "new_price_requests": 0,
+    "purchases_usd": 0,
+    "broker_account_requests": 0,
+    "orders": 0,
+    "holdout_prices_read": false,
+    "original_506_register_unchanged": true,
+    "registered_nine_stock_control_unchanged": true,
+    "jpm_collection_parked": true
+  },
+  "approval": {
+    "owner_approved": false,
+    "mode_implementation_authorized": false,
+    "performance_execution_authorized": false,
+    "request_text": "Approve the limited AAPL/CBRE diagnostic and its listed vendor/timing assumptions.",
+    "does_not_approve": [
+      "Paid sources",
+      "Paper trading",
+      "Personal paper-risk limits",
+      "Broader strategy acceptance",
+      "Changing the registered control or reserved years"
+    ],
+    "approval_effect": "Approves the named research implementation, verification and capped performance batch only after checks pass; approval flags remain false until explicit owner response."
+  }
+}

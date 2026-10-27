@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "purpose": "Offline review of remaining AAPL/CBRE evidence and SPY context; no strategy scores or evidence approvals",
+  "input_sha256": {
+    "docs/remaining_pilot_review.json": "c4412fb04eb57f547e5c5cda1099ff36f6ff2b40c45480c03f6b0f31141bbf7c",
+    "docs/free_data_pilot_proposal.json": "932b1e7dddc5b1d7b9b0571a8e337cf5facd824ac2fc694a6a048756fc898d17",
+    "docs/free_data_pilot_review.json": "b428fa934f89480927059d8537043caba863e8f60a598fed93e2108a9fb7ec0f",
+    "docs/free_data_pilot_qualification_summary.json": "f2db8669726b63a0b2dd61a10a54bb4cb2370d09738bba7fa3e4d215b39939a9",
+    "docs/pilot_public_source_review.json": "ed9b451155df0ddfdf277fb19ecd3cf602fe773d8a1f70317b32244bf9870545",
+    "docs/pilot_public_source_summary.json": "0c7267e67a6ad63a378f532e8209246f4c267b2691c0cbdc4f4dd142a9656e45",
+    "docs/jpm_dividend_followup_summary.json": "e3c70f1b50da9e6b82e6313fe63bad891ae7310c3d8f3e7a039459eaef78aed3",
+    "config/research_acceptance.json": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d",
+    "docs/research_data/spy_2016_dated_aliases.csv": "d558aba9ebbb8bb22250bffbca4afa9e0f34652c4c8e65588d157d553bfd175b",
+    "docs/research_data/free_data_pilot_actions.csv": "af07ef1b5de7d301477bcf955b0ad4b774dbad92496fe27f06338db1d18bbedf",
+    "docs/aapl_raw_action_pilot_review.json": "36ca285d69a40b6cc465c09a7e58d024ae9f20b5c0bfdbbc1c8b285846ba4fb3",
+    "docs/free_collection_event_review.json": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896",
+    "docs/historical_membership_source_review.json": "b653c49633cc77e7307071841fde17973b055452b1f3f570588d38486223e866",
+    "docs/ownership_evidence_summary.json": "598345717d4362464362490c1961a69d71acdb490ec0fab82d7ed864143d22f6",
+    "data/reports/free_collection_v1/report.json": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51",
+    "data/reports/raw_action_pilot_v1/aapl_2018_10k.html": "c9474138d805d62acc01a4156b699651137481109b4db789b73aee6cd4150ce9",
+    "data/reports/raw_action_pilot_v1/aapl_2018_filing_index.html": "683ec13f10590eb9eb0c973c7c19e596e341c479f57264ae757612160ac3199b",
+    "data/reports/raw_action_pilot_v1/aapl_january_corrected.html": "142c48b78b83f99e710636daa4ac9ad74e4184226b113a84c9f963e158a0c07a",
+    "data/reports/raw_action_pilot_v1/aapl_april.html": "1f5adfe2f7c55ab95bc7c5966a6c3f813d0b77e0004fe28f7fb8ffc8621ba482",
+    "data/reports/raw_action_pilot_v1/aapl_july.html": "a7f21b02893b6bceda598021a12a8f5b616f9c5a588028a5b0c42b2dd4fe5094",
+    "data/reports/raw_action_pilot_v1/aapl_october.html": "2b3dda862079598c762a8a4031b95f4474fc6dc75fd3ed3cc18088c196756a63",
+    "data/reports/raw_action_pilot_v1/spy_2016_filing.html": "f1a89354106579e1b9668cd70f39da75a0fd4ee9f7724d06bf012b120b132eb1",
+    "data/reports/raw_action_pilot_v1/spy_2016_filing_index.html": "4f5f041a2f1eea90921d9dc6b50e0d9bc1988e0f185de416b52ef83c3060ae9d",
+    "data/reports/raw_action_pilot_v1/spy_2020_filing.html": "6df43d7afcdf8d9f3c0057b2b92c9801a18044b56c3e926e9dfb139aa8da8213",
+    "data/reports/raw_action_pilot_v1/spy_filing_index.html": "504a1f81866878212b32d66dfc83854822cb49777bd56cd66070b00a369f5b2a",
+    "data/reports/historical_mapping_sources_v1/cbre_2018_announcement.html": "93a596b1e4ff537076e64ea237730b041998881024c3627d6f702632f3c4cf55",
+    "data/reports/free_collection_evidence_v1/cbre_index.html": "70dbad03d642f7a3f0c9824b2b8606213a78ae1d0f50c196693f06964fbf9bef",
+    "data/reports/broad_universe_audit_final/calendar.json": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7",
+    "data/reports/free_collection_v1/001/bars.csv": "c36a2c5b248665dad477a0e9315c9584f1829d3bf801dd4ec2ea8dd0901cc8fb",
+    "data/reports/free_collection_v1/001/bars_1.json": "b36f7a838f56a4a30e4a736637cad3161503a976c545f1f86dcb23ffbd82aeba",
+    "data/reports/free_collection_v1/001/actions_1.json": "5c3efb7c6876a2d85cf205aa1786587b24fbc619944263cf9c56d40af5610a1f",
+    "data/reports/free_collection_v1/002/actions_1.json": "78157d5814125cdb9fe85ef4b8297234b911a736c1bbe3e3bfcf7a74b2320986",
+    "data/reports/ownership_evidence_review_v1/collection_review/cbre_observed_alias_stream.csv": "d767f4c727eefcc09a58cd5221b4c8c555a63ab152cfa66c4a0c11b9f45d6c20",
+    "data/reports/ownership_evidence_review_v1/collection_review/report.json": "31dcae91b1166da6ad5701e014bf8d65e9141b5e1d948ea1c4d1b547ab2aef0f",
+    "data/reports/cbre_boundary_v1/response.json": "3a224602437c9f6fc3df66f4f8daef3b686341b04fcbc6d393097ba8fe456dad",
+    "data/reports/free_collection_v1/008/bars_1.json": "5d527b8307f755523ac945a157cd4f8a2b6e0eea5a23e2fdec278e05c421da75",
+    "data/reports/free_collection_v1/009/bars_1.json": "3867df17a8b8e1a08eb76940516461cb367a63317b13f6e4c9dfbd79111bfa65",
+    "data/reports/free_collection_v1/008/actions_1.json": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3",
+    "data/reports/free_collection_v1/009/actions_1.json": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3",
+    "data/reports/free_collection_v1/003/bars.csv": "fcd7390edbd7646a520a49669120bb4ef72d9ce08fdf85837a029ee0a7b996cc",
+    "data/reports/free_collection_v1/003/bars_1.json": "e5ef58d02e7098820ad8e3d4be3f818e220dc0f136c901e563dac4cd42c26c94",
+    "data/reports/free_collection_v1/003/actions_1.json": "be26e4915d0a4eb9ee029d53b0b4d5f28a3e3103a59fde920c7b1f8f4bd91e20",
+    "data/reports/pilot_public_sources_v1/batch_02/cbre_2016_10k.html": "e6576e6a54bb430fe14575560e6cea0d470bc0cc8a8fc1538eb0331347787567",
+    "data/reports/pilot_public_sources_v1/batch_04/cbre_2023_10k.html": "44901aa6a32ce425c83918cc6bde6ff7ca8210fb9c4096788075ee436710a03c",
+    "data/reports/pilot_public_sources_v1/batch_02/apple_dividend_history.html": "a8b41f353fde25a93c2fccedbda17223839374524fc40c168520f2ac2743c2cc",
+    "data/reports/pilot_public_sources_v1/batch_04/spy_historical_distributions.xlsx": "6b65cbf956b5d25705d08470006a0e97e6a7d2a0d5cfd08b63f6f79783b06320",
+    "docs/free_data_pilot_source_collection.json": "193811971c13debad221900028fe9aeb305e4f02f1209ab7d40b6ca7cd102302",
+    "data/reports/pilot_public_sources_v1/executed_collector.py": "b45667b76031a3d7824a824f266500043ed597c4a9a25791c83a42c7b8a1527f",
+    "data/reports/pilot_public_sources_v1/batch_01/report.json": "5909aee715cc505bd9ff456561206b0a33b199ee17b0320b5443404b3478fe53",
+    "data/reports/pilot_public_sources_v1/batch_02/report.json": "591ad26af53d95b78c6e75c4343291d602fac668506d28d420e05dd232c9ded5",
+    "data/reports/pilot_public_sources_v1/batch_03/report.json": "5845e1ef3ae328f4a1400150719d1e7886e936ac49d651220c1acb7789c9a412",
+    "data/reports/pilot_public_sources_v1/batch_04/report.json": "87af753efe5c8ef4d24af1964733a37204a4488623729b158118eaa81d4a04d7",
+    "data/reports/pilot_public_sources_v1/batch_05/report.json": "f5c7f279d3b0805d48359932794b78febecccf4f10d384684005fcc135d3302e",
+    "data/reports/pilot_public_sources_v1/queue_01.json": "9e769f424ee920ce6879427838bf7e304ff314ce3a7f53f71b7253ea469f461d",
+    "data/reports/pilot_public_sources_v1/queue_03.json": "ac0c19f228b95336bb96f9d0be3d509997d55cb26f9a4ea4e92442d0b8e1b1f5",
+    "data/reports/pilot_public_sources_v1/queue_04.json": "781806058cb128c4e48b98f9888b27d2791a11ded923a199341b935ac6d35cf8",
+    "data/reports/pilot_public_sources_v1/queue_05.json": "d6d64e7a891799b75e10b356cd86a3cad2c969e2af694cd6ca0433584ed6a388",
+    "data/reports/pilot_public_sources_v1/discovery_01_to_03.json": "61d7c265085170e5b9f196a23db115b11bb39f1832b2ea439494b5ac5ff969d4",
+    "data/reports/pilot_public_sources_v1/discovery_04_to_05.json": "62b0d708a80eec6dbb7cf61b76d9b2f6423a49e0b89cfcc68763913ed366d99c",
+    "data/reports/pilot_public_sources_v1/batch_02/jpm_2016_dividend.html": "029e9da84e8b046f934822669008b0d522406f80f2cd158b21881301b76d817c",
+    "data/reports/pilot_public_sources_v1/batch_02/jpm_2021_dividend.html": "bbf74712231f68fbfe20f476326e20a84eecf86d69b08299351a9b23b43f4700",
+    "data/reports/pilot_public_sources_v1/batch_02/cbre_results_index.html": "32344c4ed4f1756a5ccd36eda2299d5615ea917cab9a603994cf9810c5b9b1a3",
+    "data/reports/pilot_public_sources_v1/batch_02/jpm_2016_news_index.html": "abe03ab134b81b8a6642ba322b6b637abac49deebb62f6cfa0f057711aa324f3",
+    "data/reports/pilot_public_sources_v1/batch_03/spy_distribution_index.html": "0160e02afaab902146a26969bf36a9aae08f63cd0fd94e700390cf6067966c8d",
+    "data/reports/pilot_public_sources_v1/batch_03/jpm_ir_index.html": "f75cefe55fdb578fa7163c6a067eca88b8808ebcc4b240f27bfe233102de401b",
+    "data/reports/pilot_public_sources_v1/batch_03/apple_ir_index.html": "738f69a97e76d3921cbfcf6b854365abd72603c1edcca39eba384d82ac0678f2"
+  },
+  "code_sha256": {
+    "backtesting/pilot_readiness_review.py": "f62ee88949f6b93309f63f561aef3d2d5f726218a82193d10bd2cb6fef738eea",
+    "backtesting/pilot_qualification.py": "87cf334f3e4a49a114538d3759586708894a48e4fc43723eccad2c68fa8eb19d",
+    "backtesting/public_source_review.py": "a278d58868ae1c162a6a9d6aec24a43977a0222c633d514de1e8c88889dde958",
+    "app/data/market_data.py": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb",
+    "backtesting/cohort_audit.py": "508bc86515271d58a58e49aee20443efac0d93fb0ca05274dc068b46c2bff766"
+  },
+  "streams": [
+    {
+      "symbol": "AAPL",
+      "rows": 2012,
+      "first_session": "2016-01-04",
+      "last_session": "2023-12-29",
+      "calendar_ohlcv_pass": true,
+      "raw_reconstruction_matches": true,
+      "warnings": [],
+      "source_alias_rows": {
+        "AAPL": 2012
+      },
+      "provider_action_counts": {
+        "cash_dividends": 32,
+        "forward_splits": 1
+      },
+      "full_period_identity_action_certified": false,
+      "ready_for_strict_scoring": false
+    },
+    {
+      "symbol": "CBRE",
+      "rows": 2012,
+      "first_session": "2016-01-04",
+      "last_session": "2023-12-29",
+      "calendar_ohlcv_pass": true,
+      "raw_reconstruction_matches": true,
+      "warnings": [],
+      "source_alias_rows": {
+        "CBG": 556,
+        "CBRE": 1456
+      },
+      "provider_action_counts": {},
+      "full_period_identity_action_certified": false,
+      "ready_for_strict_scoring": false
+    },
+    {
+      "symbol": "SPY",
+      "rows": 2012,
+      "first_session": "2016-01-04",
+      "last_session": "2023-12-29",
+      "calendar_ohlcv_pass": true,
+      "raw_reconstruction_matches": true,
+      "warnings": [],
+      "source_alias_rows": {
+        "SPY": 2012
+      },
+      "provider_action_counts": {
+        "cash_dividends": 29
+      },
+      "full_period_identity_action_certified": false,
+      "ready_for_strict_scoring": false
+    }
+  ],
+  "total_active_candles": 6036,
+  "event_counts": {
+    "AAPL": 33,
+    "SPY": 32,
+    "CBRE": 1
+  },
+  "identity_facts_checked": 11,
+  "years_reviewed": 24,
+  "primary_replay_matches_frozen_csv": true,
+  "total_source_replay_rows": 66,
+  "aapl_dividends": 32,
+  "aapl_split_events": 1,
+  "cbre_alias_events": 1,
+  "spy_dividends": 32,
+  "aapl_independent_dividend_ex_dates": 0,
+  "spy_source_only_events": 3,
+  "spy_precision_warnings": 1,
+  "spy_short_term_gain_blanks": 28,
+  "spy_long_term_gain_blanks": 30,
+  "cash_dates_outside_saved_calendar": [
+    "PRIMARY-SPY-2023-12-15"
+  ],
+  "gaps": {
+    "AAPL": [
+      "32 provider-only dividend ex-dates; no independent ex-date column in issuer table",
+      "Full-period identity/action completeness not independently certified",
+      "Knowledge/payment conventions and any labeled vendor-reliance diagnostic remain unapproved"
+    ],
+    "CBRE": [
+      "Class A/NYSE aliases and no-cash-dividend policy supported; other action categories not certified complete",
+      "Imported REIT label retained; historical tax subtype unresolved, not required merely to read common-share prices",
+      "A scope that filters by REIT status cannot silently treat this unknown label as false"
+    ],
+    "SPY_context": [
+      "Raw completed prices and 2016/2020 fund identity anchors supported; full-period identity/action certificate absent",
+      "Distribution knowledge times, capital-gain blanks and amount precision do not enter a raw price-only regime calculation",
+      "Price-only market context still requires explicit scope/vendor-reliance review before a new performance study"
+    ],
+    "SPY_total_return": [
+      "No declaration/publication times in the retrospective distribution table",
+      "Blank capital-gain cells are not zero; one shared amount precision warning",
+      "2023-12-15 distribution is payable 2024-01-31, outside the saved cash calendar"
+    ],
+    "investment_acceptance": [
+      "Only two candidate stocks; SPY is context, not a third traded stock",
+      "Five instruments and 30 completed trades remain required; larger historical universe remains blocked"
+    ],
+    "implementation": [
+      "Strict ownership evidence flags cannot be set from modeling assumptions",
+      "An explicitly labeled assumption-based diagnostic mode needs implementation/verification before new raw-data returns"
+    ]
+  },
+  "existing_506_register_preserved": true,
+  "registered_control_unchanged": true,
+  "jpm_collection_parked": true,
+  "assumptions_owner_approved": false,
+  "new_performance_scope_approved": false,
+  "ready_for_strategy_scoring": false,
+  "paper_activation_approved": false,
+  "network_requests": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "account_requests": 0,
+  "orders": 0,
+  "strategy_simulations": 0,
+  "unit_tests_run": 0,
+  "dependency_installations": 0,
+  "holdout_candles_read": false,
+  "verification_scope": "Saved-input hash checks, actual candle/calendar validation, raw response reconstruction and source/date/amount reconciliation; not unit tests or performance acceptance",
+  "output_sha256": {
+    "events.csv": "652ba09c0cb58b707c35c945861b2e786729a3742933255c92be25cf21656b6a",
+    "events.json": "a07d6afdcdefdd5fe40c31ebcda6d4b409d98da2337d31272c1f882ff3d5f4ed",
+    "gaps.json": "b4c10e24ab53e3889aa1851c18f496a147befa611ccb4270f958e3ec0ecb9092",
+    "identity_facts.csv": "ccbd7f519f3dda1c59877b01446a9f56d8012b7e21a06e5672c7d901b776f806",
+    "identity_facts.json": "d445bbbc56cc1c0ac45f4775730c1794d6673bb06992b0b0afc1ebad31dc7044",
+    "year_coverage.csv": "3dd5470762bb49896d0979cc0c4e6c8ad4ce5f79607580b3e74e13e03fd7365d",
+    "year_coverage.json": "840b250598b7ef9a6e3dfddc36e9630c445c1a1ceef20969ea3da6251d3cf5d7"
+  },
+  "tracked_outputs": {
+    "events": {
+      "path": "docs/research_data/remaining_pilot_events.csv",
+      "sha256": "652ba09c0cb58b707c35c945861b2e786729a3742933255c92be25cf21656b6a"
+    },
+    "identity_facts": {
+      "path": "docs/research_data/remaining_pilot_identity_facts.csv",
+      "sha256": "ccbd7f519f3dda1c59877b01446a9f56d8012b7e21a06e5672c7d901b776f806"
+    },
+    "year_coverage": {
+      "path": "docs/research_data/remaining_pilot_year_coverage.csv",
+      "sha256": "3dd5470762bb49896d0979cc0c4e6c8ad4ce5f79607580b3e74e13e03fd7365d"
+    }
+  },
+  "local_report": {
+    "path": "data/reports/remaining_pilot_review_v3/report.json",
+    "sha256": "c911fe2293d8db588bea2620cb7012d656d8579b114ad3afd88cc6e70d23e8b1"
+  },
+  "initial_attempt_failure": {
+    "path": "data/reports/remaining_pilot_review_v1/initial_failure.json",
+    "sha256": "dec76732ab688c9bdab7e9d1f4e1ab70271d0a06da3d002a9a714729d53cfb05"
+  },
+  "preceding_successful_review": {
+    "path": "data/reports/remaining_pilot_review_v2/report.json",
+    "sha256": "7740514dc73b2293b62b3c2bfe648f46d0c2574ca26e1f91910ac340174e330f"
+  },
+  "v3_note": "Portable forward-slash source paths and a connect_ex connection guard; financial inputs and all event counts unchanged."
+}

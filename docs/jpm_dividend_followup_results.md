@@ -6,6 +6,11 @@ was reached. **JPMorgan is now parked outside active engineering-pilot
 collection**, following your instruction to move forward if incomplete.
 No further JPMorgan collection is scheduled.
 
+**Follow-up complete:** the [Apple/CBRE/SPY cached review](remaining_pilot_readiness.md)
+and [finite diagnostic proposal](next_pilot_experiment_proposal.md) now identify
+the available inputs, remaining gaps and the specific research approval
+needed before a separately labeled performance experiment.
+
 ## Activity and stop
 
 | Measure | Actual | Limit |

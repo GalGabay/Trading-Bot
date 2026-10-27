@@ -2,6 +2,14 @@
 
 Status: 2026-10-27.
 
+The [Apple/CBRE/SPY cached review](remaining_pilot_readiness.md) has completed
+price/source checks, with strict evidence gaps retained. A
+[limited return experiment](next_pilot_experiment_proposal.md) is reviewable
+now: it needs scope/vendor/timing approval, a separate diagnostic mode and
+verification before its 24-run batch. It cannot clear the five-instrument
+criterion or paper gate. This is a research decision, not a request to choose
+personal risk limits or activate orders.
+
 The [final capped JPMorgan attempt](jpm_dividend_followup_results.md) has ended
 with one additional dividend declaration and unresolved gaps. JPMorgan's active
 engineering collection is parked; qualification can continue for AAPL/CBRE

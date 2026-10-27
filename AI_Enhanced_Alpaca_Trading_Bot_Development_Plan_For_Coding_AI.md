@@ -4189,3 +4189,56 @@ Offline source/hash/counter checks and exact amount/date reconciliation
 passed. No unit-test suite, dependency installation, Pi execution, new candle
 request, strategy run, purchase, subscription change, broker/account request
 or order occurred. Owner setup is not needed for the next cached review.
+
+## Remaining Apple/CBRE/SPY cached readiness review: 2026-10-27
+
+The [completed review](docs/remaining_pilot_readiness.md),
+[pinned protocol](docs/remaining_pilot_review.json) and
+[final summary](docs/remaining_pilot_summary.json) revalidate 6,036 candles
+across 2016-2023, 66 source/provider event rows, 11 identity/source checks
+and 24 symbol/year coverage rows. Raw-response, calendar/OHLCV and source
+checks pass without warnings. The existing 66-row primary reconciliation
+replays byte for byte. Original data, plans and historical reports are intact.
+
+Apple has all 32 issuer nominal amounts and payable terms, plus its reviewed
+four-for-one split. All 32 ordinary dividend ex-dates remain provider-only
+cross-references. CBRE's Class A/NYSE lineage, alias boundary and no-common-
+cash-dividend statement are supported; other action completeness and historical
+tax subtype are not certified. An unresolved tax label is relevant to a REIT
+filter, not by itself a reason to reject inspection of quoted common shares.
+SPY's raw price context is separate from a total-return benchmark: 28 short-
+term and 30 long-term gain cells are blank, one nominal precision warning
+remains, historical declaration times are absent, and one payable date is
+outside the 2023 calendar. No missing value or future session was fabricated.
+
+Zero histories receive new strict scoring approval. JPMorgan acquisition
+stays parked; the original 506-row register, nine-stock control, investment
+criteria and paper-risk settings are unchanged. Two candidate stocks cannot
+satisfy the five-instrument/30-trade minimum.
+
+A [separate 24-run diagnostic proposal](docs/next_pilot_experiment_proposal.md)
+now makes the next experiment reviewable: AAPL/CBRE, SPY price context only,
+saved SIP/raw daily inputs, 2017-2021 and independent 2022-2023 development
+accounts, one frozen 55/20 breakout/continuation rule, conservative existing
+allocation/halts, two capital amounts, two costs and three cash scenarios.
+No strategy run, ML or new price request is scheduled automatically. Its
+named provider-reliance and timing assumptions require explicit owner review,
+consistent with the existing pilot proposal sections 3/6, before implementing
+and verifying the separate diagnostic mode and accepting performance results.
+Assumptions must not become verified entitlement/broker-credit flags. Invalid
+prices, missing sessions, conflicting terms and failed accounting still stop
+research. No personal paper-risk or purchase approval is requested.
+
+The new offline runner is `python -m backtesting.pilot_readiness_review --output
+data/reports/a_fresh_remaining_pilot_review`. Final local evidence is v3;
+v1's split-date reader error and the successful v2 review are preserved.
+The explicit provider date-key handling is fixed, source paths are portable
+and socket connection methods are blocked during review. Data checks were
+executed, not a unit-test suite. No network, credential access, broker/account
+request, order, purchase, dependency install, strategy return or reserved candle
+read occurred. Pi execution remains unverified.
+
+**Next:** owner review of the finite diagnostic scope/vendor/timing proposal;
+then coding-agent implementation and verification, followed by the bounded
+runs only if checks pass. A small return experiment can follow that work;
+no return, finish-date or full-universe data-readiness guarantee is made.

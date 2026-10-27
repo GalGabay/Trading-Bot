@@ -124,6 +124,13 @@ missing payable date; 29 declaration targets and 15 original payable gaps
 remain. JPMorgan's active engineering-pilot collection is now parked. Continue
 AAPL/CBRE qualification with SPY context; original universe/strategy records
 remain intact. No purchases, broker/account calls, trades or backtests occurred.
+The [remaining Apple/CBRE/SPY review](docs/remaining_pilot_readiness.md)
+rechecks 6,036 saved candles, 66 events and 11 source facts without network
+access. Price checks pass; provider-only Apple ex-dates, independent action
+completeness and proposed modeling assumptions remain visible. A
+[24-run diagnostic proposal](docs/next_pilot_experiment_proposal.md) is ready
+for review; no new returns have been calculated or strict evidence flags
+approved. SPY context is separated from its blocked total-return reference.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
