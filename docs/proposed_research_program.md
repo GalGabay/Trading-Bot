@@ -1,5 +1,12 @@
 # Proposed research program before the first paper trial
 
+**Latest verification, 2026-10-27:** [Collector/parser tests](public_source_test_results.md)
+pass 99 cases (57 new and 42 related). A fresh source replay preserves the
+previous 66-row CSV/JSON exactly, including unresolved gaps and unapproved
+timing/scoring flags. No actual downloads or performance runs occurred.
+The next source work requires a separate bounded issuer-news follow-up;
+the earlier access-denied collection is not automatically resumed.
+
 **Latest free-source collection, 2026-10-27:** The [bounded public batch](pilot_public_source_results.md)
 saved 11 source files and reconciles 32 Apple, 32 SPY and two JPMorgan dividend
 records. Three missing-provider SPY events are independently sourced; 16 of

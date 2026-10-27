@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+import re
 import time
 from urllib.parse import urlsplit
 
@@ -17,18 +18,29 @@ import requests
 
 def collect(queue_path, output):
     queue = json.loads(queue_path.read_text(encoding="utf-8"))
-    if queue["purchases_budget_usd"] != 0 or queue["max_http_attempts"] > 40:
+    budget = queue.get("max_http_attempts")
+    if (type(queue.get("purchases_budget_usd")) not in (int, float) or queue["purchases_budget_usd"] != 0
+            or type(budget) is not int or not 1 <= budget <= 40):
         raise ValueError("Only the no-purchase bounded public-document protocol is supported")
     if output.exists():
         raise FileExistsError("Choose a fresh public-document batch directory")
-    entries = queue["documents"]
-    if len(entries) > queue["max_http_attempts"] or len({e["id"] for e in entries}) != len(entries):
+    entries = queue.get("documents")
+    if not isinstance(entries, list) or not entries or len(entries) > budget:
+        raise ValueError("A nonempty document list must fit the request budget")
+    domains = queue.get("allowed_domains")
+    if not isinstance(domains, list) or not domains or any(not isinstance(d, str) or not re.fullmatch(r"[a-z0-9]+(?:[.-][a-z0-9]+)*", d) for d in domains):
+        raise ValueError("Explicit public source domains are required")
+    if any(not isinstance(e, dict) or not isinstance(e.get("id"), str) for e in entries) or len({e["id"].casefold() for e in entries}) != len(entries):
         raise ValueError("Duplicate IDs or too many queued requests")
     for entry in entries:
+        if (not isinstance(entry.get("url"), str) or not isinstance(entry.get("targets"), list)
+                or not entry["targets"] or any(not isinstance(t, str) or not t.strip() for t in entry["targets"])):
+            raise ValueError("Every document needs an explicit URL and target metadata")
         url = urlsplit(entry["url"])
-        if (url.scheme != "https" or url.username or url.password or url.port
-                or not any(url.hostname == d or url.hostname.endswith("." + d) for d in queue["allowed_domains"])
-                or not entry["id"].replace("_", "").isalnum()):
+        if (url.scheme != "https" or not url.hostname or url.username or url.password or url.port or url.fragment
+                or not any(url.hostname == d or url.hostname.endswith("." + d) for d in domains)
+                or not re.fullmatch(r"[A-Za-z0-9_]+", entry["id"])
+                or re.fullmatch(r"CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9]|REPORT", entry["id"], re.I)):
             raise ValueError("Unreviewed public source URL/identifier")
     output.mkdir(parents=True, exist_ok=False)
     session = requests.Session()

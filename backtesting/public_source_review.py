@@ -9,7 +9,7 @@ import argparse
 from collections import Counter
 import csv
 from datetime import datetime
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from fractions import Fraction
 import json
 from pathlib import Path
@@ -33,32 +33,61 @@ def day(value):
     raise ValueError("Unreviewed date format in primary document")
 
 
+def amount(value):
+    try:
+        parsed = Decimal(value)
+    except (InvalidOperation, TypeError, ValueError) as exc:
+        raise ValueError("Invalid dividend amount in primary source") from exc
+    if not parsed.is_finite() or parsed <= 0:
+        raise ValueError("Dividend amount must be finite and positive")
+    return str(parsed)
+
+
 def apple_table(path):
     parser = FilingRows()
     parser.feed(path.read_text(encoding="utf-8"))
     if ["Declared", "Record", "Payable", "Amount", "Type"] not in parser.rows:
         raise ValueError("Apple source table headings changed")
     result = []
+    split_seen = False
     for cells in parser.rows:
-        if len(cells) != 5 or cells[4] != "Regular Cash":
+        if len(cells) != 5 or cells == ["Declared", "Record", "Payable", "Amount", "Type"]:
             continue
         year = re.search(r"\b(\d{4})\b", cells[0])
         if year is None:
             raise ValueError("Apple declaration row has no year")
         if not 2016 <= int(year[1]) <= 2023:
             continue
+        if cells[4] == "4-for-1 Stock Split":
+            if (split_seen or tuple(day(value) for value in cells[:3]) != ("2020-07-30", "2020-08-24", "2020-08-31")
+                    or cells[3] != "N/A"):
+                raise ValueError("Unexpected or duplicate separately reviewed Apple split")
+            split_seen = True
+            continue  # Separately reviewed split, never a cash-dividend row.
+        if cells[4] != "Regular Cash":
+            raise ValueError("Unreviewed in-window Apple distribution type")
         declared = day(cells[0])
         if not "2016-01-01" <= declared < "2024-01-01":
             continue
-        result.append(dict(symbol="AAPL", declared=declared, record=day(cells[1]), payable=day(cells[2]),
-                           amount=str(Decimal(cells[3].replace("$", "").replace(",", "").strip())),
+        record, payable = day(cells[1]), day(cells[2])
+        if not declared <= record <= payable:
+            raise ValueError("Apple declaration/record/payment date order is impossible")
+        result.append(dict(symbol="AAPL", declared=declared, record=record, payable=payable,
+                           amount=amount(cells[3].replace("$", "").replace(",", "").strip()),
                            ex_date=None, source="apple_dividend_history", basis="Issuer says amounts not split adjusted"))
-    if len(result) != 32 or len({r["record"] for r in result}) != 32:
+    if len(result) != 32 or len({r["record"] for r in result}) != 32 or len({r["declared"] for r in result}) != 32:
         raise ValueError("Expected 32 unique Apple regular-cash rows in the reviewed interval")
     return result
 
 
 def spy_table(path):
+    try:
+        return _spy_table(path)
+    except (zipfile.BadZipFile, KeyError, IndexError, ET.ParseError) as exc:
+        raise ValueError("Malformed or unsupported primary-source workbook format") from exc
+
+
+def _spy_table(path):
     ns = {"x": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
     with zipfile.ZipFile(path) as archive:
         if sum(i.file_size for i in archive.infolist()) > 64 * 1024 * 1024:
@@ -66,7 +95,7 @@ def spy_table(path):
         shared = ["".join(item.itertext()) for item in ET.fromstring(archive.read("xl/sharedStrings.xml")).findall("x:si", ns)]
         rows = ET.fromstring(archive.read("xl/worksheets/sheet1.xml")).findall(".//x:sheetData/x:row", ns)
         records = []
-        for row in rows:
+        for index, row in enumerate(rows):
             values = {}
             for cell in row.findall("x:c", ns):
                 node = cell.find("x:v", ns)
@@ -74,6 +103,11 @@ def spy_table(path):
                 if cell.get("t") == "s":
                     value = shared[int(value)]
                 values[re.sub("[0-9]", "", cell.get("r"))] = value.strip()
+            if index == 0:
+                expected = ["FUND NAME", "TICKER", "CUSIP", "EX-DATE", "RECORD DATE", "PAYABLE DATE",
+                            "DIVIDEND ($)", "SHORT TERM CAPITAL GAIN ($)", "LONG TERM CAPITAL GAIN ($)", "FREQUENCY"]
+                if [values.get(chr(65+i)) for i in range(10)] != expected:
+                    raise ValueError("SPY workbook column headings changed")
             if values.get("B") != "SPY":
                 continue
             ex = day(values["D"])
@@ -81,8 +115,11 @@ def spy_table(path):
                 continue
             if values["C"] != "78462F103" or "S&P 500" not in values["A"]:
                 raise ValueError("Workbook row does not match reviewed SPY fund identity")
-            records.append(dict(symbol="SPY", ex_date=ex, record=day(values["E"]), payable=day(values["F"]),
-                declared=None, amount=str(Decimal(values["G"])), source="spy_historical_distributions",
+            record, payable = day(values["E"]), day(values["F"])
+            if not ex <= record <= payable:
+                raise ValueError("SPY ex/record/payment date order is impossible")
+            records.append(dict(symbol="SPY", ex_date=ex, record=record, payable=payable,
+                declared=None, amount=amount(values["G"]), source="spy_historical_distributions",
                 basis="USD dividend per fund unit as displayed; capital-gain cells kept separately",
                 short_term_gain=values.get("H", ""), long_term_gain=values.get("I", "")))
     if len(records) != 32 or len({r["ex_date"] for r in records}) != 32:
@@ -94,7 +131,7 @@ def review_sources(output, *, review_path=REVIEW):
     if output.exists():
         raise FileExistsError("Choose a fresh source reconciliation directory")
     protocol = json.loads(review_path.read_text(encoding="utf-8"))
-    if (protocol["schema_version"] != 1 or protocol["purchases_usd"] != 0
+    if (type(protocol["schema_version"]) is not int or protocol["schema_version"] != 1 or protocol["purchases_usd"] != 0
             or protocol["ready_for_strategy_scoring"] is not False or protocol["assumptions_owner_approved"] is not False):
         raise ValueError("Only the no-purchase, unapproved source review is supported")
     root, inputs = Path.cwd(), {review_path.as_posix(): digest(review_path)}
@@ -104,20 +141,41 @@ def review_sources(output, *, review_path=REVIEW):
         inputs[path.relative_to(root).as_posix()] = digest(path)
         return path
 
-    plan = json.loads(load(protocol["original_plan"]).read_text())
+    plan = json.loads(load(protocol["original_plan"]).read_text(encoding="utf-8"))
     load(protocol["prior_qualification"])
-    load(protocol["executed_collector"])
-    batches = [json.loads(load(entry).read_text()) for entry in protocol["batch_reports"]]
-    for entry in protocol["queues"] + protocol["discovery_evidence"]:
-        load(entry)
+    archived_hash = digest(load(protocol["executed_collector"]))
+    batches = [json.loads(load(entry).read_text(encoding="utf-8")) for entry in protocol["batch_reports"]]
+    queue_hashes = {digest(load(entry)) for entry in protocol["queues"]}
+    discovery_calls = sum(len(json.loads(load(entry).read_text(encoding="utf-8"))) for entry in protocol["discovery_evidence"])
+    if (discovery_calls != protocol["network"]["public_discovery_tool_calls"] or discovery_calls > plan["max_public_discovery_tool_calls"]
+            or any(type(b["network_http_attempts"]) is not int or b["network_http_attempts"] != len(b["attempts"])
+                   or b["code_sha256"] != archived_hash or b["queue_sha256"] not in queue_hashes for b in batches)):
+        raise ValueError("Acquisition log counts, queue hashes or archived collector do not reconcile")
     attempts = [item for batch in batches for item in batch["attempts"]]
     if (sum(batch["network_http_attempts"] for batch in batches) != 18 or len(attempts) > plan["max_public_document_get_attempts"]
             or protocol["network"]["public_discovery_tool_calls"] > plan["max_public_discovery_tool_calls"]
-            or attempts[-1].get("status_code") != 403 or any(item.get("status_code") in {401, 402, 403, 407, 429} for item in attempts[:-1])):
+            or not batches[-1].get("stopped") or attempts[-1].get("status_code") != 403
+            or any(item.get("status_code") in {401, 402, 403, 407, 429} for item in attempts[:-1])):
         raise ValueError("Recorded collection exceeds bounds or did not stop at its first access barrier")
     paths = {name: load(entry) for name, entry in protocol["sources"].items()}
-    providers = {symbol: json.loads(load(entry).read_text())["corporate_actions"]["cash_dividends"]
-                 for symbol, entry in protocol["provider_payloads"].items()}
+    saved = [item for item in attempts if item.get("status") == "saved_unreviewed"]
+    recorded = {item["id"]: item for item in saved}
+    if (len(recorded) != len(saved) or set(recorded) != set(paths)
+            or any(recorded[key].get("sha256") != digest(path) or recorded[key].get("file") != path.name for key, path in paths.items())):
+        raise ValueError("Reviewed source catalog differs from the saved-response acquisition log")
+    providers = {}
+    for symbol, entry in protocol["provider_payloads"].items():
+        payload = json.loads(load(entry).read_text(encoding="utf-8"))
+        if payload.get("next_page_token") is not None:
+            raise ValueError("Incomplete provider event pagination")
+        rows = payload["corporate_actions"]["cash_dividends"]
+        if len(rows) != {"AAPL": 32, "SPY": 29, "JPM": 32}[symbol] or len({r["id"] for r in rows}) != len(rows):
+            raise ValueError("Duplicate or missing frozen provider dividend events")
+        for row in rows:
+            if row["symbol"] != symbol or not "2016-01-01" <= row["ex_date"] < "2024-01-01":
+                raise ValueError("Provider event identity/date exceeds the frozen scope")
+            amount(str(row["rate"]))
+        providers[symbol] = rows
     text = {name: source_text(path) for name, path in paths.items() if path.suffix == ".html"}
     if "not split adjusted" not in text["apple_dividend_history"]:
         raise ValueError("Apple nominal share-basis qualification changed")
@@ -164,6 +222,10 @@ def review_sources(output, *, review_path=REVIEW):
             if provider and provider.get(provider_field) and provider[provider_field] != row[source_field]:
                 raise ValueError("Provider and primary payment/record dates conflict")
         delta = Fraction(str(provider["rate"])) - Fraction(row["amount"]) if provider else None
+        if delta:
+            half_display_unit = Fraction(Decimal(1).scaleb(Decimal(row["amount"]).as_tuple().exponent)) / 2
+            if abs(delta) > half_display_unit:
+                raise ValueError("Provider/issuer amount conflict exceeds source display precision")
         comparisons.append({**row, "provider_event_id": provider["id"] if provider else None,
             "provider_ex_date": provider["ex_date"] if provider else None,
             "provider_amount": str(provider["rate"]) if provider else None,

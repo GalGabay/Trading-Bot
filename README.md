@@ -112,6 +112,11 @@ reviewed issuer terms supply 32 of the original 48 absent payable fields.
 Collection stopped at the JPMorgan history host's HTTP 403, within the
 request limits. Sixteen payable gaps and other readiness checks remain;
 no purchases, orders or strategy performance runs occurred.
+The [collector/parser verification](docs/public_source_test_results.md) adds
+57 focused offline tests and passes 42 related regressions (99 total).
+Malformed budgets, source formats, event joins and provenance are rejected;
+the saved-source replay preserves the prior CSV/JSON exactly. No acquisition
+was resumed and research approval remains separate.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates

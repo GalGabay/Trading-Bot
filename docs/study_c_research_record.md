@@ -1,5 +1,11 @@
 # Study C: daily rule-only research record
 
+**Latest verification, 2026-10-27:** The [offline collector/parser checks](public_source_test_results.md)
+pass 99 tests with no failures, errors or skips. Stronger validation preserves
+the previous 66 source-reconciliation rows byte for byte in CSV/JSON, with
+16 original payable omissions and unapproved research timing still explicit.
+No real network requests, downloads, strategy backtest or orders occurred.
+
 **Latest source update, 2026-10-27:** The [bounded public collection](pilot_public_source_results.md)
 saved 11 files, confirms three omitted SPY distributions and supplies primary
 payable terms for 32 of 48 original provider omissions (one already known).

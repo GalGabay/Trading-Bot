@@ -31,6 +31,11 @@ an HTTP access barrier with 16 original payable omissions still unresolved.
 Source facts do not approve modeled timing or verify broker credit; paper
 activation and personal risk settings remain separate.
 
+The [collector/parser verification](public_source_test_results.md) now passes
+99 focused/related tests and reproduces the saved-source comparisons exactly.
+That verifies the documented engineering scope; it does not close the
+remaining historical evidence or strategy-acceptance gates.
+
 | Gate | Current position | Work still needed | Who does it? |
 | --- | --- | --- | --- |
 | Reliable historical data and simulation | The ownership adapter passed 183 focused tests, 36 exact financial replays, 36 exact risk comparisons and 84 component checks. Twenty primary sources were revalidated. Broader company-event evidence is incomplete. | Reviewed eligibility/delivery/payment facts or separately proposed research assumptions; required child/OTC prices or explicit blockers; complete the scoped dataset without purchases. | Coding agent. No owner configuration due now. |

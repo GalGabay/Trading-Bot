@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-27",
+  "scope": "Focused offline collector/parser tests, related regression and exact saved-source reconciliation",
+  "tests": {
+    "total": 99,
+    "new_focused": 57,
+    "existing_related": 42,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "modules": [
+      "tests.test_public_document_collection",
+      "tests.test_public_source_review",
+      "tests.test_raw_action_pilot",
+      "tests.test_historical_holdings",
+      "tests.test_ownership_evidence_review",
+      "tests.test_universe_sources"
+    ],
+    "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "source_replay": {
+    "reconciliation_csv_exact": true,
+    "reconciliation_json_exact": true,
+    "primary_dividend_rows": 66,
+    "source_dividend_counts": {
+      "AAPL": 32,
+      "SPY": 32,
+      "JPM": 2
+    },
+    "remaining_provider_payable_omissions": 16,
+    "precision_warnings": 1,
+    "new_source_only_spy_events": 3,
+    "scoring_approved": false
+  },
+  "artifacts": {
+    "unit_report": {
+      "path": "data/reports/public_source_unit_verification_v2/report.json",
+      "sha256": "fbf0486b1222c4b03cace697ff88b91886aa2fa21847eeca136966032e604f96"
+    },
+    "unit_log": {
+      "path": "data/reports/public_source_unit_verification_v2/unittest.log",
+      "sha256": "366bced3d4a72d8d100ac207299f0c79985f4ac87ba11857254080e130dae65f"
+    },
+    "source_replay": {
+      "path": "data/reports/public_source_test_replay_v2/report.json",
+      "sha256": "bf279aaf03de7c5361ec912bcba0ac041b01d2e34c76db4c5cd9f89c20141cc7"
+    },
+    "previous_source_report": {
+      "path": "data/reports/pilot_public_source_reconciliation_v2/report.json",
+      "sha256": "a3d0133c48ae38b900b38091fc626c93a5c43fe729c9169ab8d2c03ab6f5a860"
+    }
+  },
+  "code_sha256": {
+    "backtesting/public_document_collection.py": "b1d156789f4e23d7050ee274e8825cf2dfc7a603c143672191e3eea16de5c158",
+    "backtesting/public_source_review.py": "a278d58868ae1c162a6a9d6aec24a43977a0222c633d514de1e8c88889dde958",
+    "tests/test_public_document_collection.py": "fba1381dc55723fd8b1685bc2c109666bbf1d9c67e292e804f7a01ab39a0db70",
+    "tests/test_public_source_review.py": "58e124b9affb0ceec6ee17e772ee74d78f3f7a69c09ccd6add2963de30547997"
+  },
+  "changes": [
+    "Reject invalid/boolean request budgets, empty/case-insensitive duplicate queues, unsafe Windows names and incomplete target metadata before any session is created.",
+    "Validate source column headings, finite positive amounts, date order and unknown/duplicate in-window distributions.",
+    "Reconcile recorded attempts, queue and archived-code hashes, discovery counts and saved response hashes.",
+    "Reject substantive amount conflicts; preserve exact differences within half the last displayed source unit as unapproved warnings."
+  ],
+  "limits": {
+    "real_network_requests": 0,
+    "unmocked_socket_connect_attempts": 0,
+    "new_downloads": 0,
+    "broker_or_account_calls": 0,
+    "orders": 0,
+    "purchases_usd": 0,
+    "source_acquisition_resumed": false,
+    "holdout_prices_read": false,
+    "pi_execution_verified": false,
+    "full_project_test_suite_run": false
+  },
+  "owner_action_now": "None for offline verification or source planning; proposed timing assumptions still require review before performance use.",
+  "next_work": "Prepare a separately bounded issuer-news follow-up for remaining JPMorgan declarations; do not automatically retry the stopped consolidated-history host."
+}

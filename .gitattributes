@@ -19,3 +19,5 @@ docs/free_data_pilot_source_collection.json -text
 # Preserve the new bounded acquisition review and reconciliation hashes.
 docs/pilot_public_source_review.json -text
 docs/pilot_public_source_summary.json -text
+# Preserve the fresh offline test/replay evidence separately from old reports.
+docs/public_source_test_summary.json -text

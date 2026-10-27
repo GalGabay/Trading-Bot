@@ -4086,3 +4086,40 @@ network behaviour. Keep remaining source acquisition separately scoped rather
 than silently resuming the stopped batch. No owner setup or risk-limit change
 is due; proposed timing and any narrowed strategy scope require review before
 their later use in performance research. Paper activation remains separate.
+
+## Offline public-source collector/parser tests: 2026-10-27
+
+The [verification report](docs/public_source_test_results.md) and
+[pinned summary](docs/public_source_test_summary.json) record **99 passing
+tests: 57 new focused tests and 42 related regression tests**, with zero
+failures, errors or skips. Synthetic HTML/XLSX and mocked HTTP cover request
+budgets, access stops, redirects, response/file bounds, source schemas,
+duplicates, date limits/order, finite positive amounts, source joins,
+precision, hash/provenance consistency and preservation of unapproved flags.
+
+Negative cases exposed gaps now fixed: invalid/boolean request budgets and
+missing metadata are rejected before creating a session; source headers,
+date order and unknown distributions require validation; malformed workbooks
+raise clear errors; incomplete/duplicate provider records are rejected.
+Recorded attempts/discovery counts, queue/archived-code hashes and saved
+response/catalog hashes must agree. Only differences within half the last
+displayed source decimal unit remain flagged precision warnings; larger
+amount conflicts are hard errors. No nominal amount or approval is silently
+selected from a warning.
+
+A fresh offline source replay matches the preceding reconciliation CSV and
+JSON **byte for byte**: 66 primary dividend rows, three omitted-provider SPY
+events, one precision warning and 16 unresolved original payable omissions.
+Earlier source/protocol/report hashes remain historical evidence, unchanged.
+The archived executed collector is checked against its own acquisition logs;
+the updated code is separately pinned. No real socket connections, network
+requests, downloads, broker/account calls, orders, purchases, package installs
+or holdout-price reads occurred. Pi execution and the full project/optional-ML
+suite were not run.
+
+**Next engineering work:** prepare a separately bounded issuer-news follow-up
+for remaining JPMorgan declaration terms, retaining the stopped-host barrier
+and other ex-date/identity/precision gaps. Do not automatically resume the
+previous collection. No owner setup or personal risk-limit change is due.
+Modeled timing and any later narrower strategy universe still require review
+before performance use; paper activation remains separate.

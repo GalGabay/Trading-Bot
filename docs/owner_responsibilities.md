@@ -14,12 +14,21 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest verification, 2026-10-27:** The [collector/parser tests](public_source_test_results.md)
+pass 99 tests (57 new, 42 related) with no failures, errors or skips. Input,
+precision and provenance safeguards were strengthened; a fresh offline source
+replay exactly matches the previous CSV/JSON. No real network or orders were
+used. My next work is a separately bounded JPMorgan issuer-news follow-up
+plan, not an automatic retry of the blocked host. No owner setup, purchase or
+personal risk-limit change is due; timing approval remains due before
+performance use.
+
 **Latest source collection, 2026-10-27:** The [bounded public batch](pilot_public_source_results.md)
 saved 11 files and reconciles 66 primary dividend records, including three
 SPY distributions missing from provider data. Sixteen original payable-field
 gaps remain, with full-period identity/action and proposed timing review still
 due. The batch stopped at HTTP 403; no paid fallback or account access occurred.
-My next work is focused offline tests for the new helpers. You have no setup
+Those helpers now have the offline verification above. You have no setup
 or purchase task. Research timing approval is still needed before performance
 use; personal paper-risk settings remain a later separate decision.
 

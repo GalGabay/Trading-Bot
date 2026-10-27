@@ -2,6 +2,12 @@
 
 Date: 2026-10-27. **New purchases: $0. Orders: zero.**
 
+**Verification follow-up:** The [focused offline tests](public_source_test_results.md)
+now pass 57 new tests and 42 related regressions (99 total). Input and
+provenance checks were strengthened. A fresh offline replay matches the
+previous CSV and JSON exactly. The acquisition findings below are preserved;
+no network collection was resumed.
+
 ## What was collected
 
 We saved **11 public source files**: six substantive company/fund documents
@@ -171,12 +177,9 @@ simulations, Raspberry Pi execution or broker-credit verification. Earlier
 
 ## What is next, and your part
 
-**My next implementation:** focused offline tests for the new collector and
-parsers, covering the access-stop rule, request budgets, changed source
-formats, missing/duplicate events, exact/rounded amounts, and dates outside
-the research window. Network behaviour should be mocked; no downloads or
-orders are needed for those tests. Keep the remaining JPMorgan source work
-as a separately scoped follow-up; do not silently resume the stopped batch.
+**Next after verification:** prepare a separately bounded issuer-news
+follow-up for the remaining JPMorgan declaration terms. The stopped batch
+is not automatically resumed; see the verification report for its limits.
 
 **Your part now:** no purchase, setup or personal risk-limit change. Before a
 performance study uses modeled knowledge/payment timing, explicitly review
