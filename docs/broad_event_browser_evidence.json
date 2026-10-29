@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "path": "docs/broad_event_review_scope.json",
+    "sha256": "2443985cb4e7e04b380cdbf15ba13c014e370b1ece2a621b736fda188c9c20bf"
+  },
+  "facts": {
+    "path": "docs/broad_event_primary_review.json",
+    "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+  },
+  "browser_extractions": [
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_1.txt",
+      "sha256": "686a71de8441c0f5b2ed07d11c8ac1375fb6a6f2a5811c6ab089956e31697bd2"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_2.txt",
+      "sha256": "d5fc57ce8605c35f7c8bb05a5ddf1c9df5a8aca51d22116f739db76a0c9eee4d"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_3.txt",
+      "sha256": "e2894f72cf80b445690654a27886e685914f9362c888254947c1085c93e1a377"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_4.txt",
+      "sha256": "ba65e2da1fe04f4e4b41bdc61924be94d819d4e74e4e171efcd32199b0342695"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_5.txt",
+      "sha256": "1ee7e07eba71a123fe90ae83299b225712f048778bf51851baee019f86078b16"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_6.txt",
+      "sha256": "7158f2c4c9941ac47e28b5ed27b6caac0e391ad5412d32aa78056156418bd76b"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_7.txt",
+      "sha256": "247eec687d1b0e451f32e8c6e00163880a2d85fe001ae678c4d3bc72b8809937"
+    },
+    {
+      "path": "data/reports/broad_event_browser_review_v1/page_8.txt",
+      "sha256": "76d6daf76ff90608ec8d61c7a7d9abaf132665a8ddfd52ee987994d028f29642"
+    }
+  ],
+  "original_html_archives": false,
+  "successful_opens": 7,
+  "timeout_opens": 1,
+  "search_queries": 8,
+  "page_opens": 8,
+  "purchases_usd": 0,
+  "orders": 0,
+  "explicit_redirect_followups": 0
+}

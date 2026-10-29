@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "performance_authorized": false,
+  "purchases_usd": 0,
+  "inputs": {
+    "scope": {
+      "path": "docs/broad_event_review_scope.json",
+      "sha256": "2443985cb4e7e04b380cdbf15ba13c014e370b1ece2a621b736fda188c9c20bf"
+    },
+    "spec": {
+      "path": "docs/broad_historical_input_spec.json",
+      "sha256": "cb7064d053c3d1e3121bab76f9390088ad85c5daabaa620198daecf72edcd59b"
+    },
+    "queue": {
+      "path": "docs/research_data/broad_unresolved_event_terms.csv",
+      "sha256": "00a7ee6f49ee939e619ed0e0557bfe2355d543992d0fcd8e7a9933b61d17e2ad"
+    },
+    "provider_roles": {
+      "path": "data/reports/broad_historical_input_verified_v4/provider_event_roles.csv",
+      "sha256": "82fa298bf0b8e420b46960ddd6465668f65ba282570cbf402e767292d6c7c9ae"
+    },
+    "primary_review": {
+      "path": "docs/broad_event_primary_review.json",
+      "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+    },
+    "decisions": {
+      "path": "docs/broad_event_review_decisions.json",
+      "sha256": "381b1c3f2ea82089edc3008adff2066d7a9010cd71dc573b895f54956b0e6972"
+    }
+  }
+}

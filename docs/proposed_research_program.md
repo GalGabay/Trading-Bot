@@ -1,5 +1,10 @@
 # Proposed research program before the first paper trial
 
+**Later Step 1 verification:** [193 passing tests and primary-event review](broad_input_verification_results.md).
+The candidate reconstruction was replayed offline; JCI/PEAK/PHIN corrections,
+election-dividend accounting and explicit research timing policy remain before
+Step 2. The selected 70% exposure is unchanged; no expanded return run occurred.
+
 **Latest Step 1 preparation, 2026-10-29:** the
 [candidate historical input](broad_input_preparation_results.md) has been built
 with all 100 members, separate parent/child/successor IDs and complete observed

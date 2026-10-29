@@ -1,0 +1,198 @@
+[
+  {
+    "instrument_id": "COHORT-2016-0014",
+    "event_id": "649427cf-90cc-49ef-856f-38f3c0c01a67",
+    "day": "2016-10-03",
+    "category": "forward_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "1081/1000",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "apd_warmup_distribution"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  },
+  {
+    "instrument_id": "COHORT-2016-0476",
+    "event_id": "62930b67-0de0-495b-97d7-a0b3db291ab0",
+    "day": "2017-07-18",
+    "category": "forward_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "1237/1000",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "vno_distribution"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  },
+  {
+    "instrument_id": "COHORT-2016-0473",
+    "event_id": "a660b171-cb35-4d6e-b73d-91db229728ad",
+    "day": "2019-05-23",
+    "category": "forward_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "531/500",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "vf_distribution"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  },
+  {
+    "instrument_id": "COHORT-2016-0258",
+    "event_id": "72ae5eb0-9663-42fe-bd68-50644e3c2a10",
+    "day": "2016-09-06",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": true,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "191/200",
+    "status": "wrong_predecessor_lineage_requires_segmentation",
+    "primary_source_id": "jci_2016",
+    "remaining": "0.955 belongs to pre-merger Tyco shares, not old-JCI holders. New JCI begins September 6. Split old/new security histories before EMA warmup; do not apply old-JCI election or Tyco ratio to one continuous security. November 2016 membership prevents warmup holdings, not warmup feature contamination."
+  },
+  {
+    "instrument_id": "COHORT-2016-0046",
+    "event_id": "3915f4ad-7977-4e8a-a6e7-9fef37c8ffc8",
+    "day": "2020-12-15",
+    "category": "forward_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "1859/200",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "aiv_distribution"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  },
+  {
+    "instrument_id": "COHORT-2016-0046",
+    "event_id": "1d9ff083-8088-4ef7-a97a-30fb49c0e9a2",
+    "day": "2019-02-21",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": true,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "100000/103119",
+    "status": "reverse_split_with_election_dividend",
+    "primary_source_id": "aiv_2019",
+    "remaining": "Ratio and scheduled dates clarified. Model the linked special stock/cash dividend, individual election/proration, record ownership and fractional cash before applying the reverse split; no all-cash or all-stock election assumed."
+  },
+  {
+    "instrument_id": "COHORT-2016-0046",
+    "event_id": "2e31ba9d-6d82-4628-834e-2e08416a263e",
+    "day": "2020-12-01",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": true,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "100000/123821",
+    "status": "reverse_split_with_election_dividend",
+    "primary_source_id": "aiv_2020",
+    "remaining": "Ratio and scheduled dates clarified. Model the linked special stock/cash dividend, individual election/proration, record ownership and fractional cash before applying the reverse split; no all-cash or all-stock election assumed."
+  },
+  {
+    "instrument_id": "COHORT-2016-0227",
+    "event_id": "4c93ce12-023e-4a00-9f1a-d0ce3b50d5eb",
+    "day": "2023-02-10",
+    "category": "stock_mergers",
+    "primary_interpretation_supported": true,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "status": "one_for_one_holding_company_reorganization",
+    "primary_source_id": "peak_2023",
+    "remaining": "Map old and new legal parents explicitly at the February 10 reorganization. Preserve economic continuity with one equivalent share; no extra shares, cash merger or profit. Effective intraday/receipt policy remains unspecified."
+  },
+  {
+    "instrument_id": "COHORT-2016-0413",
+    "event_id": "2e6d81d4-4980-47c2-8075-1f81a2b7b530",
+    "day": "2021-01-21",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": true,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "50000/51459",
+    "status": "reverse_split_with_election_dividend",
+    "primary_source_id": "slg_2021",
+    "remaining": "Linked special election dividend and individual proration require explicit common-stock terms. OCC option deliverables cannot be reused as stockholder allocations. 2022 direct filing timed out; do not retry automatically."
+  },
+  {
+    "instrument_id": "COHORT-2016-0413",
+    "event_id": "81603d67-4fee-4f20-bbd4-95e5ca280d10",
+    "day": "2022-01-24",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "5000/5153",
+    "status": "search_only_reverse_split_election",
+    "primary_source_id": "slg_2022",
+    "remaining": "Linked special election dividend and individual proration require explicit common-stock terms. OCC option deliverables cannot be reused as stockholder allocations. 2022 direct filing timed out; do not retry automatically."
+  },
+  {
+    "instrument_id": "COHORT-2016-0077",
+    "event_id": "243db404-2bbd-432f-a645-2f5c1bbe794e",
+    "day": "2018-03-01",
+    "category": "forward_splits",
+    "primary_interpretation_supported": true,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "5/4",
+    "status": "genuine_fractional_stock_split",
+    "primary_source_id": "bfb_2018",
+    "remaining": "5/4 ratio and dividend-history dates supported. Fractional cash and admissible share receipt/known-at policy remain unspecified. A fractional ratio is not itself a bad-data error."
+  },
+  {
+    "instrument_id": "COHORT-2016-0152.DWDP",
+    "event_id": "646911b1-d521-4e71-8729-04dfde18632b",
+    "day": "2019-04-02",
+    "category": "forward_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "1487/1000",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "dow_distribution"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  },
+  {
+    "instrument_id": "COHORT-2016-0152.DWDP",
+    "event_id": "b4fcc1fc-5210-458d-9e9e-c08b52cd9b7b",
+    "day": "2019-06-03",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "189/400",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "corteva_distribution",
+      "dwdp_reverse_split"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  },
+  {
+    "instrument_id": "COHORT-2016-0140.DLPH-CHILD",
+    "event_id": "e5998543-8036-4008-9c2a-e519b3229bfa",
+    "day": "2017-12-05",
+    "category": "reverse_splits",
+    "primary_interpretation_supported": false,
+    "execution_ready": false,
+    "actual_delivery_at": null,
+    "observed_new_shares_per_old": "33333/100000",
+    "status": "linked_candidate_economic_event",
+    "related_material_events": [
+      "delphi_distribution"
+    ],
+    "remaining": "Link to existing candidate event, not an additional parent split. Primary economic reconciliation, entitlement and delivery remain unapproved; never apply both the provider factor and the distribution."
+  }
+]

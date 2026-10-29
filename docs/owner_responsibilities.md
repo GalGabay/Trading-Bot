@@ -1,5 +1,12 @@
 # Your responsibilities in the trading-bot project
 
+**Latest Step 1 update (2026-10-29):** [193 offline tests passed and event/source
+review progressed](broad_input_verification_results.md). Step 1 still needs
+event corrections and explicit research timing assumptions before Step 2.
+You have nothing to configure or buy now; your 70% total exposure selection is
+retained. I will present concrete remaining simulation assumptions before an
+expanded performance run. No paper activation or new return results occurred.
+
 This is the project owner's checklist. It follows the numbered phases and
 sections in the [development plan](../AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md).
 The bot remains **paper-only**. I can write code, tests, research commands,

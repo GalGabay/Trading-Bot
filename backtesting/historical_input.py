@@ -23,6 +23,7 @@ from backtesting.cohort_audit import SavedCalendar, checked_file, source_text
 from backtesting.free_collection import action_inventory, raw_candles
 from backtesting.pilot_qualification import compare_bars
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
+from backtesting.input_guards import validate_ledger, validate_public_report, validate_streams
 
 SPEC = Path("docs/broad_historical_input_spec.json")
 SUCCESSORS = Path("data/reports/broad_successor_collection_v1")
@@ -78,11 +79,14 @@ def build(output):
         old_rows = list(csv.DictReader(handle))
     with checked_file(Path.cwd(), spec["roster"]).open(encoding="utf-8", newline="") as handle:
         roster = list(csv.DictReader(handle))
+    validate_streams(spec, roster)
     originals = [s for s in spec["streams"] if s["role"] == "original_member"]
     if (len(originals) != 100 or len({s["instrument_id"] for s in spec["streams"]}) != len(spec["streams"])
             or {s["instrument_id"] for s in originals} != {s["instrument_id"] for s in roster}):
         raise ValueError("Retain all exact100 member IDs; branches need distinct IDs")
     report = json.loads((SUCCESSORS / "report.json").read_text(encoding="utf-8"))
+    successor_plan=json.loads(checked_file(Path.cwd(),spec["successor_queue"]).read_text(encoding="utf-8"))
+    validate_ledger(report, successor_plan["limits"], require_completed=True)
     if report["plan"] != spec["successor_queue"]:
         raise ValueError("Successor execution differs from frozen scope")
     supplement_report=None
@@ -90,6 +94,7 @@ def build(output):
         checked_file(Path.cwd(),spec["supplement_queue"])
         supplement_path=Path("data/reports/broad_successor_branch_probe_v1/report.json")
         supplement_report=json.loads(supplement_path.read_text(encoding="utf-8"))
+        validate_ledger(supplement_report, successor_plan["limits"], require_completed=True)
         if supplement_report["plan"]!=spec["supplement_queue"] or supplement_report["parent_report"]!=pin(SUCCESSORS/"report.json"):
             raise ValueError("Child probe detached from original cumulative budget")
         parent_attempts=report["attempts"]
@@ -151,6 +156,7 @@ def build(output):
     source_status = []
     public_by_id={a["id"]:a for a in public["attempts"]}
     public_plan=json.loads(checked_file(Path.cwd(),spec["public_queue"]).read_text(encoding="utf-8"))
+    validate_public_report(public, public_plan)
     for source in public_plan["documents"]:
         saved=public_by_id.get(source["id"],{})
         row=dict(id=source["id"],url=source["url"],status=saved.get("status","not_requested_after_stop"),content_terms_checked=False)

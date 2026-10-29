@@ -10,6 +10,7 @@ from app.broker.research_client import HistoricalResearchClient
 from backtesting.broad_collection import pin
 from backtesting.cohort_audit import checked_file
 from backtesting.pilot_readiness_review import write_json
+from backtesting.input_guards import validate_ledger
 from backtesting.successor_collection import RecordedOpener, load_plan
 
 PLAN=Path("docs/broad_successor_branch_probe.json")
@@ -21,6 +22,9 @@ def collect():
     parent_plan=load_plan()
     plan=json.loads(PLAN.read_text(encoding="utf-8"))
     parent=json.loads(checked_file(Path.cwd(),plan["parent_report"]).read_text(encoding="utf-8"))
+    validate_ledger(parent, parent_plan["limits"], require_completed=True)
+    if parent["plan"] != pin(Path("docs/broad_successor_collection_plan.json")):
+        raise ValueError("Parent report detached from original plan")
     checked_file(Path.cwd(),plan["provider_evidence"])
     for path,sha in plan["execution_sha256"].items():
         checked_file(Path.cwd(),dict(path=path,sha256=sha))
@@ -29,9 +33,12 @@ def collect():
     probe=plan["probe"]
     if probe!={"id":"bwa_phin","symbol":"PHIN","start":"2023-07-05","end_exclusive":"2024-01-01","readiness":False}:
         raise ValueError("Only the newly identified frozen PHIN branch is authorized")
-    origin=datetime.fromisoformat(plan["conservative_budget_origin_utc"]).timestamp()
+    origin_at=datetime.fromisoformat(plan["conservative_budget_origin_utc"])
+    if origin_at.tzinfo is None or origin_at.utcoffset() is None:
+        raise ValueError("Original budget clock must be timezone aware")
+    origin=origin_at.timestamp()
     age=time.time()-origin
-    if age<0 or age>=900:
+    if age<0 or age>=parent_plan["limits"]["max_elapsed_minutes"]*60:
         raise ValueError("Original Step1 elapsed allowance is exhausted; do not reset")
     if OUTPUT.exists(): raise FileExistsError("Preserve original branch probe")
     with JOURNAL.open("x",encoding="utf-8") as handle: json.dump(dict(plan=pin(PLAN),state="started_do_not_retry"),handle)
@@ -40,14 +47,14 @@ def collect():
                 probes=[],completed=False,stop_reason=None,purchases_usd=0,orders=0,account_requests=0)
     def save(): write_json(OUTPUT/"report.json",report)
     save()
-    client=HistoricalResearchClient()
-    client.request_count=len(parent["attempts"])
-    recorder=RecordedOpener(report,save,parent_plan["limits"])
-    recorder.started=time.monotonic()-age
-    client._opener=recorder
     item=dict(probe)
     report["probes"].append(item)
     try:
+        client=HistoricalResearchClient()
+        client.request_count=len(parent["attempts"])
+        recorder=RecordedOpener(report,save,parent_plan["limits"])
+        recorder.started=time.monotonic()-age
+        client._opener=recorder
         for resource in ("bars","actions"):
             recorder.page_path=OUTPUT/f"{resource}_1.json"
             recorder.probe_id,recorder.resource=probe["id"],resource

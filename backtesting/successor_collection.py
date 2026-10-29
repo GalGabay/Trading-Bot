@@ -35,7 +35,12 @@ class RecordedResponse:
         return self
 
     def read(self, amount):
-        payload = self.response.read(amount)
+        try:
+            payload = self.response.read(amount)
+        except (OSError, EOFError):
+            self.item["state"] = "transport_failure"
+            self.save()
+            raise
         self.path.write_bytes(payload)
         self.item.update(state="response_saved", source=pin(self.path), bytes=len(payload))
         self.save()

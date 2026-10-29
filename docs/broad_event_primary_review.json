@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-29",
+  "evidence_kind": "Manually reviewed primary browser text and explicitly separated search-only discovery; not original HTML archives or broker settlement evidence",
+  "search_queries_used": 8,
+  "page_opens_used": 8,
+  "page_opens_successful": 7,
+  "page_open_timeouts": 1,
+  "explicit_redirect_followups": 0,
+  "browser_redirect_note": "PHINIA browser open automatically resolved an issuer path redirect; no separate followup request was made. Tool calls do not count hidden browser HTTP hops.",
+  "access_barriers_encountered": 0,
+  "denied_urls_retried": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "performance_runs": 0,
+  "strict_flags_promoted": false,
+  "sources": [
+    {
+      "id": "aiv_2019",
+      "url": "https://investors.aircommunities.com/press-releases/news-details/2019/Apartment-Investment-and-Management-Company-Sets-Ratio-for-Reverse-Stock-Split-02-13-2019/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "publication_date": "2019-02-13",
+      "facts": {"new_shares_per_old": "100000/103119", "effective_at": "2019-02-20T17:00:00-05:00", "first_adjusted_session": "2019-02-21", "fractional_cash_formula": "fraction multiplied by 2019-02-19 NYSE close; actual broker payment date unknown", "linked_dividend_payable_date": "2019-03-22", "linked_dividend_record_date": "2019-02-22", "dividend_election": "Cash or stock subject to proration; cannot infer individual outcomes from aggregate cash/share totals"}
+    },
+    {
+      "id": "aiv_2020",
+      "url": "https://investors.aircommunities.com/press-releases/news-details/2020/Apartment-Investment-And-Management-Company-Sets-Ratio-For-Reverse-Stock-Split/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "publication_date": "2020-11-25",
+      "facts": {"new_shares_per_old": "100000/123821", "effective_date": "2020-11-30", "ordering": "Special dividend share issuance first; reverse split afterwards", "first_adjusted_session": "2020-12-01", "fractional_cash_price_usd": "30.98", "linked_dividend_amount_per_record_share_usd": "8.20", "linked_dividend_payable_date": "2020-11-30", "linked_dividend_record_date": "2020-11-04", "dividend_election": "Cash or stock subject to proration; neither all-cash nor all-stock outcome assumed"}
+    },
+    {
+      "id": "peak_2023",
+      "url": "https://ir.healthpeak.com/news/news-details/2023/Healthpeak-Announces-Closing-of-Holding-Company-Reorganization-02-10-2023/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "publication_date": "2023-02-10",
+      "facts": {"effective_date": "2023-02-10", "new_shares_per_old": "1", "kind": "New holding company replaces old public parent; automatic equivalent common shares; PEAK retained", "cash_credit": "No merger cash credit established by this document", "remaining": "Explicit old/new legal identity mapping and effective-time policy; no presumed broker delivery timestamp"}
+    },
+    {
+      "id": "slg_2021",
+      "url": "https://infomemo.theocc.com/infomemos?number=48188",
+      "access": "primary_clearinghouse_browser_pdf_text_reviewed",
+      "publication_date": "2021-01-20",
+      "facts": {"new_shares_per_old": "50000/51459", "first_adjusted_session": "2021-01-21", "linked_event": "December 2020 special election dividend preceded reverse split", "remaining": "Issuer election/proration and common-holder payment terms required. Option contract deliverables are not stockholder allocations or broker receipt proof"}
+    },
+    {
+      "id": "bfb_2018",
+      "url": "https://investors.brown-forman.com/investors/stock-information/dividend-history/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "facts": {"class": "BF.B", "new_shares_per_old": "5/4", "announcement_date": "2018-01-23", "record_date": "2018-02-07", "payable_date": "2018-02-28", "first_adjusted_session": "2018-03-01", "remaining": "Fractional share handling and admissible receipt/known-at policy still needed"}
+    },
+    {
+      "id": "phin_2023",
+      "url": "https://www.phinia.com/newsroom/news/2023/07/04/phinia-inc.-completes-spin-off-from-borgwarner",
+      "resolved_url": "https://www.phinia.com/newsroom---events/newsroom/news/2023/07/04/phinia-inc.-completes-spin-off-from-borgwarner",
+      "access": "primary_browser_text_reviewed",
+      "publication_date": "2023-07-04",
+      "facts": {"distribution_effective_at": "2023-07-03T17:00:00-04:00", "first_regular_session": "2023-07-05", "remaining": "Opened completion release does not supply distribution ratio, due-bill rules or actual broker delivery. Existing 1/5 provider candidate is not primary verified here", "candidate_correction": "Economic distribution date differs from July 5 quote start in frozen v3 material candidate; amend a new spec before integration, preserve v3"}
+    },
+    {
+      "id": "slg_2022",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097122000014/slg-20211231.htm",
+      "access": "search_only_direct_open_timeout_no_retry",
+      "facts": {"candidate_new_shares_per_old": "5000/5153", "candidate_effective_after_close": "2022-01-21", "candidate_first_adjusted_session": "2022-01-24", "candidate_dividend_payable_date": "2022-01-18", "remaining": "Search text describes shareholder election and proration; full document not retrieved. Do not count as direct-source admission"}
+    },
+    {
+      "id": "jci_2016",
+      "url": "https://www.sec.gov/Archives/edgar/data/53669/000110465916143072/a16-17944_18k.htm",
+      "access": "primary_browser_text_reviewed",
+      "filing_date": "2016-09-06",
+      "facts": {"merger_effective_at": "2016-09-02T23:59:00-04:00", "new_JCI_first_session": "2016-09-06", "tyco_new_shares_per_old": "191/200", "old_JCI_no_election_new_shares": "8357/10000", "old_JCI_no_election_cash_usd": "5.7293", "old_JCI_cash_election_usd": "34.88", "remaining": "Provider 0.955 applies to old Tyco, not old JCI holders. Separate old-JCI and new-JCI histories before feature warmup. No warmup portfolio credits, election assumptions or ADNT receipt invented"}
+    }
+  ],
+  "uncovered_targets": ["K/KLG October 2023 source terms remain provider candidates; query/open budget exhausted"],
+  "readiness": "Facts clarify economics only. No source is treated as complete lifecycle coverage, original HTML capture, intraday known-at verification, account holding evidence or actual broker receipt. All execution gates remain false."
+}

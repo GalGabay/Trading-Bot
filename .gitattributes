@@ -62,3 +62,11 @@ docs/broad_candidate_input_manifest.json -text
 backtesting/successor_collection.py -text
 backtesting/successor_branch_probe.py -text
 backtesting/historical_input.py -text
+docs/research_data/step1_executed_v1/*.py -text
+backtesting/input_guards.py -text
+tests/test_input_preparation.py -text
+backtesting/event_review.py -text
+docs/broad_event_*.json -text
+docs/broad_input_verification_summary.json -text
+docs/broad_input_replay_verification.json -text
+docs/broad_input_verified_rebuild_summary.json -text

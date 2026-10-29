@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-29",
+  "old_report": {
+    "path": "data/reports/broad_historical_input_v3/report.json",
+    "sha256": "9efaf153370cd897e159e6143c4165e899c6f53dc5d0bacbd1ee3a7aadd15efc"
+  },
+  "new_report": {
+    "path": "data/reports/broad_historical_input_verified_v4/report.json",
+    "sha256": "48e0015831a3add5635d9fcf279c2b3fb8a23e8cadb40bf2c6c7c388f2b818da"
+  },
+  "streams_byte_equal": 119,
+  "actual_rows_byte_equal": 203683,
+  "original_members_retained": 100,
+  "original_execution_archive_hashes_match": true,
+  "execution_dependencies": [
+    {
+      "path": "backtesting/input_guards.py",
+      "sha256": "673af7b24397ce799a6df8ffb9c8c70d7cfb3d58b9ddafc19ed2c514a9ddcc5a"
+    }
+  ],
+  "performance_ready": false,
+  "real_network_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "execution_dependencies_review": "Listed guard version independently rechecked against the retained real spec/roster/ledgers after the cached rebuild; it does not rewrite earlier execution provenance",
+  "real_spec_and_ledger_guard_recheck_passed": true
+}

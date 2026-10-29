@@ -1,5 +1,9 @@
 # Step 1: historical input preparation
 
+**Later verification:** see [Step 1 tests and event review](broad_input_verification_results.md)
+for 193 passing tests, hardened input checks, cached-data replay and the reviewed
+event queue. The original acquisition/reconstruction record below is preserved.
+
 **2026-10-29. Price collection and candidate reconstruction completed;
 Step 1 is not fully cleared for performance scoring.**
 

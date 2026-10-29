@@ -1,5 +1,9 @@
 # How far are we from paper trading?
 
+**Latest verification:** [193 tests passed; Step 1 event review progressed](broad_input_verification_results.md).
+Step 1 remains incomplete, and Step 2 performance integration has not started.
+Current work requires no owner setup or purchase. There are no new return results.
+
 Status: 2026-10-29.
 
 **Latest Step 1 result:** [price reconstruction is complete for the configured

@@ -481,6 +481,10 @@ remains to be done.
 
 ## Cross-platform operation
 
+Latest research status: [Step 1 verification and event review](docs/broad_input_verification_results.md).
+193 offline tests passed; historical inputs still require event/timing work
+before Step 2 integration. No expanded return run or paper activation occurred.
+
 Develop and test on Windows, commit the reviewed repository, and pull it onto
 the Raspberry Pi. Install dependencies and configure a separate `.env` on the
 Pi. Do not copy the Windows `.venv` or local database to the Pi.

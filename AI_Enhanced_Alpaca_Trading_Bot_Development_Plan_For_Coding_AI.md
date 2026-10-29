@@ -7,6 +7,8 @@
 > **Important:** Do not attempt to implement the entire roadmap in one step. Start with the earliest incomplete milestone, inspect the existing repository first, implement only the necessary scope, run tests, and report what was changed and what remains.
 >
 > **Initial trading environment:** Alpaca **Paper Trading only**. No live trading should be enabled as part of the initial implementation.
+
+> **Latest research verification, 2026-10-29:** [Step 1 tests and event review](docs/broad_input_verification_results.md): 193 tests passed, all 119 candidate streams were replayed from saved observations, and event-source interpretations were reviewed. Step 1 remains incomplete pending event corrections and explicit diagnostic timing/accounting assumptions; Step 2 performance integration has not started. No purchase, broker request, new return run or paper activation occurred. The selected 70% total research exposure remains recorded.
 >
 > **Safety:** This is a software-engineering and quantitative-research project. Backtests and paper-trading results do not guarantee profitability. The implementation must prioritize correctness, reproducibility, observability, secure credential handling, graceful failure, state recovery, and hard risk controls.
 
