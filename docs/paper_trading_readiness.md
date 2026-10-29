@@ -2,6 +2,14 @@
 
 Status: 2026-10-29.
 
+The [100-name comparison plan](broad_100_comparison_plan.md) has completed
+cached qualification but cannot score yet: 97 selected names lack full-window
+raw streams, and lifecycle/action evidence remains incomplete. This is a
+larger candidate search under unchanged 35% entry-exposure/5% position caps,
+not a paper allocation or an approved full-account investment. No additional
+owner setup is due; new scope/evidence assumptions require review before
+performance runs. The data, return, execution and activation gates still apply.
+
 The owner-approved [limited diagnostic is complete](limited_pilot_experiment_results.md):
 209 tests and all 24 financial/risk ledgers pass. Every annualized return
 misses 6%, with recent losses; the two-stock scope cannot meet the

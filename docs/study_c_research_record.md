@@ -1,5 +1,15 @@
 # Study C: daily rule-only research record
 
+**Latest broader-data qualification, 2026-10-29:** The
+[100-name candidate comparison](broad_100_comparison_plan.md) now has an exact
+historical roster, all-506 cache inventory and finite pending data/run budgets.
+Its selection uses a fixed hash plus the existing two controls; no new
+returns or availability ranking were used. Three selected names have full
+raw-calendar observations, but only Apple/CBRE retain prior limited-diagnostic
+admission. The 100-name comparison is blocked, with no replacements or new
+scores. Sizing remains 5% per position / 35% portfolio entry exposure and
+seven positions. No new purchases, requests, orders or test suites occurred.
+
 **Latest diagnostic, 2026-10-29:** following explicit approval, the
 [limited raw-data experiment](limited_pilot_experiment_results.md) completed
 24 runs and reconciled every ledger after 209 passing unit tests. Pessimistic

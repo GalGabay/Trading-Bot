@@ -1,5 +1,16 @@
 # Proposed research program before the first paper trial
 
+**Latest universe plan, 2026-10-29:** The
+[two-versus-100 proposal](broad_100_comparison_plan.md) isolates the number
+of eligible candidates while retaining the small experiment's rules, costs,
+capital, timing and allocation. The 100 historical identities are frozen;
+the 506-row parent inventory is preserved. Only three selected raw streams
+cover the full calendar, including a still-blocked Under Armour event case.
+The proposed 24 controls plus 24 challenger attempts require qualified
+lifecycles, a broader input path and separate scope approval. No performance,
+download or unit-test run occurred during this offline audit. The original
+eight-arm whole-market study remains separate and unchanged.
+
 **Latest completed research, 2026-10-29:** the owner-approved
 [limited AAPL/CBRE diagnostic](limited_pilot_experiment_results.md) completed
 all 24 runs after 209 passing tests. All financial/risk ledgers reconcile.

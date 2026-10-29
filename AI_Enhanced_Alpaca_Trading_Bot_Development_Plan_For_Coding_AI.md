@@ -4296,3 +4296,71 @@ launch date is established. Replay/report existing outcomes offline using
 `python -m backtesting.pilot_diagnostic_report --output data/reports/a_fresh_summary`;
 the strategy runner refuses its already used output directory and does not
 automatically repeat the approved batch.
+
+
+## Fixed 100-name sample: cached qualification and proposed comparison, 2026-10-29
+
+The owner requested a larger qualified candidate search under the same rules.
+The [two-versus-100 plan](docs/broad_100_comparison_plan.md) now provides an
+exact roster, cached-data qualification and bounded pending comparison.
+Its [input protocol](docs/broad_sample_qualification_review.json),
+[summary](docs/broad_sample_qualification_summary.json),
+[100-name roster](docs/research_data/broad_100_candidate_roster.csv) and
+[100/506 inventories](docs/research_data/broad_100_cached_inventory.csv)
+are tracked. The original 506-row source register is unchanged.
+
+Apple/CBRE are forced nested controls. The other 98 names are selected from
+the dated population by SHA-256 of a fixed seed plus the stable local ID,
+without returns, cache availability or seed rerolls. DVMT's already reviewed
+tracking-share class is excluded from candidate eligibility and retained in
+the parent register. The source basket's existing publication bound is
+2016-11-30; trading begins in 2017, with earlier prices for uninvested warmup.
+JPM was naturally outside the selected 100 and no JPM request is proposed.
+Old ticker aliases, acquired companies and blockers are retained; no surviving
+current-name list or automatic replacement defines the sample.
+
+The offline audit replays source/cohort/event checks, 33 legacy daily files,
+23,747 original raw observations, the genuine boundary candle and three
+reviewed alias streams. Sixty inventory records include 59 price files and
+one empty/unavailable source. Within the selected sample, full raw-calendar
+observations exist for AAPL, CBG/CBRE and original Under Armour Class A;
+CTL/CVS each have 251 partial raw observations. Ninety-five have no bound
+raw stream; 97 lack a full-window raw stream. Five have adjusted candidate
+observations, which are not silently substituted for raw execution prices.
+UA's complete price stream still lacks relevant event admission. Apple/CBRE
+retain their limited diagnostic status; no additional stock is admitted and
+the 100-name comparison remains blocked. Coverage counts are observations,
+not an assertion of missing candles before issuance or after delisting.
+
+The proposed comparison changes universe size only. Keep existing 55/20
+breakouts, stock/SPY EMA200, fixed 3-ATR stop, continuation reviews, cooldown,
+stable-ID ordering, volatility sizing, 5% position / 35% account entry caps,
+seven positions, costs, cash scenarios and research halts. A larger search
+may fill more slots but does not authorize investing 70-100% or guarantee
+returns. The JSON fixes 24 exact control replays before 24 challenger cases,
+maximum 48 attempts, plus compute limits. This is a new proposed allowance,
+not a reset of the completed 24-run budget, and still needs data qualification,
+implementation and changed-scope approval before new performance. All 100
+histories and required successor/cash/fractional branches must be accounted
+for; no truncation, survivor replacement, invented sale, fill or unknown zero.
+The separate eight-arm whole-market study and registered control are intact.
+
+Next engineering work is the proposed finite free historical-data collection
+and qualification workflow. Its unexecuted specification permits at most
+100 candidate IDs, 800 cumulative GET attempts, four pages per symbol/resource,
+24 probe intervals/192 attempts per batch and fixed time limits. Only existing
+bars/action endpoints, SIP/raw/1Day/asof=- and 2016-2023 are proposed. First
+access/payment/rate or transport failure/cap stops all batches; no automatic
+retry, redirects, feed/paid fallback, subscription/account/billing/order path,
+JPM collection or fabricated ticker attachment. Issuer/SEC document targets
+need their own separately bounded protocol before acquisition.
+
+This increment ran only local source/hash/selection/raw/calendar/data checks;
+no unit suite, strategy run, ML, download, network request, credential loading,
+account/broker call, purchase, order, package installation or reserved candle
+read. Pi execution is unverified. The earlier 209 tests remain evidence for
+the completed small diagnostic, not for this new audit. Reproduce offline with
+`python -m backtesting.broad_sample_qualification --output data/reports/a_fresh_broad_sample_qualification`.
+No owner setup, stock picking or personal paper-risk change is needed now.
+Review expanded performance scope/evidence assumptions before scores; paper
+activation and any higher allocation remain separate decisions.

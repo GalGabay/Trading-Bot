@@ -14,6 +14,19 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest broader-sample plan, 2026-10-29:** The
+[100-name roster and cache qualification](broad_100_comparison_plan.md) are
+complete. Apple/CBRE are retained; 98 historical names were selected by a
+fixed hash without returns or cache-availability selection. Three have full
+raw-calendar observations, two have partial raw data and 95 have no bound raw
+stream in cache. No additional stock is admitted for scoring. All 506 parent
+rows and the parked JPMorgan stop are retained. My next work is the finite
+free raw-data collection/qualification workflow; this step made no requests
+or purchases. You have no setup, stock-picking or personal risk-limit task.
+Review the changed scope and new evidence assumptions before the proposed
+48-run comparison. The 5% position / 35% entry-exposure caps are unchanged;
+more stocks do not authorize investing the entire account.
+
 **Latest completed experiment, 2026-10-29:** You explicitly approved the
 limited simulated diagnostic. Its [24 runs are complete](limited_pilot_experiment_results.md),
 following 209 passing tests, six real-data schedules and seven legacy

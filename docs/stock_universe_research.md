@@ -1,5 +1,14 @@
 # Stock-universe scope: what these studies can establish
 
+**Current follow-up, 2026-10-29:** the
+[finite two-versus-100 plan](broad_100_comparison_plan.md) freezes a historical
+candidate roster and reports exactly which saved prices/actions remain
+missing. It changes universe size only, with seven positions and the existing
+5% position / 35% account entry caps. It is a proposed fixed-fund-sample
+diagnostic, not whole-market membership or an already qualified dataset.
+No new returns or acquisitions were run; original source registers and the
+separate eight-arm study remain intact.
+
 ## Current scope
 
 The daily studies use **12 fixed stocks and ETFs**: AAPL, MSFT, JPM, JNJ,

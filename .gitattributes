@@ -32,3 +32,7 @@ docs/next_pilot_experiment_proposal.json -text
 # Keep the separately approved diagnostic and completed-results pins stable.
 docs/next_pilot_experiment_approval.json -text
 docs/limited_pilot_experiment_summary.json -text
+# Preserve the frozen broader sample, cache evidence and finite comparison pins.
+docs/broad_sample_qualification_review.json -text
+docs/broad_sample_qualification_summary.json -text
+docs/broad_100_comparison_plan.json -text

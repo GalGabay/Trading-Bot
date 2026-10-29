@@ -1,5 +1,10 @@
 # Limited Apple/CBRE experiment: completed results
 
+**Subsequent planning:** the [100-name candidate comparison](broad_100_comparison_plan.md)
+has now frozen a broader historical roster and qualified the cache. It keeps
+the allocation/rules below, exposes missing data and remains blocked before
+new scores. This does not replace or rerun the completed 24 cases below.
+
 Completed **2026-10-29**, after the owner's explicit approval of the
 [finite proposal](next_pilot_experiment_proposal.md). Approval is recorded
 [separately](next_pilot_experiment_approval.json); the old proposal and source

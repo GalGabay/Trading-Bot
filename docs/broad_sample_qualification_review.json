@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "offline_qualification_only_not_performance_approval",
+  "created_on": "2026-10-29",
+  "selection_seed": "broad-fixed-2016-v1",
+  "target_count": 100,
+  "forced_control_ids": [
+    "COHORT-2016-0047",
+    "COHORT-2016-0088"
+  ],
+  "excluded_tracking_alias": "DVMT",
+  "excluded_for_data_availability": [],
+  "reroll_allowed": false,
+  "selected_roster": {
+    "path": "docs/research_data/broad_100_candidate_roster.csv",
+    "sha256": "60d7828f737a6322ce681ade4aea88d72ddc702868aa270b105b2dcd0e119615"
+  },
+  "inputs": {
+    "cohort_review": {
+      "path": "docs/2016_cohort_source_review.json",
+      "sha256": "52d5b1d56217498a421d0e37b14e9b0ccda58d7913a4efc8cf4c788d1244e3db"
+    },
+    "cohort_summary": {
+      "path": "docs/2016_cohort_audit_summary.json",
+      "sha256": "524526e42c93c7f39eb54d65c093649ad60833714280b74312669c57b0944967"
+    },
+    "source_register": {
+      "path": "docs/research_data/spy_2016_dated_aliases.csv",
+      "sha256": "d558aba9ebbb8bb22250bffbca4afa9e0f34652c4c8e65588d157d553bfd175b"
+    },
+    "collection_review": {
+      "path": "docs/free_collection_event_review.json",
+      "sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896"
+    },
+    "collection_summary": {
+      "path": "docs/free_collection_summary.json",
+      "sha256": "3bb48c67adde3ee76824f014b6a3727d00b5e178da4286932246b534e743607f"
+    },
+    "collection_report": {
+      "path": "data/reports/free_collection_v1/report.json",
+      "sha256": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51"
+    },
+    "remaining_review": {
+      "path": "docs/remaining_pilot_review.json",
+      "sha256": "c4412fb04eb57f547e5c5cda1099ff36f6ff2b40c45480c03f6b0f31141bbf7c"
+    },
+    "remaining_summary": {
+      "path": "docs/remaining_pilot_summary.json",
+      "sha256": "f37ea9797eb49a3e6c754284c846e333f3a45acd9b0528cb3f5333569a70d546"
+    },
+    "limited_results": {
+      "path": "docs/limited_pilot_experiment_summary.json",
+      "sha256": "e09835ee65a28d3fe51d975dbe0eb6e8a27efa43acc3d83c39e0d54119557f48"
+    },
+    "limited_approval": {
+      "path": "docs/next_pilot_experiment_approval.json",
+      "sha256": "f211b9272e8cd3a007eeb68dec0b50e78521722114df498e47cb5ceb8c351782"
+    },
+    "acceptance": {
+      "path": "config/research_acceptance.json",
+      "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+    },
+    "old_broad_study": {
+      "path": "docs/broad_entry_selection_study.md",
+      "sha256": "adb3c2da2566e3205e3f1f488fd919c57d7aedccc3966a4a420b4083446f991e"
+    }
+  },
+  "price_scope": {
+    "start_inclusive": "2016-01-01",
+    "end_exclusive": "2024-01-01",
+    "timeframe": "1Day",
+    "required_adjustment": "raw",
+    "required_feed": "sip"
+  },
+  "controls": {
+    "network_requests": 0,
+    "new_price_requests": 0,
+    "purchases_usd": 0,
+    "broker_account_requests": 0,
+    "orders": 0,
+    "strategy_runs": 0,
+    "unit_tests_run": 0
+  },
+  "performance_scope_approved": false,
+  "original_506_register_unchanged": true
+}

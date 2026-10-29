@@ -134,6 +134,13 @@ approved and completed on 2026-10-29. All 209 focused/related tests pass and all
 are +$311.87 over 2017-2021 and -$53.09 over 2022-2023; every annualized result
 is below 6%. No strict evidence flags or paper trading were approved. SPY
 context remains separate from its blocked total-return reference.
+The [two-versus-100 comparison plan](docs/broad_100_comparison_plan.md)
+now freezes a 100-name historical candidate roster and audits cached coverage
+for all 506 parent rows. Only three selected names have full raw-calendar
+observations; just Apple/CBRE have prior diagnostic admission. The other
+histories and company events remain explicit gaps. The proposed comparison
+keeps sizing/rules unchanged and is not runnable or performance-approved yet.
+No downloads, purchases or new strategy runs occurred in that qualification.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
