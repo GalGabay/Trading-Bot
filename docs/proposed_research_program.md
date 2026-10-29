@@ -1,5 +1,14 @@
 # Proposed research program before the first paper trial
 
+**Latest Step 1 preparation, 2026-10-29:** the
+[candidate historical input](broad_input_preparation_results.md) has been built
+with all 100 members, separate parent/child/successor IDs and complete observed
+candidate intervals. Source reconciliation passed. New public archival stopped
+at SEC 403, leaving source, event and delivery gates explicit. This is data
+preparation, not a completed broad-universe return experiment or paper approval.
+The selected 70% research cap remains; no 90% arm or performance allowance was
+approved by the data-preparation request.
+
 **Latest verification/design, 2026-10-29:** the
 [collector and partial-history review](broad_history_review_results.md)
 passes 147 offline tests and identifies four unsegmented identity conflicts.

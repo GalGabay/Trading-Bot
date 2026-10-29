@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-29",
+  "authorization": "Step1 required successor branches, within the unchanged32-probe/192-attempt/15-minute scope",
+  "parent_report": {
+    "path": "data/reports/broad_successor_collection_v1/report.json",
+    "sha256": "5cfa95cbe5b5c0360172ad441dfb2a2e969180857a6b6835f2fb7d50de3eb31e"
+  },
+  "provider_evidence": {
+    "path": "data/reports/broad_successor_collection_v1/006/actions_1.json",
+    "sha256": "8e91c4c528ed0aba7c87be44a0cd5fec3b473336f2af9a8928ed4fc61dcdb2bc"
+  },
+  "conservative_budget_origin_utc": "2026-10-29T19:02:22.718727+00:00",
+  "probe": {
+    "id": "bwa_phin",
+    "symbol": "PHIN",
+    "start": "2023-07-05",
+    "end_exclusive": "2024-01-01",
+    "readiness": false
+  },
+  "purchases_usd": 0,
+  "execution_sha256": {
+    "backtesting/successor_branch_probe.py": "cdad6160dfa91e9175485d3e0dccf107c327dd5860d5df3988b01fdbbd19ef5b",
+    "backtesting/successor_collection.py": "bf764db16481a9489aeaecdbf885b7f7ff0dbda548b095a50ff4410045647757",
+    "app/broker/research_client.py": "2e858e7bc6efe8e14e9eff69024bf7f5fe57fbde842dee35f05da361a24d95c6"
+  },
+  "new_counter_or_time_allowance": false,
+  "independent_terms_verified": false
+}

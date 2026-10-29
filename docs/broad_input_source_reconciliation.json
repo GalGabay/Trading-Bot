@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-29",
+  "scope": "Actual saved-data source/provenance and budget reconciliation; not a unit-test suite",
+  "source_groups": 130,
+  "canonical_streams_checked": 119,
+  "observed_rows_compared": 203683,
+  "all_saved_ohlcv_equal_pinned_source_observations": true,
+  "no_dedup_or_fill": true,
+  "original_collection_protocol_still_matches": true,
+  "original_members_retained": 100,
+  "request_numbers_cumulative": true,
+  "cumulative_historical_http_attempts": 60,
+  "total_probes": 30,
+  "elapsed_allowance_respected": true,
+  "public_archive_stopped_on_403": true,
+  "source_hashes_checked": true,
+  "strict_flags_false": true,
+  "performance_runs": 0,
+  "unit_tests_run": 0,
+  "pi_execution": false,
+  "report": {
+    "path": "data/reports/broad_historical_input_v3/report.json",
+    "sha256": "9efaf153370cd897e159e6143c4165e899c6f53dc5d0bacbd1ee3a7aadd15efc"
+  }
+}

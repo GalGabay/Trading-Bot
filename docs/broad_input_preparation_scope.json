@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-29",
+  "authorization": "Owner requested step1: corrected100 historical input including required successor prices and supported company events",
+  "purchase_budget_usd": 0,
+  "selected_roster": {
+    "path": "docs/research_data/broad_100_candidate_roster.csv",
+    "sha256": "60d7828f737a6322ce681ade4aea88d72ddc702868aa270b105b2dcd0e119615"
+  },
+  "prior_facts": {
+    "path": "docs/broad_history_review_facts.json",
+    "sha256": "0c759610544488d7e806cb8be1c0161ca7f7a28b341dbaf130960ca1b2581af5"
+  },
+  "exposure_decision": {
+    "path": "docs/research_exposure_decision.json",
+    "sha256": "9909da892abc3c90a70b09815aec8e4409401cbc1f3e07d1dce0eb7f1214b41b"
+  },
+  "public_discovery_limits": {
+    "max_search_queries": 16,
+    "max_page_opens": 16,
+    "first_access_barrier_stops_new_public_retrieval": true,
+    "no_retry_old_denied_urls": true
+  },
+  "price_collection_limits": {
+    "max_probe_intervals": 32,
+    "max_http_attempts": 192,
+    "max_pages_per_resource": 4,
+    "max_elapsed_minutes": 15,
+    "timeout_seconds": 30,
+    "min_spacing_seconds": 0.4,
+    "feed": "sip",
+    "adjustment": "raw",
+    "start_not_before": "2016-01-01",
+    "end_not_after_exclusive": "2024-01-01",
+    "first_access_or_transport_failure_stops": true,
+    "automatic_retries": false,
+    "paid_fallback": false
+  },
+  "public_archival_limits": {
+    "max_http_attempts": 40,
+    "max_megabytes_per_page": 16,
+    "automatic_redirects": false,
+    "no_ambient_credentials": true
+  },
+  "exact_download_queues_frozen_before_requests": true,
+  "original_runs_and_evidence_preserved": true,
+  "orders": 0,
+  "account_requests": 0,
+  "strategy_runs": 0,
+  "unit_tests_authorized_in_this_increment": false,
+  "performance_approval": false,
+  "paper_approval": false
+}

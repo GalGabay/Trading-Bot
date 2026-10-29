@@ -50,3 +50,15 @@ backtesting/broad_history_review.py -text
 tests/test_broad_collection.py -text
 tests/test_broad_history_review.py -text
 docs/research_exposure_decision.json -text
+# Preserve Step1 acquisition, reconstruction and source-reconciliation pins.
+docs/broad_input_preparation_scope.json -text
+docs/broad_input_public_sources.json -text
+docs/broad_successor_collection_plan.json -text
+docs/broad_successor_branch_probe.json -text
+docs/broad_historical_input_spec.json -text
+docs/broad_input_preparation_summary.json -text
+docs/broad_input_source_reconciliation.json -text
+docs/broad_candidate_input_manifest.json -text
+backtesting/successor_collection.py -text
+backtesting/successor_branch_probe.py -text
+backtesting/historical_input.py -text

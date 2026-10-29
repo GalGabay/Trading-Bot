@@ -3,6 +3,14 @@
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
+**Latest input preparation, 2026-10-29:**
+[Step 1 price reconstruction](docs/broad_input_preparation_results.md) retains
+all 100 members and builds 119 candidate issuer/class streams from observed
+data. All configured price intervals are covered; 203,683 output rows match
+pinned sources. Sixty bounded historical GETs collected successor data. A
+SEC 403 stopped new public archival; event/source admission is still blocked,
+so Step 1 is not fully cleared and no broader return has been calculated.
+
 **Latest verification/review, 2026-10-29:**
 [147 offline tests pass](docs/broad_history_review_results.md), including 76
 new collector/history tests. The 17 partial histories have a preserved source

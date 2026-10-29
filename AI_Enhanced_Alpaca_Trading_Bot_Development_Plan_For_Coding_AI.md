@@ -4446,3 +4446,54 @@ package, then the broader diagnostic path/runner. The owner can review the
 proposed caps and assumptions in chat; no installation, purchase or paper-risk
 JSON change is due now. New performance awaits ready inputs and concrete
 scope/allocation approval.
+
+## Step 1 broader historical input preparation (2026-10-29)
+
+At the owner's request, implemented and executed bounded successor-price
+collection and candidate input reconstruction. See
+[the Step 1 report](docs/broad_input_preparation_results.md). The selected
+70% account research capacity remains a separate recorded choice; runtime
+and paper-risk configurations are unchanged.
+
+The frozen initial 29-probe queue plus one explicitly reviewed PHIN child
+probe used 60 cumulative historical GETs (30 bars/30 actions), within the
+same 32-probe/192-attempt/15-minute scope. The child probe carried the original
+58-attempt ledger forward without resetting its counter or conservative
+clock. All 19,958 new observed candles are pre-2024. The separate public queue
+stopped after the first SEC 403, saving no new primary documents; earlier
+denied URLs were not retried. No purchases, account calls, orders, upgrades,
+holdout candles or strategy runs occurred.
+
+`backtesting/successor_collection.py` and `successor_branch_probe.py` reuse
+fixed historical GET builders and preserve exact response bytes. The offline
+`historical_input.py` preserves all 100 selected originals, reconstructs
+dated alias chains and creates separate parent/child/acquirer IDs. It fixes
+candidate attachments for DLPH/XL/LLL/MON/DOW/HCP, resolves CBS/VIAC/PARA
+candidate dates and adds required later alias/received-share quote streams.
+Warmup-only 2016 references are not represented as complete child lifetimes
+or earned holdings. Material events identify the actual consuming instrument:
+for example, a DLPH child merger does not consume the retained APTV parent.
+
+The package has 119 canonical candidate streams; all configured intervals
+have actual scheduled observations. Independent source reconciliation compared
+203,683 reconstructed rows against pinned inputs. No prices were filled,
+interpolated, deduplicated away or invented. Complete configured lifetimes
+does not imply that every original stock traded throughout 2016-2023 or that
+all securities are eligible for new entries. Ten acquirer-only provider
+records are context, not shareholder payments. Nonstandard adjustment ratios
+are not automatically booked as real splits.
+
+Step 1 is **not fully cleared for scoring**: primary archival is blocked,
+39 candidate material/nonstandard/reorganization review items remain, and
+provider dividend terms include 1,383 missing payable dates and 2,698 missing
+declaration dates after interval binding. Actual entitlement/delivery/fractional
+fixings and full identity/action admission are not fabricated. The candidate
+manifest is not an accepted strict universe or approved diagnostic schedule.
+Execution/approval flags remain false; previous protocols and inputs are intact.
+
+Actual-data structural/session/hash/provenance/budget checks passed on Windows.
+No unit-test suite was added or run for this increment and Pi execution remains
+unverified. Next work is focused verification when requested and resolution
+of the exact source/event gaps or concrete remaining diagnostic assumptions.
+Do not start return scoring while claiming Step 1 is complete. The owner has
+no purchase, installation or repeated 70%-choice task now.

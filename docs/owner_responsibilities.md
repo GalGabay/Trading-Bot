@@ -14,6 +14,16 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest Step 1 work, 2026-10-29:** the
+[historical input package](broad_input_preparation_results.md) now contains
+119 candidate streams for the original 100 members and their required
+received securities/warmup references. Successor collection and observed-price
+reconstruction passed source checks, but source capture stopped at SEC 403
+and economic/delivery evidence remains unresolved. Step 1 is not fully
+cleared; no return simulation or paper change occurred. You have no purchase,
+installation or repeated 70%-approval task. I must address the exact source,
+event and verification gaps before presenting ready inputs for performance.
+
 **Latest owner decision, 2026-10-29:** you selected **70% total account entry
 exposure for the next research design**. It is recorded in
 [the decision journal](research_exposure_decision.json); you do not need to

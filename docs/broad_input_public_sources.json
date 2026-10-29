@@ -1,0 +1,366 @@
+{
+  "purchases_budget_usd": 0,
+  "max_http_attempts": 40,
+  "scope": {
+    "path": "docs/broad_input_preparation_scope.json",
+    "sha256": "2737c182bec1da2949637b037a1e96ce002c488e632f8689635be69f1989eea1"
+  },
+  "allowed_domains": [
+    "sec.gov",
+    "atmeta.com",
+    "fiserv.com",
+    "viatris.com",
+    "lumen.com",
+    "l3harris.com",
+    "bakerhughes.com",
+    "nielsen.com",
+    "ball.com",
+    "dupont.com",
+    "dow.com",
+    "exeloncorp.com",
+    "yumchina.com"
+  ],
+  "documents": [
+    {
+      "id": "old_rtn",
+      "url": "https://www.sec.gov/Archives/edgar/data/1047122/000119312520097237/d827106d8k.htm",
+      "targets": [
+        "old_rtn"
+      ],
+      "required_terms": [
+        "2.3348"
+      ]
+    },
+    {
+      "id": "old_fb",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+      "targets": [
+        "old_fb"
+      ],
+      "required_terms": [
+        "META"
+      ]
+    },
+    {
+      "id": "old_fisv",
+      "url": "https://investors.fiserv.com/news-releases/news-release-details/fiserv-completes-listing-transfer-new-york-stock-exchange",
+      "targets": [
+        "old_fisv"
+      ],
+      "required_terms": [
+        "FI"
+      ]
+    },
+    {
+      "id": "old_dlph",
+      "url": "https://www.sec.gov/Archives/edgar/data/1707092/000119312517364954/d494581d8k.htm",
+      "targets": [
+        "old_dlph"
+      ],
+      "required_terms": [
+        "Delphi"
+      ]
+    },
+    {
+      "id": "old_myl",
+      "url": "https://investor.viatris.com/static-files/32c039cc-52eb-45d3-a49f-a7ba895b3471",
+      "targets": [
+        "old_myl"
+      ],
+      "required_terms": [
+        "Mylan"
+      ]
+    },
+    {
+      "id": "old_xl",
+      "url": "https://www.sec.gov/Archives/edgar/data/875159/000087515918000068/axaclosing8-k.htm",
+      "targets": [
+        "old_xl"
+      ],
+      "required_terms": [
+        "57.60"
+      ]
+    },
+    {
+      "id": "old_esrx",
+      "url": "https://www.sec.gov/Archives/edgar/data/1532063/000114036118045477/form8k.htm",
+      "targets": [
+        "old_esrx"
+      ],
+      "required_terms": [
+        "48.75"
+      ]
+    },
+    {
+      "id": "old_ctl",
+      "url": "https://ir.lumen.com/news/news-details/2020/CenturyLink-Transforms-Rebrands-as-Lumen/default.aspx",
+      "targets": [
+        "old_ctl"
+      ],
+      "required_terms": [
+        "LUMN"
+      ]
+    },
+    {
+      "id": "old_lll",
+      "url": "https://investors.l3harris.com/news/news-details/2019/L3Harris-Technologies-Merger-Successfully-Completed-Board-of-Directors-Leadership-and-Organization-Structure-Announced-07-01-2019/default.aspx",
+      "targets": [
+        "old_lll"
+      ],
+      "required_terms": [
+        "1.3"
+      ]
+    },
+    {
+      "id": "old_bhi",
+      "url": "https://investors.bakerhughes.com/news/press-releases/news-details/2017/GE-Announces-Completion-of-GE-Oil-Gas-and-Baker-Hughes-Merger-07-03-2017/default.aspx",
+      "targets": [
+        "old_bhi"
+      ],
+      "required_terms": [
+        "17.50"
+      ]
+    },
+    {
+      "id": "old_rht",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000095014219001515/eh1900893_8k.htm",
+      "targets": [
+        "old_rht"
+      ],
+      "required_terms": [
+        "190"
+      ]
+    },
+    {
+      "id": "old_symc",
+      "url": "https://www.sec.gov/Archives/edgar/data/849399/000110465919059239/tm1921662d1_8k.htm",
+      "targets": [
+        "old_symc"
+      ],
+      "required_terms": [
+        "NLOK"
+      ]
+    },
+    {
+      "id": "old_nlsn",
+      "url": "https://www.nielsen.com/news-center/2022/nielsen-announces-closing-of-transaction-with-evergreen-and-brookfield-led-consortium/",
+      "targets": [
+        "old_nlsn"
+      ],
+      "required_terms": [
+        "28"
+      ]
+    },
+    {
+      "id": "old_csra",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312518106365/d512528d8k.htm",
+      "targets": [
+        "old_csra"
+      ],
+      "required_terms": [
+        "41.25"
+      ]
+    },
+    {
+      "id": "old_mon",
+      "url": "https://www.sec.gov/Archives/edgar/data/1110783/000119312518186836/d602943dex991.htm",
+      "targets": [
+        "old_mon"
+      ],
+      "required_terms": [
+        "128"
+      ]
+    },
+    {
+      "id": "ball_sec",
+      "url": "https://investors.ball.com/sec-filings/all-sec-filings/content/0000009389-22-000010/bll-20220427x8k.htm",
+      "targets": [
+        "ball_sec"
+      ],
+      "required_terms": [
+        "May 10, 2022",
+        "BALL"
+      ]
+    },
+    {
+      "id": "cbs_completion",
+      "url": "https://www.sec.gov/Archives/edgar/data/1339947/000119312519306335/d833313dex991.htm",
+      "targets": [
+        "cbs_completion"
+      ],
+      "required_terms": [
+        "December 5, 2019",
+        "existing shares"
+      ]
+    },
+    {
+      "id": "paramount_2022",
+      "url": "https://www.sec.gov/Archives/edgar/data/813828/000081382822000033/R9.htm",
+      "targets": [
+        "paramount_2022"
+      ],
+      "required_terms": [
+        "February 17, 2022",
+        "PARA"
+      ]
+    },
+    {
+      "id": "gen_2022",
+      "url": "https://www.sec.gov/Archives/edgar/data/849399/000110465922115277/tm2229813d1_8k.htm",
+      "targets": [
+        "gen_2022"
+      ],
+      "required_terms": [
+        "November 8, 2022",
+        "GEN"
+      ]
+    },
+    {
+      "id": "bhge_2019",
+      "url": "https://investors.bakerhughes.com/files/doc_financials/2019/2019_Baker-Hughes-Annual-Report.pdf",
+      "targets": [
+        "bhge_2019"
+      ],
+      "required_terms": [
+        "October 18, 2019",
+        "BKR"
+      ]
+    },
+    {
+      "id": "bwa_2020",
+      "url": "https://www.sec.gov/Archives/edgar/data/908255/000090825520000085/exhibit993unauditedpro.htm",
+      "targets": [
+        "bwa_2020"
+      ],
+      "required_terms": [
+        "0.4307",
+        "October 1, 2020"
+      ]
+    },
+    {
+      "id": "hcp_2019",
+      "url": "https://www.sec.gov/Archives/edgar/data/765880/000162828020001456/healthpeak10-k12312019.htm",
+      "targets": [
+        "hcp_2019"
+      ],
+      "required_terms": [
+        "November 5, 2019",
+        "PEAK"
+      ]
+    },
+    {
+      "id": "dow_merger",
+      "url": "https://www.investors.dupont.com/news-and-media/press-release-details/2017/DowDuPont-Merger-Successfully-Completed/default.aspx",
+      "targets": [
+        "dow_merger"
+      ],
+      "required_terms": [
+        "1.00",
+        "September 1, 2017"
+      ]
+    },
+    {
+      "id": "dow_child",
+      "url": "https://investors.dow.com/en/news/news-details/2019/Dow-completes-separation-from-DowDuPont/default.aspx",
+      "targets": [
+        "dow_child"
+      ],
+      "required_terms": [
+        "April 2, 2019",
+        "three"
+      ]
+    },
+    {
+      "id": "dow_corteva",
+      "url": "https://www.sec.gov/Archives/edgar/data/1666700/000119312519163322/d715311dex992.htm",
+      "targets": [
+        "dow_corteva"
+      ],
+      "required_terms": [
+        "June 1, 2019",
+        "1-for-3"
+      ]
+    },
+    {
+      "id": "apd_2016",
+      "url": "https://www.sec.gov/Archives/edgar/data/2969/000119312516731580/d184846d8k.htm",
+      "targets": [
+        "apd_2016"
+      ],
+      "required_terms": [
+        "October 3, 2016",
+        "every two"
+      ]
+    },
+    {
+      "id": "vfc_2019",
+      "url": "https://www.sec.gov/Archives/edgar/data/1760965/000119312519155386/d749655dex991.htm",
+      "targets": [
+        "vfc_2019"
+      ],
+      "required_terms": [
+        "May 23, 2019",
+        "seven"
+      ]
+    },
+    {
+      "id": "vno_2017",
+      "url": "https://www.sec.gov/Archives/edgar/data/1689796/000110465917046321/a17-17912_18k.htm",
+      "targets": [
+        "vno_2017"
+      ],
+      "required_terms": [
+        "July 18, 2017",
+        "July 17, 2017"
+      ]
+    },
+    {
+      "id": "exc_2022",
+      "url": "https://www.exeloncorp.com/newsroom/exelon-completes-separation-of-constellation",
+      "targets": [
+        "exc_2022"
+      ],
+      "required_terms": [
+        "February 02, 2022",
+        "three"
+      ]
+    },
+    {
+      "id": "aiv_2020",
+      "url": "https://www.sec.gov/Archives/edgar/data/1820877/000119312520317473/d932189dex991.htm",
+      "targets": [
+        "aiv_2020"
+      ],
+      "required_terms": [
+        "December 15, 2020",
+        "one share"
+      ]
+    },
+    {
+      "id": "yum_2016",
+      "url": "https://ir.yumchina.com/news-releases/news-release-details/yum-brands-board-directors-approves-separation-yum-china-and/",
+      "targets": [
+        "yum_2016"
+      ],
+      "required_terms": [
+        "November 1, 2016",
+        "one share"
+      ]
+    },
+    {
+      "id": "hcp_2016",
+      "url": "https://www.sec.gov/Archives/edgar/data/1677203/000110465916153365/a16-12302_148k.htm",
+      "targets": [
+        "hcp_2016"
+      ],
+      "required_terms": [
+        "November 1, 2016",
+        "five shares"
+      ]
+    }
+  ],
+  "previous_denied_urls_retried": false,
+  "public_discovery_queries": 16,
+  "public_page_opens": 0,
+  "primary_source_capture_not_delivery_verification": true
+}

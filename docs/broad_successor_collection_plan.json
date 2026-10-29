@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-29",
+  "scope": {
+    "path": "docs/broad_input_preparation_scope.json",
+    "sha256": "2737c182bec1da2949637b037a1e96ce002c488e632f8689635be69f1989eea1"
+  },
+  "purchases_usd": 0,
+  "limits": {
+    "max_probe_intervals": 32,
+    "max_http_attempts": 192,
+    "max_pages_per_resource": 4,
+    "max_elapsed_minutes": 15,
+    "timeout_seconds": 30,
+    "min_spacing_seconds": 0.4,
+    "feed": "sip",
+    "adjustment": "raw",
+    "start_not_before": "2016-01-01",
+    "end_not_after_exclusive": "2024-01-01",
+    "first_access_or_transport_failure_stops": true,
+    "automatic_retries": false,
+    "paid_fallback": false
+  },
+  "inputs": [
+    {
+      "path": "docs/broad_history_review_facts.json",
+      "sha256": "0c759610544488d7e806cb8be1c0161ca7f7a28b341dbaf130960ca1b2581af5"
+    },
+    {
+      "path": "docs/broad_100_evidence_summary.json",
+      "sha256": "38722272c7ed39f7b41ee696849f7e8f88532712eac5ddba0a401fe7ffbfd0bc"
+    }
+  ],
+  "execution_sha256": {
+    "backtesting/successor_collection.py": "bf764db16481a9489aeaecdbf885b7f7ff0dbda548b095a50ff4410045647757",
+    "app/broker/research_client.py": "2e858e7bc6efe8e14e9eff69024bf7f5fe57fbde842dee35f05da361a24d95c6"
+  },
+  "probes": [
+    {
+      "id": "rtn_rtx",
+      "symbol": "RTX",
+      "start": "2020-04-03",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "fb_meta",
+      "symbol": "META",
+      "start": "2022-06-09",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "bll_ball",
+      "symbol": "BALL",
+      "start": "2022-05-10",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "fisv_fi",
+      "symbol": "FI",
+      "start": "2023-06-07",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "dlph_aptv",
+      "symbol": "APTV",
+      "start": "2017-12-05",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "dlph_bwa",
+      "symbol": "BWA",
+      "start": "2020-10-01",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "myl_when_issued",
+      "symbol": "VTRSV",
+      "start": "2020-11-16",
+      "end_exclusive": "2020-11-17",
+      "readiness": false
+    },
+    {
+      "id": "myl_vtrs",
+      "symbol": "VTRS",
+      "start": "2020-11-17",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "esrx_ci",
+      "symbol": "CI",
+      "start": "2018-12-21",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "ctl_lumn",
+      "symbol": "LUMN",
+      "start": "2020-09-18",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "lll_lhx",
+      "symbol": "LHX",
+      "start": "2019-07-01",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "bhi_bhge",
+      "symbol": "BHGE",
+      "start": "2017-07-05",
+      "end_exclusive": "2019-10-18",
+      "readiness": false
+    },
+    {
+      "id": "bhi_bkr",
+      "symbol": "BKR",
+      "start": "2019-10-18",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "symc_nlok",
+      "symbol": "NLOK",
+      "start": "2019-11-05",
+      "end_exclusive": "2022-11-08",
+      "readiness": false
+    },
+    {
+      "id": "symc_gen",
+      "symbol": "GEN",
+      "start": "2022-11-08",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "cbs_viac",
+      "symbol": "VIAC",
+      "start": "2019-12-05",
+      "end_exclusive": "2022-02-17",
+      "readiness": false
+    },
+    {
+      "id": "cbs_para",
+      "symbol": "PARA",
+      "start": "2022-02-17",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "hcp_peak",
+      "symbol": "PEAK",
+      "start": "2019-11-05",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "dow_dwdp",
+      "symbol": "DWDP",
+      "start": "2017-09-01",
+      "end_exclusive": "2019-06-03",
+      "readiness": false
+    },
+    {
+      "id": "dow_dd",
+      "symbol": "DD",
+      "start": "2019-06-03",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "dow_ctva",
+      "symbol": "CTVA",
+      "start": "2019-06-03",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "vfc_ktb",
+      "symbol": "KTB",
+      "start": "2019-05-23",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "vno_jbgs",
+      "symbol": "JBGS",
+      "start": "2017-07-18",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "exc_ceg",
+      "symbol": "CEG",
+      "start": "2022-02-02",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "aiv_airc",
+      "symbol": "AIRC",
+      "start": "2020-12-15",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "k_klg",
+      "symbol": "KLG",
+      "start": "2023-10-02",
+      "end_exclusive": "2024-01-01",
+      "readiness": false
+    },
+    {
+      "id": "apd_warmup_vsm",
+      "symbol": "VSM",
+      "start": "2016-10-03",
+      "end_exclusive": "2016-10-04",
+      "readiness": false
+    },
+    {
+      "id": "hcp_warmup_qcp",
+      "symbol": "QCP",
+      "start": "2016-11-01",
+      "end_exclusive": "2016-11-02",
+      "readiness": false
+    },
+    {
+      "id": "yum_warmup_yumc",
+      "symbol": "YUMC",
+      "start": "2016-11-01",
+      "end_exclusive": "2016-11-02",
+      "readiness": false
+    }
+  ],
+  "authorization": "Owner requested step1 including exact bounded free successor collection; no performance or paper execution",
+  "new_scope_not_reset_of_original_collection": true
+}

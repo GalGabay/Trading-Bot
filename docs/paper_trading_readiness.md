@@ -2,6 +2,15 @@
 
 Status: 2026-10-29.
 
+**Latest Step 1 result:** [price reconstruction is complete for the configured
+candidate intervals](broad_input_preparation_results.md): 100 original members,
+119 separate streams and 203,683 source-matched observations. Successor
+prices have been collected, but primary archival stopped at SEC 403 and
+event/delivery admission is incomplete. We are still at Step 1's evidence
+gate below, not ready to report broader performance. The earlier four
+mixed-history flags led to additional DOW/HCP corrections; original evidence
+and all members are retained. No new unit suite or strategy run occurred.
+
 ## Current route from research to paper trading
 
 **Owner decision:** 70% total account entry exposure is selected for the next
