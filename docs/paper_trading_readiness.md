@@ -2,6 +2,42 @@
 
 Status: 2026-10-29.
 
+## Current route from research to paper trading
+
+**Owner decision:** 70% total account entry exposure is selected for the next
+research design, recorded in [the decision journal](research_exposure_decision.json).
+At $10,000 equity, that means up to about $7,000 invested across stocks when
+entering trades. It is not a 70% per-stock allocation or a requirement to
+invest $7,000. Do not ask the owner to approve this same research cap again.
+The 90% arm is not selected for the current design. The old proposal is retained
+as a dated record; remaining assumptions, position slots and the run allowance
+are not automatically approved by this exposure decision. Paper settings
+remain disabled and separate.
+
+**Return results already exist:** the latest completed
+[two-stock experiment](limited_pilot_experiment_results.md), using $10,000 and
+pessimistic costs, returned **+3.12% total over 2017-2021** (about +0.62%
+annualized) and **-0.53% total over 2022-2023** (about -0.27% annualized), after
+estimated final share exits. These are separate simulated periods, not actual
+money or the new 100-stock strategy at 70%. No broader return is available yet.
+Passing unit tests measures code behavior, not investment performance.
+
+| Milestone | Concrete remaining work | Owner / coding agent |
+|---|---|---|
+| 1. Usable 100-stock research input - current stage | Correct the mixed histories, obtain required later aliases/successor quotes within a finite $0 scope, and handle supported merger/share/cash outcomes without inventing data. All selected names remain accounted for. | Coding agent; no owner download, purchase or installation. |
+| 2. Connect inputs to the existing simulator | Build and verify the broader diagnostic input/runner, use the selected 70% research cap, retain matched old controls, and finalize the remaining assumptions and finite run allowance. The backtester already exists. | Coding agent prepares a runnable package; owner reviews remaining choices together. No repeat approval of 70%. |
+| 3. Historical performance results | Run the approved finite experiment on development history and report whole-account gains/losses, CAGR, drawdown, costs, invested cash and outstanding rights. | Coding agent runs it; owner reviews the actual report. |
+| 4. Candidate evaluation | Apply the existing 6% annual-return and 5% drawdown rejection criteria plus the other approved checks. If a candidate qualifies, freeze it and separately define/approve untouched final evaluation. Keep 2024-2025 prices reserved until then. | Coding agent evaluates; owner reviews results. A failed candidate does not automatically advance. |
+| 5. Paper workflow and deliberate launch | Complete the unattended loop, protective exit/stop workflow and fill/activity ledger; verify restart/recovery. Review personal paper limits, existing paper positions/orders and startup report, then explicitly authorize the trial. Check the Pi before unattended deployment there. | Coding agent implements/checks execution; owner chooses personal paper limits and launch. |
+
+The immediate deliverable is the corrected research input plus its integration
+with the simulator. There is no defensible promise of a paper launch date:
+neither the larger universe nor 70% capacity guarantees a qualifying strategy.
+This route does not authorize purchases, paper orders or a new performance
+batch before its inputs/remaining assumptions are ready.
+
+## Earlier milestone records
+
 The [latest offline verification/history review](broad_history_review_results.md)
 passes 147 tests, with four identity conflicts and additional economic/delivery
 gaps still blocking the broader backtest. The owner's higher-exposure request

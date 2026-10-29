@@ -49,3 +49,4 @@ docs/broad_collection_test_summary.json -text
 backtesting/broad_history_review.py -text
 tests/test_broad_collection.py -text
 tests/test_broad_history_review.py -text
+docs/research_exposure_decision.json -text

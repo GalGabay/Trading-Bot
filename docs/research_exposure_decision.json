@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "owner_message": "i also think that 70% exposure is good for now.",
+  "decision": "70% total account entry exposure selected for the next research design",
+  "research_total_entry_exposure_cap": 0.7,
+  "research_exposure_selected": true,
+  "scope": "Historical simulation; selection of this cap does not activate paper trading or approve unresolved modelling assumptions",
+  "linked_proposal": {
+    "path": "docs/broad_expanded_backtest_proposal.json",
+    "sha256": "cfed92402aafb7c439de23c7d272f35722af32cba2aaa97ef456a1f2a8752432"
+  },
+  "ninety_percent_selected_for_current_design": false,
+  "per_stock_entry_cap_changed": false,
+  "proposed_per_stock_entry_cap": 0.05,
+  "proposed_max_positions": 20,
+  "max_positions_explicitly_approved": false,
+  "expanded_data_assumptions_approved": false,
+  "new_strategy_attempt_budget_approved": false,
+  "paper_risk_approved": false,
+  "paper_submission_enabled": false,
+  "active_runtime_config_modified": false,
+  "reapprove_same_70_percent_choice_required": false,
+  "original_proposal_preserved": true
+}

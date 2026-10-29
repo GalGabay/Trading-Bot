@@ -14,6 +14,18 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest owner decision, 2026-10-29:** you selected **70% total account entry
+exposure for the next research design**. It is recorded in
+[the decision journal](research_exposure_decision.json); you do not need to
+repeat that choice. The 90% arm is not selected for the current design. This
+does not approve personal paper limits, all data assumptions, 20 slots or a
+new performance allowance. No runtime/paper configuration changed. The
+[current milestone route](paper_trading_readiness.md#current-route-from-research-to-paper-trading)
+shows how corrected histories feed the existing simulator, lead to actual
+backtest returns, and then to candidate evaluation and a deliberate paper trial.
+You have no installation/purchase task now. I will present remaining modelling
+choices together once the research package is concrete and runnable.
+
 **Latest verification and allocation proposal, 2026-10-29:**
 [147 offline tests pass and all 17 partial histories were reviewed](broad_history_review_results.md).
 You clarified that 35% total invested capacity is too low for your intended
