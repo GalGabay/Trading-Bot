@@ -2,6 +2,13 @@
 
 Status: 2026-10-29.
 
+The [bounded 100-stock collection](broad_100_collection_results.md) has now
+executed. Its current results supersede the older pre-collection cache counts
+below. Price coverage alone does not resolve historical identity, company-event
+terms or investment acceptance. The owner's openness to additional concurrent
+holdings is recorded separately; no paper settings or performance approval
+changed. No setup or purchase is due from the owner for this collection.
+
 The [100-name comparison plan](broad_100_comparison_plan.md) has completed
 cached qualification but cannot score yet: 97 selected names lack full-window
 raw streams, and lifecycle/action evidence remains incomplete. This is a

@@ -4364,3 +4364,41 @@ the completed small diagnostic, not for this new audit. Reproduce offline with
 No owner setup, stock picking or personal paper-risk change is needed now.
 Review expanded performance scope/evidence assumptions before scores; paper
 activation and any higher allocation remain separate decisions.
+
+## Fixed 100-stock bounded collection completed (2026-10-29)
+
+The owner subsequently authorized execution of the above collection. See
+[current results](docs/broad_100_collection_results.md) and the separate
+[executed protocol](docs/broad_100_collection_protocol.json); the earlier
+proposal and source pins remain unchanged historical records.
+
+`backtesting/broad_collection.py` reuses fixed historical query builders and
+validators, saves original response bytes and keeps a single cumulative,
+one-shot request journal. The actual run made 192 GET attempts in five batches,
+collected 97 raw-price and 95 action queries, and reused three complete price
+streams and five candidates' action queries. All 100 selected identities remain.
+There were no purchases, subscriptions, account requests, orders, paid/feed
+fallbacks, JPM requests, successor probes or 2024-2025 candle reads.
+
+Offline validation checked 188,191 raw observations: 83 complete calendars,
+17 partial histories, no hard candle-validation errors or interior unobserved
+sessions; 61 streams carry volume warnings. Coverage is not identity/action
+approval. `backtesting/broad_evidence_review.py` inventories 2,463 provider
+events and per-stock evidence gaps: 1,334 dividends lack provider payable dates,
+all 2,421 dividends lack declaration dates, and XL/LLL have incoming-alias
+flags. Large raw moves are triage flags, never automatic split corrections.
+Saved primary sources and known Under Armour/CBRE event gaps are retained.
+No additional stocks are admitted and no expanded strategy run has occurred.
+
+The owner's willingness to exceed seven holdings is recorded in
+[a separate preference note](docs/broad_position_count_preference.md).
+No numerical replacement cap, higher total exposure, paper setting or hidden
+change to the universe-only comparison has been installed. Prepare concrete
+count/exposure and run-budget amendments before changed performance work.
+
+Current verification comprises real collection, offline source/candle/calendar
+checks and cumulative-budget reconciliation, not a new unit-test suite or Pi
+execution. Next engineering work is focused offline collector/qualifier tests
+and bounded resolution of historical aliases and company-event terms. The
+owner has no setup/purchase task now; expanded assumptions and any allocation
+amendment must be made concrete for review before another performance batch.

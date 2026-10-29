@@ -3,6 +3,13 @@
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
+**Latest data work, 2026-10-29:** the bounded
+[100-stock collection and qualification](docs/broad_100_collection_results.md)
+has run using existing access and a $0 purchase budget. Its saved observations
+and remaining identity/event evidence are distinct from backtest approval.
+The owner's [position-count preference](docs/broad_position_count_preference.md)
+is recorded for the next design; no trading or allocation settings changed.
+
 For decisions that only the project owner can make, use the
 [phase-by-phase responsibilities checklist](docs/owner_responsibilities.md).
 The [proposed research program](docs/proposed_research_program.md) describes

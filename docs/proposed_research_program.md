@@ -1,5 +1,13 @@
 # Proposed research program before the first paper trial
 
+**Latest collection, 2026-10-29:** the bounded
+[fixed-basket price/action acquisition](broad_100_collection_results.md) is
+complete. Read its current coverage and evidence gaps before the older cache
+snapshot below. No new performance batch or paper trading is approved.
+The owner is open to more than seven holdings; the
+[recorded preference](broad_position_count_preference.md) will inform a concrete
+future amendment rather than silently change the universe-only control.
+
 **Latest universe plan, 2026-10-29:** The
 [two-versus-100 proposal](broad_100_comparison_plan.md) isolates the number
 of eligible candidates while retaining the small experiment's rules, costs,

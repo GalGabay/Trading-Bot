@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-29",
+  "protocol": {
+    "path": "docs/broad_100_collection_protocol.json",
+    "sha256": "7e2aa77d3a7131981439f893a2052f0a4fbd4f0181fcca5ebb8964be9748eca5"
+  },
+  "qualification": {
+    "path": "data/reports/broad_100_collection_v1/qualification.json",
+    "sha256": "87b8efdeb2a3aef66ec6c8ce071dfb5feb66773d8fbbb0a8ab8fd9c006545670"
+  },
+  "qualification_csv": {
+    "path": "data/reports/broad_100_collection_v1/qualification.csv",
+    "sha256": "af109cadbee7845227dd4de2c46e7866bdd3c6ecc8a08b50f437511b160a3373"
+  },
+  "execution": {
+    "path": "backtesting/broad_evidence_review.py",
+    "sha256": "292cab34265c38b33a9fe64783be38a6a954a033d10aa8650ae2b3e43f3b0ebc"
+  },
+  "selected_count": 100,
+  "partial_or_empty_histories": 17,
+  "histories_with_interior_unobserved_sessions": 0,
+  "empty_price_histories": 0,
+  "histories_with_non_cash_events": 29,
+  "histories_with_incoming_alias_flags": 2,
+  "provider_event_categories": {
+    "cash_dividends": 2421,
+    "forward_splits": 13,
+    "stock_mergers": 6,
+    "name_changes": 10,
+    "reverse_splits": 6,
+    "cash_mergers": 5,
+    "spin_offs": 2
+  },
+  "cash_dividends_without_payable_date": 1334,
+  "cash_dividends_without_announcement_date": 2421,
+  "raw_close_moves_at_least_40_percent": 21,
+  "public_document_requests": 0,
+  "additional_price_requests": 0,
+  "strategy_runs": 0,
+  "new_stocks_admitted": 0,
+  "broad_performance_ready": false,
+  "limitation": "Raw-price move threshold is triage only. Absent observations and provider events cannot establish identity, delisting terms or completeness. Evidence targets are review tasks, not an executable/public acquisition queue.",
+  "evidence_review_targets.json": {
+    "path": "data/reports/broad_100_collection_v1/evidence_review_targets.json",
+    "sha256": "3346d3f6e36cd611d444f467b96c2d463d1827babc2e4969cf9848e532a442b3"
+  },
+  "action_evidence_inventory.csv": {
+    "path": "data/reports/broad_100_collection_v1/action_evidence_inventory.csv",
+    "sha256": "bf901050207264894c049110bdb5df3829c51f5e0cf0eaa05dee4671bdd8dd1b"
+  },
+  "large_raw_price_moves.csv": {
+    "path": "data/reports/broad_100_collection_v1/large_raw_price_moves.csv",
+    "sha256": "f97472a604a164d6f714a75e899e9db24e4ce81524912bb2ba39979f319a87f1"
+  }
+}

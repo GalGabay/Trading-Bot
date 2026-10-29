@@ -1,0 +1,1265 @@
+{
+  "schema_version": 1,
+  "authorized_on": "2026-10-29",
+  "authorization": "Owner requested implementation and execution of bounded free collection for this fixed basket",
+  "purchase_budget_usd": 0,
+  "performance_authorized": false,
+  "paper_authorized": false,
+  "plan": {
+    "path": "docs/broad_100_comparison_plan.json",
+    "sha256": "2bb79392cdacf27be28ce2ff1e4dc5c2b81c9c778a8746da147a5d9d2c3b393a"
+  },
+  "roster": {
+    "path": "docs/research_data/broad_100_candidate_roster.csv",
+    "sha256": "60d7828f737a6322ce681ade4aea88d72ddc702868aa270b105b2dcd0e119615"
+  },
+  "qualification": {
+    "path": "docs/broad_sample_qualification_summary.json",
+    "sha256": "254655d129755dcf59d2a260efe52bbe4bb8a9e4204ac34f32d648669944c781"
+  },
+  "inventory": {
+    "path": "docs/research_data/broad_100_cached_inventory.csv",
+    "sha256": "861c85b00199dde4b270077e0de2edc0bfa0666c1cb032f05685dcebe3738490"
+  },
+  "prior_report": {
+    "path": "data/reports/free_collection_v1/report.json",
+    "sha256": "da511bb697e6354239e182b6171625cb52cd2e9e0bc274c6f9ffffd5a766fe51"
+  },
+  "prior_summary": {
+    "path": "docs/free_collection_summary.json",
+    "sha256": "3bb48c67adde3ee76824f014b6a3727d00b5e178da4286932246b534e743607f"
+  },
+  "calendar": {
+    "path": "data/reports/broad_universe_audit_final/calendar.json",
+    "sha256": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7"
+  },
+  "prior_event_review": {
+    "path": "docs/free_collection_event_review.json",
+    "sha256": "8be81df04eb1d135dd265e3be5fad417924902a817394dbb0d38c17e94bfc896"
+  },
+  "execution_sha256": {
+    "backtesting/broad_collection.py": "57b791f6c8795a3c6f0188adf28c823a5305349f35968918e7a82cdbe163582f",
+    "app/broker/research_client.py": "2e858e7bc6efe8e14e9eff69024bf7f5fe57fbde842dee35f05da361a24d95c6",
+    "backtesting/free_collection.py": "fb830e4cf32a66347ccfd9def5075c9fdc7054159648ea1b5bfb5294e1eb7773",
+    "app/data/market_data.py": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb",
+    "backtesting/cohort_audit.py": "508bc86515271d58a58e49aee20443efac0d93fb0ca05274dc068b46c2bff766",
+    "backtesting/pilot_qualification.py": "87cf334f3e4a49a114538d3759586708894a48e4fc43723eccad2c68fa8eb19d",
+    "backtesting/pilot_readiness_review.py": "f62ee88949f6b93309f63f561aef3d2d5f726218a82193d10bd2cb6fef738eea"
+  },
+  "limits": {
+    "status": "not_executed_not_an_executable_queue",
+    "new_purchases_budget_usd": 0,
+    "subscription_changes": false,
+    "paid_fallback": false,
+    "candidates_missing_full_raw_cache": [
+      "COHORT-2016-0001",
+      "COHORT-2016-0002",
+      "COHORT-2016-0007",
+      "COHORT-2016-0012",
+      "COHORT-2016-0014",
+      "COHORT-2016-0023",
+      "COHORT-2016-0028",
+      "COHORT-2016-0029",
+      "COHORT-2016-0030",
+      "COHORT-2016-0046",
+      "COHORT-2016-0048",
+      "COHORT-2016-0058",
+      "COHORT-2016-0059",
+      "COHORT-2016-0060",
+      "COHORT-2016-0071",
+      "COHORT-2016-0073",
+      "COHORT-2016-0076",
+      "COHORT-2016-0077",
+      "COHORT-2016-0089",
+      "COHORT-2016-0093",
+      "COHORT-2016-0095",
+      "COHORT-2016-0096",
+      "COHORT-2016-0097",
+      "COHORT-2016-0106",
+      "COHORT-2016-0124",
+      "COHORT-2016-0127",
+      "COHORT-2016-0130",
+      "COHORT-2016-0133",
+      "COHORT-2016-0137",
+      "COHORT-2016-0140",
+      "COHORT-2016-0144",
+      "COHORT-2016-0148",
+      "COHORT-2016-0150",
+      "COHORT-2016-0152",
+      "COHORT-2016-0155",
+      "COHORT-2016-0166",
+      "COHORT-2016-0169",
+      "COHORT-2016-0170",
+      "COHORT-2016-0174",
+      "COHORT-2016-0178",
+      "COHORT-2016-0179",
+      "COHORT-2016-0181",
+      "COHORT-2016-0185",
+      "COHORT-2016-0193",
+      "COHORT-2016-0196",
+      "COHORT-2016-0204",
+      "COHORT-2016-0208",
+      "COHORT-2016-0219",
+      "COHORT-2016-0227",
+      "COHORT-2016-0247",
+      "COHORT-2016-0257",
+      "COHORT-2016-0258",
+      "COHORT-2016-0262",
+      "COHORT-2016-0264",
+      "COHORT-2016-0267",
+      "COHORT-2016-0269",
+      "COHORT-2016-0272",
+      "COHORT-2016-0280",
+      "COHORT-2016-0287",
+      "COHORT-2016-0288",
+      "COHORT-2016-0289",
+      "COHORT-2016-0293",
+      "COHORT-2016-0300",
+      "COHORT-2016-0311",
+      "COHORT-2016-0314",
+      "COHORT-2016-0321",
+      "COHORT-2016-0324",
+      "COHORT-2016-0330",
+      "COHORT-2016-0332",
+      "COHORT-2016-0333",
+      "COHORT-2016-0339",
+      "COHORT-2016-0352",
+      "COHORT-2016-0364",
+      "COHORT-2016-0368",
+      "COHORT-2016-0374",
+      "COHORT-2016-0387",
+      "COHORT-2016-0389",
+      "COHORT-2016-0397",
+      "COHORT-2016-0399",
+      "COHORT-2016-0406",
+      "COHORT-2016-0413",
+      "COHORT-2016-0427",
+      "COHORT-2016-0428",
+      "COHORT-2016-0429",
+      "COHORT-2016-0434",
+      "COHORT-2016-0436",
+      "COHORT-2016-0447",
+      "COHORT-2016-0463",
+      "COHORT-2016-0464",
+      "COHORT-2016-0466",
+      "COHORT-2016-0473",
+      "COHORT-2016-0475",
+      "COHORT-2016-0476",
+      "COHORT-2016-0479",
+      "COHORT-2016-0488",
+      "COHORT-2016-0500",
+      "COHORT-2016-0503"
+    ],
+    "candidate_ids_limit": 100,
+    "global_http_attempt_limit": 800,
+    "max_pages_per_symbol_resource": 4,
+    "max_probe_intervals_per_batch": 24,
+    "per_batch_http_attempt_limit": 192,
+    "global_wall_clock_limit_minutes": 60,
+    "per_batch_wall_clock_limit_minutes": 15,
+    "timeout_seconds": 30,
+    "minimum_request_spacing_seconds": 0.4,
+    "cumulative_budget_across_batches": true,
+    "first_access_or_transport_failure_stops_all_batches": true,
+    "automatic_retries": false,
+    "automatic_redirects": false,
+    "automatic_feed_fallback": false,
+    "endpoints": [
+      "GET https://data.alpaca.markets/v2/stocks/bars",
+      "GET https://data.alpaca.markets/v1/corporate-actions"
+    ],
+    "feed": "sip",
+    "adjustment": "raw",
+    "timeframe": "1Day",
+    "asof": "-",
+    "start_inclusive": "2016-01-01",
+    "end_exclusive": "2024-01-01",
+    "aliases_are_untrusted_probes_until_reviewed": true,
+    "successor_or_extra_alias_requests_require_review_within_same_global_cap": true,
+    "no_jpm_requests": true,
+    "no_account_order_billing_endpoints": true,
+    "documentation_collection_not_included": "Issuer/SEC evidence targets and their separate public request cap must be frozen before any public-document batch; no unbounded searches"
+  },
+  "queue": [
+    {
+      "instrument_id": "COHORT-2016-0047",
+      "snapshot_alias": "AAPL",
+      "source_name": "Apple, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": {
+        "path": "data/reports/free_collection_v1/001/bars.csv",
+        "sha256": "c36a2c5b248665dad477a0e9315c9584f1829d3bf801dd4ec2ea8dd0901cc8fb"
+      },
+      "cached_action_queries": [
+        {
+          "symbol": "AAPL",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/001/actions_1.json",
+              "sha256": "5c3efb7c6876a2d85cf205aa1786587b24fbc619944263cf9c56d40af5610a1f"
+            }
+          ]
+        }
+      ],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0088",
+      "snapshot_alias": "CBG",
+      "source_name": "CBRE Group, Inc. Class AREIT(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": {
+        "path": "data/reports/free_collection_review_v1/cbre_observed_alias_stream.csv",
+        "sha256": "d767f4c727eefcc09a58cd5221b4c8c555a63ab152cfa66c4a0c11b9f45d6c20"
+      },
+      "cached_action_queries": [
+        {
+          "symbol": "CBG",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/008/actions_1.json",
+              "sha256": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3"
+            }
+          ]
+        },
+        {
+          "symbol": "CBRE",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/009/actions_1.json",
+              "sha256": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3"
+            }
+          ]
+        }
+      ],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0479",
+      "snapshot_alias": "WMT",
+      "source_name": "Wal-Mart Stores, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0014",
+      "snapshot_alias": "APD",
+      "source_name": "Air Products & Chemicals, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0387",
+      "snapshot_alias": "RTN",
+      "source_name": "Raytheon Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0257",
+      "snapshot_alias": "JNJ",
+      "source_name": "Johnson & Johnson",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0012",
+      "snapshot_alias": "AFL",
+      "source_name": "Aflac, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0287",
+      "snapshot_alias": "MTB",
+      "source_name": "M&T Bank Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0048",
+      "snapshot_alias": "AMAT",
+      "source_name": "Applied Materials, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0332",
+      "snapshot_alias": "NEE",
+      "source_name": "NextEra Energy, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0170",
+      "snapshot_alias": "EOG",
+      "source_name": "EOG Resources, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0179",
+      "snapshot_alias": "EXPE",
+      "source_name": "Expedia, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0185",
+      "snapshot_alias": "FB",
+      "source_name": "Facebook, Inc. Class A(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0397",
+      "snapshot_alias": "ROP",
+      "source_name": "Roper Technologies, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0152",
+      "snapshot_alias": "DOW",
+      "source_name": "Dow Chemical Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0269",
+      "snapshot_alias": "KHC",
+      "source_name": "Kraft Heinz Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0150",
+      "snapshot_alias": "D",
+      "source_name": "Dominion Resources, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0095",
+      "snapshot_alias": "CF",
+      "source_name": "CF Industries Holdings, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0089",
+      "snapshot_alias": "CBS",
+      "source_name": "CBS Corp. Class B",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0071",
+      "snapshot_alias": "BA",
+      "source_name": "Boeing Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0144",
+      "snapshot_alias": "DLR",
+      "source_name": "Digital Realty Trust, Inc. REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0029",
+      "snapshot_alias": "AEE",
+      "source_name": "Ameren Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0169",
+      "snapshot_alias": "ETR",
+      "source_name": "Entergy Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0060",
+      "snapshot_alias": "BLL",
+      "source_name": "Ball Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0267",
+      "snapshot_alias": "KLAC",
+      "source_name": "KLA-Tencor Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0193",
+      "snapshot_alias": "FISV",
+      "source_name": "Fiserv, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0140",
+      "snapshot_alias": "DLPH",
+      "source_name": "Delphi Automotive PLC",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0124",
+      "snapshot_alias": "STZ",
+      "source_name": "Constellation Brands, Inc.Class A",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0096",
+      "snapshot_alias": "SCHW",
+      "source_name": "Charles Schwab Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0321",
+      "snapshot_alias": "MYL",
+      "source_name": "Mylan NV(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0339",
+      "snapshot_alias": "NTRS",
+      "source_name": "Northern Trust Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0028",
+      "snapshot_alias": "AMZN",
+      "source_name": "Amazon.com, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0300",
+      "snapshot_alias": "MCD",
+      "source_name": "McDonald\u2019s Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0500",
+      "snapshot_alias": "XL",
+      "source_name": "XL Group, Ltd.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0181",
+      "snapshot_alias": "ESRX",
+      "source_name": "Express Scripts Holding Co.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0133",
+      "snapshot_alias": "CVS",
+      "source_name": "CVS Health Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [
+        {
+          "symbol": "CVS",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/014/actions_1.json",
+              "sha256": "3b7310f0bc3f9f4a46dbc6f15eab40d1b299352977b7c8604daf6a90c873020d"
+            }
+          ]
+        }
+      ],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0364",
+      "snapshot_alias": "PNW",
+      "source_name": "Pinnacle West Capital Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0247",
+      "snapshot_alias": "IFF",
+      "source_name": "International Flavors & Fragrances, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0093",
+      "snapshot_alias": "CTL",
+      "source_name": "CenturyLink, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [
+        {
+          "symbol": "CTL",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/015/actions_1.json",
+              "sha256": "b97e73ab05125cab2e4aa025879a3253e5c76e61a7f5e1592e182876a0661a2b"
+            }
+          ]
+        }
+      ],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0272",
+      "snapshot_alias": "LLL",
+      "source_name": "L-3 Communications Holdings, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0059",
+      "snapshot_alias": "BHI",
+      "source_name": "Baker Hughes, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0280",
+      "snapshot_alias": "LNC",
+      "source_name": "Lincoln National Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0058",
+      "snapshot_alias": "AVY",
+      "source_name": "Avery Dennison Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0389",
+      "snapshot_alias": "RHT",
+      "source_name": "Red Hat, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0178",
+      "snapshot_alias": "EXC",
+      "source_name": "Exelon Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0488",
+      "snapshot_alias": "WU",
+      "source_name": "Western Union Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0434",
+      "snapshot_alias": "TDC",
+      "source_name": "Teradata Corp.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0127",
+      "snapshot_alias": "COST",
+      "source_name": "Costco Wholesale Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0427",
+      "snapshot_alias": "SYMC",
+      "source_name": "Symantec Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0097",
+      "snapshot_alias": "CHTR",
+      "source_name": "Charter Communications, Inc.Class A(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0399",
+      "snapshot_alias": "RCL",
+      "source_name": "Royal Caribbean Cruises, Ltd.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0463",
+      "snapshot_alias": "UNM",
+      "source_name": "Unum Group",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0368",
+      "snapshot_alias": "PPG",
+      "source_name": "PPG Industries, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0023",
+      "snapshot_alias": "LNT",
+      "source_name": "Alliant Energy Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0429",
+      "snapshot_alias": "SYY",
+      "source_name": "Sysco Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0476",
+      "snapshot_alias": "VNO",
+      "source_name": "Vornado Realty Trust REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0196",
+      "snapshot_alias": "FLR",
+      "source_name": "Fluor Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0030",
+      "snapshot_alias": "AAL",
+      "source_name": "American Airlines Group, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0155",
+      "snapshot_alias": "DUK",
+      "source_name": "Duke Energy Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0333",
+      "snapshot_alias": "NLSN",
+      "source_name": "Nielsen Holdings PLC",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0148",
+      "snapshot_alias": "DG",
+      "source_name": "Dollar General Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0473",
+      "snapshot_alias": "VFC",
+      "source_name": "VF Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0007",
+      "snapshot_alias": "ADBE",
+      "source_name": "Adobe Systems, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0106",
+      "snapshot_alias": "CTAS",
+      "source_name": "Cintas Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0002",
+      "snapshot_alias": "ABT",
+      "source_name": "Abbott Laboratories",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0454",
+      "snapshot_alias": "UA",
+      "source_name": "Under Armour, Inc. Class A(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": {
+        "path": "data/reports/free_collection_review_v1/ua_class_a_observed_alias_stream.csv",
+        "sha256": "f067c2d9db69393f409526e28262867195af69eb0ed3df9df2f836e3aadf66cf"
+      },
+      "cached_action_queries": [
+        {
+          "symbol": "UA",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/004/actions_1.json",
+              "sha256": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3"
+            }
+          ]
+        },
+        {
+          "symbol": "UAA",
+          "pages": [
+            {
+              "path": "data/reports/free_collection_v1/005/actions_1.json",
+              "sha256": "33315fd4b98f8c4a84a912fcde49a880c681a65cc645805aac4085fb90cdf8f3"
+            }
+          ]
+        }
+      ],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0311",
+      "snapshot_alias": "MHK",
+      "source_name": "Mohawk Industries, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0475",
+      "snapshot_alias": "V",
+      "source_name": "Visa, Inc. Class A",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0174",
+      "snapshot_alias": "EQR",
+      "source_name": "Equity Residential REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0293",
+      "snapshot_alias": "MAR",
+      "source_name": "Marriott International, Inc.Class A",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0406",
+      "snapshot_alias": "STX",
+      "source_name": "Seagate Technology PLC",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0374",
+      "snapshot_alias": "PGR",
+      "source_name": "Progressive Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0264",
+      "snapshot_alias": "KMB",
+      "source_name": "Kimberly-Clark Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0073",
+      "snapshot_alias": "BXP",
+      "source_name": "Boston Properties, Inc. REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0130",
+      "snapshot_alias": "CSRA",
+      "source_name": "CSRA, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "snapshot_alias": "JCI",
+      "source_name": "Johnson Controls International PLC",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "snapshot_alias": "AIV",
+      "source_name": "Apartment Investment & Management Co. Class A REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0227",
+      "snapshot_alias": "HCP",
+      "source_name": "HCP, Inc. REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "snapshot_alias": "SLG",
+      "source_name": "SL Green Realty Corp. REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0204",
+      "snapshot_alias": "FCX",
+      "source_name": "Freeport-McMoRan, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0137",
+      "snapshot_alias": "DVA",
+      "source_name": "DaVita, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0464",
+      "snapshot_alias": "URBN",
+      "source_name": "Urban Outfitters, Inc.(a)",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0001",
+      "snapshot_alias": "MMM",
+      "source_name": "3M Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0330",
+      "snapshot_alias": "NWSA",
+      "source_name": "News Corp. Class A",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0262",
+      "snapshot_alias": "K",
+      "source_name": "Kellogg Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0436",
+      "snapshot_alias": "TXN",
+      "source_name": "Texas Instruments, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0503",
+      "snapshot_alias": "YUM",
+      "source_name": "Yum! Brands, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0314",
+      "snapshot_alias": "MON",
+      "source_name": "Monsanto Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0219",
+      "snapshot_alias": "HAL",
+      "source_name": "Halliburton Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0289",
+      "snapshot_alias": "M",
+      "source_name": "Macy\u2019s, Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0428",
+      "snapshot_alias": "SYF",
+      "source_name": "Synchrony Financial",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0447",
+      "snapshot_alias": "TRV",
+      "source_name": "Travelers Cos., Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0077",
+      "snapshot_alias": "BF.B",
+      "source_name": "Brown-Forman Corp. Class B",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0324",
+      "snapshot_alias": "NAVI",
+      "source_name": "Navient Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0166",
+      "snapshot_alias": "LLY",
+      "source_name": "Eli Lilly & Co.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0352",
+      "snapshot_alias": "PDCO",
+      "source_name": "Patterson Cos., Inc.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0288",
+      "snapshot_alias": "MAC",
+      "source_name": "Macerich Co. REIT",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0466",
+      "snapshot_alias": "VLO",
+      "source_name": "Valero Energy Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0076",
+      "snapshot_alias": "AVGO",
+      "source_name": "Broadcom, Ltd.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0208",
+      "snapshot_alias": "GD",
+      "source_name": "General Dynamics Corp.",
+      "start": "2016-01-01",
+      "end_exclusive": "2024-01-01",
+      "cached_bars": null,
+      "cached_action_queries": [],
+      "ready_for_simulation": false
+    }
+  ],
+  "output": "data/reports/broad_100_collection_v1",
+  "one_shot_journal": "data/reports/broad_100_collection_execution.json",
+  "interpretation": "Historical aliases are untrusted probes. No new successor/alias probes or public-document GETs authorized by this queue."
+}

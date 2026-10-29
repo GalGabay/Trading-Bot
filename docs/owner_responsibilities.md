@@ -14,6 +14,15 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest collection, 2026-10-29:** I have implemented and executed the
+[bounded free 100-stock collection](broad_100_collection_results.md), then
+reviewed the saved prices and company-event gaps offline. You have no purchase,
+setup or personal paper-risk task now. I recorded your willingness to exceed
+seven holdings in the [position-count note](broad_position_count_preference.md).
+Before another performance batch, I will present the concrete expanded
+assumptions and any numerical count/exposure amendment for review. The
+completed two-stock approval does not approve those changes or paper trading.
+
 **Latest broader-sample plan, 2026-10-29:** The
 [100-name roster and cache qualification](broad_100_comparison_plan.md) are
 complete. Apple/CBRE are retained; 98 historical names were selected by a

@@ -36,3 +36,7 @@ docs/limited_pilot_experiment_summary.json -text
 docs/broad_sample_qualification_review.json -text
 docs/broad_sample_qualification_summary.json -text
 docs/broad_100_comparison_plan.json -text
+docs/broad_100_collection_protocol.json -text
+docs/broad_100_collection_summary.json -text
+docs/broad_100_evidence_summary.json -text
+docs/research_data/broad_100_event_review_targets.json -text
