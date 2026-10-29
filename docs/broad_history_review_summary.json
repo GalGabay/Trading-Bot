@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-29",
+  "facts": {
+    "path": "docs/broad_history_review_facts.json",
+    "sha256": "0c759610544488d7e806cb8be1c0161ca7f7a28b341dbaf130960ca1b2581af5"
+  },
+  "protocol": {
+    "path": "docs/broad_history_review_protocol.json",
+    "sha256": "cb66bba9a654c8be54c246be3d0493c8dfcf494e9f775ab3341dd0885d7020a0"
+  },
+  "execution": {
+    "path": "backtesting/broad_history_review.py",
+    "sha256": "dc6f26f97bffb82521a7c567335b285d2bd6dab500fb3c574a2f31aa33ad0272"
+  },
+  "source_sha256": {
+    "data/reports/broad_100_collection_v1/005/qualified_observations.csv": "124cf394405bf3ccdbb96329cf994c6ea85ecc6bc7f4b629687e6b8b4e07a9b1",
+    "data/reports/broad_100_collection_v1/013/qualified_observations.csv": "4d6549705f087cd707952985274f08fe79fa35bfec7f10260ab76da969c170fc",
+    "data/reports/broad_100_collection_v1/019/qualified_observations.csv": "667dc77c298bd8594f0a6a11ea99de47000febe57b198954ae2ffbde0a28bb8a",
+    "data/reports/broad_100_collection_v1/024/qualified_observations.csv": "680de950597e422a68db5bae32e946bd9e81fe9da35777d59d6ccc5af7f30464",
+    "data/reports/broad_100_collection_v1/026/qualified_observations.csv": "5537371f63e6843b3bc110b77e112a368a58624ea24cf4c3b9cf87832871ffc5",
+    "data/reports/broad_100_collection_v1/027/qualified_observations.csv": "3622eec2ffa5d674bdf435a2f223eed7913501e642ef00d67615c7fec67c1e91",
+    "data/reports/broad_100_collection_v1/030/qualified_observations.csv": "f58f04b6b9185a41d3f85fcc110e5f62a4efa2f0cd30baa5974413b4ea59d70f",
+    "data/reports/broad_100_collection_v1/034/qualified_observations.csv": "d2fa6d500f4dbee1dfe3b653d79885747213fd797ddc1f625d55767386dbf129",
+    "data/reports/broad_100_collection_v1/035/qualified_observations.csv": "0710f1e7e3fce51aaca1e3c17e1ca91fbf0b90f293451441c1de226f23228b0e",
+    "data/reports/broad_100_collection_v1/039/qualified_observations.csv": "4d6170aafe3d2b6bde04d91fd28fef62887589ae9323d19b518fd8b1ea9f76e8",
+    "data/reports/broad_100_collection_v1/040/qualified_observations.csv": "6a84bf4829e5ee8c3f5a15767ae9685fed082f4dbc3cdec9f0a7da3c08443d09",
+    "data/reports/broad_100_collection_v1/041/qualified_observations.csv": "2128decc070be58520dfa10072a4eb7f35d70ed1e3bc31d3e0927cd4e00b8649",
+    "data/reports/broad_100_collection_v1/044/qualified_observations.csv": "b81f809605286f4096edbcdcb8fa73d7bd3151411520d1458bbc6f67ed08c34e",
+    "data/reports/broad_100_collection_v1/049/qualified_observations.csv": "ed24540aeabde1487162c7949cbdbb2bcbab651a751e65d642b83b7d747be064",
+    "data/reports/broad_100_collection_v1/060/qualified_observations.csv": "67441865191e1794ef2670d368afe2c5b651ccdbe1e00e7ba41c601ae6308039",
+    "data/reports/broad_100_collection_v1/075/qualified_observations.csv": "5ea616923452da11f8d852e4383e1b0343d61832d93c0391168db5e7a282709c",
+    "data/reports/broad_100_collection_v1/088/qualified_observations.csv": "b240819d3c4d15840fed0ca6f077466d912cf1198a3608cca67e6dabce0400a1"
+  },
+  "selected_count": 100,
+  "partial_cases_reviewed": 17,
+  "classifications": {
+    "stock_merger": 3,
+    "rename": 4,
+    "unresolved_merger_and_date_conflict": 1,
+    "parent_child_ticker_reuse": 1,
+    "cash_merger": 5,
+    "cash_and_stock_merger": 2,
+    "rename_and_asset_sale": 1
+  },
+  "unsegmented_identity_conflicts": [
+    "DLPH",
+    "XL",
+    "LLL",
+    "MON"
+  ],
+  "primary_reference_not_established": [
+    "CBS"
+  ],
+  "public_review": {
+    "search_queries": 18,
+    "page_opens_dispatched": 8,
+    "pages_opened_successfully": 7,
+    "access_barrier": {
+      "url": "https://www.ball.com/newswire/article/124123/ball-board-declares-quarterly-dividend-stock-ticker-symbol-changing-to-ball",
+      "http_status": 403
+    },
+    "stopped_after_barrier_observed": true,
+    "other_opens_in_same_already_dispatched_batch": 6,
+    "additional_opens_after_barrier_observed": 0,
+    "original_html_downloads": 0,
+    "purchases_usd": 0
+  },
+  "original_candles_modified": false,
+  "new_stocks_admitted": 0,
+  "new_price_requests": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "strategy_runs": 0,
+  "performance_authorized": false,
+  "ready_for_broad_scoring": false,
+  "cases": {
+    "path": "data/reports/broad_history_review_v1/cases.csv",
+    "sha256": "ff850a1971944ba5d587df1b1b9d76aa76987c8bda818e796c9034a74b8c869a"
+  },
+  "limitation": "Evidence review and discovery only. Full source capture, lifetime segmentation, event ownership, delivery terms and successor prices still gate execution; no alias stitching or strategy run occurred."
+}

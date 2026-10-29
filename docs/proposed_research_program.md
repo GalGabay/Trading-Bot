@@ -1,5 +1,15 @@
 # Proposed research program before the first paper trial
 
+**Latest verification/design, 2026-10-29:** the
+[collector and partial-history review](broad_history_review_results.md)
+passes 147 offline tests and identifies four unsegmented identity conflicts.
+The owner wants more than 35% account capacity. A separate
+[five-arm expanded proposal](broad_expanded_backtest_proposal.md) keeps the old
+control while isolating universe, slot and 70%/90% exposure effects. Its
+120-case allowance, assumptions and runner are not approved or executed.
+Corrected lifetimes, ownership outcomes and successor valuations still gate
+performance; no difficult stock is dropped and 2024-2025 remain reserved.
+
 **Latest collection, 2026-10-29:** the bounded
 [fixed-basket price/action acquisition](broad_100_collection_results.md) is
 complete. Read its current coverage and evidence gaps before the older cache

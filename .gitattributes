@@ -40,3 +40,12 @@ docs/broad_100_collection_protocol.json -text
 docs/broad_100_collection_summary.json -text
 docs/broad_100_evidence_summary.json -text
 docs/research_data/broad_100_event_review_targets.json -text
+# Preserve this verification/review record without changing older source pins.
+docs/broad_history_review_protocol.json -text
+docs/broad_history_review_facts.json -text
+docs/broad_history_review_summary.json -text
+docs/broad_expanded_backtest_proposal.json -text
+docs/broad_collection_test_summary.json -text
+backtesting/broad_history_review.py -text
+tests/test_broad_collection.py -text
+tests/test_broad_history_review.py -text

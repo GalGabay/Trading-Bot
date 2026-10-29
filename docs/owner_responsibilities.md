@@ -14,6 +14,18 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest verification and allocation proposal, 2026-10-29:**
+[147 offline tests pass and all 17 partial histories were reviewed](broad_history_review_results.md).
+You clarified that 35% total invested capacity is too low for your intended
+research. The [concrete expanded proposal](broad_expanded_backtest_proposal.md)
+keeps 5% per-stock entries and compares 35%/70%/90% total entry caps and 7/20
+slots. Review it in chat; no JSON/Python edit, installation or purchase is due.
+Your preference is recorded; exact new numbers and expanded evidence
+assumptions still need review before performance execution. My next work is
+the corrected historical segments and exact bounded successor-data/event
+package, followed by the broader diagnostic runner. Paper limits remain a
+separate later decision, and paper submission remains disabled.
+
 **Latest collection, 2026-10-29:** I have implemented and executed the
 [bounded free 100-stock collection](broad_100_collection_results.md), then
 reviewed the saved prices and company-event gaps offline. You have no purchase,

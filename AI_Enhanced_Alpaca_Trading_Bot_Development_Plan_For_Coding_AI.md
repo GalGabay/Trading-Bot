@@ -4402,3 +4402,47 @@ execution. Next engineering work is focused offline collector/qualifier tests
 and bounded resolution of historical aliases and company-event terms. The
 owner has no setup/purchase task now; expanded assumptions and any allocation
 amendment must be made concrete for review before another performance batch.
+
+## Collector verification, historical identity review and exposure proposal (2026-10-29)
+
+The owner then clarified that 35% total account investment capacity is too
+low for the intended research. It was not a 35% single-stock setting. The
+[expanded proposal](docs/broad_expanded_backtest_proposal.md) preserves the
+original controls and proposes five arms isolating universe size, 7/20 slots
+and 35%/70%/90% total entry caps while retaining 5% per-stock entries. These
+are proposed maxima, not forced investment or guaranteed continuous caps.
+No active research/paper risk configuration has changed. Keep the approved
+6% CAGR and 5% drawdown rejection criteria; do not claim higher exposure can
+guarantee the owner's loss threshold.
+
+Focused verification now passes 147 tests: 76 new collector/qualifier/history
+checks and 71 related candle/public collector/parser checks. The runner blocks
+real credentials and socket connections. No production collector or frozen
+protocol was altered to make tests pass. See the
+[test/history results](docs/broad_history_review_results.md) and
+[structured verification summary](docs/broad_collection_test_summary.json).
+
+The separate offline `backtesting/broad_history_review.py` reviewed all 17
+partial histories using preserved prices plus a new bounded primary-source
+discovery/fact journal. DLPH, XL, LLL and MON unsegmented histories mix identities
+or ownership branches and remain unapproved. Renames, share/cash mergers,
+parent/child distributions and CBS's unresolved date conflict are explicit.
+Economic dates are not silently treated as delivery or last-trading dates.
+
+The public review used 18 search queries and eight dispatched page opens;
+seven opened and Ball returned 403. Further retrieval stopped when that
+barrier was observed; earlier access records are retained. Search-only facts
+are not full archived source evidence. No original source HTML, new broker
+prices, account data or holdout candles were collected; no purchase, order or
+strategy run occurred. No additional stock is admitted and Pi execution is
+still unverified.
+
+The five-arm proposal declares 120 maximum new strategy attempts, the fixed
+periods/costs/cash policies, missing-date handling, non-roster-share disposal
+proposal, profiling/time budgets and data/approval gates. This does not reopen
+the completed 24 runs or approve the prior 48-run proposal. Next engineering
+work is corrected issuer/alias segments and a bounded successor-data/event
+package, then the broader diagnostic path/runner. The owner can review the
+proposed caps and assumptions in chat; no installation, purchase or paper-risk
+JSON change is due now. New performance awaits ready inputs and concrete
+scope/allocation approval.

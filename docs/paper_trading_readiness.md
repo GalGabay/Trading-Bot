@@ -2,6 +2,14 @@
 
 Status: 2026-10-29.
 
+The [latest offline verification/history review](broad_history_review_results.md)
+passes 147 tests, with four identity conflicts and additional economic/delivery
+gaps still blocking the broader backtest. The owner's higher-exposure request
+is reflected in a [concrete research proposal](broad_expanded_backtest_proposal.md),
+not an enabled allocation: 35%/70%/90% total entry capacity, 5% per-stock entries
+and 7/20 slots. All performance and paper approval gates remain. No money,
+paper order or account access was used in this increment.
+
 The [bounded 100-stock collection](broad_100_collection_results.md) has now
 executed. Its current results supersede the older pre-collection cache counts
 below. Price coverage alone does not resolve historical identity, company-event

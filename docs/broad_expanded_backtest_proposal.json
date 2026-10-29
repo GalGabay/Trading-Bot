@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "status": "concrete_proposal_for_review_not_executable",
+  "original_comparison": {
+    "path": "docs/broad_100_comparison_plan.json",
+    "sha256": "2bb79392cdacf27be28ce2ff1e4dc5c2b81c9c778a8746da147a5d9d2c3b393a"
+  },
+  "history_review": {
+    "path": "docs/broad_history_review_summary.json",
+    "sha256": "68454c98080c632d0f532f74955f1b754e50f6b5e2e6b4ebe17acba83a83e762"
+  },
+  "fixed_roster": {
+    "path": "docs/research_data/broad_100_candidate_roster.csv",
+    "sha256": "60d7828f737a6322ce681ade4aea88d72ddc702868aa270b105b2dcd0e119615"
+  },
+  "acceptance": {
+    "path": "config/research_acceptance.json",
+    "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+  },
+  "owner_intent": {
+    "wants_more_than_35_percent_total_capacity": true,
+    "open_to_more_than_seven_holdings": true,
+    "new_numeric_exposure_approved": false,
+    "new_numeric_position_count_approved": false,
+    "no_35_percent_single_stock_approval_inferred": true
+  },
+  "performance_authorized": false,
+  "paper_authorized": false,
+  "purchases_budget_usd": 0,
+  "arms": [
+    {
+      "id": "two_stock_frozen_control",
+      "candidate_count": 2,
+      "total_entry_exposure_cap": 0.35,
+      "per_stock_entry_cap": 0.05,
+      "max_positions": 7,
+      "role": "Exact original 24-case replay",
+      "performance_cases": 24
+    },
+    {
+      "id": "hundred_frozen_allocation",
+      "candidate_count": 100,
+      "total_entry_exposure_cap": 0.35,
+      "per_stock_entry_cap": 0.05,
+      "max_positions": 7,
+      "role": "Isolate historical candidate-universe size",
+      "performance_cases": 24
+    },
+    {
+      "id": "hundred_more_slots",
+      "candidate_count": 100,
+      "total_entry_exposure_cap": 0.35,
+      "per_stock_entry_cap": 0.05,
+      "max_positions": 20,
+      "role": "Isolate position-count effect versus preceding arm",
+      "performance_cases": 24
+    },
+    {
+      "id": "hundred_exposure70",
+      "candidate_count": 100,
+      "total_entry_exposure_cap": 0.7,
+      "per_stock_entry_cap": 0.05,
+      "max_positions": 20,
+      "role": "Proposed primary higher-exposure research arm",
+      "performance_cases": 24
+    },
+    {
+      "id": "hundred_exposure90",
+      "candidate_count": 100,
+      "total_entry_exposure_cap": 0.9,
+      "per_stock_entry_cap": 0.05,
+      "max_positions": 20,
+      "role": "Predeclared upper-exposure sensitivity, not a preferred result selected later",
+      "performance_cases": 24
+    }
+  ],
+  "unchanged_strategy": {
+    "id": "existing_breakout55_exit20_vol_latched_continuation30",
+    "entry_sessions": 55,
+    "exit_sessions": 20,
+    "stock_and_market_filter": "EMA200",
+    "initial_fixed_stop_atr14_multiple": 3,
+    "reentry_cooldown_sessions": 10,
+    "holding_policy": "Existing continuation_30: reviews 30,35,40,45,50,55,60,90,120,...; retain only with fresh prior-20-session high, positive estimated net sale profit, stock/SPY above EMA200; no hard maximum",
+    "position_cap": 0.05,
+    "stop_risk_cap": 0.005,
+    "annualized_volatility_contribution": 0.01,
+    "daily_loss_latched_halt": 0.03,
+    "drawdown_latched_halt": 0.1,
+    "risk_settings_role": "Frozen old research controls; not personal paper-risk approval and not a guarantee of 5% maximum loss",
+    "buy_priority": "alphabetical",
+    "fill_timing": "Next actual session open after a completed-close signal; ordinary stop conventions retained",
+    "parameter_search": false,
+    "ml": false
+  },
+  "windows": [
+    {
+      "id": "development_2017_2021",
+      "warmup_start": "2016-01-01",
+      "evaluation_start": "2017-01-01",
+      "end_exclusive": "2022-01-01"
+    },
+    {
+      "id": "development_robustness_2022_2023",
+      "warmup_start": "2019-01-01",
+      "evaluation_start": "2022-01-01",
+      "end_exclusive": "2024-01-01"
+    }
+  ],
+  "account_sizes_usd": [
+    10000,
+    100000
+  ],
+  "costs": [
+    {
+      "id": "base",
+      "slippage_bps_per_side": 5,
+      "full_spread_bps": 2,
+      "commission_per_order_usd": 0
+    },
+    {
+      "id": "pessimistic",
+      "slippage_bps_per_side": 20,
+      "full_spread_bps": 10,
+      "commission_per_order_usd": 1
+    }
+  ],
+  "cash_scenarios": [
+    "First actual open strictly after issuer payable New York date",
+    "Five further exchange-session opens after base",
+    "No credit within evaluation window; earned rights remain outstanding"
+  ],
+  "case_count_per_arm": 24,
+  "max_strategy_attempts": 120,
+  "old_24_attempt_budget_reopened": false,
+  "old_48_attempt_proposal_automatically_approved": false,
+  "compute_limits": {
+    "concurrent_workers": 1,
+    "max_case_minutes": 15,
+    "max_total_minutes": 360,
+    "profile_required_before_approval": true,
+    "stop_on_expiry": true,
+    "windows_first": true,
+    "pi_profile_before_pi_run": true
+  },
+  "entry_caps_are_not_investment_targets": true,
+  "continuous_forced_rebalancing_added": false,
+  "leverage": false,
+  "force_buying": false,
+  "increased_per_trade_stop_risk": false,
+  "unchanged_buy_priority": "Alphabetical stable-instrument IDs; no confidence ranking introduced",
+  "data_assumptions": [
+    {
+      "id": "scope",
+      "proposal": "Retain all fixed 100 historical members and every required ownership branch; no survivor replacement or dropping problematic identities",
+      "approved": false
+    },
+    {
+      "id": "provider_terms",
+      "proposal": "For any development diagnostic, explicitly label accepted vendor ex-date/rate/split fields and causal event timing per case; do not mark them independent primary-source verification",
+      "approved": false
+    },
+    {
+      "id": "missing_payment_dates",
+      "proposal": "Never fabricate a payable date. When absent, retain earned dividend rights as unspendable throughout the window. Where payable terms exist, compare first actual open strictly after payable date, five more sessions, and no in-window credit. Report nominal claims separately from spendable/after-exit cash",
+      "approved": false
+    },
+    {
+      "id": "missing_declaration_dates",
+      "proposal": "Provider records alone do not certify historical public availability. No dividend-prediction/announcement trading. Any diagnostic effective-date knowledge convention must be separately stated and approved; strict known-at gates remain blocked without sources",
+      "approved": false
+    },
+    {
+      "id": "renames",
+      "proposal": "Preserve original stable identity only for independently supported pure renames; obtain exact bounded alias intervals and real subsequent raw quotes before joining",
+      "approved": false
+    },
+    {
+      "id": "material_events",
+      "proposal": "Require supported parent/child/acquirer identity, ratios, cash terms, delivery scenarios, fractions and valuation. No free current-price replacement, invented terminal sale or zero recovery",
+      "approved": false
+    },
+    {
+      "id": "non_roster_successors",
+      "proposal": "No new discretionary entries in unselected children/acquirers. Inherited shares remain valued and are sold at the first supported regular open after delivery under a predeclared disposal policy and costs; unknown delivery blocks that case",
+      "approved": false
+    },
+    {
+      "id": "reused_aliases",
+      "proposal": "DLPH/XL/LLL/MON unsegmented streams cannot execute as their original 2016 issuer. Partition using independent lifetime evidence without deleting preserved original payloads",
+      "approved": false
+    }
+  ],
+  "gates_before_performance": [
+    "Resolve every selected identity and ownership/valuation branch; source-backed CBS transition still missing",
+    "Capture/check primary sources beyond search-only discoveries; preserve Ball403 and earlier barriers",
+    "Implement and verify the broader input/assumption path and event handling without weakening strict admission",
+    "Owner reviews exact expanded assumptions and higher-exposure/count arms",
+    "New bounded runner plus compute profiling and one-shot approval journal; original controls match before challenger scoring"
+  ],
+  "reporting": [
+    "All five arms and 120 attempted cases, including failures, incompletes and halts",
+    "Whole-account after-cost CAGR, realized P&L, estimated share exits and unspendable rights separately",
+    "Average/maximum exposure, exposure above entry caps after price drift, cash and drawdown",
+    "Entry blocker counts: slots, total exposure, single-name, cash, stop risk, volatility and signal absence; record simultaneous blockers if claiming all reasons",
+    "Daily-OHLC downside bounds, concentrations, correlation/sector limits not implemented, turnover and holding duration",
+    "Apply unchanged 6% CAGR and 5%drawdown rejection plus five-instrument/30-trade and other accepted gates; no threshold change or best-arm-only promotion"
+  ],
+  "approval_method": "Owner can review/approve in chat; engineer records a separate dated approval against finalized input/assumption hashes. No paper-risk JSON changes in this proposal.",
+  "strategy_runs_executed": 0
+}

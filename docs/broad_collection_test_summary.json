@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-29",
+  "tests_run": 147,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "successful": true,
+  "test_counts": {
+    "tests.test_broad_collection": 64,
+    "tests.test_broad_history_review": 12,
+    "tests.test_market_data": 14,
+    "tests.test_public_document_collection": 17,
+    "tests.test_public_source_review": 40
+  },
+  "new_tests": 76,
+  "related_tests": 71,
+  "test_sha256": {
+    "tests.test_broad_collection": "9a6c00ccc14a9a1252b53681550e4cb16cfe59c4d4dd866ae2ef08275be2dc77",
+    "tests.test_broad_history_review": "23c8b30aaef66e5f1cf405f9e32abd69cfff20f92c23b832def517bd33a8abcb",
+    "tests.test_market_data": "431c0873785d695fa0c3b81955813a4e455e41c73fc14f45313aecddfdaf41e1",
+    "tests.test_public_document_collection": "fba1381dc55723fd8b1685bc2c109666bbf1d9c67e292e804f7a01ab39a0db70",
+    "tests.test_public_source_review": "58e124b9affb0ceec6ee17e772ee74d78f3f7a69c09ccd6add2963de30547997"
+  },
+  "code": [
+    {
+      "path": "backtesting/broad_collection.py",
+      "sha256": "57b791f6c8795a3c6f0188adf28c823a5305349f35968918e7a82cdbe163582f"
+    },
+    {
+      "path": "backtesting/broad_evidence_review.py",
+      "sha256": "292cab34265c38b33a9fe64783be38a6a954a033d10aa8650ae2b3e43f3b0ebc"
+    },
+    {
+      "path": "backtesting/broad_history_review.py",
+      "sha256": "dc6f26f97bffb82521a7c567335b285d2bd6dab500fb3c574a2f31aa33ad0272"
+    }
+  ],
+  "log": {
+    "path": "data/reports/broad_collection_verification_v1/unit_tests.log",
+    "sha256": "2bb8caef9ce24dcd5f722086f52a821c80fe65d2c61fe7c872d5942673587725"
+  },
+  "protocol": {
+    "path": "docs/broad_100_collection_protocol.json",
+    "sha256": "7e2aa77d3a7131981439f893a2052f0a4fbd4f0181fcca5ebb8964be9748eca5"
+  },
+  "original_protocol_inputs_still_match": true,
+  "real_network_blocked": true,
+  "real_credential_loading_blocked": true,
+  "actual_broker_requests": 0,
+  "actual_price_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "strategy_runs": 0,
+  "pi_execution": false,
+  "initial_extended_run_note": "Nine fixture errors from a missing code-hash source file in the synthetic workspace were corrected in the test fixture; final run below has no outstanding failures."
+}

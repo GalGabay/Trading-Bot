@@ -3,6 +3,14 @@
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
+**Latest verification/review, 2026-10-29:**
+[147 offline tests pass](docs/broad_history_review_results.md), including 76
+new collector/history tests. The 17 partial histories have a preserved source
+review; DLPH/XL/LLL/MON need identity corrections. The
+[expanded-backtest proposal](docs/broad_expanded_backtest_proposal.md) separates
+universe size, position slots and 35%/70%/90% total entry capacity. It is for
+review; no performance batch or paper allocation change has been approved.
+
 **Latest data work, 2026-10-29:** the bounded
 [100-stock collection and qualification](docs/broad_100_collection_results.md)
 has run using existing access and a $0 purchase budget. Its saved observations

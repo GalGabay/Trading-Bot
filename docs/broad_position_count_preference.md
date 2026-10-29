@@ -1,5 +1,13 @@
 # Position-count preference for the next research design
 
+**Subsequent clarification, 2026-10-29:** the owner also wants more than 35%
+of total account capacity available for stock investment. This is a preference
+for higher exposure, not approval of 35% in one stock or a selected numerical
+replacement. The [concrete expanded proposal](broad_expanded_backtest_proposal.md)
+now presents 70%/90% total entry caps and 20 slots alongside matched controls.
+It keeps the 5% per-stock cap and awaits review before performance execution.
+The earlier message's narrower record below is preserved for context.
+
 Recorded from the owner's message on **2026-10-29**: holding more than seven
 stocks at once is acceptable to investigate. The owner did not specify a new
 numerical maximum or approve higher exposure, changed paper settings or a

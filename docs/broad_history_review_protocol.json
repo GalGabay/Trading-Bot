@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "purpose": "Bounded primary-source review of 17 partial historical candidates; no data acquisition or performance batch",
+  "authorization": "Owner requested review of partial histories/company-event gaps and concrete expanded assumptions",
+  "input": {
+    "path": "docs/research_data/broad_100_event_review_targets.json",
+    "sha256": "3346d3f6e36cd611d444f467b96c2d463d1827babc2e4969cf9848e532a442b3"
+  },
+  "max_search_queries": 18,
+  "max_open_pages": 20,
+  "automatic_retries": false,
+  "public_download_gets": 0,
+  "purchase_budget_usd": 0,
+  "broker_requests": 0,
+  "price_requests": 0,
+  "orders": 0,
+  "holdout_candles": false,
+  "stop": "First public access/payment barrier stops further public retrieval; retain prior barriers and unresolved targets. No paid alternatives or access bypass.",
+  "targets": [
+    {
+      "alias": "RTN",
+      "historical_name": "Raytheon Co.",
+      "last_observed_session": "2020-04-02",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "FB",
+      "historical_name": "Facebook, Inc. Class A(a)",
+      "last_observed_session": "2022-06-08",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "CBS",
+      "historical_name": "CBS Corp. Class B",
+      "last_observed_session": "2019-12-04",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "BLL",
+      "historical_name": "Ball Corp.",
+      "last_observed_session": "2022-05-09",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "FISV",
+      "historical_name": "Fiserv, Inc.(a)",
+      "last_observed_session": "2023-06-06",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "DLPH",
+      "historical_name": "Delphi Automotive PLC",
+      "last_observed_session": "2020-10-01",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "MYL",
+      "historical_name": "Mylan NV(a)",
+      "last_observed_session": "2020-11-16",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "XL",
+      "historical_name": "XL Group, Ltd.",
+      "last_observed_session": "2022-11-11",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "ESRX",
+      "historical_name": "Express Scripts Holding Co.(a)",
+      "last_observed_session": "2018-12-20",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "CTL",
+      "historical_name": "CenturyLink, Inc.",
+      "last_observed_session": "2020-09-17",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "LLL",
+      "historical_name": "L-3 Communications Holdings, Inc.",
+      "last_observed_session": "2022-10-07",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "BHI",
+      "historical_name": "Baker Hughes, Inc.",
+      "last_observed_session": "2017-07-03",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "RHT",
+      "historical_name": "Red Hat, Inc.(a)",
+      "last_observed_session": "2019-07-08",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "SYMC",
+      "historical_name": "Symantec Corp.",
+      "last_observed_session": "2019-11-04",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "NLSN",
+      "historical_name": "Nielsen Holdings PLC",
+      "last_observed_session": "2022-10-11",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "CSRA",
+      "historical_name": "CSRA, Inc.",
+      "last_observed_session": "2018-04-03",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    },
+    {
+      "alias": "MON",
+      "historical_name": "Monsanto Co.",
+      "last_observed_session": "2022-12-23",
+      "task": "Official dated identity/rename/merger evidence and terms; provider inventory is not approval"
+    }
+  ],
+  "extra_target": "Investor.gov diversification and investment risk context for exposure proposal",
+  "prior_access_records_preserved": [
+    "docs/2016_cohort_source_review.json",
+    "docs/free_collection_event_review.json"
+  ],
+  "outputs_are_not_execution_approval": true
+}
