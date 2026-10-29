@@ -1,5 +1,16 @@
 # Proposed research program before the first paper trial
 
+**Latest completed research, 2026-10-29:** the owner-approved
+[limited AAPL/CBRE diagnostic](limited_pilot_experiment_results.md) completed
+all 24 runs after 209 passing tests. All financial/risk ledgers reconcile.
+Pessimistic $10,000 results after estimated share exits are +3.12% total
+over 2017-2021 and -0.53% total over 2022-2023; every annualized result misses
+6%. Cash-delay scenarios use identical fills here because capital is mostly
+idle; unpaid rights remain separate. The tiny scope cannot meet the
+five-instrument gate. No paid sources, new prices, orders or holdout candles
+were used. Next proposed work is a finite broader-scope cached-data plan,
+not additional tuning or an automatic performance batch.
+
 **Latest readiness review, 2026-10-27:** The [remaining three histories](remaining_pilot_readiness.md)
 have 6,036 revalidated candles and a 66-event evidence inventory. Strict
 evidence admission remains blocked, with no new strategy returns. A

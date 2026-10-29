@@ -4242,3 +4242,57 @@ read occurred. Pi execution remains unverified.
 then coding-agent implementation and verification, followed by the bounded
 runs only if checks pass. A small return experiment can follow that work;
 no return, finish-date or full-universe data-readiness guarantee is made.
+
+
+## Approved limited AAPL/CBRE diagnostic completed: 2026-10-29
+
+The owner explicitly authorized implementation, verification and the limited
+simulated experiment. The [separate approval](docs/next_pilot_experiment_approval.json)
+pins the original proposal without rewriting its historical unapproved flags.
+The [completed results](docs/limited_pilot_experiment_results.md),
+[24-row export](docs/research_data/limited_pilot_experiment_results.csv) and
+[pinned summary](docs/limited_pilot_experiment_summary.json) retain every case.
+
+A separate diagnostic input path reuses the existing simulator, 55/20 breakout,
+continuation holding reviews, allocation/halts and split/dividend machinery.
+It labels vendor reliance, clipped coverage, modeled knowledge and cash
+availability, with independently verified entitlement and broker-credit flags
+remaining false. No-credit rights have an explicit null payment session,
+not a fabricated future date. Strict universe/ownership loading is unchanged;
+risk reporting admits those rights only with the explicit approved diagnostic
+schedule. Estimated share exits are separate from recorded fills, and unpaid
+rights prevent a fully liquidated return claim.
+
+Verification before scores passed 209 tests (26 new, 183 related), six actual
+window/cash schedules and seven legacy accounting checks. All 24 approved
+strategy attempts completed, with no additional strategies/retuning, and every
+financial/daily-risk ledger reconciles. The independent reporter verifies the
+scope, attempt budget, hashes, cash-right treatment and contribution totals.
+No unit failures, errors or skips occurred. Full-project/optional-ML tests
+and Pi execution were not run.
+
+Pessimistic $10,000 net marked results after estimated whole-share exit costs
+are +$311.87 (+3.12% total, +0.62% annualized) over 2017-2021 and -$53.09
+(-0.53% total, -0.27% annualized) over 2022-2023. Closing drawdowns are about
+-0.82% and -1.01%. All 24 annualized returns miss 6%; two names cannot meet
+five-instrument acceptance. Mean invested exposure is only about 2.56% and
+1.34% in these primary pessimistic cases. Cash scenarios share identical
+fills; no-credit claims remain unpaid despite similar nominal marked equity.
+No passive SPY total-return benchmark or strategy-improvement claim is made.
+
+This diagnostic is complete and its 24-run budget consumed. Source records,
+original strict flags, prior scores, the 506-row register, registered control,
+acceptance criteria and personal paper-risk configuration are unchanged.
+JPMorgan collection remains parked. Purchases, subscription changes, package
+installations, new prices/documents, network calls, broker/account requests,
+orders and reserved 2024-2025 candle reads were zero. Dollar figures are
+simulation values, not money spent or invested.
+
+Next proposed engineering work: a finite broader-scope cached-data
+qualification and frozen experiment plan, with exact coverage/gaps and owner
+review of any changed performance scope before new runs. No setup, purchase
+or personal risk-limit decision is due now; no profitable paper candidate or
+launch date is established. Replay/report existing outcomes offline using
+`python -m backtesting.pilot_diagnostic_report --output data/reports/a_fresh_summary`;
+the strategy runner refuses its already used output directory and does not
+automatically repeat the approved batch.

@@ -1,5 +1,16 @@
 # Study C: daily rule-only research record
 
+**Latest diagnostic, 2026-10-29:** following explicit approval, the
+[limited raw-data experiment](limited_pilot_experiment_results.md) completed
+24 runs and reconciled every ledger after 209 passing unit tests. Pessimistic
+$10,000 after-estimated-exit outcomes are +$311.87 over 2017-2021 and -$53.09
+over 2022-2023. All annualized results are below the 6% goal. Two surviving
+stocks with small allocations do not clear investment acceptance; different
+universes/price conventions prevent attributing a difference to improved rules.
+All cash scenarios retain the same fills, with unpaid rights explicitly
+separated from cash. No additional prices, orders or purchases occurred.
+Prior study results, the historical register and registered control are intact.
+
 **Latest readiness outcome, 2026-10-27:** The [Apple/CBRE/SPY cached review](remaining_pilot_readiness.md)
 revalidates 6,036 candles and reconciles 66 events, with 11 source checks.
 It distinguishes usable price observations, supported issuer terms and

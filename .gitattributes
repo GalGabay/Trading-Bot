@@ -29,3 +29,6 @@ docs/jpm_dividend_followup_summary.json -text
 docs/remaining_pilot_review.json -text
 docs/remaining_pilot_summary.json -text
 docs/next_pilot_experiment_proposal.json -text
+# Keep the separately approved diagnostic and completed-results pins stable.
+docs/next_pilot_experiment_approval.json -text
+docs/limited_pilot_experiment_summary.json -text

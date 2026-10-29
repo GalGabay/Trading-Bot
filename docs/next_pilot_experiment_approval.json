@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "approved_on": "2026-10-29",
+  "owner_approved": true,
+  "owner_message": "Yes, implement, verify and run this limited simulated experiment using the assumptions you explained.",
+  "proposal": {
+    "path": "docs/next_pilot_experiment_proposal.json",
+    "sha256": "be57944b552a1313bc1031a30e0ac0a539d333c8238fc57cdcc074c1c78127ba"
+  },
+  "authorized": [
+    "Separate labeled diagnostic implementation",
+    "Focused offline unit tests and accounting verification",
+    "At most 24 named strategy runs after verification passes"
+  ],
+  "max_strategy_attempts": 24,
+  "output_directory": "data/reports/limited_pilot_experiment_v1",
+  "independently_verified_entitlement": false,
+  "broker_cash_credit_verified": false,
+  "paper_trading_approved": false,
+  "purchases_budget_usd": 0,
+  "broker_account_requests": 0,
+  "holdout_prices_approved": false,
+  "original_proposal_preserved": true,
+  "original_strict_evidence_flags_unchanged": true
+}

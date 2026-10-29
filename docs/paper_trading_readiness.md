@@ -1,12 +1,19 @@
 # How far are we from paper trading?
 
-Status: 2026-10-27.
+Status: 2026-10-29.
+
+The owner-approved [limited diagnostic is complete](limited_pilot_experiment_results.md):
+209 tests and all 24 financial/risk ledgers pass. Every annualized return
+misses 6%, with recent losses; the two-stock scope cannot meet the
+five-instrument acceptance requirement. This closes the named research task,
+not the investment/activation gates. No additional approval or personal risk
+setting is due for that completed task; no paper candidate is established.
 
 The [Apple/CBRE/SPY cached review](remaining_pilot_readiness.md) has completed
 price/source checks, with strict evidence gaps retained. A
-[limited return experiment](next_pilot_experiment_proposal.md) is reviewable
-now: it needs scope/vendor/timing approval, a separate diagnostic mode and
-verification before its 24-run batch. It cannot clear the five-instrument
+[limited return experiment](next_pilot_experiment_proposal.md) subsequently
+received scope/vendor/timing approval, a separate diagnostic input path and
+verification before its completed 24-run batch. It cannot clear the five-instrument
 criterion or paper gate. This is a research decision, not a request to choose
 personal risk limits or activate orders.
 

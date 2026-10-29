@@ -1,5 +1,10 @@
 # Apple, CBRE and SPY: cached evidence review
 
+**Follow-up, 2026-10-29:** the owner approved the explicitly labeled
+diagnostic assumptions, and [all 24 simulations are complete](limited_pilot_experiment_results.md).
+That approval does not certify the missing independent evidence below or
+approve a paper candidate. The cached review remains the preserved baseline.
+
 Date: 2026-10-27. **Review completed offline; no new strategy returns calculated.**
 JPMorgan collection remains parked. No purchases, downloads, credentials,
 broker/account requests, orders or reserved candle reads were involved.

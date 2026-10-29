@@ -14,18 +14,29 @@ starting a paper trial, review the
 
 ## Where we are now
 
+**Latest completed experiment, 2026-10-29:** You explicitly approved the
+limited simulated diagnostic. Its [24 runs are complete](limited_pilot_experiment_results.md),
+following 209 passing tests, six real-data schedules and seven legacy
+accounting checks. No purchases, account requests, trades or holdout candles
+were used. Pessimistic $10,000 results after estimated share exits are +$311.87
+over five earlier years and -$53.09 over the two recent years; all runs miss
+the 6% annual goal and the two-stock sample cannot qualify for paper.
+Your [approval record](next_pilot_experiment_approval.json) applies to this
+finished experiment; no further risk setting or setup is due now. My next
+proposed work is a finite cached-data qualification and broader experiment
+plan. I will explain a changed scope before new performance runs; no further
+JPMorgan collection, paid fallback or paper activation is authorized.
+
 **Latest cached review, 2026-10-27:** The [Apple/CBRE/SPY review](remaining_pilot_readiness.md)
 passes actual price/calendar/raw-response checks for 6,036 candles and
 reconciles 66 events. JPMorgan remains parked. Strict evidence gaps remain;
 no new backtest or paper approval follows. A finite
 [24-run diagnostic proposal](next_pilot_experiment_proposal.md) now spells out
 the vendor reliance, modeled knowledge/payment timing and smaller research
-scope. **Your next research decision:** review that proposal before its
-implementation and performance use; you can approve it in chat using the
-phrase at its end. This follows the existing pilot proposal's sections 3/6
-approval requirement. No purchase, personal risk-limit setting or paper
-activation is requested. After approval, my work is the separate diagnostic
-mode, its verification and the bounded runs if checks pass.
+scope. That approval was subsequently supplied and the experiment completed,
+as recorded above. The original pilot proposal's sections 3/6 approval rule
+remains; this limited approval does not accept a larger scope, purchase,
+personal paper-risk policy or paper activation.
 
 **Latest result, 2026-10-27:** The [single JPMorgan attempt](jpm_dividend_followup_results.md)
 has finished: four discovery calls, one successful document GET and $0 spent.

@@ -124,7 +124,20 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
                 raise ValueError("Dividend entitlement does not match prior shares")
             if not all(_finite_number(x) and x > 0 for x in (rate, amount)) or not isclose(quantity * rate, amount, abs_tol=1e-6):
                 raise ValueError("Invalid dividend entitlement amount/rate")
-            if event["pay_session"] < day.date().isoformat():
+            if event["pay_session"] is None:
+                mode = case.get("universe_metadata", {}).get("diagnostic_research", {})
+                schedule = mode.get("cash_schedule", {})
+                if (type(mode.get("schema_version")) is not int or mode.get("schema_version") != 1
+                        or mode.get("owner_approved") is not True or not mode.get("approval_sha256")
+                        or mode.get("cash_policy") not in {"base", "delayed_five_sessions", "no_credit"}
+                        or mode.get("paper_authorized") is not False
+                        or mode.get("ready_for_strict_scoring") is not False
+                        or mode.get("independently_verified_entitlement") is not False
+                        or mode.get("broker_cash_credit_verified") is not False
+                        or event["event_id"] not in schedule
+                        or schedule[event["event_id"]].get("pay_session", "absent") is not None):
+                    raise ValueError("Unscheduled cash rights require the explicit approved diagnostic schedule")
+            elif event["pay_session"] < day.date().isoformat():
                 raise ValueError("Dividend payment precedes ordinary ex-session")
             claims[event["event_id"]] = event
         for event in action_groups["dividend_payments"][day]:

@@ -1,5 +1,10 @@
 # Next return experiment: limited AAPL/CBRE diagnostic
 
+**Execution update, 2026-10-29:** the owner approved this limited experiment,
+its implementation and verification. All [24 runs are complete](limited_pilot_experiment_results.md).
+Approval is recorded [separately](next_pilot_experiment_approval.json); the
+original proposed specification below and its JSON are retained unchanged.
+
 **Proposed, not approved or executed.** This is the concrete route following
 the [cached evidence review](remaining_pilot_readiness.md). The
 [JSON specification](next_pilot_experiment_proposal.json) freezes input/code

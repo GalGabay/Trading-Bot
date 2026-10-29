@@ -128,9 +128,12 @@ The [remaining Apple/CBRE/SPY review](docs/remaining_pilot_readiness.md)
 rechecks 6,036 saved candles, 66 events and 11 source facts without network
 access. Price checks pass; provider-only Apple ex-dates, independent action
 completeness and proposed modeling assumptions remain visible. A
-[24-run diagnostic proposal](docs/next_pilot_experiment_proposal.md) is ready
-for review; no new returns have been calculated or strict evidence flags
-approved. SPY context is separated from its blocked total-return reference.
+[24-run diagnostic](docs/limited_pilot_experiment_results.md) was subsequently
+approved and completed on 2026-10-29. All 209 focused/related tests pass and all
+24 ledgers reconcile. Pessimistic $10,000 results after estimated share exits
+are +$311.87 over 2017-2021 and -$53.09 over 2022-2023; every annualized result
+is below 6%. No strict evidence flags or paper trading were approved. SPY
+context remains separate from its blocked total-return reference.
 The [paper-readiness checklist](docs/paper_trading_readiness.md) explains the
 remaining data, strategy, execution and owner-activation gates.
 The [Study C-P1 record](docs/study_c_protective_exit_variant.md) evaluates
