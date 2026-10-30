@@ -37,19 +37,21 @@ class DiagnosticClock:
     def cash_release(self, payable_day, scenario):
         if scenario not in SCENARIOS:
             raise AccountingError("Unknown diagnostic cash scenario")
-        if payable_day is None or scenario == "no_credit":
+        if payable_day is None:
             return None
         day = date.fromisoformat(payable_day)
+        if scenario == "no_credit":
+            return None
         index = bisect_right(self.days, day) + (5 if scenario == "delayed_five_sessions" else 0)
         return self.opens[index] if index < len(self.opens) else None
 
     def share_release(self, economic_at, first_regular_day, scenario):
         if scenario not in SCENARIOS:
             raise AccountingError("Unknown diagnostic share scenario")
-        if scenario == "no_credit":
-            return None
         economic_at = instant(economic_at)
         day = date.fromisoformat(first_regular_day)
+        if scenario == "no_credit":
+            return None
         eligible = [o for d,o in zip(self.days,self.opens) if d >= day and o >= economic_at]
         index = 5 if scenario == "delayed_five_sessions" else 0
         return eligible[index] if index < len(eligible) else None

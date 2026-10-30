@@ -1,5 +1,11 @@
 # How far are we from paper trading?
 
+**2026-10-30:** [diagnostic defaults approved; focused tests and primary-event
+review completed](diagnostic_tests_and_event_review_2026-10-30.md).
+The new readiness gate still blocks unresolved event/identity inputs. Full
+Step 2 engine integration and expanded return experiments have not started.
+No additional owner setup or repeat approval of 70% / 5% / 20 is needed now.
+
 **Current Step 1 preparation:** [event mappings revised and diagnostic accounting
 implemented](broad_mapping_and_accounting_results.md). The owner can now review
 [concrete simulation assumptions](broad_diagnostic_assumptions_for_review.md).

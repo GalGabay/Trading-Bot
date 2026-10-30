@@ -1,0 +1,806 @@
+{
+  "date": "2026-10-30",
+  "source": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/provider_event_roles.csv",
+    "sha256": "66f4fafc17b147f29a9f583c371440daff41013d871cb01cb44f44b5cada98dd"
+  },
+  "groups": [
+    {
+      "instrument_id": "COHORT-2016-0106",
+      "ex_date": "2020-11-05",
+      "provider_event_ids": [
+        "2b917cba-6de1-45ce-80df-b517c8b30373",
+        "e7fc9ec1-52bd-411e-89f0-60875e59dc92"
+      ],
+      "records": [
+        {
+          "cusip": "172908105",
+          "ex_date": "2020-11-05",
+          "foreign": false,
+          "id": "2b917cba-6de1-45ce-80df-b517c8b30373",
+          "payable_date": "2020-12-04",
+          "process_date": "2020-12-04",
+          "rate": 0.7,
+          "record_date": "2020-11-06",
+          "special": false,
+          "symbol": "CTAS"
+        },
+        {
+          "cusip": "172908105",
+          "ex_date": "2020-11-05",
+          "foreign": false,
+          "id": "e7fc9ec1-52bd-411e-89f0-60875e59dc92",
+          "payable_date": "2020-12-04",
+          "process_date": "2020-12-04",
+          "rate": 2.81,
+          "record_date": "2020-11-06",
+          "special": false,
+          "symbol": "CTAS"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0406",
+      "ex_date": "2021-05-11",
+      "provider_event_ids": [
+        "41b127bb-bd78-4967-9996-e4f2158e86c3",
+        "d08ea098-e6bd-4775-9bb6-abda5545428d"
+      ],
+      "records": [
+        {
+          "cusip": "G7945M107",
+          "ex_date": "2021-05-11",
+          "foreign": true,
+          "id": "41b127bb-bd78-4967-9996-e4f2158e86c3",
+          "payable_date": "2021-07-07",
+          "process_date": "2021-07-07",
+          "rate": 0.67,
+          "record_date": "2021-05-12",
+          "special": false,
+          "symbol": "STX"
+        },
+        {
+          "cusip": "G7997R103",
+          "ex_date": "2021-05-11",
+          "foreign": true,
+          "id": "d08ea098-e6bd-4775-9bb6-abda5545428d",
+          "payable_date": "2021-07-07",
+          "process_date": "2021-07-07",
+          "rate": 0.67,
+          "record_date": "2021-05-12",
+          "special": false,
+          "symbol": "STX"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "ex_date": "2020-02-13",
+      "provider_event_ids": [
+        "93775e8e-fd96-493d-aa36-bbda59a55c81",
+        "a8c8565c-5162-4c6e-8a25-88fe634c548c"
+      ],
+      "records": [
+        {
+          "cusip": "03748R754",
+          "ex_date": "2020-02-13",
+          "foreign": false,
+          "id": "93775e8e-fd96-493d-aa36-bbda59a55c81",
+          "payable_date": "2020-02-28",
+          "process_date": "2020-02-28",
+          "rate": 0.41,
+          "record_date": "2020-02-14",
+          "special": false,
+          "symbol": "AIV"
+        },
+        {
+          "cusip": "03748R747",
+          "ex_date": "2020-02-13",
+          "foreign": false,
+          "id": "a8c8565c-5162-4c6e-8a25-88fe634c548c",
+          "payable_date": "2020-02-28",
+          "process_date": "2020-02-28",
+          "rate": 0.41,
+          "record_date": "2020-02-14",
+          "special": false,
+          "symbol": "AIV"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "ex_date": "2020-05-14",
+      "provider_event_ids": [
+        "0ce7e1d2-360d-43ba-b3bd-821d3fa3c925",
+        "8009b714-a31c-46d8-bbc8-9328ec4fe68a"
+      ],
+      "records": [
+        {
+          "cusip": "03748R754",
+          "ex_date": "2020-05-14",
+          "foreign": false,
+          "id": "0ce7e1d2-360d-43ba-b3bd-821d3fa3c925",
+          "payable_date": "2020-05-29",
+          "process_date": "2020-05-29",
+          "rate": 0.41,
+          "record_date": "2020-05-15",
+          "special": false,
+          "symbol": "AIV"
+        },
+        {
+          "cusip": "03748R747",
+          "ex_date": "2020-05-14",
+          "foreign": false,
+          "id": "8009b714-a31c-46d8-bbc8-9328ec4fe68a",
+          "payable_date": "2020-05-29",
+          "process_date": "2020-05-29",
+          "rate": 0.41,
+          "record_date": "2020-05-15",
+          "special": false,
+          "symbol": "AIV"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "ex_date": "2020-08-13",
+      "provider_event_ids": [
+        "55b7e8c1-7499-4100-a2f1-bb980914cb15",
+        "a56e7ca3-3858-48ac-a856-bfe8a162eaec"
+      ],
+      "records": [
+        {
+          "cusip": "03748R754",
+          "ex_date": "2020-08-13",
+          "foreign": false,
+          "id": "55b7e8c1-7499-4100-a2f1-bb980914cb15",
+          "payable_date": "2020-08-28",
+          "process_date": "2020-08-28",
+          "rate": 0.41,
+          "record_date": "2020-08-14",
+          "special": false,
+          "symbol": "AIV"
+        },
+        {
+          "cusip": "03748R747",
+          "ex_date": "2020-08-13",
+          "foreign": false,
+          "id": "a56e7ca3-3858-48ac-a856-bfe8a162eaec",
+          "payable_date": "2020-08-28",
+          "process_date": "2020-08-28",
+          "rate": 0.41,
+          "record_date": "2020-08-14",
+          "special": false,
+          "symbol": "AIV"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "ex_date": "2020-11-03",
+      "provider_event_ids": [
+        "24fac673-96f4-41c5-a3bc-93857ecada7f",
+        "ec5a712d-f182-4138-97d3-01a9c66a2107"
+      ],
+      "records": [
+        {
+          "cusip": "03748R747",
+          "ex_date": "2020-11-03",
+          "foreign": false,
+          "id": "24fac673-96f4-41c5-a3bc-93857ecada7f",
+          "payable_date": "2020-11-30",
+          "process_date": "2020-11-30",
+          "rate": 8.2,
+          "record_date": "2020-11-04",
+          "special": false,
+          "symbol": "AIV"
+        },
+        {
+          "cusip": "03748R754",
+          "ex_date": "2020-11-03",
+          "foreign": false,
+          "id": "ec5a712d-f182-4138-97d3-01a9c66a2107",
+          "payable_date": "2020-11-30",
+          "process_date": "2020-11-30",
+          "rate": 8.2,
+          "record_date": "2020-11-04",
+          "special": false,
+          "symbol": "AIV"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2020-10-29",
+      "provider_event_ids": [
+        "495f7f39-e945-4d55-a206-499ea1f02c75",
+        "538c6d86-c6fe-4cd2-aa18-f36597d16d99"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2020-10-29",
+          "foreign": false,
+          "id": "495f7f39-e945-4d55-a206-499ea1f02c75",
+          "payable_date": "2020-11-16",
+          "process_date": "2020-11-16",
+          "rate": 0.295,
+          "record_date": "2020-10-30",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X101",
+          "ex_date": "2020-10-29",
+          "foreign": false,
+          "id": "538c6d86-c6fe-4cd2-aa18-f36597d16d99",
+          "payable_date": "2020-11-16",
+          "process_date": "2020-11-16",
+          "rate": 0.295,
+          "record_date": "2020-10-30",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2020-11-27",
+      "provider_event_ids": [
+        "1a5e6304-9bd2-4cb2-8a8f-7f8c1f0e333f",
+        "71648ac1-431f-47b5-a26f-1c0e7d921077"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2020-11-27",
+          "foreign": false,
+          "id": "1a5e6304-9bd2-4cb2-8a8f-7f8c1f0e333f",
+          "payable_date": "2020-12-15",
+          "process_date": "2020-12-15",
+          "rate": 0.295,
+          "record_date": "2020-11-30",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X101",
+          "ex_date": "2020-11-27",
+          "foreign": false,
+          "id": "71648ac1-431f-47b5-a26f-1c0e7d921077",
+          "payable_date": "2020-12-15",
+          "process_date": "2020-12-15",
+          "rate": 0.295,
+          "record_date": "2020-11-30",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2020-12-14",
+      "provider_event_ids": [
+        "3a5e0d9e-3d22-4729-8098-5d737bf10d68",
+        "eda3364e-7fd6-4ee7-b243-10d2669e8bb9"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2020-12-14",
+          "foreign": false,
+          "id": "3a5e0d9e-3d22-4729-8098-5d737bf10d68",
+          "payable_date": "2021-01-15",
+          "process_date": "2021-01-15",
+          "rate": 2,
+          "record_date": "2020-12-15",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X101",
+          "ex_date": "2020-12-14",
+          "foreign": false,
+          "id": "eda3364e-7fd6-4ee7-b243-10d2669e8bb9",
+          "payable_date": "2021-01-15",
+          "process_date": "2021-01-15",
+          "rate": 2,
+          "record_date": "2020-12-15",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-01-28",
+      "provider_event_ids": [
+        "0128a638-6e52-49e5-99ef-3ea8d3d0342c",
+        "efe06968-14bb-4eb2-99af-05cc92a5d9e9"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-01-28",
+          "foreign": false,
+          "id": "0128a638-6e52-49e5-99ef-3ea8d3d0342c",
+          "payable_date": "2021-02-16",
+          "process_date": "2021-02-16",
+          "rate": 0.3033,
+          "record_date": "2021-01-29",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-01-28",
+          "foreign": false,
+          "id": "efe06968-14bb-4eb2-99af-05cc92a5d9e9",
+          "payable_date": "2021-02-16",
+          "process_date": "2021-02-16",
+          "rate": 0.3033,
+          "record_date": "2021-01-29",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-02-25",
+      "provider_event_ids": [
+        "4a4a811f-15a7-49e6-b1fa-e29f8b938a9c",
+        "699a883e-ef77-4e06-ad01-5096c292519e"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-02-25",
+          "foreign": false,
+          "id": "4a4a811f-15a7-49e6-b1fa-e29f8b938a9c",
+          "payable_date": "2021-03-15",
+          "process_date": "2021-03-15",
+          "rate": 0.3033,
+          "record_date": "2021-02-26",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-02-25",
+          "foreign": false,
+          "id": "699a883e-ef77-4e06-ad01-5096c292519e",
+          "payable_date": "2021-03-15",
+          "process_date": "2021-03-15",
+          "rate": 0.3033,
+          "record_date": "2021-02-26",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-03-30",
+      "provider_event_ids": [
+        "200a0d27-3f10-4f96-8f86-8529569e1184",
+        "528bc6ee-02aa-4a53-afa5-589af3677677"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-03-30",
+          "foreign": false,
+          "id": "200a0d27-3f10-4f96-8f86-8529569e1184",
+          "payable_date": "2021-04-15",
+          "process_date": "2021-04-15",
+          "rate": 0.3033,
+          "record_date": "2021-03-31",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-03-30",
+          "foreign": false,
+          "id": "528bc6ee-02aa-4a53-afa5-589af3677677",
+          "payable_date": "2021-04-15",
+          "process_date": "2021-04-15",
+          "rate": 0.3033,
+          "record_date": "2021-03-31",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-04-29",
+      "provider_event_ids": [
+        "acbf24bd-9ef4-4ad3-87db-1e3f5ea53fc7",
+        "ea19186f-3794-46a8-a592-8ef093ca41cf"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-04-29",
+          "foreign": false,
+          "id": "acbf24bd-9ef4-4ad3-87db-1e3f5ea53fc7",
+          "payable_date": "2021-05-17",
+          "process_date": "2021-05-17",
+          "rate": 0.3033,
+          "record_date": "2021-04-30",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-04-29",
+          "foreign": false,
+          "id": "ea19186f-3794-46a8-a592-8ef093ca41cf",
+          "payable_date": "2021-05-17",
+          "process_date": "2021-05-17",
+          "rate": 0.3033,
+          "record_date": "2021-04-30",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-05-27",
+      "provider_event_ids": [
+        "38eee67d-02c0-4702-8780-4b2c68ecd9ae",
+        "8dfac438-2df5-4d5f-b816-88398a9fdd49"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-05-27",
+          "foreign": false,
+          "id": "38eee67d-02c0-4702-8780-4b2c68ecd9ae",
+          "payable_date": "2021-06-15",
+          "process_date": "2021-06-15",
+          "rate": 0.3033,
+          "record_date": "2021-05-31",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-05-27",
+          "foreign": false,
+          "id": "8dfac438-2df5-4d5f-b816-88398a9fdd49",
+          "payable_date": "2021-06-15",
+          "process_date": "2021-06-15",
+          "rate": 0.3033,
+          "record_date": "2021-05-31",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-06-29",
+      "provider_event_ids": [
+        "0af12e74-4251-4de4-9528-307613f1e582",
+        "4df53bb2-9cc0-402b-afa8-1f84f912e690"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-06-29",
+          "foreign": false,
+          "id": "0af12e74-4251-4de4-9528-307613f1e582",
+          "payable_date": "2021-07-15",
+          "process_date": "2021-07-15",
+          "rate": 0.3033,
+          "record_date": "2021-06-30",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-06-29",
+          "foreign": false,
+          "id": "4df53bb2-9cc0-402b-afa8-1f84f912e690",
+          "payable_date": "2021-07-15",
+          "process_date": "2021-07-15",
+          "rate": 0.3033,
+          "record_date": "2021-06-30",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-07-29",
+      "provider_event_ids": [
+        "8a178cb2-8f4d-4be7-838e-0fbb4a17cd12",
+        "a4879057-05e9-4964-82bb-5ccf05c0b8e7"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-07-29",
+          "foreign": false,
+          "id": "8a178cb2-8f4d-4be7-838e-0fbb4a17cd12",
+          "payable_date": "2021-08-16",
+          "process_date": "2021-08-16",
+          "rate": 0.3033,
+          "record_date": "2021-07-30",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-07-29",
+          "foreign": false,
+          "id": "a4879057-05e9-4964-82bb-5ccf05c0b8e7",
+          "payable_date": "2021-08-16",
+          "process_date": "2021-08-16",
+          "rate": 0.3033,
+          "record_date": "2021-07-30",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-08-30",
+      "provider_event_ids": [
+        "3cc3c071-3c51-45c8-9840-60d41f8109bf",
+        "d987c966-3ddd-4b30-b130-3eba3805236d"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-08-30",
+          "foreign": false,
+          "id": "3cc3c071-3c51-45c8-9840-60d41f8109bf",
+          "payable_date": "2021-09-15",
+          "process_date": "2021-09-15",
+          "rate": 0.3033,
+          "record_date": "2021-08-31",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-08-30",
+          "foreign": false,
+          "id": "d987c966-3ddd-4b30-b130-3eba3805236d",
+          "payable_date": "2021-09-15",
+          "process_date": "2021-09-15",
+          "rate": 0.3033,
+          "record_date": "2021-08-31",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-09-29",
+      "provider_event_ids": [
+        "2cd9d46d-febb-4e56-a3ab-1027006668ba",
+        "57cd0c7a-d51c-4803-b971-41f5e157b781"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-09-29",
+          "foreign": false,
+          "id": "2cd9d46d-febb-4e56-a3ab-1027006668ba",
+          "payable_date": "2021-10-15",
+          "process_date": "2021-10-15",
+          "rate": 0.3033,
+          "record_date": "2021-09-30",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-09-29",
+          "foreign": false,
+          "id": "57cd0c7a-d51c-4803-b971-41f5e157b781",
+          "payable_date": "2021-10-15",
+          "process_date": "2021-10-15",
+          "rate": 0.3033,
+          "record_date": "2021-09-30",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2021-10-28",
+      "provider_event_ids": [
+        "3999f9e6-2a8e-45c8-8b07-62a32496e0c9",
+        "89f0e5e1-2467-4f0c-8af2-8377c5f6f079"
+      ],
+      "records": [
+        {
+          "cusip": "78440X804",
+          "ex_date": "2021-10-28",
+          "foreign": false,
+          "id": "3999f9e6-2a8e-45c8-8b07-62a32496e0c9",
+          "payable_date": "2021-11-15",
+          "process_date": "2021-11-15",
+          "rate": 0.3033,
+          "record_date": "2021-10-29",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X887",
+          "ex_date": "2021-10-28",
+          "foreign": false,
+          "id": "89f0e5e1-2467-4f0c-8af2-8377c5f6f079",
+          "payable_date": "2021-11-15",
+          "process_date": "2021-11-15",
+          "rate": 0.3033,
+          "record_date": "2021-10-29",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2022-01-28",
+      "provider_event_ids": [
+        "9d3a4433-b063-4e4f-b476-7d61242e0855",
+        "d5b7acbc-6fb6-40ca-86e7-61a21c3f6f2c"
+      ],
+      "records": [
+        {
+          "cusip": "78440X887",
+          "ex_date": "2022-01-28",
+          "foreign": false,
+          "id": "9d3a4433-b063-4e4f-b476-7d61242e0855",
+          "payable_date": "2022-02-15",
+          "process_date": "2022-02-15",
+          "rate": 0.3108,
+          "record_date": "2022-01-31",
+          "special": false,
+          "symbol": "SLG"
+        },
+        {
+          "cusip": "78440X804",
+          "ex_date": "2022-01-28",
+          "foreign": false,
+          "id": "d5b7acbc-6fb6-40ca-86e7-61a21c3f6f2c",
+          "payable_date": "2022-02-15",
+          "process_date": "2022-02-15",
+          "rate": 0.3108,
+          "record_date": "2022-01-31",
+          "special": false,
+          "symbol": "SLG"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0204",
+      "ex_date": "2023-10-12",
+      "provider_event_ids": [
+        "3a697c91-e146-48d9-b0aa-af7843ea1166",
+        "4677b054-4886-4527-91a5-ff0796e9d4f8"
+      ],
+      "records": [
+        {
+          "cusip": "35671D857",
+          "ex_date": "2023-10-12",
+          "foreign": false,
+          "id": "3a697c91-e146-48d9-b0aa-af7843ea1166",
+          "payable_date": "2023-11-01",
+          "process_date": "2023-11-01",
+          "rate": 0.075,
+          "record_date": "2023-10-13",
+          "special": false,
+          "symbol": "FCX"
+        },
+        {
+          "cusip": "35671D857",
+          "ex_date": "2023-10-12",
+          "foreign": false,
+          "id": "4677b054-4886-4527-91a5-ff0796e9d4f8",
+          "payable_date": "2023-11-01",
+          "process_date": "2023-11-01",
+          "rate": 0.15,
+          "record_date": "2023-10-13",
+          "special": false,
+          "symbol": "FCX"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0288",
+      "ex_date": "2020-04-21",
+      "provider_event_ids": [
+        "1fb7f269-006f-4e83-ae23-2a4d3f39d650",
+        "42f0d9e4-ec50-438a-8a12-0ed344459922"
+      ],
+      "records": [
+        {
+          "cusip": "554382101",
+          "ex_date": "2020-04-21",
+          "foreign": false,
+          "id": "1fb7f269-006f-4e83-ae23-2a4d3f39d650",
+          "payable_date": "2020-06-03",
+          "process_date": "2020-06-03",
+          "rate": 1.4,
+          "record_date": "2020-04-22",
+          "special": false,
+          "symbol": "MAC"
+        },
+        {
+          "cusip": "554382101",
+          "ex_date": "2020-04-21",
+          "foreign": false,
+          "id": "42f0d9e4-ec50-438a-8a12-0ed344459922",
+          "payable_date": "2020-06-03",
+          "process_date": "2020-06-03",
+          "rate": 0.5,
+          "record_date": "2020-04-22",
+          "special": false,
+          "symbol": "MAC"
+        }
+      ],
+      "status": "requires_component_review_no_record_deleted",
+      "execution_ready": false
+    }
+  ],
+  "group_count": 22,
+  "records": 44,
+  "no_automatic_deduplication": true,
+  "orders": 0,
+  "purchases_usd": 0
+}

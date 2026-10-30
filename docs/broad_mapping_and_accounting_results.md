@@ -1,5 +1,10 @@
 # Corrected mappings and diagnostic accounting preparation
 
+**Subsequent work, 2026-10-30:** see [approved defaults, focused tests and event
+review](diagnostic_tests_and_event_review_2026-10-30.md). Owner assent is recorded,
+unit tests have now been run, and the remaining Step 2 data gates are explicit.
+The preparation record below describes the earlier unapproved/untested state.
+
 October 29, 2026. **Still Step 1.** Step 2 integration and performance runs have
 not started. This increment used cached evidence only: zero network requests,
 purchases, broker requests, trades and strategy runs. No personal risk file changed.

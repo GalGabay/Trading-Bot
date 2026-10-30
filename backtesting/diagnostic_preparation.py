@@ -15,11 +15,12 @@ from backtesting.broad_collection import pin
 from backtesting.claim_accounting import exact, instant, number
 from backtesting.cohort_audit import checked_file
 from backtesting.diagnostic_accounting import DiagnosticClock, SCENARIOS, plan_dividend
+from backtesting.diagnostic_approval import validate_approval
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
 
 
 def validate_policy(policy):
-    if (policy.get("schema_version") != 1 or policy.get("owner_approved") is not False or
+    if (policy.get("schema_version") != 1 or type(policy.get("owner_approved")) is not bool or
             policy.get("performance_authorized") is not False or policy.get("paper_authorized") is not False or
             policy.get("purchases_usd") != 0 or policy.get("max_strategy_runs") != 0 or
             policy.get("scenarios") != list(SCENARIOS) or
@@ -28,7 +29,9 @@ def validate_policy(policy):
             policy.get("election_policy") != "block_until_holder_terms_resolved" or
             policy.get("fractional_policy") != "pending_share_claim_no_automatic_cash" or
             policy.get("selected_total_entry_exposure") != .70):
-        raise ValueError("Only the unapproved, zero-run diagnostic policy is supported")
+        raise ValueError("Only the bounded, zero-run diagnostic policy is supported")
+    if policy["owner_approved"]:
+        validate_approval(policy)
     supported = dict(
         ordinary_entitlement_policy="assumed_prior_session_close_whole_shares_before_ex_open_fills",
         metadata_policy="retrospective_vendor_accounting_at_event_boundary_never_an_entry_feature",
@@ -65,7 +68,7 @@ def material_plan(event, clock, scenario, streams):
         # distributions whose economic date precedes regular-way trading.
         stream_start = streams[leg["instrument_id"]]["parts"][0]["start"]
         first = max(stream_start,event.get("first_regular_session") or event["economic_date"])
-        release = None if first is None else clock.share_release(effective,first,scenario)
+        release = None if effective is None else clock.share_release(effective,first,scenario)
         legs.append(dict(instrument_id=leg["instrument_id"],shares_per_parent=exact(number(leg["shares_per_parent"],positive=True)),
             modeled_release_at=None if release is None else release.isoformat(),
             actual_broker_received_at=None,can_release_before_terms_review=False))
@@ -78,6 +81,26 @@ def material_plan(event, clock, scenario, streams):
         execution_ready=False,source_terms=event.get("mapping_evidence") or event.get("primary_source_ids",[]),
         blockers=["Unapproved entitlement and timing assumptions", "Cash payable/fractional terms need per-event support",
                   "Source review required before any proposed share release can execute"])
+
+
+def validate_peak_continuity(event,evidence):
+    root="COHORT-2016-0227"
+    if (event["id"]!="peak_holding_company_reorganization" or evidence["id"]!="peak_2023" or
+            evidence["access"]!="primary_browser_text_reviewed" or
+            evidence["facts"]["new_shares_per_old"]!="1" or
+            evidence["facts"]["effective_date"]!=event["economic_date"] or
+            event["parent_id"]!=root or event["root_id"]!=root or event["cash_per_parent"]!="0" or
+            event["share_legs"]!=[dict(instrument_id=root+".PEAK-HOLDCO-2023",shares_per_parent="1")]):
+        raise ValueError("PEAK continuity differs from directly reviewed one-for-one terms")
+
+
+def dividend_multiplicity(rows):
+    groups={}
+    for row in rows:
+        if row["category"]=="cash_dividends":
+            key=row["instrument_id"],row["day"]
+            groups.setdefault(key,set()).add(row["event_id"])
+    return {key:sorted(ids) for key,ids in groups.items() if len(ids)>1}
 
 
 def prepare(revision_dir, policy_path, output):
@@ -108,11 +131,14 @@ def prepare(revision_dir, policy_path, output):
     boundary_actions = {(r["instrument_id"],r["day"]) for r in provider_rows if r["category"] in {"forward_splits","reverse_splits"}}
     election_roots = {r["instrument_id"] for r in decisions if r["status"] in {"reverse_split_with_election_dividend","search_only_reverse_split_election"}}
     feature_excluded = {s["instrument_id"] for s in spec["streams"] if s.get("feature_use_prohibited")}
+    multiple_dividends=dividend_multiplicity(provider_rows)
     for row in provider_rows:
         identity = row["instrument_id"],row["event_id"]
         if row["category"] == "cash_dividends":
             for scenario in SCENARIOS:
                 item = plan_dividend(row,clock,scenario)
+                if (row["instrument_id"],row["day"]) in multiple_dividends:
+                    item["blockers"].append("multiple_records_same_security_ex_date_require_component_review")
                 if row["instrument_id"] in feature_excluded:
                     item["blockers"].append("reference_only_predecessor_never_earns_a_portfolio_right")
                 if (row["instrument_id"],row["day"]) in boundary_actions:
@@ -136,6 +162,21 @@ def prepare(revision_dir, policy_path, output):
             execution_ready=False,provider_record_preserved=True))
     streams = {s["instrument_id"]:s for s in spec["streams"]}
     material = [material_plan(e,clock,s,streams) for e in spec["material_events"] for s in SCENARIOS]
+    if policy["owner_approved"]:
+        for item in material:
+            item["status"]="candidate_economic_terms_unresolved"
+            item["accounting_assumptions_owner_approved"]=True
+            item["blockers"]=[b for b in item["blockers"] if b!="Unapproved entitlement and timing assumptions"]
+            if item["event_id"]=="peak_holding_company_reorganization":
+                event=next(e for e in spec["material_events"] if e["id"]==item["event_id"])
+                source=event["mapping_evidence"]
+                facts=json.loads(checked_file(Path.cwd(),source["source"]).read_text(encoding="utf-8"))
+                evidence=next(s for s in facts["sources"] if s["id"]==source["source_id"])
+                validate_peak_continuity(event,evidence)
+                item.update(status="admitted_diagnostic_continuity",diagnostic_terms_admitted=True,
+                    blockers=[],actual_delivery_at=None,execution_ready=False)
+    for item in dividends:
+        item["accounting_assumptions_owner_approved"]=policy["owner_approved"]
     output.mkdir(parents=True)
     write_json(output/"frozen_policy.json",policy)
     write_json(output/"dividend_candidates.json",dividends)
@@ -148,11 +189,12 @@ def prepare(revision_dir, policy_path, output):
         base_dividend_status_counts=dict(Counter(d["status"] for d in dividends if d["scenario"]=="base")),
         base_blocker_counts=dict(Counter(b for d in dividends if d["scenario"]=="base" for b in d["blockers"])),
         base_dividends_missing_payable_date=sum(not d["provider_payable_date"] for d in dividends if d["scenario"]=="base"),
+        multiple_dividend_groups=len(multiple_dividends),multiple_dividend_records=sum(len(ids) for ids in multiple_dividends.values()),
         material_event_records=len(spec["material_events"]),material_plan_rows=len(material),
         unresolved_feature_events=mapping["unresolved_feature_events"],
         event_route_counts=dict(Counter(r["disposition"] for r in event_routes)),
         output_files=[pin(output/n) for n in ("dividend_candidates.json","material_candidates.json","event_routes.csv")],
-        owner_approved=False,performance_ready=False,step1_complete=False,strict_flags_promoted=False,
+        owner_approved=policy["owner_approved"],performance_ready=False,step1_complete=False,strict_flags_promoted=False,
         paper_authorized=False,purchases_usd=0,broker_requests=0,orders=0,strategy_runs=0,unit_tests_run=0)
     write_json(output/"summary.json",summary)
     return summary
@@ -161,7 +203,7 @@ def prepare(revision_dir, policy_path, output):
 if __name__ == "__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--revision",type=Path,required=True)
-    parser.add_argument("--policy",type=Path,default=Path("docs/broad_diagnostic_accounting_policy.json"))
+    parser.add_argument("--policy",type=Path,required=True,help="Explicit versioned proposal/approved policy; execution pins must match")
     parser.add_argument("--output",type=Path,required=True)
     args=parser.parse_args()
     with offline_only():

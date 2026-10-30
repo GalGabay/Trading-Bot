@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "owner_message": "??? ???? ?? ?? ?????? ??????? ? broad_diagnostics_assumption_for_review ??????? ??? ??????",
+  "resolved_document": {
+    "path": "docs/broad_diagnostic_assumptions_for_review.md",
+    "sha256": "30090da2f9c9f9490748489ea06e154a6757524916676901e385685ca7cc4ab5"
+  },
+  "proposed_policy": {
+    "path": "docs/broad_diagnostic_accounting_policy.json",
+    "sha256": "f9e3de7ee445f75608c35798a4580d62e334fcd8efbd55c5b37c7679a7d180ea"
+  },
+  "owner_approved": true,
+  "diagnostic_accounting_defaults_approved": true,
+  "allocation": {
+    "total_entry_exposure": 0.7,
+    "per_stock_entry_cap": 0.05,
+    "max_positions": 20,
+    "scope": "historical_research_only"
+  },
+  "focused_unit_tests_authorized": true,
+  "event_term_fixes_authorized": true,
+  "step2_integration_authorized_when_data_gates_clear": true,
+  "missing_economic_facts_may_be_assumed": false,
+  "strict_evidence_flags_may_be_promoted": false,
+  "new_performance_batch_authorized": false,
+  "max_strategy_runs": 0,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests_authorized": false,
+  "record_policy": "Separate approval of frozen defaults; preserve original proposal and source hashes. No new performance batch or paper activation authorized."
+}

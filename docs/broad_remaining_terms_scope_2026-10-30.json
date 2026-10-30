@@ -1,0 +1,17 @@
+{
+  "purpose": "Separate bounded primary-source review of ADNT and AIV/SLG holder terms authorized by the owner's event-fix request",
+  "date": "2026-10-30",
+  "max_search_queries": 8,
+  "max_page_opens": 8,
+  "stop_at_access_barrier_or_fetch_failure": true,
+  "retry_previously_denied_or_timed_out_urls": false,
+  "automatic_followup_collection": false,
+  "purchases_usd": 0,
+  "price_downloads": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "performance_runs": 0,
+  "allowed_sources": "Primary issuer, filing, exchange and clearinghouse sources; search text remains discovery until directly reviewed",
+  "targets": ["JCI/ADNT 2016 distribution", "SLG January 2022 completed dividend allocation", "AIV March 2019 individual stock/cash election terms", "AIV November 2020 completed dividend allocation"],
+  "source_policy": "No new effective, declaration or broker-delivery timestamp inferred from a publication date. No per-holder allocation inferred from company aggregate totals. Preserve all earlier barriers and frozen evidence."
+}

@@ -78,3 +78,11 @@ docs/broad_mapping_revision_plan.json -text
 docs/broad_corrected_input_*.json -text
 docs/broad_corrected_historical_input_spec.json -text
 docs/broad_diagnostic_*.json -text
+docs/broad_remaining_terms_*.json -text
+docs/broad_dividend_component_review_*.json -text
+docs/research_data/diagnostic_executed_v1/*.py -text
+backtesting/diagnostic_approval.py -text
+backtesting/diagnostic_preflight.py -text
+backtesting/election_terms.py -text
+tests/test_diagnostic_accounting.py -text
+tests/test_diagnostic_admission.py -text

@@ -1,5 +1,10 @@
 # Proposed research program before the first paper trial
 
+**2026-10-30 update:** [owner defaults recorded, focused tests and event review](diagnostic_tests_and_event_review_2026-10-30.md).
+70% total / 5% per stock / 20 positions are approved for research. Structured
+data gates still block full Step 2 integration. No new strategy-performance
+batch has been authorized or executed. Earlier proposal status remains historical.
+
 **Current preparation:** [corrected mapping and diagnostic accounting results](broad_mapping_and_accounting_results.md).
 All 100 selected members and 203,683 observations remain; 121 legal/reference
 streams are prepared. The [diagnostic defaults](broad_diagnostic_assumptions_for_review.md)

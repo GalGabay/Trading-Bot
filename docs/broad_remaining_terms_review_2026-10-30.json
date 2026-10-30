@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_remaining_terms_scope_2026-10-30.json",
+    "sha256": "703b0251d613c15c83f00328b365ee1bde976d8571932c7e709db8b04e6055cf"
+  },
+  "search_queries": 8,
+  "page_opens": 6,
+  "requests_are_browser_operations_not_hidden_http_hops": true,
+  "denied_or_timed_out_urls_retried": 0,
+  "access_stops": 0,
+  "sources": [
+    {
+      "id": "source_1",
+      "url": "https://www.sec.gov/Archives/edgar/data/833444/000110465916153134/a16-20376_1ex99d2.htm",
+      "browser_text": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_1.txt",
+        "sha256": "ff1d3cc176dbc44eaaf551d592d1936172d924b94487ecc2553fab4aab95b3c4"
+      },
+      "access": "primary_browser_text_reviewed",
+      "original_html_archive": false
+    },
+    {
+      "id": "source_2",
+      "url": "https://investors.aircommunities.com/press-releases/news-details/2020/Apartment-Investment-And-Management-Company-Announces-Election-Results-For-Special-Dividend/default.aspx",
+      "browser_text": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_2.txt",
+        "sha256": "116c2c467ae2939836956f27cb5ee887411f85cc5da1d3aba9e645a0a96336fa"
+      },
+      "access": "primary_browser_text_reviewed",
+      "original_html_archive": false
+    },
+    {
+      "id": "source_3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000110465922003152/tm222480d1_8k.htm",
+      "browser_text": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_3.txt",
+        "sha256": "b3803054c58e5d4de3a0c55dabd821592559c8d65e0e4f83a6eb063608139d19"
+      },
+      "access": "primary_browser_text_reviewed",
+      "original_html_archive": false
+    },
+    {
+      "id": "source_4",
+      "url": "https://investors.aircommunities.com/press-releases/news-details/2019/Apartment-Investment-and-Management-Company-Announces-Election-Results-for-Special-Dividend-03-22-2019/default.aspx",
+      "browser_text": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_4.txt",
+        "sha256": "990321e450fe77061a97fb598e33e949d7a6dad8084b1b0d2a554c08cf5275ff"
+      },
+      "access": "primary_browser_text_reviewed",
+      "original_html_archive": false
+    },
+    {
+      "id": "source_5",
+      "url": "https://slgreen.gcs-web.com/static-files/a434008a-6e7d-43ff-a32e-2a9a741998f6",
+      "browser_text": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_5.txt",
+        "sha256": "54ba941488b55a2645094a8f070f496678fe5d44c5904ccb7053501c0ead83cb"
+      },
+      "access": "primary_browser_text_reviewed",
+      "original_html_archive": false
+    },
+    {
+      "id": "source_6",
+      "url": "https://www.sec.gov/Archives/edgar/data/833444/000104746916015901/a2229903zex-99_2.htm",
+      "browser_text": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_6.txt",
+        "sha256": "49d80092b6bbbba7a6ad4430579aa311d90590024a046b5fc019a7ccb601ff1d"
+      },
+      "access": "primary_browser_text_reviewed",
+      "original_html_archive": false
+    }
+  ],
+  "election_terms": [
+    {
+      "id": "aiv_2019",
+      "source": {
+        "id": "source_4",
+        "url": "https://investors.aircommunities.com/press-releases/news-details/2019/Apartment-Investment-and-Management-Company-Announces-Election-Results-for-Special-Dividend-03-22-2019/default.aspx",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_4.txt",
+          "sha256": "990321e450fe77061a97fb598e33e949d7a6dad8084b1b0d2a554c08cf5275ff"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      },
+      "record_date": "2019-02-22",
+      "payable_date": "2019-03-22",
+      "published_date": "2019-03-22",
+      "stock_conversion_price": "49.93",
+      "branches": {
+        "prorated_cash": {
+          "cash": "0.44",
+          "stock_value": "1.58"
+        },
+        "stock": {
+          "cash": "0",
+          "stock_value": "2.02"
+        },
+        "lottery_cash": {
+          "cash": "2.02",
+          "stock_value": "0"
+        }
+      },
+      "no_election_branch": "prorated_cash",
+      "cash_lottery": true,
+      "share_allocation_approximate": false,
+      "holder_election_selected": null,
+      "execution_ready": false
+    },
+    {
+      "id": "aiv_2020",
+      "source": {
+        "id": "source_2",
+        "url": "https://investors.aircommunities.com/press-releases/news-details/2020/Apartment-Investment-And-Management-Company-Announces-Election-Results-For-Special-Dividend/default.aspx",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_2.txt",
+          "sha256": "116c2c467ae2939836956f27cb5ee887411f85cc5da1d3aba9e645a0a96336fa"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      },
+      "record_date": "2020-11-04",
+      "payable_date": "2020-11-30",
+      "published_date": "2020-12-01",
+      "stock_conversion_price": "30.98",
+      "branches": {
+        "prorated_cash": {
+          "cash": "1.02924",
+          "stock_value": "7.17076"
+        },
+        "stock": {
+          "cash": "0",
+          "stock_value": "8.20"
+        }
+      },
+      "no_election_branch": "prorated_cash",
+      "cash_lottery": false,
+      "share_allocation_approximate": false,
+      "holder_election_selected": null,
+      "execution_ready": false
+    },
+    {
+      "id": "slg_2021",
+      "source": {
+        "id": "source_5",
+        "url": "https://slgreen.gcs-web.com/static-files/a434008a-6e7d-43ff-a32e-2a9a741998f6",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_5.txt",
+          "sha256": "54ba941488b55a2645094a8f070f496678fe5d44c5904ccb7053501c0ead83cb"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      },
+      "record_date": "2020-12-15",
+      "payable_date": "2021-01-15",
+      "published_date": "2021-01-11",
+      "stock_conversion_price": "58.15",
+      "branches": {},
+      "no_election_branch": null,
+      "cash_lottery": false,
+      "share_allocation_approximate": true,
+      "holder_election_selected": null,
+      "execution_ready": false,
+      "reported_cash_election": {
+        "cash": "0.3735",
+        "approximate_shares": "0.0279"
+      },
+      "reported_stock_election": {
+        "approximate_shares": "0.0343"
+      }
+    },
+    {
+      "id": "slg_2022",
+      "source": {
+        "id": "source_3",
+        "url": "https://www.sec.gov/Archives/edgar/data/1040971/000110465922003152/tm222480d1_8k.htm",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_3.txt",
+          "sha256": "b3803054c58e5d4de3a0c55dabd821592559c8d65e0e4f83a6eb063608139d19"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      },
+      "record_date": "2021-12-15",
+      "payable_date": "2022-01-18",
+      "published_date": "2022-01-11",
+      "stock_conversion_price": "79.7058",
+      "branches": {},
+      "no_election_branch": null,
+      "cash_lottery": false,
+      "share_allocation_approximate": true,
+      "holder_election_selected": null,
+      "execution_ready": false,
+      "reported_cash_election": {
+        "cash": "0.3976",
+        "approximate_shares": "0.0295"
+      },
+      "reported_stock_election": {
+        "approximate_shares": "0.0345"
+      }
+    }
+  ],
+  "feature_corrections": [
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "event": "ADNT distribution",
+      "economic_date": "2016-10-31",
+      "shares_per_parent": "1/10",
+      "record_date": "2016-10-19",
+      "first_regular_session": "2016-10-31",
+      "source": {
+        "id": "source_1",
+        "url": "https://www.sec.gov/Archives/edgar/data/833444/000110465916153134/a16-20376_1ex99d2.htm",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_1.txt",
+          "sha256": "ff1d3cc176dbc44eaaf551d592d1936172d924b94487ecc2553fab4aab95b3c4"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      },
+      "information_statement": {
+        "id": "source_6",
+        "url": "https://www.sec.gov/Archives/edgar/data/833444/000104746916015901/a2229903zex-99_2.htm",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_6.txt",
+          "sha256": "49d80092b6bbbba7a6ad4430579aa311d90590024a046b5fc019a7ccb601ff1d"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      },
+      "handling": "Reset JCI features at first post-distribution session; warmup is uninvested through 2016-11-30, so no portfolio ADNT entitlement is fabricated",
+      "no_pre_reset_feature_history": true,
+      "broker_delivery_verified": false
+    }
+  ],
+  "preserved_gaps": [
+    "SLG reported share allocations are approximate",
+    "No election selected for any future simulated holder",
+    "Fractional cash and split/dividend ordering still require schedule admission",
+    "Remaining lifecycle/identity events need per-event admission"
+  ],
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "strategy_runs": 0,
+  "strict_flags_promoted": false
+}

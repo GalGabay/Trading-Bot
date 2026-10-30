@@ -481,6 +481,12 @@ remains to be done.
 
 ## Cross-platform operation
 
+Current diagnostic status (2026-10-30): [owner approval, focused tests and event
+review](docs/diagnostic_tests_and_event_review_2026-10-30.md). Research defaults
+and 70% / 5% / 20 allocation settings are approved. The Step 2 readiness gate
+still blocks unresolved economic inputs; no expanded performance run or trading
+has started. Earlier entries below describe historical preparation increments.
+
 Current research preparation: [corrected event mappings and proposed diagnostic
 accounting](docs/broad_mapping_and_accounting_results.md), with
 [specific assumptions for owner review](docs/broad_diagnostic_assumptions_for_review.md).

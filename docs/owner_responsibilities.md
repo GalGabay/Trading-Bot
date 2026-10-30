@@ -1,5 +1,13 @@
 # Your responsibilities in the trading-bot project
 
+**2026-10-30 — approved:** the diagnostic accounting defaults and research
+allocation of 70% total exposure, 5% per stock and 20 positions are recorded in
+[your separate approval](broad_diagnostic_owner_approval_2026-10-30.json).
+No repeated approval or setup is needed. [Current tests/event review](diagnostic_tests_and_event_review_2026-10-30.md)
+leaves economic-data gates before full Step 2 integration. Those fixes are my
+work. Personal paper-risk limits, paper activation and a finite performance
+batch remain separate decisions. The frozen proposal below is historical.
+
 **Current owner review:** [diagnostic accounting defaults and allocation settings](broad_diagnostic_assumptions_for_review.md).
 Reply in chat to approve or change them; no file editing, purchase or setup is
 required. The 70% total exposure choice is already recorded. The 5%-per-stock /
