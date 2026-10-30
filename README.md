@@ -4,9 +4,9 @@ An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
 **Current broad-input status, 2026-10-30:**
-[Dividend reconciliation](docs/broad_dividend_reconciliation_results.md)
-resolves the Cintas/Freeport component treatments and explicitly blocks three
-cash/stock election groups. Step 1 remains open: 234 overlapping data gates
+[Reconciliation tests and event terms](docs/broad_reconciliation_tests_and_terms_2026-10-30.md)
+add tested component handling, primary-supported PHIN/KLG ratios and explicit
+warmup/context routing. Step 1 remains open: 228 overlapping data gates
 remain before Step 2 simulator integration. Research settings are approved;
 there are no new broader-basket return results or purchases.
 

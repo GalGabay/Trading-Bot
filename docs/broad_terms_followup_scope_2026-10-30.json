@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Remaining ordinary-dividend and spin-off evidence after component unit tests",
+  "max_search_queries": 8,
+  "max_page_opens": 8,
+  "max_price_requests": 0,
+  "purchases_usd": 0,
+  "strategy_runs": 0,
+  "orders": 0,
+  "primary_sources_only": true,
+  "stop_new_requests_on_access_barrier": true,
+  "no_previous_denied_or_timeout_url_retry": true,
+  "old_batches_remain_closed": true,
+  "targets": [
+    "AIV 2020 ordinary cash dividends",
+    "SLG 2020-2022 monthly dividends and election components",
+    "PHIN 2023 1-for-5 distribution",
+    "KLG 2023 1-for-4 distribution"
+  ]
+}

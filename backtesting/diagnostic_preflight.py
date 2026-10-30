@@ -14,6 +14,7 @@ from backtesting.broad_collection import pin
 from backtesting.cohort_audit import checked_file
 from backtesting.diagnostic_preparation import validate_policy
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
+from backtesting.dividend_components import validate_review_evidence
 
 
 class DiagnosticIntegrationBlocked(ValueError):
@@ -33,6 +34,13 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
             blockers.append(dict(kind="feature_event",instrument_id=event["instrument_id"],event_id="",reason=event["reason"]))
     for event in material:
         if event["scenario"]=="base":
+            reset=event.get("required_feature_reset")
+            if (event.get("status")=="inapplicable_preinvestable_event" and
+                    event.get("no_portfolio_entitlement") is True and reset and
+                    event["economic_date"] <= reset["from_session"] < membership_not_before and
+                    reset["instrument_id"]==event["parent_id"]):
+                resets.append(reset)
+                continue
             if (event["event_id"]=="peak_holding_company_reorganization" and
                     event.get("diagnostic_terms_admitted") is True):
                 continue
@@ -71,8 +79,11 @@ def prepare(preparation_dir,terms_review_path,output):
         checked_file(Path.cwd(),source)
     if preparation.get("dividend_component_review") is not None:
         review=json.loads(checked_file(Path.cwd(),preparation["dividend_component_review"]).read_text(encoding="utf-8"))
-        for source in review["sources"]:
-            checked_file(Path.cwd(),source["evidence"])
+        validate_review_evidence(review)
+    if preparation.get("event_terms_review") is not None:
+        review=json.loads(checked_file(Path.cwd(),preparation["event_terms_review"]).read_text(encoding="utf-8"))
+        checked_file(Path.cwd(),review["spec"])
+        validate_review_evidence(review)
     revision=json.loads(checked_file(Path.cwd(),preparation["revision"]).read_text(encoding="utf-8"))
     spec=json.loads(checked_file(Path.cwd(),revision["spec"]).read_text(encoding="utf-8"))
     mapping=json.loads(checked_file(Path.cwd(),revision["mapping"]).read_text(encoding="utf-8"))

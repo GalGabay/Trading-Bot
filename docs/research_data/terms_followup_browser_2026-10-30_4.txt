@@ -1,0 +1,113 @@
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/1040971/000104097121000021/a21q2supplemental.htm)
+citeturn119view0 [wordlim: 200] Crawled: 6 days ago; Content type: text/html; Source: open({"ref_id":"turn117view3","lineno":210}); Total lines: 2462
+L168: Occupancy in the Company's Manhattan same-store office portfolio was 93.6% as of June 30, 2021, inclusive of 53,962 square feet of leases signed but not yet commenced, as compared to 94.1% at the end of the previous quarter.
+L169: 
+L170: Significant leases that were signed in the second quarter included:
+L171: 
+L172: •Total of 227,670 square feet of leases signed at One Vanderbilt Avenue:
+L173: 
+L174: •New lease for 97,652 square feet, for 15.0 years;
+L175: 
+L177: •New lease with Mamoura Holdings (US), LLC for 28,448 square feet, for 10.0 years;
+L178: 
+L179: •Expansion lease with TD Securities for 24,020 square feet, for 20.0 years, which increases TD Securities' footprint in the building to 142,892 square feet;
+L180: 
+L181: •New lease with Kyndrel for 22,531 square feet, for 9.0 years;
+L182: 
+L183: •New lease with Nearwater Management LLC for 17,289 square feet, for 7.0 years; and
+L184: •Expansion lease with InTandem Capital Partners LLC and Sagewind Capital LLC for 2,163 square feet, for 7.0 years, which increases their joint footprint in the building to 12,328 square feet;
+L185: 
+L186: •Early renewal with Wells Fargo Bank N.A. for 103,803 square feet at 100 Park Avenue, for 2.1 years;
+L187: 
+L188: •New lease with GQG Partners, LLC for 8,936 square feet at 280 Park Avenue, for 15.0 years; and
+L189: 
+L190: •New retail lease with Vashi for 11,777 square feet at 110 Greene Street, for 15.0 years.
+L191:  |  |  |  |  |  |  |  |
+L192: Supplemental Information  | 6  | Second Quarter 2021
+L193: 
+L194: * * *
+L195: 
+L196:  |  |  |  |  |  |  |  |
+L197: SECOND QUARTER 2021 HIGHLIGHTS
+L198: Unaudited
+L199:  | 【1†Image: image121a.jpg】
+L200:  |  |
+L201: 
+L202: Investment Activity
+L203: To date in 2021, the Company has repurchased 3.4 million shares of its common stock and redeemed 0.6 million units of its Operating Partnership, or OP units, bringing total repurchases and redemptions to 34.9 million shares of common stock and 1.6 million OP units for a combined total of $3.1 billion under the previously announced $3.5 billion share repurchase program.
+L204: In June, the Company closed on the previously announced sale of 635-641 Sixth Avenue for a gross sale price of $325.0 million, equating to more than $1,200 per square foot. The property is comprised of two adjoined buildings totaling eight stories and 267,000 square feet, occupying the full western block-front on Sixth Avenue from 19th Street to 20th Street in Midtown South. The transaction generated net cash proceeds to the Company of $313.2 million.
+L205: In June, the Company closed on the previously announced sale of its 20.0% interest in 605 West 42nd Street, also known as "Sky," for a gross asset valuation of $858.1 million. The 71-story, 948,233 square foot luxury multifamily tower includes 295 affordable units of dedicated affordable housing and 68,000 square feet of retail space. The transaction generated net cash proceeds to the Company of $54.5 million.
+L206: In June, the Company closed on the acquisition of the fee interest in 461 Fifth Avenue for a gross purchase price of $28.0 million pursuant to a purchase option under the ground lease at the property, thereby consolidating a leasehold position into 100% unencumbered fee ownership. The Company acquired the leasehold interest in the property in 2003. The property comprises 200,000 square feet on the corner of Fifth Avenue and 40th Street in East Midtown.
+L207: 
+L208: Debt and Preferred Equity Investment Activity
+L209: The carrying value of the Company’s debt and preferred equity ("DPE") portfolio was $1.11 billion at June 30, 2021.
+L210: The portfolio is comprised of $1.07 billion of investments, which are classified in the debt and preferred equity line item of the balance sheet, at a weighted average current yield of 7.3%, or 9.0% excluding the effect of $238.7 million of investments that are on non-accrual, and mortgage investments aggregating $0.04 billion at a weighted average current yield of 3.6% that are included in other balance sheet line items for accounting purposes.
+L211: During the second quarter, the Company acquired a subordinate debt investment for $60.4 million, all of which was retained, at a yield of 14.0%.
+L212: 
+L213: During the second quarter, the Company generated $53.8 million of cash through the sale, at par, of one DPE position.
+L214: 
+L215: Financing Activity
+L216: In June, the Company, along with its joint venture partners, closed on the previously announced $3.0 billion 10-year fixed-rate refinancing of One Vanderbilt Avenue. The loan was securitized in a single asset, single borrower (SASB) agented CMBS transaction.
+L217: The new financing carries a stated coupon of 2.855 percent, equivalent to a rate of 2.947 percent inclusive of hedging costs, and replaces the previous $1.75 billion construction facility that had an outstanding balance of approximately $1.54 billion at the time of repayment.
+L218: Dividends
+L219: 
+L220: In the second quarter of 2021, the Company declared:
+L221: 
+L222: •Three monthly dividends on its outstanding common stock of $0.3033 per share which were paid on May 17, June 15, and July 15, 2021, equating to an annualized dividend of $3.64 per share of common stock; and
+L223: •Quarterly dividend on its outstanding 6.50% Series I Cumulative Redeemable Preferred Stock of $0.40625 per share for the period April 15, 2021 through and including July 14, 2021, which was paid on July 15, 2021 and is the equivalent of an annualized dividend of $1.625 per share.
+L224: 
+L225: Conference Call and Audio Webcast
+L226: The Company's executive management team, led by Marc Holliday, Chairman and Chief Executive Officer, will host a conference call and audio webcast on Thursday, July 22, 2021, at 2:00 pm ET to discuss the financial results.
+L227: 
+L228: The supplemental data will be available prior to the quarterly conference call in the Investors section of the SL Green Realty Corp. website at www.slgreen.com under “Financial Reports.”
+L229: The live conference call will be webcast in listen-only mode in the Investors section of the SL Green Realty Corp. website at www.slgreen.com under “Presentations & Webcasts.” The conference may also be accessed by dialing toll-free (877) 312-8765 or international (419) 386-0002, and using conference ID 5177356.
+L230: A replay of the call will be available for 7 days after the call by dialing (855) 859-2056 using conference ID 1787091. A webcast replay will also be available in the Investors section of the SL Green Realty Corp. website at www.slgreen.com under “Presentations & Webcasts.”
+L231: 
+L232:  |  |  |  |  |  |  |  |
+L233: Supplemental Information  | 7  | Second Quarter 2021
+L234: 
+L235: * * *
+L236: 
+L237:  |  |  |  |  |  |  |  |
+L238: KEY FINANCIAL DATA
+L239: Unaudited(Dollars in Thousands Except Per Share)  |  | 【1†Image: image121a.jpg】
+L240:  |  |
+L241:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L242:  | As of or for the three months ended
+L243:  | 6/30/2021  |  | 3/31/2021  |  | 12/31/2020  |  | 9/30/2020  |  | 6/30/2020
+L244:  |  |  |  |  |  |  |  |  |
+L245: Earnings Per Share  |  |  |  |  |  |  |  |  |
+L246: Net income (loss) available to common stockholders (EPS) - diluted (1)  | $  | 1.51   |  |  | $  | (0.11)  |  |  | $  | 2.41   |  |  | $  | 0.19   |  |  | $  | 0.76   |
+L247: Funds from operations (FFO) available to common stockholders - diluted (1)  | $  | 1.60   |  |  | $  | 1.73   |  |  | $  | 1.59   |  |  | $  | 1.80   |  |  | $  | 1.74   |
+L248: Funds from operations (FFO) available to common stockholders - pro forma (2)  | $  | 1.60   |  |  | $  | 1.73   |  |  | $  | 1.56   |  |  | $  | 1.75   |  |  | $  | 1.70   |
+L249:  |  |  |  |  |  |  |  |  |
+L250: Common Share Price & Dividends  |  |  |  |  |  |  |  |  |
+L251: Closing price at the end of the period (1)  | $  | 80.00   |  |  | $  | 69.99   |  |  | $  | 61.32   |  |  | $  | 47.72   |  |  | $  | 50.73   |
+L252: Closing high price during period (1)  | $  | 85.17   |  |  | $  | 77.76   |  |  | $  | 65.76   |  |  | $  | 52.74   |  |  | $  | 64.96   |
+L253: Closing low price during period (1)  | $  | 69.52   |  |  | $  | 58.13   |  |  | $  | 42.87   |  |  | $  | 45.11   |  |  | $  | 37.90   |
+L254: Annual dividend per common share  | $  | 3.64   |  |  | $  | 3.64   |  |  | $  | 3.64   |  |  | $  | 3.54   |  |  | $  | 3.54   |
+L255:  |  |  |  |  |  |  |  |  |
+L256: FFO payout ratio (trailing 12 months)  | 54.5%  |  | 53.3%  |  | 50.3%  |  | 48.6%  |  | 48.2%
+L257: Funds available for distribution (FAD) payout ratio (trailing 12 months)  | 63.4%  |  | 59.5%  |  | 62.0%  |  | 59.3%  |  | 67.0%
+L258:  |  |  |  |  |  |  |  |  |
+L259: Common Shares & Units  |  |  |  |  |  |  |  |  |
+L260: Common shares outstanding (1)  | 67,880   |  |  | 69,354   |  |  | 68,508   |  |  | 70,969   |  |  | 71,586   |
+L261: Units outstanding  | 3,808   |  |  | 4,156   |  |  | 3,939   |  |  | 4,027   |  |  | 4,045   |
+L262: Total common shares and units outstanding  | 71,688   |  |  | 73,510   |  |  | 72,447   |  |  | 74,996   |  |  | 75,631   |
+L263:  |  |  |  |  |  |  |  |  |
+L264: Weighted average common shares and units outstanding - basic (1)  | 73,073   |  |  | 73,158   |  |  | 74,072   |  |  | 74,972   |  |  | 77,658   |
+L265: Weighted average common shares and units outstanding - diluted (1)  | 73,727   |  |  | 74,070   |  |  | 75,163   |  |  | 75,414   |  |  | 78,066   |
+L266: Weighted average common shares and units outstanding - pro forma (2)  | 73,727   |  |  | 74,070   |  |  | 76,575   |  |  | 77,491   |  |  | 80,219   |
+L267:  |  |  |  |  |  |  |  |  |
+L268: Market Capitalization  |  |  |  |  |  |  |  |  |
+L269: Market value of common equity  | $  | 5,735,040   |  |  | $  | 5,144,965   |  |  | $  | 4,442,450   |  |  | $  | 3,578,809   |  |  | $  | 3,836,761   |
+L270: Liquidation value of preferred equity/units  | 428,503   |  |  | 428,503   |  |  | 432,169   |  |  | 432,169   |  |  | 455,448   |
+L271: Consolidated debt  | 4,725,996   |  |  | 5,349,310   |  |  | 4,963,249   |  |  | 5,466,849   |  |  | 6,189,658   |
+L272: Consolidated market capitalization  | $  | 10,889,539   |  |  | $  | 10,922,778   |  |  | $  | 9,837,868   |  |  | $  | 9,477,827   |  |  | $  | 10,481,867   |
+L273: SLG share of unconsolidated JV debt  | 5,558,666   |  |  | 4,422,585   |  |  | 4,672,371   |  |  | 4,588,930   |  |  | 4,230,047   |
+L274: Market capitalization including SLG share of unconsolidated JVs  | $  | 16,448,205   |  |  | $  | 15,345,363   |  |  | $  | 14,510,239   |  |  | $  | 14,066,757   |  |  | $  | 14,711,914   |
+L275:  |  |  |  |  |  |  |  |  |
+L276: Consolidated debt service coverage (trailing 12 months)  | 3.60x  |  | 3.61x  |  | 3.54x  |  | 3.52x  |  | 3.40x
+L277: Consolidated fixed charge coverage (trailing 12 months)  | 2.83x  |  | 2.85x  |  | 2.82x  |  | 2.83x  |  | 2.75x
+L278: Debt service coverage, including SLG share of unconsolidated JVs (trailing 12 months)  | 2.37x  |  | 2.41x  |  | 2.41x  |  | 2.44x  |  | 2.41x
+

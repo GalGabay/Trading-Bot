@@ -1,0 +1,103 @@
+{
+  "revision": {
+    "path": "data/reports/broad_corrected_input_v1/summary.json",
+    "sha256": "41c935ae966dbb5249a71606e109d5eb31d0eeaa172a0369a1d97a4326ce9cb2"
+  },
+  "policy": {
+    "path": "docs/broad_diagnostic_accounting_policy_v7.json",
+    "sha256": "78685656723d222ab2784a9abfb34ae02f4118ff80f2cff69cad08f6a53db59f"
+  },
+  "execution": [
+    {
+      "path": "backtesting/diagnostic_preparation.py",
+      "sha256": "67d6b2bed07fc034a5a36e9428440d390817d3ccff68e6fd8a356efaef997321"
+    },
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "backtesting/dividend_components.py",
+      "sha256": "e579e531405382ecd68a3e8f067bf9b39a4468905a0bbfa734925a175c6a2a02"
+    },
+    {
+      "path": "backtesting/diagnostic_event_terms.py",
+      "sha256": "dae537a2d0d871d6d98b32dddd06fc2aafee1d05ce2078172a1352106cb15169"
+    }
+  ],
+  "dividend_component_review": {
+    "path": "docs/broad_dividend_component_decisions_v2_2026-10-30.json",
+    "sha256": "43ac80d50adba4bee5cf1553db182899c974ef8a0b23446bf99fa06c49671d8f"
+  },
+  "event_terms_review": {
+    "path": "docs/broad_event_terms_overlay_2026-10-30.json",
+    "sha256": "46b3ca9ab6fad06202cac3026bb61ab9504dbb6bca263a6ed750aeadfbff51c9"
+  },
+  "reviewed_material_events": 5,
+  "reviewed_context_only_records": 3,
+  "reviewed_dividend_component_groups": 10,
+  "selected_originals": 100,
+  "candidate_streams": 121,
+  "provider_dividend_records": 2698,
+  "dividend_plan_rows": 8094,
+  "base_dividend_status_counts": {
+    "candidate_receivable_only": 1358,
+    "candidate_modeled_payment": 1170,
+    "blocked_terms": 169,
+    "reviewed_component_in_total_no_independent_right": 1
+  },
+  "base_blocker_counts": {
+    "special_foreign_or_unclassified_distribution_requires_terms": 54,
+    "multiple_records_same_security_ex_date_require_component_review": 24,
+    "lineage_contains_unresolved_special_election_dividend": 111,
+    "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms": 6,
+    "conflicting_provider_and_issuer_hosted_ex_dates_require_review": 4,
+    "reference_only_predecessor_never_earns_a_portfolio_right": 3
+  },
+  "base_dividends_missing_payable_date": 1383,
+  "multiple_dividend_groups": 22,
+  "multiple_dividend_records": 44,
+  "material_event_records": 26,
+  "material_plan_rows": 78,
+  "unresolved_feature_events": [
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "date": "2016-11-01",
+      "reason": "ADNT distribution economics still require review; do not warm through an unresolved price discontinuity"
+    }
+  ],
+  "event_route_counts": {
+    "requires_identity_or_economic_review": 28,
+    "linked_candidate_economic_event": 7,
+    "context_only_no_portfolio_credit": 13,
+    "wrong_predecessor_ratio_do_not_apply": 1,
+    "reverse_split_with_election_dividend": 3,
+    "search_only_reverse_split_election": 1,
+    "genuine_fractional_stock_split": 1,
+    "represented_by_peak_holding_company_reorganization_do_not_apply_twice": 1
+  },
+  "output_files": [
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v6/dividend_candidates.json",
+      "sha256": "40d1828bd970eea3a1ba113021cdc3f542a5c28a7d79647640f8dbc44417a7dc"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v6/material_candidates.json",
+      "sha256": "1f6d2f68fd37dae160636fb7f598ef193b9cb97d1498cdec5b3b7f4c84254fc0"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v6/event_routes.csv",
+      "sha256": "07912656fa3eeadb88e2eb7746825909cdf0c0c39ac2477ee0bc617b0ac29311"
+    }
+  ],
+  "owner_approved": true,
+  "performance_ready": false,
+  "step1_complete": false,
+  "strict_flags_promoted": false,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "strategy_runs": 0,
+  "unit_tests_run": 0
+}

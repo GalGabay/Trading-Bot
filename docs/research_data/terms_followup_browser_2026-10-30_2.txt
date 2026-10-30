@@ -1,0 +1,201 @@
+bwa-20230630 (https://www.sec.gov/Archives/edgar/data/908255/000090825523000044/bwa-20230630.htm)
+citeturn117view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: text/html; Source: open({"ref_id":"turn115search2","lineno":null}); Total lines: 2001
+L309: Operating results for the three and six months ended June 30, 2023 are not necessarily indicative of the results that may be expected for the year ending December 31, 2023. The balance sheet as of December 31, 2022 was derived from the audited financial statements as of that date. For further information, refer to the Consolidated Financial Statements and Footnotes thereto included in the Company’s Annual Report on Form 10-K for the year ended December 31, 2022.
+L310: Management makes estimates and assumptions that affect the reported amounts of assets and liabilities and disclosure of contingent assets and liabilities as of the date of the financial statements and accompanying notes, as well as the amounts of revenues and expenses reported during the periods covered by those financial statements and accompanying notes. Actual results could differ from these estimates.
+L311: On July 3, 2023, BorgWarner completed the previously announced spin-off (“Spin-Off”) of its Fuel Systems and Aftermarket segments in a transaction intended to qualify as tax free to the Company’s stockholders for U.S. federal income tax purposes, which was accomplished by the distribution of 100% of the outstanding common stock of PHINIA, Inc. (“PHINIA”) to holders of record of common stock of the Company on a pro-rata basis.
+L312: Each holder of record of common stock of the Company received one share of PHINIA common stock for every five shares of common stock of the Company held on June 23, 2023, the record date for the distribution (“Distribution Date”). In lieu of fractional shares of PHINIA, shareholders of the Company received cash. PHINIA is an independent public company trading under the symbol “PHIN” on the New York Stock Exchange.
+L313: The historical results of operations and the financial position of PHINIA are included in these Condensed Consolidated Financial Statements. Starting in the third quarter of 2023, the Company will no longer consolidate its Fuel Systems and Aftermarket segments, and results for those segments for all periods prior to the Spin-Off will be reflected as discontinued operations.
+L314: The Spin-Off has the potential to impact the allocation of profit across jurisdictions for tax purposes as well as various tax structuring actions and strategies. Evidence could become available in subsequent quarters that may require the Company to adjust its tax positions including those related to valuation allowances.
+L315: In connection with the Spin-Off, the Company entered into several agreements with PHINIA on or prior to the Distribution Date that, among other things, provide a framework for the Company’s relationship with PHINIA after the Spin-Off, including a separation and distribution agreement, an employee matters agreement, a tax matters agreement, an intellectual property cross-license agreement and a transition service agreement through which the Company and PHINIA will continue to provide certain services to each other following the Spin-Off.
+L316: 5
+L317: 
+L318: * * *
+L319: 
+L320: 【16†Table of Contents】
+L321: 
+L322: NOTE 2 NEW ACCOUNTING PRONOUNCEMENTS
+L323: In October 2021, the FASB issued ASU No. 2021-08, “Business Combinations (Topic 805): Accounting for Contract Assets and Contract Liabilities from Contracts with Customers.” It requires entities to apply ASC Topic 606, “Revenue from Contracts with Customers,” to recognize and measure contract assets and contract liabilities in a business combination.
+L324: The amendments improve comparability after the business combination by providing consistent recognition and measurement guidance for revenue contracts with customers acquired in a business combination and revenue contracts with customers not acquired in a business combination. This guidance is effective for interim and annual reporting periods beginning after December 15, 2022.
+L327: In accordance with ASC Topic 805, “Business Combinations,” acquisitions are recorded using the acquisition method of accounting. The Company recognizes and measures the acquisition date fair value of the identifiable assets acquired, liabilities assumed, and any non-controlling interest using a range of methodologies as indicated by generally accepted valuation practices.
+L1427: In June 2023, the Company announced the next phase of its Charging Forward strategy which focuses on profitably growing eProducts across all of its segments for both BEVs and Hybrid vehicles while maximizing the value of its Foundational product portfolio. Foundational products include all products utilized on internal combustion engines plus those same products and components that are also included in hybrid powertrains.
+L1428: The Company’s 2027 expectations from the strategy include achieving over $10 billion in annual eProducts sales, delivering eProducts adjusted operating margin of approximately 7% and maintaining double-digit adjusted operating margins for its Foundational product portfolio. During the six months ended June 30, 2023, the Company’s eProducts revenue was approximately $925 million, or 11% of its total revenue.
+L1429: On July 3, 2023, BorgWarner completed the previously announced spin-off (“Spin-Off”) of its Fuel Systems and Aftermarket segments in a transaction intended to qualify as tax free to the Company’s stockholders for U.S. federal income tax purposes, which was accomplished by the distribution of 100% of the outstanding common stock of PHINIA, Inc. (“PHINIA”) to holders of record of common stock of the Company on a pro-rata basis.
+L1430: Each holder of record of common stock of the Company received one share of PHINIA common stock for every five shares of common stock of the Company held on June 23, 2023, the record date for the distribution (“Distribution Date”). In lieu of fractional shares of PHINIA, shareholders of the Company received cash. PHINIA is an independent public company trading under the symbol “PHIN” on the New York Stock Exchange.
+L1431: The historical results of operations and the financial position of PHINIA are included in these condensed consolidated financial statements. Starting in the third quarter of 2023, the Company will no longer consolidate its Fuel Systems and Aftermarket segments, and results for those segments for all periods prior to the Spin-Off will be reflected as discontinued operations.
+L1432: Acquisitions
+L1433: 
+L1434: Eldor Corporation’s Electric Hybrid Systems Business
+L1435: 
+L1436: On June 19, 2023, the Company announced that it had entered into a share purchase agreement to acquire the Electric Hybrid Systems business segment of Eldor Corporation (“Eldor”), which is
+L1437: 
+L1438: 37
+L1439: 
+L1440: * * *
+L1441: 
+L1442: 【16†Table of Contents】
+L1443: headquartered in Italy. The purchase price due at closing is €75 million ($82 million), with up to €175 million ($191 million) in contingent payments that could be paid over the next 2 years. The acquisition is expected to complement the Company’s existing ePropulsion product portfolio by enhancing the Company’s engineering capabilities. The transaction is subject to satisfaction of customary closing conditions and is expected to close in the third quarter of 2023.
+L1444: Hubei Surpass Sun Electric Charging Business
+L1445: On March 1, 2023, the Company completed its acquisition of the electric vehicle solution, smart grid and smart energy businesses of Hubei Surpass Sun Electric, pursuant to an Equity Transfer Agreement. The acquisition complements the Company’s existing European and North American charging footprint by adding a presence in China. The total consideration was ¥288 million ($42 million), including ¥268 million ($39 million) of base purchase price and ¥20 million ($3 million) of estimated earn-out payments.
+L1446: The Company paid ¥207 million ($30 million) of the base purchase price in the six months ended June 30, 2023. The remaining ¥61 million ($9 million) of base purchase price is payable in two installments with the last payment due before March 31, 2025. In addition, pursuant to the agreement, the Company could be obligated to remit up to ¥103 million ($15 million), in the form of contingent payments over approximately two years following the closing.
+L1448: On December 1, 2022, the Company acquired Drivetek AG, an engineering and product development company located in Switzerland. This acquisition strengthens the Company’s power electronics capabilities in auxiliary inverters, which the Company expects will accelerate the growth of its High Voltage eFan business. The Company paid ₣27 million ($29 million) at closing, and up to ₣10 million ($10 million) could be paid in the form of contingent earn-out payments over three years following the closing.
+L1449: Rhombus Energy Solutions
+L1450: 
+L1451: On July 29, 2022, the Company acquired Rhombus Energy Solutions, a provider of charging solutions in the North American market. The acquisition complements the Company’s existing European charging footprint to accelerate organic growth and adds North American regional presence to its charging business. The Company paid $131 million at closing, and up to $30 million could be paid in the form of contingent payments over three years following the closing.
+--------------------------------------------------------------------------------
+KELLOGG COMPANY BOARD OF DIRECTORS APPROVES SEPARATION INTO TWO COMPANIES, KELLANOVA AND WK KELLOGG CO - Sep 11, 2023 (https://newsroom.kellanova.com/2023-09-11-KELLOGG-COMPANY-BOARD-OF-DIRECTORS-APPROVES-SEPARATION-INTO-TWO-COMPANIES%2C-KELLANOVA-AND-WK-KELLOGG-CO)
+citeturn117view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn115search1","lineno":null}); Redirected to URL: https://newsroom.kellanova.com/2023-09-11-KELLOGG-COMPANY-BOARD-OF-DIRECTORS-APPROVES-SEPARATION-INTO-TWO-COMPANIES,-KELLANOVA-AND-WK-KELLOGG-CO; Total lines: 99
+L25:   * Kellogg Company's Board of Directors approved the pending separation of Kellogg Company into Kellanova and WK Kellogg Co
+L26: 
+L27:   * The separation is expected to become effective on October 2, 2023
+L28: 
+L29:   * The Company also set the distribution ratio of shares at 1 share of WK Kellogg Co for every 4 shares of current Kellogg Company
+L30: 
+L31:   * The Company believes that the separation will create two stronger, more focused companies, each with a strong financial outlook
+L32: BATTLE CREEK, Mich., Sept. 11, 2023 /【7†PRNewswire†www.prnewswire.com】/ -- Kellogg Company (NYSE: K) today announced that its Board of Directors formally approved the previously announced separation into two independent, publicly traded companies, Kellanova and WK Kellogg Co.
+L33: Upon completion of the separation on October 2, 2023, Kellogg Company will be renamed Kellanova, and will continue to trade on the New York Stock Exchange (NYSE) under the ticker symbol "K", while WK Kellogg Co is expected to begin trading on the NYSE under the ticker symbol "KLG".
+L34: 
+L35: At 12:01am EDT on October 2, 2023, Kellogg shareowners of record as of September 21, 2023, will receive 1 share of WK Kellogg Co (KLG) for every 4 shares of Kellogg Company (K) owned.
+L36: "After more than a year of comprehensive planning and execution, we are more confident than ever that the separation will produce two stronger companies and create substantial value for shareowners," stated Steve Cahillane, Kellogg Company's Chairman and Chief Executive Officer.
+L37: 
+L38: Two Stronger, More Focused Companies
+L39: Kellanova will feature a growth-oriented portfolio that is weighted toward snacks and emerging markets, and will be led by highly differentiated brands with considerable opportunity for expansion.  It is projected to generate net sales of approximately $13.4-$13.6 billion and adjusted-basis EBITDA^{1} of approximately $2.25-$2.3 billion^{2} in 2024.  Kellanova expects to deliver long-term annual growth rates of 3-5% for net sales (organic basis), 5-7% for operating profit (currency neutral and adjusted basis), and 7-9% for earnings per share (currency neutral and adjusted basis), including in 2024 on a like-for-like basis excluding WK Kellogg Co.
+L40: "We are looking forward to a new era as Kellanova, marked by a more growth-oriented portfolio, a renewed vision and strategy, and an energized organization grounded by a winning culture and our founder's values," said Mr. Cahillane, who will remain Chairman and Chief Executive Officer of Kellanova.  "These elements build on what has already been a track record of strong and consistent financial performance for the Kellanova portfolio."
+L41: Building on a foundation of iconic brands and a leading share position in North American cereal, WK Kellogg Co will focus and integrate its commercial strategy and execution, while modernizing its supply chain, all of which it expects will result in improved competitiveness, profitability, and cash flow.  WK Kellogg Co projects net sales of approximately $2.7 billion and adjusted-basis EBITDA^{1} of approximately $255-$265 million^{2} in 2024.  It expects to improve its adjusted-basis EBITDA margins by 500 basis points^{2} by the end of 2026, through supply chain modernization and a stable top-line trajectory.
+L42: "WK Kellogg Co has a 117-year legacy of innovation and the soul of a start-up, with an organization incredibly energized by our future," remarked Gary Pilnick, who will serve as WK Kellogg Co's Chairman and Chief Executive Officer following the separation.  "As a standalone company, we will benefit immediately from the executional advantages of increased focus and end-to-end integration, while we modernize our supply chain and substantially improve our profit margins.  We're on a profitable journey to take this great business to the next level."
+L46: The completion of the distribution is subject to a number of customary conditions, including the Securities and Exchange Commission (the "SEC") having declared effective WK Kellogg Co's Registration Statement on Form 10, as amended, which WK Kellogg Co has filed with the SEC and is available at the SEC's website at 【8†http://www.sec.gov†c212.net】.
+L47: In addition to the public filing of the Form 10, Kellogg Company has posted supplemental business and other information about the Company and WK Kellogg Co to its investor website at 【9†http://investor.kelloggs.com†c212.net】.  A dedicated website providing ongoing information about the separation is available at 【10†https://www.unleashingourpotential.com†c212.net】.
+L48: The receipt of WK Kellogg Co common stock in the distribution will be tax-free to Kellogg Company shareowners for U.S. federal income tax purposes, except for the gain or loss attributable to cash received in lieu of fractional shares of WK Kellogg Co common stock. Kellogg Company shareowners are urged to consult with their tax advisors with respect to the U.S. federal, state and local or foreign tax consequences, as applicable, of the separation.
+L49: Kellogg shareowners of record on September 21, 2023, will receive one share of WK Kellogg Co common stock for every four shares of Kellogg Company common stock they hold. Kellogg Company expects that a "when issued" public trading market for WK Kellogg Co's common stock will commence on September 27, 2023 under the symbol "KLG WI." Kellogg Company also anticipates that "regular way" trading of WK Kellogg Co's common stock will begin on October 2, 2023.
+L50: Kellogg Company has been advised by the NYSE that Kellogg Company common stock will trade "regular way" with due-bills on the NYSE under the symbol "K" from September 20, 2023 through September 29, 2023. On September 27, 2023, an ex-distribution market for Kellogg Company common stock will begin on the NYSE under the symbol "K WI" and continue through September 29, 2023.
+L51: Any holders of shares of Kellogg Company common stock who sell Kellogg Company shares regular way on or before September 29, 2023 will also be selling their right to receive shares of WK Kellogg Co common stock.
+L52: Additionally, holders of shares of Kellogg Company common stock who sell in the "ex-distribution" market on or before September 29, 2023 will be selling only his or her shares of Kellogg Company common stock and will be retaining his or her right to receive shares of WK Kellogg Co common stock in the distribution. Investors are encouraged to consult with their financial advisors regarding the specific implications of buying or selling WK Kellogg Co common stock on or before the distribution date.
+--------------------------------------------------------------------------------
+SL Green Realty Corp. Reports Fourth Quarter 2020 EPS of $3.43 Per Share; and FFO of $1.56 Per Share (https://slgreen.gcs-web.com/node/25891/pdf)
+citeturn117view2 [wordlim: 200] Crawled: 2 weeks ago; Content type: application/pdf; Number of pages: 9; Source: open({"ref_id":"turn114search15","lineno":null}); Total lines: 454
+L136@P2: 3.35% over LIBOR, with the ability to reduce the spread to as low as 3.00% upon achieving certain pre-leasing and completion milestones.
+L137@P2: In December, the Company, along with its joint venture partner, closed on the early refinancing of 100 Park Avenue. The new $360.0 million mortgage
+L138@P2: has a term of up to 5 years, as extended, bears interest at a floating rate of 2.25% over LIBOR and replaces the previous $353.1 million of
+L139@P2: indebtedness on the property that was scheduled to mature in February 2021.
+L140@P2: In January, the Company entered into $800 million of fixed rate interest swaps against floating rate corporate debt. The swaps have terms of between
+L141@P2: one and two years with a weighted average interest rate of 0.1578%.
+L142@P2: Dividends
+L143@P2: In the fourth quarter of 2020, the Company declared:
+L144@P2: Two monthly dividends on its outstanding common stock of $0.295 per share which were paid on November 16 and
+L145@P2: December 15, 2020, and one monthly dividend of $0.3033 per share which was paid on January 15, 2021. The increased
+L146@P2: dividend represents a 2.8% increase to the Company's ordinary dividend equating to an annualized dividend of $3.64 per
+L147@P2: share of common stock;
+L148@P2: A special dividend with a value of $1.6967 per share, which was paid on January 15, 2021. The special dividend was paid
+L149@P2: in the form of common stock of the Company. To mitigate the dilutive impact of the stock issued for the special dividend,
+L150@P2: the board of directors also authorized a reverse stock split, which was effective on January 20, 2021. The split ratio for the
+L151@P2: reverse stock split was 1.02918-for-1.
+L152@P2: Quarterly dividends on its outstanding 6.50% Series I Cumulative Redeemable Preferred Stock of $0.40625 per share for
+L153@P2: the period October 15, 2020 through and including January 14, 2021, which was paid on January 15, 2021 and is the
+L154@P2-3: equivalent of an annualized dividend of $1.625 per share.Conference Call and Audio Webcast
+L155@P3: The Company's executive management team, led by Marc Holliday, Chairman and Chief Executive Officer, will host a conference call and audio
+L156@P3: webcast on Thursday, January 28, 2021 at 2:00 pm ET to discuss the financial results.
+L157@P3: The supplemental data will be available prior to the quarterly conference call in the Investors section of the SL Green Realty Corp. website at
+L158@P3: https://slgreen.com/ under “Financial Reports.”
+L159@P3: The live conference call will be webcast in listen-only mode in the Investors section of the SL Green Realty Corp. website at https://slgreen.com/ under
+L160@P3: “Presentations & Webcasts”. The conference may also be accessed by dialing toll-free (877) 312-8765 or international (419) 386-0002, and using
+L161@P3: conference ID 6387248.
+L162@P3: A replay of the call will be available for 7 days after the call by dialing (855) 859-2056 using conference ID 3497478. A webcast replay will also be
+L163@P3: available in the Investors section of the SL Green Realty Corp. website at https://slgreen.com/ under “Presentations & Webcasts”.
+L164@P3: Company Profile
+L165@P3: SL Green Realty Corp., an S&P 500 company and Manhattan's largest office landlord, is a fully integrated real estate investment trust, or REIT, that is
+L166@P3: focused primarily on acquiring, managing and maximizing value of Manhattan commercial properties. As of December 31, 2020, SL Green held
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/1040971/000104097121000021/a21q2supplemental.htm)
+citeturn117view3 [wordlim: 200] Crawled: 6 days ago; Content type: text/html; Source: open({"ref_id":"turn114search9","lineno":null}); Total lines: 2462
+L0: EX-99.2 3 a21q2supplemental.htm EX-99.2 Document
+L1: 
+L2: 【0†Image: a21q2supplementalcovertemp.jpg】
+L3: 
+L4: * * *
+L5: 
+L6:  |  |  |  |  |  |  |  |
+L7:  |  | 【1†Image: image121a.jpg】
+L8:  |  |
+L9: 
+L10: SL Green Realty Corp. is a self-managed real estate investment trust, or REIT, with in-house capabilities in property management, acquisitions and dispositions, financing, development, redevelopment, construction and leasing.
+L11: As of June 30, 2021, the Company held interests in 77 buildings totaling 35.3 million square feet. This included ownership interests in 27.1 million square feet in Manhattan buildings and 7.4 million square feet securing debt and preferred equity investments.
+L12: 
+L13: •SL Green’s common stock is listed on the New York Stock Exchange and trades under the symbol SLG.
+L14: 
+L15: •SL Green's website is www.slgreen.com.
+L16: •This data is furnished to supplement audited and unaudited regulatory filings of the Company and should be read in conjunction with those filings. The financial data herein is unaudited and is provided to assist readers of quarterly and annual financial filings and should not be read in replacement of, or superior to, such financial filings. As such, data otherwise contained in future regulatory filings covering the same period may restate the data presented herein.
+L17: Questions pertaining to the information contained herein should be referred to Investor Relations at investor.relations@slgreen.com.
+L18: 
+L19: Ratings
+L20: 
+L21: Ratings are not recommendations to buy, sell or hold the Company’s securities.
+L22: 
+L23: Forward-looking Statements
+L24: This supplemental reporting package includes certain statements that may be deemed to be "forward-looking statements" within the meaning of the Private Securities Litigation Reform Act of 1995 and are intended to be covered by the safe harbor provisions thereof. All statements, other than statements of historical facts, included in this press release that address activities, events or developments that we expect, believe or anticipate will or may occur in the future, are forward-looking statements.
+L25: These forward-looking statements are based on certain assumptions and analyses made by us in light of our experience and our perception of historical trends, current conditions, expected future developments and other factors we believe are appropriate. Forward-looking statements are not guarantees of future performance and actual results or developments may differ materially, and we caution you not to place undue reliance on such statements.
+L26: Forward-looking statements are generally identifiable by the use of the words "may," "will," "should," "expect," "anticipate," "estimate," "believe," "intend," "project," "continue," or the negative of these words, or other similar words or terms.
+L27: Forward-looking statements contained in this press release are subject to a number of risks and uncertainties, many of which are beyond our control, that may cause our actual results, performance or achievements to be materially different from future results, performance or achievements expressed or implied by forward-looking statements made by us.
+L28: Factors and risks to our business that could cause actual results to differ from those contained in the forward-looking statements include risks and uncertainties related to the on-going COVID-19 pandemic and the duration and impact it will have on our business and the industry as a whole and the other risks and uncertainties described in our filings with the Securities and Exchange Commission.
+L150: New York, NY, July 21, 2021 - SL Green Realty Corp. (the "Company") (NYSE: SLG) today reported net income attributable to common stockholders for the quarter ended June 30, 2021 of $105.3 million, or $1.51 per share, as compared to net income of $56.4 million, or $0.76 per share, for the same quarter in 2020.
+L151: Net income attributable to common stockholders for the second quarter of 2021 includes net gains totaling $108.3 million, or $1.47 per share, recognized from the sales of 635-641 Sixth Avenue and our interests in 605 West 42nd Street, as compared to a net gain of $65.4 million, or $0.82 per share, in the second quarter of 2020 recognized from the sale of the retail condominium at 609 Fifth Avenue.
+L152: The Company also reported net income attributable to common stockholders for the six months ended June 30, 2021 of $97.9 million, or $1.40 per share, as compared to net income of $171.2 million, or $2.28 per share, for the same period in 2020. Net income attributable to common stockholders for the six months ended June 30, 2021 includes $94.1 million, or $1.27 per share, of net gains recognized from the sale of real estate interests and non-cash fair value adjustments.
+L153: Net income for the six months ended June 30, 2020 included $137.5 million, or $1.69 per share, of net gains recognized from the sale of real estate interests and non-cash fair value adjustments.
+L154: The Company reported FFO for the quarter ended June 30, 2021 of $117.7 million, or $1.60 per share, as compared to FFO for the same period in 2020 of $136.1 million, or $1.70 per share. FFO for the second quarter of the prior year included $12.4 million, or $0.15 per share, of lease termination income as compared to just $1.1 million, or $0.02 per share, of lease termination income included in the second quarter of 2021.
+L155: The Company also reported FFO for the six months ended June 30, 2021 of $246.0 million, or $3.33 per share, as compared to FFO of $308.1 million, or $3.79 per share, for the same period in 2020. FFO for the six months ended June 30, 2020 included $25.1 million, or $0.31 per share, of incremental income from Credit Suisse at 1 Madison Avenue representing rent through December 31, 2020.
+L156: 
+L157: All per share amounts are presented on a diluted basis.
+L158: 
+L159: Operating and Leasing Activity
+L160: For the quarter ended June 30, 2021, the Company reported consolidated revenues and operating income of $218.1 million and $88.7 million, respectively, compared to $253.7 million and $130.4 million, respectively, for the same period in 2020.
+L161: Same-store cash NOI, including our share of same-store cash NOI from unconsolidated joint ventures, decreased by 9.2% for the second quarter of 2021, and decreased 3.7% excluding lease termination income, as compared to the same period in 2020, an interim level that is consistent with our full-year 2021 goals and objectives.
+L162: Same-store cash NOI, including our share of same-store cash NOI from unconsolidated joint ventures, decreased by 5.4% for the six months June 30, 2021, and decreased 2.4% excluding lease termination income, as compared to the same period in 2020, an interim level that is consistent with our full-year 2021 goals and objectives.
+L163: During the second quarter of 2021, the Company signed 42 office leases in its Manhattan office portfolio totaling 557,703 square feet. The average lease term on the Manhattan office
+L164: leases signed in the second quarter of 2021 was 4.7 years and average tenant concessions were 2.4 months of free rent with a tenant improvement allowance of $17.16 per rentable square foot, excluding leases signed at One Vanderbilt Avenue. Twenty-five leases comprising 265,798 square feet, representing office leases on space that had been occupied within the prior twelve months, are considered replacement leases on which mark-to-market is calculated.
+L165: Those replacement leases had average starting rents of $84.12 per rentable square foot, representing a 1.1% decrease over the previous fully escalated rents on the same office spaces.
+L166: During the first six months of 2021, the Company signed 63 office leases in its Manhattan office portfolio totaling 910,455 square feet. The average lease term on the Manhattan office leases signed in the first six months of 2021 was 5.3 years and average tenant concessions were 4.7 months of free rent with a tenant improvement allowance of $39.76 per rentable square foot, excluding leases signed at One Vanderbilt Avenue.
+L167: Thirty-eight leases comprising 453,124 square feet, representing office leases on space that had been occupied within the prior twelve months, are considered replacement leases on which mark-to-market is calculated. Those replacement leases had average starting rents of $72.98 per rentable square foot, representing a 1.7% decrease over the previous fully escalated rents on the same office spaces.
+L168: Occupancy in the Company's Manhattan same-store office portfolio was 93.6% as of June 30, 2021, inclusive of 53,962 square feet of leases signed but not yet commenced, as compared to 94.1% at the end of the previous quarter.
+L169: 
+L170: Significant leases that were signed in the second quarter included:
+L171: 
+L172: •Total of 227,670 square feet of leases signed at One Vanderbilt Avenue:
+L173: 
+L174: •New lease for 97,652 square feet, for 15.0 years;
+L175: 
+L176: •New lease with MSD Partners for 35,567 square feet, for 15.0 years;
+L177: •New lease with Mamoura Holdings (US), LLC for 28,448 square feet, for 10.0 years;
+L178: 
+L179: •Expansion lease with TD Securities for 24,020 square feet, for 20.0 years, which increases TD Securities' footprint in the building to 142,892 square feet;
+L180: 
+L181: •New lease with Kyndrel for 22,531 square feet, for 9.0 years;
+L182: 
+L183: •New lease with Nearwater Management LLC for 17,289 square feet, for 7.0 years; and
+L184: •Expansion lease with InTandem Capital Partners LLC and Sagewind Capital LLC for 2,163 square feet, for 7.0 years, which increases their joint footprint in the building to 12,328 square feet;
+L185: 
+L186: •Early renewal with Wells Fargo Bank N.A. for 103,803 square feet at 100 Park Avenue, for 2.1 years;
+L187: 
+L188: •New lease with GQG Partners, LLC for 8,936 square feet at 280 Park Avenue, for 15.0 years; and
+L189: 
+L190: •New retail lease with Vashi for 11,777 square feet at 110 Greene Street, for 15.0 years.
+L203: To date in 2021, the Company has repurchased 3.4 million shares of its common stock and redeemed 0.6 million units of its Operating Partnership, or OP units, bringing total repurchases and redemptions to 34.9 million shares of common stock and 1.6 million OP units for a combined total of $3.1 billion under the previously announced $3.5 billion share repurchase program.
+L204: In June, the Company closed on the previously announced sale of 635-641 Sixth Avenue for a gross sale price of $325.0 million, equating to more than $1,200 per square foot. The property is comprised of two adjoined buildings totaling eight stories and 267,000 square feet, occupying the full western block-front on Sixth Avenue from 19th Street to 20th Street in Midtown South. The transaction generated net cash proceeds to the Company of $313.2 million.
+L205: In June, the Company closed on the previously announced sale of its 20.0% interest in 605 West 42nd Street, also known as "Sky," for a gross asset valuation of $858.1 million. The 71-story, 948,233 square foot luxury multifamily tower includes 295 affordable units of dedicated affordable housing and 68,000 square feet of retail space. The transaction generated net cash proceeds to the Company of $54.5 million.
+L206: In June, the Company closed on the acquisition of the fee interest in 461 Fifth Avenue for a gross purchase price of $28.0 million pursuant to a purchase option under the ground lease at the property, thereby consolidating a leasehold position into 100% unencumbered fee ownership. The Company acquired the leasehold interest in the property in 2003. The property comprises 200,000 square feet on the corner of Fifth Avenue and 40th Street in East Midtown.
+L207: 
+L208: Debt and Preferred Equity Investment Activity
+L209: The carrying value of the Company’s debt and preferred equity ("DPE") portfolio was $1.11 billion at June 30, 2021.
+L226: The Company's executive management team, led by Marc Holliday, Chairman and Chief Executive Officer, will host a conference call and audio webcast on Thursday, July 22, 2021, at 2:00 pm ET to discuss the financial results.
+L227: 
+L228: The supplemental data will be available prior to the quarterly conference call in the Investors section of the SL Green Realty Corp. website at www.slgreen.com under “Financial Reports.”
+L229: The live conference call will be webcast in listen-only mode in the Investors section of the SL Green Realty Corp. website at www.slgreen.com under “Presentations & Webcasts.” The conference may also be accessed by dialing toll-free (877) 312-8765 or international (419) 386-0002, and using conference ID 5177356.
+L230: A replay of the call will be available for 7 days after the call by dialing (855) 859-2056 using conference ID 1787091. A webcast replay will also be available in the Investors section of the SL Green Realty Corp. website at www.slgreen.com under “Presentations & Webcasts.”
+L231: 
+L232:  |  |  |  |  |  |  |  |
+L233: Supplemental Information  | 7  | Second Quarter 2021
+L234: 
+L235: * * *
+L236: 
+L237:  |  |  |  |  |  |  |  |
+L238: KEY FINANCIAL DATA
+L239: Unaudited(Dollars in Thousands Except Per Share)  |  | 【1†Image: image121a.jpg】
+L240:  |  |
+

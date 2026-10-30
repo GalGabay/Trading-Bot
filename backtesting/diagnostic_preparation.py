@@ -17,6 +17,7 @@ from backtesting.cohort_audit import checked_file
 from backtesting.diagnostic_accounting import DiagnosticClock, SCENARIOS, plan_dividend
 from backtesting.diagnostic_approval import validate_approval
 from backtesting.dividend_components import apply_review, load_review
+from backtesting.diagnostic_event_terms import apply_material_terms, load_event_terms
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
 
 
@@ -104,7 +105,7 @@ def dividend_multiplicity(rows):
     return {key:sorted(ids) for key,ids in groups.items() if len(ids)>1}
 
 
-def prepare(revision_dir, policy_path, output, dividend_review_path=None):
+def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_terms_path=None):
     if output.exists() or not output.resolve().is_relative_to(Path.cwd().resolve()):
         raise ValueError("Choose a fresh policy-preparation directory in the workspace")
     policy = json.loads(policy_path.read_text(encoding="utf-8"))
@@ -135,6 +136,8 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None):
     multiple_dividends=dividend_multiplicity(provider_rows)
     component_decisions = {} if dividend_review_path is None else load_review(
         dividend_review_path, provider_rows, report["event_roles"])
+    material_decisions, context_decisions = ({}, {}) if event_terms_path is None else load_event_terms(
+        event_terms_path, spec, provider_rows, report["event_roles"])
     for row in provider_rows:
         identity = row["instrument_id"],row["event_id"]
         if row["category"] == "cash_dividends":
@@ -158,6 +161,8 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None):
         disposition = "requires_identity_or_economic_review"
         if identity in overrides:
             disposition = overrides[identity]["disposition"]
+        elif identity in context_decisions:
+            disposition = "context_only_no_portfolio_credit"
         elif identity in ambiguous:
             disposition = ambiguous[identity]["status"]
         elif row["role"] == "acquirer_context_only_no_holder_credit":
@@ -183,6 +188,9 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None):
                     blockers=[],actual_delivery_at=None,execution_ready=False)
     for item in dividends:
         item["accounting_assumptions_owner_approved"]=policy["owner_approved"]
+    for item in material:
+        if item["event_id"] in material_decisions:
+            apply_material_terms(item, material_decisions[item["event_id"]], clock)
     output.mkdir(parents=True)
     write_json(output/"frozen_policy.json",policy)
     write_json(output/"dividend_candidates.json",dividends)
@@ -190,8 +198,10 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None):
     write_csv(output/"event_routes.csv",[{k:json.dumps(v) if isinstance(v,list) else v for k,v in r.items()} for r in event_routes])
     summary = dict(revision=pin(revision_dir/"summary.json"),policy=pin(policy_path),
         execution=[pin("backtesting/diagnostic_preparation.py"),pin("backtesting/diagnostic_accounting.py"),
-                   pin("backtesting/dividend_components.py")],
+                   pin("backtesting/dividend_components.py"),pin("backtesting/diagnostic_event_terms.py")],
         dividend_component_review=None if dividend_review_path is None else pin(dividend_review_path),
+        event_terms_review=None if event_terms_path is None else pin(event_terms_path),
+        reviewed_material_events=len(material_decisions),reviewed_context_only_records=len(context_decisions),
         reviewed_dividend_component_groups=len({(d["instrument_id"],d["ex_date"]) for d in component_decisions.values()}),
         selected_originals=revision["selected_originals"],candidate_streams=revision["candidate_streams"],
         provider_dividend_records=len(dividends)//len(SCENARIOS),dividend_plan_rows=len(dividends),
@@ -215,6 +225,7 @@ if __name__ == "__main__":
     parser.add_argument("--policy",type=Path,required=True,help="Explicit versioned proposal/approved policy; execution pins must match")
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--dividend-review",type=Path,help="Explicit pinned dividend component decisions; no automatic deduplication")
+    parser.add_argument("--event-terms",type=Path,help="Explicit warmup exclusions, primary ratio facts and incoming-context review")
     args=parser.parse_args()
     with offline_only():
-        print(json.dumps(prepare(args.revision,args.policy,args.output,args.dividend_review),indent=2))
+        print(json.dumps(prepare(args.revision,args.policy,args.output,args.dividend_review,args.event_terms),indent=2))

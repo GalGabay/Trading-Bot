@@ -3,15 +3,15 @@
 **2026-10-30 — approved:** the diagnostic accounting defaults and research
 allocation of 70% total exposure, 5% per stock and 20 positions are recorded in
 [your separate approval](broad_diagnostic_owner_approval_2026-10-30.json).
-No repeated approval or setup is needed. [Current tests/event review](diagnostic_tests_and_event_review_2026-10-30.md)
+No repeated approval or setup is needed. [Current tests/event review](broad_reconciliation_tests_and_terms_2026-10-30.md)
 leaves economic-data gates before full Step 2 integration. Those fixes are my
 work. Personal paper-risk limits, paper activation and a finite performance
 batch remain separate decisions. The frozen proposal below is historical.
 
-**Current owner review:** [diagnostic accounting defaults and allocation settings](broad_diagnostic_assumptions_for_review.md).
-Reply in chat to approve or change them; no file editing, purchase or setup is
-required. The 70% total exposure choice is already recorded. The 5%-per-stock /
-20-position defaults remain proposed. This review does not enable paper orders
+**Earlier owner review (resolved by your recorded approval):** [diagnostic accounting defaults and allocation settings](broad_diagnostic_assumptions_for_review.md).
+No repeat reply, file editing, purchase or setup is required. The 70% total
+exposure, 5%-per-stock and 20-position research defaults are approved.
+This approval does not enable paper orders
 or authorize a new performance batch. [Implementation status](broad_mapping_and_accounting_results.md):
 corrected inputs and accounting plans prepared; focused tests and remaining
 event/source work are mine before Step 2 integration.

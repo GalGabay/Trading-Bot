@@ -1,0 +1,317 @@
+Dividend History | SL Green Realty Corp. (https://slgreen.gcs-web.com/stock-information/dividends-splits)
+citeturn116view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: open({"ref_id":"turn114search0","lineno":null}); Total lines: 443
+L219: Apr 22, 2022  | Apr 28, 2022  | Apr 29, 2022  | May 16,2022  | 0.3108  |    | U.S. Currency
+L220: Mar 23, 2022  | Mar 30, 2022  | Mar 31, 2022  | Apr 18, 2022  | 0.3108  |    | U.S. Currency
+L221: Feb 22, 2022  | Feb 25, 2022  | Feb 28, 2022  | Mar 15, 2022  | 0.3108  |    | U.S. Currency
+L222: Jan 21, 2022  | Jan 28, 2022  | Jan 31, 2022  | Feb 15, 2022  | 0.3108  |    | U.S. Currency
+L223: Dec 2, 2021  | Dec 14, 2021  | Dec 15, 2021  | Jan 18, 2022  | 2.4392  |    | Stock
+L224: Dec 2, 2021  | Dec 14, 2021  | Dec 15, 2021   | Jan 18, 2022  | 0.3108  |    | U.S. Currency
+L225: Total dividends in 2022:  |    |    |    | 5.783  |    |
+L226: Nov 22, 2021  | Nov 29, 2021  | Nov 30, 2021  | Dec 15, 2021  | 0.3033  |    | U.S. Currency
+L227: Oct 21, 2021  | Oct 28, 2021  | Oct 29, 2021  | Nov 15, 2021  | 0.3033  |    | U.S. Currency
+L228: Sep 15, 2021  | Sep 29, 2021  | Sep 30, 2021  | Oct 15, 2021  | 0.3033  |    | U.S. Currency
+L229: Aug 20, 2021  | Aug 30, 2021  | Aug 31, 2021  | Sep 15, 2021  | 0.3033  |    | U.S. Currency
+L230: Jul 22, 2021  | Jul 29, 2021  | Jul 30, 2021  | Aug 16, 2021  | 0.3033  |    | U.S. Currency
+L231: Jun 18, 2021  | Jun 29, 2021  | Jun 30, 2021  | Jul 15, 2021  | 0.3033  |    | U.S. Currency
+L232: May 21, 2021  | May 28, 2021  | May 31, 2021  | Jun 15, 2021  | 0.3033  |    | U.S. Currency
+L233: Apr 22, 2021  | Apr 29, 2021  | Apr 30, 2021  | May 17,2021  | 0.3033  |    | U.S. Currency
+L234: Mar 17, 2021  | Mar 30, 2021  | Mar 31, 2021  | Apr 15, 2021  | 0.3033  |    | U.S. Currency
+L235: Feb 17, 2021  | Feb 25, 2021  | Feb 26, 2021  | Mar 15, 2021  | 0.3033  |    | U.S. Currency
+L236: Jan 21, 2021  | Jan 28, 2021  | Jan 29, 2021  | Feb 16, 2021  | 0.3033  |    | U.S. Currency
+L237: Dec 4, 2020  | Dec 14, 2020  | Dec 15, 2020  | Jan 15, 2021  | 1.6967  |    | Stock
+L238: Dec 4, 2020  | Dec 14, 2020  | Dec 15, 2020  | Jan 15, 2021  | 0.3033  |    | U.S. Currency
+L239: Total dividends in 2021  |    |    |    | 5.6471  |    |
+L240: Nov 19, 2020  | Nov 29, 2020  | Nov 30, 2020  | Dec 15, 2020  | 0.295  |    | U.S. Currency
+L241: Oct 20, 2020  | Oct 29, 2020  | Oct 30, 2020  | Nov 16, 2020  | 0.295  |    | U.S. Currency
+L242: Sep 17, 2020  | Sep 29, 2020  | Sep 30, 2020  | Oct 15, 2020  | 0.295  |    | U.S. Currency
+L243: Aug 20, 2020  | Aug 30, 2020  | Aug 31, 2020  | Sep 15, 2020  | 0.295  |    | U.S. Currency
+L244: Jul 20, 2020  | Jul 30, 2020  | Jul 31, 2020  | Aug 17, 2020  | 0.295  |    | U.S. Currency
+L245: Jun 19, 2020  | Jun 29, 2020  | Jun 30, 2020  | Jul 15, 2020  | 0.295  |    | U.S. Currency
+L246: May 22, 2020  | May 28, 2020  | May 29, 2020  | Jun 15, 2020  | 0.295  |    | U.S. Currency
+L247: Apr 24, 2020  | Apr 29,  2020  | Apr 30, 2020  | May 15, 2020  | 0.295  |    | U.S. Currency
+L248: 【86†Mar 25, 2020】  | Mar 30, 2020  | Mar 31, 2020  | Apr 15, 2020  | 0.295  |    | U.S. Currency
+L249: Dec 06, 2019  | Dec 31, 2020  | Jan 02, 2020  | Jan 15, 2020  | 0.885  |    | U.S.  Currency
+L250: Total dividends in 2020:  |    |    |    | 3.54  |    |
+L251: Sep 20, 2019  | Sep 27, 2019  | Sep 30, 2019  | Oct 15, 2019  | 0.85  |    | U.S  Currency
+L252: Jun 13, 2019  | Jun 27, 2019  | Jun 28, 2019  | Jul 15, 2019  | 0.85  |    | U.S. Currency
+L253: Mar 21, 2019  | Mar 29, 2019  | Mar 29, 2019  | Apr 15, 2019  | 0.85  |    | U.S. Currency
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/1959348/000119312523233549/d543757dex991.htm)
+citeturn116view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn114search1","lineno":null}); Total lines: 7163
+L16: We are sending you this Information Statement in connection with Kellogg Company’s spin-off of its wholly owned subsidiary, WK Kellogg Co. To effect the spin-off, Kellogg Company, or “Kellogg ParentCo,” will undergo an internal reorganization, after which it will distribute all of the shares of WK Kellogg Co common stock on a pro rata basis to the holders of Kellogg ParentCo common stock. We expect that the distribution of WK Kellogg Co common stock will be tax-free to Kellogg ParentCo’s U.S.
+L18: If you are a record holder of Kellogg ParentCo common stock as of the close of business on September 21, 2023, which is the record date for the distribution, you will be entitled to receive one share of WK Kellogg Co common stock for every four shares of Kellogg ParentCo common stock you hold on that date. Kellogg ParentCo will distribute the shares of WK Kellogg Co common stock in book-entry form, which means that we will not issue physical stock certificates.
+L19: The distribution agent will not distribute any fractional shares of WK Kellogg Co common stock.
+L20: Instead, the distribution agent will aggregate fractional shares into whole shares, sell the whole shares in the open market at prevailing market prices and distribute the aggregate cash proceeds of the sales, net of brokerage fees and other costs, pro rata to each holder (net of any required withholding for taxes applicable to each holder) who would otherwise have been entitled to receive a fractional share in the distribution.
+L21: Kellogg ParentCo currently anticipates completing the distribution at 12:01 a.m., New York City time, on October 2, 2023. Immediately after the distribution becomes effective, we will be an independent, publicly traded company.
+L22: Kellogg ParentCo’s shareholders are not required to vote on or take any other action in connection with the spin-off. We are not asking you for a proxy, and you are requested not to send us a proxy. Kellogg ParentCo’s shareholders will not be required to pay any consideration for the shares of WK Kellogg Co common stock they receive in the spin-off, surrender or exchange their shares of Kellogg ParentCo common stock or take any other action in connection with the spin-off.
+L23: Kellogg ParentCo currently owns all of the outstanding shares of WK Kellogg Co common stock. Accordingly, no trading market for WK Kellogg Co common stock currently exists. We expect, however, that a limited trading market for WK Kellogg Co common stock, commonly known as a “when-issued” trading market, will develop shortly before the distribution date, and we expect “regular-way” trading of WK Kellogg Co common stock will begin on the distribution date.
+L24: We intend to list WK Kellogg Co common stock on the New York Stock Exchange under the symbol “KLG.”
+L25: In reviewing this Information Statement, you should carefully consider the matters described in the section entitled “【1†Risk Factors】” beginning on page 25 of this Information Statement.
+L26: 
+L27: Neither the Securities and Exchange Commission nor any state securities commission has approved or disapproved these securities or determined if this Information Statement is truthful or complete. Any representation to the contrary is a criminal offense.
+L28: This Information Statement is not an offer to sell, or a solicitation of an offer to buy, any securities.
+L29: 
+L30: The date of this Information Statement is September 12, 2023.
+L31: 
+L32: Kellogg ParentCo first mailed a Notice of Internet Availability of Information Statement Materials containing instructions on how to access this Information Statement to its shareholders on or about September 12, 2023.
+L33: 
+L34: * * *
+L384: To effect the Spin-Off, Kellogg ParentCo will first undertake the Internal Reorganization described under “Certain Relationships and Related Party Transactions—Agreements with Kellogg ParentCo—Separation and Distribution Agreement.” Following the Internal Reorganization, WK Kellogg Co, a wholly owned subsidiary of Kellogg ParentCo, will hold the Cereal Business and Kellogg ParentCo (other than WK Kellogg Co) will hold the Kellogg ParentCo Business.
+L385: Kellogg ParentCo will then effect the Distribution by distributing all of WK Kellogg Co’s common stock to Kellogg ParentCo’s shareholders, and WK Kellogg Co will become an independent, publicly traded company.
+L386: Before the Spin-Off, we intend to enter into a Separation and Distribution Agreement (as described under “Certain Relationships and Related Party Transactions—Agreements with Kellogg ParentCo—Separation and Distribution Agreement”) and several other ancillary agreements with Kellogg ParentCo related to the Spin-Off.
+L387: These agreements will govern the relationship between Kellogg ParentCo and WK Kellogg Co up to and after completion of the Spin-Off and allocate various assets, liabilities and obligations, including with respect to employee benefits, intellectual property and taxes between Kellogg ParentCo and WK Kellogg Co. See “Certain Relationships and Related Party Transactions—Agreements with Kellogg ParentCo” for more detail.
+L388: The Spin-Off described in this Information Statement is subject to the satisfaction or waiver of a number of conditions. In addition, Kellogg ParentCo has the right not to complete the Spin-Off if, at any time, Kellogg ParentCo’s board of directors, or the “Kellogg ParentCo Board,” determines, in its sole and absolute discretion, that the Spin-Off is not in the best interests of Kellogg ParentCo or its shareholders or is otherwise not advisable.
+L390: Questions and Answers about the Spin-Off
+L391: 
+L392: The following provides only a summary of the terms of the Spin-Off. You should read the section entitled “The Spin-Off” in this Information Statement for a more detailed description of the matters described below.
+L393: 
+L394: 
+L395: 
+L396: Q:  | What is the Spin-Off?
+L397: A:  | The Spin-Off is the method by which WK Kellogg Co will separate from Kellogg ParentCo. In this tax-free Spin-Off, Kellogg ParentCo will distribute to its shareholders all of the shares of our common stock. Following the Spin-Off, we will be a separate company from Kellogg ParentCo, and Kellogg ParentCo will not retain any ownership interest in us.
+L398: 
+L399: 
+L400: 
+L401: Q:  | What are the reasons for the Spin-Off?
+L402: A:  | The Kellogg ParentCo Board believes that separating WK Kellogg Co into a separate, independent public company will better position Kellogg ParentCo and WK Kellogg Co to:
+L403: 
+L404: 
+L405: 
+L406:    | •  |    | focus on their distinct strategic priorities, with financial targets that best fit their own markets and opportunities;
+L407: 
+L408: 
+L409: 
+L410:    | •  |    | execute with increased agility and operational flexibility, enabling more focused allocation of capital and resources in a manner consistent with those strategic priorities;
+L418: ##### 【0†Table of Contents】
+L419: 
+L420:    | •  |    | shape distinctive corporate cultures, rooted in Kellogg ParentCo’s strong values, with rewarding career paths for employees of each company.
+L421: 
+L422: 
+L423: 
+L424: Q:  | Why is the separation of WK Kellogg Co structured as a spin-off?
+L425: 
+L426: 
+L427: 
+L428: A:  | Kellogg ParentCo believes that a distribution of our shares of common stock is the most efficient way to separate our business from Kellogg ParentCo in a manner that will achieve the above objectives.
+L429: Q:  | Will the number of Kellogg ParentCo shares I own change as a result of the Distribution?
+L430: 
+L431: 
+L432: 
+L433: A:  | No, the number of shares of Kellogg ParentCo common stock you own will not change as a result of the Distribution.
+L434: 
+L435: 
+L436: 
+L437: Q:  | What will I receive in the Spin-Off?
+L438: A:  | As a holder of Kellogg ParentCo common stock, you will receive one share of our common stock for every four shares of Kellogg ParentCo common stock you hold on the Record Date (as defined below). The distribution agent will distribute only whole shares of our common stock in the Spin-Off. See “—How will fractional shares be treated in the Distribution?” for more information on the treatment of the fractional shares you are entitled to receive in the Distribution.
+L439: The number of shares of Kellogg ParentCo common stock you own will not change as a result of the Spin-Off. For a more detailed description, see “The Spin-Off.”
+L443: A:  | Kellogg ParentCo will distribute approximately 85,595,123 shares of our common stock in the Spin-Off, based on the approximately 342,380,495 shares of Kellogg ParentCo common stock outstanding as of August 1, 2023. The actual number of shares of our common stock that Kellogg ParentCo will distribute will depend on the number of shares of Kellogg ParentCo common stock outstanding on the Record Date (as defined below).
+L444: The shares of our common stock that Kellogg ParentCo distributes will constitute all of the issued and outstanding shares of our common stock immediately prior to the Distribution. For more information on the shares being distributed in the Spin-Off, see “Description of Our Capital Stock—Common Stock.”
+L445: 
+L446: 
+L447: Q:  | What is the record date for the Distribution?
+L448: 
+L449: 
+L450: 
+L451: A:  | Kellogg ParentCo will determine record ownership as of the close of business on September 21, 2023, which we refer to as the “Record Date.”
+L452: 
+L453: 
+L454: 
+L455: Q:  | When will the Distribution occur?
+L456: A:  | Kellogg ParentCo currently anticipates completing the distribution at 12:01 a.m., New York City time, on October 2, 2023, which we refer to as the “Distribution Date.” On or shortly after the Distribution Date, the whole shares of our common stock will be credited in book-entry accounts for shareholders entitled to receive the shares in the Distribution.
+L457: We expect the distribution agent, acting on behalf of Kellogg ParentCo, to take about one week after the Distribution Date to fully distribute to Kellogg ParentCo shareholders any cash in lieu of the fractional shares they are entitled to receive. See “—How will Kellogg ParentCo distribute shares of our common stock?” for more information on how to access your book-entry account or your bank, brokerage or other account holding the WK Kellogg Co common stock you receive in the Distribution.
+L458: 
+L459: 
+L460: 11
+L461: 
+L462: * * *
+L463: ##### 【0†Table of Contents】
+L464: 
+L465: Q:  | What do I have to do to participate in the Distribution?
+L466: 
+L467: 
+L468: 
+L469: A:  | You are not required to take any action, but we urge you to read this document carefully. Shareholders of Kellogg ParentCo common stock on the Record Date will not need to pay any cash or deliver any other consideration, including any shares of Kellogg ParentCo common stock, in order to receive shares of our common stock in the Distribution.
+L470: 
+L471: 
+L472: 
+L473: Q:  | Is shareholder approval required for the Spin-Off?
+L474: A:  | No. Kellogg ParentCo is incorporated in Delaware. Delaware law does not require a shareholder vote to approve the Spin-Off because the Spin-Off does not constitute a sale, lease or exchange of all or substantially all of the assets of Kellogg ParentCo.
+L475: 
+L476: 
+L477: 
+L478: Q:  | If I sell my shares of Kellogg ParentCo common stock on or before the Distribution Date, will I still be entitled to receive shares of WK Kellogg Co common stock in the Distribution?
+L479: A:  | If you hold shares of Kellogg ParentCo common stock on the Record Date and decide to sell them on or before the Distribution Date, you may choose to sell your Kellogg ParentCo common stock with or without your entitlement to our common stock. You should discuss these alternatives with your bank, broker or other nominee. See “The Spin-Off—Trading Prior to the Distribution Date” for more information.
+L480: 
+L481: 
+L482: 
+L483: Q:  | How will Kellogg ParentCo distribute shares of our common stock?
+L484: A:  | Registered shareholders: If you are a registered shareholder (meaning you hold physical Kellogg ParentCo stock certificates or you own your shares of Kellogg ParentCo common stock directly through an account with Kellogg ParentCo’s transfer agent, Broadridge Corporate Issuer Solutions, Inc. (“Broadridge”)), then the distribution agent will credit the whole shares of our common stock you receive in the Distribution to your Broadridge book-entry account on or shortly after the Distribution Date.
+L493: A:  | The distribution agent will not distribute any fractional shares of our common stock in connection with the Spin-Off. Instead, the distribution agent will aggregate all fractional shares into whole shares and sell the whole shares in the open market at prevailing market prices on behalf of Kellogg ParentCo shareholders entitled to receive a fractional share. The distribution agent will then distribute the aggregate cash proceeds
+L494: 
+L495: 
+L496: 
+L497: 12
+L498: 
+L499: * * *
+L545: There can be no assurance that, following the Distribution, the combined trading prices of Kellogg ParentCo common stock and WK Kellogg Co common stock will equal or exceed what the trading price of Kellogg ParentCo common stock would have been in the absence of the Spin-Off.
+L546: It is possible that after the Spin-Off, the combined equity value of Kellogg ParentCo and WK Kellogg Co will be less than Kellogg ParentCo’s equity value before the Spin-Off.
+L547: 
+L548: 
+L549: 
+L550: Q:  | Will my shares of Kellogg ParentCo common stock continue to trade following the Distribution?
+L551: 
+L552: 
+L553: 
+L554: A:  | Yes. Kellogg ParentCo’s common stock will continue to trade on the NYSE under the symbol “K.”
+L555: 
+L556: 
+L557: 
+L558: Q:  | Do I have appraisal rights in connection with the Spin-Off?
+L559: A:  | No. Holders of Kellogg ParentCo common stock are not entitled to appraisal rights in connection with the Spin-Off.
+L560: 
+L561: 
+L562: 
+L563: Q:  | Who is the transfer agent and registrar for WK Kellogg Co common stock?
+L564: 
+L565: 
+L566: 
+L567: A:  | Following the Spin-Off, Broadridge will serve as the transfer agent and registrar for our common stock.
+L568: 
+L569: 
+L570: 
+L571:    | •  |    | Broadridge currently serves and will continue to serve as Kellogg ParentCo’s transfer agent and registrar.
+L572:    | •  |    | Broadridge will serve as the distribution agent in the Distribution and will assist Kellogg ParentCo in the distribution of our common stock to Kellogg ParentCo’s shareholders.
+L573: 
+L574: 
+L575: 
+L576: 14
+L577: 
+L578: * * *
+L579: ##### 【0†Table of Contents】
+L580: 
+L581: Q:  | Are there risks associated with owning shares of WK Kellogg Co common stock?
+L582: 
+L583: 
+L584: 
+L585: A:  | Yes. Our business faces both general and specific risks and uncertainties. Our business also faces risks relating to the Spin-Off. Following the Spin-Off, we will also face risks associated with being an independent, publicly traded company. Accordingly, you should read carefully the information set forth in the section entitled “Risk Factors” in this Information Statement.
+L586: Q:  | Where can I get more information?
+L587: 
+L588: 
+L589: 
+L590: A:  | If you have any questions relating to the mechanics of the Distribution, you should contact the distribution agent at:
+L591: 
+L592: Phone: (877) 830-4936
+L593: 
+L594: Email: shareholder@broadridge.com
+L595: 
+L596: Before the Spin-Off, if you have any questions relating to the Spin-Off, you should contact Kellogg ParentCo at:
+L597: 
+L598: Investor Relations
+L599: 
+L600: Kellogg Company
+L601: 
+L602: One Kellogg Square
+L603: 
+L604: Battle Creek, Michigan 49016
+L605: 
+L606: Phone: (269) 961-2800
+L607: 
+L608: Email: investor.relations@kellogg.com
+L609: After the Spin-Off, if you have any questions relating to WK Kellogg Co, you should contact us at:
+L610: 
+L611: Investor Relations
+L612: 
+L613: WK Kellogg Co
+L614: 
+L615: One Kellogg Square
+L616: 
+L617: Battle Creek, Michigan 49016
+L618: 
+L619: Phone: (269) 401-3000
+L620: 
+L621: Email: investorrelations@wkkellogg.com
+L622: 
+L623: After the Spin-Off, if you have any questions relating to Kellogg ParentCo, you should contact them at:
+L624: 
+L625: Investor Relations
+L626: 
+L627: Kellogg Company
+L628: 
+L629: One Kellogg Square
+L630: 
+L631: Battle Creek, Michigan 49016
+L632: 
+L633: Phone: (269) 961-2800
+L634: 
+L635: Email: investor.relations@kellogg.com
+L636: 
+L637: 
+L638: 
+L639: 15
+L640: * * *
+L641: ##### 【0†Table of Contents】
+L642: 
+L643: Summary of the Spin-Off
+L644: 
+L645: 
+L646: 
+L647: Distributing Company  | Kellogg ParentCo, a Delaware corporation that holds all of our common stock issued and outstanding prior to the Distribution. After the Distribution, Kellogg ParentCo will not own any shares of our common stock.
+L648: Distributed Company  | WK Kellogg Co, a Delaware corporation and a wholly owned subsidiary of Kellogg ParentCo. At the time of the Distribution, we will hold, directly or through our subsidiaries, the assets and liabilities of the Cereal Business. See “Certain Relationships and Related Party Transactions—Agreements with Kellogg ParentCo” for more detail. After the Spin-Off, we will be an independent, publicly traded company.
+L649: Distributed Securities  | All of the shares of our common stock owned by Kellogg ParentCo, which will be 100% of our common stock issued and outstanding immediately prior to the Distribution.
+L650: Based on the approximately 342,380,495 shares of Kellogg ParentCo common stock outstanding on August 1, 2023, and applying the distribution ratio of one share of WK Kellogg Co common stock for every four shares of Kellogg ParentCo common stock, approximately 85,595,123 shares of WK Kellogg Co common stock will be distributed.
+L651: 
+L652: 
+L653: Record Date  | The Record Date is the close of business on September 21, 2023.
+L654: 
+L655: 
+L656: 
+L657: Distribution Date  | Kellogg ParentCo currently anticipates completing the distribution at 12:01 a.m., New York City time, on October 2, 2023.
+L658: Internal Reorganization  | Kellogg ParentCo currently, directly or through its wholly owned subsidiaries, holds both the Cereal Business and the Kellogg ParentCo Business. In connection with the Spin-Off, Kellogg ParentCo will undertake the Internal Reorganization, following which we will hold the Cereal Business and Kellogg ParentCo (other than WK Kellogg Co) will hold the Kellogg ParentCo Business.
+L659: See “Certain Relationships and Related Party Transactions—Agreements with Kellogg ParentCo—Separation and Distribution Agreement” for a description of the Internal Reorganization.
+L660: Distribution Ratio  | Each holder of Kellogg ParentCo common stock will receive one share of our common stock for every four shares of Kellogg ParentCo common stock it holds on the Record Date. The distribution agent will distribute only whole shares of our common stock in the Spin-Off. See “The Spin-Off—Treatment of Fractional Shares” for more detail.
+L661: Please note that if you sell your shares of Kellogg ParentCo common stock on or before the Distribution Date, the buyer of those shares may in some circumstances be entitled to receive the shares of our common stock issuable in respect of the Kellogg ParentCo shares that you sold. See “The Spin-Off—Trading Prior to the Distribution Date” for more detail.
+L662: 
+L663: 
+L664: 16
+L665: 
+L666: * * *
+L667: ##### 【0†Table of Contents】
+L668: The Distribution  | On the Distribution Date, Kellogg ParentCo will release the shares of our common stock to the distribution agent to distribute to Kellogg ParentCo shareholders. The distribution agent will distribute our shares in book-entry form. We will not issue any physical stock certificates.
+L669: The distribution agent, or your bank, broker or other nominee, will credit your shares of our common stock to your book-entry account, or your bank, brokerage or other account, on or shortly after the Distribution Date. You will not be required to make any payment, surrender or exchange your shares of Kellogg ParentCo common stock or take any other action to receive your shares of our common stock.
+L670: Fractional Shares  | The distribution agent will not distribute any fractional shares of our common stock to Kellogg ParentCo shareholders.
+L671: Instead, the distribution agent will first aggregate fractional shares into whole shares, then sell the whole shares in the open market at prevailing market prices on behalf of Kellogg ParentCo shareholders entitled to receive a fractional share, and finally distribute the aggregate cash proceeds of the sales, net of brokerage fees and other costs, pro rata to these holders (net of any required withholding for taxes applicable to each holder).
+L673: 
+L674: 
+L675: Conditions to the Spin-Off  | The Spin-Off is subject to the satisfaction or waiver of the following conditions, as well as other conditions described in this Information Statement in “The Separation and Distribution—Conditions to the Distribution”:
+L676: 
+L677: 
+L678: 
+L679:    | •  |    | the final approval of the Distribution by the Kellogg ParentCo Board, which approval may be given or withheld in the absolute and sole discretion of the Kellogg ParentCo Board;
+L2461: The actual amount of such assets to be transferred to WK Kellogg Co in connection with the Spin-Off will be calculated in accordance with the above allocation based on the amount of assets at the time of the transfer. In addition, in connection with the Spin-Off, an additional $1 million liability related to our employees will be transferred to WK Kellogg Co related to other postretirement plans.
+L2462: Postretirement liabilities of $13 million that were included in WK Kellogg Co’s historical unaudited combined financial statements and will not be transferred to WK Kellogg Co in connection with the Spin-Off have been removed from the unaudited pro forma combined balance sheet. The assets and obligations associated with such plans resulted in recognizing accumulated other comprehensive income of $19 million, net of tax as of July 1, 2023.
+L2464: In addition to these nonpension postretirement assets and liabilities, postemployment liabilities in the amount of $5 million will be transferred to WK Kellogg Co in connection with the Spin-Off, and have accordingly been reflected as part of other liabilities in the unaudited pro forma combined balance sheet.
+L2470: This amount may be subject to increase or decrease depending on employees with retention awards actually transferred to WK Kellogg Co in connection with the Spin-Off. These costs are not expected to recur after the Spin-Off.
+L2471: 
+L2472: 
+L2473:    | (f)  | In connection with the Spin-Off, Kellogg ParentCo is expected to retain all existing workers’ compensation and insurance plans as well as responsibility for any claims activity related to employees
+L2474: 
+L2475: 
+L2476: 
+L2477: 79
+L2478: 
+L2479: * * *
+L2480: ##### 【0†Table of Contents】
+L2481: 
+L2482:    | of WK Kellogg Co up through the completion of the Spin-Off. This adjustment reflects the removal of $4 million of liabilities and $4 million of receivables related to the workers’ compensation and related insurance coverages and $6 million related to prepaid property insurance. Post Spin-Off, WK Kellogg Co will enter into separate workers’ compensation and insurance plans for its employees and properties respectively.
+L2483:    | (g)  | Reflects the impact of certain historically shared property and equipment that is not reflected in the historical combined balance sheet of WK Kellogg Co and will be transferred to WK Kellogg Co in connection with the Spin-Off, pursuant to the Separation and Distribution Agreement. The adjustment reflects the net book value of the property and equipment as of July 1, 2023 as well as an increase to deferred income taxes of $7 million.
+L5241: We are currently a wholly owned subsidiary of Kellogg ParentCo, and Kellogg ParentCo, directly or through its subsidiaries, holds both the Kellogg ParentCo Business and the Cereal Business. In connection with the Spin-Off, we will undertake a series of internal reorganization transactions so that we hold the Cereal Business assets, liabilities and entities directly and separately from the Kellogg ParentCo Business assets, liabilities and entities, including the Contribution.
+L5243: In particular, the Separation and Distribution Agreement will provide that, among other things, subject to the terms and conditions contained therein:
+L5244: 
+L5245: 
+L5246: 
+L5247:    | •  |    | certain assets and entities related to the Cereal Business, which this Information Statement refers to as the “WK Kellogg Co Assets,” will be retained by or transferred to WK Kellogg Co or one of its subsidiaries;
+L5248:    | •  |    | certain liabilities related to the Cereal Business or the WK Kellogg Co Assets, which this Information Statement refers to as the “WK Kellogg Co Liabilities,” will be retained by or transferred to WK Kellogg Co or one of its subsidiaries; and
+L5249:    | •  |    | all of the assets and liabilities (including whether accrued, contingent or otherwise) other than the WK Kellogg Co Assets and the WK Kellogg Co Liabilities (such assets and liabilities, other than the WK Kellogg Co Assets and the WK Kellogg Co Liabilities, being referred to in this Information Statement as the “Kellogg ParentCo Assets” and “Kellogg ParentCo Liabilities,” respectively) will be retained by or transferred to Kellogg ParentCo.
+L5258: liabilities transferred or assumed as part of the Internal Reorganization, (ii) any approvals or consents required in connection with the transfers, (iii) the value of or the freedom from any security interests of any of the assets transferred, (iv) the absence or presence of any defenses or right of setoff or freedom from counterclaim with respect to any claim or other asset of either of WK Kellogg Co or Kellogg ParentCo, or (v) the legal sufficiency of any document or instrument delivered to convey title to any asset or thing of value to be transferred in connection with the Internal Reorganization.
+L5261: The Separation and Distribution Agreement will provide that in the event that the transfer of certain assets and liabilities (or a portion thereof) to WK Kellogg Co or Kellogg ParentCo, as applicable, does not occur prior to the Distribution, then until such assets or liabilities (or a portion thereof) are able to be transferred, WK Kellogg Co or Kellogg ParentCo, as applicable, will hold such assets on behalf and for the benefit of the transferee, and will pay, perform and discharge such liabilities, for which the transferee will reimburse WK Kellogg Co or Kellogg ParentCo, as applicable, for all reasonable payments made in connection with the performance and discharge of such liabilities.
+

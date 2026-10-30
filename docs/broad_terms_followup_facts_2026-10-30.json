@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_terms_followup_scope_2026-10-30.json",
+    "sha256": "ffc0bd592cb5461cdeef4ab819206c003f442b7c206110531d940118d9d87063"
+  },
+  "search_queries": 8,
+  "page_opens": 8,
+  "closed": true,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "denied_or_timeout_urls_retried": 0,
+  "access_stops": 0,
+  "original_html_archive": false,
+  "browser_evidence": [
+    {
+      "path": "docs/research_data/terms_followup_browser_2026-10-30_1.txt",
+      "sha256": "788ecd846a968a170a5f9ff506334512977b0dcbe7c078cbb31202dc239254ef"
+    },
+    {
+      "path": "docs/research_data/terms_followup_browser_2026-10-30_2.txt",
+      "sha256": "02af4bb168662cf710ee62be582b90b3dd6b0a59a0e6e57cd8aa0994545d66af"
+    },
+    {
+      "path": "docs/research_data/terms_followup_browser_2026-10-30_3.txt",
+      "sha256": "b6bd30175b9ff7db72aa3bcbf044b86844a3a00c04b44682dd0d2624074de820"
+    },
+    {
+      "path": "docs/research_data/terms_followup_browser_2026-10-30_4.txt",
+      "sha256": "62bd899f6448c81ecf6863691a7db0d6cbc9b1bfbab4d97410a5f67b4077fc4e"
+    }
+  ],
+  "sources": [
+    {
+      "id": "phin_ratio",
+      "url": "https://www.sec.gov/Archives/edgar/data/908255/000090825523000044/bwa-20230630.htm",
+      "access": "primary_browser_text_reviewed",
+      "economic_date": "2023-07-03",
+      "parent": "BWA",
+      "child": "PHIN",
+      "shares_per_parent": "1/5",
+      "record_date": "2023-06-23",
+      "fractional_treatment": "aggregate_and_sell_then_cash_actual_price_and_date_unknown"
+    },
+    {
+      "id": "klg_information",
+      "url": "https://www.sec.gov/Archives/edgar/data/1959348/000119312523233549/d543757dex991.htm",
+      "access": "primary_browser_text_reviewed",
+      "economic_effective_at": "2023-10-02T00:01:00-04:00",
+      "parent": "K",
+      "child": "KLG",
+      "shares_per_parent": "1/4",
+      "record_date": "2023-09-21",
+      "fractional_treatment": "aggregate_sell_net_proceeds_actual_price_and_receipt_unknown",
+      "due_bill_transfer_terms": true
+    },
+    {
+      "id": "klg_completion",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001959348/f6b6505e-0648-4614-8fe1-0f36f10313de.pdf",
+      "access": "primary_audited_plan_filing_browser_text_reviewed",
+      "economic_date": "2023-10-02",
+      "shares_per_parent": "1/4",
+      "record_date": "2023-09-21",
+      "retrospective": true
+    },
+    {
+      "id": "klg_announcement",
+      "url": "https://newsroom.kellanova.com/2023-09-11-KELLOGG-COMPANY-BOARD-OF-DIRECTORS-APPROVES-SEPARATION-INTO-TWO-COMPANIES%2C-KELLANOVA-AND-WK-KELLOGG-CO",
+      "access": "primary_browser_text_reviewed",
+      "publication_date": "2023-09-11",
+      "economic_date": "2023-10-02",
+      "shares_per_parent": "1/4"
+    },
+    {
+      "id": "slg_q4_2020",
+      "url": "https://slgreen.gcs-web.com/node/25891/pdf",
+      "access": "primary_issuer_results_browser_text_reviewed",
+      "cash_payments": {
+        "2020-11-16": "0.295",
+        "2020-12-15": "0.295"
+      },
+      "source_does_not_independently_establish_ex_dates": true
+    },
+    {
+      "id": "slg_q2_2021",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000104097121000021/a21q2supplemental.htm",
+      "access": "primary_issuer_results_browser_text_reviewed",
+      "cash_payments": {
+        "2021-05-17": "0.3033",
+        "2021-06-15": "0.3033",
+        "2021-07-15": "0.3033"
+      },
+      "source_does_not_independently_establish_ex_dates": true
+    },
+    {
+      "id": "slg_history_locator",
+      "url": "https://slgreen.gcs-web.com/stock-information/dividends-splits",
+      "access": "issuer_hosted_third_party_data_NOT_primary_payment_evidence",
+      "provider_named": "Mergent",
+      "conflicts": [
+        {
+          "provider_ex_date": "2020-11-27",
+          "hosted_ex_date": "2020-11-29",
+          "hosted_ex_date_is_sunday": true
+        },
+        {
+          "provider_ex_date": "2021-05-27",
+          "hosted_ex_date": "2021-05-28"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "AIV 2020 ordinary duplicate groups: no new matching primary result",
+    "SLG other monthly groups: source budget closed",
+    "STX identity and foreign currency treatment",
+    "Election holder allocations, fractional fixing and due-bill ownership remain unverified"
+  ]
+}

@@ -1,0 +1,343 @@
+0001628280-24-030347 (https://d18rn0p25nwr6d.cloudfront.net/CIK-0001959348/f6b6505e-0648-4614-8fe1-0f36f10313de.pdf)
+citeturn118view0 [wordlim: 200] Crawled: 1.2 years ago; Content type: application/pdf; Number of pages: 21; Source: open({"ref_id":"turn114search12","lineno":null}); Total lines: 558
+L44@P3: To Plan Participants and ERISA Finance Committee of WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and
+L45@P3: Investment Plan
+L46@P3: Battle Creek, Michigan
+L47@P3: Opinion on the Financial Statements
+L48@P3: We have audited the accompanying statements of net assets available for benefits of the WK Kellogg Co Bakery, Confectionery, Tobacco Workers and
+L49@P3: Grain Millers Savings and Investment Plan, (formerly the Kellogg Company Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and
+L77@P3: information, including its form and content, is presented in conformity with the Department of Labor’s Rules and Regulations for Reporting and
+L78@P3: Disclosure under the Employee Retirement Income Security Act of 1974. In our opinion, the supplemental information is fairly stated, in all material
+L79@P3: respects, in relation to the financial statements as a whole.
+L80@P3: /s/ BDO USA, P.C.
+L81@P3: We have served as the Plan’s auditor since 2016.
+L82@P3: Grand Rapids, Michigan
+L83@P3-4: June 27, 2024WK Kellogg Co
+L96@P4: Notes receivable from participants 7,324,611 8,476,463
+L97@P4: Total assets 365,476,919 390,679,334
+L98@P4: Liabilities
+L99@P4: Accrued expenses 106,512 —
+L100@P4: Net assets available for benefits $ 365,370,407 $ 390,679,334
+L101@P4: The accompanying notes are an integral part of these financial statements.
+L102@P4-5: 4WK Kellogg Co
+L103@P5: Bakery, Confectionery, Tobacco Workers and Grain Millers
+L104@P5: Savings and Investment Plan
+L105@P5: Statement of Changes in Net Assets Available for Benefits
+L106@P5: Year Ended December 31, 2023
+L107@P5: Additions
+L108@P5: Investment income
+L109@P5: Change in Plan interest in WKKC Master S&I Trust $ 10,375,985
+L110@P5: Change in Plan interest in Kellogg Master Trust 26,507,036
+L111@P5: Total investment income 36,883,021
+L112@P5: Interest income on notes receivable from participants 446,511
+L113@P5: Contributions
+L114@P5: Employer 5,658,655
+L115@P5: Participant 15,501,482
+L116@P5: Rollovers 878,451
+L117@P5: Total contributions 22,038,588
+L118@P5: Total additions 59,368,120
+L119@P5: Deductions
+L120@P5: Benefits paid to participants 53,093,319
+L121@P5: Administrative expenses 146,968
+L122@P5: 53,240,287
+L123@P5: Net increase before transfers 6,127,833
+L124@P5: Transfers to other plan (31,436,760)
+L125@P5: Net decrease (25,308,927)
+L126@P5: Net assets available for benefits
+L127@P5: Beginning of year 390,679,334
+L128@P5: End of year $ 365,370,407
+L129@P5: The accompanying notes are an integral part of these financial statements.
+L130@P5-6: 5WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L131@P6: Notes to Financial Statements December 31, 2023 and 2022
+L132@P6: 1. Description of the Plan
+L133@P6: The following description of the Plan is provided for general information purposes only. Participants should refer to the Plan document for
+L134@P6: a more comprehensive description of the Plan’s provisions. The WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain
+L135@P6: Millers Savings and Investment Plan (the Plan) (formerly the Kellogg Company Bakery, Confectionery, Tobacco Workers and Grain Millers
+L136@P6: Savings and Investment Plan) operates as a qualified defined contribution plan with a 401K feature and was established under Section
+L137@P6: 401(a) of the Internal Revenue Code. It is subject to the provisions of the Employee Retirement Income Security Act of 1974 (ERISA).
+L138@P6: On October 2, 2023, the Spin-Off of WK Kellogg Co from the former parent was completed, resulting in two independent companies, WK
+L139@P6: Kellogg Co and Kellanova.
+L140@P6: WK Kellogg Co (the Company) assumed the role of Plan Sponsor and, established the WK Kellogg Co Master Savings and Investment
+L141@P6: Trust (WKKC Master S&I Trust). Plan assets were moved from the Kellogg Company Master Trust to the WKKC Master S&I Trust on
+L142@P6: August 4, 2023. There was no impact to the benefits of Plan participants.
+L143@P6: Plan Administration
+L144@P6: The Plan is administered by an administration committee appointed by the Company and the president of the Bakery, Confectionery,
+L145@P6: Tobacco Workers and Grain Millers International Union, the ERISA Finance Committee and the ERISA Administrative Committee
+L146@P6: appointed by the Company.
+L147@P6: The ERISA Finance Committee has appointed Fidelity Investments to provide recordkeeping and financial advisory services to the Plan
+L148@P6: and participants.
+L149@P6: Plan Participation and Contributions
+L150@P6: Generally, all the Company hourly employees belonging to the Bakery, Confectionery, Tobacco Workers and Grain Millers Union Local
+L151@P6: Nos. 3-G, 50-G, 252-G, 374-G and 401-G are eligible to participate in the Plan after the completion of their service requirement.
+L152@P6: Participants may contribute up to 50% of their eligible compensation, as defined by the Plan, as pretax or Roth contributions, up to the
+L153@P6: maximum allowed under the Internal Revenue Code ("IRC"). Participants who have attained age 50 before the end of the year are eligible
+L154@P6: to make catch-up contributions. Participants may also contribute rollover amounts representing distributions from other qualified plans.
+L155@P6: Employee contributions are matched by the Company at 100% of deferrals on the first 3% of eligible compensation and 50% of deferrals
+L156@P6: on the next 2% of eligible compensation. Employee contributions are not matched by the Company until the employee has completed one
+L157@P6: year of service from their date of hire.
+L158@P6: Participant Accounts
+L159@P6: Plan participants may elect to invest all contributions to their account and their existing account balances into the various investment
+L160@P6: options offered by the Plan, including common stock of WK Kellogg Co and Kellanova. Contributions held in Company common stock and
+L161@P6: Kellanova common stock can be transferred by a participant at any time to any other investment fund available under the Plan, except for
+L162@P6: transfers prohibited under the Company's Insider Trading Policy. No additional assets may be invested in Kellanova shares after October
+L163@P6: 2, 2023, and limits apply to how much may be invested in WK Kellogg Co Shares. Each participant’s account is credited with the
+L164@P6: participant’s contribution, the Company’s contribution and Plan earnings, and charged with an
+L165@P6-7: 6WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L166@P7: Notes to Financial Statements December 31, 2023 and 2022
+L167@P7: allocation of Plan expenses. Allocations are based on participant earnings, specific participant transactions, or account balances, as
+L168@P7: defined. The benefit to which a participant is entitled is the benefit that can be provided from the participant's vested account.
+L169@P7: On October 2, 2023, the Spin-Off of WK Kellogg Co from the former parent was completed through Kellanova's distribution of one share
+L170@P7: of WK Kellogg Co common stock for every four shares of Kellanova common stock to Kellanova’s share owners as of the close of
+L171@P7: business on the record date of September 21, 2023.
+L172@P7: Former Kellogg Company common stock held by participants were exchanged for shares of WK Kellogg Co Company stock and
+L173@P7: Kellanova stock. No additional purchases of Kellanova stock are permitted in WK Kellogg Co plans and all Kellanova stock held by
+L174@P7: participants must be sold as of the third business day following the first date on which Kellanova releases earnings after August 4, 2024,
+L175@P7: subject to certain daily trading volume limits. Any dividends on Kellanova stock after August 4, 2023 are invested according to the
+L176@P7: participant's investment elections for current contributions. Effective January 1, 2024, no more than 20% of the value of a participant's
+L177@P7: account may be invested in the Company stock account, and no more than 20% of the participant's ongoing contributions may be
+L178@P7: invested in the Company stock account.
+L179@P7: Vesting
+L180@P7: Participants are immediately vested in all contributions to their account plus actual earnings thereon.
+L181@P7: Notes Receivable From Participants
+L182@P7: Participants may borrow from their fund accounts a minimum of $1,000 up to a maximum equal to the lesser of $50,000 or 50% of their
+L183@P7: account balance. Participants may have only one loan outstanding at any time. Loan transactions are treated as transfers between the
+L184@P7: Loan Fund and the other funds. Loan terms range from 12 to 60 months, except for principal residence loans, which must be repaid within
+L185@P7: 15 years. Interest is paid at a constant rate equal to one percent over the prime rate in the month the loan begins. Principal and interest
+L186@P7: are paid ratably through payroll deductions. Loans uncollectible are deemed distributed and recorded as participant withdrawals.
+L187@P7: Payment of Benefits
+L188@P7: On termination of service, participants may elect to receive payment of their account balances as a lump sum or installment payments, if
+L189@P7: the account balance is over $5,000. Account balances equal to $5,000 or less are paid as a lump sum. Participants with investments in
+L190@P7: Company or Kellanova common stock may elect to receive that portion of their distribution in shares. Participants may request an inservice withdrawal of all or a portion of certain types of contributions under standard in-service withdrawal rules.
+L191@P7: 2. Summary of Significant Accounting Policies
+L192@P7: Basis of Accounting
+L193@P7: The Plan’s financial statements are prepared on the accrual basis of accounting.
+L194@P7: Use of Estimates
+L195@P7: The preparation of financial statements in conformity with accounting principles generally accepted in the United States of America
+L196@P7: (GAAP) requires the Plan’s management to make estimates and assumptions that affect the reported amounts of net assets and liabilities,
+L197@P7: and changes therein, and disclosure of contingent assets and liabilities. Actual results could differ from those estimates.
+L198@P7-8: 7WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L199@P8: Notes to Financial Statements December 31, 2023 and 2022
+L200@P8: Investment Valuation and Income Recognition
+L201@P8: The investments of the Plan are reported at fair value (except for fully benefit responsive investment contracts, which are reported at
+L202@P8: contract value). The fair value of a financial instrument is the amount that would be received to sell an asset or paid to transfer a liability in
+L203@P8: an orderly transaction between market participants at the measurement date (the exit price). Contract value is the relevant measure for
+L204@P8: the portion of the net assets available for benefits of a defined contribution plan attributable to fully benefit responsive investment
+L205@P8: contracts because contract value is the amount participants normally would receive if they were to initiate permitted transactions under the
+L206@P8: terms of the Plan. See Note 3 for discussion of fair value measurements.
+L207@P8: Purchases and sales of securities are recorded on a trade-date basis. Interest income is recorded on the accrual basis. Dividends are
+L208@P8: recorded on the ex-dividend date. Net appreciation includes the Plan's gains and losses on investments bought and sold as well as held
+L209@P8: during the year.
+L210@P8: Plan Interest in Master Trusts
+L211@P8: As of December 31, 2022 and for the period January 1, 2023 to August 3, 2023, the Plan's investments were co-invested with the assets
+L212@P8: of other defined contribution plans sponsored by Kellogg in the Kellogg Company Master Trust (Kellogg Master Trust). As of August 4,
+L213@P8: 2023, the assets of the Plan were moved to the WK Kellogg Co Master Savings and Investment Trust (WKKC Master S&I Trust) and are
+L214@P8: co-invested with the assets of other defined contribution plans sponsored by the Company. The Northern Trust Company (Northern Trust)
+L215@P8: is the Trustee for both master trusts.
+L216@P8: The Plan’s allocated share of the master trust net assets and investment activities is based upon the total of each individual participant’s
+L217@P8: share of the master trust. The fair value and contract value of the Plan's interest in the WKKC Master S&I Trust as of December 31, 2023
+L218@P8: and in the Kellogg Master Trust as of December 31, 2022 reflects the Plan's interest in the fair value and contract value of the underlying
+L219@P8: net assets of the respective master trust as of each date. The Plan presents in its statement of changes in net assets available for benefits
+L220@P8: an allocation of each master trust's net income (loss) for the respective periods which consists of realized gains or losses, unrealized
+L221@P8: appreciation (depreciation) on investments and interest and dividend income.
+L222@P8: Notes Receivable From Participants
+L223@P8: Notes receivable from participants are measured at their unpaid principal balance plus any accrued but unpaid interest. Interest income is
+L224@P8: recorded on the accrual basis. Related fees are recorded as administrative expenses and are expensed when they are incurred. No
+L225@P8: allowance for credit losses has been recorded as of December 31, 2023 or 2022. Loans determined to be uncollectible are deemed
+L226@P8: distributed and recorded as participant withdrawals.
+L227@P8: Expenses of Administration
+L228@P8: Certain expenses of maintaining the Plan are paid directly by the Plan Sponsor and are excluded from these financial statements.
+L229@P8: Expenses that are charged to participant accounts include loan fees, withdrawal fees and plan administrative fees. Certain investment
+L230@P8: related expenses are included in net appreciation in fair value of investments.
+L231@P8: Payment of Benefits
+L232@P8: Benefits are recorded when paid.
+L233@P8-9: 8WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L234@P9: Notes to Financial Statements December 31, 2023 and 2022
+L235@P9: Reclassifications
+L236@P9: Certain items in the 2022 financial statements have been reclassified to conform with 2023 presentation. The reclassifications have no
+L237@P9: effect on the statement of net assets or the statement of changes in net assets previously reported.
+L238@P9: Transfer to other Plan
+L239@P9: As part of the separation of Kellogg into WK Kellogg Co and Kellanova in 2023, participants who were employees of certain divisions
+L240@P9: became employees of Kellanova and became eligible to participate in their plan. The account balances attributable to those employees
+L241@P9: were transferred from the Plan to the Kellanova Savings and Investment Plan effective August 4, 2023. Transferred account balances
+L242@P9: consisted of approximately $30 million of investments and $1.5 million of notes receivable from participants.
+L243@P9: 3. Fair Value Measurements
+L244@P9: The Plan’s assets are categorized using a framework for measuring fair value. That framework provides a fair value hierarchy that
+L245@P9: prioritizes the inputs to valuation techniques used to measure fair value. The hierarchy gives the highest priority to unadjusted quoted
+L246@P9: prices in active markets for identical assets or liabilities (Level 1 measurements) and the lowest priority to unobservable inputs (Level 3
+L247@P9: measurements). The three levels of the fair value hierarchy are described below:
+L248@P9: Level 1 Inputs to the valuation methodology are unadjusted quoted prices in active markets that are accessible at the measurement
+L249@P9: date for identical, unrestricted assets or liabilities.
+L250@P9: Level 2 Inputs to the valuation methodology include:
+L251@P9: • Quoted prices for similar assets or liabilities in active markets;
+L252@P9: • Quoted prices for identical or similar assets or liabilities in inactive markets;
+L253@P9: • Inputs other than quoted prices that are observable for the asset or liability; and
+L254@P9: • Inputs that are derived principally from or corroborated by observable market data by correlation or other means.
+L255@P9: If the asset or liability has a specified (contractual) term, the Level 2 input must be observable for substantially the full term of
+L256@P9: the asset or liability.
+L257@P9: Level 3 Inputs to the valuation methodology are prices or valuations that require inputs that are both significant to the fair value
+L258@P9: measurement and unobservable.
+L259@P9: The asset or liability’s fair value measurement level within the fair value hierarchy is based on the lowest level of any input that is
+L260@P9: significant to the fair value measurement. Valuation techniques used need to maximize the use of observable inputs and minimize the use
+L261@P9: of unobservable inputs.
+L262@P9: Following is a description of the valuation methodologies used for assets measured at fair value. There have been no changes in the
+L263@P9: methodologies used at December 31, 2023 and 2022.
+L264@P9: • Money market funds: Valued at the net asset value (NAV) using the fair value of underlying investments. The underlying investments of
+L265@P9: the short-term investment collective trust are high-quality money market instruments with short term maturities. Redemptions are
+L266@P9: allowed on every business day.
+L267@P9: • Cash equivalents: Consist of units of a short-term investment collective fund with underlying investments of high-quality money market
+L268@P9: instruments with short term maturities. Valued at the net asset value ("NAV") of units of the collective fund, as provided by the trustee
+L269@P9: of the
+L270@P9-10: 9WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L271@P10: Notes to Financial Statements December 31, 2023 and 2022
+L272@P10: collective fund. The NAV is based on the fair value of the underlying investments held by the fund less its liabilities. Redemptions are
+L273@P10: allowed on every business day.
+L274@P10: • Common stocks: Valued at the closing price reported on the active market on which the individual securities are traded. Shares of WK
+L275@P10: Kellogg Co common stock and Kellanova common stock held at December 31, 2023 and shares of Kellogg Company common stock
+L276@P10: at December 31, 2022 are held in a unitized fund with units of a short-term investment collective fund to allow for liquidity and daily
+L277@P10: trades. Values of each reflected in these financial statements are the values of the common stock only.
+L292@P10: different fair value measurement at the reporting date.
+L293@P10: The following table sets forth by level within the fair value hierarchy the WKKC Master S&I Trust's assets at fair value as of December 31,
+L294@P10: 2023.
+L295@P10: Level 1 Level 2 Level 3 Total
+L296@P10: Cash equivalents $ — $ 2,500,753 $ — $ 2,500,753
+L297@P10: Common stock - WK Kellogg Co 3,410,737 — — 3,410,737
+L298@P10: Common stock - Kellanova 28,641,854 — — 28,641,854
+L299@P10: Common stock - other 19,579,375 — — 19,579,375
+L300@P10: Mutual funds 59,836,205 — — 59,836,205
+L332@P11: Redemption Notice
+L333@P11: Period
+L334@P11: Money market fund $ 7,363,060 — Daily None
+L335@P11: Commingled funds/Collective
+L336@P11: trusts $ 1,269,244,683 — Daily None
+L337@P11: 4. Plan Interest in the WK Kellogg Co Master Savings & Investment Trust
+L338@P11: At December 31, 2023 and for the period August 4, 2023 to December 31, 2023, the Plan's investments are held in the WKKC Master S&I
+L339@P11: Trust, which was established for the investment of assets of the Plan and certain assets of another Company-sponsored retirement plan
+L344@P11: transaction activity is designated to specific underlying assets of the WKKC Master S&I Trust. Investment income and administrative
+L345@P11: expenses relating to the WKKC Master S&I Trust are allocated to the individual plans based on 1) whether it is related to a specific plan
+L346@P11: (100% allocated to that plan), or 2) the Plan's proportionate share of the income or expense which is attributable to the WKKC Master S&I
+L347@P11: Trust, which is based upon relative investment balances.
+L348@P11-12: 11WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L349@P12: Notes to Financial Statements December 31, 2023 and 2022
+L350@P12: The following presents the total fair value of the investments in the WKKC Master S&I Trust at December 31, 2023:
+L351@P12: WK Kellogg Co Master
+L352@P12: Savings & Investment Trust
+L353@P12: Plan Interest in WK Kellogg
+L354@P12: Co Master Savings &
+L355@P12: Investment Trust
+L356@P12: Investments at fair value
+L357@P12: Cash equivalents $ 2,500,753 $ 1,250,377
+L358@P12: Common stock - WK Kellogg Co 3,410,737 2,751,622
+L386@P12: (100% allocated to that plan), or 2) the Plan's proportionate share of the income or expense which is attributable to the Kellogg Master
+L387@P12: Trust,
+L388@P12-13: 12WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L389@P13: Notes to Financial Statements December 31, 2023 and 2022
+L390@P13: which is based upon relative investment balances.
+L391@P13: The following is net appreciation in the fair value of investments and investment income for the Kellogg Master Trust for the year ended
+L437@P14: formula agreed upon with the issuers, but it may not be less than zero percent. Such interest rates are reviewed on a quarterly basis for
+L438@P14: resetting.
+L439@P14: Certain events limit the ability of the Plan to transact at contract value with the issuer. Such events include the following: (1) amendments
+L441@P14: other Plan Sponsor events (for example, divestitures or spin-offs of a subsidiary) that cause a significant withdrawal from the Plan, or (3)
+L442@P14: the failure of the Master Trust to qualify for exemption from federal income taxes or any required prohibited transaction exemption under
+L443@P14: the Employee Retirement Income Security Act of 1974 (ERISA). The Plan administrator does not believe that the occurrence of any such
+L444@P14: event, which would limit the Plan’s ability to transact at contract value with participants, is probable.
+L445@P14: Except for the above, the guaranteed investment contracts do not permit the contract issuers to terminate the agreement prior to the
+L446@P14: scheduled maturity date at an amount different from contract value.
+L447@P14: 7. Risks and Uncertainties
+L448@P14: The Plan provides for various investment options in several investment securities. Investment securities are exposed to various risks,
+L449@P14: such as interest rate, market and credit risks, liquidity, political uncertainty, pandemic and environmental risks, and cybersecurity risks.
+L450@P14: Due to the level of risks associated with certain investment securities and the level of uncertainty related to changes in the value of
+L451@P14: investment securities, it is at least reasonably possible that changes in risks in the near term would materially affect participants’ account
+L452@P14: balances and the amounts reported in the statement of net assets available for benefits.
+L453@P14: 8. Plan Termination
+L454@P14: Although it has not expressed any intent to do so, the Company has the right under the Plan to discontinue its contributions at any time
+L455@P14: and to terminate the Plan subject to the provisions of ERISA.
+L456@P14-15: 14WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L457@P15: Notes to Financial Statements December 31, 2023 and 2022
+L458@P15: 9. Transactions with Related Parties and and Parties-In-Interest
+L459@P15: Investments held by the WKKC Master S&I Trust at December 31, 2023 and for the period August 4, 2023 to December 31, 2023 and by
+L460@P15: the Kellogg Master Trust as of December 31, 2022 and the period January 1, 2023 to August 3, 2023 include a short term investment
+L461@P15: commingled fund managed by The Northern Trust Company. The Northern Trust Company is the Trustee of the Plan and Trust and,
+L462@P15: therefore, these transactions, as well as participant loans and the related interest income on notes receivable from participants, qualify as
+L463@P15: party-in-interest transactions.
+L464@P15: At December 31, 2023 and for the period August 4, 2023 to December 31, 2023, the WKKC Master S&I Trust held common stock of WK
+L465@P15: Kellogg Co and Kellanova. At December 31, 2023, the WKKC Master S&I Trust held 259,569 shares of WK Kellogg common stock and
+L466@P15: 512,285 shares of Kellanova common stock. The Plan's interest in each type of common stock represents approximately 81% of the WK
+L467@P15: Kellogg Co common stock and 82% of the Kellanova common stock held by the WKKC Master S&I Trust at December 31, 2023. During
+L468@P15: 2023 the WKKC Master S&I Trust received dividends of $35,775 from WK Kellogg Co and $624,634 from Kellanova. These transactions
+L469@P15: represent related party and party-in-interest transactions.
+L470@P15: At December 31, 2022 and for the period January 1, 2023 to August 3, 2023, the Kellogg Master Trust held common stock of the Plan
+L471@P15: Sponsor at that time, Kellogg Company. At December 31, 2022, Kellogg Master Trust held 1,439,541 shares of Kellogg common stock,
+L472@P15: and the Plan's interest represents approximately 63% of the Kellogg Company common stock held by the Kellogg Master Trust. During the
+L473@P15: period, the Plan received dividends of approximately $580,000 from Kellogg Company. These transactions represent related party and
+L474@P15: party-in-interest transactions.
+L475@P15: The Plan is not charged for administrative services performed on its behalf by employees of the Company. Some fees paid by the Plan for
+L476@P15: the investment management services are included in net appreciation in fair value of investments. During 2023, the Plan and Master
+L477@P15: Trusts paid administrative fees to service providers to the Plan including The Northern Trust Company, Fidelity Management Trust
+L478@P15: Company, the recordkeeper, and GSAM Stable Value, LLC, which also qualify as party-in-interest transactions.
+L479@P15: The Plan participates in a revenue credit sharing program which is used to reimburse the Company for fees and expenses associated with
+L480@P15: the services of the program, or to pay such vendors and third parties, as appropriate. An immaterial portion was returned to the Plan
+L481@P15: based on revenue sharing arrangements. The revenue sharing amounts received are used to pay the Plan’s administrative expenses.
+L482@P15: 10. Income Tax Status
+L483@P15: The Plan administrator has received a favorable determination letter from the Internal Revenue Service dated June 16, 2017 regarding
+L484@P15: the Plan’s qualification under applicable income tax regulations. The Plan has been amended since receiving the determination letter. The
+L485@P15: Plan administrator believes the Plan is designed and is being operated in compliance with the applicable requirements of the Internal
+L486@P15: Revenue Code and believes the Plan is qualified and the related trust is tax-exempt.
+L487@P15: Accounting principles generally accepted in the United States of America require Plan management to evaluate tax positions taken by the
+L488@P15: Plan and recognize a tax liability if the Plan has taken an uncertain position that more likely than not would not be sustained upon
+L489@P15: examination by
+L490@P15-16: 15WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L491@P16: Notes to Financial Statements December 31, 2023 and 2022
+L492@P16: the Internal Revenue Service. The Plan is subject to routine audits by taxing jurisdictions; however, there are currently no audits for any
+L493@P16: tax periods in progress.
+L494@P16: 11. Reconciliation of Financial Statements to Form 5500
+L508@P16: Change in value of Plan interest in Master Trust investment accounts per the Form 5500 $ 46,419,847
+L509@P16: 12. Subsequent Events
+L510@P16: The Company has evaluated subsequent events through the date the financial statements were available to be issued, no events or
+L511@P16: transactions occurred through June 27, 2024 requiring recognition or disclosure in the financial statements.
+L512@P16-17: 16WK Kellogg Co
+L513@P17: Bakery, Confectionery, Tobacco Workers and Grain Millers
+L514@P17: Savings and Investment Plan EIN 93-2140905 Plan No. 002
+L515@P17: Schedule H, Line 4i – Schedule of Assets (Held at End of Year)
+L516@P17: December 31, 2023
+L517@P17: (a) (b) (c) (d) (e)
+L518@P17: Identity of Issue,
+L519@P17: Borrower, Lessor, or
+L520@P17: Similar Party
+L521@P17: Description of Investment - Including Maturity Date, Rate of
+L522@P17: Interest, Par or Maturity Value Cost
+L523@P17: Current Market
+L524@P17: Value
+L525@P17: * Participant Loans
+L526@P17: Interest rates at 4.25% - 9.50%, maturities through November
+L527@P17: 2028 0 7,324,611
+L528@P17: * Denotes party-in-interest
+L529@P17: Attachment to Form
+L530@P17: 5500, Schedule H, Part
+L531@P17: IV, item 4(i)
+L532@P17-18: 17SIGNATURES
+L533@P18: Pursuant to the requirements of the Securities Exchange Act of 1934, the trustees (or other persons who administer the employee benefit plan)
+L534@P18: have duly caused this annual report to be signed on its behalf by the undersigned hereunto duly authorized.
+L535@P18: WK KELLOGG CO BAKERY, CONFECTIONERY, TOBACCO WORKERS AND GRAIN MILLERS
+L536@P18: SAVINGS AND INVESTMENT PLAN
+L537@P18: By: /s/ David McKinstray
+L538@P18: Dated: June 27, 2024 Name:
+L539@P18: Title:
+L540@P18: David McKinstray
+L541@P18: Chief Financial Officer
+L542@P18-19: WK Kellogg CoEXHIBIT INDEX
+L543@P19: Exhibit
+L544@P19: Number Document
+L545@P19: 23.1
+L546@P19-20: Consent of Independent Registered Public Accounting FirmExhibit 23.1
+L547@P20: Consent of Independent Registered Public Accounting Firm
+L548@P20: WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan
+L549@P20: Battle Creek, Michigan
+L550@P20: We hereby consent to the incorporation by reference in the Registration Statement on Form
+L551@P20: S-8 (333-274791) of WK Kellogg Company of our report dated June 27, 2024, relating to the financial statements and supplemental schedule of
+L552@P20: WK Kellogg Co Bakery, Confectionery, Tobacco Workers and Grain Millers Savings and Investment Plan which appear in this Form 11-K for the
+L553@P20: year ended December 31, 2023.
+L554@P20: /s/ BDO USA, P.C.
+L555@P20: BDO USA, P.C.
+L556@P20: Grand Rapids, Michigan
+L557@P20: June 27, 2024
+

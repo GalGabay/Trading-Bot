@@ -93,3 +93,11 @@ docs/broad_dividend_primary_facts_*.json -text
 docs/broad_dividend_terms_scope_*.json -text
 docs/research_data/dividend_primary_browser_*.txt -text
 docs/research_data/diagnostic_executed_v5/*.py -text
+# Preserve tested reconciliation sources and the separate bounded follow-up.
+backtesting/diagnostic_event_terms.py -text
+tests/test_dividend_components.py -text
+tests/test_diagnostic_event_terms.py -text
+docs/broad_terms_followup_*.json -text
+docs/broad_reconciliation_verification_*.json -text
+docs/research_data/terms_followup_browser_*.txt -text
+docs/research_data/diagnostic_executed_v6/*.py -text
