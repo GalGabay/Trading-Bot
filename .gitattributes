@@ -70,3 +70,11 @@ docs/broad_event_*.json -text
 docs/broad_input_verification_summary.json -text
 docs/broad_input_replay_verification.json -text
 docs/broad_input_verified_rebuild_summary.json -text
+docs/research_data/step1_executed_v2/*.py -text
+backtesting/corrected_input.py -text
+backtesting/diagnostic_accounting.py -text
+backtesting/diagnostic_preparation.py -text
+docs/broad_mapping_revision_plan.json -text
+docs/broad_corrected_input_*.json -text
+docs/broad_corrected_historical_input_spec.json -text
+docs/broad_diagnostic_*.json -text

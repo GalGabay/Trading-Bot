@@ -1,0 +1,2842 @@
+{
+  "date": "2026-10-29",
+  "scope": {
+    "path": "docs/broad_input_preparation_scope.json",
+    "sha256": "2737c182bec1da2949637b037a1e96ce002c488e632f8689635be69f1989eea1"
+  },
+  "roster": {
+    "path": "docs/research_data/broad_100_candidate_roster.csv",
+    "sha256": "60d7828f737a6322ce681ade4aea88d72ddc702868aa270b105b2dcd0e119615"
+  },
+  "inventory": {
+    "path": "docs/research_data/broad_100_collected_inventory.csv",
+    "sha256": "af109cadbee7845227dd4de2c46e7866bdd3c6ecc8a08b50f437511b160a3373"
+  },
+  "prior_evidence": {
+    "path": "docs/broad_100_evidence_summary.json",
+    "sha256": "38722272c7ed39f7b41ee696849f7e8f88532712eac5ddba0a401fe7ffbfd0bc"
+  },
+  "calendar": {
+    "path": "data/reports/broad_universe_audit_final/calendar.json",
+    "sha256": "543641716aae762d2a0ba9d5ba431da80f00cbac5c3c7e79fc0528170064cca7"
+  },
+  "public_queue": {
+    "path": "docs/broad_input_public_sources.json",
+    "sha256": "758c0937f29582d3680abf22907f2ad0beacf37327a9285a3239ef7cf63f7ff0"
+  },
+  "successor_queue": {
+    "path": "docs/broad_successor_collection_plan.json",
+    "sha256": "796e7ff4a14f0faa6db05a1cfa4906a2f6c7b6e099e310c4aa4e15b30df6d4e3"
+  },
+  "streams": [
+    {
+      "instrument_id": "COHORT-2016-0047",
+      "root_id": "COHORT-2016-0047",
+      "snapshot_alias": "AAPL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AAPL",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0088",
+      "root_id": "COHORT-2016-0088",
+      "snapshot_alias": "CBG",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CBG",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0479",
+      "root_id": "COHORT-2016-0479",
+      "snapshot_alias": "WMT",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:WMT",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0014",
+      "root_id": "COHORT-2016-0014",
+      "snapshot_alias": "APD",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:APD",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0387",
+      "root_id": "COHORT-2016-0387",
+      "snapshot_alias": "RTN",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:RTN",
+          "start": "2016-01-01",
+          "end_exclusive": "2020-04-03",
+          "primary_source_ids": [
+            "old_rtn"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2020-04-03",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0257",
+      "root_id": "COHORT-2016-0257",
+      "snapshot_alias": "JNJ",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:JNJ",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0012",
+      "root_id": "COHORT-2016-0012",
+      "snapshot_alias": "AFL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AFL",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0287",
+      "root_id": "COHORT-2016-0287",
+      "snapshot_alias": "MTB",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MTB",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0048",
+      "root_id": "COHORT-2016-0048",
+      "snapshot_alias": "AMAT",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AMAT",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0332",
+      "root_id": "COHORT-2016-0332",
+      "snapshot_alias": "NEE",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:NEE",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0170",
+      "root_id": "COHORT-2016-0170",
+      "snapshot_alias": "EOG",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:EOG",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0179",
+      "root_id": "COHORT-2016-0179",
+      "snapshot_alias": "EXPE",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:EXPE",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0185",
+      "root_id": "COHORT-2016-0185",
+      "snapshot_alias": "FB",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:FB",
+          "start": "2016-01-01",
+          "end_exclusive": "2022-06-09",
+          "primary_source_ids": [
+            "old_fb"
+          ]
+        },
+        {
+          "source_key": "fb_meta",
+          "start": "2022-06-09",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_fb"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0397",
+      "root_id": "COHORT-2016-0397",
+      "snapshot_alias": "ROP",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:ROP",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0152",
+      "root_id": "COHORT-2016-0152",
+      "snapshot_alias": "DOW",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:DOW",
+          "start": "2016-01-01",
+          "end_exclusive": "2017-09-01",
+          "primary_source_ids": [
+            "dow_merger"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2017-09-01",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0269",
+      "root_id": "COHORT-2016-0269",
+      "snapshot_alias": "KHC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:KHC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0150",
+      "root_id": "COHORT-2016-0150",
+      "snapshot_alias": "D",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:D",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0095",
+      "root_id": "COHORT-2016-0095",
+      "snapshot_alias": "CF",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CF",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0089",
+      "root_id": "COHORT-2016-0089",
+      "snapshot_alias": "CBS",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CBS",
+          "start": "2016-01-01",
+          "end_exclusive": "2019-12-05",
+          "primary_source_ids": [
+            "cbs_completion"
+          ]
+        },
+        {
+          "source_key": "cbs_viac",
+          "start": "2019-12-05",
+          "end_exclusive": "2022-02-17",
+          "primary_source_ids": [
+            "cbs_completion",
+            "paramount_2022"
+          ]
+        },
+        {
+          "source_key": "cbs_para",
+          "start": "2022-02-17",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "paramount_2022"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0071",
+      "root_id": "COHORT-2016-0071",
+      "snapshot_alias": "BA",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:BA",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0144",
+      "root_id": "COHORT-2016-0144",
+      "snapshot_alias": "DLR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:DLR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0029",
+      "root_id": "COHORT-2016-0029",
+      "snapshot_alias": "AEE",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AEE",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0169",
+      "root_id": "COHORT-2016-0169",
+      "snapshot_alias": "ETR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:ETR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0060",
+      "root_id": "COHORT-2016-0060",
+      "snapshot_alias": "BLL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:BLL",
+          "start": "2016-01-01",
+          "end_exclusive": "2022-05-10",
+          "primary_source_ids": [
+            "ball_sec"
+          ]
+        },
+        {
+          "source_key": "bll_ball",
+          "start": "2022-05-10",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "ball_sec"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0267",
+      "root_id": "COHORT-2016-0267",
+      "snapshot_alias": "KLAC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:KLAC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0193",
+      "root_id": "COHORT-2016-0193",
+      "snapshot_alias": "FISV",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:FISV",
+          "start": "2016-01-01",
+          "end_exclusive": "2023-06-07",
+          "primary_source_ids": [
+            "old_fisv"
+          ]
+        },
+        {
+          "source_key": "fisv_fi",
+          "start": "2023-06-07",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_fisv"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0140",
+      "root_id": "COHORT-2016-0140",
+      "snapshot_alias": "DLPH",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:DLPH",
+          "start": "2016-01-01",
+          "end_exclusive": "2017-12-05",
+          "primary_source_ids": [
+            "old_dlph"
+          ]
+        },
+        {
+          "source_key": "dlph_aptv",
+          "start": "2017-12-05",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_dlph"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0124",
+      "root_id": "COHORT-2016-0124",
+      "snapshot_alias": "STZ",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:STZ",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0096",
+      "root_id": "COHORT-2016-0096",
+      "snapshot_alias": "SCHW",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:SCHW",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0321",
+      "root_id": "COHORT-2016-0321",
+      "snapshot_alias": "MYL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MYL",
+          "start": "2016-01-01",
+          "end_exclusive": "2020-11-17",
+          "primary_source_ids": [
+            "old_myl"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2020-11-17",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0339",
+      "root_id": "COHORT-2016-0339",
+      "snapshot_alias": "NTRS",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:NTRS",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0028",
+      "root_id": "COHORT-2016-0028",
+      "snapshot_alias": "AMZN",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AMZN",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0300",
+      "root_id": "COHORT-2016-0300",
+      "snapshot_alias": "MCD",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MCD",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0500",
+      "root_id": "COHORT-2016-0500",
+      "snapshot_alias": "XL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:XL",
+          "start": "2016-01-01",
+          "end_exclusive": "2018-09-12",
+          "primary_source_ids": [
+            "old_xl"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2018-09-12",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0181",
+      "root_id": "COHORT-2016-0181",
+      "snapshot_alias": "ESRX",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:ESRX",
+          "start": "2016-01-01",
+          "end_exclusive": "2018-12-21",
+          "primary_source_ids": [
+            "old_esrx"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2018-12-21",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0133",
+      "root_id": "COHORT-2016-0133",
+      "snapshot_alias": "CVS",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CVS",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0364",
+      "root_id": "COHORT-2016-0364",
+      "snapshot_alias": "PNW",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:PNW",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0247",
+      "root_id": "COHORT-2016-0247",
+      "snapshot_alias": "IFF",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:IFF",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0093",
+      "root_id": "COHORT-2016-0093",
+      "snapshot_alias": "CTL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CTL",
+          "start": "2016-01-01",
+          "end_exclusive": "2020-09-18",
+          "primary_source_ids": [
+            "old_ctl"
+          ]
+        },
+        {
+          "source_key": "ctl_lumn",
+          "start": "2020-09-18",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_ctl"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0272",
+      "root_id": "COHORT-2016-0272",
+      "snapshot_alias": "LLL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:LLL",
+          "start": "2016-01-01",
+          "end_exclusive": "2019-06-29",
+          "primary_source_ids": [
+            "old_lll"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2019-06-29",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0059",
+      "root_id": "COHORT-2016-0059",
+      "snapshot_alias": "BHI",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:BHI",
+          "start": "2016-01-01",
+          "end_exclusive": "2017-07-05",
+          "primary_source_ids": [
+            "old_bhi"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2017-07-05",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0280",
+      "root_id": "COHORT-2016-0280",
+      "snapshot_alias": "LNC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:LNC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0058",
+      "root_id": "COHORT-2016-0058",
+      "snapshot_alias": "AVY",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AVY",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0389",
+      "root_id": "COHORT-2016-0389",
+      "snapshot_alias": "RHT",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:RHT",
+          "start": "2016-01-01",
+          "end_exclusive": "2019-07-09",
+          "primary_source_ids": [
+            "old_rht"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2019-07-09",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0178",
+      "root_id": "COHORT-2016-0178",
+      "snapshot_alias": "EXC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:EXC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0488",
+      "root_id": "COHORT-2016-0488",
+      "snapshot_alias": "WU",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:WU",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0434",
+      "root_id": "COHORT-2016-0434",
+      "snapshot_alias": "TDC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:TDC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0127",
+      "root_id": "COHORT-2016-0127",
+      "snapshot_alias": "COST",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:COST",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0427",
+      "root_id": "COHORT-2016-0427",
+      "snapshot_alias": "SYMC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:SYMC",
+          "start": "2016-01-01",
+          "end_exclusive": "2019-11-05",
+          "primary_source_ids": [
+            "old_symc"
+          ]
+        },
+        {
+          "source_key": "symc_nlok",
+          "start": "2019-11-05",
+          "end_exclusive": "2022-11-08",
+          "primary_source_ids": [
+            "old_symc",
+            "gen_2022"
+          ]
+        },
+        {
+          "source_key": "symc_gen",
+          "start": "2022-11-08",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "gen_2022"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0097",
+      "root_id": "COHORT-2016-0097",
+      "snapshot_alias": "CHTR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CHTR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0399",
+      "root_id": "COHORT-2016-0399",
+      "snapshot_alias": "RCL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:RCL",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0463",
+      "root_id": "COHORT-2016-0463",
+      "snapshot_alias": "UNM",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:UNM",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0368",
+      "root_id": "COHORT-2016-0368",
+      "snapshot_alias": "PPG",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:PPG",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0023",
+      "root_id": "COHORT-2016-0023",
+      "snapshot_alias": "LNT",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:LNT",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0429",
+      "root_id": "COHORT-2016-0429",
+      "snapshot_alias": "SYY",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:SYY",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0476",
+      "root_id": "COHORT-2016-0476",
+      "snapshot_alias": "VNO",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:VNO",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0196",
+      "root_id": "COHORT-2016-0196",
+      "snapshot_alias": "FLR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:FLR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0030",
+      "root_id": "COHORT-2016-0030",
+      "snapshot_alias": "AAL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AAL",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0155",
+      "root_id": "COHORT-2016-0155",
+      "snapshot_alias": "DUK",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:DUK",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0333",
+      "root_id": "COHORT-2016-0333",
+      "snapshot_alias": "NLSN",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:NLSN",
+          "start": "2016-01-01",
+          "end_exclusive": "2022-10-12",
+          "primary_source_ids": [
+            "old_nlsn"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2022-10-12",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0148",
+      "root_id": "COHORT-2016-0148",
+      "snapshot_alias": "DG",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:DG",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0473",
+      "root_id": "COHORT-2016-0473",
+      "snapshot_alias": "VFC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:VFC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0007",
+      "root_id": "COHORT-2016-0007",
+      "snapshot_alias": "ADBE",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:ADBE",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0106",
+      "root_id": "COHORT-2016-0106",
+      "snapshot_alias": "CTAS",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CTAS",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0002",
+      "root_id": "COHORT-2016-0002",
+      "snapshot_alias": "ABT",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:ABT",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0454",
+      "root_id": "COHORT-2016-0454",
+      "snapshot_alias": "UA",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:UA",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0311",
+      "root_id": "COHORT-2016-0311",
+      "snapshot_alias": "MHK",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MHK",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0475",
+      "root_id": "COHORT-2016-0475",
+      "snapshot_alias": "V",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:V",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0174",
+      "root_id": "COHORT-2016-0174",
+      "snapshot_alias": "EQR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:EQR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0293",
+      "root_id": "COHORT-2016-0293",
+      "snapshot_alias": "MAR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MAR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0406",
+      "root_id": "COHORT-2016-0406",
+      "snapshot_alias": "STX",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:STX",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0374",
+      "root_id": "COHORT-2016-0374",
+      "snapshot_alias": "PGR",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:PGR",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0264",
+      "root_id": "COHORT-2016-0264",
+      "snapshot_alias": "KMB",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:KMB",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0073",
+      "root_id": "COHORT-2016-0073",
+      "snapshot_alias": "BXP",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:BXP",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0130",
+      "root_id": "COHORT-2016-0130",
+      "snapshot_alias": "CSRA",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:CSRA",
+          "start": "2016-01-01",
+          "end_exclusive": "2018-04-04",
+          "primary_source_ids": [
+            "old_csra"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2018-04-04",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "root_id": "COHORT-2016-0258",
+      "snapshot_alias": "JCI",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:JCI",
+          "start": "2016-09-06",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "feature_history_starts_at": "2016-09-06",
+      "predecessor_features_may_carry": false,
+      "mapping_evidence": {
+        "source": {
+          "path": "docs/broad_event_primary_review.json",
+          "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+        },
+        "source_id": "jci_2016"
+      }
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "root_id": "COHORT-2016-0046",
+      "snapshot_alias": "AIV",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AIV",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0227",
+      "root_id": "COHORT-2016-0227",
+      "snapshot_alias": "HCP",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:HCP",
+          "start": "2016-01-01",
+          "end_exclusive": "2019-11-05",
+          "primary_source_ids": [
+            "hcp_2019"
+          ]
+        },
+        {
+          "source_key": "hcp_peak",
+          "start": "2019-11-05",
+          "end_exclusive": "2023-02-10",
+          "primary_source_ids": [
+            "hcp_2019"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "root_id": "COHORT-2016-0413",
+      "snapshot_alias": "SLG",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:SLG",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0204",
+      "root_id": "COHORT-2016-0204",
+      "snapshot_alias": "FCX",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:FCX",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0137",
+      "root_id": "COHORT-2016-0137",
+      "snapshot_alias": "DVA",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:DVA",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0464",
+      "root_id": "COHORT-2016-0464",
+      "snapshot_alias": "URBN",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:URBN",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0001",
+      "root_id": "COHORT-2016-0001",
+      "snapshot_alias": "MMM",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MMM",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0330",
+      "root_id": "COHORT-2016-0330",
+      "snapshot_alias": "NWSA",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:NWSA",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0262",
+      "root_id": "COHORT-2016-0262",
+      "snapshot_alias": "K",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:K",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0436",
+      "root_id": "COHORT-2016-0436",
+      "snapshot_alias": "TXN",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:TXN",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0503",
+      "root_id": "COHORT-2016-0503",
+      "snapshot_alias": "YUM",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:YUM",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0314",
+      "root_id": "COHORT-2016-0314",
+      "snapshot_alias": "MON",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MON",
+          "start": "2016-01-01",
+          "end_exclusive": "2018-06-07",
+          "primary_source_ids": [
+            "old_mon"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false,
+      "candidate_terminal_boundary": "2018-06-07",
+      "terminal_boundary_execution_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0219",
+      "root_id": "COHORT-2016-0219",
+      "snapshot_alias": "HAL",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:HAL",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0289",
+      "root_id": "COHORT-2016-0289",
+      "snapshot_alias": "M",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:M",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0428",
+      "root_id": "COHORT-2016-0428",
+      "snapshot_alias": "SYF",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:SYF",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0447",
+      "root_id": "COHORT-2016-0447",
+      "snapshot_alias": "TRV",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:TRV",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0077",
+      "root_id": "COHORT-2016-0077",
+      "snapshot_alias": "BF.B",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:BF.B",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0324",
+      "root_id": "COHORT-2016-0324",
+      "snapshot_alias": "NAVI",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:NAVI",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0166",
+      "root_id": "COHORT-2016-0166",
+      "snapshot_alias": "LLY",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:LLY",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0352",
+      "root_id": "COHORT-2016-0352",
+      "snapshot_alias": "PDCO",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:PDCO",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0288",
+      "root_id": "COHORT-2016-0288",
+      "snapshot_alias": "MAC",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:MAC",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0466",
+      "root_id": "COHORT-2016-0466",
+      "snapshot_alias": "VLO",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:VLO",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0076",
+      "root_id": "COHORT-2016-0076",
+      "snapshot_alias": "AVGO",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:AVGO",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0208",
+      "root_id": "COHORT-2016-0208",
+      "snapshot_alias": "GD",
+      "role": "original_member",
+      "parts": [
+        {
+          "source_key": "base:GD",
+          "start": "2016-01-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0387.RTX",
+      "root_id": "COHORT-2016-0387",
+      "snapshot_alias": "RTN",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "rtn_rtx",
+          "start": "2020-04-03",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_rtn"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0321.VTRS",
+      "root_id": "COHORT-2016-0321",
+      "snapshot_alias": "MYL",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "myl_vtrs",
+          "start": "2020-11-17",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_myl"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0181.CI",
+      "root_id": "COHORT-2016-0181",
+      "snapshot_alias": "ESRX",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "esrx_ci",
+          "start": "2018-12-21",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_esrx"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0272.LHX",
+      "root_id": "COHORT-2016-0272",
+      "snapshot_alias": "LLL",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "lll_lhx",
+          "start": "2019-07-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "old_lll"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0140.BWA",
+      "root_id": "COHORT-2016-0140",
+      "snapshot_alias": "DLPH",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "dlph_bwa",
+          "start": "2020-10-01",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "bwa_2020"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0473.KTB",
+      "root_id": "COHORT-2016-0473",
+      "snapshot_alias": "VFC",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "vfc_ktb",
+          "start": "2019-05-23",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "vfc_2019"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0476.JBGS",
+      "root_id": "COHORT-2016-0476",
+      "snapshot_alias": "VNO",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "vno_jbgs",
+          "start": "2017-07-18",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "vno_2017"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0178.CEG",
+      "root_id": "COHORT-2016-0178",
+      "snapshot_alias": "EXC",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "exc_ceg",
+          "start": "2022-02-02",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "exc_2022"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "root_id": "COHORT-2016-0046",
+      "snapshot_alias": "AIV",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "aiv_airc",
+          "start": "2020-12-15",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "aiv_2020"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0059.BHGE",
+      "root_id": "COHORT-2016-0059",
+      "snapshot_alias": "BHI",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "bhi_bhge",
+          "start": "2017-07-05",
+          "end_exclusive": "2019-10-18",
+          "primary_source_ids": [
+            "old_bhi",
+            "bhge_2019"
+          ]
+        },
+        {
+          "source_key": "bhi_bkr",
+          "start": "2019-10-18",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "bhge_2019"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0152.DWDP",
+      "root_id": "COHORT-2016-0152",
+      "snapshot_alias": "DOW",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "dow_dwdp",
+          "start": "2017-09-01",
+          "end_exclusive": "2019-06-03",
+          "primary_source_ids": [
+            "dow_merger",
+            "dow_corteva"
+          ]
+        },
+        {
+          "source_key": "dow_dd",
+          "start": "2019-06-03",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "dow_corteva"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0152.DOW-CHILD",
+      "root_id": "COHORT-2016-0152",
+      "snapshot_alias": "DOW",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "base:DOW",
+          "start": "2019-04-02",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "dow_child"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0152.CTVA",
+      "root_id": "COHORT-2016-0152",
+      "snapshot_alias": "DOW",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "dow_ctva",
+          "start": "2019-06-03",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "dow_corteva"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0140.DLPH-CHILD",
+      "root_id": "COHORT-2016-0140",
+      "snapshot_alias": "DLPH",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "base:DLPH",
+          "start": "2017-12-05",
+          "end_exclusive": "2020-10-02",
+          "primary_source_ids": [
+            "old_dlph",
+            "bwa_2020"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0262.KLG",
+      "root_id": "COHORT-2016-0262",
+      "snapshot_alias": "K",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "k_klg",
+          "start": "2023-10-02",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0014.VSM-WARMUP",
+      "root_id": "COHORT-2016-0014",
+      "snapshot_alias": "APD",
+      "role": "preinvestable_warmup_reference_only",
+      "parts": [
+        {
+          "source_key": "apd_warmup_vsm",
+          "start": "2016-10-03",
+          "end_exclusive": "2016-10-04",
+          "primary_source_ids": [
+            "apd_2016"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0227.QCP-WARMUP",
+      "root_id": "COHORT-2016-0227",
+      "snapshot_alias": "HCP",
+      "role": "preinvestable_warmup_reference_only",
+      "parts": [
+        {
+          "source_key": "hcp_warmup_qcp",
+          "start": "2016-11-01",
+          "end_exclusive": "2016-11-02",
+          "primary_source_ids": [
+            "hcp_2016"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0503.YUMC-WARMUP",
+      "root_id": "COHORT-2016-0503",
+      "snapshot_alias": "YUM",
+      "role": "preinvestable_warmup_reference_only",
+      "parts": [
+        {
+          "source_key": "yum_warmup_yumc",
+          "start": "2016-11-01",
+          "end_exclusive": "2016-11-02",
+          "primary_source_ids": [
+            "yum_2016"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0140.PHIN",
+      "root_id": "COHORT-2016-0140",
+      "snapshot_alias": "DLPH",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "bwa_phin",
+          "start": "2023-07-05",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false
+    },
+    {
+      "instrument_id": "COHORT-2016-0258.PREMERGER-REFERENCE",
+      "root_id": "COHORT-2016-0258",
+      "snapshot_alias": "JCI",
+      "role": "preinvestable_warmup_reference_only",
+      "parts": [
+        {
+          "source_key": "base:JCI",
+          "start": "2016-01-01",
+          "end_exclusive": "2016-09-06",
+          "primary_source_ids": []
+        }
+      ],
+      "eligible_for_new_entries_candidate": false,
+      "strict_identity_verified": false,
+      "feature_use_prohibited": true,
+      "mapping_evidence": {
+        "source": {
+          "path": "docs/broad_event_primary_review.json",
+          "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+        },
+        "source_id": "jci_2016"
+      }
+    },
+    {
+      "instrument_id": "COHORT-2016-0227.PEAK-HOLDCO-2023",
+      "root_id": "COHORT-2016-0227",
+      "snapshot_alias": "HCP",
+      "role": "received_security",
+      "parts": [
+        {
+          "source_key": "hcp_peak",
+          "start": "2023-02-10",
+          "end_exclusive": "2024-01-01",
+          "primary_source_ids": [
+            "hcp_2019"
+          ]
+        }
+      ],
+      "eligible_for_new_entries_candidate": true,
+      "entry_role": "continuation_of_selected_member",
+      "strict_identity_verified": false,
+      "predecessor_id": "COHORT-2016-0227",
+      "mapping_evidence": {
+        "source": {
+          "path": "docs/broad_event_primary_review.json",
+          "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+        },
+        "source_id": "peak_2023"
+      }
+    }
+  ],
+  "material_events": [
+    {
+      "id": "cash_XL",
+      "parent_id": "COHORT-2016-0500",
+      "parent_alias": "XL",
+      "kind": "cash_merger",
+      "economic_date": "2018-09-12",
+      "share_legs": [],
+      "cash_per_parent": "57.60",
+      "primary_source_ids": [
+        "old_xl"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0500"
+    },
+    {
+      "id": "cash_RHT",
+      "parent_id": "COHORT-2016-0389",
+      "parent_alias": "RHT",
+      "kind": "cash_merger",
+      "economic_date": "2019-07-09",
+      "share_legs": [],
+      "cash_per_parent": "190",
+      "primary_source_ids": [
+        "old_rht"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0389"
+    },
+    {
+      "id": "cash_NLSN",
+      "parent_id": "COHORT-2016-0333",
+      "parent_alias": "NLSN",
+      "kind": "cash_merger",
+      "economic_date": "2022-10-11",
+      "share_legs": [],
+      "cash_per_parent": "28",
+      "primary_source_ids": [
+        "old_nlsn"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0333"
+    },
+    {
+      "id": "cash_CSRA",
+      "parent_id": "COHORT-2016-0130",
+      "parent_alias": "CSRA",
+      "kind": "cash_merger",
+      "economic_date": "2018-04-03",
+      "share_legs": [],
+      "cash_per_parent": "41.25",
+      "primary_source_ids": [
+        "old_csra"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0130"
+    },
+    {
+      "id": "cash_MON",
+      "parent_id": "COHORT-2016-0314",
+      "parent_alias": "MON",
+      "kind": "cash_merger",
+      "economic_date": "2018-06-07",
+      "share_legs": [],
+      "cash_per_parent": "128",
+      "primary_source_ids": [
+        "old_mon"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0314"
+    },
+    {
+      "id": "rtn_stock",
+      "parent_id": "COHORT-2016-0387",
+      "parent_alias": "RTN",
+      "kind": "stock_merger",
+      "economic_date": "2020-04-03",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0387.RTX",
+          "shares_per_parent": "2.3348"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "old_rtn"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0387"
+    },
+    {
+      "id": "lll_stock",
+      "parent_id": "COHORT-2016-0272",
+      "parent_alias": "LLL",
+      "kind": "stock_merger",
+      "economic_date": "2019-06-29",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0272.LHX",
+          "shares_per_parent": "1.3"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "old_lll"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0272"
+    },
+    {
+      "id": "myl_stock",
+      "parent_id": "COHORT-2016-0321",
+      "parent_alias": "MYL",
+      "kind": "stock_merger",
+      "economic_date": "2020-11-16",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0321.VTRS",
+          "shares_per_parent": "1"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "old_myl"
+      ],
+      "note": "VTRSV/regular-way boundary remains explicit; no invented same-open delivery",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0321"
+    },
+    {
+      "id": "esrx_mixed",
+      "parent_id": "COHORT-2016-0181",
+      "parent_alias": "ESRX",
+      "kind": "cash_and_stock_merger",
+      "economic_date": "2018-12-20",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0181.CI",
+          "shares_per_parent": "0.2434"
+        }
+      ],
+      "cash_per_parent": "48.75",
+      "primary_source_ids": [
+        "old_esrx"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0181"
+    },
+    {
+      "id": "bhi_mixed",
+      "parent_id": "COHORT-2016-0059",
+      "parent_alias": "BHI",
+      "kind": "cash_and_stock_merger",
+      "economic_date": "2017-07-03",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0059.BHGE",
+          "shares_per_parent": "1"
+        }
+      ],
+      "cash_per_parent": "17.50",
+      "primary_source_ids": [
+        "old_bhi"
+      ],
+      "note": "Special dividend payableJuly6 and due-bill entitlement require separate cash instruction",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0059"
+    },
+    {
+      "id": "delphi_distribution",
+      "parent_id": "COHORT-2016-0140",
+      "parent_alias": "DLPH",
+      "kind": "retained_parent_spinoff",
+      "economic_date": "2017-12-04",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0140.DLPH-CHILD",
+          "shares_per_parent": "1/3"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "old_dlph"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0140"
+    },
+    {
+      "id": "delphi_child_merger",
+      "parent_id": "COHORT-2016-0140.DLPH-CHILD",
+      "parent_alias": "DLPH",
+      "kind": "child_stock_merger",
+      "economic_date": "2020-10-01",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0140.BWA",
+          "shares_per_parent": "0.4307"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "bwa_2020"
+      ],
+      "note": "Consumes DLPH-CHILD holdings, not the retained APTV parent",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0140"
+    },
+    {
+      "id": "dow_merger",
+      "parent_id": "COHORT-2016-0152",
+      "parent_alias": "DOW",
+      "kind": "stock_merger",
+      "economic_date": "2017-08-31",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0152.DWDP",
+          "shares_per_parent": "1"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "dow_merger"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0152"
+    },
+    {
+      "id": "dow_distribution",
+      "parent_id": "COHORT-2016-0152.DWDP",
+      "parent_alias": "DOW",
+      "kind": "successor_spinoff",
+      "economic_date": "2019-04-01",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0152.DOW-CHILD",
+          "shares_per_parent": "1/3"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "dow_child"
+      ],
+      "note": "Entitlement is per DWDP share, not per new child share",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0152"
+    },
+    {
+      "id": "corteva_distribution",
+      "parent_id": "COHORT-2016-0152.DWDP",
+      "parent_alias": "DOW",
+      "kind": "successor_spinoff",
+      "economic_date": "2019-06-01",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0152.CTVA",
+          "shares_per_parent": "1/3"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "dow_corteva"
+      ],
+      "note": "DWDP holder basis before the subsequent one-for-three parent reverse split",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0152"
+    },
+    {
+      "id": "dwdp_reverse_split",
+      "parent_id": "COHORT-2016-0152.DWDP",
+      "parent_alias": "DOW",
+      "kind": "successor_reverse_split",
+      "economic_date": "2019-06-01",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0152.DWDP",
+          "shares_per_parent": "1/3"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "dow_corteva"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0152"
+    },
+    {
+      "id": "vf_distribution",
+      "parent_id": "COHORT-2016-0473",
+      "parent_alias": "VFC",
+      "kind": "retained_parent_spinoff",
+      "economic_date": "2019-05-22",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0473.KTB",
+          "shares_per_parent": "1/7"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "vfc_2019"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0473"
+    },
+    {
+      "id": "vno_distribution",
+      "parent_id": "COHORT-2016-0476",
+      "parent_alias": "VNO",
+      "kind": "retained_parent_spinoff",
+      "economic_date": "2017-07-17",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0476.JBGS",
+          "shares_per_parent": "1/2"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "vno_2017"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0476"
+    },
+    {
+      "id": "exc_distribution",
+      "parent_id": "COHORT-2016-0178",
+      "parent_alias": "EXC",
+      "kind": "retained_parent_spinoff",
+      "economic_date": "2022-02-01",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0178.CEG",
+          "shares_per_parent": "1/3"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "exc_2022"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0178"
+    },
+    {
+      "id": "aiv_distribution",
+      "parent_id": "COHORT-2016-0046",
+      "parent_alias": "AIV",
+      "kind": "retained_parent_spinoff",
+      "economic_date": "2020-12-15",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0046.AIRC",
+          "shares_per_parent": "1"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "aiv_2020"
+      ],
+      "note": "",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0046"
+    },
+    {
+      "id": "k_distribution",
+      "parent_id": "COHORT-2016-0262",
+      "parent_alias": "K",
+      "kind": "retained_parent_spinoff",
+      "economic_date": "2023-10-02",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0262.KLG",
+          "shares_per_parent": "1/4"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [],
+      "note": "Provider candidate only; primary source not yet captured",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "root_id": "COHORT-2016-0262"
+    },
+    {
+      "id": "apd_warmup_distribution",
+      "root_id": "COHORT-2016-0014",
+      "parent_id": "COHORT-2016-0014",
+      "parent_alias": "APD",
+      "kind": "preinvestable_warmup_spinoff",
+      "economic_date": "2016-10-01",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0014.VSM-WARMUP",
+          "shares_per_parent": "1/2"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "apd_2016"
+      ],
+      "note": "Warmup reference only: event precedes2016-11-30 membership availability and first2017 scoring; no portfolio holdings can earn this distribution",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false
+    },
+    {
+      "id": "hcp_warmup_distribution",
+      "root_id": "COHORT-2016-0227",
+      "parent_id": "COHORT-2016-0227",
+      "parent_alias": "HCP",
+      "kind": "preinvestable_warmup_spinoff",
+      "economic_date": "2016-10-31",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0227.QCP-WARMUP",
+          "shares_per_parent": "1/5"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "hcp_2016"
+      ],
+      "note": "Warmup reference only: event precedes2016-11-30 membership availability and first2017 scoring; no portfolio holdings can earn this distribution",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false
+    },
+    {
+      "id": "yum_warmup_distribution",
+      "root_id": "COHORT-2016-0503",
+      "parent_id": "COHORT-2016-0503",
+      "parent_alias": "YUM",
+      "kind": "preinvestable_warmup_spinoff",
+      "economic_date": "2016-10-31",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0503.YUMC-WARMUP",
+          "shares_per_parent": "1"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [
+        "yum_2016"
+      ],
+      "note": "Warmup reference only: event precedes2016-11-30 membership availability and first2017 scoring; no portfolio holdings can earn this distribution",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false
+    },
+    {
+      "id": "bwa_phin_distribution",
+      "root_id": "COHORT-2016-0140",
+      "parent_id": "COHORT-2016-0140.BWA",
+      "parent_alias": "BWA",
+      "kind": "successor_spinoff",
+      "economic_date": "2023-07-03",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0140.PHIN",
+          "shares_per_parent": "1/5"
+        }
+      ],
+      "cash_per_parent": null,
+      "primary_source_ids": [],
+      "provider_evidence": {
+        "path": "data/reports/broad_successor_collection_v1/006/actions_1.json",
+        "sha256": "8e91c4c528ed0aba7c87be44a0cd5fec3b473336f2af9a8928ed4fc61dcdb2bc"
+      },
+      "note": "Distribution precedes first regular quotes; ratio remains provider-dependent and delivery unknown",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false,
+      "economic_effective_at": "2023-07-03T17:00:00-04:00",
+      "first_regular_session": "2023-07-05",
+      "mapping_evidence": {
+        "source": {
+          "path": "docs/broad_event_primary_review.json",
+          "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+        },
+        "source_id": "phin_2023"
+      }
+    },
+    {
+      "id": "peak_holding_company_reorganization",
+      "root_id": "COHORT-2016-0227",
+      "parent_id": "COHORT-2016-0227",
+      "parent_alias": "PEAK",
+      "kind": "stock_merger",
+      "economic_date": "2023-02-10",
+      "share_legs": [
+        {
+          "instrument_id": "COHORT-2016-0227.PEAK-HOLDCO-2023",
+          "shares_per_parent": "1"
+        }
+      ],
+      "cash_per_parent": "0",
+      "primary_source_ids": [],
+      "mapping_evidence": {
+        "source": {
+          "path": "docs/broad_event_primary_review.json",
+          "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+        },
+        "source_id": "peak_2023"
+      },
+      "note": "One-for-one legal parent exchange; candidate daily boundary, exact time unverified",
+      "prior_close_entitlement_verified": false,
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "execution_ready": false
+    }
+  ],
+  "performance_authorized": false,
+  "strict_evidence_approved": false,
+  "source_semantics": "Curated source terms support candidate segmentation only. No complete lifecycle, entitlement, share delivery or payable-time flags are promoted. Default member identities remain provisional.",
+  "readiness_blockers": [
+    "All100 issuer/class/lifetime histories need complete admission or specifically approved diagnostic assumptions",
+    "Cash dividend declaration/payable gaps remain unapproved; no dates fabricated",
+    "JCI2016 merger/ADNT and other missing distribution terms remain under review; no non-integer provider adjustment factor automatically booked as a true split",
+    "Full successor action chains and received-share disposal/delivery must be resolved before scoring",
+    "Source archival access failures and missing/contradictory interval observations remain explicit hard gates",
+    "Mapping revision is candidate only; PEAK daily transition/feature continuity needs diagnostic policy approval",
+    "JCI starts fresh history on 2016-09-06; ADNT warmup distribution remains unresolved",
+    "PHIN right may exist before any regular quote; missing value must remain unknown, not zero"
+  ],
+  "membership_not_before": "2016-11-30",
+  "warmup_is_uninvested": true,
+  "output_role": "Candidate research input package; not a strict execution universe or approved diagnostic schedule",
+  "supplement_queue": {
+    "path": "docs/broad_successor_branch_probe.json",
+    "sha256": "895b421b8415ed8ece1449c802e1490f5e83155a073149bfa3cb27c8062ce9cc"
+  },
+  "diagnostic_mapping": {
+    "primary_review": {
+      "path": "docs/broad_event_primary_review.json",
+      "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+    },
+    "feature_resets": [
+      "COHORT-2016-0258"
+    ],
+    "unresolved_feature_events": [
+      {
+        "instrument_id": "COHORT-2016-0258",
+        "date": "2016-11-01",
+        "reason": "ADNT distribution economics still require review; do not warm through an unresolved price discontinuity"
+      }
+    ],
+    "feature_continuity_candidates": [
+      {
+        "parent_id": "COHORT-2016-0227",
+        "successor_id": "COHORT-2016-0227.PEAK-HOLDCO-2023",
+        "first_session": "2023-02-10",
+        "shares_per_parent": "1",
+        "owner_approved": false
+      }
+    ],
+    "provider_overrides": [
+      {
+        "event_id": "72ae5eb0-9663-42fe-bd68-50644e3c2a10",
+        "instrument_id": "COHORT-2016-0258",
+        "disposition": "wrong_predecessor_ratio_do_not_apply",
+        "source_id": "jci_2016"
+      },
+      {
+        "event_id": "4c93ce12-023e-4a00-9f1a-d0ce3b50d5eb",
+        "instrument_id": "COHORT-2016-0227.PEAK-HOLDCO-2023",
+        "disposition": "represented_by_peak_holding_company_reorganization_do_not_apply_twice",
+        "source_id": "peak_2023"
+      }
+    ],
+    "research_entry_continuity_approved": false,
+    "performance_authorized": false
+  }
+}

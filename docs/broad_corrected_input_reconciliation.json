@@ -1,0 +1,32 @@
+{
+  "purpose": "Data preparation observation reconciliation; not unit testing or performance evaluation",
+  "original_manifest": {
+    "path": "data/reports/broad_historical_input_verified_v4/input_manifest.json",
+    "sha256": "b1a2bd1e90085c0a8ab2cd3a3c18b5dd307d7a29037558868131ba824ea1a80d"
+  },
+  "corrected_manifest": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/input_manifest.json",
+    "sha256": "58ef1154ac1b54076ed163c0df72c1d599cb82605a79fd99a7f6ec8d85d90b84"
+  },
+  "original_selected_ids_preserved": true,
+  "original_member_count": 100,
+  "observations_before": 203683,
+  "observations_after": 203683,
+  "source_timestamp_symbol_ohlcv_multiset_equal": true,
+  "no_observations_fabricated_or_deleted": true,
+  "jci_reference_rows": 170,
+  "jci_active_history_rows": 1842,
+  "peak_new_parent_rows": 223,
+  "previous_verified_builder_archive": {
+    "path": "docs/research_data/step1_executed_v2/historical_input.py",
+    "sha256": "8df7e045a347c1317a2a559613dd9306675f823dc86b884c40c00f1ccda3da1a"
+  },
+  "previous_code_hash_preserved": true,
+  "old_stream_count": 119,
+  "new_stream_count": 121,
+  "network_requests": 0,
+  "purchases_usd": 0,
+  "orders": 0,
+  "unit_tests_run": 0,
+  "strategy_runs": 0
+}

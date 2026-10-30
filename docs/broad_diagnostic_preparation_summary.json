@@ -1,0 +1,78 @@
+{
+  "revision": {
+    "path": "data/reports/broad_corrected_input_v1/summary.json",
+    "sha256": "41c935ae966dbb5249a71606e109d5eb31d0eeaa172a0369a1d97a4326ce9cb2"
+  },
+  "policy": {
+    "path": "docs/broad_diagnostic_accounting_policy.json",
+    "sha256": "f9e3de7ee445f75608c35798a4580d62e334fcd8efbd55c5b37c7679a7d180ea"
+  },
+  "execution": [
+    {
+      "path": "backtesting/diagnostic_preparation.py",
+      "sha256": "9581cedf1699cb4634cc62b5fcba5954f284a963371f1b53b65a0856e0505ebc"
+    },
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "8542089bc240b532b3de7fcf09bc1cc9ff2aef1bf10589467b509230a26d0a75"
+    }
+  ],
+  "selected_originals": 100,
+  "candidate_streams": 121,
+  "provider_dividend_records": 2698,
+  "dividend_plan_rows": 8094,
+  "base_dividend_status_counts": {
+    "candidate_receivable_only": 1358,
+    "candidate_modeled_payment": 1173,
+    "blocked_terms": 167
+  },
+  "base_blocker_counts": {
+    "special_foreign_or_unclassified_distribution_requires_terms": 54,
+    "lineage_contains_unresolved_special_election_dividend": 111,
+    "reference_only_predecessor_never_earns_a_portfolio_right": 3
+  },
+  "base_dividends_missing_payable_date": 1383,
+  "material_event_records": 26,
+  "material_plan_rows": 78,
+  "unresolved_feature_events": [
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "date": "2016-11-01",
+      "reason": "ADNT distribution economics still require review; do not warm through an unresolved price discontinuity"
+    }
+  ],
+  "event_route_counts": {
+    "requires_identity_or_economic_review": 31,
+    "linked_candidate_economic_event": 7,
+    "context_only_no_portfolio_credit": 10,
+    "wrong_predecessor_ratio_do_not_apply": 1,
+    "reverse_split_with_election_dividend": 3,
+    "search_only_reverse_split_election": 1,
+    "genuine_fractional_stock_split": 1,
+    "represented_by_peak_holding_company_reorganization_do_not_apply_twice": 1
+  },
+  "output_files": [
+    {
+      "path": "data/reports/broad_diagnostic_policy_v3/dividend_candidates.json",
+      "sha256": "e72eb902084afe138ec155200f0cfbf36fdc47f56a92afd24d98fe4204297be8"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_policy_v3/material_candidates.json",
+      "sha256": "89323f9dd8ed7222870c52c433ccb7ff76c06702c6e658a764e14dd2f316b051"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_policy_v3/event_routes.csv",
+      "sha256": "ec3f880bdd8c8c172b9db35aa6d720b2486d8352a1846fd554268c0dc93ea434"
+    }
+  ],
+  "owner_approved": false,
+  "performance_ready": false,
+  "step1_complete": false,
+  "strict_flags_promoted": false,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "strategy_runs": 0,
+  "unit_tests_run": 0
+}

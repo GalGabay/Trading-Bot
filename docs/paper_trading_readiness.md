@@ -1,5 +1,11 @@
 # How far are we from paper trading?
 
+**Current Step 1 preparation:** [event mappings revised and diagnostic accounting
+implemented](broad_mapping_and_accounting_results.md). The owner can now review
+[concrete simulation assumptions](broad_diagnostic_assumptions_for_review.md).
+New module tests, remaining economic terms and Step 2 integration remain;
+no new return experiment or paper activation occurred.
+
 **Latest verification:** [193 tests passed; Step 1 event review progressed](broad_input_verification_results.md).
 Step 1 remains incomplete, and Step 2 performance integration has not started.
 Current work requires no owner setup or purchase. There are no new return results.

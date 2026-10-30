@@ -1,5 +1,9 @@
 # Step 1 verification and event review — October 29, 2026
 
+**Subsequent implementation:** [corrected mappings and diagnostic accounting](broad_mapping_and_accounting_results.md)
+now have a separate candidate revision and proposal. The 193-test result below
+remains evidence for the prior code; the new modules have not had focused tests.
+
 This continues **Step 1: prepare historical inputs**. Step 2 connects the
 prepared input to the existing simulator. **Step 1 remains in progress.**
 Your selected **70% total account entry exposure** is unchanged. No purchase,

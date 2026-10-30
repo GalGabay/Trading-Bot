@@ -1,5 +1,11 @@
 # Proposed research program before the first paper trial
 
+**Current preparation:** [corrected mapping and diagnostic accounting results](broad_mapping_and_accounting_results.md).
+All 100 selected members and 203,683 observations remain; 121 legal/reference
+streams are prepared. The [diagnostic defaults](broad_diagnostic_assumptions_for_review.md)
+are proposed for owner review. New unit tests, unresolved terms and a finite
+performance plan remain before expanded returns. No additional run was authorized.
+
 **Later Step 1 verification:** [193 passing tests and primary-event review](broad_input_verification_results.md).
 The candidate reconstruction was replayed offline; JCI/PEAK/PHIN corrections,
 election-dividend accounting and explicit research timing policy remain before

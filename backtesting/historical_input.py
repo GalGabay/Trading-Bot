@@ -63,10 +63,11 @@ def classify_action(kind, record, source_symbol):
     return "unsupported_category_requires_review"
 
 
-def build(output):
+def build(output, *, spec_path=None):
+    spec_path = SPEC if spec_path is None else Path(spec_path)
     if output.exists() or not output.resolve().is_relative_to(Path.cwd().resolve()):
         raise ValueError("Choose a fresh input-package directory within the workspace")
-    spec = json.loads(SPEC.read_text(encoding="utf-8"))
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
     for key in ("scope", "roster", "inventory", "prior_evidence", "calendar", "public_queue", "successor_queue"):
         checked_file(Path.cwd(), spec[key])
     if spec["performance_authorized"] or spec["strict_evidence_approved"]:
@@ -170,7 +171,7 @@ def build(output):
     captured={s["id"] for s in source_status if s["content_terms_checked"]}
     output.mkdir(parents=True)
     (output/"streams").mkdir()
-    (output/"frozen_spec.json").write_bytes(SPEC.read_bytes())
+    (output/"frozen_spec.json").write_bytes(spec_path.read_bytes())
     (output/"executed_builder.py").write_bytes(Path(__file__).read_bytes())
     streams, action_rows, quarantine = [], [], []
     for number, stream in enumerate(spec["streams"],1):
@@ -256,7 +257,7 @@ def build(output):
     for event in spec["material_events"]:
         unresolved.append(dict(instrument_id=event["parent_id"],event_id=event["id"],category=event["kind"],
             day=event["economic_date"],reason="Primary terms/entitlement/delivery/fractions remain unapproved; candidate outcomes do not create spendable cash",execution_ready=False))
-    manifest=dict(schema_version=1,purpose="candidate_input_not_an_execution_universe",spec=pin(SPEC),
+    manifest=dict(schema_version=1,purpose="candidate_input_not_an_execution_universe",spec=pin(spec_path),
         selected_original_ids=[s["instrument_id"] for s in originals],streams=streams,
         material_events=spec["material_events"],source_capture=source_status,
         membership_not_before=spec["membership_not_before"],warmup_is_uninvested=True,
@@ -270,7 +271,7 @@ def build(output):
     write_json(output/"source_capture.json",source_status)
     write_csv(output/"unresolved_events.csv",unresolved)
     roots=[s for s in streams if s["role"]=="original_member"]
-    result=dict(date="2026-10-29",spec=pin(SPEC),execution=pin("backtesting/historical_input.py"),
+    result=dict(date="2026-10-29",spec=pin(spec_path),execution=pin("backtesting/historical_input.py"),
         successor_report=pin(SUCCESSORS/"report.json"),public_report=pin(PUBLIC/"report.json"),source_sha256=pins,
         child_probe_report=None if supplement_report is None else pin(supplement_path),
         selected_originals=len(roots),candidate_streams=len(streams),
@@ -301,6 +302,8 @@ def build(output):
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output",type=Path,required=True)
+    parser.add_argument("--spec",type=Path,default=SPEC)
+    args=parser.parse_args()
     with offline_only():
-        result=build(parser.parse_args().output)
+        result=build(args.output,spec_path=args.spec)
         print(json.dumps({k:v for k,v in result.items() if k!="source_sha256"},indent=2))

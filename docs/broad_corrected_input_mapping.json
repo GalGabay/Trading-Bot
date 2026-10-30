@@ -1,0 +1,41 @@
+{
+  "primary_review": {
+    "path": "docs/broad_event_primary_review.json",
+    "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+  },
+  "feature_resets": [
+    "COHORT-2016-0258"
+  ],
+  "unresolved_feature_events": [
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "date": "2016-11-01",
+      "reason": "ADNT distribution economics still require review; do not warm through an unresolved price discontinuity"
+    }
+  ],
+  "feature_continuity_candidates": [
+    {
+      "parent_id": "COHORT-2016-0227",
+      "successor_id": "COHORT-2016-0227.PEAK-HOLDCO-2023",
+      "first_session": "2023-02-10",
+      "shares_per_parent": "1",
+      "owner_approved": false
+    }
+  ],
+  "provider_overrides": [
+    {
+      "event_id": "72ae5eb0-9663-42fe-bd68-50644e3c2a10",
+      "instrument_id": "COHORT-2016-0258",
+      "disposition": "wrong_predecessor_ratio_do_not_apply",
+      "source_id": "jci_2016"
+    },
+    {
+      "event_id": "4c93ce12-023e-4a00-9f1a-d0ce3b50d5eb",
+      "instrument_id": "COHORT-2016-0227.PEAK-HOLDCO-2023",
+      "disposition": "represented_by_peak_holding_company_reorganization_do_not_apply_twice",
+      "source_id": "peak_2023"
+    }
+  ],
+  "research_entry_continuity_approved": false,
+  "performance_authorized": false
+}

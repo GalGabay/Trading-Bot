@@ -1,0 +1,74 @@
+{
+  "plan": {
+    "path": "docs/broad_mapping_revision_plan.json",
+    "sha256": "5eb810697d7ebba9e3b255eb8d167b5860705a67d88319e2868e41a9297b5c89"
+  },
+  "inputs": {
+    "spec": {
+      "path": "docs/broad_historical_input_spec.json",
+      "sha256": "cb7064d053c3d1e3121bab76f9390088ad85c5daabaa620198daecf72edcd59b"
+    },
+    "primary_review": {
+      "path": "docs/broad_event_primary_review.json",
+      "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+    },
+    "review_summary": {
+      "path": "docs/broad_event_review_summary.json",
+      "sha256": "73fd2ca8224d976719cef7ecb12a7056d1a0d99759cc98ef6cd12796cd22c906"
+    },
+    "previous_manifest": {
+      "path": "data/reports/broad_historical_input_verified_v4/input_manifest.json",
+      "sha256": "b1a2bd1e90085c0a8ab2cd3a3c18b5dd307d7a29037558868131ba824ea1a80d"
+    },
+    "builder": {
+      "path": "backtesting/historical_input.py",
+      "sha256": "b7af88fb48646fdc94a03cfbb955bfe8aa32a3f1da4e13ae049dd457f6bc0136"
+    },
+    "revision_code": {
+      "path": "backtesting/corrected_input.py",
+      "sha256": "0bdd5971216dac9b142c37adf7578ca75083189087183b9347afd0b4cfe1fdff"
+    },
+    "guards": {
+      "path": "backtesting/input_guards.py",
+      "sha256": "673af7b24397ce799a6df8ffb9c8c70d7cfb3d58b9ddafc19ed2c514a9ddcc5a"
+    }
+  },
+  "spec": {
+    "path": "data/reports/broad_corrected_input_v1/corrected_spec.json",
+    "sha256": "f15e1ffd61fe211ad1ff4c37c488b0ff5de41c5a7d21ce6c98455863f2465bc1"
+  },
+  "execution": {
+    "path": "backtesting/corrected_input.py",
+    "sha256": "0bdd5971216dac9b142c37adf7578ca75083189087183b9347afd0b4cfe1fdff"
+  },
+  "builder": {
+    "path": "backtesting/historical_input.py",
+    "sha256": "b7af88fb48646fdc94a03cfbb955bfe8aa32a3f1da4e13ae049dd457f6bc0136"
+  },
+  "candidate_report": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/report.json",
+    "sha256": "741460e5baf249cfc983be8972eb57c2311baa10d1563f98b826e2049a6f6f51"
+  },
+  "mapping": {
+    "path": "data/reports/broad_corrected_input_v1/mapping_rules.json",
+    "sha256": "f59f0e28fe46e721ae09d22a1e12d7e4971e4264135c12388af984bbd6dfe3a0"
+  },
+  "candidate_streams": 121,
+  "selected_originals": 100,
+  "output_rows": 203683,
+  "material_events": 26,
+  "new_legal_or_reference_streams": 2,
+  "original_members_dropped": 0,
+  "feature_reset_ids": [
+    "COHORT-2016-0258"
+  ],
+  "original_source_files_modified": false,
+  "performance_ready": false,
+  "strict_flags_promoted": false,
+  "step1_complete": false,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "unit_tests_run": 0
+}

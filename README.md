@@ -481,6 +481,12 @@ remains to be done.
 
 ## Cross-platform operation
 
+Current research preparation: [corrected event mappings and proposed diagnostic
+accounting](docs/broad_mapping_and_accounting_results.md), with
+[specific assumptions for owner review](docs/broad_diagnostic_assumptions_for_review.md).
+This remains Step 1; the new modules have not yet had focused unit tests.
+The previous 193-test result applies to the earlier implementation.
+
 Latest research status: [Step 1 verification and event review](docs/broad_input_verification_results.md).
 193 offline tests passed; historical inputs still require event/timing work
 before Step 2 integration. No expanded return run or paper activation occurred.

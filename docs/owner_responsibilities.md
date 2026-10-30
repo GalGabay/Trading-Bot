@@ -1,5 +1,13 @@
 # Your responsibilities in the trading-bot project
 
+**Current owner review:** [diagnostic accounting defaults and allocation settings](broad_diagnostic_assumptions_for_review.md).
+Reply in chat to approve or change them; no file editing, purchase or setup is
+required. The 70% total exposure choice is already recorded. The 5%-per-stock /
+20-position defaults remain proposed. This review does not enable paper orders
+or authorize a new performance batch. [Implementation status](broad_mapping_and_accounting_results.md):
+corrected inputs and accounting plans prepared; focused tests and remaining
+event/source work are mine before Step 2 integration.
+
 **Latest Step 1 update (2026-10-29):** [193 offline tests passed and event/source
 review progressed](broad_input_verification_results.md). Step 1 still needs
 event corrections and explicit research timing assumptions before Step 2.
