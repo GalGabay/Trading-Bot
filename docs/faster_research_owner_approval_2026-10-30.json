@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "owner_approved": true,
+  "owner_response": "Approve 76-stock comparison (Recommended)",
+  "question": "Do you approve the separate 76-stock exploratory comparison in docs/faster_research_scope_for_review.md, including up to 24 simulations after the Step 2 integration checks pass? The original frozen 100-stock plan forbids omitting members, so this scope change needs your decision. Selecting stocks by historical data availability can bias returns; the results alone would not establish paper readiness. No purchases or trades are involved.",
+  "review_context": {
+    "path": "docs/faster_research_scope_review.json",
+    "sha256": "d1765d86e23423c8f8d136ba88b1068b9cf83932e1d74698bd3749352494a0f3"
+  },
+  "proposal": {
+    "path": "docs/faster_research_scope_proposal.json",
+    "sha256": "c9e129f4e536265430f5f38a9bb8b2992e202aba153023262c94a1ee532be7c8"
+  },
+  "acceptance": {
+    "path": "config/research_acceptance.json",
+    "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+  },
+  "scope": "separate_availability_selected_76_root_exploratory_comparison",
+  "original_100_protocol_modified": false,
+  "selection_bias_acknowledged": true,
+  "performance_authorized_conditionally": true,
+  "max_strategy_attempts": 24,
+  "performance_prerequisites": [
+    "Separately pinned and validated subset inputs",
+    "Step 2 pending-rights/portfolio integration and control accounting checks pass",
+    "Profiled runner enforces one-worker, 10-minute case and 120-minute total caps"
+  ],
+  "prerequisites_met": false,
+  "ready_for_strategy_runs": false,
+  "paper_authorized": false,
+  "broker_requests_authorized": false,
+  "purchases_usd": 0,
+  "heldout_2024_2025_access": false,
+  "unknown_economic_facts_may_be_fabricated": false
+}

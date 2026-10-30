@@ -4,11 +4,18 @@ Updated October 30, 2026. These four steps describe the current broader-stock
 research work, not development phases 1-4. After each implementation response,
 report the current step and its remaining work until Step 4 is complete.
 
+**Current route: the separately approved 76-stock exploratory comparison.**
+Step 1 inputs are prepared; **Step 2 integration is next**. The owner approved
+the exact scope and a maximum of 24 simulations after its integration/control
+checks pass. There is no pending owner setting or repeat approval now.
+The original fixed-100 study remains separately blocked at Step 1; it retains
+all 188 economic-data gate rows and all original evidence.
+
 | Step | Work and completion condition | Current status | Responsibility |
 | --- | --- | --- | --- |
-| 1 | Prepare and qualify the fixed 100-stock history, including ownership-changing events and dividends. Every unresolved economic term must have a supported treatment. | **In progress.** 641 offline tests pass, including 70 new holder/preparation/formula tests. MAC's reported no-election conversion is recorded; ownership/settlement and other terms still leave 188 overlapping blocking rows. | Engineering; no new owner setting is required now. |
-| 2 | Connect the qualified history and pending-rights ledger to the portfolio simulator. Verify once-only transfers, ownership after sales, feature resets, stale-order invalidation, valuation and risk integration. | Pending Step 1 admission. The full bridge is not implemented. | Engineering. |
-| 3 | Run the finite, reviewed experiment on the fixed universe and periods. Report return, drawdown, costs, exposure, cash use and sensitivity. | Pending verified integration and review of a concrete performance-run plan. No new batch is authorized by the accounting approvals. | Engineering prepares and runs; owner reviews the concrete final scope when ready. |
+| 1 | Prepare separately pinned inputs for the approved 76-root subset, retaining the other 24 roots in the original inventory. Check event admission, calendar coverage, candles and provenance under the approved diagnostic assumptions. | **Inputs prepared.** 79 streams and 149,113 daily candles pass preparation validation; zero subset event gates. Selection by historical data availability can bias returns. This is not full-100 or strict evidence certification. New preparation utilities have not had unit tests run; the prior 641-test result is preserved separately. | Engineering; owner's separate scope approval is recorded. |
+| 2 | Connect the qualified history and pending-rights ledger to the portfolio simulator. Verify once-only transfers, ownership after sales, feature resets, stale-order invalidation, valuation and risk integration. | **Next implementation.** The bridge and its verification remain incomplete; performance is not ready. | Engineering. |
+| 3 | Run the finite, reviewed experiment on the fixed universe and periods. Report return, drawdown, costs, exposure, cash use and sensitivity. | **Conditionally authorized, not run.** At most 24 attempts: 2 arms x 2 windows x 2 cost cases x 3 accounting scenarios, one simulated $10,000 account size. Requires Step 2 and control checks to pass, plus enforced runtime limits. | Engineering; no repeat approval required within these limits. |
 | 4 | Explain the results, compare them with the approved return/drawdown goals, and record the decision and remaining paper-readiness work. | Pending Step 3 results. | Engineering analysis plus owner decision. |
 
 Step 4 completion means this research comparison and its decision are documented.
@@ -17,6 +24,15 @@ historical-results review, account-state/recovery checks, safe exit protection,
 fill accounting and explicit paper-trial activation remain applicable.
 
 ## Latest evidence
+
+- [Prepared subset inputs and remaining Step 2 work](approved_subset_preparation_results.md)
+- [Owner approval of the separate scope and conditional 24-attempt cap](faster_research_owner_approval_2026-10-30.json)
+- [Tracked preparation summary](approved_subset_preparation_summary.json)
+- [Exploratory scope and exact limits as presented](faster_research_scope_for_review.md)
+- [All 100 originals and the explicit subset/deferred inventory](research_data/faster_research_scope_inventory.csv)
+- [Bounded MAC/SLG search closure](broad_targeted_schedule_results_2026-10-30.json)
+
+Previous full-100 evidence, unchanged:
 
 - [Ownership tests and completed MAC formula review](broad_holder_tests_results_2026-10-30.md)
 - [641-test verification](broad_holder_tests_verification_2026-10-30.json)

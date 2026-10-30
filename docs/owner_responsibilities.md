@@ -1,6 +1,19 @@
 # Your responsibilities in the trading-bot project
 
-**Current step: 1 of 4, still in progress.** See the
+**Current route: Step 1 inputs prepared for the approved 76-stock subset;
+Step 2 integration is next.** Your
+[separate approval](faster_research_owner_approval_2026-10-30.json) covers this
+exploratory scope and at most 24 strategy attempts after the integration and
+control checks pass. [Preparation results](approved_subset_preparation_results.md)
+record 149,113 observed candles across 79 streams, complete configured calendar
+coverage and zero subset event gates under the approved diagnostic assumptions.
+You have no setting to edit, purchase to make or repeat approval to give now.
+Engineering implements/verifies Step 2, then runs the capped Step 3 comparison;
+Step 4 explains results and the decision. Data-availability selection may bias
+returns. Personal paper-risk limits and paper activation remain separate.
+The original 100-stock study retains 188 gates and its incomplete Step 1.
+
+**Previous full-100 status: Step 1 of 4, still in progress.** See the
 [four-step tracker](broad_backtest_step_tracker.md) and
 [ownership tests / remaining terms](broad_holder_tests_results_2026-10-30.md).
 The current code passes 641 offline tests, including 70 new tests. MAC's

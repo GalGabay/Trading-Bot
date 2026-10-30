@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-30",
+  "kind": "metadata_integrity_check_not_unit_tests",
+  "documents": [
+    {
+      "path": "docs/faster_research_scope_proposal.json",
+      "sha256": "c9e129f4e536265430f5f38a9bb8b2992e202aba153023262c94a1ee532be7c8"
+    },
+    {
+      "path": "docs/faster_research_scope_audit.json",
+      "sha256": "e7e31986e09831b4b35a7ecfe2c596cde63af21e373e4006ee018faf955f3083"
+    },
+    {
+      "path": "docs/faster_research_scope_review.json",
+      "sha256": "d1765d86e23423c8f8d136ba88b1068b9cf83932e1d74698bd3749352494a0f3"
+    },
+    {
+      "path": "docs/faster_research_owner_approval_2026-10-30.json",
+      "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+    },
+    {
+      "path": "docs/broad_targeted_schedule_scope_2026-10-30.json",
+      "sha256": "e0fa56a041401efcd44c91e2c0d0ec55326b26316920c94013a90645ea28a645"
+    },
+    {
+      "path": "docs/broad_targeted_schedule_results_2026-10-30.json",
+      "sha256": "1e82342dac8814bd937d4a1d94179baca777a656790bb59e7d434e96803d8df0"
+    },
+    {
+      "path": "docs/approved_subset_preparation_summary.json",
+      "sha256": "328e8c738159faba1ce252cda4544123af5c1e1aa56e98ca97f92aa4ad8be82e"
+    }
+  ],
+  "checksum_pins_checked": 37,
+  "all_pins_match": true,
+  "preparation_command_completed": true,
+  "subset_data_gates_clear": true,
+  "full_100_blockers_preserved": 188,
+  "step2_integration_complete": false,
+  "unit_tests_run": 0,
+  "strategy_runs": 0,
+  "network_requests": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0
+}

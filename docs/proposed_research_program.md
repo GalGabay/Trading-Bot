@@ -1,5 +1,16 @@
 # Proposed research program before the first paper trial
 
+**Current route, 2026-10-30:** the separately approved
+[76-stock exploratory comparison](faster_research_owner_approval_2026-10-30.json)
+has [prepared Step 1 inputs](approved_subset_preparation_results.md).
+**Step 2 integration is next**, followed by up to 24 reviewed simulations after
+its checks pass, then a Step 4 explanation/decision. No new performance results
+yet. The selection uses historical data availability and may bias returns;
+it does not establish paper readiness. The original 100-stock research keeps
+all members and its 188 unresolved gates. No new owner setting or purchase is
+needed. Earlier status entries below remain historical; see the
+[current tracker](broad_backtest_step_tracker.md).
+
 **Current verification, still Step 1:**
 [641 passing tests and completed MAC formula review](broad_holder_tests_results_2026-10-30.md)
 cover the current holder code and all three prepared scenarios. Remaining

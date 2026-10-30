@@ -1,5 +1,17 @@
 # How far are we from paper trading?
 
+**Current route, 2026-10-30:** the owner approved a separate 76-stock exploratory
+comparison, capped at 24 strategy attempts after integration checks pass.
+[Step 1 subset inputs are prepared](approved_subset_preparation_results.md).
+**Step 2 is next:** connect the pending-rights ledger to the portfolio simulator
+and verify control accounting. Step 3 runs the comparison; Step 4 evaluates and
+explains it. No new profit/loss batch has run and no paper trial is approved.
+The original 100-stock study remains blocked by 188 economic-data rows; its
+scope and evidence are preserved. Availability-selected subset results alone
+cannot establish paper readiness. See the [current tracker](broad_backtest_step_tracker.md).
+
+The status entries below describe earlier work.
+
 **Latest verification, still Step 1:**
 [641 tests pass and MAC's reported conversion formula is recorded](broad_holder_tests_results_2026-10-30.md).
 All three accounting scenarios prepare offline. Ownership/settlement and other

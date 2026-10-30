@@ -3,7 +3,19 @@
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
-**Current broad-input status, 2026-10-30:**
+**Current research status, 2026-10-30:** you approved the separate
+[76-stock exploratory comparison](docs/faster_research_owner_approval_2026-10-30.json),
+with up to 24 simulations after integration checks pass. Its
+[Step 1 inputs are prepared](docs/approved_subset_preparation_results.md):
+149,113 observed candles, 79 streams, complete configured calendar coverage and
+zero remaining subset event gates under the approved diagnostic assumptions.
+**Next: Step 2**, the pending-rights/portfolio simulator bridge and verification.
+No new strategy run has occurred. The availability-based selection can bias
+returns; this subset alone cannot establish paper readiness. The original
+100-stock protocol retains all members and 188 gates. See the
+[four-step tracker](docs/broad_backtest_step_tracker.md).
+
+**Previous full-100 verification, 2026-10-30:**
 [Ownership tests and MAC formula review](docs/broad_holder_tests_results_2026-10-30.md)
 pass 641 offline tests, including 70 new tests. Holder scenario/routing checks
 were corrected; Macerich's completed no-election conversion formula is now

@@ -1,0 +1,101 @@
+dividend_rows,election_rows,instrument_id,material_rows,proposed_scope,provider_rows,reported_blocking_rows,selection_order,snapshot_alias,source_name
+0,0,COHORT-2016-0047,0,candidate_currently_unflagged,0,0,1,AAPL,"Apple, Inc."
+0,0,COHORT-2016-0088,0,candidate_currently_unflagged,0,0,2,CBG,"CBRE Group, Inc. Class AREIT(a)"
+0,0,COHORT-2016-0479,0,candidate_currently_unflagged,0,0,3,WMT,"Wal-Mart Stores, Inc."
+0,0,COHORT-2016-0014,0,candidate_currently_unflagged,0,0,4,APD,"Air Products & Chemicals, Inc."
+0,0,COHORT-2016-0387,1,deferred_in_separate_proposal_only,1,2,5,RTN,Raytheon Co.
+0,0,COHORT-2016-0257,0,candidate_currently_unflagged,0,0,6,JNJ,Johnson & Johnson
+0,0,COHORT-2016-0012,0,candidate_currently_unflagged,0,0,7,AFL,"Aflac, Inc."
+0,0,COHORT-2016-0287,0,candidate_currently_unflagged,0,0,8,MTB,M&T Bank Corp.
+0,0,COHORT-2016-0048,0,candidate_currently_unflagged,0,0,9,AMAT,"Applied Materials, Inc."
+0,0,COHORT-2016-0332,0,candidate_currently_unflagged,0,0,10,NEE,"NextEra Energy, Inc."
+8,0,COHORT-2016-0170,0,deferred_in_separate_proposal_only,0,8,11,EOG,"EOG Resources, Inc."
+0,0,COHORT-2016-0179,0,candidate_currently_unflagged,0,0,12,EXPE,"Expedia, Inc."
+0,0,COHORT-2016-0185,0,candidate_currently_unflagged,0,0,13,FB,"Facebook, Inc. Class A(a)"
+0,0,COHORT-2016-0397,0,candidate_currently_unflagged,0,0,14,ROP,"Roper Technologies, Inc."
+0,0,COHORT-2016-0152,4,deferred_in_separate_proposal_only,2,6,15,DOW,Dow Chemical Co.
+0,0,COHORT-2016-0269,0,candidate_currently_unflagged,0,0,16,KHC,Kraft Heinz Co.
+0,0,COHORT-2016-0150,0,candidate_currently_unflagged,0,0,17,D,"Dominion Resources, Inc."
+0,0,COHORT-2016-0095,0,candidate_currently_unflagged,0,0,18,CF,"CF Industries Holdings, Inc."
+0,0,COHORT-2016-0089,0,candidate_currently_unflagged,0,0,19,CBS,CBS Corp. Class B
+0,0,COHORT-2016-0071,0,candidate_currently_unflagged,0,0,20,BA,Boeing Co.
+0,0,COHORT-2016-0144,0,candidate_currently_unflagged,0,0,21,DLR,"Digital Realty Trust, Inc. REIT"
+0,0,COHORT-2016-0029,0,candidate_currently_unflagged,0,0,22,AEE,Ameren Corp.
+0,0,COHORT-2016-0169,0,candidate_currently_unflagged,0,0,23,ETR,Entergy Corp.
+0,0,COHORT-2016-0060,0,deferred_in_separate_proposal_only,2,2,24,BLL,Ball Corp.
+0,0,COHORT-2016-0267,0,candidate_currently_unflagged,0,0,25,KLAC,KLA-Tencor Corp.
+0,0,COHORT-2016-0193,0,deferred_in_separate_proposal_only,1,1,26,FISV,"Fiserv, Inc.(a)"
+1,0,COHORT-2016-0140,3,deferred_in_separate_proposal_only,4,8,27,DLPH,Delphi Automotive PLC
+0,0,COHORT-2016-0124,0,candidate_currently_unflagged,0,0,28,STZ,"Constellation Brands, Inc.Class A"
+0,0,COHORT-2016-0096,0,candidate_currently_unflagged,0,0,29,SCHW,Charles Schwab Corp.
+0,0,COHORT-2016-0321,1,deferred_in_separate_proposal_only,2,3,30,MYL,Mylan NV(a)
+0,0,COHORT-2016-0339,0,candidate_currently_unflagged,0,0,31,NTRS,Northern Trust Corp.
+0,0,COHORT-2016-0028,0,candidate_currently_unflagged,0,0,32,AMZN,"Amazon.com, Inc.(a)"
+0,0,COHORT-2016-0300,0,candidate_currently_unflagged,0,0,33,MCD,McDonald’s Corp.
+0,0,COHORT-2016-0500,0,candidate_currently_unflagged,0,0,34,XL,"XL Group, Ltd."
+0,0,COHORT-2016-0181,1,deferred_in_separate_proposal_only,0,1,35,ESRX,Express Scripts Holding Co.(a)
+0,0,COHORT-2016-0133,0,candidate_currently_unflagged,0,0,36,CVS,CVS Health Corp.
+0,0,COHORT-2016-0364,0,candidate_currently_unflagged,0,0,37,PNW,Pinnacle West Capital Corp.
+0,0,COHORT-2016-0247,0,candidate_currently_unflagged,0,0,38,IFF,"International Flavors & Fragrances, Inc."
+0,0,COHORT-2016-0093,0,candidate_currently_unflagged,0,0,39,CTL,"CenturyLink, Inc."
+0,0,COHORT-2016-0272,1,deferred_in_separate_proposal_only,0,1,40,LLL,"L-3 Communications Holdings, Inc."
+0,0,COHORT-2016-0059,1,deferred_in_separate_proposal_only,0,1,41,BHI,"Baker Hughes, Inc."
+0,0,COHORT-2016-0280,0,candidate_currently_unflagged,0,0,42,LNC,Lincoln National Corp.
+0,0,COHORT-2016-0058,0,candidate_currently_unflagged,0,0,43,AVY,Avery Dennison Corp.
+0,0,COHORT-2016-0389,0,candidate_currently_unflagged,0,0,44,RHT,"Red Hat, Inc.(a)"
+0,0,COHORT-2016-0178,1,deferred_in_separate_proposal_only,1,2,45,EXC,Exelon Corp.
+0,0,COHORT-2016-0488,0,candidate_currently_unflagged,0,0,46,WU,Western Union Co.
+0,0,COHORT-2016-0434,0,candidate_currently_unflagged,0,0,47,TDC,Teradata Corp.(a)
+1,0,COHORT-2016-0127,0,deferred_in_separate_proposal_only,0,1,48,COST,Costco Wholesale Corp.
+0,0,COHORT-2016-0427,0,candidate_currently_unflagged,0,0,49,SYMC,Symantec Corp.
+0,0,COHORT-2016-0097,0,candidate_currently_unflagged,0,0,50,CHTR,"Charter Communications, Inc.Class A(a)"
+1,0,COHORT-2016-0399,0,deferred_in_separate_proposal_only,0,1,51,RCL,"Royal Caribbean Cruises, Ltd."
+0,0,COHORT-2016-0463,0,candidate_currently_unflagged,0,0,52,UNM,Unum Group
+0,0,COHORT-2016-0368,0,candidate_currently_unflagged,0,0,53,PPG,"PPG Industries, Inc."
+0,0,COHORT-2016-0023,0,candidate_currently_unflagged,0,0,54,LNT,Alliant Energy Corp.
+0,0,COHORT-2016-0429,0,candidate_currently_unflagged,0,0,55,SYY,Sysco Corp.
+0,0,COHORT-2016-0476,1,deferred_in_separate_proposal_only,1,2,56,VNO,Vornado Realty Trust REIT
+0,0,COHORT-2016-0196,0,candidate_currently_unflagged,0,0,57,FLR,Fluor Corp.
+0,0,COHORT-2016-0030,0,candidate_currently_unflagged,0,0,58,AAL,"American Airlines Group, Inc."
+0,0,COHORT-2016-0155,0,candidate_currently_unflagged,0,0,59,DUK,Duke Energy Corp.
+10,0,COHORT-2016-0333,0,deferred_in_separate_proposal_only,0,10,60,NLSN,Nielsen Holdings PLC
+0,0,COHORT-2016-0148,0,candidate_currently_unflagged,0,0,61,DG,Dollar General Corp.
+0,0,COHORT-2016-0473,1,deferred_in_separate_proposal_only,1,2,62,VFC,VF Corp.
+0,0,COHORT-2016-0007,0,candidate_currently_unflagged,0,0,63,ADBE,"Adobe Systems, Inc.(a)"
+0,0,COHORT-2016-0106,0,candidate_currently_unflagged,0,0,64,CTAS,Cintas Corp.
+0,0,COHORT-2016-0002,0,candidate_currently_unflagged,0,0,65,ABT,Abbott Laboratories
+0,0,COHORT-2016-0454,0,candidate_currently_unflagged,0,0,66,UA,"Under Armour, Inc. Class A(a)"
+0,0,COHORT-2016-0311,0,candidate_currently_unflagged,0,0,67,MHK,"Mohawk Industries, Inc.(a)"
+0,0,COHORT-2016-0475,0,candidate_currently_unflagged,0,0,68,V,"Visa, Inc. Class A"
+0,0,COHORT-2016-0174,0,candidate_currently_unflagged,0,0,69,EQR,Equity Residential REIT
+0,0,COHORT-2016-0293,0,candidate_currently_unflagged,0,0,70,MAR,"Marriott International, Inc.Class A"
+16,0,COHORT-2016-0406,0,deferred_in_separate_proposal_only,0,16,71,STX,Seagate Technology PLC
+0,0,COHORT-2016-0374,0,candidate_currently_unflagged,0,0,72,PGR,Progressive Corp.
+0,0,COHORT-2016-0264,0,candidate_currently_unflagged,0,0,73,KMB,Kimberly-Clark Corp.
+0,0,COHORT-2016-0073,0,candidate_currently_unflagged,0,0,74,BXP,"Boston Properties, Inc. REIT"
+0,0,COHORT-2016-0130,1,deferred_in_separate_proposal_only,0,1,75,CSRA,"CSRA, Inc."
+15,0,COHORT-2016-0258,0,deferred_in_separate_proposal_only,0,15,76,JCI,Johnson Controls International PLC
+24,2,COHORT-2016-0046,1,deferred_in_separate_proposal_only,5,32,77,AIV,Apartment Investment & Management Co. Class A REIT
+0,0,COHORT-2016-0227,0,deferred_in_separate_proposal_only,1,1,78,HCP,"HCP, Inc. REIT"
+50,2,COHORT-2016-0413,0,deferred_in_separate_proposal_only,2,54,79,SLG,SL Green Realty Corp. REIT
+0,0,COHORT-2016-0204,0,candidate_currently_unflagged,0,0,80,FCX,"Freeport-McMoRan, Inc."
+0,0,COHORT-2016-0137,0,candidate_currently_unflagged,0,0,81,DVA,"DaVita, Inc.(a)"
+0,0,COHORT-2016-0464,0,candidate_currently_unflagged,0,0,82,URBN,"Urban Outfitters, Inc.(a)"
+0,0,COHORT-2016-0001,0,candidate_currently_unflagged,0,0,83,MMM,3M Co.
+0,0,COHORT-2016-0330,0,candidate_currently_unflagged,0,0,84,NWSA,News Corp. Class A
+0,0,COHORT-2016-0262,0,candidate_currently_unflagged,0,0,85,K,Kellogg Co.
+0,0,COHORT-2016-0436,0,candidate_currently_unflagged,0,0,86,TXN,"Texas Instruments, Inc."
+0,0,COHORT-2016-0503,0,candidate_currently_unflagged,0,0,87,YUM,"Yum! Brands, Inc."
+0,0,COHORT-2016-0314,0,candidate_currently_unflagged,0,0,88,MON,Monsanto Co.
+0,0,COHORT-2016-0219,0,candidate_currently_unflagged,0,0,89,HAL,Halliburton Co.
+0,0,COHORT-2016-0289,0,candidate_currently_unflagged,0,0,90,M,"Macy’s, Inc."
+0,0,COHORT-2016-0428,0,candidate_currently_unflagged,0,0,91,SYF,Synchrony Financial
+0,0,COHORT-2016-0447,0,candidate_currently_unflagged,0,0,92,TRV,"Travelers Cos., Inc."
+1,0,COHORT-2016-0077,0,deferred_in_separate_proposal_only,0,1,93,BF.B,Brown-Forman Corp. Class B
+0,0,COHORT-2016-0324,0,candidate_currently_unflagged,0,0,94,NAVI,Navient Corp.
+0,0,COHORT-2016-0166,0,candidate_currently_unflagged,0,0,95,LLY,Eli Lilly & Co.
+0,0,COHORT-2016-0352,0,candidate_currently_unflagged,0,0,96,PDCO,"Patterson Cos., Inc."
+16,1,COHORT-2016-0288,0,deferred_in_separate_proposal_only,0,17,97,MAC,Macerich Co. REIT
+0,0,COHORT-2016-0466,0,candidate_currently_unflagged,0,0,98,VLO,Valero Energy Corp.
+0,0,COHORT-2016-0076,0,candidate_currently_unflagged,0,0,99,AVGO,"Broadcom, Ltd."
+0,0,COHORT-2016-0208,0,candidate_currently_unflagged,0,0,100,GD,General Dynamics Corp.

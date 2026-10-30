@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Final capped schedule review alongside a faster research-scope audit requested by the owner",
+  "max_search_queries": 6,
+  "max_page_opens": 6,
+  "primary_sources_only": true,
+  "purchase_budget_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "price_downloads": 0,
+  "strategy_runs": 0,
+  "stop_new_requests_on_access_barrier_or_fetch_failure": true,
+  "retry_previously_failed_urls": false,
+  "prior_batches_remain_closed": true,
+  "automatic_followup_collection": false,
+  "targets": [
+    "MAC 2020 primary ex-distribution ownership notice",
+    "SLG 2021/2022 explicit per-holder formula or precision beyond rounded reported shares"
+  ],
+  "constraints": [
+    "No options deliverable used as a common-holder allocation",
+    "No issuer aggregate used as an individual allocation",
+    "Unknown fractional payments remain unspendable claims under approved conventions",
+    "No new performance experiment or change to the original 100-member protocol"
+  ]
+}

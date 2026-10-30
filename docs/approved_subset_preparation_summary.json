@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-30",
+  "approval": {
+    "path": "docs/faster_research_owner_approval_2026-10-30.json",
+    "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+  },
+  "proposal": {
+    "path": "docs/faster_research_scope_proposal.json",
+    "sha256": "c9e129f4e536265430f5f38a9bb8b2992e202aba153023262c94a1ee532be7c8"
+  },
+  "original_manifest": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/input_manifest.json",
+    "sha256": "58ef1154ac1b54076ed163c0df72c1d599cb82605a79fd99a7f6ec8d85d90b84"
+  },
+  "original_full_preflight": {
+    "path": "data/reports/approved_subset_inputs_2026_10_30_v2/full_preflight/report.json",
+    "sha256": "82b81180207a6e08d8d30c5387ac3ca188e558cb47ea28451657407c92b313d0"
+  },
+  "original_blocking_rows": 188,
+  "original_100_protocol_modified": false,
+  "selected_originals": 76,
+  "deferred_originals": 24,
+  "candidate_streams": 79,
+  "observed_rows": 149113,
+  "context_candles_checked": 2012,
+  "context_check": {
+    "path": "data/reports/approved_subset_inputs_2026_10_30_v2/context_check.json",
+    "sha256": "cd10ff04a4e38803d21522752fea2cfdf939fa81fc439f570fee1cffc095ac85"
+  },
+  "provider_dividends": 1899,
+  "plan_row_counts": {
+    "dividends": 5697,
+    "material": 18,
+    "actions": 11,
+    "elections": 0
+  },
+  "warning_counts": {
+    "volume_anomaly": 47
+  },
+  "input_validation_complete": true,
+  "subset_data_gates_clear": true,
+  "subset_step1_inputs_prepared": true,
+  "step2_integration_complete": false,
+  "performance_ready": false,
+  "strict_flags_promoted": false,
+  "unit_tests_run": 0,
+  "strategy_runs": 0,
+  "network_requests": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "heldout_2024_2025_files_read": 0,
+  "execution": {
+    "path": "backtesting/subset_preparation.py",
+    "sha256": "b992bccc5a5757d55e114515d3b438abda54fa16457247e70fda1fc146ddfdf5"
+  },
+  "executed_source": {
+    "path": "data/reports/approved_subset_inputs_2026_10_30_v2/executed_preparer.py",
+    "sha256": "b992bccc5a5757d55e114515d3b438abda54fa16457247e70fda1fc146ddfdf5"
+  },
+  "output_files": [
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/input_manifest.json",
+      "sha256": "e3d2618efdf76a3181e2b4341fe8f8958114dd93e203c9e55ca92a98c04a0879"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/preflight.json",
+      "sha256": "7082e1971fc09c28b66855693e922a203bfc8d3977f576586c3e68dbac8d1cec"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/price_checks.json",
+      "sha256": "c3aedf96f876391de5b73af131e19eca3af15ef0908d50e6fb8e9a8d12f0aaee"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/event_routes.csv",
+      "sha256": "09e3b1bf37ad8b0a2945b68646e264d090bb02583b77f693dc4228eea04deb6b"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/provider_event_roles.csv",
+      "sha256": "8bc6dbd0bf05a66a410668db64de48c47bf079f4460f7fa1bddc8bcf3c8853f6"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/dividends.json",
+      "sha256": "a5d3c71d79d1fa015a0594be5ed9722473d6d5531466f8170c510fa14a11881d"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/material.json",
+      "sha256": "66aa86117b39383c49a76848814972b08a0c5551029cd9f94f6a002d6799fce6"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/actions.json",
+      "sha256": "920d45272cc905c5e1ff9f6db411e3cb00a95f119a2de392db29b0300c3792d0"
+    },
+    {
+      "path": "data/reports/approved_subset_inputs_2026_10_30_v2/elections.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  ],
+  "limitation": "Approved vendor-dependent exploratory inputs; subset preparation is not engine verification or full-100 admission"
+}

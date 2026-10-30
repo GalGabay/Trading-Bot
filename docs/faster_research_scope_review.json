@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "status": "awaiting_explicit_scope_decision",
+  "owner_approved": false,
+  "proposal": {
+    "path": "docs/faster_research_scope_proposal.json",
+    "sha256": "c9e129f4e536265430f5f38a9bb8b2992e202aba153023262c94a1ee532be7c8"
+  },
+  "review_document": {
+    "path": "docs/faster_research_scope_for_review.md",
+    "sha256": "292d803bc8bfdcab93dedd09be0f6a9f05f7dab6313d9011cefe82a16d315363"
+  },
+  "audit": {
+    "path": "docs/faster_research_scope_audit.json",
+    "sha256": "e7e31986e09831b4b35a7ecfe2c596cde63af21e373e4006ee018faf955f3083"
+  },
+  "inventory": {
+    "path": "docs/research_data/faster_research_scope_inventory.csv",
+    "sha256": "0f9c52faee13360eac8899168d356396124d673a264fe985197be2ba80533a4b"
+  },
+  "acceptance": {
+    "path": "config/research_acceptance.json",
+    "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+  },
+  "approval_required_because": "Original fixed-100 comparison explicitly forbids omitted/replaced members; a separate availability-selected 76-root study changes scope and introduces selection bias",
+  "original_protocol": {
+    "path": "docs/broad_100_comparison_plan.json",
+    "sha256": "2bb79392cdacf27be28ce2ff1e4dc5c2b81c9c778a8746da147a5d9d2c3b393a"
+  },
+  "proposed_authority": "Separate 76-root scope and at most 24 performance attempts only after separately pinned input, Step 2 integration and control checks pass",
+  "currently_authorized_performance_attempts": 0,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests_authorized": false
+}

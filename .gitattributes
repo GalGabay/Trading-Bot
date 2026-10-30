@@ -134,3 +134,12 @@ docs/broad_holder_tests_*.json -text
 docs/broad_election_formula_*.json -text
 docs/research_data/formula_*_2026-10-30.json -text
 docs/research_data/diagnostic_executed_before_holder_tests_v1/*.py -text
+# Preserve the separate exploratory scope, its approval and executed input pins.
+backtesting/scope_feasibility.py -text
+backtesting/subset_preparation.py -text
+docs/faster_research_scope_*.json -text
+docs/faster_research_scope_for_review.md -text
+docs/faster_research_owner_approval_*.json -text
+docs/approved_subset_*.json -text
+docs/broad_targeted_schedule_*.json -text
+docs/research_data/targeted_search*_2026-10-30.json -text

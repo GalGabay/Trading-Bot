@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_targeted_schedule_scope_2026-10-30.json",
+    "sha256": "e0fa56a041401efcd44c91e2c0d0ec55326b26316920c94013a90645ea28a645"
+  },
+  "search_queries": 6,
+  "page_opens": 0,
+  "closed": true,
+  "additional_requests_allowed": false,
+  "stop_reason": "search_budget_exhausted_without_new_matching_primary_schedule",
+  "new_primary_sources_admitted": 0,
+  "previous_failed_urls_retried": 0,
+  "discovery": [
+    {
+      "path": "docs/research_data/targeted_search1_2026-10-30.json",
+      "sha256": "58b541dec70821ab03971a86858cf1577645522712214cbb9e2d1a382916e7c6"
+    },
+    {
+      "path": "docs/research_data/targeted_search2_2026-10-30.json",
+      "sha256": "213583caa31ed05fe272c4f05f7114275be15d225d0023f52e1c77e352de03da"
+    }
+  ],
+  "interpretation": "Matching SLG notices still describe approximate final per-holder shares. No new matching MAC primary ex-date was located. Search excerpts do not clear either gate.",
+  "cached_primary_context": [
+    {
+      "path": "docs/broad_remaining_terms_review_2026-10-30.json",
+      "sha256": "7f9dc19e8c90f0128f11d519009a880a1533c3f2f6195d7413dd22495ef5259a"
+    },
+    {
+      "path": "docs/broad_election_formula_facts_2026-10-30.json",
+      "sha256": "afd7b03488dda174b506ab5b39d95bc8dc04f4083362bb3d2cbcd17534fdbab5"
+    }
+  ],
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "price_downloads": 0,
+  "orders": 0,
+  "strategy_runs": 0
+}

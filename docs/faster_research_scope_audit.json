@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "current_step": 1,
+  "original_member_count": 100,
+  "candidate_root_count": 76,
+  "deferred_root_count": 24,
+  "candidate_stream_count": 79,
+  "original_blocking_rows": 188,
+  "candidate_reported_blocking_rows": 0,
+  "qualification_limit": "No blockers in the existing report only; not fresh price/action/source certification",
+  "all_originals_accounted_for": true,
+  "original_protocol_modified": false,
+  "step1_full_basket_complete": false,
+  "subset_scope_owner_approved": false,
+  "engine_adapter_integrated": false,
+  "performance_ready": false,
+  "proposal": {
+    "path": "data/reports/scope_feasibility_2026_10_30_v1/proposal.json",
+    "sha256": "c9e129f4e536265430f5f38a9bb8b2992e202aba153023262c94a1ee532be7c8"
+  },
+  "inventory": {
+    "path": "data/reports/scope_feasibility_2026_10_30_v1/all_originals.csv",
+    "sha256": "0f9c52faee13360eac8899168d356396124d673a264fe985197be2ba80533a4b"
+  },
+  "execution": {
+    "path": "backtesting/scope_feasibility.py",
+    "sha256": "2354b76e04c2551807f3c7f21cf275db81d37155d9326c0c94a6cde839e49f34"
+  },
+  "tests_run": 0,
+  "price_files_read": 0,
+  "credentials_read": false,
+  "network_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "strategy_runs": 0
+}
