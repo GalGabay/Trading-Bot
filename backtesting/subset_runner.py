@@ -290,13 +290,14 @@ def summarize_case(result, case, risk, window, acceptance):
     return metrics
 
 
-def worker(task_path):
+def worker(task_path, *, run_directory=OUTPUT, budget_scope=None):
     task_path=Path(task_path).resolve()
-    if not task_path.is_relative_to(OUTPUT.resolve()):
+    run_directory=Path(run_directory)
+    if not task_path.is_relative_to(run_directory.resolve()):
         raise ValueError("Worker task must belong to the single approved execution directory")
     task=read(task_path)
-    ledger=read(OUTPUT/"budget/ledger.json")
-    if ledger["scope"]!=pin(APPROVAL):
+    ledger=read(run_directory/"budget/ledger.json")
+    if ledger["scope"]!=(pin(APPROVAL) if budget_scope is None else budget_scope):
         raise ValueError("Worker detached from approval budget")
     if task["kind"]=="case":
         if ledger["status"]!="running" or ledger["active"]!=task["case"]["id"] or ledger["attempts"][-1]["task"]!=pin(task_path):

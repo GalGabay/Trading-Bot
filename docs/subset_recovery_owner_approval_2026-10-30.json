@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-30",
+  "recorded_at": "2026-10-30T19:44:12.530871+00:00",
+  "owner_approved": true,
+  "owner_response": "do what you think please. is it still step 3?",
+  "interpretation": "Explicit instruction to proceed at engineering discretion in direct response to the documented bounded recovery; authorizes that exact recovery scope.",
+  "proposal": {
+    "path": "docs/subset_recovery_proposal_2026-10-30.json",
+    "sha256": "12aa30bd03cba93eb2ae67960bdaba87934538dcf77dacd94517fd416af7d497"
+  },
+  "review_document": {
+    "path": "docs/subset_recovery_for_review.md",
+    "sha256": "768ad63dce590e2c1dcb3fdb2d80114dca28f3d3f602698cd40a537cf9f9898a"
+  },
+  "original_approval": {
+    "path": "docs/faster_research_owner_approval_2026-10-30.json",
+    "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+  },
+  "additional_attempts_limit": 21,
+  "lifetime_attempts_limit": 25,
+  "case_seconds": 600,
+  "recovery_segment_seconds": 3600,
+  "max_workers": 1,
+  "purchases_usd": 0,
+  "broker_requests_authorized": false,
+  "paper_authorized": false,
+  "heldout_2024_2025_access": false,
+  "context": "Owner quoted the pending recovery request specifying 21 additional attempts, 25 total and a separate 60-minute window, then instructed engineering to proceed at its discretion."
+}

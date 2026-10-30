@@ -5,11 +5,14 @@ research work, not development phases 1-4. After each implementation response,
 report the current step and its remaining work until Step 4 is complete.
 
 **Current route: the separately approved 76-stock exploratory comparison.**
-Step 1 inputs are prepared; Step 2 integration was verified; **Step 3 stopped
-incomplete after four attempts (three completed, one timeout)**. No retry ran.
-[Partial results and fixes](subset_partial_results_2026-10-30.md) are documented.
-A [separate recovery proposal](subset_recovery_for_review.md) requires a decision
-because it permits one retry, 25 lifetime attempts and a new bounded window.
+**Steps 1-4 are complete for this approved diagnostic comparison.**
+[Final results and the Step 4 decision](subset_comparison_results_2026-10-30.md)
+cover all 24 distinct cases, using 25 lifetime attempts including the original
+timeout. Recovery completed 21 cases in 18.97 minutes with no failures.
+**Decision: reject this frozen candidate for paper promotion against the
+owner-approved goals; retain it as research.** This records an engineering
+assessment, not an owner approval of a new strategy or paper trial.
+No purchases, broker requests, orders or reserved-year candle reads occurred.
 The original fixed-100 study remains separately blocked at Step 1; it retains
 all 188 economic-data gate rows and all original evidence.
 
@@ -17,8 +20,8 @@ all 188 economic-data gate rows and all original evidence.
 | --- | --- | --- | --- |
 | 1 | Prepare separately pinned inputs for the approved 76-root subset, retaining the other 24 roots in the original inventory. Check event admission, calendar coverage, candles and provenance under the approved diagnostic assumptions. | **Inputs prepared.** 79 streams and 149,113 daily candles pass preparation validation; zero subset event gates. Selection by historical data availability can bias returns. This is not full-100 or strict evidence certification. New preparation utilities have not had unit tests run; the prior 641-test result is preserved separately. | Engineering; owner's separate scope approval is recorded. |
 | 2 | Connect the qualified history and pending-rights ledger to the portfolio simulator. Verify once-only transfers, ownership after sales, feature resets, stale-order invalidation, valuation and risk integration. | **Complete for the approved diagnostic subset.** 236 focused tests pass, including 42 new tests; 36 saved-data accounting checks and six synthetic financial control comparisons pass. All 12 basket/window/scenario schedules compile. | Historical integration verification recorded; current post-stop fixes pass 184 focused tests and all three saved-case financial replays. |
-| 3 | Run the finite, reviewed experiment on the fixed universe and periods. Report return, drawdown, costs, exposure, cash use and sensitivity. | **Stopped, incomplete.** Four attempts consumed; three completed, fourth timed out. Zero-strategy profile passed in 26.7 seconds. No pessimistic-cost or 2022?2023 case completed. Post-stop accounting/deadline fixes pass 184 offline tests; three saved-case reports match exactly. No new strategy run after stopping. | Engineering fixes verified; owner decision needed for the separate 21-attempt recovery segment (25 lifetime attempts), followed by recovery-driver implementation/verification. |
-| 4 | Explain the results, compare them with the approved return/drawdown goals, and record the decision and remaining paper-readiness work. | Pending completion or explicitly agreed closure of Step 3; partial interpretation is documented. | Engineering analysis plus owner decision. |
+| 3 | Run the finite, reviewed experiment on the fixed universe and periods. Report return, drawdown, costs, exposure, cash use and sensitivity. | **Complete.** All 24 unique cases completed in 25 lifetime attempts. Original four attempts and timeout preserved; recovery added 21 successful cases in 18.97 minutes. Every case reconciled internally and against external prices; all root contributions reconcile. 320 offline tests, three exact saved replays and six synthetic controls passed before recovery. | Engineering completed the approved scope; no pending execution approval. |
+| 4 | Explain the results, compare them with the approved return/drawdown goals, and record the decision and remaining paper-readiness work. | **Complete.** All 24 cases fail the 6% annual goal; all 12 broader cases fail the 5% closing drawdown goal. Recorded decision: reject frozen candidate for paper promotion; retain as research. Owner has not approved a new strategy/trial. | Engineering assessment recorded against existing owner criteria. Next: prepare a bounded follow-up proposal; owner reviews it before another performance batch. |
 
 Step 4 completion means this research comparison and its decision are documented.
 It does not automatically activate paper trading. Personal paper-risk limits,
@@ -27,9 +30,20 @@ fill accounting and explicit paper-trial activation remain applicable.
 
 ## Latest evidence
 
+- [Completed comparison and Step 4 assessment](subset_comparison_results_2026-10-30.md)
+- [Completion, all-case and budget verification](subset_final_verification_2026-10-30.json)
+- [Tracked all-case summary](research_data/subset_final_2026-10-30_summary.json)
+- [Return, cash and drawdown explained](subset_return_metrics_explained.md)
+
+Historical preparation and execution evidence:
+
+- [Approved recovery and implementation](subset_recovery_approved_2026-10-30.md)
+- [320-test verification](subset_recovery_driver_verification_2026-10-30.json)
+- [Registered recovery case order](subset_recovery_execution_protocol_2026-10-30.json)
+
 - [Partial returns and exact stop status](subset_partial_results_2026-10-30.md)
 - [184-test post-stop verification and unchanged saved reports](subset_recovery_verification_2026-10-30.json)
-- [Separate recovery proposal, not approved](subset_recovery_for_review.md)
+- [Original recovery proposal](subset_recovery_for_review.md) and [subsequent approval](subset_recovery_owner_approval_2026-10-30.json)
 
 Historical pre-execution evidence:
 

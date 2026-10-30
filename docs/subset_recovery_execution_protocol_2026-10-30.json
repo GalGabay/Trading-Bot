@@ -1,0 +1,186 @@
+{
+  "status": "registered_before_execution",
+  "approval": {
+    "path": "docs/subset_recovery_owner_approval_2026-10-30.json",
+    "sha256": "6ab2b48dcd7e61e2d8adca66766d0aac06d2022cbab758bb2469a26d3cf3b89e"
+  },
+  "scope": {
+    "path": "docs/subset_recovery_proposal_2026-10-30.json",
+    "sha256": "12aa30bd03cba93eb2ae67960bdaba87934538dcf77dacd94517fd416af7d497"
+  },
+  "verification": {
+    "path": "docs/subset_recovery_driver_verification_2026-10-30.json",
+    "sha256": "2e6cf367a3668cd26692dbc95ed40dcbdf603f89621de1ea9cd97bbd02b57cb1"
+  },
+  "original_ledger": {
+    "path": "data/reports/approved_subset_comparison_v1/budget/ledger.json",
+    "sha256": "704bf33d16868b928022e474da08443287e3259260b1214985d0ae2e5925be83"
+  },
+  "completed_original_cases": [
+    "matched_two_stock_control__development_2017_2021__base__base",
+    "availability_selected_subset__development_2017_2021__base__base",
+    "matched_two_stock_control__development_2017_2021__base__delayed_five_sessions"
+  ],
+  "ordered_cases": [
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_2017_2021__base__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_2017_2021__base__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_2017_2021__base__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__no_credit"
+    }
+  ],
+  "original_attempts": 4,
+  "additional_attempts_limit": 21,
+  "lifetime_attempts_limit": 25,
+  "case_seconds": 600,
+  "total_seconds": 3600,
+  "max_workers": 1,
+  "stop_on_failure": true,
+  "automatic_retry": false,
+  "output_directory": "data/reports/approved_subset_recovery_v1",
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0
+}

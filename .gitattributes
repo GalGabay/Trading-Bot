@@ -168,3 +168,15 @@ docs/subset_comparison_*.json -text
 docs/subset_recovery_*.json -text
 docs/research_data/subset_partial_* -text
 docs/research_data/subset_execution_sources_v1/* -text
+
+backtesting/subset_recovery.py -text
+tests/test_subset_recovery.py -text
+docs/subset_final_*.json -text
+docs/research_data/subset_final_* -text
+docs/subset_recovery_for_review.md -text
+docs/subset_comparison_results_2026-10-30.md -text
+
+# Preserve all verified Python source pins on Windows and Raspberry Pi checkouts.
+app/**/*.py -text
+backtesting/**/*.py -text
+tests/**/*.py -text

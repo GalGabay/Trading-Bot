@@ -1,5 +1,29 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Latest completed research, 2026-10-30: Steps 3 and 4 complete.**
+[Final comparison and assessment](docs/subset_comparison_results_2026-10-30.md)
+retain all 24 distinct cases and 25 lifetime attempts, including the original
+timeout. The approved recovery completed without failures in 18.97 minutes.
+320 focused offline tests passed before recovery; all completed case ledgers,
+external-price checks and per-stock profit contributions reconcile.
+**Decision: do not promote this frozen candidate to paper trading.** The
+76-stock base-cost returns were +6.29% total for 2017-2021 and -2.60% for
+2022-2023; pessimistic returns were -2.66% and -10.96%. None meets the 6%
+annual return goal, and broader cases exceed the 5% drawdown limit.
+My next work is a bounded follow-up research proposal; you review that proposal
+before another performance batch. No personal risk-file edit, installation,
+purchase or paper activation is needed now. The original full-100 study remains
+separate and blocked; earlier entries below are historical.
+
+**Latest progress, 2026-10-30: Step 3 recovery is approved and running.**
+[Approval, implementation and verification](docs/subset_recovery_approved_2026-10-30.md)
+retain the original four attempts and allow at most 21 additional attempts,
+25 lifetime attempts, one worker, ten minutes per case and a separate 60-minute
+segment. 320 offline tests, three exact saved financial/risk replays and six
+synthetic control checks passed before execution. Strategy/data/risk settings
+are unchanged; no purchase, configuration or further owner reply is needed
+within this scope. Step 4 remains pending. Earlier entries below are historical.
+
 **Current research status, 2026-10-30: Step 3 stopped, incomplete.**
 [Three completed cases and one timeout](docs/subset_partial_results_2026-10-30.md) are preserved.
 The 76-stock 2017?2021 base-cost case returned +6.29% total (+1.23% annualized),

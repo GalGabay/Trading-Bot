@@ -1,0 +1,369 @@
+{
+  "date": "2026-10-30",
+  "current_step": 4,
+  "step3_complete": true,
+  "step4_assessment_and_decision_complete": true,
+  "decision": "Reject frozen candidate for paper promotion against the owner-approved investment criteria; retain as research",
+  "owner_has_not_approved_new_strategy_or_paper_trial": true,
+  "approval": {
+    "path": "docs/subset_recovery_owner_approval_2026-10-30.json",
+    "sha256": "6ab2b48dcd7e61e2d8adca66766d0aac06d2022cbab758bb2469a26d3cf3b89e"
+  },
+  "proposal": {
+    "path": "docs/subset_recovery_proposal_2026-10-30.json",
+    "sha256": "12aa30bd03cba93eb2ae67960bdaba87934538dcf77dacd94517fd416af7d497"
+  },
+  "driver_verification": {
+    "path": "docs/subset_recovery_driver_verification_2026-10-30.json",
+    "sha256": "2e6cf367a3668cd26692dbc95ed40dcbdf603f89621de1ea9cd97bbd02b57cb1"
+  },
+  "recovery_summary": {
+    "path": "data/reports/approved_subset_recovery_v1/summary.json",
+    "sha256": "ea70708a07fd58d9d8903a7ece9cf1947e1f2083846a8d581da5ca957d59b581"
+  },
+  "original_ledger": {
+    "path": "data/reports/approved_subset_comparison_v1/budget/ledger.json",
+    "sha256": "704bf33d16868b928022e474da08443287e3259260b1214985d0ae2e5925be83"
+  },
+  "recovery_ledger": {
+    "path": "data/reports/approved_subset_recovery_v1/budget/ledger.json",
+    "sha256": "19bcb22e1e053b751936ef8ff42c46139018ef5500433f1878a2cc5115035630"
+  },
+  "combined_report": {
+    "path": "data/reports/approved_subset_combined_results_v1/summary.json",
+    "sha256": "c440af352e88227b17ed611a2d31ceb68908978a318a77587d82c9244b7f349b"
+  },
+  "tracked_outputs": [
+    {
+      "path": "docs/research_data/subset_final_2026-10-30_summary.json",
+      "sha256": "c440af352e88227b17ed611a2d31ceb68908978a318a77587d82c9244b7f349b"
+    },
+    {
+      "path": "docs/research_data/subset_final_2026-10-30_all_cases.csv",
+      "sha256": "d0422a86068658d72f9be5ad7e58ac1d75785cbe01b015d74106ed6ac2986f35"
+    },
+    {
+      "path": "docs/research_data/subset_final_2026-10-30_root_contributions.csv",
+      "sha256": "a22d63bb44bd074c56653acb37afe6d4cc88e2a9be67acb8484d565bd8cdc35f"
+    }
+  ],
+  "completed_unique_cases": 24,
+  "lifetime_attempts": 25,
+  "original_attempts": 4,
+  "recovery_attempts": 21,
+  "original_failures_preserved": 1,
+  "recovery_failures": 0,
+  "recovery_elapsed_seconds": 1138.3360288143158,
+  "recovery_overall_limit_seconds": 3600,
+  "longest_recovery_case_seconds": 125.44236826896667,
+  "case_limit_seconds": 600,
+  "all_case_files_verified": [
+    {
+      "id": "matched_two_stock_control__development_2017_2021__base__base",
+      "compact": {
+        "path": "data/reports/approved_subset_comparison_v1/case-01/result.json",
+        "sha256": "bf21cade8363c7d5423241c18e88e8bee2b4ce7e0ab967900431527e5eb5ab70"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_comparison_v1/case-01/case.json.gz",
+        "sha256": "c3e8ddfbfeb85d09a12a53344a3b5a8e91ddd83192e5b0d00db8f0092495d98c"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__base__base",
+      "compact": {
+        "path": "data/reports/approved_subset_comparison_v1/case-02/result.json",
+        "sha256": "44f7ba89b36c2c5e0f8360f522fc1e294f79ccd16b25741bcea500a0db349f31"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_comparison_v1/case-02/case.json.gz",
+        "sha256": "19cc91332eb23225f6550aa5b213389c312e69c373ec829e952283b586eec3b4"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_2017_2021__base__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_comparison_v1/case-03/result.json",
+        "sha256": "46b9813d5f76eb4e3aa127696af28772410a05af08ec0a707d6293dfa292848e"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_comparison_v1/case-03/case.json.gz",
+        "sha256": "5c4da5848268f6c397b47bce901b8136f6d00e4bd9f1aa7d40cc91035e9a2a4a"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__base__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-01/result.json",
+        "sha256": "e17a0b0d37cc468160fa7ce3db4a7a32b43daa57f5b9b30b0602cc614c185afb"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-01/case.json.gz",
+        "sha256": "758b3f79beac4773fbdb04bb9b307dad4649e47ae55c52fa949be33c00489b33"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_2017_2021__base__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-02/result.json",
+        "sha256": "1b82dd3f6f1456689d1822081ab5063f3bb16d903b91d31c4a14143e40f7c8eb"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-02/case.json.gz",
+        "sha256": "d1f6bfaf8fb79cc555208df476812930ee7f9a39614e678939983aed304c895b"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__base__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-03/result.json",
+        "sha256": "0187c98e4e5349e79172998a4b0bfcb5616bdb8dceb32597e674677065d9445c"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-03/case.json.gz",
+        "sha256": "cd68e874d422b8f966791e6ac8c34db5a481b32a953c890951758fc62fc9056d"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-04/result.json",
+        "sha256": "080e5a9831d95386f4d81a6426880f5fbf204fa5d03750295a9e2141e6a2fbdc"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-04/case.json.gz",
+        "sha256": "1f16ef89a4a97a0d58f067acad64b60026c959e726834079494ee33fd376c049"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-05/result.json",
+        "sha256": "53de3d49a6caeb2cc7a1e6c369d44724ef8d22c5de132bc5cfae91b13a6fd935"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-05/case.json.gz",
+        "sha256": "eebfd49a8a8eed9478fe86f03f0c08299eee464e0806779784fecf0a30a70e75"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-06/result.json",
+        "sha256": "a98207bff76990005114d88a36a7f76e1b458edc70f388010765c43607cb4ae1"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-06/case.json.gz",
+        "sha256": "d26371e3327726ca42ae77cf76feb19005e452b96a1724a1da83b21633a3db3f"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-07/result.json",
+        "sha256": "0c649d503b9efc8b8178e9b9ff0e3c861783bca294ac8791a12d54361365dafb"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-07/case.json.gz",
+        "sha256": "4c52f452cf4ed24971fbc3ba571dfcd62d792f9552ce907557404bacd55101f3"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-08/result.json",
+        "sha256": "9d35d4e6facaf5d804b1e694ca54932be541e423e5c4ad5b8157747e789ee0e0"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-08/case.json.gz",
+        "sha256": "7092b0e9ceba86bef640e42fdadc2cc9ad762a26be97cc7bf03c9a8c85c72bf2"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-09/result.json",
+        "sha256": "7ccd8fbe77ad28bed2bb36c8ece8f96c0c41b960b743ac74f3b5fedeaf5ad3f2"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-09/case.json.gz",
+        "sha256": "593f9950ac4bf18f0c3ade316ec0c7e0b0096a71c8bde87912055d3e717f6cc0"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-10/result.json",
+        "sha256": "80f71b013c248b7a9755d4fbcfd1d5714621f17a6a63b09ff2d52fd3dbfdf0e6"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-10/case.json.gz",
+        "sha256": "6dfdd503f8050e4087abe8bef21e85f5607ef3c05ab0a29009a6cf49a96104f9"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-11/result.json",
+        "sha256": "838afed3c0e0c5ff087c8d68acbd18095368f393a1014cc4fab890a5a14d698c"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-11/case.json.gz",
+        "sha256": "cb8ef1da1ee4ba208ada254ea78a2f3c2c7d139b4474070e812d63da9afa4d78"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-12/result.json",
+        "sha256": "a029eaebab191bc9522906796c8f8f4a49c1a71d194943d21c82a4702d829801"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-12/case.json.gz",
+        "sha256": "a95abfe3a41844f71e7a8cb400949828b9d5b11e6583151abe4658995c4e4a81"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-13/result.json",
+        "sha256": "0dfb0a08a619cca63819683a4df5681269f355d52ae02a0b7f96b78a7f255f41"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-13/case.json.gz",
+        "sha256": "43c334cf33ddb0e57c26a771f429c619062ce8110a3183f4cd175f14da406fc4"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-14/result.json",
+        "sha256": "39ac462336e520b7408906369b36053f3f27da852a91800427bbf00a0e67892b"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-14/case.json.gz",
+        "sha256": "9357b79f097ab2b163c6e5109c51762346c44dfc895a46cc33e762c4da6f35ef"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-15/result.json",
+        "sha256": "cdaa700631a9d26e27c1a812989f84dab1ac7269c2c0537a631c8f943be4265d"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-15/case.json.gz",
+        "sha256": "53a912f0772913d996328d86e03c17211105808e8a82c08f9e090b8bceb26244"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-16/result.json",
+        "sha256": "04886381bd297f65ab4bb01843f18da767eeecee15d4aef2014af5519c5eb5fc"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-16/case.json.gz",
+        "sha256": "46c69839728140634b4a283c720542211588bc83b851fcb0aa214a4bbb17275d"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-17/result.json",
+        "sha256": "003e7fc6fbe4f4c6b56de81647911c313d7b19d23071cf15bfb9997221002f01"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-17/case.json.gz",
+        "sha256": "24c17859e4a1f5c1b5369cf14215dffcbde83842646c9e66147dd41e1b459d8e"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-18/result.json",
+        "sha256": "40ba39a5d9d3e552fa4693c5c204d5286329b5135327a3fc66b21d5cfe0b4023"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-18/case.json.gz",
+        "sha256": "1100ea63e6af8aa63e3df02f9c1bf682e7ef18b007775cee9b3f6d5ae5f1c5e5"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__delayed_five_sessions",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-19/result.json",
+        "sha256": "79c97513a69d4667b08daf85b292bce836653c11a9eeed29feaad8c9d0ef303d"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-19/case.json.gz",
+        "sha256": "401833e3b86696188515b9244fd7274caa0136d6ab2cecccbf98c7c84623b4bf"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-20/result.json",
+        "sha256": "4aacb1ad8ea0a93fb23a9193a3201eca640b5dd923a94da1f1c60a9fb36a6170"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-20/case.json.gz",
+        "sha256": "39607464df73e6d5d90d30d41df38bb9dd05ace9d4ab99b716edc1a497ca65c0"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__no_credit",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-21/result.json",
+        "sha256": "0d6d9c06bf67ea41c23e9ea555b67b17e8f059e4f0b6f10bf9c999bb08a362e1"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-21/case.json.gz",
+        "sha256": "4659198d47386476ae3f197df8514cb32d951803e50f14fd8795c0b91628cacc"
+      },
+      "internal_and_external_reconciliation": true
+    }
+  ],
+  "all_root_profit_contributions_reconciled": true,
+  "all_24_cases_fail_annual_return_goal": true,
+  "all_12_broader_cases_fail_closing_drawdown_goal": true,
+  "unit_tests_passed": 320,
+  "unit_test_failures": 0,
+  "unit_test_errors": 0,
+  "unit_test_skipped": 0,
+  "saved_case_replays_unchanged": 3,
+  "synthetic_control_comparisons": 6,
+  "step4_report": {
+    "path": "docs/subset_comparison_results_2026-10-30.md",
+    "sha256": "efc985d26f5621773b493c9d80070e37eb53acb56162c237bcfa51497e80c781"
+  },
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "heldout_2024_2025_files_read": 0,
+  "paper_authorized": false,
+  "raspberry_pi_verified": false
+}

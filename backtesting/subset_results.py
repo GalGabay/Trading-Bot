@@ -45,14 +45,18 @@ def contributions(case):
     return [dict(root_id=key,snapshot_alias=names.get(key,key),marked_profit_before_estimated_final_exits=values[key]) for key in sorted(set(roots.values()))]
 
 
-def summarize(output, run_directory=OUTPUT):
+def summarize(output, run_directory=OUTPUT, *, recovery=False):
     if output.exists() or not output.resolve().is_relative_to(Path.cwd().resolve()):
         raise ValueError("Choose a fresh result-report directory inside the workspace")
     execution=read(run_directory/"summary.json")
     ledger=read(checked(execution["ledger"]))
+    recovery_evidence={}
+    if recovery:
+        from backtesting.subset_recovery import report_evidence
+        execution,ledger,recovery_evidence=report_evidence(run_directory,execution,ledger)
     if execution["status"] not in {"completed","stopped"} or ledger["status"]!=execution["status"]:
         raise ValueError("Wait for the batch to finish or stop before a final result report")
-    if execution["approval"]!=pin(APPROVAL) or execution["attempts"]>24 or execution["completed"]>execution["attempts"]:
+    if execution["approval"]!=pin(APPROVAL) or execution["attempts"]>(25 if recovery else 24) or execution["completed"]>execution["attempts"]:
         raise ValueError("Execution exceeds or differs from the approved scope")
     rows=[]
     per_root=[]
@@ -105,6 +109,7 @@ def summarize(output, run_directory=OUTPUT):
             "2017-2021 and 2022-2023 start separate simulated accounts; do not compound them into one continuous result",
             "Net marked returns include nominal unpaid rights and estimated exits of whole shares, not settled cash profit",
             "Daily OHLC risk bounds are conservative; exact intraday drawdown/exit time is unobserved"])
+    summary.update(recovery_evidence)
     atomic_json(output/"summary.json",summary)
     return summary
 
