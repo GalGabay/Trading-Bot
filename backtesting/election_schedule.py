@@ -6,6 +6,7 @@ detect a missing provider event without fabricating that event's ex-date.
 """
 
 from copy import deepcopy
+from datetime import date
 import json
 from pathlib import Path
 
@@ -13,6 +14,18 @@ from backtesting.broad_collection import pin
 from backtesting.claim_accounting import number
 from backtesting.cohort_audit import checked_file
 from backtesting.election_terms import resolve_election
+
+
+def _validate_source_pins(value):
+    """Verify every saved evidence pin without requesting any recorded URL."""
+    if isinstance(value, dict):
+        if "path" in value and "sha256" in value:
+            checked_file(Path.cwd(), value)
+        for child in value.values():
+            _validate_source_pins(child)
+    elif isinstance(value, list):
+        for child in value:
+            _validate_source_pins(child)
 
 
 def load_holder_policy(inputs):
@@ -71,6 +84,8 @@ def compile_schedules(provider_rows, clock, terms_path, split_review_path, resol
     terms = json.loads(terms_path.read_text(encoding="utf-8"))
     split_review = json.loads(split_review_path.read_text(encoding="utf-8"))
     resolution = json.loads(resolution_path.read_text(encoding="utf-8"))
+    for review in (terms, split_review, resolution):
+        _validate_source_pins(review)
     for source in terms["sources"]:
         checked_file(Path.cwd(), source["browser_text"])
     for source in resolution["sources"]:
@@ -78,11 +93,26 @@ def compile_schedules(provider_rows, clock, terms_path, split_review_path, resol
             checked_file(Path.cwd(), source["browser_evidence"])
     split_facts = {s["id"]: s["facts"] for s in split_review["sources"]}
     declarations = {s["id"]: s for s in resolution["sources"]}
+    if len(split_facts) != len(split_review["sources"]) or len(declarations) != len(resolution["sources"]):
+        raise ValueError("Repeated election evidence identity")
+    term_ids = [t["id"] for t in terms["election_terms"]]
+    if len(set(term_ids)) != len(term_ids) or "mac_2020" in term_ids:
+        raise ValueError("Repeated election schedule identity")
+    provider_ids = set()
+    for row in provider_rows:
+        if row["category"] == "cash_dividends":
+            identity = row["instrument_id"], row["event_id"]
+            record = json.loads(row["record"], parse_float=str)
+            if identity in provider_ids or record.get("id") != row["event_id"]:
+                raise ValueError("Repeated or inconsistent provider election identity")
+            provider_ids.add(identity)
     schedules = []
     roots = {"aiv_2019": "COHORT-2016-0046", "aiv_2020": "COHORT-2016-0046",
              "slg_2021": "COHORT-2016-0413", "slg_2022": "COHORT-2016-0413"}
     for original in terms["election_terms"]:
         t = deepcopy(original)
+        for field in ("record_date", "payable_date", "published_date"):
+            date.fromisoformat(t[field])
         root = roots[t["id"]]
         records = []
         for row in provider_rows:
@@ -90,16 +120,16 @@ def compile_schedules(provider_rows, clock, terms_path, split_review_path, resol
                 record = json.loads(row["record"], parse_float=str)
                 if record.get("record_date") == t["record_date"] and record.get("payable_date") == t["payable_date"]:
                     records.append(dict(event_id=row["event_id"], record=record))
-        if t["id"] == "slg_2021":
-            declaration = declarations["slg_2021_declaration"]
-            if declaration["record_date"] != t["record_date"] or declaration["payable_date"] != t["payable_date"]:
+        declaration = declarations.get(t["id"] + "_declaration")
+        if t["id"] in {"slg_2021", "slg_2022"} and declaration is not None:
+            if (declaration.get("access") != "primary_browser_text_reviewed" or
+                    declaration["record_date"] != t["record_date"] or declaration["payable_date"] != t["payable_date"]):
                 raise ValueError("SLG default election evidence does not match the saved allocation notice")
             default = declaration["no_election_branch"]
+        elif t["id"] in {"slg_2021", "slg_2022"}:
+            default = None
         else:
             default = t["no_election_branch"]
-        if t["id"] == "slg_2022":
-            # The fresh 2020 notice cannot establish a 2021 election's default.
-            default = None
         split = split_facts.get(t["id"], {})
         if t["id"] == "slg_2022":
             # Direct newer filing, not the earlier timed-out annual report.
@@ -107,6 +137,7 @@ def compile_schedules(provider_rows, clock, terms_path, split_review_path, resol
             if split["access"] != "primary_browser_text_reviewed":
                 raise ValueError("SLG 2022 split needs directly reviewed evidence")
         split_session = split["first_adjusted_session"]
+        number(split["new_shares_per_old"], positive=True)
         if clock.open_on(split_session) is None or clock.open_on(t["record_date"]) is None:
             raise ValueError("Election record/split boundary is outside saved sessions")
         if not (t["record_date"] <= t["payable_date"]):
@@ -143,9 +174,14 @@ def compile_schedules(provider_rows, clock, terms_path, split_review_path, resol
                 (["Reported holder shares are approximate; no exact allocation inferred from VWAP or issuer totals"] if t["share_allocation_approximate"] else []) +
                 ["Record-date/ex-date/due-bill ownership and fractional fixing instructions require schedule admission"]))
     mac_review = json.loads(mac_review_path.read_text(encoding="utf-8"))
+    _validate_source_pins(mac_review)
     mac = next(s for s in mac_review["sources"] if s["id"] == "mac")
     checked_file(Path.cwd(), mac["browser_evidence"])
     facts = mac["facts"]
+    for field in ("record_date", "payable_date"):
+        date.fromisoformat(facts[field])
+    if facts["payable_date"] < facts["record_date"]:
+        raise ValueError("MAC payment cannot precede record ownership")
     records = []
     for row in provider_rows:
         if row["instrument_id"] == "COHORT-2016-0288" and row["category"] == "cash_dividends":

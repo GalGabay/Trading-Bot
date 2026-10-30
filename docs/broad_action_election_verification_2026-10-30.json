@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-30",
+  "tests_run": 571,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "successful": true,
+  "test_counts": {
+    "tests.test_diagnostic_accounting": 43,
+    "tests.test_diagnostic_admission": 23,
+    "tests.test_input_preparation": 46,
+    "tests.test_broad_collection": 64,
+    "tests.test_broad_history_review": 12,
+    "tests.test_market_data": 14,
+    "tests.test_public_document_collection": 17,
+    "tests.test_public_source_review": 40,
+    "tests.test_claim_accounting": 26,
+    "tests.test_ownership_adapter": 45,
+    "tests.test_universe": 31,
+    "tests.test_pilot_diagnostic": 26,
+    "tests.test_risk_diagnostics": 16,
+    "tests.test_portfolio_backtesting": 18,
+    "tests.test_dividend_components": 41,
+    "tests.test_diagnostic_event_terms": 22,
+    "tests.test_corporate_action_terms": 29,
+    "tests.test_election_schedule": 42,
+    "tests.test_cash_merger_terms": 16
+  },
+  "new_focused_tests": 87,
+  "elapsed_seconds": 79.767,
+  "real_network_blocked": true,
+  "real_credential_loading_blocked": true,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "historical_performance_runs": 0,
+  "raspberry_pi_execution": false,
+  "initial_red_run": {
+    "tests_run": 63,
+    "failing_assertions": 11,
+    "errors": 1,
+    "log": {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/baseline_tests.log",
+      "sha256": "883050c5a32189ddc1be1377d7ffe63d588e33e80d9116dbbb01e23b1d128ecf"
+    }
+  },
+  "log": {
+    "path": "data/reports/action_election_verification_2026_10_30_v1/unit_tests.log",
+    "sha256": "a3e9945d8509014224c201001a3d767c22801ef5048f8da04df0853f74490fb6"
+  },
+  "runner": {
+    "path": "data/reports/action_election_verification_2026_10_30_v1/run_verification.py",
+    "sha256": "46b9c936c12c10ce0c6746064062e2ad3a7835918ca273ea1d1fc65c1aaee518"
+  },
+  "execution": [
+    {
+      "path": "backtesting/corporate_action_terms.py",
+      "sha256": "c01289df38793590d511e0ee7db0353c2f6166edcc671da99105b1cde41ebda2"
+    },
+    {
+      "path": "backtesting/election_schedule.py",
+      "sha256": "4ebc80c9fe8ef04f7cdb36031c25dcb06a4c575d2bf31a6c639a8ff0ded28c8c"
+    },
+    {
+      "path": "backtesting/election_terms.py",
+      "sha256": "b23665c31c2d6d2c52bd499c97204fdd0c1597eefa8f54e0a1547fe3681c7546"
+    },
+    {
+      "path": "backtesting/diagnostic_preparation.py",
+      "sha256": "ebb816168a8d9c87d80ae0bd68c5d24829a34f0bc95e4913ff192c8ab135d666"
+    },
+    {
+      "path": "backtesting/diagnostic_preflight.py",
+      "sha256": "8e7262e352a826552f2ca10914499b9a7291f9efe2fe257f9b968faa0aa04367"
+    },
+    {
+      "path": "backtesting/diagnostic_event_terms.py",
+      "sha256": "fe04f2adfe4981e5d8e7598147aafe9d9ac65b5f0af3edbb72a7b62dfb83e4fa"
+    },
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "backtesting/diagnostic_approval.py",
+      "sha256": "fb1111be7a596d27f7bf38a7cc61466c0762ad1f038ec817c34946246b91f8ea"
+    },
+    {
+      "path": "backtesting/dividend_components.py",
+      "sha256": "e579e531405382ecd68a3e8f067bf9b39a4468905a0bbfa734925a175c6a2a02"
+    }
+  ],
+  "tests": [
+    {
+      "path": "tests/test_diagnostic_accounting.py",
+      "sha256": "0c388c9564edc0a880c69235f62167241b014ff88c506afd35136fe084d8045e"
+    },
+    {
+      "path": "tests/test_diagnostic_admission.py",
+      "sha256": "6a3c0a2d2849c4e052bfb561a75e42fb9c5d421428c1c100164a3d5face4f39d"
+    },
+    {
+      "path": "tests/test_input_preparation.py",
+      "sha256": "7ee4e8d4169dad87be95f6a48cbc4a040242339d74013bafed33832e90429128"
+    },
+    {
+      "path": "tests/test_broad_collection.py",
+      "sha256": "9a6c00ccc14a9a1252b53681550e4cb16cfe59c4d4dd866ae2ef08275be2dc77"
+    },
+    {
+      "path": "tests/test_broad_history_review.py",
+      "sha256": "23c8b30aaef66e5f1cf405f9e32abd69cfff20f92c23b832def517bd33a8abcb"
+    },
+    {
+      "path": "tests/test_market_data.py",
+      "sha256": "431c0873785d695fa0c3b81955813a4e455e41c73fc14f45313aecddfdaf41e1"
+    },
+    {
+      "path": "tests/test_public_document_collection.py",
+      "sha256": "fba1381dc55723fd8b1685bc2c109666bbf1d9c67e292e804f7a01ab39a0db70"
+    },
+    {
+      "path": "tests/test_public_source_review.py",
+      "sha256": "58e124b9affb0ceec6ee17e772ee74d78f3f7a69c09ccd6add2963de30547997"
+    },
+    {
+      "path": "tests/test_claim_accounting.py",
+      "sha256": "c68c88cd54a31b8b10a1a8ab92f6be08883e12e85372e6529ee25a79e2083c41"
+    },
+    {
+      "path": "tests/test_ownership_adapter.py",
+      "sha256": "34be929e82bf6a6026e02ccdf783a4e195b1be82959a5af87364f2122d9dec26"
+    },
+    {
+      "path": "tests/test_universe.py",
+      "sha256": "c8196ab0a4183e5dfaa9c6a2c76fa34ee6372b1f8457fba57638f9344135a66e"
+    },
+    {
+      "path": "tests/test_pilot_diagnostic.py",
+      "sha256": "e23a1e2b7682b028b46e7db3050f3a396d53efe159ecb9fa94c40e59b0a6c42e"
+    },
+    {
+      "path": "tests/test_risk_diagnostics.py",
+      "sha256": "b39bb29cb240043b6a376f531fa820ff50d9a81fcb07046e3f83b2b3f8594e8b"
+    },
+    {
+      "path": "tests/test_portfolio_backtesting.py",
+      "sha256": "bdd13f5a53bd9dc1f6a1707cf3764b1b5e81f25a1ba78beea4503aa0bfc019e4"
+    },
+    {
+      "path": "tests/test_dividend_components.py",
+      "sha256": "c0663519bc9a40871c1bce758b24710a62b1dbb746a45286178967ddc12163f1"
+    },
+    {
+      "path": "tests/test_diagnostic_event_terms.py",
+      "sha256": "fbeb6da0dc3ea162c5ee762fd925cac160757173b482021ef4de7c0eae7ef825"
+    },
+    {
+      "path": "tests/test_corporate_action_terms.py",
+      "sha256": "6a6bfcf6eb64783a490c1d40ef2c7f1a1c910551a4ce5a3dec6d110e3e13ff06"
+    },
+    {
+      "path": "tests/test_election_schedule.py",
+      "sha256": "95dcb2d609621e1fb4398765118c24585f665fa57c791974de3997ecab7f7307"
+    },
+    {
+      "path": "tests/test_cash_merger_terms.py",
+      "sha256": "1c54ad007d8ac79eab595d243240441619b6b719eb191844fc6b10dd7a2dbfbf"
+    }
+  ],
+  "executed_sources": [
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/corporate_action_terms.py",
+      "sha256": "c01289df38793590d511e0ee7db0353c2f6166edcc671da99105b1cde41ebda2"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/diagnostic_approval.py",
+      "sha256": "fb1111be7a596d27f7bf38a7cc61466c0762ad1f038ec817c34946246b91f8ea"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/diagnostic_event_terms.py",
+      "sha256": "fe04f2adfe4981e5d8e7598147aafe9d9ac65b5f0af3edbb72a7b62dfb83e4fa"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/diagnostic_preflight.py",
+      "sha256": "8e7262e352a826552f2ca10914499b9a7291f9efe2fe257f9b968faa0aa04367"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/diagnostic_preparation.py",
+      "sha256": "ebb816168a8d9c87d80ae0bd68c5d24829a34f0bc95e4913ff192c8ab135d666"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/dividend_components.py",
+      "sha256": "e579e531405382ecd68a3e8f067bf9b39a4468905a0bbfa734925a175c6a2a02"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/election_schedule.py",
+      "sha256": "4ebc80c9fe8ef04f7cdb36031c25dcb06a4c575d2bf31a6c639a8ff0ded28c8c"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/election_terms.py",
+      "sha256": "b23665c31c2d6d2c52bd499c97204fdd0c1597eefa8f54e0a1547fe3681c7546"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_broad_collection.py",
+      "sha256": "9a6c00ccc14a9a1252b53681550e4cb16cfe59c4d4dd866ae2ef08275be2dc77"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_broad_history_review.py",
+      "sha256": "23c8b30aaef66e5f1cf405f9e32abd69cfff20f92c23b832def517bd33a8abcb"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_cash_merger_terms.py",
+      "sha256": "1c54ad007d8ac79eab595d243240441619b6b719eb191844fc6b10dd7a2dbfbf"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_claim_accounting.py",
+      "sha256": "c68c88cd54a31b8b10a1a8ab92f6be08883e12e85372e6529ee25a79e2083c41"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_corporate_action_terms.py",
+      "sha256": "6a6bfcf6eb64783a490c1d40ef2c7f1a1c910551a4ce5a3dec6d110e3e13ff06"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_diagnostic_accounting.py",
+      "sha256": "0c388c9564edc0a880c69235f62167241b014ff88c506afd35136fe084d8045e"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_diagnostic_admission.py",
+      "sha256": "6a3c0a2d2849c4e052bfb561a75e42fb9c5d421428c1c100164a3d5face4f39d"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_diagnostic_event_terms.py",
+      "sha256": "fbeb6da0dc3ea162c5ee762fd925cac160757173b482021ef4de7c0eae7ef825"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_dividend_components.py",
+      "sha256": "c0663519bc9a40871c1bce758b24710a62b1dbb746a45286178967ddc12163f1"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_election_schedule.py",
+      "sha256": "95dcb2d609621e1fb4398765118c24585f665fa57c791974de3997ecab7f7307"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_input_preparation.py",
+      "sha256": "7ee4e8d4169dad87be95f6a48cbc4a040242339d74013bafed33832e90429128"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_market_data.py",
+      "sha256": "431c0873785d695fa0c3b81955813a4e455e41c73fc14f45313aecddfdaf41e1"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_ownership_adapter.py",
+      "sha256": "34be929e82bf6a6026e02ccdf783a4e195b1be82959a5af87364f2122d9dec26"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_pilot_diagnostic.py",
+      "sha256": "e23a1e2b7682b028b46e7db3050f3a396d53efe159ecb9fa94c40e59b0a6c42e"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_portfolio_backtesting.py",
+      "sha256": "bdd13f5a53bd9dc1f6a1707cf3764b1b5e81f25a1ba78beea4503aa0bfc019e4"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_public_document_collection.py",
+      "sha256": "fba1381dc55723fd8b1685bc2c109666bbf1d9c67e292e804f7a01ab39a0db70"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_public_source_review.py",
+      "sha256": "58e124b9affb0ceec6ee17e772ee74d78f3f7a69c09ccd6add2963de30547997"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_risk_diagnostics.py",
+      "sha256": "b39bb29cb240043b6a376f531fa820ff50d9a81fcb07046e3f83b2b3f8594e8b"
+    },
+    {
+      "path": "data/reports/action_election_verification_2026_10_30_v1/executed_sources/test_universe.py",
+      "sha256": "c8196ab0a4183e5dfaa9c6a2c76fa34ee6372b1f8457fba57638f9344135a66e"
+    }
+  ]
+}

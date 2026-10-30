@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Separate free primary-source review of remaining election and holder-entitlement terms after owner approved no-election defaults",
+  "max_search_queries": 6,
+  "max_page_opens": 8,
+  "primary_sources_only": true,
+  "purchase_budget_usd": 0,
+  "broker_requests": 0,
+  "price_downloads": 0,
+  "orders": 0,
+  "performance_runs": 0,
+  "stop_new_requests_on_access_barrier_or_fetch_failure": true,
+  "retry_previously_denied_or_timeout_urls": false,
+  "prior_batches_remain_closed": true,
+  "automatic_followup_collection": false,
+  "targets": [
+    "SLG January 2022 issuer no-election default, exact versus approximate allocation and fractional terms",
+    "MAC June 2020 completed distribution conversion and holder fractional terms",
+    "AIV March 2019 missing special-dividend entitlement/ex-date instructions"
+  ],
+  "constraints": [
+    "Search snippets are discovery only until a primary document is opened",
+    "Do not infer individual allocations from issuer aggregate totals",
+    "Do not treat publication, payable or legal completion dates as actual broker receipt",
+    "Retain all 100 original members and all original provider records",
+    "Unknown and rounded economic terms remain blocked"
+  ]
+}

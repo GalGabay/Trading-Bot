@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-30",
+  "successful": true,
+  "selected_originals": 100,
+  "provider_dividend_records": 2698,
+  "reviewed_actions": 15,
+  "action_kinds": {
+    "ordinary_split": 5,
+    "preinvestment_reference_action": 4,
+    "same_instrument_alias": 6
+  },
+  "election_schedules": 5,
+  "conditional_cash_merger_plans": 12,
+  "scenarios": [
+    "base",
+    "delayed_five_sessions",
+    "no_credit"
+  ],
+  "slg_2022_default_resolved": true,
+  "slg_2022_allocation_admitted": false,
+  "dividend_plans_unchanged": true,
+  "data_gates_clear": false,
+  "gate_counts": {
+    "material_terms": 18,
+    "dividend_terms": 143,
+    "provider_terms": 25,
+    "election_schedule": 5
+  },
+  "remaining_gate_rows": 191,
+  "step2_handoff_rejected": true,
+  "no_network_during_replay": true,
+  "orders": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "reserved_2024_2025_candle_files_read": 0,
+  "preparation": {
+    "path": "data/reports/broad_diagnostic_approved_2026_10_30_v12/summary.json",
+    "sha256": "60637934bbfb8ccebe45b5cbb7a907812b74d26a008ad44a3bd7c66b669236e4"
+  },
+  "preflight": {
+    "path": "data/reports/broad_diagnostic_preflight_2026_10_30_v12/report.json",
+    "sha256": "7926b6233b420a2713417a5bd796c5df68add655d7326fbad97c6e70f3546708"
+  },
+  "runner": {
+    "path": "data/reports/action_election_verification_2026_10_30_v1/replay_saved_events.py",
+    "sha256": "40ff640dead70d9f75d8423d059a2fbab03ed8078d6d46372362bc6dd2b60a9f"
+  }
+}

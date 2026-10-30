@@ -115,3 +115,11 @@ docs/research_data/diagnostic_executed_v7/*.py -text
 docs/research_election_policy_for_review.md -text
 docs/research_election_*.json -text
 docs/research_data/diagnostic_executed_v11/*.py -text
+# Preserve focused action/election verification and the closed source attempt.
+tests/test_corporate_action_terms.py -text
+tests/test_election_schedule.py -text
+tests/test_cash_merger_terms.py -text
+docs/broad_action_election_*.json -text
+docs/broad_election_completion_*.json -text
+docs/research_data/election_source_*_2026-10-30.json -text
+docs/research_data/diagnostic_executed_before_focused_tests_v1/*.py -text

@@ -89,10 +89,14 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
                 continue
         if event["disposition"] not in harmless:
             blockers.append(dict(kind="provider_terms",instrument_id=event["instrument_id"],event_id=event["event_id"],reason=event["disposition"]))
+    election_ids = [(e["instrument_id"], e["event_id"]) for e in election_schedules]
+    if len(set(election_ids)) != len(election_ids):
+        raise ValueError("Repeated election schedule identity")
     for event in election_schedules:
-        if event["blockers"] or event.get("selected_holder_election") is None:
-            blockers.append(dict(kind="election_schedule",instrument_id=event["instrument_id"],event_id=event["event_id"],
-                reason="; ".join(event["blockers"]) or "Holder election remains unspecified"))
+        # These schedules are conditional inventories, not admitted ledger
+        # instructions. Deleting their explanatory text cannot admit them.
+        blockers.append(dict(kind="election_schedule",instrument_id=event["instrument_id"],event_id=event["event_id"],
+            reason="; ".join(event["blockers"]) or "Conditional election schedule has no admitted ownership/settlement instructions"))
     resets=list({(r["instrument_id"],r["from_session"]):r for r in resets}.values())
     return dict(data_gates_clear=not blockers,blockers=blockers,effective_feature_resets=resets)
 

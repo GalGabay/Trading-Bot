@@ -1,5 +1,13 @@
 # Your responsibilities in the trading-bot project
 
+**Current step: 1 of 4, still in progress.** See the
+[four-step tracker](broad_backtest_step_tracker.md) and
+[571-test verification / remaining terms](broad_action_election_results_2026-10-30.md).
+After each implementation response, report the current step and remaining work
+until Step 4 is complete. The remaining event/data fixes are engineering work;
+no new owner setting, purchase or repeat election approval is required now.
+The final performance-run scope will be presented when it is concrete and ready.
+
 **2026-10-30 — approved:** the diagnostic accounting defaults and research
 allocation of 70% total exposure, 5% per stock and 20 positions are recorded in
 [your separate approval](broad_diagnostic_owner_approval_2026-10-30.json).

@@ -1,5 +1,11 @@
 # How far are we from paper trading?
 
+**Latest status: Step 1 of the [four-step research track](broad_backtest_step_tracker.md).**
+[571 offline tests pass](broad_action_election_results_2026-10-30.md), including
+87 new action/election/cash-merger tests. Saved-event preparation passes, but
+191 overlapping data gates still block Step 2 integration. No expanded
+performance batch or paper activation occurred. Earlier status entries follow.
+
 **2026-10-30:** [diagnostic defaults approved; focused tests and primary-event
 review completed](diagnostic_tests_and_event_review_2026-10-30.md).
 The new readiness gate still blocks unresolved event/identity inputs. Full

@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_election_completion_scope_2026-10-30.json",
+    "sha256": "9154c0a12e4ccb2f53ebae09662592acf44535f27eae6d6bc40557380e6417f0"
+  },
+  "search_queries": 3,
+  "page_opens": 2,
+  "successful_opens": 1,
+  "failed_opens": 1,
+  "closed": true,
+  "additional_requests_allowed": false,
+  "stopped_on_first_fetch_failure": true,
+  "original_html_archive": false,
+  "prior_denied_urls_retried": 0,
+  "browser_operations_not_hidden_http_hops": true,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "price_downloads": 0,
+  "orders": 0,
+  "performance_runs": 0,
+  "search_discovery": {
+    "path": "docs/research_data/election_source_search1_2026-10-30.json",
+    "sha256": "7a65bad39ff7cfe05f9635afc489ab4b099c80c3e65647f27a4f67ce73316f1e"
+  },
+  "failure": {
+    "url": "https://investing.macerich.com/static-files/459e42a7-475d-4334-a046-dd05c2fe9722",
+    "result": {
+      "path": "docs/research_data/election_source_open2_2026-10-30.json",
+      "sha256": "164d37e8beb95bf724f1dc9ce98369a82fe10293a2d94a19a50a652296d2176b"
+    },
+    "retry": false
+  },
+  "sources": [
+    {
+      "id": "slg_2022_declaration",
+      "access": "primary_browser_text_reviewed",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000110465921145907/tm2134440d1_8k.htm",
+      "browser_evidence": {
+        "path": "docs/research_data/election_source_open1_2026-10-30.json",
+        "sha256": "83746506e36e0f9b89ac00add63c927e12ab8d55c4bebd800c58cdf783fcc777"
+      },
+      "record_date": "2021-12-15",
+      "payable_date": "2022-01-18",
+      "no_election_branch": "stock_subject_to_proration",
+      "ordinary_component": "0.3108",
+      "special_component": "2.4392",
+      "total_value": "2.75",
+      "allocation_precision_resolved": false,
+      "actual_broker_received_at": null
+    }
+  ],
+  "unresolved_targets": [
+    "SLG exact holder allocation and fractions",
+    "MAC final conversion and fractions",
+    "AIV 2019 ex-date / due-bill ownership boundary"
+  ]
+}

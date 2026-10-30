@@ -1,5 +1,11 @@
 # Proposed research program before the first paper trial
 
+**Current progress: [Step 1 of 4](broad_backtest_step_tracker.md), in progress.**
+[Action/election verification](broad_action_election_results_2026-10-30.md)
+passes 571 offline tests, including 87 new tests. One additional issuer default
+is established; remaining economic terms still block Step 2. Approved research
+settings are unchanged. Earlier status entries below are historical.
+
 **2026-10-30 update:** [owner defaults recorded, focused tests and event review](diagnostic_tests_and_event_review_2026-10-30.md).
 70% total / 5% per stock / 20 positions are approved for research. Structured
 data gates still block full Step 2 integration. No new strategy-performance

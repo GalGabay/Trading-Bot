@@ -124,9 +124,16 @@ def gate_action(action, membership_not_before):
             action["provider_day"] == reset.get("from_session") and action["provider_day"] < membership_not_before and
             action.get("quantity_effect") == "none_no_portfolio_holdings")
     if action["kind"] == "same_instrument_alias":
-        return action.get("share_multiplier") == "1" and action.get("quantity_effect") == "preserve_existing_lots"
+        return (action.get("share_multiplier") == "1" and action.get("quantity_effect") == "preserve_existing_lots" and
+            action.get("preserve_feature_history") is True and action.get("preserve_position_age") is True and
+            action.get("invalidate_symbol_bound_execution_state") is True)
     if action["kind"] == "ordinary_split":
-        return (number(action["share_multiplier"], positive=True) > 1 and action.get("preserve_total_cost_basis") is True and
+        try:
+            multiplier = number(action.get("share_multiplier"), positive=True)
+        except (ValueError, TypeError):
+            return False
+        return (multiplier > 1 and action.get("preserve_total_cost_basis") is True and
             action.get("rebase_stops_and_per_share_basis") is True and action.get("invalidate_pending_orders") is True and
+            action.get("rebase_pending_share_rights") is True and
             action.get("fractional_policy") == "pending_share_claim_no_automatic_cash")
     return False

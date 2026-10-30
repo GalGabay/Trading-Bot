@@ -18,6 +18,8 @@
 
 > **Historical election approval, 2026-10-30:** [Make no election and follow documented issuer defaults](docs/research_election_policy_approved_2026-10-30.md). The owner approved this research policy separately; preparation now applies it. Unknown defaults, rounded allocations and missing entitlement terms remain blocked. All three scenario preparations completed offline, with 191 overlapping data gates still open. This approval does not authorize a performance run or paper trading.
 
+> **Latest verification and progress, 2026-10-30:** [571 offline tests pass, including 87 new action/election/cash-merger tests](docs/broad_action_election_results_2026-10-30.md). Duplicate, date, evidence and admission checks were corrected; all saved scenario preparations replay successfully. SLG January 2022's documented no-election default is now selected, with approximate allocations still blocked. **Still Step 1 of the [four-step research track](docs/broad_backtest_step_tracker.md):** 191 overlapping data gates remain. Report the current step and remaining work after every implementation response through Step 4 completion. Step 2 integration, new performance runs and paper activation remain incomplete. No purchases or trades occurred.
+
 ## Instructions to the Coding AI
 
 1. **Inspect before modifying.**

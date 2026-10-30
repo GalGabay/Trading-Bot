@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_resolution_scope_2026-10-30.json",
+    "sha256": "103aa13837efe9f4a3b31d8490a4ee0595f97fc79a79040dc56dcc42ac204b33"
+  },
+  "search_queries": 8,
+  "page_opens": 16,
+  "successful_opens": 14,
+  "closed": true,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "price_requests": 0,
+  "strategy_runs": 0,
+  "denied_urls_retried": 0,
+  "previous_timeout_urls_retried": 0,
+  "source_limitations": [
+    {
+      "url": "https://slgreen.gcs-web.com/press-releases?a75108fe_field_nir_news_category%5Bvalue%5D%5B0%5D=4106&mobile=1&page=20",
+      "result": "timeout_no_retry"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/922864/000156459020035539/aiv-ex991_41.htm",
+      "result": "content_exceeds_browser_limit_search_only_no_admission_no_retry"
+    }
+  ],
+  "sources": [
+    {
+      "id": "meta",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_1.txt",
+        "sha256": "e6ac50969dd7138b0a5877df8db86b346dfc69d92f71ab3d53312bd70b04814f"
+      },
+      "old_symbol": "FB",
+      "new_symbol": "META",
+      "first_session": "2022-06-09",
+      "same_instrument": true,
+      "session_basis": "issuer_announced_first_session_and_provider_corrob"
+    },
+    {
+      "id": "fiserv",
+      "url": "https://investors.fiserv.com/news-releases/news-release-details/fiserv-completes-listing-transfer-new-york-stock-exchange",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_1.txt",
+        "sha256": "e6ac50969dd7138b0a5877df8db86b346dfc69d92f71ab3d53312bd70b04814f"
+      },
+      "old_symbol": "FISV",
+      "new_symbol": "FI",
+      "first_session": "2023-06-07",
+      "same_instrument": true,
+      "session_basis": "issuer_completed_listing_transfer"
+    },
+    {
+      "id": "lumen",
+      "url": "https://ir.lumen.com/news/news-details/2020/CenturyLink-Transforms-Rebrands-as-Lumen/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_1.txt",
+        "sha256": "e6ac50969dd7138b0a5877df8db86b346dfc69d92f71ab3d53312bd70b04814f"
+      },
+      "old_symbol": "CTL",
+      "new_symbol": "LUMN",
+      "first_session": "2020-09-18",
+      "same_instrument": true,
+      "session_basis": "issuer_announced_first_session_and_provider_corrob"
+    },
+    {
+      "id": "cbs",
+      "url": "https://www.sec.gov/Archives/edgar/data/1339947/000119312519306335/d833313dex991.htm",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_4.txt",
+        "sha256": "134618b72d54b45a98ade0e0b197365eb38707b36f1117adc93c1625bcc95275"
+      },
+      "old_symbol": "CBS",
+      "new_symbol": "VIAC",
+      "first_session": "2019-12-05",
+      "same_instrument": true,
+      "session_basis": "issuer_completion_existing_CBS_shares_continue",
+      "provider_late_event_date": "2020-02-13",
+      "other_lineage_viacom_ratio_not_for_CBS": "0.59625"
+    },
+    {
+      "id": "paramount",
+      "url": "https://www.sec.gov/Archives/edgar/data/813828/000081382822000033/R9.htm",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_4.txt",
+        "sha256": "134618b72d54b45a98ade0e0b197365eb38707b36f1117adc93c1625bcc95275"
+      },
+      "old_symbol": "VIAC",
+      "new_symbol": "PARA",
+      "first_session": "2022-02-17",
+      "same_instrument": true,
+      "session_basis": "issuer_filing_completed_first_session"
+    },
+    {
+      "id": "gen",
+      "url": "https://www.sec.gov/Archives/edgar/data/849399/000110465922115277/tm2229813d1_8k.htm",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_4.txt",
+        "sha256": "134618b72d54b45a98ade0e0b197365eb38707b36f1117adc93c1625bcc95275"
+      },
+      "old_symbol": "NLOK",
+      "new_symbol": "GEN",
+      "first_session": "2022-11-08",
+      "same_instrument": true,
+      "session_basis": "issuer_expected_first_session_provider_corrob_not_independent_completion"
+    },
+    {
+      "id": "aapl_split",
+      "url": "https://infomemo.theocc.com/infomemos?number=47370",
+      "access": "primary_clearinghouse_browser_pdf_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_2.txt",
+        "sha256": "0776eb061ba5b1744227e6ad68acac9e3fbe79032fb18eaeb44f2503a7eee864"
+      },
+      "new_shares_per_old": "4",
+      "first_adjusted_session": "2020-08-31"
+    },
+    {
+      "id": "afl_split",
+      "url": "https://www.sec.gov/Archives/edgar/data/4977/000000497718000021/aflex991-2018february.htm",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_2.txt",
+        "sha256": "0776eb061ba5b1744227e6ad68acac9e3fbe79032fb18eaeb44f2503a7eee864"
+      },
+      "new_shares_per_old": "2",
+      "distribution_date": "2018-03-16",
+      "record_date": "2018-03-02"
+    },
+    {
+      "id": "nee_split",
+      "url": "https://www.investor.nexteraenergy.com/stock-information/stock-split-information",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_2.txt",
+        "sha256": "0776eb061ba5b1744227e6ad68acac9e3fbe79032fb18eaeb44f2503a7eee864"
+      },
+      "new_shares_per_old": "4",
+      "issuer_split_date": "2020-10-26",
+      "date_label": "Historical stock split date; not broker receipt"
+    },
+    {
+      "id": "amzn_split",
+      "url": "https://ir.aboutamazon.com/faqs/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_3.txt",
+        "sha256": "bf006ce044c91455c5d0c6153604a9ae99e8cb947fff97c5ec05bcbc9a0d93a5"
+      },
+      "new_shares_per_old": "20",
+      "issuer_split_date": "2022-06-03",
+      "record_date": "2022-05-27",
+      "date_label": "Issuer effective date; first adjusted session is provider/calendar convention"
+    },
+    {
+      "id": "slg_2021_declaration",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000110465920132238/tm2037666d1_8k.htm",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_3.txt",
+        "sha256": "bf006ce044c91455c5d0c6153604a9ae99e8cb947fff97c5ec05bcbc9a0d93a5"
+      },
+      "record_date": "2020-12-15",
+      "payable_date": "2021-01-15",
+      "election_deadline": "2021-01-04T17:00:00-05:00",
+      "no_election_branch": "stock_subject_to_proration",
+      "ordinary_component": "0.3033",
+      "special_component": "1.6967",
+      "total_value": "2.00",
+      "split_time_precision": "after_close_no_exact_instant_verified",
+      "split_effective_after_close_date": "2021-01-20"
+    },
+    {
+      "id": "slg_2021_occ",
+      "url": "https://www.miaxglobal.com/sites/default/files/alert-files/SLG_Dividend_47969.pdf",
+      "access": "primary_clearinghouse_browser_pdf_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_4.txt",
+        "sha256": "134618b72d54b45a98ade0e0b197365eb38707b36f1117adc93c1625bcc95275"
+      },
+      "record_date": "2020-12-15",
+      "ex_date": "2020-12-14",
+      "no_election_branch": "stock_subject_to_proration",
+      "note": "OCC original memo archived on exchange; no options deliverable used as holder allocation"
+    },
+    {
+      "id": "bfb_split",
+      "url": "https://investors.brown-forman.com/investors/stock-information/dividend-history/default.aspx",
+      "access": "primary_browser_text_reviewed",
+      "new_shares_per_old": "5/4",
+      "first_adjusted_session": "2018-03-01",
+      "prior_primary_review": {
+        "path": "docs/broad_event_primary_review.json",
+        "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+      },
+      "prior_browser_evidence": {
+        "path": "docs/broad_event_browser_evidence.json",
+        "sha256": "61c1f6ee9defb8bc9e4a89ea6d9ccb04fe74a6f9baf0f5a2fe0714fd463a878b"
+      }
+    },
+    {
+      "id": "slg_2022_split",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000110465922003152/tm222480d1_8k.htm",
+      "access": "primary_browser_text_reviewed",
+      "browser_evidence": {
+        "path": "data/reports/remaining_terms_2026_10_30/page_3.txt",
+        "sha256": "b3803054c58e5d4de3a0c55dabd821592559c8d65e0e4f83a6eb063608139d19"
+      },
+      "new_shares_per_old": "5000/5153",
+      "first_adjusted_session": "2022-01-24",
+      "source_review": {
+        "path": "docs/broad_remaining_terms_review_2026-10-30.json",
+        "sha256": "7f9dc19e8c90f0128f11d519009a880a1533c3f2f6195d7413dd22495ef5259a"
+      }
+    },
+    {
+      "id": "slg_2022_declaration",
+      "access": "primary_browser_text_reviewed",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040971/000110465921145907/tm2134440d1_8k.htm",
+      "browser_evidence": {
+        "path": "docs/research_data/election_source_open1_2026-10-30.json",
+        "sha256": "83746506e36e0f9b89ac00add63c927e12ab8d55c4bebd800c58cdf783fcc777"
+      },
+      "record_date": "2021-12-15",
+      "payable_date": "2022-01-18",
+      "no_election_branch": "stock_subject_to_proration",
+      "ordinary_component": "0.3108",
+      "special_component": "2.4392",
+      "total_value": "2.75",
+      "allocation_precision_resolved": false,
+      "actual_broker_received_at": null
+    }
+  ],
+  "previous_review": {
+    "path": "docs/broad_resolution_facts_2026-10-30.json",
+    "sha256": "aa4c3dae486049f75d985a6b870740316184bb0295af81e9e264cc24a88094af"
+  },
+  "supplemental_collection": {
+    "path": "docs/broad_election_completion_facts_2026-10-30.json",
+    "sha256": "4815f1c46a62180ccafbe6da3bd9dc7ac6a3beb799eab81920479d6e22adf41f"
+  },
+  "collection_counts_note": "Original top-level search/open counts retained for historical review; supplemental_collection records the separate closed attempt"
+}
