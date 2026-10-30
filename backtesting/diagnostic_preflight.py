@@ -69,6 +69,10 @@ def prepare(preparation_dir,terms_review_path,output):
         raise ValueError("Step 2 preflight requires recorded owner assent")
     for source in preparation["execution"]+preparation["output_files"]:
         checked_file(Path.cwd(),source)
+    if preparation.get("dividend_component_review") is not None:
+        review=json.loads(checked_file(Path.cwd(),preparation["dividend_component_review"]).read_text(encoding="utf-8"))
+        for source in review["sources"]:
+            checked_file(Path.cwd(),source["evidence"])
     revision=json.loads(checked_file(Path.cwd(),preparation["revision"]).read_text(encoding="utf-8"))
     spec=json.loads(checked_file(Path.cwd(),revision["spec"]).read_text(encoding="utf-8"))
     mapping=json.loads(checked_file(Path.cwd(),revision["mapping"]).read_text(encoding="utf-8"))

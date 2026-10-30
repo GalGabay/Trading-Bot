@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Resolve conflicting nominal dividend components from primary issuer evidence",
+  "issuers": [
+    "CTAS",
+    "FCX",
+    "MAC",
+    "STX",
+    "AIV",
+    "SLG"
+  ],
+  "max_search_queries": 8,
+  "max_page_opens": 12,
+  "allowed_years": [
+    2016,
+    2023
+  ],
+  "paid_sources": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "stop_on_access_barrier": true,
+  "retry_prior_denied_urls": false,
+  "prior_scope_unchanged": true,
+  "source_data": "docs/broad_dividend_component_review_2026-10-30.json"
+}

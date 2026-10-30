@@ -86,3 +86,10 @@ backtesting/diagnostic_preflight.py -text
 backtesting/election_terms.py -text
 tests/test_diagnostic_accounting.py -text
 tests/test_diagnostic_admission.py -text
+# Preserve dividend reconciliation evidence and executed sources on Windows/Pi.
+backtesting/dividend_components.py -text
+docs/broad_dividend_component_decisions_*.json -text
+docs/broad_dividend_primary_facts_*.json -text
+docs/broad_dividend_terms_scope_*.json -text
+docs/research_data/dividend_primary_browser_*.txt -text
+docs/research_data/diagnostic_executed_v5/*.py -text

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "provider_source": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/provider_event_roles.csv",
+    "sha256": "66f4fafc17b147f29a9f583c371440daff41013d871cb01cb44f44b5cada98dd"
+  },
+  "sources": [
+    {
+      "id": "ctas",
+      "evidence": {
+        "path": "docs/broad_dividend_primary_facts_2026-10-30.json",
+        "sha256": "858e8bb47c5513994605f79366d34694e308d3dcfe6d91ad32dc892adaf29dcc"
+      }
+    },
+    {
+      "id": "fcx",
+      "evidence": {
+        "path": "docs/broad_dividend_primary_facts_2026-10-30.json",
+        "sha256": "858e8bb47c5513994605f79366d34694e308d3dcfe6d91ad32dc892adaf29dcc"
+      }
+    },
+    {
+      "id": "mac",
+      "evidence": {
+        "path": "docs/broad_dividend_primary_facts_2026-10-30.json",
+        "sha256": "858e8bb47c5513994605f79366d34694e308d3dcfe6d91ad32dc892adaf29dcc"
+      }
+    },
+    {
+      "id": "aiv",
+      "evidence": {
+        "path": "docs/broad_remaining_terms_review_2026-10-30.json",
+        "sha256": "7f9dc19e8c90f0128f11d519009a880a1533c3f2f6195d7413dd22495ef5259a"
+      }
+    },
+    {
+      "id": "slg",
+      "evidence": {
+        "path": "docs/broad_remaining_terms_review_2026-10-30.json",
+        "sha256": "7f9dc19e8c90f0128f11d519009a880a1533c3f2f6195d7413dd22495ef5259a"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "instrument_id": "COHORT-2016-0106",
+      "ex_date": "2020-11-05",
+      "provider_event_ids": [
+        "2b917cba-6de1-45ce-80df-b517c8b30373",
+        "e7fc9ec1-52bd-411e-89f0-60875e59dc92"
+      ],
+      "record_date": "2020-11-06",
+      "payable_date": "2020-12-04",
+      "source_ids": [
+        "ctas"
+      ],
+      "kind": "separate_cash_components",
+      "rates_by_event_id": {
+        "2b917cba-6de1-45ce-80df-b517c8b30373": "0.7",
+        "e7fc9ec1-52bd-411e-89f0-60875e59dc92": "2.81"
+      }
+    },
+    {
+      "instrument_id": "COHORT-2016-0046",
+      "ex_date": "2020-11-03",
+      "provider_event_ids": [
+        "24fac673-96f4-41c5-a3bc-93857ecada7f",
+        "ec5a712d-f182-4138-97d3-01a9c66a2107"
+      ],
+      "record_date": "2020-11-04",
+      "payable_date": "2020-11-30",
+      "source_ids": [
+        "aiv"
+      ],
+      "kind": "cash_stock_election_unresolved"
+    },
+    {
+      "instrument_id": "COHORT-2016-0413",
+      "ex_date": "2020-12-14",
+      "provider_event_ids": [
+        "3a5e0d9e-3d22-4729-8098-5d737bf10d68",
+        "eda3364e-7fd6-4ee7-b243-10d2669e8bb9"
+      ],
+      "record_date": "2020-12-15",
+      "payable_date": "2021-01-15",
+      "source_ids": [
+        "slg"
+      ],
+      "kind": "cash_stock_election_unresolved"
+    },
+    {
+      "instrument_id": "COHORT-2016-0204",
+      "ex_date": "2023-10-12",
+      "provider_event_ids": [
+        "3a697c91-e146-48d9-b0aa-af7843ea1166",
+        "4677b054-4886-4527-91a5-ff0796e9d4f8"
+      ],
+      "record_date": "2023-10-13",
+      "payable_date": "2023-11-01",
+      "source_ids": [
+        "fcx"
+      ],
+      "kind": "aggregate_includes_component",
+      "total_event_id": "4677b054-4886-4527-91a5-ff0796e9d4f8",
+      "component_event_id": "3a697c91-e146-48d9-b0aa-af7843ea1166",
+      "total_rate": "0.15",
+      "component_rate": "0.075",
+      "other_component_rate": "0.075"
+    },
+    {
+      "instrument_id": "COHORT-2016-0288",
+      "ex_date": "2020-04-21",
+      "provider_event_ids": [
+        "1fb7f269-006f-4e83-ae23-2a4d3f39d650",
+        "42f0d9e4-ec50-438a-8a12-0ed344459922"
+      ],
+      "record_date": "2020-04-22",
+      "payable_date": "2020-06-03",
+      "source_ids": [
+        "mac"
+      ],
+      "kind": "cash_stock_election_unresolved"
+    }
+  ],
+  "all_provider_records_preserved": true,
+  "execution_ready": false
+}

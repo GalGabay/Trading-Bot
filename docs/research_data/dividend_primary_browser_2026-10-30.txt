@@ -1,0 +1,270 @@
+Cintas-FY2022-10K (https://www.cintas.com/pdf/Cintas-FY2022-10K.pdf)
+citeturn111view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 80; Source: open({"ref_id":"turn110search12","lineno":null}); Total lines: 3397
+L744@P16: April 1 - 30, 2022 (3) 11,830 $ 422.81 — $ 915.8
+L745@P16: May 1 - 31, 2022 (4) 644,213 $ 375.06 638,192 $ 676.6
+L746@P16: Total 808,751 $ 375.93 764,299 $ 676.6
+L747@P16: (1) On July 27, 2021, Cintas announced that the Board of Directors authorized a $1.5 billion share buyback program, which does not have an
+L748@P16: expiration date. From the inception of the July 27, 2021 share buyback program through May 31, 2022, Cintas has purchased a total of
+L749@P16: 2.2 million shares of Cintas common stock at an average price of $383.01 per share for a total purchase price of $823.4 million.
+L750@P16: (2) During March 2022, Cintas acquired 26,601 shares of Cintas common stock in satisfaction of employee payroll taxes due on options
+L751@P16: exercised and restricted stock awards that vested during the fiscal year. These shares were purchased at an average price of $410.14 per
+L752@P16: share for a total purchase price of $10.9 million.
+L753@P16: (3) During April 2022, Cintas acquired 11,830 shares of Cintas common stock in satisfaction of employee payroll taxes due on options exercised
+L754@P16: and restricted stock awards that vested during the fiscal year. These shares were purchased at an average price of $422.81 per share for a
+L755@P16: total purchase price of $5.0 million.
+L756@P16: (4) During May 2022, Cintas acquired 6,021 shares of Cintas common stock in satisfaction of employee payroll taxes due on options exercised
+L757@P16: and restricted stock awards that vested during the fiscal year. These shares were purchased at an average price of $389.70 per share for a
+L758@P16: total purchase price of $2.3 million.
+L759@P16: Item 6. [Reserved]
+L760@P16-17: CINTAS CORPORATION 17Item 7. Management's Discussion and
+L761@P17: Analysis of Financial Condition and Results of Operations
+L762@P17: Business Strategy
+L763@P17: Cintas helps more than one million businesses of all types and sizes, primarily in the U.S., as well as Canada and
+L899@P20: Net interest expense (interest expense less interest income) was $88.6 million in fiscal 2022 compared to
+L900@P20: $97.7 million in fiscal 2021. The change was primarily due to the replacement of the $250.0 million of senior notes
+L901@P20: with an interest rate of 4.30% that matured on June 1, 2021, with lower interest rate bearing commercial paper.
+L903@P20: The increase in income before income taxes was primarily due to revenue growth and the decrease in selling and
+L904@P20: administrative expenses as a percent of revenue in fiscal 2022. Income before income taxes also benefited from
+L905@P20: the previously mentioned one-time gains recorded in fiscal 2022.
+L906@P20: Cintas' effective tax rate on continuing operations was 17.5% for fiscal 2022 compared to 13.7% in fiscal 2021. The
+L916@P20: resulted from purchasing an aggregate of approximately 3.7 million shares of common stock under the Board
+L917@P20: approved share buyback programs during fiscal 2022.
+L918@P20: Uniform Rental and Facility Services Reportable Operating Segment
+L919@P20: Uniform Rental and Facility Services reportable operating segment revenue increased $537.3 million, or 9.4%, and
+L920@P20: the cost of uniform rental and facility services increased $332.9 million, or 11.2%, due to the reasons previously
+L925@P20: increased $76.8 million in fiscal 2022 compared to fiscal 2021. Selling and administrative expense as a percent of
+L926@P20: revenue for fiscal 2022 was 25.0% compared to 26.0% in fiscal 2021. The improvement in selling and administrative
+L927@P20: expenses as a percent of revenue was primarily due to efficiencies in labor and the previously mentioned one-time
+L928@P20: gain of $30.2 million on an equity method investment transaction.
+L929@P20: Income before income taxes increased $127.7 million to $1,353.5 million for fiscal 2022 compared to fiscal 2021.
+L930@P20: Income before income taxes as a percent of revenue at 21.7% increased 20 basis points from 21.5% in fiscal 2021.
+L931@P20: The increase was primarily due to the previously discussed improvement in selling and administrative expenses,
+L932@P20: partially offset by decreases in gross margin as a percent of revenue.
+L933@P20: First Aid and Safety Services Reportable Operating Segment
+L978@P21: rental items in service, which resulted from the growth in revenue. In addition, we had a favorable change in
+L979@P21: inventories, net, which was the result of a large amount of inventory purchases in the prior fiscal year period related
+L980@P21: to the COVID-19 pandemic, including sanitizer, sanitizer stands, masks and gloves.
+L981@P21: Net cash used in investing activities was $402.6 million in fiscal 2022, compared to $137.2 million in fiscal 2021. Net
+L982@P21: cash used in investing activities includes capital expenditures, purchases of investments, proceeds from the sale of
+L983@P21: operating assets and cash paid for acquisitions of businesses. Capital expenditures were $240.7 million and
+L984@P21: $143.5 million for fiscal 2022 and fiscal 2021, respectively. Capital expenditures for fiscal 2022 included
+L985@P21: $166.6 million for the Uniform Rental and Facility Services reportable operating segment and $59.7 million for the
+L986@P21: First Aid and Safety Services reportable operating segment. The increase in capital expenditures from fiscal 2021
+L987@P21: to fiscal 2022 was due to an investment in the operating segments to support continued market penetration and
+L988@P21: revenue growth. Cash paid for acquisitions of businesses, net of cash acquired, was $164.2 million and
+L989@P21: $10.0 million for fiscal 2022 and fiscal 2021, respectively. The acquisitions in both fiscal 2022 and 2021 occurred
+L990@P21: in our Uniform Rental and Facility Services reportable operating segment, our First Aid and Safety Services
+L991@P21: reportable operating segment and our Fire Protection operating segment, which is included in All Other. The fiscal
+L992@P21: 2022 acquisitions also includes the acquisition of the remaining interest of an equity method investment. In fiscal
+L993@P21-22: 22 CINTAS CORPORATION2022 and fiscal 2021, investing activities included proceeds of $15.3 million and $31.7 million, respectively, from
+L994@P22: the sale of certain operating assets, net of cash disposed. Net cash used in investing activities also included
+L995@P22: $6.1 million and $4.3 million of purchases of investments during fiscal 2022 and fiscal 2021, respectively.
+L996@P22: Net cash used in financing activities was $1,537.9 million for fiscal 2022, compared to $879.9 million in fiscal 2021.
+L997@P22: The increase in cash used from financing activities from fiscal 2021 is primarily due to the increase in repurchases
+L998@P22: of common stock in fiscal 2022, offset by the $261.2 million net issuance of commercial paper and the $76.2 million
+L999@P22: higher dividends paid in fiscal 2021 due to the transition from an annual dividend payment in the second quarter
+L1000@P22: of fiscal 2021 to quarterly dividend payments thereafter. On October 30, 2018, we announced that the Board of
+L1001@P22: Directors authorized a $1.0 billion share buyback program, which was completed during fiscal 2021. On
+L1002@P22: October 29, 2019, we announced the Board of Directors authorized a $1.0 billion share buyback program, which
+L1003@P22: was completed during fiscal 2022. On July 27, 2021, we announced the Board of Directors authorized a new
+L1004@P22: $1.5 billion share buyback program, which does not have an expiration date.
+L1005@P22: The following table summarizes the buyback activity by program and fiscal year ended May 31:
+L1006@P22: 2022 2021
+L1007@P22: Buyback Program
+L1008@P22: (In thousands except per share data) Shares
+L1009@P22: Avg. Price
+L1010@P22: per Share
+L1011@P22: Purchase
+L1012@P22: Price Shares
+L1013@P22: Avg. Price
+L1014@P22: per Share
+L1015@P22: Purchase
+L1016@P22: Price
+L1017@P22: October 30, 2018 — $ — $ — 190 $ 319.88 $ 60,877
+L1018@P22: October 29, 2019 1,590 365.41 581,220 1,196 350.31 418,779
+L1019@P22: July 27, 2021 2,150 383.01 823,429 — — —
+L1020@P22: 3,740 $ 375.53 $1,404,649 1,386 $ 346.13 $ 479,656
+L1021@P22: Shares acquired for taxes
+L1022@P22: due (1) 305 $ 397.16 $ 121,224 246 $ 302.52 $ 74,465
+L1023@P22: Total repurchase of Cintas
+L1024@P22: common stock $1,525,873 $ 554,121
+L1025@P22: (1) Shares of Cintas stock acquired for employee payroll taxes due on options exercised and vested restricted stock awards.
+L1026@P22: In the period subsequent to May 31, 2022 through July 27, 2022, we purchased 0.5 million shares of Cintas
+L1027@P22: common stock at an average price of $396.39 for a total purchase price of $210.8 million. From the inception of
+L1028@P22: the July 27, 2021 share buyback program through July 27, 2022, Cintas has purchased 2.7 million shares of Cintas
+L1029@P22: common stock in the aggregate, at an average price of $385.66, for a total purchase price of $1.0 billion.
+L1030@P22: Our Board of Directors declared the following dividends during the fiscal years ended May 31:
+L1031@P22: Declaration Date
+L1032@P22: (In millions except per share data)
+L1033@P22: Record
+L1034@P22: Date
+L1035@P22: Payment
+L1036@P22: Date
+L1037@P22: Dividend
+L1038@P22: Per Share Amount
+L1039@P22: Fiscal Year 2022
+L1040@P22: July 27, 2021 August 13, 2021 September 15, 2021 $ 0.95 $ 98.8
+L1041@P22: October 26, 2021 November 15, 2021 December 15, 2021 0.95 99.1
+L1042@P22: January 12, 2022 February 15, 2022 March 15, 2022 0.95 98.2
+L1043@P22: April 12, 2022 (2) May 16, 2022 June 15, 2022 0.95 97.5
+L1044@P22: Total $ 3.80 $ 393.6
+L1045@P22: Fiscal Year 2021
+L1046@P22: October 27, 2020 (1) November 6, 2020 December 4, 2020 $ 2.81 $ 297.7
+L1047@P22: October 27, 2020 November 6, 2020 December 4, 2020 0.70 74.1
+L1048@P22: January 19, 2021 February 15, 2021 March 15, 2021 0.75 79.5
+L1049@P22: April 13, 2021 (2) May 15, 2021 June 15, 2021 0.75 79.2
+L1050@P22: Total $ 5.01 $ 530.5
+L1051@P22: (1) Beginning October 27, 2020, our Board of Directors authorized a change in dividend policy from an annual dividend to quarterly dividends.
+L1052@P22: (2) The dividends declared on April 12, 2022 and April 13, 2021 were included in current accrued liabilities on the consolidated balance sheet
+L1053@P22: at May 31, 2022 and 2021, respectively.
+L1054@P22-23: CINTAS CORPORATION 23Any future dividend declarations, including the amount of any dividends, are at the discretion of the Board of
+L1055@P23: Directors and dependent upon then-existing conditions, including the Company's consolidated operating results
+L1056@P23: and consolidated financial condition, capital requirements, contractual restrictions, business prospects and other
+L1057@P23: factors that the Board of Directors may deem relevant.
+L1058@P23: During the fiscal year ended May 31, 2022, Cintas issued a net total of $261.2 million of commercial paper. There
+L1059@P23: was no commercial paper outstanding during fiscal 2021. On June 1, 2021, in accordance with the terms of the
+L1060@P23: notes, Cintas paid the $250.0 million aggregate principal amount outstanding of its 4.30%, 10-year senior notes
+L1061@P23: that matured on that date with cash on hand. On April 1, 2022, in accordance with the terms of the notes, Cintas
+L1062@P23: paid the $650.0 million aggregate principal amount outstanding of its 2.90%, 5-year senior notes that matured on
+L1063@P23: that date with proceeds from short-term borrowings. On May 1, 2022, Cintas redeemed at par value the
+L2758@P63: common stock $1,525,873 $554,121 $464,518
+L2759@P63: (1) Shares of Cintas stock acquired for employee payroll taxes due on options exercised and vested restricted stock awards.
+L2760@P63: In addition to the share buyback activity presented above, Cintas acquired shares of Cintas common stock, via
+L2761@P63: non-cash transactions, in connection with net-share settlements of option exercises. During the fiscal year ended
+L2762@P63: May 31, 2022, Cintas acquired 0.1 million shares of Cintas common stock via such non-cash transactions at an
+L2763@P63: average price of $402.73 for a total non-cash value of $28.7 million.
+L2764@P63: In the period subsequent to May 31, 2022, through July 27, 2022, we purchased 0.5 million shares of Cintas
+L2765@P63: common stock at an average price of $396.39 for a total purchase price of $210.8 million. From the inception of
+L2766@P63: the July 27, 2021 share buyback program through July 27, 2022, Cintas has purchased 2.7 million shares of Cintas
+L2767@P63: common stock in the aggregate, at an average price of $385.66 per share, for a total purchase price of $1.0 billion.
+L2768@P63: Note 13. Stock-Based Compensation
+L2769@P63: On August 2, 2016, the Board of Directors approved and adopted the Cintas Corporation 2016 Equity and
+L2770@P63: Incentive Compensation Plan (the 2016 Plan) to replace the Cintas' 2005 Equity Compensation Plan, as amended
+L2771@P63: (the 2005 Plan). The 2016 Plan was approved by Cintas shareholders at its Annual Meeting on October 18, 2016,
+L2772@P63: at which time the 2016 Plan became effective. Under the 2016 Plan, Cintas may grant officers and key
+L2773@P63: employee-partners equity compensation in the form of stock options, stock appreciation rights, restricted and
+L2774@P63: unrestricted stock awards, performance awards and other stock unit awards representing up to an aggregate of
+L2775@P63: 12,500,000 shares of Cintas' common stock. Any shares of common stock that remained available under the 2005
+L2776@P63: Plan became part of the total available share balance of 12,500,000 shares under the 2016 Plan. At May 31, 2022,
+L2777@P63: 5,966,288 shares of common stock were reserved for future issuance under the 2016 Plan. Total compensation cost
+L2778@P63: for stock-based awards for continuing operations was $109.3 million, $112.0 million and $115.4 million for the
+L2779@P63: fiscal years ended May 31, 2022, 2021 and 2020, respectively. Cintas accounts for forfeitures of stock-based
+--------------------------------------------------------------------------------
+Freeport-McMoRan Inc. - Freeport-McMoRan Declares Quarterly Cash Dividends on Common Stock (https://investors.fcx.com/investors/news-releases/news-release-details/2023/Freeport-McMoRan-Declares-Quarterly-Cash-Dividends-on-Common-Stock-fc4bfaa40/default.aspx)
+citeturn111view1 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"turn110search1","lineno":null}); Total lines: 202
+L182: PHOENIX--(BUSINESS WIRE)-- Freeport-McMoRan Inc. (NYSE: FCX) announced today that its Board of Directors declared cash dividends of $0.15 per share on FCX’s common stock payable on November 1, 2023, to shareholders of record as of October 13, 2023. The declaration includes a base dividend of $0.075 per share and variable dividend of $0.075 per share in accordance with FCX's performance-based payout framework.
+L183: The payment of dividends is at the discretion of the Board, which will consider FCX's financial results, cash requirements, global economic conditions and other factors it deems relevant.
+L184: FREEPORT: Foremost in Copper
+L185: 
+L186: FCX is a leading international mining company with headquarters in Phoenix, Arizona. FCX operates large, long-lived, geographically diverse assets with significant proven and probable reserves of copper, gold and molybdenum. FCX is one of the world’s largest publicly traded copper producers.
+--------------------------------------------------------------------------------
+Macerich Announces Reduction Of Quarterly Dividend To $ 0.50 Per Share Payable 20% In Cash And 80% In Common Stock | Macerich (https://investing.macerich.com/news-releases/news-release-details/macerich-announces-reduction-quarterly-dividend-050-share)
+citeturn111view2 [wordlim: 200] Crawled: 5 days ago; Content type: text/html; Source: open({"ref_id":"turn110search3","lineno":null}); Total lines: 96
+L67: ##
+L68: 
+L69: Macerich Announces Reduction Of Quarterly Dividend To $ 0.50 Per Share Payable 20% In Cash And 80% In Common Stock
+L70: 
+L71: March 16, 2020
+L72: 
+L73: 【44†PDF Version】
+L74: SANTA MONICA, Calif., March 16, 2020 /PRNewswire/ -- The Board of Directors of the Macerich Company (NYSE: MAC) declared a quarterly dividend of $.50 per share of common stock, consisting of a combination of cash and shares of the Company's common stock.  The dividend is payable on June 3, 2020 to stockholders of record at the close of business on April 22, 2020.
+L75: Given the uncertain and rapidly changing environment, the Board of Directors has determined that the cash component of the dividend (other than cash paid in lieu of fractional shares) will not exceed 20% in the aggregate, or $.10 per share, with the balance payable in shares of the Company's common stock.  This will allow the Company to comply with the REIT taxable income distribution requirements, while retaining capital and enhancing the Company's financial flexibility.
+L76:  Macerich's portfolio is well positioned with a highly diversified tenant base of the world's leading retailers.
+L77: The combination of the dividend reduction and the stock dividend will result in the Company retaining incremental cash in excess of $98 million on a quarterly basis.
+L78: The decision to issue a stock dividend will be made by the Board on a quarterly basis.  If implemented on an annual basis, the reduced dividend and the stock dividend would result in approximately $400 million of additional retained cash.  The Company expects to use the retained cash to reduce debt and for general corporate purposes.  In addition, the Company will be evaluating all capital uses including the size and pace of redevelopment investments.
+L79: The Company expects the dividend to be a taxable dividend to stockholders, regardless of whether a particular stockholder receives the dividend in the form of cash or shares.  The Company reserves the right to pay future dividends entirely in cash.
+L80: In accordance with the provisions of IRS Revenue Procedure 2017-45, stockholders will be asked to make an election to receive the dividend all in cash or all in shares.  To the extent that more than 20% of cash is elected in the aggregate, the cash portion will be prorated.  Stockholders who elect to receive the dividend in cash will receive a cash payment of at least $.10 per share.  Stockholders who do not make an election will receive 20% in cash and 80% in shares of common stock.  The number of shares issued as a result of the dividend will be calculated based on the volume weighted average trading prices of the Company's common stock on the New York Stock Exchange on May 20, May 21 and May 22, 2020.
+L81: An information letter and election form will be mailed to stockholders of record after the record date.  The properly completed election form to receive cash or common shares must be received by Computershare Trust Company, N.A., the Company's transfer agent, prior to 5:00 p.m. Eastern Time on May 19, 2020. Registered stockholders with questions regarding the dividend election may call Computershare Trust Company, N.A.
+--------------------------------------------------------------------------------
+Seagate - Stock Information - Dividend History (https://investors.seagate.com/stock-information/dividend-history/default.aspx)
+citeturn111view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn110search0","lineno":null}); Total lines: 150
+L60: Record Date  | Distribution Date  | Distribution per Ordinary Share  | Type of Distribution
+L61: --- | --- | --- | ---
+L62: 12/23/2026  | 01/07/2027  | $0.76  | Ordinary Dividend
+L63: 09/24/2026  | 10/07/2026  | $0.74  | Ordinary Dividend
+L64: 06/24/2026  | 07/07/2026  | $0.74  | Ordinary Dividend
+L65: 03/25/2026  | 04/08/2026  | $0.74  | Ordinary Dividend
+L66: 12/24/2025  | 01/09/2026  | $0.74  | Ordinary Dividend
+L67: 09/30/2025  | 10/09/2025  | $0.72  | Ordinary Dividend
+L68: 06/25/2025  | 07/08/2025  | $0.72  | Ordinary Dividend
+L69: 03/19/2025  | 04/02/2025  | $0.72  | Ordinary Dividend
+L70: 12/15/2024  | 01/06/2025  | $0.72  | Ordinary Dividend
+L71: 09/23/2024  | 10/07/2024  | $0.70  | Ordinary Dividend
+L72: 06/20/2024  | 07/05/2024  | $0.70  | Ordinary Dividend
+L73: 03/21/2024  | 04/04/2024  | $0.70  | Ordinary Dividend
+L74: 12/21/2023  | 01/09/2024  | $0.70  | Ordinary Dividend
+L75: 09/26/2023  | 10/10/2023  | $0.70  | Ordinary Dividend
+L76: 06/21/2023  | 07/05/2023  | $0.70  | Ordinary Dividend
+L77: 03/22/2023  | 04/06/2023  | $0.70  | Ordinary Dividend
+L78: 12/21/2022  | 01/05/2023  | $0.70  | Ordinary Dividend
+L79: 09/21/2022  | 10/05/2022  | $0.70  | Ordinary Dividend
+L80: 06/24/2022  | 07/07/2022  | $0.70  | Ordinary Dividend
+L81: 03/22/2022  | 04/06/2022  | $0.70  | Ordinary Dividend
+L82: 12/22/2021  | 01/05/2022  | $0.70  | Ordinary Dividend
+L83: 09/22/2021  | 10/06/2021  | $0.67  | Ordinary Dividend
+L84: 05/12/2021  | 07/07/2021  | $0.67  | Ordinary Dividend
+L85: 03/24/2021  | 04/07/2021  | $0.67  | Ordinary Dividend
+L86: 12/23/2020  | 01/06/2021  | $0.67  | Ordinary Dividend
+L87: 09/23/2020  | 10/07/2020  | $0.65  | Ordinary Dividend
+L88: 06/24/2020  | 07/08/2020  | $0.65  | Ordinary Dividend
+L89: 03/25/2020  | 04/08/2020  | $0.65  | Ordinary Dividend
+L90: 12/26/2019  | 01/08/2020  | $0.65  | Ordinary Dividend
+L91: 09/25/2019  | 10/09/2019  | $0.63  | Ordinary Dividend
+L92: 06/19/2019  | 07/03/2019  | $0.63  | Ordinary Dividend
+L93: 03/20/2019  | 04/03/2019  | $0.63  | Ordinary Dividend
+L94: 12/19/2018  | 01/02/2019  | $0.63  | Ordinary Dividend
+L95: 09/19/2018  | 10/03/2018  | $0.63  | Ordinary Dividend
+L96: 06/20/2018  | 07/05/2018  | $0.63  | Ordinary Dividend
+L97: 03/21/2018  | 04/04/2018  | $0.63  | Ordinary Dividend
+L98: 12/20/2017  | 01/03/2018  | $0.63  | Ordinary Dividend
+L99: 09/20/2017  | 10/04/2017  | $0.63  | Ordinary Dividend
+L100: 06/21/2017  | 07/05/2017  | $0.63  | Ordinary Dividend
+L101: 03/22/2017  | 04/05/2017  | $0.63  | Ordinary Dividend
+L102: 12/21/2016  | 01/04/2017  | $0.63  | Ordinary Dividend
+L103: 09/21/2016  | 10/05/2016  | $0.63  | Ordinary Dividend
+L104: 05/10/2016  | 05/24/2016  | $0.63  | Ordinary Dividend
+L105: 02/09/2016  | 02/23/2016  | $0.63  | Ordinary Dividend
+L106: 11/06/2015  | 11/20/2015  | $0.63  | Ordinary Dividend
+L107: 08/11/2015  | 08/25/2015  | $0.54  | Ordinary Dividend
+L108: 05/01/2015  | 05/15/2015  | $0.54  | Ordinary Dividend
+L109: 02/10/2015  | 02/24/2015  | $0.54  | Ordinary Dividend
+L110: 11/11/2014  | 11/25/2014  | $0.54  | Ordinary Dividend
+L111: 08/08/2014  | 08/22/2014  | $0.43  | Ordinary Dividend
+L112: 05/14/2014  | 05/28/2014  | $0.43  | Ordinary Dividend
+L113: 02/10/2014  | 02/24/2014  | $0.43  | Ordinary Dividend
+L114: 11/12/2013  | 11/26/2013  | $0.43  | Ordinary Dividend
+L115: 08/07/2013  | 08/21/2013  | $0.38  | Ordinary Dividend
+L116: 05/15/2013  | 05/29/2013  | $0.38  | Ordinary Dividend
+L117: 12/14/2012  | 12/28/2012  | $0.38  | Ordinary Dividend
+L118: 11/14/2012  | 11/29/2012  | $0.32  | Ordinary Dividend
+L119: 08/14/2012  | 08/29/2012  | $0.32  | Ordinary Dividend
+L120: 05/02/2012  | 05/17/2012  | $0.25  | Ordinary Dividend
+L121: 02/15/2012  | 03/01/2012  | $0.25  | Ordinary Dividend
+L122: 11/03/2011  | 11/18/2011  | $0.18  | Ordinary Dividend
+L123: 08/05/2011  | 08/26/2011  | $0.18  | Ordinary Dividend
+L124: 05/02/2011  | 06/01/2011  | $0.18  | Ordinary Dividend
+L125: 02/06/2009  | 02/20/2009  | $0.03  | Ordinary Dividend
+L126: 11/07/2008  | 11/21/2008  | $0.12  | Ordinary Dividend
+L127: 08/01/2008  | 08/15/2008  | $0.12  | Ordinary Dividend
+L128: 05/02/2008  | 05/16/2008  | $0.12  | Ordinary Dividend
+L129: 02/01/2008  | 02/15/2008  | $0.10  | Ordinary Dividend
+L130: 11/02/2007  | 11/16/2007  | $0.10  | Ordinary Dividend
+L131: 08/03/2007  | 08/17/2007  | $0.10  | Ordinary Dividend
+L132: 05/04/2007  | 05/18/2007  | $0.10  | Ordinary Dividend
+L133: 02/02/2007  | 02/16/2007  | $0.10  | Ordinary Dividend
+L134: 11/03/2006  | 11/17/2006  | $0.10  | Ordinary Dividend
+L135: 08/18/2006  | 09/01/2006  | $0.08  | Ordinary Dividend
+L136: 05/05/2006  | 05/19/2006  | $0.08  | Ordinary Dividend
+L137: 02/03/2006  | 02/17/2006  | $0.08  | Ordinary Dividend
+L138: 11/04/2005  | 11/18/2005  | $0.08  | Ordinary Dividend
+L139: 08/05/2005  | 08/19/2005  | $0.08  | Ordinary Dividend
+L140: 05/06/2005  | 05/20/2005  | $0.08  | Ordinary Dividend
+L141: 02/04/2005  | 02/18/2005  | $0.06  | Ordinary Dividend
+L142: 11/05/2004  | 11/19/2004  | $0.06  | Ordinary Dividend
+L143: 08/06/2004  | 08/20/2004  | $0.06  | Ordinary Dividend
+L144: 05/07/2004  | 05/21/2004  | $0.06  | Ordinary Dividend
+L145: 02/13/2004  | 02/27/2004  | $0.06  | Ordinary Dividend
+L146: 08/08/2003  | 08/22/2003  | $0.04  | Ordinary Dividend
+L147: 05/09/2003  | 05/23/2003  | $0.03  | Ordinary Dividend
+L148: 02/14/2003  | 02/28/2003  | $0.03  | Ordinary Dividend
+

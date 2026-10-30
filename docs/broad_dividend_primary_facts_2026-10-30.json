@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_dividend_terms_scope_2026-10-30.json",
+    "sha256": "18e4b9826ff82d967330b76305bd0dc6ab24564aa96415482fe28599aea20d41"
+  },
+  "search_queries": 8,
+  "page_opens": 8,
+  "closed": true,
+  "additional_requests_allowed": false,
+  "original_html_archive": false,
+  "browser_operations_not_http_hops": true,
+  "prior_denied_urls_retried": 0,
+  "purchases_usd": 0,
+  "sources": [
+    {
+      "id": "ctas",
+      "url": "https://www.cintas.com/pdf/Cintas-FY2022-10K.pdf",
+      "browser_evidence": {
+        "path": "docs/research_data/dividend_primary_browser_2026-10-30.txt",
+        "sha256": "b91d59002360d22ec642e93fbf9c67e998f566f31fd9460f5ed04d438ccc9d72"
+      },
+      "facts": {
+        "record_date": "2020-11-06",
+        "payable_date": "2020-12-04",
+        "annual_cash": "2.81",
+        "quarterly_cash": "0.70",
+        "total_cash": "3.51",
+        "reference": "Fiscal 2021 dividend table, printed page 23"
+      }
+    },
+    {
+      "id": "fcx",
+      "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2023/Freeport-McMoRan-Declares-Quarterly-Cash-Dividends-on-Common-Stock-fc4bfaa40/default.aspx",
+      "browser_evidence": {
+        "path": "docs/research_data/dividend_primary_browser_2026-10-30.txt",
+        "sha256": "b91d59002360d22ec642e93fbf9c67e998f566f31fd9460f5ed04d438ccc9d72"
+      },
+      "facts": {
+        "record_date": "2023-10-13",
+        "payable_date": "2023-11-01",
+        "total_cash": "0.15",
+        "base": "0.075",
+        "variable": "0.075"
+      }
+    },
+    {
+      "id": "mac",
+      "url": "https://investing.macerich.com/news-releases/news-release-details/macerich-announces-reduction-quarterly-dividend-050-share",
+      "browser_evidence": {
+        "path": "docs/research_data/dividend_primary_browser_2026-10-30.txt",
+        "sha256": "b91d59002360d22ec642e93fbf9c67e998f566f31fd9460f5ed04d438ccc9d72"
+      },
+      "facts": {
+        "record_date": "2020-04-22",
+        "payable_date": "2020-06-03",
+        "total_dividend_value": "0.50",
+        "no_election_cash_fraction": "0.20",
+        "no_election_stock_fraction": "0.80",
+        "conversion_price": null,
+        "actual_holder_election": null,
+        "provider_1_40_not_supported": true
+      }
+    },
+    {
+      "id": "stx",
+      "url": "https://investors.seagate.com/stock-information/dividend-history/default.aspx",
+      "browser_evidence": {
+        "path": "docs/research_data/dividend_primary_browser_2026-10-30.txt",
+        "sha256": "b91d59002360d22ec642e93fbf9c67e998f566f31fd9460f5ed04d438ccc9d72"
+      },
+      "facts": {
+        "record_date": "2021-05-12",
+        "payable_date": "2021-07-07",
+        "ordinary_dividend": "0.67",
+        "identity_currency_foreign_terms_not_admitted": true
+      }
+    }
+  ],
+  "other_opens": [
+    {
+      "url": "https://slgreen.com/stock-data/dividends/",
+      "use": "not_used_as_evidence"
+    },
+    {
+      "url": "https://www.cintas.com/newsroom/press-releases/2020/10/27/cintas-corporation-announces-annual-cash-dividend-and-new-quarterly-dividend-policy/",
+      "use": "not_used_as_evidence"
+    },
+    {
+      "url": "https://investors.seagate.com/news/news-details/2021/Seagate-Technology-Reports-Fiscal-Third-Quarter-2021-Financial-Results/default.aspx",
+      "use": "not_used_for_identity_admission"
+    },
+    {
+      "url": "https://slgreen.com/sl-green-realty-corp-announces-special-dividend-and-increase-to-ordinary-dividend-2/",
+      "use": "confirms_2022_total_includes_ordinary_and_special_no_holder_allocation_admission"
+    }
+  ]
+}
