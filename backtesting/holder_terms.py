@@ -7,12 +7,15 @@ transfer, cash fixing, delivery confirmation or strategy execution occurs here.
 """
 
 from copy import deepcopy
+from datetime import date
 import json
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from backtesting.claim_accounting import exact, instant, number
 from backtesting.cohort_audit import checked_file
 from backtesting.dividend_components import validate_review_evidence
+from backtesting.diagnostic_accounting import SCENARIOS
 
 
 def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
@@ -38,6 +41,8 @@ def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
 
     material = {e["id"]: e for e in spec["material_events"]}
     streams = {s["instrument_id"]: s for s in spec["streams"]}
+    if len(material) != len(spec["material_events"]) or len(streams) != len(spec["streams"]):
+        raise ValueError("Repeated holder material/stream specification identity")
     providers = {}
     for row in provider_rows:
         if row["category"] != "cash_dividends":
@@ -70,7 +75,11 @@ def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
         at = clock.open_on(fact["ex_date"])
         prior = [c for c in clock.closes if at is not None and c < at]
         effective = instant(fact["economic_effective_at"])
+        for key in ("record_date", "ex_date", "first_regular_session", "regular_way_due_bills_start", "regular_way_due_bills_end"):
+            date.fromisoformat(fact[key])
         if (at is None or not prior or effective > at or fact["ex_date"] != fact["economic_date"] or
+                effective.astimezone(ZoneInfo("America/New_York")).date().isoformat() != fact["economic_date"] or
+                clock.open_on(fact["record_date"]) is None or clock.open_on(fact["regular_way_due_bills_start"]) is None or
                 fact["regular_way_due_bills_end"] != prior[-1].date().isoformat() or
                 not fact["regular_way_due_bills_start"] <= fact["record_date"] <= fact["regular_way_due_bills_end"] or
                 child["parts"][0]["start"] != fact["first_regular_session"] or
@@ -79,7 +88,7 @@ def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
         identity = event["parent_id"], decision["provider_event_id"]
         row = providers[identity]
         record = json.loads(row["record"], parse_float=str)
-        if (row["category"] != "spin_offs" or row["role"] != "parent_distribution_requires_ownership" or
+        if (row["root_id"] != event["root_id"] or row["category"] != "spin_offs" or row["role"] != "parent_distribution_requires_ownership" or
                 row["day"] != fact["ex_date"] or record["ex_date"] != fact["ex_date"] or
                 record["record_date"] != fact["record_date"] or record["source_symbol"] != fact["parent_symbol"] or
                 record["new_symbol"] != fact["child_symbol"] or
@@ -93,6 +102,10 @@ def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
             ex_open_at=at.isoformat(), provider_event_id=row["event_id"],
             provider_due_bill_redemption_date=record.get("due_bill_redemption_date"),
             regular_start_aliases=[], review_source=deepcopy(review["sources"]))
+        plan["modeled_release_by_scenario"] = {}
+        for scenario in SCENARIOS:
+            release = clock.share_release(fact["economic_effective_at"], fact["first_regular_session"], scenario)
+            plan["modeled_release_by_scenario"][scenario] = None if release is None else release.isoformat()
         spinoffs[event["id"]] = plan
     for decision in review["regular_start_aliases"]:
         plan = spinoffs[decision["event_id"]]
@@ -100,7 +113,7 @@ def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
         row = providers[identity]
         record = json.loads(row["record"])
         symbol = plan["source"]["child_symbol"]
-        if (identity in aliases or decision["instrument_id"] != plan["child_id"] or
+        if (identity in aliases or decision["instrument_id"] != plan["child_id"] or row["root_id"] != plan["parent_id"] or
                 row["category"] != "name_changes" or row["day"] != plan["first_regular_session"] or
                 record["old_symbol"] != symbol + ".WI" or record["new_symbol"] != symbol or
                 record["old_cusip"] != record["new_cusip"]):
@@ -114,7 +127,7 @@ def load_holder_terms(path, spec, provider_rows, provider_pin, clock):
         prior = [c for c in clock.closes if at is not None and c < at]
         if decision["event_id"] in boundaries or not prior or fact["record_date"] < fact["ex_date"]:
             raise ValueError("Election ex-distribution boundary is missing or repeated")
-        boundaries[decision["event_id"]] = dict(source=deepcopy(fact), instrument_id=decision["instrument_id"],
+        boundaries[decision["event_id"]] = dict(event_id=decision["event_id"], source=deepcopy(fact), instrument_id=decision["instrument_id"],
             record_date=fact["record_date"], ex_date=fact["ex_date"], ownership_snapshot_at=prior[-1].isoformat(),
             ex_open_at=at.isoformat(), ownership_basis="regular_way_prior_saved_close_before_reviewed_ex_open")
     return spinoffs, aliases, boundaries
@@ -143,7 +156,7 @@ def apply_spinoff_terms(item, plan, clock):
 
 
 def annotate_election_boundary(schedule, boundary):
-    if (schedule["instrument_id"] != boundary["instrument_id"] or schedule["record_date"] != boundary["record_date"] or
+    if (schedule["event_id"] != boundary["event_id"] or schedule["instrument_id"] != boundary["instrument_id"] or schedule["record_date"] != boundary["record_date"] or
             any(r["record"]["ex_date"] != boundary["ex_date"] for r in schedule["provider_records"])):
         raise ValueError("Election primary ex-date conflicts with provider or holder identity")
     schedule["reviewed_ownership_boundary"] = deepcopy(boundary)
@@ -180,8 +193,14 @@ def gate_due_bill_spinoff(item):
         if not supported:
             return False
         release = legs[0].get("modeled_release_at")
-        if item["scenario"] == "no_credit":
-            return release is None
-        return release is not None and instant(release) >= instant(plan["economic_effective_at"])
+        if item["scenario"] not in SCENARIOS or set(plan["modeled_release_by_scenario"]) != set(SCENARIOS):
+            return False
+        expected = plan["modeled_release_by_scenario"][item["scenario"]]
+        if expected is None:
+            # A finite saved window can end before delayed delivery. The
+            # right remains pending rather than receiving an invented date.
+            return release is None and item["scenario"] != "base"
+        return (release is not None and instant(release) == instant(expected) and
+                instant(release) >= instant(plan["ex_open_at"]) >= instant(plan["economic_effective_at"]))
     except (ValueError, KeyError, TypeError):
         return False

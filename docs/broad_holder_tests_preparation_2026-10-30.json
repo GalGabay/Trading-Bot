@@ -1,0 +1,156 @@
+{
+  "revision": {
+    "path": "data/reports/broad_corrected_input_v1/summary.json",
+    "sha256": "41c935ae966dbb5249a71606e109d5eb31d0eeaa172a0369a1d97a4326ce9cb2"
+  },
+  "policy": {
+    "path": "docs/broad_diagnostic_accounting_policy_v15.json",
+    "sha256": "4cd287d8cef928838e9070a3fd6ec8f2b12d7a9ab48e074936ed64a7ae4dac81"
+  },
+  "execution": [
+    {
+      "path": "backtesting/diagnostic_preparation.py",
+      "sha256": "814ad4bbf38a2055b07df1d783a1f2c76cbc5665d9316262716eb5f4fff439a4"
+    },
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "backtesting/dividend_components.py",
+      "sha256": "e579e531405382ecd68a3e8f067bf9b39a4468905a0bbfa734925a175c6a2a02"
+    },
+    {
+      "path": "backtesting/diagnostic_event_terms.py",
+      "sha256": "fe04f2adfe4981e5d8e7598147aafe9d9ac65b5f0af3edbb72a7b62dfb83e4fa"
+    },
+    {
+      "path": "backtesting/corporate_action_terms.py",
+      "sha256": "c01289df38793590d511e0ee7db0353c2f6166edcc671da99105b1cde41ebda2"
+    },
+    {
+      "path": "backtesting/election_schedule.py",
+      "sha256": "2db6a53466ebaa80c7f13eb8d811c76cd76efb77d7cc89d8bbe8ee04bed77e0b"
+    },
+    {
+      "path": "backtesting/election_terms.py",
+      "sha256": "b23665c31c2d6d2c52bd499c97204fdd0c1597eefa8f54e0a1547fe3681c7546"
+    },
+    {
+      "path": "backtesting/holder_terms.py",
+      "sha256": "6f58952e3529b4d1784464e91a2d904f5c757ebdecf86109144e53cf77b9ba4e"
+    }
+  ],
+  "dividend_component_review": {
+    "path": "docs/broad_dividend_component_decisions_v2_2026-10-30.json",
+    "sha256": "43ac80d50adba4bee5cf1553db182899c974ef8a0b23446bf99fa06c49671d8f"
+  },
+  "event_terms_review": {
+    "path": "docs/broad_event_terms_overlay_v2_2026-10-30.json",
+    "sha256": "8df38505caddd14e30789e9e883e1bd6a1268baa5466e7e7452c30b30b398ece"
+  },
+  "corporate_action_review": {
+    "path": "docs/broad_corporate_action_review_2026-10-30.json",
+    "sha256": "24fc9019ed20aae5a6eb19535bb2d91b1cf7482e3391be5b4f97bf4fe8b187ae"
+  },
+  "election_schedule_inputs": {
+    "path": "docs/broad_election_schedule_inputs_v4_2026-10-30.json",
+    "sha256": "57debdc68e9948753576b8e24d537058866997a8b7adbfd5018f74e9fcff141c"
+  },
+  "holder_terms_review": {
+    "path": "docs/broad_holder_terms_review_2026-10-30.json",
+    "sha256": "3f3c0a986bb29de3d539d123835070486e60968d7d959e77ed87a2b3c7eedd56"
+  },
+  "reviewed_due_bill_spinoffs": 1,
+  "reviewed_election_ownership_boundaries": 1,
+  "reviewed_corporate_actions": 15,
+  "election_schedules": 5,
+  "holder_election_policy": "no_election",
+  "holder_election_approval": {
+    "path": "docs/research_election_owner_approval_2026-10-30.json",
+    "sha256": "cfedebaf25f3e6740d652cbcd6750ac85cf0d76ace6c05cd93e0676301e8ad24"
+  },
+  "election_lineage_dependency_cutoffs": {
+    "COHORT-2016-0046": "2019-02-21",
+    "COHORT-2016-0413": "2021-01-15",
+    "COHORT-2016-0288": "2020-06-03"
+  },
+  "reviewed_material_events": 9,
+  "reviewed_context_only_records": 3,
+  "reviewed_dividend_component_groups": 10,
+  "selected_originals": 100,
+  "candidate_streams": 121,
+  "provider_dividend_records": 2698,
+  "dividend_plan_rows": 8094,
+  "base_dividend_status_counts": {
+    "candidate_receivable_only": 1384,
+    "candidate_modeled_payment": 1166,
+    "blocked_terms": 146,
+    "reviewed_component_in_total_no_independent_right": 2
+  },
+  "base_blocker_counts": {
+    "special_foreign_or_unclassified_distribution_requires_terms": 54,
+    "multiple_records_same_security_ex_date_require_component_review": 24,
+    "lineage_contains_unresolved_special_election_dividend": 84,
+    "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms": 6,
+    "conflicting_provider_and_issuer_hosted_ex_dates_require_review": 4,
+    "reference_only_predecessor_never_earns_a_portfolio_right": 3
+  },
+  "base_dividends_missing_payable_date": 1383,
+  "multiple_dividend_groups": 22,
+  "multiple_dividend_records": 44,
+  "material_event_records": 26,
+  "material_plan_rows": 78,
+  "unresolved_feature_events": [
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "date": "2016-11-01",
+      "reason": "ADNT distribution economics still require review; do not warm through an unresolved price discontinuity"
+    }
+  ],
+  "event_route_counts": {
+    "handled_by_reviewed_corporate_action": 14,
+    "context_only_no_portfolio_credit": 13,
+    "requires_identity_or_economic_review": 13,
+    "linked_candidate_economic_event": 6,
+    "represented_by_reviewed_cash_merger": 1,
+    "wrong_predecessor_ratio_do_not_apply": 1,
+    "reverse_split_with_election_dividend": 3,
+    "search_only_reverse_split_election": 1,
+    "represented_by_reviewed_due_bill_spinoff": 1,
+    "represented_by_reviewed_regular_start_context": 1,
+    "represented_by_peak_holding_company_reorganization_do_not_apply_twice": 1
+  },
+  "output_files": [
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/dividend_candidates.json",
+      "sha256": "348c779c8f9c84489c8a9ec44dd375f3b5f03f2bb20350adf7e1372e68cf9d3b"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/material_candidates.json",
+      "sha256": "38ee03b5cfcd8fed7fac08b195031ef119a075c3342ba2c05c9df691880bf75f"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/event_routes.csv",
+      "sha256": "3c9c97d23d282d6de4d118e2592fddcf0439e6859f21ab4d25a9716114c1914d"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/corporate_actions.json",
+      "sha256": "5cd9806ebc744f1bb8e8342424161ec49c450278b42f5f933e654dd20c1c6c0d"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/election_candidates.json",
+      "sha256": "8c579f44c8655dff526c2f7f80b068c386d6a48d87ea2b75cfe1655eb1e78100"
+    }
+  ],
+  "owner_approved": true,
+  "performance_ready": false,
+  "step1_complete": false,
+  "strict_flags_promoted": false,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "strategy_runs": 0,
+  "unit_tests_run": 0
+}

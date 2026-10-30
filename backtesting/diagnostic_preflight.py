@@ -19,6 +19,7 @@ from backtesting.corporate_action_terms import gate_action
 from backtesting.claim_accounting import number
 from backtesting.election_schedule import load_holder_policy
 from backtesting.holder_terms import gate_due_bill_spinoff
+from backtesting.diagnostic_accounting import SCENARIOS
 
 
 class DiagnosticIntegrationBlocked(ValueError):
@@ -32,6 +33,21 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
     admitted_cash=set()
     admitted_spinoffs=set()
     admitted_regular_aliases=set()
+    due_bill_groups={}
+    for event in material:
+        if event.get("holder_terms_review") is not None:
+            identity=event["parent_id"], event["event_id"]
+            group=due_bill_groups.setdefault(identity, {})
+            if event["scenario"] in group:
+                raise ValueError("Repeated due-bill material scenario identity")
+            group[event["scenario"]]=event
+    valid_due_bill_groups={identity for identity,group in due_bill_groups.items() if
+        set(group)==set(SCENARIOS) and all(gate_due_bill_spinoff(e) for e in group.values()) and
+        all(e["holder_terms_review"]==group["base"]["holder_terms_review"] for e in group.values())}
+    for (parent,event_id),group in due_bill_groups.items():
+        if "base" not in group:
+            blockers.append(dict(kind="material_terms",instrument_id=parent,event_id=event_id,
+                reason="Due-bill scenario inventory has no base ownership plan"))
     corrections={e["instrument_id"]:e for e in terms_review["feature_corrections"]}
     for event in feature_events:
         correction=corrections.get(event["instrument_id"])
@@ -52,8 +68,8 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
             if (event["event_id"]=="peak_holding_company_reorganization" and
                     event.get("diagnostic_terms_admitted") is True):
                 continue
-            if gate_due_bill_spinoff(event):
-                admitted_spinoffs.add((event["parent_id"], event["event_id"]))
+            if (event["parent_id"], event["event_id"]) in valid_due_bill_groups:
+                admitted_spinoffs.add((event["parent_id"], event["holder_terms_review"]["provider_event_id"], event["event_id"]))
                 for alias in event["holder_terms_review"]["regular_start_aliases"]:
                     admitted_regular_aliases.add((alias["instrument_id"], alias["event_id"], event["event_id"]))
                 resets.append(event["required_feature_reset"])
@@ -90,7 +106,7 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
                 related=json.loads(related)
             if len(related)==1:
                 if (event["disposition"]=="represented_by_reviewed_due_bill_spinoff" and
-                        (event["instrument_id"], related[0]) in admitted_spinoffs):
+                        (event["instrument_id"], event["event_id"], related[0]) in admitted_spinoffs):
                     continue
                 if (event["disposition"]=="represented_by_reviewed_regular_start_context" and
                         (event["instrument_id"], event["event_id"], related[0]) in admitted_regular_aliases):

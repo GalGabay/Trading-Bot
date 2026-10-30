@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-30",
+  "successful_preparation": true,
+  "current_step": 1,
+  "step1_complete": false,
+  "scenarios": [
+    "base",
+    "delayed_five_sessions",
+    "no_credit"
+  ],
+  "selected_originals": 100,
+  "provider_dividend_records": 2698,
+  "dividend_plans_unchanged": true,
+  "reviewed_due_bill_plans": 3,
+  "mac_reported_formula_resolved": true,
+  "mac_schedule_admitted": false,
+  "remaining_blocking_rows": 188,
+  "gate_counts": {
+    "material_terms": 17,
+    "dividend_terms": 143,
+    "provider_terms": 23,
+    "election_schedule": 5
+  },
+  "engine_handoff_rejected": true,
+  "engine_adapter_integrated": false,
+  "unit_tests_run_by_replay": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "price_downloads": 0,
+  "reserved_2024_2025_candle_files_read": 0,
+  "no_network_during_preparation": true,
+  "preparation": {
+    "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/summary.json",
+    "sha256": "2288b4c187cfb4a18f942e2465f5a4d56fc60c678673611f2cea1a3c51b7610f"
+  },
+  "preflight": {
+    "path": "data/reports/broad_diagnostic_preflight_2026_10_30_v14/report.json",
+    "sha256": "82b81180207a6e08d8d30c5387ac3ca188e558cb47ea28451657407c92b313d0"
+  },
+  "executed_sources": [
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/corporate_action_terms.py",
+      "sha256": "c01289df38793590d511e0ee7db0353c2f6166edcc671da99105b1cde41ebda2"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/diagnostic_event_terms.py",
+      "sha256": "fe04f2adfe4981e5d8e7598147aafe9d9ac65b5f0af3edbb72a7b62dfb83e4fa"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/diagnostic_preflight.py",
+      "sha256": "81da5d163cb94004474516368d5a5c3c638581f29561a2744564c0b661878fc2"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/diagnostic_preparation.py",
+      "sha256": "814ad4bbf38a2055b07df1d783a1f2c76cbc5665d9316262716eb5f4fff439a4"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/dividend_components.py",
+      "sha256": "e579e531405382ecd68a3e8f067bf9b39a4468905a0bbfa734925a175c6a2a02"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/election_schedule.py",
+      "sha256": "2db6a53466ebaa80c7f13eb8d811c76cd76efb77d7cc89d8bbe8ee04bed77e0b"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/election_terms.py",
+      "sha256": "b23665c31c2d6d2c52bd499c97204fdd0c1597eefa8f54e0a1547fe3681c7546"
+    },
+    {
+      "path": "data/reports/broad_diagnostic_approved_2026_10_30_v14/executed_sources/holder_terms.py",
+      "sha256": "6f58952e3529b4d1784464e91a2d904f5c757ebdecf86109144e53cf77b9ba4e"
+    }
+  ],
+  "runner": {
+    "path": "data/reports/holder_terms_verification_2026_10_30_v1/replay_preparation.py",
+    "sha256": "88fb689d785214f4298ccebac76bb00b88efb3f192c9fcfcd584e529f4fa3ad1"
+  }
+}

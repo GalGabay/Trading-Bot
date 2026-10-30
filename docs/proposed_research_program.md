@@ -1,5 +1,12 @@
 # Proposed research program before the first paper trial
 
+**Current verification, still Step 1:**
+[641 passing tests and completed MAC formula review](broad_holder_tests_results_2026-10-30.md)
+cover the current holder code and all three prepared scenarios. Remaining
+ownership/settlement and economic terms leave 188 overlapping gates before
+Step 2. No additional owner setting is required now. This verification does not
+authorize a new performance batch. See the [current tracker](broad_backtest_step_tracker.md).
+
 **Latest work, still Step 1:** [reviewed holder schedules](broad_holder_terms_results_2026-10-30.md)
 reduce overlapping data gates from 191 to 188, retaining all 100 selected members.
 New holder-module tests, exact election allocations and remaining event/dividend

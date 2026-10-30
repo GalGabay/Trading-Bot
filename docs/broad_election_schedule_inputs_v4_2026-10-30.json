@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "terms": {
+    "path": "docs/broad_remaining_terms_review_2026-10-30.json",
+    "sha256": "7f9dc19e8c90f0128f11d519009a880a1533c3f2f6195d7413dd22495ef5259a"
+  },
+  "split_review": {
+    "path": "docs/broad_event_primary_review.json",
+    "sha256": "574a68c7f22e492532ef6301463715cba3f0afd5f860c17f9506c51cce031f37"
+  },
+  "resolution": {
+    "path": "docs/broad_resolution_facts_v3_2026-10-30.json",
+    "sha256": "09b597f57ea70c224405ca1d8c4414724c3640d864b3b43e5bc20b8bc7d10353"
+  },
+  "mac_review": {
+    "path": "docs/broad_dividend_primary_facts_2026-10-30.json",
+    "sha256": "858e8bb47c5513994605f79366d34694e308d3dcfe6d91ad32dc892adaf29dcc"
+  },
+  "provider_source": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/provider_event_roles.csv",
+    "sha256": "66f4fafc17b147f29a9f583c371440daff41013d871cb01cb44f44b5cada98dd"
+  },
+  "holder_election_selected": "no_election",
+  "execution_ready": false,
+  "holder_election_approval": {
+    "path": "docs/research_election_owner_approval_2026-10-30.json",
+    "sha256": "cfedebaf25f3e6740d652cbcd6750ac85cf0d76ace6c05cd93e0676301e8ad24"
+  }
+}

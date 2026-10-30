@@ -22,6 +22,8 @@
 
 > **Latest holder schedules, still Step 1 of 4:** [K/KLG regular-way due-bill ownership and corroborated SLG ex-distribution boundary](docs/broad_holder_terms_results_2026-10-30.md). Offline preparation completes for all three scenarios; remaining overlapping blocking rows fall from 191 to 188. All 100 selected members and 2,698 dividend identities remain. The new holder module requires focused unit tests; the preceding 571-test result describes earlier code. Exact election allocations and other dated event/dividend terms still block Step 2. No purchase, broker request, price download or new performance run occurred. Continue reporting the current step through Step 4 completion.
 
+> **Current verification, still Step 1 of 4:** [641 offline tests pass, including 70 new ownership/preparation/formula tests](docs/broad_holder_tests_results_2026-10-30.md). Scenario consistency, saved release times, duplicate provider routing and evidence checks were corrected. MAC's completed no-election conversion formula is recorded from its annual report; ownership and fractional settlement remain unadmitted. All three scenarios prepare offline with 100 members and 2,698 dividend identities. There are still 188 overlapping economic-data gates before Step 2; Steps 3-4 remain pending. No purchase, broker request, new price data or profit/loss batch occurred. Continue reporting the current step through Step 4 completion.
+
 ## Instructions to the Coding AI
 
 1. **Inspect before modifying.**

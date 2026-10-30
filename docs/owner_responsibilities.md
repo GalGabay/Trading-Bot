@@ -2,10 +2,10 @@
 
 **Current step: 1 of 4, still in progress.** See the
 [four-step tracker](broad_backtest_step_tracker.md) and
-[latest holder schedules / remaining terms](broad_holder_terms_results_2026-10-30.md).
-The latest preparation retains 188 overlapping blocking rows, down from 191;
-focused tests for the new holder module remain. Earlier 571-test evidence is
-preserved for the preceding implementation.
+[ownership tests / remaining terms](broad_holder_tests_results_2026-10-30.md).
+The current code passes 641 offline tests, including 70 new tests. MAC's
+reported conversion formula is recorded; unresolved economic terms still leave
+188 overlapping blocking rows. Earlier verification is preserved separately.
 After each implementation response, report the current step and remaining work
 until Step 4 is complete. The remaining event/data fixes are engineering work;
 no new owner setting, purchase or repeat election approval is required now.

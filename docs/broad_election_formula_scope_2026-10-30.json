@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Separate owner-requested review of exact common-holder election formulas and ex-distribution dates",
+  "max_search_queries": 9,
+  "max_page_opens": 10,
+  "primary_sources_only": true,
+  "purchase_budget_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "price_downloads": 0,
+  "strategy_runs": 0,
+  "prior_batches_remain_closed": true,
+  "retry_previously_failed_urls": false,
+  "stop_new_requests_on_access_barrier_or_fetch_failure": true,
+  "automatic_followup_collection": false,
+  "targets": [
+    "MAC completed 2020 dividend: no-election per-holder formula and stock conversion price",
+    "SLG 2021/2022 explicit common-holder formula rather than rounded share totals",
+    "Primary AIV/MAC ex-distribution dates and fractional settlement terms"
+  ],
+  "constraints": [
+    "Issuer totals and options deliverables cannot become common-holder allocations",
+    "Retain approximate-data blocks without an explicit supported formula",
+    "Search excerpts remain discovery only",
+    "No actual broker receipt or invented fractional cash fixing",
+    "No change to frozen membership, research allocations or run authority"
+  ]
+}

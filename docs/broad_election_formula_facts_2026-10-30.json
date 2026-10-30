@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_election_formula_scope_2026-10-30.json",
+    "sha256": "11bb459c1967fe45fb160838334f231ccf086177725211bb00412d554bda2fb0"
+  },
+  "search_queries": 9,
+  "page_opens": 3,
+  "cached_document_find_operations": 2,
+  "successful_opens": 2,
+  "failed_opens": 1,
+  "closed": true,
+  "additional_requests_allowed": false,
+  "stopped_on_first_fetch_failure": true,
+  "browser_operations_not_hidden_http_hops": true,
+  "original_html_archive": false,
+  "prior_failed_urls_retried": 0,
+  "failure": {
+    "url": "https://investing.macerich.com/static-files/316a1262-859a-4fa5-8411-650aa0f306b2",
+    "status": "403",
+    "evidence": {
+      "path": "docs/research_data/formula_open3_2026-10-30.json",
+      "sha256": "9d0b0c2386a8976eb57cab8a277a4e2451ac1cf43472da440d206a844b93efb6"
+    },
+    "retry": false
+  },
+  "third_party_locator": {
+    "url": "https://investing.macerich.com/stock-information/dividends",
+    "evidence": {
+      "path": "docs/research_data/formula_read2_2026-10-30.json",
+      "sha256": "948f6021b6466b505eccc9a673ee41e790846560b8a1024b67d304c44462292a"
+    },
+    "source_type": "issuer_hosted_Mergent_third_party_dividend_table_not_primary_ex_date_evidence"
+  },
+  "evidence": [
+    {
+      "path": "docs/research_data/formula_search1_2026-10-30.json",
+      "sha256": "efecc531a79b742a4a3812950e07c3025bccbf57b19d853d72ec74ec3feb2a66"
+    },
+    {
+      "path": "docs/research_data/formula_search2_2026-10-30.json",
+      "sha256": "2c73a2c63ccd579e6388ab6608cc895adb842491391465c45068bdc9885b6aee"
+    },
+    {
+      "path": "docs/research_data/formula_search3_2026-10-30.json",
+      "sha256": "c6946400a5b6d75b393faa7b0841f729071fef3b6a4d0a091087b59e9209c972"
+    },
+    {
+      "path": "docs/research_data/formula_open1_2026-10-30.json",
+      "sha256": "8106a75c207536f89f8f2cd664bbefd8de7f5b4e7a93984f599262e49c929e18"
+    },
+    {
+      "path": "docs/research_data/formula_read1_2026-10-30.json",
+      "sha256": "e5ec3c7d2dbb534b8585a09a9aa9e279f6bd4e113d86c9dd7e7919f4d5201e65"
+    },
+    {
+      "path": "docs/research_data/formula_open2_2026-10-30.json",
+      "sha256": "a34454010149a4309fca7361536454b22cbf263a5cd5c35ffdf36e128a95a77b"
+    },
+    {
+      "path": "docs/research_data/formula_read2_2026-10-30.json",
+      "sha256": "948f6021b6466b505eccc9a673ee41e790846560b8a1024b67d304c44462292a"
+    },
+    {
+      "path": "docs/research_data/formula_open3_2026-10-30.json",
+      "sha256": "9d0b0c2386a8976eb57cab8a277a4e2451ac1cf43472da440d206a844b93efb6"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mac_2020_completed",
+      "access": "primary_browser_text_reviewed",
+      "issuer_cik": "912242",
+      "security_class": "common_stock",
+      "completed_distribution": true,
+      "per_holder_no_election_rule_explicit": true,
+      "allocation_precision": "reported_formula_not_rounded_share_rate",
+      "payable_date": "2020-06-03",
+      "total_dividend_value": "0.50",
+      "no_election_cash_fraction": "0.20",
+      "no_election_stock_fraction": "0.80",
+      "stock_conversion_price": "7.2956",
+      "url": "https://www.sec.gov/Archives/edgar/data/912242/000091224221000004/mac-20201231.htm",
+      "browser_evidence": {
+        "path": "docs/research_data/formula_read1_2026-10-30.json",
+        "sha256": "e5ec3c7d2dbb534b8585a09a9aa9e279f6bd4e113d86c9dd7e7919f4d5201e65"
+      },
+      "source_location": "2020 Form 10-K Note 14, printed page 98, browser lines 3398-3401",
+      "retrospective_accounting_only": true,
+      "historical_known_at": null,
+      "actual_broker_received_at": null,
+      "fractional_cash_fixing": null,
+      "ownership_boundary_resolved": false
+    }
+  ],
+  "preserved_gaps": [
+    "MAC primary ex-date/due-bill ownership and fractions",
+    "SLG approximate allocations",
+    "AIV missing/admission terms",
+    "Remaining foreign/special and ambiguous cash records"
+  ],
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "price_downloads": 0,
+  "strategy_runs": 0
+}

@@ -128,3 +128,9 @@ backtesting/holder_terms.py -text
 docs/broad_holder_terms_*.json -text
 docs/research_data/holder_*_2026-10-30.json -text
 docs/research_data/diagnostic_executed_before_holder_terms_v1/*.py -text
+# Preserve tested holder schedules and exact reported election-formula evidence.
+tests/test_holder_terms.py -text
+docs/broad_holder_tests_*.json -text
+docs/broad_election_formula_*.json -text
+docs/research_data/formula_*_2026-10-30.json -text
+docs/research_data/diagnostic_executed_before_holder_tests_v1/*.py -text

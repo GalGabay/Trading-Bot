@@ -1,5 +1,11 @@
 # How far are we from paper trading?
 
+**Latest verification, still Step 1:**
+[641 tests pass and MAC's reported conversion formula is recorded](broad_holder_tests_results_2026-10-30.md).
+All three accounting scenarios prepare offline. Ownership/settlement and other
+economic terms still leave 188 overlapping blocking rows before Step 2. No new
+performance run or paper activation occurred. Earlier entries follow.
+
 **Latest holder-term work, still Step 1:**
 [K/KLG ownership and SLG ex-date corroboration](broad_holder_terms_results_2026-10-30.md)
 reduce overlapping data gates from 191 to 188. All three scenario preparations

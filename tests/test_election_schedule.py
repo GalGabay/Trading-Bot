@@ -310,3 +310,70 @@ class ElectionScheduleTests(TestCase):
         self.splits["sources"][0]["browser_evidence"] = pin("split_browser.txt")
         Path("split_browser.txt").write_bytes(b"tampered")
         with self.assertRaises(ValueError): self.compile()
+
+    def add_mac_formula(self):
+        self.mac["sources"][0]["facts"].update(no_election_cash_fraction="0.20", no_election_stock_fraction="0.80")
+        self.final_mac = dict(id="mac_2020_completed", access="primary_browser_text_reviewed", issuer_cik="912242",
+            security_class="common_stock", completed_distribution=True, per_holder_no_election_rule_explicit=True,
+            allocation_precision="reported_formula_not_rounded_share_rate", payable_date="2020-06-03",
+            total_dividend_value="0.50", no_election_cash_fraction="0.20", no_election_stock_fraction="0.80",
+            stock_conversion_price="7.2956", browser_evidence=pin("browser.txt"))
+        self.resolution["sources"].append(self.final_mac)
+
+    def test_mac_completed_formula_selects_reported_default_without_admission(self):
+        self.add_mac_formula()
+        schedule = self.compile(approved=True)[1]
+        self.assertEqual(schedule["stock_conversion_price"], "7.2956")
+        allocation = schedule["selected_conditional_allocation"]
+        self.assertEqual(allocation["cash_per_record_share"], "1/10")
+        self.assertEqual(allocation["shares_per_record_share"], "1000/18239")
+        self.assertFalse(allocation["exact_broker_allocation_verified"])
+        self.assertIsNone(allocation["fractional_cash_fixing"])
+        self.assertTrue(schedule["blockers"])
+        self.assertFalse(schedule["execution_ready"])
+
+    def test_mac_formula_without_owner_choice_stays_unselected(self):
+        self.add_mac_formula()
+        schedule = self.compile()[1]
+        self.assertIsNone(schedule["selected_holder_election"])
+        self.assertNotIn("selected_conditional_allocation", schedule)
+
+    def test_mac_completed_formula_requires_matching_primary_holder_context(self):
+        self.add_mac_formula()
+        for field,value in (("access", "search_only"), ("issuer_cik", "OTHER"), ("security_class", "preferred_stock"),
+                            ("completed_distribution", False), ("per_holder_no_election_rule_explicit", False),
+                            ("allocation_precision", "approximate"), ("payable_date", "2020-06-04")):
+            old = self.final_mac[field]
+            with self.subTest(field=field):
+                self.final_mac[field] = value
+                with self.assertRaises(ValueError): self.compile()
+                self.final_mac[field] = old
+
+    def test_mac_formula_cannot_use_inconsistent_percentages(self):
+        self.add_mac_formula()
+        self.final_mac["no_election_cash_fraction"] = "0.30"
+        with self.assertRaises(ValueError): self.compile()
+
+    def test_mac_formula_cannot_change_declared_total(self):
+        self.add_mac_formula()
+        self.final_mac["total_dividend_value"] = "1.40"
+        with self.assertRaises(ValueError): self.compile()
+
+    def test_mac_formula_price_must_be_positive_and_finite(self):
+        self.add_mac_formula()
+        for value in ("0", "-1", "nan", "unknown"):
+            with self.subTest(value=value):
+                self.final_mac["stock_conversion_price"] = value
+                with self.assertRaises(ValueError): self.compile()
+
+    def test_mac_formula_cannot_relax_preflight_schedule_gate(self):
+        self.add_mac_formula()
+        schedule = self.compile(approved=True)[1]
+        self.assertFalse(assess([],[],[],[],dict(feature_corrections=[]),"2016-11-30",
+                                election_schedules=[schedule])["data_gates_clear"])
+
+    def test_mac_completed_formula_preserves_provider_records(self):
+        self.add_mac_formula()
+        before = deepcopy(self.rows)
+        self.compile(approved=True)
+        self.assertEqual(self.rows, before)

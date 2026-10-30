@@ -79,6 +79,37 @@ def apply_holder_policy(schedules, policy):
             schedule["selected_conditional_allocation"] = deepcopy(allocation)
 
 
+def reported_mac_formula(declaration, completed, source):
+    """Exact arithmetic on reported per-holder inputs; no settlement admission.
+
+    Uses the issuer's explicit no-election percentages and stated conversion
+    price. Aggregate shares issued and third-party dividend tables are unused.
+    """
+    if (completed.get("access") != "primary_browser_text_reviewed" or
+            completed.get("issuer_cik") != "912242" or completed.get("security_class") != "common_stock" or
+            completed.get("completed_distribution") is not True or
+            completed.get("per_holder_no_election_rule_explicit") is not True or
+            completed.get("allocation_precision") != "reported_formula_not_rounded_share_rate" or
+            completed["payable_date"] != declaration["payable_date"]):
+        raise ValueError("MAC formula needs directly reviewed completed common-holder terms")
+    total = number(completed["total_dividend_value"], positive=True)
+    cash_fraction = number(completed["no_election_cash_fraction"], positive=True)
+    stock_fraction = number(completed["no_election_stock_fraction"], positive=True)
+    price = number(completed["stock_conversion_price"], positive=True)
+    if (cash_fraction + stock_fraction != 1 or total != number(declaration["total_dividend_value"], positive=True) or
+            cash_fraction != number(declaration["no_election_cash_fraction"], positive=True) or
+            stock_fraction != number(declaration["no_election_stock_fraction"], positive=True)):
+        raise ValueError("MAC completed formula disagrees with the original per-holder declaration")
+    return dict(status="conditional_reported_terms_resolved", event_id="mac_2020", election="no_election",
+        branch="20_percent_cash_80_percent_stock", cash_per_record_share=str(total*cash_fraction),
+        shares_per_record_share=str(total*stock_fraction/price), record_date=declaration["record_date"],
+        payable_date=declaration["payable_date"], historical_known_at=None, actual_delivery_at=None,
+        execution_ready=False, exact_broker_allocation_verified=False, source=source,
+        formula_basis="issuer_reported_no_election_percentages_and_conversion_price",
+        fractional_cash_fixing=None,
+        reason="Conditional reported formula only; ownership, fractional settlement and schedule admission remain unresolved")
+
+
 def compile_schedules(provider_rows, clock, terms_path, split_review_path, resolution_path, mac_review_path,
                       holder_policy=None):
     terms = json.loads(terms_path.read_text(encoding="utf-8"))
@@ -197,5 +228,12 @@ def compile_schedules(provider_rows, clock, terms_path, split_review_path, resol
         execution_ready=False, status="conditional_schedule_not_admitted", source=pin(mac_review_path),
         blockers=["Final stock conversion, holder allocation and fractional settlement terms unresolved",
                   "Conflicting provider rates are not ordinary cash entitlements"]))
+    final_mac = declarations.get("mac_2020_completed")
+    if final_mac is not None:
+        allocation = reported_mac_formula(facts, final_mac, dict(review=pin(resolution_path), fact_id="mac_2020_completed"))
+        schedules[-1].update(stock_conversion_price=final_mac["stock_conversion_price"],
+            conditional_allocations=dict(no_election=allocation), reported_formula_source=allocation["source"],
+            blockers=["Record/ex-date/due-bill ownership and fractional settlement instructions require schedule admission",
+                      "Conflicting provider rates are not ordinary cash entitlements"])
     apply_holder_policy(schedules, holder_policy)
     return schedules
