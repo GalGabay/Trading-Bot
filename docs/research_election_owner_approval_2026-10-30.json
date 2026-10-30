@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "owner_response": "Use documented no-election defaults (Recommended)",
+  "choice": "no_election",
+  "owner_approved": true,
+  "scope": "historical_research_only",
+  "proposal": {
+    "path": "docs/research_election_policy_for_review.md",
+    "sha256": "13c787339945328a709e869a404acf32242721b24dcca086e8d11abdb8956d0a"
+  },
+  "unknown_defaults_may_be_assumed": false,
+  "rounded_allocations_approved": false,
+  "missing_entitlement_may_be_assumed": false,
+  "actual_broker_receipt_may_be_inferred": false,
+  "performance_authorized": false,
+  "paper_authorized": false,
+  "broker_requests_authorized": false,
+  "purchases_usd": 0
+}

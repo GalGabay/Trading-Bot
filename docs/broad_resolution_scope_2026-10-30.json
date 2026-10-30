@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Resolve remaining election ordering, ordinary dividend duplication and split/alias mappings",
+  "max_search_queries": 8,
+  "max_page_opens": 16,
+  "primary_sources_only": true,
+  "purchase_budget_usd": 0,
+  "broker_requests": 0,
+  "max_price_requests": 0,
+  "strategy_runs": 0,
+  "retry_previous_denied_or_timeout_urls": false,
+  "stop_new_requests_on_access_barrier": true,
+  "prior_batches_remain_closed": true,
+  "targets": [
+    "SLG 2020/2021/2022 elections and monthly record dates",
+    "AIV 2020 ordinary cash dividends",
+    "ordinary split ratios/effective sessions",
+    "ticker-only identity changes and incorrect vendor dates"
+  ]
+}

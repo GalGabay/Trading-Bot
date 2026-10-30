@@ -101,3 +101,17 @@ docs/broad_terms_followup_*.json -text
 docs/broad_reconciliation_verification_*.json -text
 docs/research_data/terms_followup_browser_*.txt -text
 docs/research_data/diagnostic_executed_v6/*.py -text
+# Preserve the subsequent conditional schedules and primary action evidence.
+backtesting/corporate_action_terms.py -text
+backtesting/election_schedule.py -text
+docs/broad_resolution_*.json -text
+docs/broad_cash_terms_*.json -text
+docs/broad_corporate_action_review_*.json -text
+docs/broad_election_schedule_inputs_*.json -text
+docs/research_data/resolution_browser_*.txt -text
+docs/research_data/cash_terms_browser_*.txt -text
+docs/research_data/diagnostic_executed_v7/*.py -text
+# Preserve the owner's separately approved historical election rule.
+docs/research_election_policy_for_review.md -text
+docs/research_election_*.json -text
+docs/research_data/diagnostic_executed_v11/*.py -text

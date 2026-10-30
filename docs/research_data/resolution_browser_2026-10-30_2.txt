@@ -1,0 +1,257 @@
+SL Green Realty Corp. Announces Special Dividend and Increase to Ordinary Dividend (https://slgreen.gcs-web.com/node/25696/pdf)
+citeturn123view0 [wordlim: 200] Crawled: last month; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"turn121search12","lineno":null}); Total lines: 47
+L0@P0: SL Green Realty Corp. Announces Special Dividend and Increase to Ordinary Dividend
+L1@P0: December 4, 2020
+L2@P0: Annual Ordinary Dividend Will Increase to $3.64 Per Share
+L3@P0: NEW YORK--(BUSINESS WIRE)--Dec. 4, 2020-- SL Green Realty Corp. (NYSE: SLG), Manhattan’s largest office landlord, announced today that its
+L4@P0: board of directors has increased SL Green’s annual ordinary dividend by 2.8%, to $3.64 per share on its common stock and OP units. The ordinary
+L5@P0: dividend will be paid in cash on a monthly basis. The next ordinary dividend of $0.3033 per share is payable on January 15, 2021 to shareholders of
+L6@P0: record at the close of business on December 15, 2020 (the “Record Date”).
+L7@P0: The Company also announced that, as a result of asset dispositions in 2020, including the previously announced sale of 410 Tenth Avenue, the board
+L8@P0: of directors declared a special dividend with a value of $1.6967 per share, which is payable on January 15, 2021 to shareholders of record on the
+L9@P0: Record Date. Shareholders will, therefore, receive a total dividend of $2.00 per share, representing the sum of the ordinary dividend and the special
+L10@P0: dividend. The special dividend will be paid in the form of SLG common stock, with the number of shares calculated based on the volume weighted
+L11@P0: average trading price of SLG’s common stock between January 5-7, 2021. Shareholders can elect to receive the total dividend in the form of all cash
+L12@P0: or all stock, subject to proration if either option is oversubscribed.
+L13@P0: "All of us at SL Green have worked tirelessly to navigate the unprecedented challenges of the pandemic. As a result of these efforts, we are now in a
+L14@P0: position to not only increase our ordinary dividend, but to also issue a special dividend. We will continue to work aggressively to generate value that
+L15@P0: directly benefits our shareholders,” said Matt DiLiberto, Chief Financial Officer.
+L16@P0: To mitigate the dilutive impact of the stock issued in the special dividend, the board of directors also authorized a reverse stock split, which will be
+L17@P0: effective on January 20, 2021. The split ratio for the reverse stock split will be determined promptly after the close of business on January 7, 2021.
+L18@P0: Additional information about the special dividend and the reverse stock split will be filed by SL Green on a Current Report on Form 8-K, which will be
+L19@P0: available on the Securities and Exchange Commission website at www.sec.gov.
+L20@P0: The board of directors also declared the quarterly dividend on the company’s Series I Preferred Stock for the period October 15, 2020 through and
+L21@P0: including January 14, 2021, of $0.40625 per share, payable in cash, which is the equivalent of an annualized dividend of $1.625 per share. The
+L22@P0: dividend is payable on January 15, 2021 to shareholders of record at the close of business on December 16, 2020.
+L23@P0: About SL Green
+L24@P0: SL Green Realty Corp., an S&P 500 company and Manhattan's largest office landlord, is a fully integrated real estate investment trust, or REIT, that is
+L25@P0: focused primarily on acquiring, managing and maximizing value of Manhattan commercial properties. As of September 30, 2020, SL Green held
+L26@P0: interests in 93 buildings totaling 40.6 million square feet. This included ownership interests in 29.2 million square feet of Manhattan buildings and 10.3
+L27@P0: million square feet securing debt and preferred equity investments.
+L28@P0: Forward Looking Statement
+L29@P0: This press release includes certain statements that may be deemed to be “forward-looking statements” within the meaning of the Private Securities
+L30@P0: Litigation Reform Act of 1995 and are intended to be covered by the safe harbor provisions thereof. All statements, other than statements of historical
+L31@P0: facts, included in this press release that address activities, events or developments that we expect, believe or anticipate will or may occur in the future,
+L32@P0: are forward-looking statements. Forward-looking statements are not guarantees of future performance and we caution you not to place undue reliance
+L33@P0: on such statements. Forward-looking statements are generally identifiable by the use of the words “may,” “will,” “should,” “expect,” “anticipate,”
+L34@P0: “estimate,” “believe,” “intend,” “project,” “continue,” or the negative of these words, or other similar words or terms.
+L35@P0: Forward-looking statements contained in this press release are subject to a number of risks and uncertainties, many of which are beyond our control,
+L36@P0: that may cause our actual results, performance or achievements to be materially different from future results, performance or achievements expressed
+L37@P0: or implied by forward-looking statements made by us. Factors and risks to our business that could cause actual results to differ from those contained in
+L38@P0: the forward-looking statements are described in our filings with the Securities and Exchange Commission. These risks and uncertainties include, but
+L39@P0: are not limited to, potential risks and uncertainties relating to the novel coronavirus (COVID-19).
+L40@P0: SLG-DIV
+L41@P0: Source: SL Green Realty Corp.
+L42@P0: View source version on businesswire.com: https://www.businesswire.com/news/home/20201204005139/en/
+L43@P0: Matt DiLiberto
+L44@P0: Chief Financial Officer
+L45@P0: 212.594.2700
+L46@P0: Source: SL Green Realty Corp.
+--------------------------------------------------------------------------------
+APPLE INC. - 4 FOR 1 STOCK SPLIT FUTURES SYMBOL: AAPL1D (https://infomemo.theocc.com/infomemos?number=47370)
+citeturn123view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"turn120search12","lineno":null}); Total lines: 40
+L0@P0: #47370
+L1@P0: DATE: JULY 31, 2020
+L2@P0: SUBJECT: APPLE INC. - 4 FOR 1 STOCK SPLIT
+L3@P0: FUTURES SYMBOL: AAPL1D
+L4@P0: EX-DATE: 8/31/20
+L5@P0: Apple Inc. (AAPL) has announced a 4 for 1 stock split. The Ex-distribution Date is August 31, 2020. The
+L6@P0: Payable Date is August 28, 2020. The Record Date is August 24, 2020.
+L7@P0: Pursuant to Article XII, Section 3, of OCC's By-Laws, all Apple Inc. futures will be adjusted as follows:
+L8@P0: CONTRACT ADJUSTMENT
+L9@P0: Note: All Apple Inc. (AAPL) futures active at the time of the contract adjustment will be adjusted in a
+L10@P0: similar manner to that of AAPL1D futures.
+L11@P0: Effective Date: August 31, 2020
+L12@P0: Futures Symbols: Unchanged
+L13@P0: Number of Contracts: Quadrupled
+L14@P0: Multiplier: 100 (e.g. 1.00 equals 100.00)
+L15@P0: Settlement Prices: All previous day’s settlement prices shall be adjusted by dividing by 4 and
+L16@P0: rounding to four decimal places.
+L17@P0: For example:
+L18@P0: Futures Symbol Before Ex-Date Start of Business Ex-Date
+L19@P0: AAPL1D $384.76 $96.19
+L20@P0: New Deliverable
+L21@P0: per Contract: 100 Apple Inc. (AAPL) Common Shares
+L22@P0: CUSIP: 037833100
+L23@P0: DISCLAIMER
+L24@P0: This Information Memo provides an unofficial summary of the terms of corporate events affecting listed
+L25@P0: options or futures prepared for the convenience of market participants. OCC accepts no responsibility for
+L26@P0: the accuracy or completeness of the summary, particularly for information which may be relevant to
+L27@P0: investment decisions. Option or futures investors should independently ascertain and evaluate all
+L28@P0-1: information concerning this corporate event(s).The determination to adjust options and the nature of any adjustment is made by OCC pursuant to OCC
+L29@P1: By-Laws, Article VI, Sections 11 and 11A. The determination to adjust futures and the nature of any
+L30@P1: adjustment is made by OCC pursuant to OCC By-Laws, Article XII, Sections 3, 4, or 4A, as applicable. For
+L31@P1: both options and futures, each adjustment decision is made on a case by case basis. Adjustment
+L32@P1: decisions are based on information available at the time and are subject to change as additional
+L33@P1: information becomes available or if there are material changes to the terms of the corporate event(s)
+L34@P1: occasioning the adjustment.
+L35@P1: ALL CLEARING MEMBERS ARE REQUESTED TO IMMEDIATELY ADVISE ALL BRANCH OFFICES
+L36@P1: AND CORRESPONDENTS ON THE ABOVE.
+L37@P1: For questions regarding this memo, call Investor Services at 1-888-678-4667 or email
+L38@P1: investorservices@theocc.com. Clearing Members may contact Member Services at 1-800-544-6091 or,
+L39@P1: within Canada, at 1-800-424-7320, or email memberservices@theocc.com.
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/4977/000000497718000021/aflex991-2018february.htm)
+citeturn123view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn121search5","lineno":null}); Total lines: 31
+L0: EX-99.1 2 aflex991-2018february.htm EXHIBIT 99.1 Exhibit
+L1: 
+L2: 【0†Aflac Incorporated Form 8-K】
+L3: 
+L4: EXHIBIT 99.1
+L5: 
+L6: 【1†Image: g247539tx_pg10.jpg】
+L7: 
+L8: Aflac Incorporated Announces Two-for-One Stock Split in the Form of a
+L9: 
+L10: 100% Stock Dividend Payable on March 16, 2018
+L11: COLUMBUS, Georgia - February 13, 2018 - Aflac Incorporated (NYSE: AFL) announced today that its Board of Directors has declared a two-for-one stock split of the company’s common stock in the form of a 100% stock dividend payable on March 16, 2018 to shareholders of record as of the close of business on March 2, 2018.
+L12: Commenting on the announcement, Aflac Incorporated Chairman and Chief Executive Officer Daniel P. Amos said: “I am pleased with the Board’s action to split Aflac Incorporated’s stock. As you’ll recall, this follows a year of strong share price performance and is on top of our announcement of the Board’s action to approve an increase in the first quarter cash dividend of 15.6%. This is the ninth split of the company’s common stock since listing on the NYSE in 1974 and the first in 17 years.
+L13: This split enhances the liquidity of our shares, which is in addition to our efforts to increase shareholder value.”
+L14: About Aflac
+L15: When a policyholder gets sick or hurt, Aflac pays cash benefits fast. For more than six decades, Aflac insurance policies have given policyholders the opportunity to focus on recovery, not financial stress. In the United States, Aflac is the leader in voluntary insurance sales at the worksite. Through its trailblazing One Day Pay^{SM} initiative, Aflac U.S. can receive, process, approve and disburse payment for eligible claims in one business day.
+L16: In Japan, Aflac is the leading provider of medical and cancer insurance and insures 1 in 4 households. Aflac insurance products help provide protection to more than 50 million people worldwide. For 11 consecutive years, Aflac has been recognized by Ethisphere as one of the World's Most Ethical Companies.
+L17: In 2017, Fortune magazine recognized Aflac as one of the 100 Best Companies to Work for in America for the 19th consecutive year and in 2018 included Aflac on its list of Most Admired Companies for the 17th time. Aflac Incorporated is a Fortune 500 company listed on the New York Stock Exchange under the symbol AFL. To find out more about Aflac and One Day Pay^{SM}, visit aflac.com or aflac.com/espanol.
+L18: Analyst and investor contact - David A. Young, 706.596.3264 or 800.235.2667; FAX: 706.324.6330 or dyoung@aflac.com
+L19: 
+L20: Media contact - Catherine H. Blades, 706.596.3014; FAX: 706.320.2288 or cblades@aflac.com
+L21: 
+L22: Forward-looking Information
+L23: The Private Securities Litigation Reform Act of 1995 provides a “safe harbor” to encourage companies to provide prospective information, so long as those informational statements are identified as forward-looking and are accompanied by meaningful cautionary statements identifying important factors that could cause actual results to differ materially from those included in the forward-looking statements. The company desires to take advantage of these provisions.
+L24: This report contains cautionary statements identifying important factors that could cause actual results to differ materially from those projected herein, and in any other statements made by company officials in communications with the financial community and contained in documents filed with the Securities and Exchange Commission (SEC). Forward-looking statements are not based on historical information and relate to future operations, strategies, financial results or other developments.
+L25: Furthermore, forward-looking information is subject to numerous assumptions, risks and uncertainties. In particular, statements containing words such as “expect,” “anticipate,” “believe,” “goal,” “objective,” “may,” “should,” “estimate,” “intends,” “projects,” “will,” “assumes,” “potential,” “target”, "outlook" or similar words as
+L26: * * *
+L27: 
+L28: well as specific projections of future results, generally qualify as forward-looking. Aflac undertakes no obligation to update such forward-looking statements.
+L29: The company cautions readers that the following factors, in addition to other factors mentioned from time to time, could cause actual results to differ materially from those contemplated by the forward-looking statements: difficult conditions in global capital markets and the economy; exposure to significant interest rate risk; concentration of business in Japan; foreign currency fluctuations in the yen/dollar exchange rate; failure to execute or implement the conversion of the Japan branch to a legal subsidiary; limited availability of acceptable yen-denominated investments; deviations in actual experience from pricing and reserving assumptions; ability to continue to develop and implement improvements in information technology systems; governmental actions for the purpose of stabilizing the financial markets; interruption in telecommunication, information technology and other operational systems, or a failure to maintain the security, confidentiality or privacy of sensitive data residing on such systems; ongoing changes in the Company's industry; failure to comply with restrictions on patient privacy and information security; extensive regulation and changes in law or regulation by governmental authorities; defaults and credit downgrades of investments; ability to attract and retain qualified sales associates and employees; decline in creditworthiness of other financial institutions; subsidiaries' ability to pay dividends to Aflac Incorporated; decreases in the Company's financial strength or debt ratings; inherent limitations to risk management policies and procedures; concentration of the Company's investments in any particular single-issuer or sector; differing judgments applied to investment valuations; ability to effectively manage key executive succession; significant valuation judgments in determination of amount of impairments taken on the Company's investments; catastrophic events including, but not necessarily limited to, epidemics, pandemics, tornadoes, hurricanes, earthquakes, tsunamis, war or other military action, terrorism or other acts of violence, and damage incidental to such events; changes in U.S.
+L30: and/or Japanese accounting standards; loss of consumer trust resulting from events external to the Company's operations; increased expenses and reduced profitability resulting from changes in assumptions for pension and other postretirement benefit plans; level and outcome of litigation; and failure of internal controls or corporate governance policies and procedures.
+--------------------------------------------------------------------------------
+Stock Split Information – NextEra Energy, Inc. (https://www.investor.nexteraenergy.com/stock-information/stock-split-information)
+citeturn123view3 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"turn121search0","lineno":null}); Total lines: 127
+L0: 【0†iframe†www.googletagmanager.com】 【1†iframe†www.googletagmanager.com】
+L1: 
+L2: [Input]
+L3: 
+L4: [Input] [Input] [Input]
+L5: 
+L6: 【2†skip to main content】
+L7: 
+L8: [Input]
+L9: 
+L10: [Input]
+L11: 
+L12: 
+L13: 
+L14: Search
+L15: 
+L16:   * 【3†About Us†www.nexteraenergy.com】
+L17:   * 【4†Investor Relations】
+L18:   * 【5†Newsroom†newsroom.nexteraenergy.com】
+L19:   * 【6†Careers†jobs.nexteraenergy.com】
+L20:   * 【7†Company Overview】
+L21:   * 【8†News & Events】
+L22:     * 【9†News Releases】
+L23:     * 【10†Events & Presentations】
+L24:   * 【11†Reports & Filings】
+L25:     * 【12†Quarterly Financial Results】
+L26:     * 【13†SEC Filings】
+L27:     * 【14†Annual Reports】
+L28:   * 【15†Stock Information】
+L29:     * 【15†Stock Chart】
+L30:     * 【16†Total Return Calculator】
+L31:     * 【17†Historical Price Lookup】
+L32:     * Stock Split Information
+L33:     * 【18†Dividend Information】
+L34:     * 【19†Analyst Coverage】
+L35:     * 【20†Financial Tear Sheet†nextera-energy.dfs.investis.com】
+L36:   * 【21†Investor Materials】
+L37:     * 【21†Supplemental Resources】
+L38:     * 【22†Shareholder Resources】
+L39:   * 【23†Fixed Income Investors】
+L40:     * 【23†Financial Policy】
+L41:     * 【24†Financial Strength】
+L42:     * 【25†Funding and Capital Structure】
+L43:     * 【26†Cash Flow Quality and Leverage】
+L44:     * 【27†Liquidity】
+L45:     * 【28†Download Library】
+L46:   * 【29†Corporate Governance】
+L47:     * 【29†Governance Documents】
+L48:     * 【30†Committee Composition】
+L49:     * 【31†Board of Directors】
+L50:     * 【32†Corporate Political Engagement】
+L51:     * 【33†Officers】
+L52:   * 【34†Sustainability】
+L53:     * 【35†Sustainability Resources】
+L54:   * 【36†Contact Info】
+L55:     * 【36†Contact Investor Relations】
+L56:     * 【37†FAQs】
+L57:     * 【38†Email Alerts】
+L58:   * 【7†Company Overview】
+L59:   * 【8†News & Events】
+L60:     * 【9†News Releases】
+L61:     * 【10†Events & Presentations】
+L62:   * 【11†Reports & Filings】
+L63:     * 【12†Quarterly Financial Results】
+L64:     * 【13†SEC Filings】
+L65:     * 【14†Annual Reports】
+L66:   * 【15†Stock Information】
+L67:     * 【15†Stock Chart】
+L68:     * 【16†Total Return Calculator】
+L69:     * 【17†Historical Price Lookup】
+L70:     * Stock Split Information
+L71:     * 【18†Dividend Information】
+L72:     * 【19†Analyst Coverage】
+L73:     * 【20†Financial Tear Sheet†nextera-energy.dfs.investis.com】
+L74:   * 【21†Investor Materials】
+L75:     * 【21†Supplemental Resources】
+L76:     * 【22†Shareholder Resources】
+L77:   * 【23†Fixed Income Investors】
+L78:     * 【23†Financial Policy】
+L79:     * 【24†Financial Strength】
+L80:     * 【25†Funding and Capital Structure】
+L81:     * 【26†Cash Flow Quality and Leverage】
+L82:     * 【27†Liquidity】
+L83:     * 【28†Download Library】
+L84:   * 【29†Corporate Governance】
+L85:     * 【29†Governance Documents】
+L86:     * 【30†Committee Composition】
+L87:     * 【31†Board of Directors】
+L88:     * 【32†Corporate Political Engagement】
+L89:     * 【33†Officers】
+L90:   * 【34†Sustainability】
+L91:     * 【35†Sustainability Resources】
+L92:   * 【36†Contact Info】
+L93:     * 【36†Contact Investor Relations】
+L94:     * 【37†FAQs】
+L95:     * 【38†Email Alerts】
+L96: ## Historical Stock Splits
+L97: 
+L98: NextEra Energy, Inc. Common Stock (Formerly FPL Group, Inc.)
+L99: ---
+L100: 06/13/1955  | 2 for 1
+L101: 06/01/1959  | 2 for 1
+L102: 06/05/1972  | 2 for 1
+L103: 01/29/1985  | 2 for 1
+L104: 03/15/2005  | 2 for 1
+L105: 10/26/2020   | 4 for 1
+L106: 
+L107: IR Contacts
+L108: 
+L109: Access IR contact details to get in touch.
+L110: 
+L111: 【36†LEARN MORE】
+L112: 
+L113: Email Alerts
+L114: 
+L115: Receive SEC filings, Events, Press Releases and Stock Price Alerts.
+L116: 
+L117: 【38†SIGN UP】
+L118: 
+L119:   * 【39†TERMS & CONDITIONS】
+L120:   * 【40†PRIVACY POLICY】
+L121:   * 【41†SAFETY POLICY】
+L122: Copyright © 2026 NextEra Energy, Inc. All rights reserved.
+L123: 
+L124: 【42†Delivered by IDX^{™}†www.idx.inc】
+L125: 
+L126: 【43†Image: Powered by Sitecore】
+

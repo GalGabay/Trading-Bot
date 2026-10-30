@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Review five previously listed primary cash-merger notices; do not retry the denied RTN/Ball/Bayer URLs",
+  "max_page_opens": 5,
+  "max_search_queries": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "stop_new_requests_on_access_barrier": true,
+  "prior_batches_remain_closed": true,
+  "documents": [
+    {
+      "id": "old_xl",
+      "url": "https://www.sec.gov/Archives/edgar/data/875159/000087515918000068/axaclosing8-k.htm",
+      "targets": [
+        "old_xl"
+      ],
+      "required_terms": [
+        "57.60"
+      ]
+    },
+    {
+      "id": "old_rht",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000095014219001515/eh1900893_8k.htm",
+      "targets": [
+        "old_rht"
+      ],
+      "required_terms": [
+        "190"
+      ]
+    },
+    {
+      "id": "old_nlsn",
+      "url": "https://www.nielsen.com/news-center/2022/nielsen-announces-closing-of-transaction-with-evergreen-and-brookfield-led-consortium/",
+      "targets": [
+        "old_nlsn"
+      ],
+      "required_terms": [
+        "28"
+      ]
+    },
+    {
+      "id": "old_csra",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312518106365/d512528d8k.htm",
+      "targets": [
+        "old_csra"
+      ],
+      "required_terms": [
+        "41.25"
+      ]
+    },
+    {
+      "id": "old_mon",
+      "url": "https://www.sec.gov/Archives/edgar/data/1110783/000119312518186836/d602943dex991.htm",
+      "targets": [
+        "old_mon"
+      ],
+      "required_terms": [
+        "128"
+      ]
+    }
+  ]
+}

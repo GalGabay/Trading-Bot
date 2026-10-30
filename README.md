@@ -4,11 +4,15 @@ An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
 **Current broad-input status, 2026-10-30:**
-[Reconciliation tests and event terms](docs/broad_reconciliation_tests_and_terms_2026-10-30.md)
-add tested component handling, primary-supported PHIN/KLG ratios and explicit
-warmup/context routing. Step 1 remains open: 228 overlapping data gates
+[Election and identity resolution](docs/broad_resolution_results_2026-10-30.md)
+adds conditional schedules, reviewed split/alias instructions and cash-merger
+receivable plans. Step 1 remains open: 191 overlapping data gates
 remain before Step 2 simulator integration. Research settings are approved;
 there are no new broader-basket return results or purchases.
+
+The [historical no-election policy is now approved](docs/research_election_policy_approved_2026-10-30.md)
+and applied to preparation. Unknown defaults, rounded allocations and missing
+entitlement terms remain blocked; no further owner election choice is pending.
 
 **Latest input preparation, 2026-10-29:**
 [Step 1 price reconstruction](docs/broad_input_preparation_results.md) retains

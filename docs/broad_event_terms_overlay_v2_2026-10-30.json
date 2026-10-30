@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "path": "docs/broad_corrected_historical_input_spec.json",
+    "sha256": "f15e1ffd61fe211ad1ff4c37c488b0ff5de41c5a7d21ce6c98455863f2465bc1"
+  },
+  "provider_source": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/provider_event_roles.csv",
+    "sha256": "66f4fafc17b147f29a9f583c371440daff41013d871cb01cb44f44b5cada98dd"
+  },
+  "sources": [
+    {
+      "id": "followup",
+      "evidence": {
+        "path": "docs/broad_terms_followup_facts_2026-10-30.json",
+        "sha256": "a4c5edb6131d2d8b14517c60a5d651ca75efebde7b06e15017da2456a41d835e"
+      }
+    },
+    {
+      "id": "cash_followup",
+      "evidence": {
+        "path": "docs/broad_cash_terms_facts_2026-10-30.json",
+        "sha256": "475980c91ba55d7437796119d0762f4dc81f6d3c47fd0d22b38740ed3dc6ddae"
+      }
+    }
+  ],
+  "material_decisions": [
+    {
+      "event_id": "k_distribution",
+      "parent_id": "COHORT-2016-0262",
+      "economic_date": "2023-10-02",
+      "kind": "primary_ratio_reviewed_other_terms_unresolved",
+      "source_ids": [
+        "followup"
+      ],
+      "child_id": "COHORT-2016-0262.KLG",
+      "shares_per_parent": "1/4",
+      "primary_fact_id": "klg_completion"
+    },
+    {
+      "event_id": "apd_warmup_distribution",
+      "parent_id": "COHORT-2016-0014",
+      "economic_date": "2016-10-01",
+      "kind": "uninvested_warmup_event",
+      "source_ids": [],
+      "reason": "No portfolio exists before membership availability; require feature reset"
+    },
+    {
+      "event_id": "hcp_warmup_distribution",
+      "parent_id": "COHORT-2016-0227",
+      "economic_date": "2016-10-31",
+      "kind": "uninvested_warmup_event",
+      "source_ids": [],
+      "reason": "No portfolio exists before membership availability; require feature reset"
+    },
+    {
+      "event_id": "yum_warmup_distribution",
+      "parent_id": "COHORT-2016-0503",
+      "economic_date": "2016-10-31",
+      "kind": "uninvested_warmup_event",
+      "source_ids": [],
+      "reason": "No portfolio exists before membership availability; require feature reset"
+    },
+    {
+      "event_id": "bwa_phin_distribution",
+      "parent_id": "COHORT-2016-0140.BWA",
+      "economic_date": "2023-07-03",
+      "kind": "primary_ratio_reviewed_other_terms_unresolved",
+      "source_ids": [
+        "followup"
+      ],
+      "child_id": "COHORT-2016-0140.PHIN",
+      "shares_per_parent": "1/5",
+      "primary_fact_id": "phin_ratio"
+    },
+    {
+      "event_id": "cash_XL",
+      "parent_id": "COHORT-2016-0500",
+      "economic_date": "2018-09-12",
+      "kind": "primary_cash_consideration_reviewed",
+      "source_ids": [
+        "cash_followup"
+      ],
+      "primary_fact_id": "old_xl",
+      "cash_per_parent": "57.60",
+      "first_nontradeable_session": "2018-09-12"
+    },
+    {
+      "event_id": "cash_RHT",
+      "parent_id": "COHORT-2016-0389",
+      "economic_date": "2019-07-09",
+      "kind": "primary_cash_consideration_reviewed",
+      "source_ids": [
+        "cash_followup"
+      ],
+      "primary_fact_id": "old_rht",
+      "cash_per_parent": "190",
+      "first_nontradeable_session": "2019-07-09"
+    },
+    {
+      "event_id": "cash_NLSN",
+      "parent_id": "COHORT-2016-0333",
+      "economic_date": "2022-10-11",
+      "kind": "primary_cash_consideration_reviewed",
+      "source_ids": [
+        "cash_followup"
+      ],
+      "primary_fact_id": "old_nlsn",
+      "cash_per_parent": "28",
+      "first_nontradeable_session": "2022-10-12"
+    },
+    {
+      "event_id": "cash_MON",
+      "parent_id": "COHORT-2016-0314",
+      "economic_date": "2018-06-07",
+      "kind": "primary_cash_consideration_reviewed",
+      "source_ids": [
+        "cash_followup"
+      ],
+      "primary_fact_id": "old_mon",
+      "cash_per_parent": "128",
+      "first_nontradeable_session": "2018-06-07"
+    }
+  ],
+  "provider_context_decisions": [
+    {
+      "instrument_id": "COHORT-2016-0321.VTRS",
+      "event_id": "c3cc5b01-b7ac-41a4-b130-9f09f3e46ec9",
+      "source_symbol": "PFE",
+      "received_symbol": "VTRS",
+      "reason": "Incoming child-query record is not another entitlement for owning the child; parent event remains independently gated"
+    },
+    {
+      "instrument_id": "COHORT-2016-0262.KLG",
+      "event_id": "991848a6-eee7-43ab-80fc-6559343d02f1",
+      "source_symbol": "K",
+      "received_symbol": "KLG",
+      "reason": "Incoming child-query record is not another entitlement for owning the child; parent event remains independently gated"
+    },
+    {
+      "instrument_id": "COHORT-2016-0140.PHIN",
+      "event_id": "31a6f13d-f0e9-4e3e-b3a9-418f0c9f6d49",
+      "source_symbol": "BWA",
+      "received_symbol": "PHIN",
+      "reason": "Incoming child-query record is not another entitlement for owning the child; parent event remains independently gated"
+    }
+  ],
+  "execution_ready": false,
+  "performance_authorized": false
+}

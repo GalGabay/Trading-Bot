@@ -1,0 +1,344 @@
+Meta - Meta Platforms, Inc. to Change Ticker Symbol to 'META' on June 9 (https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx)
+citeturn122view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx","lineno":null}); Total lines: 115
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: 【0†Meta Investor Relations】
+L5: 
+L6: [Input] [Input]
+L7: 
+L8: [Input] [Input]
+L9:   * 【0†Home】
+L10:     * 【1†Company Info†about.meta.com】
+L11:     * 【2†Financials】
+L12:       * 【3†Quarterly Earnings】
+L13:       * 【4†Annual Reports】
+L14:       * 【5†SEC Filings】
+L15:     * 【6†Annual Meeting】
+L16:     * 【7†Press Releases】
+L17:     * 【8†Investor Events】
+L18:       * 【9†Upcoming Events】
+L19:       * 【10†Past Events】
+L20:     * 【11†Stock Info】
+L21:       * 【12†Stock Data】
+L22:       * 【13†Stock Chart】
+L23:       * 【14†Historical Price Look Up】
+L24:       * 【15†Investment Calculator】
+L25:       * 【16†Analyst Coverage】
+L26:     * 【17†Responsible Business Practices】
+L27:     * 【18†Leadership & Governance】
+L28:       * 【19†Governance Documents】
+L29:       * 【20†Management】
+L30:       * 【21†Board of Directors】
+L31:       * 【22†Committee Composition】
+L32:       * 【23†Contact the Board】
+L33:   * 【0†Home】
+L34:     * 【1†Company Info†about.meta.com】
+L35:     * 【2†Financials】
+L36:       * 【3†Quarterly Earnings】
+L37:       * 【4†Annual Reports】
+L38:       * 【5†SEC Filings】
+L39:     * 【6†Annual Meeting】
+L40:     * 【7†Press Releases】
+L41:     * 【8†Investor Events】
+L42:       * 【9†Upcoming Events】
+L43:       * 【10†Past Events】
+L44:     * 【11†Stock Info】
+L45:       * 【12†Stock Data】
+L46:       * 【13†Stock Chart】
+L47:       * 【14†Historical Price Look Up】
+L48:       * 【15†Investment Calculator】
+L49:       * 【16†Analyst Coverage】
+L50:     * 【17†Responsible Business Practices】
+L51:     * 【18†Leadership & Governance】
+L52:       * 【19†Governance Documents】
+L53:       * 【20†Management】
+L54:       * 【21†Board of Directors】
+L55:       * 【22†Committee Composition】
+L56:       * 【23†Contact the Board】
+L57:   * 【0†Home】
+L58:     * 【1†Company Info†about.meta.com】
+L59:     * 【2†Financials】
+L60:       * 【3†Quarterly Earnings】
+L61:       * 【4†Annual Reports】
+L62:       * 【5†SEC Filings】
+L63:     * 【6†Annual Meeting】
+L64:     * 【7†Press Releases】
+L65:     * 【8†Investor Events】
+L66:       * 【9†Upcoming Events】
+L67:       * 【10†Past Events】
+L68:     * 【11†Stock Info】
+L69:       * 【12†Stock Data】
+L70:       * 【13†Stock Chart】
+L71:       * 【14†Historical Price Look Up】
+L72:       * 【15†Investment Calculator】
+L73:       * 【16†Analyst Coverage】
+L74:     * 【17†Responsible Business Practices】
+L75:     * 【18†Leadership & Governance】
+L76:       * 【19†Governance Documents】
+L77:       * 【20†Management】
+L78:       * 【21†Board of Directors】
+L79:       * 【22†Committee Composition】
+L80:       * 【23†Contact the Board】
+L81: 【7†View all Press Releases】
+L82: ### Meta Platforms, Inc. to Change Ticker Symbol to 'META' on June 9
+L83: 
+L84: May 31, 2022
+L85: MENLO PARK, Calif., May 31, 2022 /PRNewswire/ -- Meta Platforms, Inc. (Nasdaq: FB) today announced that its Class A common stock will begin trading on NASDAQ under the ticker symbol 'META' prior to market open on June 9, 2022. This will replace the company's current ticker symbol 'FB', which has been used since its initial public offering in 2012. The new ticker symbol aligns with the company's rebranding from Facebook to Meta, announced on October 28, 2021.
+L86: No action by the company's shareholders is required with respect to the ticker symbol change. The company's Class A common stock will continue to be listed on NASDAQ and its CUSIP number will remain unchanged.
+L87: About Meta
+L88: Meta builds technologies that help people connect, find communities, and grow businesses. When Facebook launched in 2004, it changed the way people connect. Apps like Messenger, Instagram and WhatsApp further empowered billions around the world. Now, Meta is moving beyond 2D screens toward immersive experiences like augmented and virtual reality to help build the next evolution in social technology.
+L89: 
+L90: Contacts
+L91: Investors:
+L92: Deborah Crawford
+L93: investor@fb.com / investor.fb.com
+L94: Press:
+L95: Ryan Moore
+L96: press@fb.com / about.fb.com/news/
+L97: 
+L98: 【24†Image: Cision†c212.net】 View original content to download multimedia:【25†https://www.prnewswire.com/news-releases/meta-platforms-inc-to-change-ticker-symbol-to-meta-on-june-9-301558287.html†www.prnewswire.com】
+L99: 
+L100: SOURCE Meta
+L101: 
+L102: 【7†View all Press Releases】
+L103: # Learn More
+L104: 
+L105:   *   *   *   *   *   * 【26†About†about.meta.com】
+L106:   * 【27†Create a page†www.facebook.com】
+L107:   * 【28†Careers†www.metacareers.com】
+L108:   * 【29†Privacy†www.facebook.com】
+L109:   * 【30†Terms†www.meta.com】
+L110:   * 【31†Help†www.facebook.com】
+L111: 
+L112: © Meta 2025
+L113: 
+L114: [Input] [Input]
+--------------------------------------------------------------------------------
+Fiserv Completes Listing Transfer to the New York Stock Exchange - Fiserv, Inc. (https://investors.fiserv.com/news-releases/news-release-details/fiserv-completes-listing-transfer-new-york-stock-exchange)
+citeturn122view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://investors.fiserv.com/news-releases/news-release-details/fiserv-completes-listing-transfer-new-york-stock-exchange","lineno":null}); Total lines: 93
+L0:   * 【0†Stock】
+L1:     * 【0†Stock Quote & Chart】
+L2:     * 【1†Historical Price Lookup】
+L3:     * 【2†Analyst Coverage】
+L4: 
+L5:   * 【3†Corporate Governance】
+L6:     * 【3†Documents & Charters】
+L7:     * 【4†Board of Directors】
+L8:     * 【5†Executive Leadership†www.fiserv.com】
+L9:     * 【6†Committee Composition】
+L10:   * 【7†Financial Information】
+L11:     * 【7†SEC Filings】
+L12:     * 【8†Quarterly Results】
+L13:     * 【9†Annual Reports】
+L14:     * 【10†Financial Fundamentals】
+L15:       * 【10†Snapshot】
+L16:       * 【11†Trading Statistics】
+L17:       * 【12†Balance Sheet】
+L18:       * 【13†Income Statement】
+L19:       * 【14†Cash Flow】
+L20:       * 【15†Ratios】
+L21: 
+L22: 【16†Image】
+L23: # Release Details
+L24: ##
+L25: 
+L26: Fiserv Completes Listing Transfer to the New York Stock Exchange
+L27: 
+L28: June 7, 2023
+L29: 
+L30: 【17†PDF Version】
+L31: 
+L32: 【18†PDF Spanish Version】
+L33: 
+L34: Now trading under ticker symbol “FI”
+L35: 
+L36: New ticker celebrates company’s commitment to leading fintech innovation
+L37: BROOKFIELD, Wis.--(BUSINESS WIRE)--Jun. 7, 2023-- 【19†Fiserv, Inc.†cts.businesswire.com】 (NYSE: FI), a leading global provider of payments and financial services technology solutions, announced today that it has completed the transfer of its stock exchange listing to the New York Stock Exchange. Effective today the company begins trading under the ticker symbol “FI.” In celebration of the transfer, representatives of Fiserv will ring the NYSE Opening Bell at 9:30 a.m.
+L38: ET, which will be broadcast on 【20†https://www.nyse.com/bell†cts.businesswire.com】.
+L39: “To lead in fintech today means not just enabling commerce and money movement, but disrupting on behalf of, not in place of, its long-standing participants. Our decision to transfer to the NYSE and introduce a new ticker – FI – is a signal and symbol of our leadership position in fintech,” said Frank Bisignano, Chairman, President and Chief Executive Officer of Fiserv.
+L40: “Our focus on clients through innovation, talent, and investment has enabled us to drive sustained growth, as we reach more than 100 countries and serve nearly 100% of U.S. households.”
+L41: “We’re thrilled to welcome Fiserv, an established leader and trailblazer in fintech and payments, as the newest member of our NYSE community,” said Lynn Martin, NYSE President. “Fiserv joins our community of innovators, icons and disruptors, who routinely set the pace in advancing tech-driven innovation across the globe.”
+L42: To mark its initial collaboration with the NYSE, this summer, Fiserv will publish the first Fiserv Small Business Index^{SM}, a monthly snapshot of consumer spending at small businesses with both cards and cash, online and in store. Combining Fiserv data with NYSE indexing expertise will enable new insights to those with a stake in the future of small business, including financial institutions, policy makers, investors, market researchers and businesses of all sizes.
+L43: On June 5, 2023, Fiserv was named to the FORTUNE^{®} 500 for the eighth consecutive year. The ranking of 230 for 2023 is based on 2022 company revenue of more than $17 billion. Earlier this year, Fiserv was also 【21†recognized†cts.businesswire.com】 for its ability to inspire and deliver innovation on behalf of its clients with inclusion in Fortune^{®} America’s Most Innovative Companies, which takes a holistic view of a company’s focus on innovation.
+L44: Companies were chosen based on surveys of employees and experts in various fields, and an independent analysis of the quantity and value of the company’s patents.
+L45: In a world moving faster than ever before, Fiserv helps clients deliver solutions in step with the way people live and work today – financial services at the speed of life. Learn more at 【22†fiserv.com†cts.businesswire.com】.
+L46: 
+L47: About Fiserv
+L48: Fiserv, Inc. (NYSE: FI), a Fortune 500 company, aspires to move money and information in a way that moves the world.
+L49: As a global leader in payments and financial technology, the company helps clients achieve best-in-class results through a commitment to innovation and excellence in areas including account processing and digital banking solutions; card issuer processing and network services; payments; e-commerce; merchant acquiring and processing; and the Clover^{®} cloud-based point-of-sale and business management platform. Fiserv is a member of the S&P 500^{®} Index and one of Fortune^{®} World’s Most Admired Companies™.
+L50: Visit 【23†fiserv.com†cts.businesswire.com】 and 【24†follow on social media†cts.businesswire.com】 for more information and the latest company news.
+L51: FISV-G
+L52: 
+L53: 【25†Image†cts.businesswire.com】
+L54: 
+L55: View source version on 【26†businesswire.com†businesswire.com】: 【27†https://www.businesswire.com/news/home/20230607005525/en/†www.businesswire.com】
+L56: 
+L57: Media Relations:
+L58: Britt Zarling
+L59: Corporate Communications
+L60: 414-526-3107
+L61: britt.zarling@fiserv.com
+L62: 
+L63: Additional Contact:
+L64: Julie Chariell
+L65: Investor Relations
+L66: 212-515-0278
+L67: julie.chariell@fiserv.com
+L68: 
+L69: Source: Fiserv, Inc.
+L70: ## Investor Contact
+L71: 
+L72: drafts investor.relations@fiserv.com
+L73: 
+L74: ## Email Alerts
+L75: 
+L76: Email Address*
+L77: 
+L78: [Input: ]
+L79: 
+L80: [Button: Submit]
+L81: 
+L82: © 2026 Fiserv, Inc.
+L83: 
+L84: |
+L85: 
+L86:   * 【28†Site Map】
+L87: 
+L88: Search Investors
+L89: 
+L90: [Input: Search]
+L91: 
+L92: [Button: Submit]
+--------------------------------------------------------------------------------
+Lumen - CenturyLink Transforms, Rebrands as Lumen® (https://ir.lumen.com/news/news-details/2020/CenturyLink-Transforms-Rebrands-as-Lumen/default.aspx)
+citeturn122view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://ir.lumen.com/news/news-details/2020/CenturyLink-Transforms-Rebrands-as-Lumen/default.aspx","lineno":null}); Total lines: 124
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: 【0†View All News】
+L5: ### CenturyLink Transforms, Rebrands as Lumen®
+L6: 
+L7: September 14, 2020
+L8: 
+L9: With a New Brand Name and Purpose, Lumen is Ready to Enable "Amazing Things" through its technology platform
+L10: DENVER, Sept. 14, 2020 /PRNewswire/ -- CenturyLink has a new brand name and bold new purpose. As Lumen Technologies, or simply Lumen, the company will help lead enterprises through the challenges and opportunities of the 4th Industrial Revolution – a time when smart, connective devices are everywhere. Lumen® brings a new focus to how it views the marketplace and the world with the purpose to further human progress through technology.
+L11: Experience the interactive Multichannel News Release here: 【1†https://www.multivu.com/players/English/8524356-centurylink-rebrands-as-lumen/†c212.net】
+L12: 
+L13: The 4th Industrial Revolution represents the latest technological shift to change how everyone lives, works and thrives. At its core, this new age requires companies to effectively acquire, analyze and act upon their data to stay ahead of the curve and to be competitive.
+L14: Lumen's combination of global technology infrastructure, powerful business solutions and industry-leading services creates the platform to help our customers excel in this new industrial age and produce amazing things.
+L15: 
+L16: Lumen president and CEO Jeff Storey comments on new brand name, new purpose:
+L17: "Our people are dedicated to furthering human progress through technology. Lumen is all about enabling the amazing potential of our customers, by utilizing our technology platform, our people, and our relationships with customers and partners."
+L18: 
+L19: Hear from Jeff Storey: 【2†https://news.lumen.com/jeff-storey-introduces-lumen†c212.net】
+L20: The Platform for Amazing Things
+L21: The Lumen Platform helps our customers capitalize on emerging technologies of the 4th Industrial Revolution to deliver amazing things such as smart cities, retail and industrial robotics, real-time virtual collaboration and automated factories, as well as power today's business applications that require high-performance networking and security.
+L22: The platform brings together our highly interconnected global fiber network infrastructure, edge cloud capabilities, and security and communication and collaboration solutions to deliver a fast and secure foundation for the application and data services vital to our customers' success.
+L23: Lumen executive vice president and chief marketing officer Shaun Andrews comments on the platform:
+L24: 
+L25: "All of our futures will be driven by smart things, applications and digital services that use data for transformational purposes. To serve this colossal need and further human progress through technology, we have launched Lumen and are delivering our technology through the Lumen Platform, a platform for amazing things."
+L26: Hear from Shaun Andrews: 【3†https://news.lumen.com/shaun-andrews-platform-for-amazing-things†c212.net】
+L27: 
+L28: Lumen's worldwide fiber network infrastructure and complementary capabilities deliver unique competitive advantages to customers in four key areas:
+L29:   * Adaptive Networking: Lumen provides hybrid network solutions built to quickly respond to customers' ever-changing data and application needs.
+L30:   * Edge Cloud & IT Agility: Lumen enhances application experiences by delivering low-latency, high performance data access and by moving data and workloads closer to where customers need them.
+L31:   * Connected Security: Lumen offers global threat intelligence, network-based security controls and deep security expertise to help customers protect their data and applications against constantly evolving threats.
+L32:   * Communications & Collaboration: Lumen's communication and collaboration solutions make it easy for people to stay connected, productive and engaged wherever they are located.
+L33: Lumen Commits to Residential and Small Business Customers with Launch of Quantum Fiber
+L34: CenturyLink, with its strong heritage, will remain as a trusted brand for residential and small business customers over traditional networks. In addition, Lumen is pleased to announce Quantum Fiber, a fully digital platform for delivering fiber-based products and services to residents and small businesses. Quantum Fiber will use the power of Lumen's extensive fiber network and infrastructure.
+L35: Learn more about Quantum Fiber: 【4†https://news.lumen.com/FAQs†c212.net】
+L36: 
+L37: Lumen Financial Information
+L38: The company does not intend to change its financial strategy or financial reporting as a result of this announcement. Effective with the opening of the trading day on Sept. 18, 2020, the company stock ticker will change from CTL to LUMN.
+L39: Legal Name Change
+L40: The legal name of CenturyLink, Inc. is expected to be formally changed to Lumen Technologies, Inc. upon the satisfaction of all legal and regulatory requirements.
+L41: About Lumen
+L42: Lumen is guided by our belief that humanity is at its best when technology advances the way we live and work. With 450,000 route fiber miles serving customers in more than 60 countries, we deliver the fastest, most secure global platform for applications and data to help businesses, government and communities deliver amazing experiences.
+L43: Learn more about Lumen's network, edge cloud, security and communication and collaboration solutions and our purpose to further human progress through technology at news.lumen.com, LinkedIn: /lumentechnologies, Twitter: @lumentechco, Facebook: /lumentechnologies, Instagram: @lumentechnologies and YouTube: /lumentechnologies.
+L44: 
+L45: Lumen and Lumen Technologies are registered trademarks of Lumen Technologies, LLC in the United States. Lumen Technologies, LLC is a wholly-owned affiliate of CenturyLink, Inc.
+L46: Forward Looking Statements
+L47: Except for historical and factual information, the matters set forth in this release identified by words such as "believe," "plans," "will" and similar expressions are forward-looking statements as defined by the federal securities laws, and are subject to the "safe harbor" protections thereunder.
+L48: These forward-looking statements are not guarantees of future results and are based on current expectations only, are inherently speculative, and are subject to a number of assumptions, risks and uncertainties, many of which are beyond our control. Actual events and results may differ materially from those anticipated, estimated, projected or implied by us in those statements if one or more of these risks or uncertainties materialize, or if underlying assumptions prove incorrect.
+L49: Factors that could affect actual results include but are not limited to: uncertainties due to events outside of our control regarding the impact of COVID-19 health and economic disruptions; the effects of competition from a wide variety of competitive providers; our ability to attain our key operating imperatives, including simplifying and consolidating our network, simplifying and automating our service support systems and strengthening our relationships with customers; our ability to safeguard our network; possible changes in the demand for our products and services; our ability to implement our operating plans and corporate strategies; our ability to effectively retain and hire key personnel; our ability to meet the terms and conditions of our debt obligations and covenants; our ability to maintain favorable relations with our key business partners, suppliers, vendors, landlords and financial institutions; our ability to obtain approvals to implement our above-referenced name change; and other risks set forth or referenced in our filings with the U.S.
+L50: Securities and Exchange Commission (the "SEC"). For all the reasons set forth above and in our SEC filings, you are cautioned not to unduly rely upon our forward-looking statements, which speak only as of the date made. We undertake no obligation to publicly update or revise any forward-looking statements for any reason, whether as a result of new information, future events or developments, changed circumstances, or otherwise.
+L51: Furthermore, any information about our intentions contained in any of our forward-looking statements reflects our intentions as of the date of such forward-looking statement, and is based upon, among other things, existing regulatory, technological, industry, competitive, economic and market conditions, and our assumptions as of such date. We may change our intentions, strategies or plans without notice at any time and for any reason.
+L52: 
+L53: 
+L54: 
+L55: 
+L56: 【5†Image: Lumen’s global network infrastructure is connecting customers in more than 60 countries around the world.†www.multivu.com】
+L57: 
+L58: 
+L59: 
+L60: 【6†Image: See what more than 1,200 global executives had to say about the key forces shaping the 4th Industrial Revolution and driving its winners.†www.multivu.com】
+L61: 
+L62: 
+L63: 
+L64: 【7†Image: Lumen helps businesses drive amazing outcomes.†www.multivu.com】
+L65: 【8†Image: Cision†c212.net】 View original content:【9†http://www.prnewswire.com/news-releases/centurylink-transforms-rebrands-as-lumen-301130026.html†www.prnewswire.com】
+L66: 
+L67: SOURCE Lumen Technologies
+L68: 
+L69: 【0†View All News】
+L70: ## Investor Contact
+L71: 
+L72: investor.relations@lumen.com
+L73: 
+L74: 
+L75: 
+L76: ## Quick Links
+L77: 
+L78:   * 【10†SEC Filings opens in new window】
+L79: 
+L80:   * 【11†Investor FAQs opens in new window】
+L81: 
+L82:   * 【12†Information Request Form opens in new window】
+L83: ## Investor Email Alerts
+L84: 
+L85: Personal Information.
+L86: 
+L87: Email Address *Required [Input: Enter Your Email Address] Email Address is required. Email Address is invalid.
+L88: 
+L89: Investor Alert Options *
+L90: 
+L91:   * [Input]News
+L92:   * [Input]Quarterly Reports
+L93:   * [Input]Annual Reports
+L94:   * [Input]SEC Filings
+L95:   * [Input]End of Day Stock Quote
+L96:   * [Input]Events & Presentations
+L97: Investor Alert Options is required.
+L98: 
+L99: [Input]
+L100: 
+L101: The captcha test has failed. Please try again. [Button: Submit]
+L102: 
+L103: 【13†Unsubscribe】
+L104: 【14†Image: Lumen, Logo†s21.q4cdn.com】
+L105: 
+L106: © 2026 Lumen Technologies - All rights reserved
+L107: 
+L108: 【15†Powered By Q4 Inc. 5.190.1.9 (opens in new window)†www.q4inc.com】
+L109: 
+L110:   * 【16†Privacy opens in new window†www.lumen.com】
+L111: 
+L112:   * |
+L113:   * 【17†Legal opens in new window†www.lumen.com】
+L114: 
+L115:   * |
+L116:   * 【18†Cookie Settings opens in new window】
+L117: 
+L118:   * |
+L119:   * 【19†Site Map opens in new window】
+L120: 
+L121: [Input] [Input]
+L122: 
+L123: [Input] [Input]
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn122view3 [wordlim: 200] Source: open({"ref_id":"turn120search5","lineno":null}); 
+Failed to fetch https://slgreen.gcs-web.com/press-releases?a75108fe_field_nir_news_category%5Bvalue%5D%5B0%5D=4106&mobile=1&page=20: (400) Timeout fetching

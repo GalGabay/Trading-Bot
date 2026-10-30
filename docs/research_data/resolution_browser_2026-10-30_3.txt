@@ -1,0 +1,363 @@
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/1040971/000110465920132238/tm2037666d1_8k.htm)
+citeturn124view0 [wordlim: 200] Crawled: 4 days ago; Content type: text/html; Source: open({"ref_id":"turn121search4","lineno":null}); Total lines: 161
+L0: 0001040971 false 0001040971 2020-12-04 2020-12-04 0001040971 us-gaap:CommonStockMember 2020-12-04 2020-12-04 0001040971 slg:SeriesIPreferredStockMember 2020-12-04 2020-12-04 iso4217:USD xbrli:shares iso4217:USD xbrli:shares
+L1: 
+L2: Common Stock
+L3: 
+L4: 
+L5: 
+L6: 
+L7: 
+L8: 
+L9: 
+L10: UNITED STATES
+L11: 
+L12: SECURITIES AND EXCHANGE COMMISSION
+L13: 
+L14: Washington, D.C. 20549
+L15: 
+L16: 
+L17: 
+L18: FORM 8-K
+L19: 
+L20: 
+L21: 
+L22: CURRENT REPORT
+L23: 
+L24: Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934
+L25: 
+L26: 
+L27: 
+L28: Date of Report (Date of earliest event reported):
+L29: 
+L30: December 4, 2020
+L31: SL GREEN REALTY CORP.
+L32: 
+L33: (Exact name of registrant as specified in its charter)
+L34: 
+L35: 
+L36: 
+L37: Maryland  | 1-13199  | 13-3956775
+L38: (State or other jurisdiction
+L39: of incorporation)  | (Commission File Number)  | (I.R.S. Employer Identification Number)
+L40: 
+L41: 
+L42: 
+L43: 
+L44: 
+L45: 420 Lexington Avenue
+L46: 
+L47: New York, New York 10170
+L48: 
+L49: (Address of principal executive offices, including zip code)
+L50: 
+L51: 
+L52: 
+L53: (212) 594-2700
+L54: 
+L55: (Registrants’ telephone number, including area code)
+L56: Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions(see General Instruction A.2. below):
+L57: 
+L58: 
+L59: 
+L60: ¨ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+L61: 
+L62: 
+L63: 
+L64: ¨ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
+L65: 
+L66: 
+L67: 
+L68: ¨ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))
+L69: ¨ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))
+L70: 
+L71: 
+L72: 
+L73: Securities registered pursuant to Section 12(b) of the Act:
+L74: Registrant  |    | Trading Symbol  |    | Title of Each Class  |    | Name of Each Exchange on Which
+L75: Registered
+L76: SL Green Realty Corp.  |    | SLG  |    | Common Stock, $0.01 par value  |    | New York Stock Exchange
+L77: SL Green Realty Corp.  |    | SLG.PRI  |    | 6.500% Series I Cumulative Redeemable Preferred Stock, $0.01 par value  |    | New York Stock Exchange
+L78: Indicate by check mark whether the registrant is an emerging growth company as defined in as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).
+L79: 
+L80: 
+L81: 
+L82: Emerging growth company   ¨
+L83: If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act  ¨
+L84: 
+L85: 
+L86: 
+L87: 
+L88: 
+L89: 
+L90: 
+L91: 
+L92: 
+L93: 
+L94: 
+L95: 
+L96: 
+L97: ITEM 8.01.  | Other Events.
+L98: On December 4, 2020, SL Green Realty Corp. (“SLG”), Manhattan’s largest office landlord, issued a press release announcing that its board of directors has increased SLG’s annualized ordinary dividend by 2.8%, to $3.64 per share on its common stock and OP units. The ordinary dividend will be paid in cash on a monthly basis. The next ordinary dividend of $0.3033 per share is payable on January 15, 2021 to shareholders of record at the close of business on December 15, 2020 (the “Record Date”).
+L99: SLG also announced that, as a result of asset dispositions in 2020, including the previously announced sale of 410 Tenth Avenue, the board of directors declared a special dividend with a value of $1.6967 per share, which is payable on January 15, 2021 to shareholders of record on the Record Date. Shareholders will, therefore, receive a total dividend of $2.00 per share, representing the sum of the ordinary dividend and the special dividend.
+L100: The special dividend will be paid in the form of SLG common stock, with the number of shares calculated based on the volume weighted average trading price of SLG’s common stock between January 5-7, 2021.
+L101: Shareholders may elect to receive the total dividend in the form of all cash or all stock, subject to proration if either option is oversubscribed, which election made be made online or by mail. Elections made online must be made prior to 5:00 p.m. Eastern Time on January 4, 2021 (the “Election Deadline”).
+L102: If an election is made by mail, a properly completed election form to receive cash or common shares must be received by Computershare Trust Company, N.A., SLG’s election agent, prior to the Election Deadline. Shareholders who fail to make a timely online election or return a timely and properly completed election form before the Election Deadline will be deemed to have made an election to receive the total dividend entirely in stock.
+L103: An information letter and election form with respect to the dividend will be sent to shareholders of record on the Record Date.
+L104: 
+L105: 
+L106: If you are a shareholder of record and you have any questions about completing or submitting the election form or making an online election, or need a new election form, please call Georgeson LLC, SLG’s information agent, at (800) 561-2871. If your shares are held in the name of a bank, broker or nominee, and such bank, broker or nominee has any questions, they may also call Georgeson at (800) 561-2871.
+L107: To mitigate the dilutive impact of the SLG common stock issued in the special dividend, the board of directors also authorized a reverse stock split, which will be effective after markets close on January 20, 2021. The split ratio for the reverse stock split will be determined promptly after the close of business on January 7, 2021.
+L108: After the completion of both the special dividend and the reverse stock split, the number of shares of SLG common stock outstanding will be the same as the number of total shares outstanding on the Record Date (not including any issuances or repurchases that may occur following the Record Date).
+L109: However, some individual stockholders may have more shares of SLG common stock, and some individual stockholders may have fewer shares of SLG common stock on a relative basis, depending on their individual elections to receive cash or stock and, if either the cash or stock election options are oversubscribed, the extent of proration.
+L110: 
+L111: 
+L112: The board of directors also declared the quarterly dividend on SLG’s Series I Preferred Stock for the period October 15, 2020 through and including January 14, 2021, of $0.40625 per share, payable in cash, which is the equivalent of an annualized dividend of $1.625 per share. The dividend is payable on January 15, 2021 to shareholders of record at the close of business on December 16, 2020.
+L113: 
+L114: 
+L115: 
+L116: A copy of the press release is attached hereto as Exhibit 99.1 and incorporated by reference herein.
+L117: 
+L118: 
+L119: ITEM 9.01.  | Financial Statements and Exhibits.
+L120: 
+L121: 
+L122: 
+L123: The following exhibits are furnished with this report:
+L124: 
+L125: 
+L126: 
+L127: Exhibit Number  | Description
+L128: 【0†99.1】  | 【0†Press release dated December 4, 2020.】
+L129: 104  | Cover Page Interactive Data File (embedded within the Inline XBRL document)
+L130: 
+L131: 
+L132: 
+L133: Forward Looking Statement
+L134: This Current Report on Form 8-K includes certain statements that may be deemed to be “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995 and are intended to be covered by the safe harbor provisions thereof.
+L135: All statements, other than statements of historical facts, included in this Current Report on Form 8-K that address activities, events or developments that we expect, believe or anticipate will or may occur in the future, are forward-looking statements. Forward-looking statements are not guarantees of future performance and we caution you not to place undue reliance on such statements.
+L136: Forward-looking statements are generally identifiable by the use of the words “may,” “will,” “should,” “expect,” “anticipate,” “estimate,” “believe,” “intend,” “project,” “continue,” or the negative of these words, or other similar words or terms.
+L137: Forward-looking statements contained in this Current Report on Form 8-K are subject to a number of risks and uncertainties, many of which are beyond our control, that may cause our actual results, performance or achievements to be materially different from future results, performance or achievements expressed or implied by forward-looking statements made by us.
+L138: Factors and risks to our business that could cause actual results to differ from those contained in the forward-looking statements are described in our filings with the Securities and Exchange Commission. These risks and uncertainties include, but are not limited to, potential risks and uncertainties relating to the novel coronavirus (COVID-19).
+L139: 
+L140: 
+L141: 
+L142: 
+L143: 
+L144: 
+L145: 
+L146: 
+L147: SIGNATURES
+L148: 
+L149: 
+L150: 
+L151: Pursuant to the requirements of the Securities Exchange Act of 1934, as amended, the Registrant has duly caused this report to be signed on its behalf by the undersigned thereunto duly authorized.
+L152: 
+L153: 
+L154: 
+L155:    | SL GREEN REALTY CORP.
+L156:    | (Registrant)
+L157:    |    |
+L158: Date: December 4, 2020  | By:  | /s/ Matthew J. DiLiberto
+L159:    |    | Matthew J. DiLiberto
+L160:    |    | Chief Financial Officer
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn124view1 [wordlim: 200] Source: open({"ref_id":"turn121search6","lineno":null}); 
+Failed to fetch https://www.sec.gov/Archives/edgar/data/922864/000156459020035539/aiv-ex991_41.htm: (400) Content length is too large: 4194305+--------------------------------------------------------------------------------
+Alliant Energy Corporation - Alliant Energy announces 2-for-1 stock split (https://investors.alliantenergy.com/News--Presentations/news/news-details/2016/Alliant-Energy-announces-2-for-1-stock-split/default.aspx)
+citeturn124view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn121search7","lineno":null}); Total lines: 148
+L0: [Input] 【0†iframe†www.googletagmanager.com】
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: 【1†Skip to main content】
+L5: 
+L6: 【0†iframe†www.googletagmanager.com】
+L7:   * 【2†At a Glance】
+L8:     * 【3†News & Presentations】
+L9:       * 【4†News Releases】
+L10:       * 【5†Events & Presentations】
+L11:     * 【6†Stock Info】
+L12:       * 【7†Stock Quote】
+L13:       * 【8†Stock Chart】
+L14:       * 【9†Historical Stock Quote】
+L15:       * 【10†Investment Calculator】
+L16:       * 【11†Common Dividend Stock Dates】
+L17:       * 【12†Analyst Coverage】
+L18:     * 【13†Financials】
+L19:       * 【13†Quarterly Results】
+L20:       * 【14†Annual Reports & Proxy】
+L21:       * 【15†SEC Filings】
+L22:     * 【16†Responsibility】
+L23:       * 【17†Latest ESG Event】
+L24:       * 【18†Corporate Responsibility Report†www.alliantenergy.com】
+L25:       * 【19†ESG Data And Reports†www.alliantenergy.com】
+L26:       * 【20†Green Bonds†www.alliantenergy.com】
+L27:     * 【21†Governance】
+L28:       * 【21†Governance Documents】
+L29:       * 【22†Leadership†www.alliantenergy.com】
+L30:       * 【23†Committees of Board】
+L31:     * 【24†Resources】
+L32:       * 【25†Corporate Profile】
+L33:       * 【26†Shareowner Services†www.alliantenergy.com】
+L34:       * 【24†Investor FAQs】
+L35:       * 【27†Stock Split Q&A†alliantenergyir2022ir.q4web.com】
+L36:       * 【28†Information Request Form】
+L37:       * 【29†Investor Email Alerts】
+L38:       * 【30†Investor Contacts】
+L39:       * 【31†Corporate Fact Sheet】
+L40:       * 【32†Fixed Income】
+L41:   * 【2†At a Glance】
+L42:     * 【3†News & Presentations】
+L43:       * 【4†News Releases】
+L44:       * 【5†Events & Presentations】
+L45:     * 【6†Stock Info】
+L46:       * 【7†Stock Quote】
+L47:       * 【8†Stock Chart】
+L48:       * 【9†Historical Stock Quote】
+L49:       * 【10†Investment Calculator】
+L50:       * 【11†Common Dividend Stock Dates】
+L51:       * 【12†Analyst Coverage】
+L52:     * 【13†Financials】
+L53:       * 【13†Quarterly Results】
+L54:       * 【14†Annual Reports & Proxy】
+L55:       * 【15†SEC Filings】
+L56:     * 【16†Responsibility】
+L57:       * 【17†Latest ESG Event】
+L58:       * 【18†Corporate Responsibility Report†www.alliantenergy.com】
+L59:       * 【19†ESG Data And Reports†www.alliantenergy.com】
+L60:       * 【20†Green Bonds†www.alliantenergy.com】
+L61:     * 【21†Governance】
+L62:       * 【21†Governance Documents】
+L63:       * 【22†Leadership†www.alliantenergy.com】
+L64:       * 【23†Committees of Board】
+L65:     * 【24†Resources】
+L66:       * 【25†Corporate Profile】
+L67:       * 【26†Shareowner Services†www.alliantenergy.com】
+L68:       * 【24†Investor FAQs】
+L69:       * 【27†Stock Split Q&A†alliantenergyir2022ir.q4web.com】
+L70:       * 【28†Information Request Form】
+L71:       * 【29†Investor Email Alerts】
+L72:       * 【30†Investor Contacts】
+L73:       * 【31†Corporate Fact Sheet】
+L74:       * 【32†Fixed Income】
+L75: 【4†View all news】
+L76: ## Alliant Energy announces 2-for-1 stock split
+L77: 
+L78: 04/20/2016
+L79: 
+L80: MADISON, Wis., April 20, 2016 /PRNewswire/ -- Today, the board of directors of Alliant Energy Corporation (NYSE: LNT) approved a 2-for-1 stock split of the company's common stock.  Alliant Energy Corporation's authorized common shares, which are presently 240 million, will be proportionately increased to 480 million to give effect to the split. The number of outstanding common shares will increase from approximately 114 million to 228 million.
+L81: 【33†Image: Alliant Energy is the parent company of two public utility companies--Interstate Power and Light Company (IPL) and Wisconsin Power and Light Company (WPL)--and of Alliant Energy Resources, Inc. (AER), the parent company of Alliant Energy's non-regulated operations. †photos.prnewswire.com】
+L82: Each shareowner of record at the close of business on May 4, 2016 will receive one additional share for every outstanding common share held on that date.  The additional shares will be distributed by book-entry on May 19, 2016.
+L83: 
+L84: The common dividend payment declared by the board of directors on April 8, 2016 will be paid on May 13, 2016 on a pre-split basis ($0.5875 per share) to shareowners of record at the close of business on April 29, 2016.
+L85: The company said the stock split reflects continued confidence in Alliant Energy Corporation's growth and is intended to increase the stock's liquidity and expand the universe of potential shareowners.
+L86: Alliant Energy Corporation (NYSE: LNT), headquartered in Madison, Wis., provides regulated electric and natural gas service to 950,000 electric and 410,000 natural gas customers across Iowa and Wisconsin. Alliant Energy's mission is to deliver the energy solutions and exceptional service customers and communities count on – safely, efficiently and responsibly. Interstate Power and Light Company and Wisconsin Power and Light Company are Alliant Energy's two public utility subsidiaries.
+L87: For more information, visit alliantenergy.com.
+L88: Logo - 【34†http://photos.prnewswire.com/prnh/20020405/LNTLOGO†photos.prnewswire.com】
+L89: 
+L90: 
+L91: 
+L92: To view the original version on PR Newswire, visit:【35†http://www.prnewswire.com/news-releases/alliant-energy-announces-2-for-1-stock-split-300254840.html†www.prnewswire.com】
+L93: 
+L94: SOURCE Alliant Energy Corporation
+L95: 
+L96: Media Contact: Scott Reigstad (608) 458-3145; or Investor Relations Contact: Susan Gille (608) 458-3956
+L97: 
+L98: 
+L99: 
+L100: Multimedia Files:
+L101: 
+L102: 【4†View all news】
+L103: ## Contact Us
+L104: 
+L105: contact us by phone contact us by phone at 608-458-3956
+L106: contact us by email at investorrelations@alliantenergy.com
+L107: 
+L108: ### Quick Links
+L109: 
+L110:   * 【14†Annual Reports】
+L111:   * 【15†SEC Filings】
+L112:   * 【4†News Releases】
+L113:   * 【17†ESG】
+L114: ## Investor Email Alerts
+L115: 
+L116: To opt-in for investor email alerts, please enter your email address in the field and select at least one alert option. After submitting your request, you will receive an activation email to the requested email address. You must click the activation link in order to complete your subscription. You can sign up for additional alert options at any time.
+L117: At Alliant Energy Corporation, we promise to treat your data with respect and will not share your information with any third party. You can unsubscribe to any of the investor alerts you are subscribed to by visiting the ‘unsubscribe’ section. If you experience any issues with this process, please contact us for further assistance.
+L118: 
+L119: By providing your email address, you are providing consent to Alliant Energy Corporation to send you the requested Investor Email Alert updates.
+L120: 
+L121: * Required
+L122: Investor Alert Options
+L123: [Input]News
+L124: [Input]Quarterly Reports
+L125: [Input]Annual Reports
+L126: [Input]SEC Filings
+L127: [Input]End of Day Stock Quote
+L128: [Input]Events & Presentations
+L129: 
+L130: [Input]
+L131: 
+L132: 【36†Follow us on Facebook†www.facebook.com】 【37†Follow us on Twitter†twitter.com】 【38†Follow us on Youtube†www.youtube.com】 【39†Follow us on Instagram†www.instagram.com】 【40†Follow us on LinkedIn"†www.linkedin.com】
+L133:   * 【41†Privacy Policy†www.alliantenergy.com】
+L134:   * 【42†Accessibility†www.alliantenergy.com】
+L135:   * 【43†Terms of Use†www.alliantenergy.com】
+L136: 
+L137: © Alliant Energy Corporation - All rights reserved
+L138: 
+L139: 【44†Powered By Q4 Inc. 5.191.0.1 (opens in new window)†www.q4inc.com】
+L140: 
+L141: Opens in new window
+L142: 
+L143: (Opens in new window)
+L144: 
+L145: [Input] [Input]
+L146: 
+L147: [Input] [Input]
+--------------------------------------------------------------------------------
+Amazon.com, Inc. - FAQs (https://ir.aboutamazon.com/faqs/default.aspx)
+citeturn124view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn121search2","lineno":null}); Total lines: 42
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: 【0†Skip to main content】
+L5: 
+L6:   * 【1†Innovation†www.amazon.science】
+L7:   * 【2†Job creation & investment†www.aboutamazon.com】
+L8:   * 【3†Our Communities†www.aboutamazon.com】
+L9:   * 【4†Supporting small business†www.aboutamazon.com】
+L10:   * 【5†Working at Amazon†www.aboutamazon.com】
+L11: 
+L12: 【6†Day One: The Amazon Blog†blog.aboutamazon.com】
+L13: 
+L14: EN
+L15: 
+L16: EN Visit a different Amazon site
+L17:   * 【7†European Union English†www.aboutamazon.eu】
+L18:   * 【8†France Français†www.aboutamazon.fr】
+L19:   * 【9†Germany (Deutschland) Deutsch†www.aboutamazon.de】
+L20:   * 【10†India English†www.aboutamazon.in】
+L21:   * 【11†Italy (Italia) Italiano†www.aboutamazon.it】
+L22:   * 【12†Spain (España) Español†www.aboutamazon.es】
+L23:   * 【13†United Kingdom English†www.aboutamazon.co.uk】
+L24:   * 【14†United States English†www.aboutamazon.com】
+L25: ## Site Search
+L26: 
+L27: [Input] [Input: Search...]
+L28: 
+L29:   * 【15†Annual reports, proxies and shareholder letters】
+L30:   * 【16†Quarterly results】
+L31:   * 【17†SEC filings】
+L32:   * 【18†Press releases†press.aboutamazon.com】
+L33:   * 【19†FAQs】
+L34:   * 【20†Officers and directors】
+L35:   * 【21†Corporate governance】
+L36:   * 【22†Contact us and request documents】
+L37:   * 【23†Events】
+L38: 
+L39: # FAQs
+L40: 
+L41: [Input] [Input]
+

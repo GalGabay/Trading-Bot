@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "provider_source": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/provider_event_roles.csv",
+    "sha256": "66f4fafc17b147f29a9f583c371440daff41013d871cb01cb44f44b5cada98dd"
+  },
+  "spec": {
+    "path": "docs/broad_corrected_historical_input_spec.json",
+    "sha256": "f15e1ffd61fe211ad1ff4c37c488b0ff5de41c5a7d21ce6c98455863f2465bc1"
+  },
+  "sources": [
+    {
+      "id": "resolution",
+      "evidence": {
+        "path": "docs/broad_resolution_facts_2026-10-30.json",
+        "sha256": "aa4c3dae486049f75d985a6b870740316184bb0295af81e9e264cc24a88094af"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "instrument_id": "COHORT-2016-0047",
+      "event_id": "d209b6c2-9231-474c-a80e-1a79dacadbb2",
+      "provider_day": "2020-08-31",
+      "kind": "ordinary_split",
+      "source_id": "resolution",
+      "fact_id": "aapl_split"
+    },
+    {
+      "instrument_id": "COHORT-2016-0014",
+      "event_id": "649427cf-90cc-49ef-856f-38f3c0c01a67",
+      "provider_day": "2016-10-03",
+      "kind": "preinvestment_reference_action"
+    },
+    {
+      "instrument_id": "COHORT-2016-0012",
+      "event_id": "839df22d-8d54-48a1-85a8-4ce3e5804969",
+      "provider_day": "2018-03-19",
+      "kind": "ordinary_split",
+      "source_id": "resolution",
+      "fact_id": "afl_split"
+    },
+    {
+      "instrument_id": "COHORT-2016-0332",
+      "event_id": "51020b76-5a77-4848-9457-a3631f4f91ea",
+      "provider_day": "2020-10-27",
+      "kind": "ordinary_split",
+      "source_id": "resolution",
+      "fact_id": "nee_split"
+    },
+    {
+      "instrument_id": "COHORT-2016-0185",
+      "event_id": "ed6f16b1-fc46-443e-8dba-898ed9007a7a",
+      "provider_day": "2022-06-09",
+      "kind": "same_instrument_alias",
+      "source_id": "resolution",
+      "fact_id": "meta",
+      "old_source_key": "base:FB",
+      "new_source_key": "fb_meta"
+    },
+    {
+      "instrument_id": "COHORT-2016-0089",
+      "event_id": "d4dde794-26c7-4ca1-9e52-cde5cbc869f6",
+      "provider_day": "2020-02-13",
+      "kind": "same_instrument_alias",
+      "source_id": "resolution",
+      "fact_id": "cbs",
+      "old_source_key": "base:CBS",
+      "new_source_key": "cbs_viac"
+    },
+    {
+      "instrument_id": "COHORT-2016-0089",
+      "event_id": "fb2e60ad-e59f-40cc-b5d4-d0a026ea1322",
+      "provider_day": "2022-02-17",
+      "kind": "same_instrument_alias",
+      "source_id": "resolution",
+      "fact_id": "paramount",
+      "old_source_key": "cbs_viac",
+      "new_source_key": "cbs_para"
+    },
+    {
+      "instrument_id": "COHORT-2016-0193",
+      "event_id": "45fd1861-939b-4e87-9dba-f82c214e2d31",
+      "provider_day": "2023-06-07",
+      "kind": "same_instrument_alias",
+      "source_id": "resolution",
+      "fact_id": "fiserv",
+      "old_source_key": "base:FISV",
+      "new_source_key": "fisv_fi"
+    },
+    {
+      "instrument_id": "COHORT-2016-0028",
+      "event_id": "0995b688-d461-4d30-9e3e-54549a070c0e",
+      "provider_day": "2022-06-06",
+      "kind": "ordinary_split",
+      "source_id": "resolution",
+      "fact_id": "amzn_split"
+    },
+    {
+      "instrument_id": "COHORT-2016-0093",
+      "event_id": "342e093c-84c1-493f-a79c-30a042b62c6e",
+      "provider_day": "2020-09-18",
+      "kind": "same_instrument_alias",
+      "source_id": "resolution",
+      "fact_id": "lumen",
+      "old_source_key": "base:CTL",
+      "new_source_key": "ctl_lumn"
+    },
+    {
+      "instrument_id": "COHORT-2016-0427",
+      "event_id": "db749ff2-197f-444e-ac89-81c352ed3a49",
+      "provider_day": "2022-11-08",
+      "kind": "same_instrument_alias",
+      "source_id": "resolution",
+      "fact_id": "gen",
+      "old_source_key": "symc_nlok",
+      "new_source_key": "symc_gen"
+    },
+    {
+      "instrument_id": "COHORT-2016-0023",
+      "event_id": "6394d53b-b9bc-443f-be33-3e3f0c535088",
+      "provider_day": "2016-05-20",
+      "kind": "preinvestment_reference_action"
+    },
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "72ae5eb0-9663-42fe-bd68-50644e3c2a10",
+      "provider_day": "2016-09-06",
+      "kind": "preinvestment_reference_action"
+    },
+    {
+      "instrument_id": "COHORT-2016-0077",
+      "event_id": "d0357e08-0233-4c7a-92ca-41a11d27e5af",
+      "provider_day": "2016-08-19",
+      "kind": "preinvestment_reference_action"
+    },
+    {
+      "instrument_id": "COHORT-2016-0077",
+      "event_id": "243db404-2bbd-432f-a645-2f5c1bbe794e",
+      "provider_day": "2018-03-01",
+      "kind": "ordinary_split",
+      "source_id": "resolution",
+      "fact_id": "bfb_split"
+    }
+  ],
+  "execution_ready": false,
+  "performance_authorized": false
+}

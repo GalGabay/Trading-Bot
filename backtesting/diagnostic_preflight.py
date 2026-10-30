@@ -15,15 +15,20 @@ from backtesting.cohort_audit import checked_file
 from backtesting.diagnostic_preparation import validate_policy
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
 from backtesting.dividend_components import validate_review_evidence
+from backtesting.corporate_action_terms import gate_action
+from backtesting.claim_accounting import number
+from backtesting.election_schedule import load_holder_policy
 
 
 class DiagnosticIntegrationBlocked(ValueError):
     pass
 
 
-def assess(material,dividends,routes,feature_events,terms_review,membership_not_before):
+def assess(material,dividends,routes,feature_events,terms_review,membership_not_before,
+           corporate_actions=(),election_schedules=()):
     blockers=[]
     resets=[]
+    admitted_cash=set()
     corrections={e["instrument_id"]:e for e in terms_review["feature_corrections"]}
     for event in feature_events:
         correction=corrections.get(event["instrument_id"])
@@ -44,6 +49,16 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
             if (event["event_id"]=="peak_holding_company_reorganization" and
                     event.get("diagnostic_terms_admitted") is True):
                 continue
+            if (event.get("status")=="admitted_diagnostic_cash_receivable" and event.get("kind")=="cash_merger" and
+                    event.get("data_terms_resolved") is True and event.get("execution_ready") is False and
+                    not event.get("share_legs") and not event.get("blockers") and
+                    number(event["cash_per_parent"],positive=True)>0 and
+                    event.get("cash_availability_policy")=="unspendable_receivable_no_invented_date" and
+                    event.get("modeled_cash_release_at") is None and event.get("actual_delivery_at") is None and
+                    event.get("required_ownership_snapshot_at") and event.get("consume_parent_once") is True and
+                    event.get("invalidate_pending_orders_and_stops") is True):
+                admitted_cash.add((event["parent_id"],event["event_id"]))
+                continue
             blockers.append(dict(kind="material_terms",instrument_id=event["parent_id"],event_id=event["event_id"],
                 reason="Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"))
     for event in dividends:
@@ -56,9 +71,29 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
                 reason="; ".join(event["blockers"])))
     harmless={"context_only_no_portfolio_credit","wrong_predecessor_ratio_do_not_apply",
               "represented_by_peak_holding_company_reorganization_do_not_apply_twice"}
+    reviewed_actions={(a["instrument_id"],a["event_id"]):a for a in corporate_actions}
+    if len(reviewed_actions)!=len(corporate_actions):
+        raise ValueError("Repeated corporate-action instruction identity")
     for event in routes:
+        if event["disposition"]=="represented_by_reviewed_cash_merger":
+            related=event.get("related_material_events",[])
+            if isinstance(related,str):
+                related=json.loads(related)
+            if len(related)==1 and (event["instrument_id"],related[0]) in admitted_cash:
+                continue
+        if event["disposition"]=="handled_by_reviewed_corporate_action":
+            action=reviewed_actions.get((event["instrument_id"],event["event_id"]))
+            if action is not None and gate_action(action,membership_not_before):
+                if action.get("required_feature_reset"):
+                    resets.append(action["required_feature_reset"])
+                continue
         if event["disposition"] not in harmless:
             blockers.append(dict(kind="provider_terms",instrument_id=event["instrument_id"],event_id=event["event_id"],reason=event["disposition"]))
+    for event in election_schedules:
+        if event["blockers"] or event.get("selected_holder_election") is None:
+            blockers.append(dict(kind="election_schedule",instrument_id=event["instrument_id"],event_id=event["event_id"],
+                reason="; ".join(event["blockers"]) or "Holder election remains unspecified"))
+    resets=list({(r["instrument_id"],r["from_session"]):r for r in resets}.values())
     return dict(data_gates_clear=not blockers,blockers=blockers,effective_feature_resets=resets)
 
 
@@ -84,6 +119,15 @@ def prepare(preparation_dir,terms_review_path,output):
         review=json.loads(checked_file(Path.cwd(),preparation["event_terms_review"]).read_text(encoding="utf-8"))
         checked_file(Path.cwd(),review["spec"])
         validate_review_evidence(review)
+    if preparation.get("corporate_action_review") is not None:
+        review=json.loads(checked_file(Path.cwd(),preparation["corporate_action_review"]).read_text(encoding="utf-8"))
+        checked_file(Path.cwd(),review["spec"])
+        validate_review_evidence(review)
+    if preparation.get("election_schedule_inputs") is not None:
+        inputs=json.loads(checked_file(Path.cwd(),preparation["election_schedule_inputs"]).read_text(encoding="utf-8"))
+        for key in ("terms","split_review","resolution","mac_review","provider_source"):
+            checked_file(Path.cwd(),inputs[key])
+        load_holder_policy(inputs)
     revision=json.loads(checked_file(Path.cwd(),preparation["revision"]).read_text(encoding="utf-8"))
     spec=json.loads(checked_file(Path.cwd(),revision["spec"]).read_text(encoding="utf-8"))
     mapping=json.loads(checked_file(Path.cwd(),revision["mapping"]).read_text(encoding="utf-8"))
@@ -94,8 +138,14 @@ def prepare(preparation_dir,terms_review_path,output):
     dividends=json.loads((preparation_dir/"dividend_candidates.json").read_text(encoding="utf-8"))
     with (preparation_dir/"event_routes.csv").open(encoding="utf-8",newline="") as handle:
         routes=list(csv.DictReader(handle))
-    result=assess(material,dividends,routes,mapping["unresolved_feature_events"],terms,spec["membership_not_before"])
+    actions_path=preparation_dir/"corporate_actions.json"
+    elections_path=preparation_dir/"election_candidates.json"
+    actions=json.loads(actions_path.read_text(encoding="utf-8")) if actions_path.exists() else []
+    elections=json.loads(elections_path.read_text(encoding="utf-8")) if elections_path.exists() else []
+    result=assess(material,dividends,routes,mapping["unresolved_feature_events"],terms,spec["membership_not_before"],actions,elections)
     result.update(date="2026-10-30",owner_assumptions_approved=True,approval=policy["approval"],
+        holder_election_policy=preparation.get("holder_election_policy"),
+        holder_election_approval=preparation.get("holder_election_approval"),
         allocation=dict(total_entry_exposure=.70,per_stock_entry_cap=.05,max_positions=20),
         preparation=pin(preparation_dir/"summary.json"),terms_review=pin(terms_review_path),
         execution=pin("backtesting/diagnostic_preflight.py"),selected_originals=preparation["selected_originals"],

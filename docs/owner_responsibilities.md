@@ -3,7 +3,10 @@
 **2026-10-30 — approved:** the diagnostic accounting defaults and research
 allocation of 70% total exposure, 5% per stock and 20 positions are recorded in
 [your separate approval](broad_diagnostic_owner_approval_2026-10-30.json).
-No repeated approval or setup is needed. [Current tests/event review](broad_reconciliation_tests_and_terms_2026-10-30.md)
+The additional historical-research election choice is now
+[approved: make no election and use documented defaults](research_election_policy_approved_2026-10-30.md).
+No repeat reply, file editing or purchase is required for that choice.
+No repeated approval or setup is needed. [Current event-resolution status](broad_resolution_results_2026-10-30.md)
 leaves economic-data gates before full Step 2 integration. Those fixes are my
 work. Personal paper-risk limits, paper activation and a finite performance
 batch remain separate decisions. The frozen proposal below is historical.

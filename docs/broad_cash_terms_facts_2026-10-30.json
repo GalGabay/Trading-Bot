@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_cash_terms_scope_2026-10-30.json",
+    "sha256": "712f0f320bd6f5b51847c1ff4f8eb19b4051d9f152cda8e8df10e28502d5e6f9"
+  },
+  "page_opens": 5,
+  "successful_opens": 5,
+  "closed": true,
+  "prior_denied_urls_retried": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "strategy_runs": 0,
+  "sources": [
+    {
+      "id": "old_xl",
+      "event_id": "cash_XL",
+      "url": "https://www.sec.gov/Archives/edgar/data/875159/000087515918000068/axaclosing8-k.htm",
+      "access": "primary_browser_text_reviewed",
+      "economic_date": "2018-09-12",
+      "cash_per_parent": "57.60",
+      "currency": "USD",
+      "all_common_holders_supported": true,
+      "actual_broker_received_at": null,
+      "cash_receipt_date": null,
+      "browser_evidence": {
+        "path": "docs/research_data/cash_terms_browser_2026-10-30.txt",
+        "sha256": "b2c058334dae0355c67f568bb02c471c31e77d1068905fdad8871cceb798ffd2"
+      }
+    },
+    {
+      "id": "old_rht",
+      "event_id": "cash_RHT",
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000095014219001515/eh1900893_8k.htm",
+      "access": "primary_browser_text_reviewed",
+      "economic_date": "2019-07-09",
+      "cash_per_parent": "190",
+      "currency": "USD",
+      "all_common_holders_supported": true,
+      "actual_broker_received_at": null,
+      "cash_receipt_date": null,
+      "browser_evidence": {
+        "path": "docs/research_data/cash_terms_browser_2026-10-30.txt",
+        "sha256": "b2c058334dae0355c67f568bb02c471c31e77d1068905fdad8871cceb798ffd2"
+      }
+    },
+    {
+      "id": "old_nlsn",
+      "event_id": "cash_NLSN",
+      "url": "https://www.nielsen.com/news-center/2022/nielsen-announces-closing-of-transaction-with-evergreen-and-brookfield-led-consortium/",
+      "access": "primary_browser_text_reviewed",
+      "economic_date": "2022-10-11",
+      "cash_per_parent": "28",
+      "currency": "USD",
+      "all_common_holders_supported": true,
+      "actual_broker_received_at": null,
+      "cash_receipt_date": null,
+      "browser_evidence": {
+        "path": "docs/research_data/cash_terms_browser_2026-10-30.txt",
+        "sha256": "b2c058334dae0355c67f568bb02c471c31e77d1068905fdad8871cceb798ffd2"
+      }
+    },
+    {
+      "id": "old_csra",
+      "event_id": "cash_CSRA",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312518106365/d512528d8k.htm",
+      "access": "primary_browser_text_reviewed",
+      "economic_date": "2018-04-03",
+      "cash_per_parent": "41.25",
+      "currency": "USD",
+      "all_common_holders_supported": false,
+      "actual_broker_received_at": null,
+      "cash_receipt_date": null,
+      "browser_evidence": {
+        "path": "docs/research_data/cash_terms_browser_2026-10-30.txt",
+        "sha256": "b2c058334dae0355c67f568bb02c471c31e77d1068905fdad8871cceb798ffd2"
+      }
+    },
+    {
+      "id": "old_mon",
+      "event_id": "cash_MON",
+      "url": "https://www.sec.gov/Archives/edgar/data/1110783/000119312518186836/d602943dex991.htm",
+      "access": "primary_browser_text_reviewed",
+      "economic_date": "2018-06-07",
+      "cash_per_parent": "128",
+      "currency": "USD",
+      "all_common_holders_supported": true,
+      "actual_broker_received_at": null,
+      "cash_receipt_date": null,
+      "browser_evidence": {
+        "path": "docs/research_data/cash_terms_browser_2026-10-30.txt",
+        "sha256": "b2c058334dae0355c67f568bb02c471c31e77d1068905fdad8871cceb798ffd2"
+      }
+    }
+  ],
+  "limitations": [
+    "CSRA acquisition filing confirms tender price and short-form merger but not sufficient minority-holder conversion terms for this admission",
+    "NLSN stopped NYSE trading from October 12; do not book the cash merger at October 11 open",
+    "Payment and withholding are not actual account-credit evidence"
+  ]
+}

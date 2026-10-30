@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "purpose": "Proposed accounting assumptions for review; preparation only, no strategy integration",
+  "owner_approved": true,
+  "performance_authorized": false,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "max_strategy_runs": 0,
+  "selected_total_entry_exposure": 0.7,
+  "selected_total_entry_exposure_already_approved": true,
+  "proposed_per_stock_entry_cap": 0.05,
+  "proposed_max_positions": 20,
+  "position_parameters_owner_approved": true,
+  "scenarios": [
+    "base",
+    "delayed_five_sessions",
+    "no_credit"
+  ],
+  "ordinary_entitlement_policy": "assumed_prior_session_close_whole_shares_before_ex_open_fills",
+  "metadata_policy": "retrospective_vendor_accounting_at_event_boundary_never_an_entry_feature",
+  "missing_declaration_policy": "historical_known_at_stays_null_modeled_observed_at_is_explicit_assumption",
+  "known_cash_policy": "provider_payable_date_plus_next_saved_open_base_plus_five_more_sessions_delayed",
+  "unknown_payable_policy": "unspendable_receivable_no_invented_date",
+  "share_release_policy": "first_saved_open_at_or_after_economic_instant_and_regular_trading_start_plus_five_sessions_delayed",
+  "no_credit_policy": "retain_and_value_known_rights_but_release_neither_cash_nor_shares_within_window",
+  "fractional_policy": "pending_share_claim_no_automatic_cash",
+  "unknown_value_policy": "incomplete_equity_blocks_scoring",
+  "valuation_policy": "fixed_cash_face_and_exact_current_session_share_close_no_stale_or_future_marks",
+  "election_policy": "block_until_holder_terms_resolved",
+  "currency_policy": "assumed_gross_usd_for_provider_nonforeign_cash_records_no_tax_or_fx_model",
+  "share_basis_policy": "assumed_post_split_block_same_boundary_until_order_reviewed",
+  "material_policy": "per_event_terms_review_required_owner_assent_does_not_fill_unknown_ratios_or_elections",
+  "feature_policy": "reset_JCI_predecessor_history_block_unresolved_ADNT_transition_PEAK_continuity_requires_approval",
+  "original_members_may_be_dropped": false,
+  "unknown_rights_may_fund_buys": false,
+  "pending_rights_count_toward_exposure": true,
+  "unresolved_risk_marks_block_new_entries": true,
+  "no_performance_scenario_is_guaranteed_lower_or_upper_bound": true,
+  "event_decisions": {
+    "path": "docs/broad_event_review_decisions.json",
+    "sha256": "381b1c3f2ea82089edc3008adff2066d7a9010cd71dc573b895f54956b0e6972"
+  },
+  "implementation": [
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "backtesting/diagnostic_preparation.py",
+      "sha256": "800321589e58f0c2305b2fd7dbf4bf9144182b925ade65df3d1276cedd88af74"
+    },
+    {
+      "path": "backtesting/diagnostic_approval.py",
+      "sha256": "fb1111be7a596d27f7bf38a7cc61466c0762ad1f038ec817c34946246b91f8ea"
+    }
+  ],
+  "approval": {
+    "path": "docs/broad_diagnostic_owner_approval_2026-10-30.json",
+    "sha256": "6c77a824eecc388c5c20f30225a1fc6d4fac90ccef7e616437cd7ed190f1279d"
+  },
+  "source_proposal": {
+    "path": "docs/broad_diagnostic_accounting_policy.json",
+    "sha256": "f9e3de7ee445f75608c35798a4580d62e334fcd8efbd55c5b37c7679a7d180ea"
+  }
+}

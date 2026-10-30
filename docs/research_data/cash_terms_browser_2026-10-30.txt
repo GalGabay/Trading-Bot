@@ -1,0 +1,415 @@
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/875159/000087515918000068/axaclosing8-k.htm)
+citeturn126view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/875159/000087515918000068/axaclosing8-k.htm","lineno":null}); Total lines: 148
+L0: 8-K 1 axaclosing8-k.htm 8-K Document
+L1: 
+L2: 
+L3: 
+L4: UNITED STATES
+L5: 
+L6: SECURITIES AND EXCHANGE COMMISSION
+L7: 
+L8: Washington, D.C. 20549
+L9: 
+L10: FORM 8-K
+L11: 
+L12: CURRENT REPORT
+L13: 
+L14: Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934
+L15: 
+L16:  |
+L17: Date of Report (Date of earliest event reported):  | September 12, 2018
+L18: 
+L19: XL GROUP LTD
+L20: 
+L21: (Exact name of registrant as specified in its charter)
+L22:  |  |  |  |
+L23: Bermuda  |    | 1-10804  |    | 98-1304974
+L24: (State or other jurisdiction of incorporation)  |    | (Commission File Number)  |    | (IRS Employer Identification No.)
+L25: 
+L26:  |  |
+L27: O'Hara House, One Bermudiana Road, Hamilton, Bermuda  |    | HM 08
+L28: (Address of principal executive offices)  |    | (Zip Code)
+L29: 
+L30: Registrant's telephone number, including area code:  (441) 292-8515
+L31: 
+L32: Not Applicable
+L33: (Former name or former address, if changed since last report)
+L34: Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions (see General Instruction A.2. below):
+L35:  |
+L36: o  | Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+L37:    |
+L38: o  | Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
+L39:    |
+L40: o  | Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))
+L41:    |
+L42: o  | Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))
+L43:  |  |  |  |
+L44: Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).
+L45:    |    |    |    |
+L46:    |    |    | Emerging Growth Company o   |
+L47:    |    |    |    |
+L48: If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act o
+L49:  |
+L50: * * *
+L51: 
+L52: Item 2.01     Completion of Acquisition or Disposition of Assets.
+L53: On September 12, 2018, XL Group Ltd (the “Company”) completed its previously announced merger with Camelot Holdings Ltd. (“Merger Sub”), a wholly owned subsidiary of AXA SA (“AXA”).
+L54: Pursuant to the Agreement and Plan of Merger, dated as of March 5, 2018, by and among the Company, Merger Sub and AXA (the “Merger Agreement”), and the statutory merger agreement required in accordance with Section 105 of the Bermuda Companies Act 1981, as amended (the “Companies Act”), by and among the Company, Merger Sub and AXA, dated as of September 12, 2018, Merger Sub merged with and into the Company in accordance with the Companies Act (the “Merger”), with the Company continuing as the surviving corporation and as a wholly-owned subsidiary of AXA.
+L55: Pursuant to the Merger Agreement, at the effective time of the Merger (the “Effective Time”), each issued and outstanding common share, par value $0.01 per common share, of the Company (each, a “Company Share”) (other than any Company Shares that are owned (i) by the Company as treasury shares, (ii) by wholly owned subsidiaries of the Company or (iii) by AXA, Merger Sub or by wholly owned subsidiaries of AXA (with certain exceptions)), including each outstanding restricted Company Share (unless otherwise agreed between AXA and the holder of the award), were automatically canceled and converted into the right to receive $57.60 in cash, without interest and subject to any applicable tax withholdings (the “Merger Consideration”), funded with cash on hand from AXA.
+L56: At the Effective Time, unless otherwise agreed between AXA and the holder of an equity award, each outstanding performance unit was deemed to have achieved the target level of performance and each outstanding restricted share unit, restricted cash unit and performance unit award, each in respect of Company Shares, vested in full and was canceled and converted into the right to receive the Merger Consideration, without interest.
+L57: At the Effective Time, unless otherwise agreed between AXA and the holder of an equity award, each outstanding option to purchase a Company Share (a “Company Stock Option”), whether vested or unvested, was canceled and converted into the right to receive a lump-sum amount in cash, without interest, equal to the excess, if any, of (i) the Merger Consideration, over (ii) the per-share exercise price of such Company Stock Option.
+L58: Payments with respect to the foregoing equity awards will be made by the Company, as the surviving corporation of the Merger, in accordance with the Merger Agreement.
+L59: A copy of the Merger Agreement is filed as Exhibit 2.1 to the Company’s Current Report on Form 8-K filed on March 5, 2018 and is incorporated by reference as Exhibit 2.1 hereto and is incorporated by reference in this Item 2.01. The foregoing description of the Merger Agreement and the Merger does not purport to be complete and is qualified in its entirety by reference to the full text of the Merger Agreement.
+L60: Item 3.01     Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing.
+L61: 
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/51143/000095014219001515/eh1900893_8k.htm)
+citeturn126view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/51143/000095014219001515/eh1900893_8k.htm","lineno":null}); Total lines: 198
+L0: 8-K 1 eh1900893_8k.htm FORM 8-K
+L1: 
+L2: 
+L3: 
+L4: UNITED STATES
+L5: 
+L6: SECURITIES AND EXCHANGE COMMISSION
+L7: 
+L8: WASHINGTON, D.C. 20549
+L9: 
+L10: 
+L11: 
+L12: * * *
+L13: 
+L14: 
+L15: 
+L16: FORM 8-K
+L17: 
+L18: 
+L19: 
+L20: * * *
+L21: 
+L22: CURRENT REPORT PURSUANT TO SECTION 13 OR 15 (d)
+L23: 
+L24: OF THE SECURITIES EXCHANGE ACT OF 1934
+L25: 
+L26: 
+L27: 
+L28: Date of Report: July 9, 2019
+L29: 
+L30: (Date of earliest event reported)
+L31: 
+L32: 
+L33: 
+L34: * * *
+L35: 
+L36: 
+L37: 
+L38: INTERNATIONAL BUSINESS MACHINES CORPORATION
+L39: 
+L40: (Exact name of registrant as specified in its charter)
+L41: 
+L42: 
+L43: 
+L44: * * *
+L45: New York  |    | 1-2360  |    | 13-0871985
+L46: (State of Incorporation)  |    | (Commission File Number)  |    | (IRS employer Identification No.)
+L47: 
+L48: 
+L49: 
+L50: ARMONK, NEW YORK  | 10504
+L51: (Address of principal executive offices)  | (Zip Code)
+L52: 
+L53: 
+L54: 
+L55: 914-499-1900
+L56: 
+L57: (Registrant’s telephone number)
+L58: 
+L59: 
+L60: 
+L61: * * *
+L62: 
+L63: 
+L64: 
+L65: Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:
+L66: ☐  | Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+L67:    |
+L68: ☐  | Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
+L69:    |
+L70: ☐  | Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))
+L71:    |
+L72: ☐  | Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))
+L73: 
+L74: 
+L75: 
+L76: 
+L77: 
+L78: Securities registered pursuant to Section 12(b) of the Act:
+L79: Title of each class  |    | Trading symbol  |    | Name of each exchange
+L80: on which registered
+L81: Capital stock, par value $.20 per share  |    | IBM  |    | New York Stock Exchange
+L82:    |    |    |    | Chicago Stock Exchange
+L83: 1.375% Notes due 2019  |    | IBM 19B  |    | New York Stock Exchange
+L84: 2.750% Notes due 2020  |    | IBM 20B  |    | New York Stock Exchange
+L85: 1.875% Notes due 2020  |    | IBM 20A  |    | New York Stock Exchange
+L86: 0.500% Notes due 2021  |    | IBM 21B  |    | New York Stock Exchange
+L87: 2.625% Notes due 2022  |    | IBM 22A  |    | New York Stock Exchange
+L88: 1.25% Notes due 2023  |    | IBM 23A  |    | New York Stock Exchange
+L89: 0.375% Notes due 2023  |    | IBM 23B  |    | New York Stock Exchange
+L90: 1.125% Notes due 2024  |    | IBM 24A  |    | New York Stock Exchange
+L91: 2.875% Notes due 2025  |    | IBM 25A  |    | New York Stock Exchange
+L92: 0.950% Notes due 2025  |    | IBM 25B  |    | New York Stock Exchange
+L93: 0.875% Notes due 2025  |    | IBM 25C  |    | New York Stock Exchange
+L94: 0.300% Notes due 2026  |    | IBM 26B  |    | New York Stock Exchange
+L95: 1.250% Notes due 2027  |    | IBM 27B  |    | New York Stock Exchange
+L96: 1.750% Notes due 2028  |    | IBM 28A  |    | New York Stock Exchange
+L97: 1.500% Notes due 2029  |    | IBM 29  |    | New York Stock Exchange
+L98: 1.750% Notes due 2031  |    | IBM 31  |    | New York Stock Exchange
+L99: 8.375% Debentures due 2019  |    | IBM 19  |    | New York Stock Exchange
+L100: 7.00% Debentures due 2025  |    | IBM 25  |    | New York Stock Exchange
+L101: 6.22% Debentures due 2027  |    | IBM 27  |    | New York Stock Exchange
+L102: 6.50% Debentures due 2028  |    | IBM 28  |    | New York Stock Exchange
+L103: 7.00% Debentures due 2045  |    | IBM 45  |    | New York Stock Exchange
+L104: 7.125% Debentures due 2096  |    | IBM 96  |    | New York Stock Exchange
+L105: 
+L106: 
+L107: Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).
+L108: 
+L109: 
+L110: 
+L111: Emerging growth company ☐
+L112: If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐
+L113: 
+L114: * * *
+L115: 
+L116: Introductory Note
+L117: On July 9, 2019, International Business Machines Corporation (“IBM”) completed the acquisition of Red Hat, Inc., a Delaware corporation (“Red Hat”) pursuant to the terms of the previously announced Agreement and Plan of Merger, dated as of October 28, 2018 (the “Merger Agreement”), among IBM, Red Hat and Socrates Acquisition Corp., a Delaware corporation and a wholly owned subsidiary of IBM (“Merger Sub”).
+L118: Pursuant to the Merger Agreement, Merger Sub merged with and into Red Hat (the “Merger”), with Red Hat surviving the Merger and becoming a wholly owned subsidiary of IBM.
+L119: IBM funded the acquisition and transactions relating thereto with cash on hand. As previously disclosed, IBM issued debt in 2019. IBM acquired all of the issued and outstanding common shares of Red Hat for $190.00 per share in cash, representing a total equity value of approximately $34 billion.
+L120: 
+L121: Item 2.01 Completion of Acquisition or Disposition of Assets.
+L122: 
+L123: The description contained under the Introductory Note above is hereby incorporated by reference in its entirety into this Item 2.01.
+L124: The description of the effects of the Merger Agreement and the transactions contemplated by the Merger Agreement do not purport to be complete and are subject to, and qualified in their entirety by reference to, the full text of the Merger Agreement, which was filed as Exhibit 2.1 to IBM’s Current Report on Form 8-K, filed with the Securities and Exchange Commission on October 29, 2018 and which is incorporated herein by reference.
+L125: 
+L126: Item 7.01 Regulation FD Disclosure.
+--------------------------------------------------------------------------------
+Nielsen announces closing of transaction with Evergreen- and Brookfield-led consortium | Nielsen (https://www.nielsen.com/news-center/2022/nielsen-announces-closing-of-transaction-with-evergreen-and-brookfield-led-consortium/)
+citeturn126view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.nielsen.com/news-center/2022/nielsen-announces-closing-of-transaction-with-evergreen-and-brookfield-led-consortium/","lineno":null}); Total lines: 99
+L0: 【0†iframe†www.googletagmanager.com】
+L1: 
+L2: [Input: Search]
+L3: 
+L4: Contact us
+L5: 
+L6: Solutions
+L7: 
+L8: Insights
+L9: 
+L10: Data Center
+L11: 
+L12: About
+L13: 
+L14: [Input: Search]
+L15: 
+L16: 【1†Client Login】
+L17: 
+L18: en
+L19: 
+L20: Contact Us
+L21: # Nielsen announces closing of transaction with Evergreen- and Brookfield-led consortium
+L22: 
+L23: 3 minute read | October 2022
+L24: New York – October 11, 2022 – Nielsen Holdings plc (NYSE: NLSN) (“Nielsen”) today announced the completion of its previously announced sale to a private equity consortium (the “Consortium”) composed of Evergreen Coast Capital Corp. (“Evergreen”), an affiliate of Elliott Investment Management L.P. (“Elliott”), and Brookfield Business Partners L.P. together with institutional partners (collectively “Brookfield”) in an all-cash transaction valued at approximately $16 billion, including the assumption of debt
+L25: Nielsen shareholders will receive $28 per Nielsen share in cash in accordance with the terms of the transaction. With the completion of the transaction, Nielsen’s shares will no longer trade on the New York Stock Exchange beginning Oct 12, 2022.
+L26: “Today’s announcement marks an important milestone for Nielsen. We are excited for a bright future as a private company,” said David Kenny, Chief Executive Officer of Nielsen. “This transaction provides significant value to our shareholders and provides the best conditions to execute on our Nielsen ONE strategy.”
+L27: “Nielsen is a leader in the media industry,” said Senior Portfolio Manager Marc Steinberg and Senior Managing Director Isaac Kim on behalf of Elliott and Evergreen. “Nielsen created the blueprint for audience measurement, and we believe it is in the best position to be the leader in measurement for the streaming era and to continue to provide value for the new media ecosystem.”
+L28: “Nielsen is a trusted service provider to its customers,” added Dave Gregory, Managing Partner, Brookfield Business Partners. “We look forward to supporting the company’s growth as it continues to lay the groundwork for the future of media.”
+L29: ### Advisors
+L30: J.P. Morgan and Allen & Company LLC acted as lead financial advisors to Nielsen. PJT Partners also acted as an advisor to Nielsen, and Wachtell, Lipton, Rosen & Katz, Clifford Chance LLP, DLA Piper, and Baker McKenzie served as legal advisors to Nielsen. Gibson, Dunn & Crutcher LLP and Herbert Smith Freehills LLP served as legal advisors to Evergreen and the Consortium, and Davis Polk & Wardwell LLP acted as legal advisor to Brookfield.
+L31: BofA Securities, Barclays, Credit Suisse, Mizuho Securities USA LLC, HSBC Securities (USA) Inc., and Citi served as financial advisors to Evergreen and Brookfield.
+L32: ### About Nielsen
+L33: Nielsen shapes the world’s media and content as a global leader in audience measurement, data and analytics. Through our understanding of people and their behaviors across all channels and platforms, we empower our clients with independent and actionable intelligence so they can connect and engage with their audiences—now and into the future. Nielsen operates around the world in more than 55 countries.
+L34: Learn more at 【2†www.nielsen.com】 and connect with us on social media (Twitter, LinkedIn, Facebook and Instagram).
+L35: ### About Elliott and Evergreen
+L36: Elliott Investment Management L.P. manages approximately $55.7 billion of assets as of June 30, 2022. Its flagship fund, Elliott Associates, L.P., was founded in 1977, making it one of the oldest funds under continuous management. The Elliott funds’ investors include pension plans, sovereign wealth funds, endowments, foundations, funds-of-funds, high net worth individuals and families, and employees of the firm. Evergreen Coast Capital Corp.
+L37: is Elliott’s Menlo Park affiliate, which focuses on technology investing.
+L38: ### About Brookfield Business Partners
+L39: Brookfield Business Partners is a global business services and industrials company focused on owning and operating high-quality businesses that provide essential products and services and benefit from a strong competitive position. Investors have flexibility to invest in our company either through Brookfield Business Corporation (NYSE, TSX: BBUC), a corporation, or Brookfield Business Partners L.P. (NYSE: BBU; TSX: BBU.UN), a limited partnership.
+L40: For more information, please visit 【3†https://bbu.brookfield.com†bbu.brookfield.com】.
+L41: Brookfield Business Partners is the flagship listed vehicle of Brookfield Asset Management’s Private Equity Group. Brookfield Asset Management is a leading global alternative asset manager with over $750 billion of assets under management. More information is available at 【4†www.brookfield.com†www.brookfield.com】.
+L42: ### Media Contact:
+L43: 
+L44: #### Investor Relations:
+L45: 
+L46: Sara Gubins
+L47: +1 646 283 7571
+L48: sara.gubins@nielsen.com
+L49: 
+L50: #### Media Relations:
+L51: 
+L52: Connie Kim
+L53: +1 240 274 9999
+L54: connie.kim@nielsen.com
+L55: 
+L56: View original content: 【5†https://www.prnewswire.com/news-releases/nielsen-announces-closing-of-transaction-with-evergreen–and-brookfield-led-consortium-301646310.html†www.prnewswire.com】
+L57: ## Let’s Talk
+L58: 
+L59: Discover how Nielsen can help.
+L60: 
+L61: Get a demo
+L62: 
+L63: * * *
+L64: 
+L65: 【6†Solutions】
+L66: 
+L67: 【7†Locations】
+L68: 
+L69: 【8†Insights】
+L70: 
+L71: 【9†About Nielsen】
+L72: 
+L73: 【10†Careers】
+L74: 
+L75: 【11†News Center】
+L76: 
+L77: 【12†Governance & Integrity】
+L78: 
+L79: Copyright © 2026 The Nielsen Company (US), LLC. All Rights Reserved.
+L80: 
+L81: 【13†Privacy notice】 | 【14†Terms of use】 |
+L82: 【15†Limit the use of my sensitive personal information】【16†Nielsen Marketing Cloud Privacy Statement】 | 【17†Health Privacy Notice】
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/40533/000119312518106365/d512528d8k.htm)
+citeturn126view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/40533/000119312518106365/d512528d8k.htm","lineno":null}); Total lines: 152
+L0: 8-K 1 d512528d8k.htm 8-K 8-K
+L1: 
+L2: 
+L3: 
+L4: 
+L5: 
+L6: 
+L7: 
+L8: 【0†Image: LOGO】
+L9: 
+L10: UNITED STATES
+L11: 
+L12: SECURITIES AND EXCHANGE COMMISSION
+L13: 
+L14: Washington, D.C. 20549
+L15: 
+L16: 
+L17: 
+L18: 
+L19: 
+L20: Form 8-K
+L21: 
+L22: 
+L23: 
+L24: 
+L25: 
+L26: CURRENT REPORT
+L27: 
+L28: PURSUANT TO SECTION 13 OR 15(d)
+L29: 
+L30: OF THE SECURITIES EXCHANGE ACT OF 1934
+L31: 
+L32: Date of Report (Date of earliest event reported) April 3, 2018
+L33: 
+L34: 
+L35: 
+L36: 
+L37: 
+L38: GENERAL DYNAMICS CORPORATION
+L39: 
+L40: (Exact Name of Registrant as Specified in Its Charter)
+L41:  |  |  |  |
+L42: Delaware  |    | 1-3671  |    | 13-1673581
+L43: (State or Other Jurisdiction of Incorporation)  |    | (Commission File Number)  |    | (IRS Employer Identification No.)
+L44: 
+L45: 
+L46: 
+L47:  |  |  |  |
+L48: 2941 Fairview Park Drive, Suite 100, Falls Church, Virginia  |    | 22042-4513
+L49: (Address of Principal Executive Offices)  |    | (Zip Code)
+L50: 
+L51: (703) 876-3000
+L52: 
+L53: (Registrant’s Telephone Number, Including Area Code)
+L54: 
+L55: Not Applicable
+L56: 
+L57: (Former Name or Former Address, If Changed Since Last Report.)
+L58: Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:
+L59: 
+L60: 
+L61: 
+L62: ☐  | Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+L63: 
+L64: 
+L65: 
+L66: ☐  | Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
+L67: 
+L68: 
+L69: 
+L70: ☐  | Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d- 2(b))
+L71: ☐  | Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))
+L72: 
+L73: Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).
+L74: 
+L75: Emerging growth company  ☐
+L76: If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act.  ☐
+L77: 
+L78: 
+L79: 
+L80: 
+L81: 
+L82: 
+L83: 
+L84: * * *
+L85: 
+L86: Item 2.01  | Completion of Acquisition or Disposition of Assets
+L87: As previously disclosed in the Current Report on Form 8-K filed with the Securities and Exchange Commission (the “SEC”) by General Dynamics Corporation, a Delaware corporation (the “Company”) on February 12, 2018, the Company is party to an Agreement and Plan of Merger, dated as of February 9, 2018 (as amended, the “Merger Agreement”), with CSRA Inc., a Nevada corporation (“CSRA”), and Red Hawk Enterprises Corp., a Nevada corporation and wholly owned subsidiary of the Company (“Merger Sub”).
+L88: Pursuant to the Merger Agreement, on March 5, 2018, Merger Sub commenced a tender offer to acquire all of the outstanding shares of CSRA’s common stock, par value $0.001 per share (the “Shares”), for $40.75 per Share, upon the terms and subject to the conditions set forth in the offer to purchase, dated March 5, 2018 (as amended or supplemented, the “Offer to Purchase”), and the related letter of transmittal (together with the Offer to Purchase, the “Offer”).
+L89: Pursuant to Amendment No. 1 to the Merger Agreement, on March 20, 2018, the price offered by Merger Sub in the Offer was increased to $41.25 per Share, in cash without interest and less any applicable withholding taxes (the “Offer Price”).
+L90: The Offer expired at 11:59 p.m., New York City time, on Monday, April 2, 2018 (the “Expiration Date”) and was not extended.
+L91: Computershare Trust Company, N.A., the depositary for the Offer (the “Depositary”), informed the Company that, as of the Expiration Date, a total of 116,282,921 Shares (including 8,315,782 Shares subject to guaranteed delivery procedures as described in the Offer to Purchase) were validly tendered and not validly withdrawn, representing approximately 68.692% of the Shares then outstanding on a fully diluted basis (as determined pursuant to the Merger Agreement).
+L92: On April 3, 2018, Merger Sub accepted for payment (such time of acceptance for payment, the “Acceptance Time”) and, on April 3, 2018, paid for, all such Shares validly tendered and not withdrawn pursuant to the Offer on or prior to the Expiration Date.
+L93: On April 3, 2018, Merger Sub exercised its option (the “Top-Up Option”) to purchase, at a price equal to $41.25 per Share, an aggregate number of additional Shares that, when added to the number of Shares owned by the Company and Merger Sub immediately prior to the exercise of the Top-Up Option (which for purposes of this calculation did not include Shares that had been tendered subject to guaranteed delivery procedures), resulted in Merger Sub owning one Share more than 90% of the outstanding Shares determined on a fully diluted basis.
+L94: Later on April 3, 2018, the Company and Merger Sub then effected a short-form merger under Nevada law pursuant to which Merger Sub merged with and into CSRA, with CSRA surviving as a wholly owned subsidiary of the Company (the “Merger”).
+L95: The aggregate amount of consideration paid in connection with the exercise of the Top-Up Option was approximately $18.3 billion, consisting of approximately $0.4 million in cash plus the delivery of a promissory note by Merger Sub to CSRA with a one-year maturity, bearing a principal amount equal to approximately $18.3 billion and accruing simple interest at the rate of six percent (6%) per annum.
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/1110783/000119312518186836/d602943dex991.htm)
+citeturn126view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/1110783/000119312518186836/d602943dex991.htm","lineno":null}); Total lines: 32
+L0: EX-99.1 2 d602943dex991.htm EX-99.1 EX-99.1
+L1: 
+L2: Exhibit 99.1
+L3: 
+L4: Bayer Closes Monsanto Acquisition
+L5: 
+L6: June 07, 2018 09:00 AM Eastern Daylight Time
+L7: ST. LOUIS — (BUSINESS WIRE) — Bayer successfully completed the acquisition of Monsanto on Thursday. Shares in the U.S. company will no longer be traded on the New York Stock Exchange, with Bayer now the sole owner of Monsanto Company. Monsanto shareholders are being paid 128 U.S. dollars per share. J.P. Morgan assisted Bayer with processing the purchase price payment for the largest acquisition in the company’s history.
+L8: According to the conditional approval from the United States Department of Justice, the integration of Monsanto into Bayer can take place as soon as the divestments to BASF have been completed. This integration process is expected to commence in approximately two months.
+L9: “Today is a great day: for our customers – farmers around the world whom we will be able to help secure and improve their harvests even better; for our shareholders, because this transaction has the potential to create significant value; and for consumers and broader society, because we will be even better placed to help the world’s farmers grow more healthy and affordable food in a sustainable manner.
+L10: As a leading innovation engine in agriculture, we offer employees around the world attractive jobs and development opportunities,” said Werner Baumann, Chairman of the Bayer Board of Management. “Our sustainability targets are as important to us as our financial targets. We aim to live up to the heightened responsibility that a leadership position in agriculture entails and to deepen our dialogue with society.”
+L11: “Today’s closing represents an important milestone toward the vision of creating a leading agricultural company, supporting growers in their efforts to be more productive and sustainable for the benefit of our planet and consumers,” said Hugh Grant, outgoing Chairman and CEO of Monsanto. “I am proud of the path we have paved as Monsanto and look forward to the combined company helping move modern agriculture forward.”
+L12: Liam Condon, member of the Bayer Board of Management, will lead the combined Crop Science Division when the integration commences. Until that time, Monsanto will operate independently from Bayer.
+L13: 
+L14: Cautionary Statements Regarding Forward-Looking Information
+L15: Certain statements contained in this communication may constitute “forward-looking statements”. Actual results could differ materially from those projected or forecast in the forward-looking statements.
+L16: The factors that could cause actual results to differ materially include the following: the risk that the parties may be unable to achieve expected synergies and operating efficiencies in the merger within the expected time-frames (or at all) and to successfully integrate Monsanto Company’s (“Monsanto”) operations into those of Bayer Aktiengesellschaft (“Bayer”); such integration may be more difficult time-consuming or costly than expected; revenues following the transaction may be lower than expected; operating costs, customer loss and business disruption (including difficulties in maintaining relationships with employees, customers, clients or suppliers) may be greater or more significant than expected following the transaction; the retention of certain key employees at Monsanto; the parties’ ability to meet expectations regarding the accounting and tax treatments of the merger; the impact of refinancing of the loans taken out for the transaction; the impact of indebtedness incurred by Bayer in connection with the transaction and the potential impact on the rating of indebtedness of Bayer; the effects of the business combination of Bayer and Monsanto, including the combined company’s future financial condition, operating results, strategy and plans; other factors detailed in Monsanto’s Annual Report on Form 10-K filed with the U.S.
+L17: Securities and Exchange Commission (the “SEC”) for the fiscal year ended August 31, 2017 and Monsanto’s other filings with the SEC, which are available at http://www.sec.gov and on Monsanto’s website at www.monsanto.com; and other factors discussed in Bayer’s public reports which are available on the Bayer website at www.bayer.com. Bayer assumes no obligation to update the information in this communication, except as otherwise required by law.
+L18: Readers are cautioned not to place undue reliance on these forward-looking statements that speak only as of the date hereof.
+L19: Contacts
+L20: 
+L21: Monsanto
+L22: 
+L23: Sara Miller, 314-694-5824
+L24: 
+L25: Christi Dixon, 314-694-1092
+L26: 
+L27: Bayer
+L28: 
+L29: Christian Hartel, +49 214 3047686
+L30: 
+L31: Tino Andresen, +49 214 3066048
+

@@ -7,7 +7,7 @@ receipt and fractional-cash terms. No strict ownership flags are promoted.
 import json
 from pathlib import Path
 
-from backtesting.claim_accounting import number
+from backtesting.claim_accounting import exact, number
 from backtesting.cohort_audit import checked_file
 from backtesting.dividend_components import validate_review_evidence
 
@@ -48,6 +48,21 @@ def load_event_terms(path, spec, provider_rows, source_pin):
                     fact.get("economic_date") != event["economic_date"] or
                     number(fact["shares_per_parent"], positive=True) != number(decision["shares_per_parent"], positive=True)):
                 raise ValueError("Reviewed primary fact does not support the event date and ratio")
+        elif kind == "primary_cash_consideration_reviewed":
+            if (not decision["source_ids"] or any(s not in sources for s in decision["source_ids"]) or
+                    event["kind"] != "cash_merger" or event["share_legs"] or
+                    number(event["cash_per_parent"], positive=True) != number(decision["cash_per_parent"], positive=True)):
+                raise ValueError("Cash-merger decision does not match the configured holder consideration")
+            evidence = json.loads(checked_file(Path.cwd(), sources[decision["source_ids"][0]]["evidence"]).read_text(encoding="utf-8"))
+            fact = next((s for s in evidence["sources"] if s["id"] == decision["primary_fact_id"]), None)
+            boundary = streams[event["parent_id"]]["parts"][-1]["end_exclusive"]
+            if (not fact or fact.get("access") != "primary_browser_text_reviewed" or
+                    fact.get("all_common_holders_supported") is not True or fact.get("currency") != "USD" or
+                    fact["event_id"] != event["id"] or fact["economic_date"] != event["economic_date"] or
+                    number(fact["cash_per_parent"], positive=True) != number(decision["cash_per_parent"], positive=True) or
+                    decision["first_nontradeable_session"] != boundary or boundary < event["economic_date"] or
+                    fact.get("cash_receipt_date") is not None):
+                raise ValueError("Cash-merger source, gross USD value or terminal boundary changed")
         else:
             raise ValueError("Unsupported event-term review kind")
         events[decision["event_id"]] = decision
@@ -85,6 +100,18 @@ def apply_material_terms(item, decision, clock):
         item["modeled_cash_release_at"] = None
         for leg in item["share_legs"]:
             leg["modeled_release_at"] = None
+    elif decision["kind"] == "primary_cash_consideration_reviewed":
+        at = clock.open_on(decision["first_nontradeable_session"])
+        prior_closes = [c for c in clock.closes if at is not None and c < at]
+        if at is None or not prior_closes:
+            raise ValueError("Cash-merger boundary requires an actual saved open and prior ownership close")
+        item.update(status="admitted_diagnostic_cash_receivable", data_terms_resolved=True,
+            cash_per_parent=exact(number(decision["cash_per_parent"], positive=True)),
+            modeled_accounting_at=at.isoformat(), required_ownership_snapshot_at=prior_closes[-1].isoformat(),
+            first_nontradeable_session=decision["first_nontradeable_session"],
+            cash_availability_policy="unspendable_receivable_no_invented_date", modeled_cash_release_at=None,
+            currency_basis="primary_reported_gross_usd_no_personal_tax_model", actual_delivery_at=None,
+            consume_parent_once=True, invalidate_pending_orders_and_stops=True, blockers=[])
     else:
         item.update(primary_share_ratio_reviewed=True,
             blockers=["Distribution record-date/due-bill entitlement requires diagnostic schedule review",

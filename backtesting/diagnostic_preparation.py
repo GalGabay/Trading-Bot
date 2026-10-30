@@ -18,6 +18,8 @@ from backtesting.diagnostic_accounting import DiagnosticClock, SCENARIOS, plan_d
 from backtesting.diagnostic_approval import validate_approval
 from backtesting.dividend_components import apply_review, load_review
 from backtesting.diagnostic_event_terms import apply_material_terms, load_event_terms
+from backtesting.corporate_action_terms import load_actions
+from backtesting.election_schedule import compile_schedules, load_holder_policy
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
 
 
@@ -105,7 +107,8 @@ def dividend_multiplicity(rows):
     return {key:sorted(ids) for key,ids in groups.items() if len(ids)>1}
 
 
-def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_terms_path=None):
+def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_terms_path=None,
+            corporate_review_path=None, election_inputs_path=None):
     if output.exists() or not output.resolve().is_relative_to(Path.cwd().resolve()):
         raise ValueError("Choose a fresh policy-preparation directory in the workspace")
     policy = json.loads(policy_path.read_text(encoding="utf-8"))
@@ -138,6 +141,29 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
         dividend_review_path, provider_rows, report["event_roles"])
     material_decisions, context_decisions = ({}, {}) if event_terms_path is None else load_event_terms(
         event_terms_path, spec, provider_rows, report["event_roles"])
+    corporate_actions = {} if corporate_review_path is None else load_actions(
+        corporate_review_path, spec, provider_rows, report["event_roles"], clock)
+    election_schedules = []
+    holder_policy = None
+    if election_inputs_path is not None:
+        inputs = json.loads(election_inputs_path.read_text(encoding="utf-8"))
+        if inputs["provider_source"] != report["event_roles"] or inputs.get("schema_version") != 1:
+            raise ValueError("Election inventory must match the pinned provider input")
+        holder_policy = load_holder_policy(inputs)
+        election_schedules = compile_schedules(provider_rows, clock,
+            *(checked_file(Path.cwd(),inputs[k]) for k in ("terms","split_review","resolution","mac_review")),
+            holder_policy=holder_policy)
+    # An unresolved future election cannot change the number of shares used by
+    # an earlier ordinary cash dividend. After the first share-changing event,
+    # later dividends and received descendants still depend on its resolution.
+    election_cutoffs = {}
+    for schedule in election_schedules:
+        first = min(schedule["payable_date"], schedule.get("split_first_adjusted_session") or schedule["payable_date"])
+        root = schedule["instrument_id"]
+        election_cutoffs[root] = min(first, election_cutoffs.get(root, first))
+    # MAC has an election without a linked reverse split. Its later dividends
+    # also depend on the unallocated stock issue, so include every schedule root.
+    election_roots.update(election_cutoffs)
     for row in provider_rows:
         identity = row["instrument_id"],row["event_id"]
         if row["category"] == "cash_dividends":
@@ -152,24 +178,39 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
                     item["blockers"].append("reference_only_predecessor_never_earns_a_portfolio_right")
                 if (row["instrument_id"],row["day"]) in boundary_actions:
                     item["blockers"].append("same_boundary_split_dividend_order_and_share_basis_require_review")
-                if row["root_id"] in election_roots:
+                cutoff = election_cutoffs.get(row["root_id"])
+                if row["root_id"] in election_roots and (cutoff is None or row["day"] >= cutoff):
                     item["blockers"].append("lineage_contains_unresolved_special_election_dividend")
+                if row["root_id"] in election_roots:
+                    item["lineage_dependency_starts_on"] = cutoff
                 if item["blockers"]:
                     item.update(status="blocked_terms",modeled_release_at=None)
                 dividends.append(item)
             continue
         disposition = "requires_identity_or_economic_review"
+        related = ambiguous.get(identity,{}).get("related_material_events",[])
         if identity in overrides:
             disposition = overrides[identity]["disposition"]
+        elif identity in corporate_actions:
+            disposition = "handled_by_reviewed_corporate_action"
         elif identity in context_decisions:
             disposition = "context_only_no_portfolio_credit"
         elif identity in ambiguous:
             disposition = ambiguous[identity]["status"]
         elif row["role"] == "acquirer_context_only_no_holder_credit":
             disposition = "context_only_no_portfolio_credit"
+        elif row["category"] == "cash_mergers":
+            record = json.loads(row["record"],parse_float=str)
+            matches = [e for e in spec["material_events"] if e["parent_id"]==row["instrument_id"] and
+                e["economic_date"]==row["day"] and e["kind"]=="cash_merger" and
+                material_decisions.get(e["id"],{}).get("kind")=="primary_cash_consideration_reviewed" and
+                number(str(record["rate"]),positive=True)==number(e["cash_per_parent"],positive=True)]
+            if len(matches)==1:
+                disposition="represented_by_reviewed_cash_merger"
+                related=[matches[0]["id"]]
         event_routes.append(dict(instrument_id=row["instrument_id"],root_id=row["root_id"],event_id=row["event_id"],
             category=row["category"],day=row["day"],disposition=disposition,
-            related_material_events=ambiguous.get(identity,{}).get("related_material_events",[]),
+            related_material_events=related,
             execution_ready=False,provider_record_preserved=True))
     streams = {s["instrument_id"]:s for s in spec["streams"]}
     material = [material_plan(e,clock,s,streams) for e in spec["material_events"] for s in SCENARIOS]
@@ -195,12 +236,21 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
     write_json(output/"frozen_policy.json",policy)
     write_json(output/"dividend_candidates.json",dividends)
     write_json(output/"material_candidates.json",material)
+    write_json(output/"corporate_actions.json",list(corporate_actions.values()))
+    write_json(output/"election_candidates.json",election_schedules)
     write_csv(output/"event_routes.csv",[{k:json.dumps(v) if isinstance(v,list) else v for k,v in r.items()} for r in event_routes])
     summary = dict(revision=pin(revision_dir/"summary.json"),policy=pin(policy_path),
         execution=[pin("backtesting/diagnostic_preparation.py"),pin("backtesting/diagnostic_accounting.py"),
-                   pin("backtesting/dividend_components.py"),pin("backtesting/diagnostic_event_terms.py")],
+                   pin("backtesting/dividend_components.py"),pin("backtesting/diagnostic_event_terms.py"),
+                   pin("backtesting/corporate_action_terms.py"),pin("backtesting/election_schedule.py"),pin("backtesting/election_terms.py")],
         dividend_component_review=None if dividend_review_path is None else pin(dividend_review_path),
         event_terms_review=None if event_terms_path is None else pin(event_terms_path),
+        corporate_action_review=None if corporate_review_path is None else pin(corporate_review_path),
+        election_schedule_inputs=None if election_inputs_path is None else pin(election_inputs_path),
+        reviewed_corporate_actions=len(corporate_actions),election_schedules=len(election_schedules),
+        holder_election_policy=None if holder_policy is None else holder_policy["choice"],
+        holder_election_approval=None if holder_policy is None else holder_policy["approval"],
+        election_lineage_dependency_cutoffs=election_cutoffs,
         reviewed_material_events=len(material_decisions),reviewed_context_only_records=len(context_decisions),
         reviewed_dividend_component_groups=len({(d["instrument_id"],d["ex_date"]) for d in component_decisions.values()}),
         selected_originals=revision["selected_originals"],candidate_streams=revision["candidate_streams"],
@@ -212,7 +262,8 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
         material_event_records=len(spec["material_events"]),material_plan_rows=len(material),
         unresolved_feature_events=mapping["unresolved_feature_events"],
         event_route_counts=dict(Counter(r["disposition"] for r in event_routes)),
-        output_files=[pin(output/n) for n in ("dividend_candidates.json","material_candidates.json","event_routes.csv")],
+        output_files=[pin(output/n) for n in ("dividend_candidates.json","material_candidates.json","event_routes.csv",
+                                            "corporate_actions.json","election_candidates.json")],
         owner_approved=policy["owner_approved"],performance_ready=False,step1_complete=False,strict_flags_promoted=False,
         paper_authorized=False,purchases_usd=0,broker_requests=0,orders=0,strategy_runs=0,unit_tests_run=0)
     write_json(output/"summary.json",summary)
@@ -226,6 +277,9 @@ if __name__ == "__main__":
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--dividend-review",type=Path,help="Explicit pinned dividend component decisions; no automatic deduplication")
     parser.add_argument("--event-terms",type=Path,help="Explicit warmup exclusions, primary ratio facts and incoming-context review")
+    parser.add_argument("--corporate-actions",type=Path,help="Pinned same-instrument aliases, split and preinvestment review")
+    parser.add_argument("--election-inputs",type=Path,help="Conditional election inventory; no investor choice is inferred")
     args=parser.parse_args()
     with offline_only():
-        print(json.dumps(prepare(args.revision,args.policy,args.output,args.dividend_review,args.event_terms),indent=2))
+        print(json.dumps(prepare(args.revision,args.policy,args.output,args.dividend_review,args.event_terms,
+                                 args.corporate_actions,args.election_inputs),indent=2))

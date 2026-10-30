@@ -1,0 +1,377 @@
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/1339947/000119312519306335/d833313dex991.htm)
+citeturn125view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/1339947/000119312519306335/d833313dex991.htm","lineno":null}); Total lines: 55
+L0: EX-99.1 4 d833313dex991.htm EX-99.1 EX-99.1
+L1: 
+L2: Exhibit 99.1
+L3: 
+L4: ViacomCBS Announces Completion of the Merger of CBS and Viacom
+L5: 
+L6: Combination creates a leading, global premium content powerhouse
+L7: New York, NY – December 4, 2019 – ViacomCBS Inc. (Nasdaq: VIACA, VIAC) (“ViacomCBS”) today announced the completion of the merger between CBS Corporation and Viacom Inc. The combined company, which is renamed ViacomCBS, creates a premium content powerhouse with global scale, including leadership positions in markets across the U.S., Europe, Latin America and Asia.
+L8: “This is a historic moment that brings together two iconic companies to form one of the world’s most important content producers and providers,” said Bob Bakish, President and Chief Executive Officer of ViacomCBS. “Through the combination of CBS’s and Viacom’s complementary assets, capabilities and talented teams, ViacomCBS will create and deliver premium content for its own platforms and for others, while providing innovative solutions for advertisers and distributors globally.
+L9: I am excited about the opportunity we have to serve our audiences, creative and commercial partners, and employees, while generating significant long-term value for our shareholders.”
+L10: Building on an extraordinary collection of culture-defining franchises and partnerships with creative talent around the world, ViacomCBS will be home to more than 140,000 premium TV episodes and 3,600 film titles, with global production capabilities and more than $13 billion in annual content investment. The company will account for 22% of TV viewership in the U.S.
+L11: and hold the highest share of broadcast and cable viewing across key audience demographics, with strength in all categories, including News, Sports, General Entertainment, Pop Culture, Comedy, Music and Kids.
+L12: Through the strength and scale of these assets, ViacomCBS will be well-equipped to maximize the value of its content for its own platforms and for others, as it meets the growing global demand for third-party premium content. The company’s content scale will support a robust streaming strategy, including ViacomCBS’s own suite of advertising and subscription-based offerings.
+L13: In addition, the company’s broad reach, extensive intellectual property portfolio and expertise in advanced marketing solutions will enable it to strengthen its partnerships with distributors and advertisers globally.
+L14: ViacomCBS Class A and Class B shares will begin trading on the Nasdaq Global Select Market on December 5, 2019 under the ticker symbols “VIACA” and “VIAC”, respectively.
+L15: 
+L16: As previously announced, as a result of the merger, each Viacom Class A share and Viacom Class B share converted into 0.59625 of a Class A share and Class B share of ViacomCBS, respectively. Holders of CBS Class A shares and CBS Class B shares will continue to own their existing shares, which are now shares of ViacomCBS.
+L17: ViacomCBS will have an attractive growth outlook, be positioned to deliver beneficial cost and revenue synergies and generate substantial free cash flow. This will sustain significant investment in programming and innovation, as well as support ViacomCBS’s commitment to a modest dividend payment. ViacomCBS will also benefit from a strong balance sheet, solid investment grade rating and a board and management team that are focused on creating shareholder value.
+L18: 
+L19: About ViacomCBS
+L20: ViacomCBS (NASDAQ: VIAC; VIACA) is a leading global media and entertainment company that creates premium content and experiences for audiences worldwide. Driven by iconic consumer brands, its
+L21: 
+L22: * * *
+L23: portfolio includes CBS, Showtime Networks, Paramount Pictures, Nickelodeon, MTV, Comedy Central, BET, CBS All Access, Pluto TV and Simon & Schuster, among others. The company delivers the largest share of the U.S. television audience and boasts one of the industry’s most important and extensive libraries of TV and film titles.
+L24: In addition to offering innovative streaming services and digital video products, ViacomCBS provides powerful capabilities in production, distribution and advertising solutions for partners on five continents.
+L25: For more information about ViacomCBS, please visit www.viacbs.com and follow @ViacomCBS on social platforms.
+L26: 
+L27: Cautionary Statement Concerning Forward-Looking Statements
+L28: This news release contains both historical and forward-looking statements. All statements other than statements of historical fact are, or may be deemed to be, forward-looking statements within the meaning of section 27A of the Securities Act of 1933 and section 21E of the Securities Exchange Act of 1934.
+L29: These forward-looking statements are not based on historical facts, but rather reflect our current expectations concerning future results, objectives, plans and goals, and involve known and unknown risks, uncertainties and other factors that are difficult to predict and which may cause future results, performance or achievements to differ from those expressed or implied by these statements.
+L30: These risks, uncertainties and other factors include, among others: following the recently completed merger, the CBS and Viacom businesses may not be integrated successfully or such integration may be more difficult, time consuming or costly than expected and may not achieve anticipated synergies; operating costs, customer loss and business disruption, including difficulties in maintaining relationships with employees, customers, suppliers or vendors may be greater than anticipated as a result of the merger; the potential impact of unforeseen liabilities, future capital expenditures, expenses or failure to achieve anticipated revenues, costs savings, earnings and synergies from the merger on our financial condition and the management, expansion and growth of our business; litigation related to the merger; potential adverse reactions or changes to business relationships resulting from the merger; the ability to retain and hire key personnel and the uncertainties associated with leadership changes; the risk that the market price for ViacomCBS common stock may be affected by the consummation of the merger and factors different from those that have historically affected CBS and Viacom common stock; the anticipated tax treatment of the merger may not be obtained; risks associated with third-party contracts containing consent and/or other provisions that may be triggered by the merger; and other risks, uncertainties and factors described in our news releases and filings and Viacom’s and CBS’ filings with the Securities and Exchange Commission, including but not limited to Viacom’s Form 10-K for the fiscal year ended September 30, 2019, CBS’ Form 10-K for the fiscal year ended December 31, 2018 and their respective reports on Form 10-Q and Form 8-K subsequent to the filing of their annual reports on Form 10-K.
+L31: The forward-looking statements included in this news release are made only as of the date of this news release, and we do not undertake any obligation to publicly update any forward-looking statements to reflect subsequent events or circumstances. If applicable, reconciliations for any non-GAAP financial information are included in this news release or available on our website at ir.viacbs.com.
+L32: Media:
+L33: 
+L34: Justin Dini,
+L35: 
+L36: Senior Vice President, Corporate Communications
+L37: 
+L38: (212) 846-2724
+L39: 
+L40: justin.dini@viacbs.com
+L41: 
+L42: * * *
+L43: 
+L44: Investors:
+L45: 
+L46: Anthony DiClemente,
+L47: 
+L48: Executive Vice President, Investor Relations
+L49: 
+L50: (212) 846-5208
+L51: 
+L52: Anthony.DiClemente@viacbs.com
+L53: 
+L54: VIAC-IR
+--------------------------------------------------------------------------------
+www.sec.gov (https://www.sec.gov/Archives/edgar/data/849399/000110465922115277/tm2229813d1_8k.htm)
+citeturn125view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/849399/000110465922115277/tm2229813d1_8k.htm","lineno":null}); Total lines: 142
+L0: 0000849399 false --03-31 0000849399 2022-11-07 2022-11-07 iso4217:USD xbrli:shares iso4217:USD xbrli:shares
+L1: 
+L2: 
+L3: 
+L4: 
+L5: 
+L6: UNITED STATES
+L7: 
+L8: SECURITIES AND EXCHANGE COMMISSION
+L9: 
+L10: WASHINGTON, D.C. 20549
+L11: 
+L12: 
+L13: 
+L14: FORM 8-K
+L15: 
+L16: 
+L17: 
+L18: CURRENT REPORT
+L19: 
+L20: Pursuant to Section 13 or 15(d) of the
+L21: Securities Exchange Act of 1934
+L22: 
+L23: 
+L24: 
+L25: Date of Report (Date of earliest event reported): November 7, 2022
+L26: 
+L27: 
+L28: 
+L29: Gen Digital Inc.
+L30: 
+L31: (Exact Name of Registrant as Specified in its Charter)
+L32: Delaware  (State or other Jurisdiction
+L33: of Incorporation)   | 000-17781  (Commission File Number)   | 77-0181864  (IRS Employer
+L34: Identification No.)
+L35: 
+L36: 
+L37: 
+L38: 
+L39: 
+L40: 
+L41: 
+L42: 60 E. Rio Salado Parkway, Suite 1000
+L43: 
+L44: Tempe,  AZ  85281
+L45: 
+L46: (Address of principal executive offices) (Zip Code)
+L47: 
+L48: 
+L49: 
+L50: Registrant's telephone number, including area code: (650) 527-8000
+L51: 
+L52: 
+L53: 
+L54: NortonLifeLock Inc.
+L55: 
+L56: (Former name or former address, if changed since last report)
+L57: Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:
+L58: ¨  | Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+L59: ¨  | Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
+L60: ¨  | Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))
+L61: ¨  | Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))
+L62: 
+L63: 
+L64: 
+L65: Securities registered pursuant to Section 12(b) of the Act:
+L66: Title of each class  |    | Trading Symbol(s)  |    | Name of each exchange on which
+L67: registered
+L68: Common Stock, par value $0.01 per share  |    | NLOK  |    | The Nasdaq Stock Market LLC
+L69: 
+L70: 
+L71: 
+L72: Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).
+L73: 
+L74: 
+L75: 
+L76: Emerging growth company ¨
+L77: If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ¨
+L78: 
+L79: 
+L80: 
+L81: 
+L82: 
+L83: 
+L84: 
+L85: 
+L86: 
+L87: 
+L88: 
+L89: 
+L90: 
+L91: Item 5.03.  | Amendments to Articles of Incorporation or Bylaws; Change in Fiscal Year.
+L92: On November 7, 2022, Gen Digital Inc. (previously known as NortonLifeLock Inc.) (the “Company”) filed an amendment to its certificate of incorporation with the Delaware Secretary of State to change its name from “NortonLifeLock Inc.” to “Gen Digital Inc.” (the “Amendment”). The Amendment is effective as of November 7, 2022. The Amendment is filed as Exhibit 3.1 hereto.
+L93: The Company also announced that it intends for its Common Stock to cease trading under the ticker symbol “NLOK” and begin trading under its new ticker symbol, “GEN,” on the Nasdaq Global Select Market, which the Company expects to be effective on November 8, 2022.
+L94: Additionally, on November 2, 2022, the Board of Directors (the “Board”) of the Company adopted and approved, effective as of November 7, 2022, amended and restated by-laws of the Company (as amended and restated, the “Amended and Restated By-laws”).
+L95: The Amended and Restated By-laws, among other things: (i) reflect the change in the Company’s name from “NortonLifeLock Inc.” to “Gen Digital Inc.”; (ii) revise procedures and disclosure requirements for stockholders to provide notice of the nomination of directors (outside of “proxy access”) and the submission of proposals for consideration at meetings of the stockholders of the Company; (iii) clarify the Board and chair’s role in setting rules and procedures for, postponing, adjourning, rescheduling, or canceling any meeting of stockholders previously scheduled; (iv) separately define the roles of President and CEO of the Company to reflect current arrangements, following consummation of the merger with Avast plc; (v) provide the Board greater flexibility to delegate authority to Board committees under Delaware law; (vi) adopt gender-neutral terms when referring to particular positions, offices or title holders, including the adoption of the title Chair in place of Chairman; and (vii) make certain other administrative, modernizing, clarifying and conforming changes, including making updates to reflect recent amendments to the Delaware General Corporation Law.
+L96: 
+L97: 
+L98: The foregoing description does not purport to be complete and is qualified in its entirety by reference to the full text of the Amended and Restated Bylaws of Gen Digital Inc., which is filed as Exhibit 3.2 hereto.
+L99: 
+L100: 
+L101: 
+L102: Item 7.01.  | Regulation FD Disclosure.
+L103: 
+L104: 
+L105: 
+L106: In connection with the Amendment, on November 7, 2022, the Company issued a press release, a copy of which is attached hereto as Exhibit 99.1.
+L107: The information set forth under this Item 7.01, including Exhibit 99.1, of this Current Report on Form 8-K shall not be deemed to be “filed” for purposes of Section 18 of the Securities Exchange Act of 1934 (the “Exchange Act”), or otherwise subject to the liabilities of that section, nor shall it be deemed incorporated by reference in any filing made by the Company under the Securities Act of 1933, as amended, or the Exchange Act, except as shall be expressly set forth by specific reference in such a filing.
+L108: 
+L109: 
+L110: Item 9.01.  | Financial Statements and Exhibits.
+L111: 
+L112: 
+L113: 
+L114: (d) Exhibits.
+L115: Exhibit Number  |    | Exhibit Title or Description
+L116: 【0†3.1】  |    | 【0†Certificate of Amendment to Amended and Restated Certificate of Incorporation of NortonLifeLock Inc., effective as of November 7, 2022.】
+L117: 【1†3.2】  |    | 【1†Amended and Restated Bylaws of Gen Digital Inc., effective as of November 7, 2022.】
+L118: 【2†99.01】  |    | 【2†Press Release dated as of November 7, 2022.】
+L119: 104  |    | The cover page of this Current Report on Form 8-K, formatted in Inline XBRL.
+L120: 
+L121: 
+L122: 
+L123: 2
+L124: 
+L125: 
+L126: 
+L127: 
+L128: 
+L129: SIGNATURE
+L130: Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.
+L131: 
+L132: 
+L133: 
+L134:    | Gen Digital Inc.
+L135:    |    |
+L136: Date: November 7, 2022  | By:  | /s/ Bryan Ko
+L137:    |    | Bryan Ko Chief Legal Officer and Corporate Secretary
+L138: 
+L139: 
+L140: 
+L141: 3
+--------------------------------------------------------------------------------
+ (https://www.sec.gov/Archives/edgar/data/813828/000081382822000033/R9.htm)
+citeturn125view2 [wordlim: 200] Crawled: 1.2 years ago; Content type: text/html; Source: open({"ref_id":"https://www.sec.gov/Archives/edgar/data/813828/000081382822000033/R9.htm","lineno":null}); Total lines: 98
+L0: XML 20 R9.htm IDEA: XBRL DOCUMENT  v3.22.2
+L1: 
+L2: Basis of Presentation
+L3: 
+L4: 6 Months Ended
+L5: 
+L6: Jun. 30, 2022
+L7: 
+L8: Organization, Consolidation and Presentation of Financial Statements [Abstract]
+L9: Basis of Presentation BASIS OF PRESENTATION
+L10: Description of Business—Effective February 16, 2022, we changed our name from ViacomCBS Inc. to Paramount Global, and effective at the open of market trading on February 17, 2022, our Class A Common Stock, Class B Common Stock and 5.75% Series A Mandatory Convertible Preferred Stock (“Mandatory Convertible Preferred Stock”) ceased trading under the ticker symbols “VIACA,” “VIAC” and “VIACP” and began trading under the ticker symbols “PARAA,” “PARA” and “PARAP,” respectively, on The Nasdaq Stock Market LLC.
+L11: References to “Paramount,” the “Company,” “we,” “us” and “our” refer to Paramount Global and its consolidated subsidiaries, unless the context otherwise requires.
+L12: Beginning in 2022, primarily as a result of our increased strategic focus on our direct-to-consumer businesses, we made certain changes to how we manage our businesses and allocate resources that resulted in a change to our operating segments. Our management structure has been reorganized to focus on managing our business as the combination of three parts: a traditional media business, a portfolio of global direct-to-consumer streaming services, and a film studio.
+L13: Accordingly, beginning in the first quarter of 2022 and for all periods presented we are reporting results based on the following segments:
+L14: •TV Media—Our TV Media segment consists of our domestic and international broadcast networks, including the CBS Television Network, Network 10, Channel 5, Telefe, and Chilevisión; our premium and basic cable networks, including Showtime, BET, Nickelodeon, MTV, Comedy Central, Paramount Network, Smithsonian Channel, international extensions of these brands, and CBS Sports Network; our television production operations, including CBS Studios, Paramount Television Studios and CBS Media Ventures, which primarily produces or distributes first-run syndicated programming; and our owned broadcast television stations, CBS Stations.
+L15: •Direct-to-Consumer—Our Direct-to-Consumer segment consists of our portfolio of pay, free and premium global direct-to-consumer streaming services (“DTC services”), including Paramount+, Pluto TV, Showtime Networks’ premium subscription streaming service (Showtime OTT), BET+ and Noggin.
+L16: 
+L17: •Filmed Entertainment—Our Filmed Entertainment segment consists of Paramount Pictures, Paramount Players, Paramount Animation, Nickelodeon Studio, and Miramax.
+L18: Basis of Presentation—The accompanying unaudited consolidated financial statements have been prepared on a basis consistent with accounting principles generally accepted in the United States (“GAAP”) for interim financial information and pursuant to the rules of the Securities and Exchange Commission (SEC). These financial statements should be read in conjunction with the more detailed financial statements and notes thereto included in our Annual Report on Form 10-K for the year ended December 31, 2021.
+L19: In the opinion of management, the accompanying unaudited consolidated financial statements reflect all adjustments, consisting only of normal and recurring adjustments, necessary for a fair statement of our financial position, results of operations and cash flows for the periods presented. Certain previously reported amounts have been reclassified to conform to the current presentation.
+L20: Discontinued Operations—On November 25, 2020, we entered into an agreement to sell our publishing business, Simon & Schuster, which was previously reported as the Publishing segment, to Penguin Random House LLC (“Penguin Random House”), a wholly owned subsidiary of Bertelsmann SE & Co. KGaA, for $2.175 billion in cash. As a result, Simon & Schuster has been presented as a discontinued operation in our consolidated financial statements for all periods presented (see Note 2).
+L21: Use of Estimates—The preparation of our consolidated financial statements in conformity with GAAP requires management to make estimates, judgments and assumptions that affect the reported amounts of assets and liabilities, the disclosures of contingent assets and liabilities as of the date of the financial statements and the reported amounts of revenues and expenses during the periods presented.
+L22: We base our estimates on historical experience and on various other assumptions that are believed to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities that are not readily apparent from other sources. Actual results may vary from these estimates under different assumptions or conditions.
+L23: Net Earnings per Common Share—Basic net earnings per share (“EPS”) is based upon net earnings available to common stockholders divided by the weighted average number of common shares outstanding during the period. Net earnings available to common stockholders is calculated as net earnings from continuing operations or net earnings, as applicable, adjusted to include dividends on our Mandatory Convertible Preferred Stock.
+L24: Weighted average shares for diluted EPS reflects the effect of the assumed exercise of stock options and vesting of restricted stock units (“RSUs”) or performance stock units (“PSUs”) only in the periods in which such effect would have been dilutive.
+L25: Diluted EPS also reflects the effect of the assumed conversion of preferred stock, if dilutive, which includes the issuance of common shares in the weighted average number of shares and excludes the above-mentioned preferred stock dividend adjustment to net earnings available to common stockholders.
+L26: Excluded from the calculation of diluted EPS, because their inclusion would have been antidilutive, were stock options and RSUs of 11 million and 9 million for the three and six months ended June 30, 2022, respectively, and stock options and RSUs of 7 million and 5 million for the three and six months ended June 30, 2021, respectively.
+L27: Also excluded from the calculation of diluted EPS for the three and six months ended June 30, 2022 was the effect of the assumed conversion of 10 million shares of Mandatory Convertible Preferred Stock into shares of common stock because the impact would have been antidilutive. The table below presents a reconciliation of weighted average shares used in the calculation of basic and diluted EPS.
+L28: Three Months Ended Six Months Ended
+L29: June 30,June 30,
+L30: (in millions)2022 2021 2022 2021
+L31: Weighted average shares for basic EPS 649 646 649 634
+L32: 
+L33: Dilutive effect of shares issuable under stock-based
+L34: 
+L35: compensation plans
+L36: 
+L37: 1 4 1 7
+L38: Assumed conversion of Mandatory Convertible
+L39:     Preferred Stock — 12 — 6
+L40: Weighted average shares for diluted EPS 650 662 650 647
+L41: Additionally, because the impact of the assumed conversion of the Mandatory Convertible Preferred Stock would have been antidilutive, net earnings from continuing operations and net earnings used in our calculation of diluted EPS for the three and six months ended June 30, 2022 were adjusted to include the preferred stock dividends recorded during the period.
+L42: The table below presents a reconciliation of net earnings from continuing operations and net earnings to the amounts used in the calculations of basic and diluted EPS.
+L43: Three Months Ended Six Months Ended
+L44: June 30, 2022 June 30, 2022
+L45: Amounts attributable to Paramount:
+L46: Net earnings from continuing operations$358 $749
+L47: Preferred stock dividends(14)(29)
+L48: Net earnings from continuing operations for basic and diluted
+L49:     EPS calculation$344 $720
+L50: Amounts attributable to Paramount:
+L51: Net earnings $419 $852
+L52: Preferred stock dividends(14)(29)
+L53: Net earnings for basic and diluted EPS calculation$405 $823
+L54: 
+L55: Recently Adopted Accounting Pronouncements
+L56: Accounting for Convertible Instruments and Contracts in an Entity’s Own Equity
+L57: On January 1, 2022, we adopted Financial Accounting Standards Board (“FASB”) amended guidance to reduce complexity associated with the accounting for convertible instruments with characteristics of liabilities and equity. Under this guidance, embedded conversion features associated with convertible instruments no longer need to be separated from the host contracts unless they are required to be accounted for as derivatives or have been issued at a substantial premium.
+L58: For contracts in an entity’s own equity, this guidance removes certain settlement conditions that are required for equity contracts to qualify for the derivative scope exceptions. The adoption of this guidance did not have a material impact on our consolidated financial statements.
+L59:  X
+L60: 
+L61: - References
+L62: 
+L63: No definition available.
+L64: 
+L65: + Details
+L66: 
+L67: Name: us-gaap_OrganizationConsolidationAndPresentationOfFinancialStatementsAbstract
+L68: Namespace Prefix: us-gaap_
+L69: Data Type: xbrli:stringItemType
+L70: Balance Type: na
+L71: Period Type: duration
+L72: 
+L73:  X
+L74: 
+L75: - Definition
+L76: 
+L77: The entire disclosure for organization, consolidation and basis of presentation of financial statements disclosure.
+L78: 
+L79: + References
+L80: Reference 1: http://fasb.org/us-gaap/role/ref/legacyRef
+L81: -Publisher FASB
+L82: -Name Accounting Standards Codification
+L83: -Topic 205
+L84: -URI https://asc.fasb.org/topic&trid=2122149
+L85: 
+L86: Reference 2: http://fasb.org/us-gaap/role/ref/legacyRef
+L87: -Publisher FASB
+L88: -Name Accounting Standards Codification
+L89: -Topic 810
+L90: -URI https://asc.fasb.org/topic&trid=2197479
+L91: 
+L92: + Details
+L93: Name: us-gaap_OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock
+L94: Namespace Prefix: us-gaap_
+L95: Data Type: dtr-types:textBlockItemType
+L96: Balance Type: na
+L97: Period Type: duration
+--------------------------------------------------------------------------------
+SL GREEN REALTY CORPORATION - SPECIAL DIVIDEND (ELECTION) OPTION SYMBOL: SLG NEW OPTION SYMBOL: SLG1    (https://www.miaxglobal.com/sites/default/files/alert-files/SLG_Dividend_47969.pdf)
+citeturn125view3 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.miaxglobal.com/sites/default/files/alert-files/SLG_Dividend_47969.pdf","lineno":null}); Total lines: 70
+L0@P0: 
+L1@P0:  #47969
+L2@P0: DATE: DECEMBER 8, 2020
+L3@P0: SUBJECT: SL GREEN REALTY CORPORATION - SPECIAL DIVIDEND
+L4@P0: (ELECTION)
+L5@P0: OPTION SYMBOL: SLG
+L6@P0: NEW OPTION SYMBOL: SLG1
+L7@P0: DATE: 12/14/20
+L8@P0: SL Green Realty Corporation (SLG) has announced a Special Cash Dividend of approximately $1.6967,
+L9@P0: per SLG Common Share, payable in cash or stock at the election of the shareholder. The record date is
+L10@P0: December 15, 2020; payable date is January 15, 2021. The ex-distribution date for this distribution will be
+L11@P0: December 14, 2020.
+L12@P0: SLG Shareholders have the right to elect to receive the dividend in Common Stock (share election) or
+L13@P0: cash (cash election), both subject to proration if either option is oversubscribed. The Election Deadline is
+L14@P0: on January 4, 2021. SLG Shareholders who fail to make an election before the Election Deadline will
+L15@P0: be deemed to have made the share election, subject to proration described in an 8-K Filing dated
+L16@P0: December 4, 2020.
+L17@P0: Exercise Consideration – On December 14, 2020, SLG options will become adjusted symbol SLG1. The
+L18@P0: deliverable for SLG1 will reflect the additional amount of cash, stock, or a combination of both cash and
+L19@P0: stock distributed to shareholders who failed to make a valid election. SLG Call option holders who do
+L20@P0: not wish to receive the Special Dividend in the form distributed to non-electing shareholders must
+L21@P0: exercise their options in sufficient time in advance of the contract adjustment to observe all
+L22@P0: conditions of the election. In all cases, it is the sole responsibility of persons holding call options seeking
+L23@P0: to participate in the election to determine when to exercise their options and to comply with all terms and
+L24@P0: conditions of the election
+L25@P0: 
+L26@P0: OPTIONS CONTRACT ADJUSTMENT
+L27@P0: EFFECTIVE DATE: December 14, 2020
+L28@P0: NEW MULTIPLIER: 100 (e.g., for premium extensions a premium of 1.50 equals $150; a
+L29@P0: strike of 60 yields $6,000.00).
+L30@P0: CONTRACT
+L31@P0: MULTIPLIER: 1
+L32@P0: STRIKE PRICES: No Change
+L33@P0-1: OPTION SYMBOL: SLG changes to SLG1DELIVERABLE PER
+L34@P1: CONTRACT: 1) 100 SL Green Realty Corporation (SLG) Common Shares
+L35@P1: 2) An additional amount of SLG Common Shares, cash, or
+L36@P1:  combination of both shares and cash, valued at approximately
+L37@P1:  $169.67 ($1.6967 x 100), based on the form of election
+L38@P1:  distributed to non-electing shareholders
+L39@P1: 3) Cash in lieu of fractional SLG shares, if any
+L40@P1: 
+L41@P1: CUSIP: 78440X101
+L42@P1: PRICING
+L43@P1: Until the form of election to be received by non-electing shareholders and the cash in lieu amount of
+L44@P1: fractional SLG shares, if any, are determined, the underlying price for SLG1 will be determined as follows:
+L45@P1: SLG1 = SLG + 1.6967
+L46@P1: DELAYED SETTLEMENT
+L47@P1: OCC will delay settlement of the SLG component, the cash portion of the SLG1 deliverable, and the cash in
+L48@P1: lieu amount, if any, until the final form of election to be received by non-electing shareholders is determined.
+L49@P1: Upon determination of the SLG distribution rate, the cash amount, if any, and the cash in lieu of fractional share
+L50@P1: amount, if any, OCC will require Put exercisers and Call assignees to deliver the appropriate number of
+L51@P1: shares and the appropriate cash amount.
+L52@P1: DISCLAIMER
+L53@P1: This Information Memo provides an unofficial summary of the terms of corporate events affecting listed
+L54@P1: options or futures prepared for the convenience of market participants. OCC accepts no responsibility for
+L55@P1: the accuracy or completeness of the summary, particularly for information which may be relevant to
+L56@P1: investment decisions. Option or futures investors should independently ascertain and evaluate all
+L57@P1: information concerning this corporate event(s).
+L58@P1: The determination to adjust options and the nature of any adjustment is made by OCC pursuant to OCC
+L59@P1: By-Laws, Article VI, Sections 11 and 11A. The determination to adjust futures and the nature of any
+L60@P1: adjustment is made by OCC pursuant to OCC By-Laws, Article XII, Sections 3, 4, or 4A, as applicable. For
+L61@P1: both options and futures, each adjustment decision is made on a case by case basis. Adjustment
+L62@P1: decisions are based on information available at the time and are subject to change as additional
+L63@P1: information becomes available or if there are material changes to the terms of the corporate event(s)
+L64@P1: occasioning the adjustment.
+L65@P1: ALL CLEARING MEMBERS ARE REQUESTED TO IMMEDIATELY ADVISE ALL BRANCH OFFICES
+L66@P1: AND CORRESPONDENTS ON THE ABOVE.
+L67@P1: For questions regarding this memo, call Investor Services at 1-888-678-4667 or email
+L68@P1: investorservices@theocc.com. Clearing Members may contact Member Services at 1-800-544-6091 or,
+L69@P1: within Canada, at 1-800-424-7320, or email memberservices@theocc.com.
+
