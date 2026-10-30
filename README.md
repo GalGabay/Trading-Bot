@@ -3,7 +3,17 @@
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
-**Current research status, 2026-10-30:** you approved the separate
+**Current research status, 2026-10-30:** [Step 2 simulator integration is
+verified](docs/subset_simulator_integration.md) for the approved 76-stock scope.
+236 focused tests pass (42 new), together with 36 saved-data accounting checks
+and six synthetic financial compatibility comparisons. Pending cash/share
+rights now connect to the existing simulator with exact transfers, valuation,
+exposure and protective-stop handling. **Step 3 is next:** enforce/profile the
+capped runner, then execute the already approved comparison. No new research
+performance case or paper order has run. See the
+[four-step tracker](docs/broad_backtest_step_tracker.md).
+
+**Previous Step 1 status, 2026-10-30:** you approved the separate
 [76-stock exploratory comparison](docs/faster_research_owner_approval_2026-10-30.json),
 with up to 24 simulations after integration checks pass. Its
 [Step 1 inputs are prepared](docs/approved_subset_preparation_results.md):

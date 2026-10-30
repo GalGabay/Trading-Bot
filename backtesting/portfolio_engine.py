@@ -26,6 +26,7 @@ from backtesting.holding_policy import HoldingEntry, HoldingPolicy
 from backtesting.universe import HistoricalUniverse, UniverseDataError, OWNERSHIP_SCOPE
 from backtesting.corporate_actions import feature_views, split_quantity
 from backtesting.ownership_adapter import OwnershipRuntime, OwnershipSchedule
+from backtesting.diagnostic_bridge import DiagnosticRuntime, DiagnosticSchedule, DiagnosticUniverse
 
 
 @dataclass(frozen=True)
@@ -60,6 +61,7 @@ class PortfolioEquityPoint:
     dividend_receivable: float = 0.0
     ownership_cash_receivable: float = 0.0
     fractional_claim_value: float = 0.0
+    pending_share_claim_value: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -88,6 +90,7 @@ class PortfolioBacktestResult:
     dividend_payments: tuple[dict, ...] = ()
     final_dividend_receivables: tuple[dict, ...] = ()
     ownership_accounting: dict | None = None
+    diagnostic_accounting: dict | None = None
 
 
 @dataclass(frozen=True)
@@ -159,6 +162,7 @@ class PortfolioBacktestEngine:
         signal_datasets: dict[str, pd.DataFrame] | None = None,
         universe: HistoricalUniverse | None = None,
         ownership: OwnershipSchedule | None = None,
+        diagnostic: DiagnosticSchedule | None = None,
     ) -> PortfolioBacktestResult:
         """Use execution OHLC for fills and optional separate bars for signals.
 
@@ -175,6 +179,9 @@ class PortfolioBacktestEngine:
         schedule and ownership action scope. Corporate actions use opening
         quotes only; signal history resets at affected identities. No schedule
         automatically admits the previously collected incomplete cases.
+
+        A separate diagnostic schedule models explicitly approved availability
+        assumptions. It cannot be combined with strict ownership evidence.
         """
         start = self._utc_bound(trade_start)
         end = self._utc_bound(trade_end)
@@ -184,6 +191,14 @@ class PortfolioBacktestEngine:
             raise ValueError("At least one symbol dataset is required")
         if signal_datasets is not None and set(signal_datasets) != set(datasets):
             raise ValueError("Signal and execution dataset symbols must match")
+        if diagnostic is not None:
+            if ownership is not None or not isinstance(diagnostic, DiagnosticSchedule) or not isinstance(universe, DiagnosticUniverse):
+                raise UniverseDataError("Use the separate diagnostic schedule/universe together; strict ownership cannot be combined")
+            diagnostic.bind(universe)
+            if start < pd.Timestamp(diagnostic.membership_not_before):
+                raise UniverseDataError("Diagnostic trading cannot begin before membership availability")
+        elif isinstance(universe, DiagnosticUniverse):
+            raise UniverseDataError("Diagnostic universe requires its schedule; rights cannot be ignored")
         if ownership is not None:
             if universe is None:
                 raise UniverseDataError("Ownership accounting requires the historical universe/calendar")
@@ -196,6 +211,7 @@ class PortfolioBacktestEngine:
             if set(datasets) != universe.instrument_ids:
                 raise UniverseDataError("Datasets must retain every declared stable instrument ID, including empty histories")
 
+        execution_schedule = diagnostic if diagnostic is not None else ownership
         bars: dict[str, pd.DataFrame] = {}
         features: dict[str, pd.DataFrame] = {}
         dates: pd.Series | None = None if universe is None else universe.dates
@@ -209,7 +225,7 @@ class PortfolioBacktestEngine:
                 bars[symbol] = frame
                 feature_lookup[symbol], segment_starts[symbol] = feature_views(
                     frame, symbol, universe, self.costs.periods_per_year,
-                    reset_indices=() if ownership is None else ownership.reset_indices(universe, symbol),
+                    reset_indices=() if execution_schedule is None else execution_schedule.reset_indices(universe, symbol),
                 )
                 continue
             validate_candles(source)
@@ -259,6 +275,8 @@ class PortfolioBacktestEngine:
         dividend_payments: list[dict] = []
         receivables: dict[str, dict] = {}
         ownership_runtime = None if ownership is None else OwnershipRuntime(ownership, universe, self.costs.initial_cash)
+        if diagnostic is not None:
+            ownership_runtime = DiagnosticRuntime(diagnostic, universe, self.costs.initial_cash)
         peak = cash
         previous_close_equity = cash
         halt = ResearchHaltState(self.halt_policy, self.limits.max_daily_loss, self.limits.max_drawdown)
@@ -268,7 +286,7 @@ class PortfolioBacktestEngine:
             if ownership_runtime is None:
                 return sum(item["amount"] for item in receivables.values()), 0.0
             fixed, fractional, _ = ownership_runtime.claim_values(prices)
-            return fixed + fractional, fractional
+            return fixed + fractional, fixed + fractional if diagnostic is not None else fractional
 
         def position_count():
             return len(positions) if ownership_runtime is None else ownership_runtime.position_count()
@@ -321,7 +339,11 @@ class PortfolioBacktestEngine:
 
             if ownership_runtime is not None:
                 prior_stops = dict(stops)
-                ownership_runtime.begin(index, {s: bars[s].loc[index] for s in available_symbols})
+                opening_bars = {s: bars[s].loc[index] for s in available_symbols}
+                if diagnostic is not None:
+                    ownership_runtime.begin(index, opening_bars, stop_prices={s: state.price for s, state in prior_stops.items()})
+                else:
+                    ownership_runtime.begin(index, opening_bars)
                 positions.clear()
                 positions.update(ownership_runtime.positions())
                 entries.clear()
@@ -343,6 +365,15 @@ class PortfolioBacktestEngine:
                     for symbol in transition["affected"]:
                         pending.pop(symbol, None)
                         due.pop(symbol, None)
+                    if diagnostic is not None:
+                        if self.protection is not None:
+                            for symbol, price in transition["stop_prices"].items():
+                                if symbol in positions:
+                                    if symbol in stops and (symbol != parent or transition.get("preserve_existing_stop")):
+                                        price = max(price, stops[symbol].price)
+                                    stops[symbol] = _ActiveStop(price, universe.sessions[index].opens_at)
+                        events.append(f"{timestamp.isoformat()} {parent}: diagnostic ownership/alias boundary; affected queued orders canceled")
+                        continue
                     if self.protection is not None and quantity:
                         if parent not in prior_stops or transition["component_value"] <= 0:
                             raise UniverseDataError("Inherited ownership lacks the prior protective floor or opening component value")
@@ -590,12 +621,16 @@ class PortfolioBacktestEngine:
             peak = max(peak, equity)
             gross_close = fraction_exposure + sum(quantity * close_prices[symbol] for symbol, quantity in positions.items())
             fixed, fractional, dividend = (claim_value, 0.0, claim_value) if ownership_runtime is None else ownership_runtime.claim_values(close_prices)
+            pending_whole_value = 0.0
+            if diagnostic is not None:
+                pending_whole_value, fractional = ownership_runtime.share_claim_components(close_prices)
             points.append(PortfolioEquityPoint(
                 timestamp=timestamp, cash=cash, equity=equity,
                 gross_exposure=gross_close / equity, position_count=position_count(),
                 drawdown=equity / peak - 1,
                 dividend_receivable=dividend,
                 ownership_cash_receivable=fixed - dividend, fractional_claim_value=fractional,
+                pending_share_claim_value=pending_whole_value,
             ))
             observe_loss("close", equity, index, timestamp)
             if halt.blocked and self.halt_policy.daily_pause_sessions is not None:
@@ -649,7 +684,7 @@ class PortfolioBacktestEngine:
                     stop_price = None
                     fraction = None
                     if signal.action == SignalAction.BUY:
-                        if ownership is not None and symbol not in ownership.entry_instrument_ids:
+                        if execution_schedule is not None and symbol not in execution_schedule.entry_instrument_ids:
                             journal(symbol, "close", "blocked", ("not_in_research_entry_universe",))
                             continue
                         if universe is not None and len(history) < 200:
@@ -714,7 +749,8 @@ class PortfolioBacktestEngine:
             universe_metadata=None if universe is None else universe.metadata(),
             share_actions=tuple(share_actions), dividend_entitlements=tuple(dividend_entitlements),
             dividend_payments=tuple(dividend_payments), final_dividend_receivables=tuple(receivables.values()),
-            ownership_accounting=None if ownership_runtime is None else ownership_runtime.report(),
+            ownership_accounting=None if ownership is None else ownership_runtime.report(),
+            diagnostic_accounting=None if diagnostic is None else ownership_runtime.report(),
         )
 
     def _loss_breach(self, equity: float, prior_close: float, peak: float) -> str | None:
@@ -765,6 +801,9 @@ class PortfolioBacktestEngine:
 
 def summarize_portfolio(result: PortfolioBacktestResult) -> dict[str, object]:
     """Summarize a continuous account, including realized and open P&L."""
+    if result.diagnostic_accounting is not None:
+        from backtesting.diagnostic_bridge import summarize_diagnostic
+        return summarize_diagnostic(result)
     if result.ownership_accounting is not None:
         from backtesting.ownership_adapter import summarize_ownership
         return summarize_ownership(result)

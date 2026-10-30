@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-30",
+  "preparation": {
+    "path": "docs/approved_subset_preparation_summary.json",
+    "sha256": "328e8c738159faba1ce252cda4544123af5c1e1aa56e98ca97f92aa4ad8be82e"
+  },
+  "approval": {
+    "path": "docs/faster_research_owner_approval_2026-10-30.json",
+    "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+  },
+  "compiled_cases": [
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/matched_two_stock_control__development_2017_2021__base.json",
+      "sha256": "d9ba44e2822100ac57dd9b799d1b15621e09f4df7c8d58b54b96017d47e30460"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/matched_two_stock_control__development_2017_2021__delayed_five_sessions.json",
+      "sha256": "d6aea0a767f27fabd1f9d9f34ecf05a1659cdc5c61504bbbba02ed50c3065144"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/matched_two_stock_control__development_2017_2021__no_credit.json",
+      "sha256": "96e217c58a5e8d5af5597e5c9462b9d3d2140910aa87c0e6f03fe178a82b1f22"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/matched_two_stock_control__development_robustness_2022_2023__base.json",
+      "sha256": "2d693d09c97aedf65b6d2210ad6ddfdec8434882c74a7783abea8e3a9ef465af"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/matched_two_stock_control__development_robustness_2022_2023__delayed_five_sessions.json",
+      "sha256": "08d72feb8482446be0fe75b321c61b66f1e8043eef2d32a0ea520fb83852e64a"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/matched_two_stock_control__development_robustness_2022_2023__no_credit.json",
+      "sha256": "04c8769c6fc18c06154fae76284fa461fc577d3f291b3c1848d1620bc7774299"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/availability_selected_subset__development_2017_2021__base.json",
+      "sha256": "ad066e52c81166f31d0de348d95381e2d9515b3a6cd2c4e5ab789019bf838d15"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/availability_selected_subset__development_2017_2021__delayed_five_sessions.json",
+      "sha256": "1b9cb395b4f96deb40d183b3fe1b6b14ed73155a58d759deaddb4e38ccd39a36"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/availability_selected_subset__development_2017_2021__no_credit.json",
+      "sha256": "325f9366e0af0e9e4d36e1461e9d303b577c3fcb09624e4d14bfb47de0b6b015"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/availability_selected_subset__development_robustness_2022_2023__base.json",
+      "sha256": "030f58814d424fd8bb183a6a27973bf7d4a19d99400f4eb405ef57a6b0ed564b"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/availability_selected_subset__development_robustness_2022_2023__delayed_five_sessions.json",
+      "sha256": "cb49515ed72f8659cd26d54f150640d99993bfa4d529c1caf85f4de3ca03caa8"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/availability_selected_subset__development_robustness_2022_2023__no_credit.json",
+      "sha256": "8e05a3af10151055edb00161c0f6a8fd870d2cadad492416808d0b60a6f62fab"
+    }
+  ],
+  "compiled_arm_window_scenarios": 12,
+  "saved_accounting_audit": {
+    "path": "data/reports/subset_integration_compiled_2026_10_30_v4/saved_accounting_audit.json",
+    "sha256": "df694f224394f20ea08f7e9887e6c9017187c24cc515e10934c1baae0c4c5bfb"
+  },
+  "saved_accounting_checks": 36,
+  "frozen_engine_constructions": 24,
+  "strategy_calls": 0,
+  "economic_data_gates_clear": true,
+  "runtime_integration_implemented": true,
+  "accounting_and_control_verification_complete": false,
+  "performance_ready": false,
+  "strategy_runs": 0,
+  "unit_tests_run": 0,
+  "network_requests": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "heldout_2024_2025_files_read": 0,
+  "paper_authorized": false,
+  "executions": [
+    {
+      "path": "backtesting/diagnostic_bridge.py",
+      "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+    },
+    {
+      "path": "backtesting/subset_integration.py",
+      "sha256": "80096fae2a45f3ac0b2dcbd373ce0475d34be907466498fd4b672063a0b63017"
+    },
+    {
+      "path": "backtesting/subset_accounting_audit.py",
+      "sha256": "c0009cc0974bb87dc7c3a9d3df286f93d15eba5a17c90c0dbfa80f4b945ff0dc"
+    },
+    {
+      "path": "backtesting/portfolio_engine.py",
+      "sha256": "720616fdaf041ce8c4098161bbe744d246356ed46ea81f94c4ca64effc827ed9"
+    },
+    {
+      "path": "backtesting/daily_research.py",
+      "sha256": "af044513e5ddd53c694b5aff7ee705b48a6e820377fa638cfebfe62cb9b2c454"
+    },
+    {
+      "path": "backtesting/risk_diagnostics.py",
+      "sha256": "b8f57653d7a67f0ea8231047ce8e87c148c7345a128ec743bd98d760bcb491b2"
+    },
+    {
+      "path": "backtesting/claim_accounting.py",
+      "sha256": "821f2d4c97ad79c186e5bddad2130909ec96df9c33751ea0d37f19a42162e34a"
+    },
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "backtesting/ownership_adapter.py",
+      "sha256": "ae3c0063c5af9a9c28827f23abb3fa1859cdc34132674b1b7e26e18a99ef05fc"
+    },
+    {
+      "path": "backtesting/corporate_actions.py",
+      "sha256": "4603c150819812a02402277a7580804396888a8aeb10110f60544aaf92f46dc9"
+    },
+    {
+      "path": "backtesting/subset_preparation.py",
+      "sha256": "b992bccc5a5757d55e114515d3b438abda54fa16457247e70fda1fc146ddfdf5"
+    }
+  ],
+  "snapshots": [
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/diagnostic_bridge.py",
+      "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/subset_integration.py",
+      "sha256": "80096fae2a45f3ac0b2dcbd373ce0475d34be907466498fd4b672063a0b63017"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/subset_accounting_audit.py",
+      "sha256": "c0009cc0974bb87dc7c3a9d3df286f93d15eba5a17c90c0dbfa80f4b945ff0dc"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/portfolio_engine.py",
+      "sha256": "720616fdaf041ce8c4098161bbe744d246356ed46ea81f94c4ca64effc827ed9"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/daily_research.py",
+      "sha256": "af044513e5ddd53c694b5aff7ee705b48a6e820377fa638cfebfe62cb9b2c454"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/risk_diagnostics.py",
+      "sha256": "b8f57653d7a67f0ea8231047ce8e87c148c7345a128ec743bd98d760bcb491b2"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/claim_accounting.py",
+      "sha256": "821f2d4c97ad79c186e5bddad2130909ec96df9c33751ea0d37f19a42162e34a"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/ownership_adapter.py",
+      "sha256": "ae3c0063c5af9a9c28827f23abb3fa1859cdc34132674b1b7e26e18a99ef05fc"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/corporate_actions.py",
+      "sha256": "4603c150819812a02402277a7580804396888a8aeb10110f60544aaf92f46dc9"
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v4/executed_sources/subset_preparation.py",
+      "sha256": "b992bccc5a5757d55e114515d3b438abda54fa16457247e70fda1fc146ddfdf5"
+    }
+  ]
+}

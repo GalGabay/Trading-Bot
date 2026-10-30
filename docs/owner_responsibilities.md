@@ -1,5 +1,16 @@
 # Your responsibilities in the trading-bot project
 
+**Current progress: Step 2 of 4 complete for the approved 76-stock scope;
+Step 3 is next.** [The simulator integration is verified](subset_simulator_integration.md)
+with 236 focused tests, 36 saved accounting checks and six synthetic control
+comparisons. My work is now the enforced/persistent run budgets and runner
+profiling, followed by the approved capped comparison. Your previous scope
+and 24-attempt approval remains valid; no repeated reply, setting, installation
+or purchase is required. No research performance batch has run yet. Personal
+paper-risk decisions and paper activation remain later owner responsibilities.
+The original full-100 study remains separate and blocked at Step 1.
+Earlier entries below describe historical work.
+
 **Current route: Step 1 inputs prepared for the approved 76-stock subset;
 Step 2 integration is next.** Your
 [separate approval](faster_research_owner_approval_2026-10-30.json) covers this

@@ -1,5 +1,14 @@
 # How far are we from paper trading?
 
+**Current progress, 2026-10-30: Step 2 verified; Step 3 is next.**
+[The approved subset now connects to the simulator](subset_simulator_integration.md),
+with 236 passing focused tests, 36 saved-data accounting checks and six
+synthetic financial compatibility comparisons. Runtime/attempt enforcement and
+runner profiling must precede the approved 24-case performance comparison.
+No new research return results yet. Step 4 will explain those results and the
+decision; paper activation remains separate. No new owner configuration or
+purchase is required within this scope. Earlier status entries follow.
+
 **Current route, 2026-10-30:** the owner approved a separate 76-stock exploratory
 comparison, capped at 24 strategy attempts after integration checks pass.
 [Step 1 subset inputs are prepared](approved_subset_preparation_results.md).

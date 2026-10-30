@@ -143,3 +143,15 @@ docs/faster_research_owner_approval_*.json -text
 docs/approved_subset_*.json -text
 docs/broad_targeted_schedule_*.json -text
 docs/research_data/targeted_search*_2026-10-30.json -text
+# Preserve Step 2 implementation, tests, source snapshots and report pins.
+backtesting/diagnostic_bridge.py -text
+backtesting/subset_integration.py -text
+backtesting/subset_accounting_audit.py -text
+backtesting/portfolio_engine.py -text
+backtesting/daily_research.py -text
+backtesting/risk_diagnostics.py -text
+tests/test_diagnostic_bridge.py -text
+tests/test_subset_integration.py -text
+tests/subset_control_replay.py -text
+docs/subset_integration_*.json -text
+docs/research_data/before_subset_integration_v1/* -text

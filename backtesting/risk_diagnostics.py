@@ -29,6 +29,11 @@ def daily_risk_envelope(case: dict, datasets: dict[str, pd.DataFrame]) -> dict:
     reconstructed. Missing prices, inconsistent fills, and mismatched equity
     raise; no prices are filled and no path is fabricated.
     """
+    if "diagnostic_accounting" in case:
+        if "ownership_accounting" in case or case.get("accounting_ledger_version") != "diagnostic_pending_rights_v1":
+            raise ValueError("Diagnostic accounting needs its separate version; strict evidence cannot be mixed")
+        from backtesting.diagnostic_bridge import diagnostic_risk_envelope
+        return diagnostic_risk_envelope(case, datasets)
     if "ownership_accounting" in case:
         if type(case.get("accounting_ledger_version")) is not int or case["accounting_ledger_version"] != 1:
             raise ValueError("Ownership report requires its explicit accounting format version")

@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-30",
+  "modules": [
+    "tests.test_diagnostic_bridge",
+    "tests.test_subset_integration",
+    "tests.test_portfolio_backtesting",
+    "tests.test_ownership_adapter",
+    "tests.test_corporate_actions",
+    "tests.test_daily_research",
+    "tests.test_risk_diagnostics",
+    "tests.test_pilot_diagnostic",
+    "tests.test_diagnostic_accounting"
+  ],
+  "tests_run": 236,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "execution_pins_unchanged": true,
+  "execution": [
+    {
+      "path": "tests/test_diagnostic_bridge.py",
+      "sha256": "21efdd4b66c20c5173a10afb737b9d7953243e4b9a0723a6d0efdfad8fd7f6df"
+    },
+    {
+      "path": "tests/test_subset_integration.py",
+      "sha256": "71f00bb4e048298692f48ad988cb4680662b131ed95b523a0eca1dcd136f355e"
+    },
+    {
+      "path": "tests/test_portfolio_backtesting.py",
+      "sha256": "bdd13f5a53bd9dc1f6a1707cf3764b1b5e81f25a1ba78beea4503aa0bfc019e4"
+    },
+    {
+      "path": "tests/test_ownership_adapter.py",
+      "sha256": "34be929e82bf6a6026e02ccdf783a4e195b1be82959a5af87364f2122d9dec26"
+    },
+    {
+      "path": "tests/test_corporate_actions.py",
+      "sha256": "a56d4afe9761316e42d1232014cd352a2d2e3320d8440bc2d6d3e9d4b2363773"
+    },
+    {
+      "path": "tests/test_daily_research.py",
+      "sha256": "5bd2b4111221dd28023dd5c47300bf1b2d44f42b3f04cab890269d38c4506cbe"
+    },
+    {
+      "path": "tests/test_risk_diagnostics.py",
+      "sha256": "b39bb29cb240043b6a376f531fa820ff50d9a81fcb07046e3f83b2b3f8594e8b"
+    },
+    {
+      "path": "tests/test_pilot_diagnostic.py",
+      "sha256": "e23a1e2b7682b028b46e7db3050f3a396d53efe159ecb9fa94c40e59b0a6c42e"
+    },
+    {
+      "path": "tests/test_diagnostic_accounting.py",
+      "sha256": "0c388c9564edc0a880c69235f62167241b014ff88c506afd35136fe084d8045e"
+    },
+    {
+      "path": "backtesting/diagnostic_bridge.py",
+      "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+    },
+    {
+      "path": "backtesting/subset_integration.py",
+      "sha256": "80096fae2a45f3ac0b2dcbd373ce0475d34be907466498fd4b672063a0b63017"
+    },
+    {
+      "path": "backtesting/subset_accounting_audit.py",
+      "sha256": "c0009cc0974bb87dc7c3a9d3df286f93d15eba5a17c90c0dbfa80f4b945ff0dc"
+    },
+    {
+      "path": "backtesting/portfolio_engine.py",
+      "sha256": "720616fdaf041ce8c4098161bbe744d246356ed46ea81f94c4ca64effc827ed9"
+    },
+    {
+      "path": "backtesting/daily_research.py",
+      "sha256": "af044513e5ddd53c694b5aff7ee705b48a6e820377fa638cfebfe62cb9b2c454"
+    },
+    {
+      "path": "backtesting/risk_diagnostics.py",
+      "sha256": "b8f57653d7a67f0ea8231047ce8e87c148c7345a128ec743bd98d760bcb491b2"
+    },
+    {
+      "path": "backtesting/claim_accounting.py",
+      "sha256": "821f2d4c97ad79c186e5bddad2130909ec96df9c33751ea0d37f19a42162e34a"
+    },
+    {
+      "path": "backtesting/diagnostic_accounting.py",
+      "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+    },
+    {
+      "path": "backtesting/ownership_adapter.py",
+      "sha256": "ae3c0063c5af9a9c28827f23abb3fa1859cdc34132674b1b7e26e18a99ef05fc"
+    },
+    {
+      "path": "backtesting/corporate_actions.py",
+      "sha256": "4603c150819812a02402277a7580804396888a8aeb10110f60544aaf92f46dc9"
+    },
+    {
+      "path": "backtesting/daily_strategies.py",
+      "sha256": "3dc5d5028e67f3394074516b6d5c2ea6d0f1ae8cbf9a7a1d9d2f7584be7b76bb"
+    },
+    {
+      "path": "backtesting/research_policy.py",
+      "sha256": "e08b23c2c182507ea769b77044668caf5bea9a1607fc9377a6f2eae274bd5f3e"
+    },
+    {
+      "path": "backtesting/holding_policy.py",
+      "sha256": "59d267c833caff38a376d3cb5a72993ee15cb71ee2563235685ede22d58624aa"
+    },
+    {
+      "path": "backtesting/protective_exits.py",
+      "sha256": "7786b598d0dc653eb151c3b184796795b87851401287a8a4e226152700b357ba"
+    },
+    {
+      "path": "backtesting/subset_preparation.py",
+      "sha256": "b992bccc5a5757d55e114515d3b438abda54fa16457247e70fda1fc146ddfdf5"
+    },
+    {
+      "path": "app/ai/features.py",
+      "sha256": "f1e64f1ae7d364de2c906ed0a5c13a54380e7194d63261c4071c5b608fa7d8e0"
+    }
+  ],
+  "log": {
+    "path": "data/reports/subset_integration_verification_2026_10_30_v1/unittest.log",
+    "sha256": "1cbfececf369e22923c098320570498285b93787727b4d40468305df3db4f9ec"
+  },
+  "elapsed_seconds": 130.05267599993385,
+  "network_requests": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "research_strategy_runs": 0,
+  "synthetic_fills_only": true
+}

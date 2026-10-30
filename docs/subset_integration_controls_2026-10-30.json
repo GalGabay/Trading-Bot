@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "cost": "base",
+      "scenario": "base",
+      "fill_equality": true,
+      "financial_curve_equality": true,
+      "sessions_checked": 209,
+      "simulated_fixture_only": true
+    },
+    {
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "fill_equality": true,
+      "financial_curve_equality": true,
+      "sessions_checked": 209,
+      "simulated_fixture_only": true
+    },
+    {
+      "cost": "base",
+      "scenario": "no_credit",
+      "fill_equality": true,
+      "financial_curve_equality": true,
+      "sessions_checked": 209,
+      "simulated_fixture_only": true
+    },
+    {
+      "cost": "pessimistic",
+      "scenario": "base",
+      "fill_equality": true,
+      "financial_curve_equality": true,
+      "sessions_checked": 209,
+      "simulated_fixture_only": true
+    },
+    {
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "fill_equality": true,
+      "financial_curve_equality": true,
+      "sessions_checked": 209,
+      "simulated_fixture_only": true
+    },
+    {
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "fill_equality": true,
+      "financial_curve_equality": true,
+      "sessions_checked": 209,
+      "simulated_fixture_only": true
+    }
+  ],
+  "checks_passed": 6,
+  "research_strategy_runs": 0,
+  "synthetic_engine_runs": 8,
+  "real_market_performance_runs": 0,
+  "network_requests": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "execution": [
+    {
+      "path": "tests/subset_control_replay.py",
+      "sha256": "6d5ba77e2472ab2fcef368577e192620b8dab7ba0c2e15ca6d2104fe9c8bd14b"
+    },
+    {
+      "path": "backtesting/diagnostic_bridge.py",
+      "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+    },
+    {
+      "path": "backtesting/portfolio_engine.py",
+      "sha256": "720616fdaf041ce8c4098161bbe744d246356ed46ea81f94c4ca64effc827ed9"
+    }
+  ],
+  "limitation": "Synthetic event-free financial compatibility only; not equality to old real-data research results"
+}

@@ -1,0 +1,29 @@
+{
+  "purpose": "Preserve pre-integration shared sources; old results and approvals remain historical",
+  "sources": [
+    {
+      "original": "backtesting/portfolio_engine.py",
+      "snapshot": {
+        "path": "docs/research_data/before_subset_integration_v1/portfolio_engine.py",
+        "sha256": "bc5f7be52b9e0e6ae9e0c173039749a04fb2b4ae82afb58f13573087bc4bebfc"
+      },
+      "original_sha256": "bc5f7be52b9e0e6ae9e0c173039749a04fb2b4ae82afb58f13573087bc4bebfc"
+    },
+    {
+      "original": "backtesting/daily_research.py",
+      "snapshot": {
+        "path": "docs/research_data/before_subset_integration_v1/daily_research.py",
+        "sha256": "e4f4d88350eea90936d56e161ad0dccf84aca5fd56bc554aed3389ae6ec2de4f"
+      },
+      "original_sha256": "e4f4d88350eea90936d56e161ad0dccf84aca5fd56bc554aed3389ae6ec2de4f"
+    },
+    {
+      "original": "backtesting/risk_diagnostics.py",
+      "snapshot": {
+        "path": "docs/research_data/before_subset_integration_v1/risk_diagnostics.py",
+        "sha256": "ababbdc7f349074e6aa97cf55722bbb302460ccd7ed02a8e918ad0960b944991"
+      },
+      "original_sha256": "ababbdc7f349074e6aa97cf55722bbb302460ccd7ed02a8e918ad0960b944991"
+    }
+  ]
+}

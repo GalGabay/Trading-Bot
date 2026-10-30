@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-30",
+  "current_step": 2,
+  "step1_subset_inputs_prepared": true,
+  "step2_integration_complete": true,
+  "implementation_and_accounting_verification_passed": true,
+  "compilation": {
+    "path": "data/reports/subset_integration_compiled_2026_10_30_v4/summary.json",
+    "sha256": "63041a54726d32526bd7ede0dc8e4bcd221faf1cd8a73e43811c401cf9d3a11f"
+  },
+  "unit_verification": {
+    "path": "data/reports/subset_integration_verification_2026_10_30_v1/summary.json",
+    "sha256": "20be826ca50a41edb06495e23dbacea47d180dfe242483623b41525372198bd1"
+  },
+  "saved_accounting_audit": {
+    "path": "data/reports/subset_integration_compiled_2026_10_30_v4/saved_accounting_audit.json",
+    "sha256": "df694f224394f20ea08f7e9887e6c9017187c24cc515e10934c1baae0c4c5bfb"
+  },
+  "synthetic_control_comparisons": {
+    "path": "data/reports/subset_integration_controls_2026_10_30_v1/report.json",
+    "sha256": "0c87301627f36325c2d3db14294e6628ce89cd571e2b0bcc176e38dde54d07c8"
+  },
+  "approval": {
+    "path": "docs/faster_research_owner_approval_2026-10-30.json",
+    "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+  },
+  "tests_run": 236,
+  "tests_by_module": {
+    "tests.test_diagnostic_bridge": 33,
+    "tests.test_subset_integration": 9,
+    "tests.test_portfolio_backtesting": 18,
+    "tests.test_ownership_adapter": 45,
+    "tests.test_corporate_actions": 25,
+    "tests.test_daily_research": 21,
+    "tests.test_risk_diagnostics": 16,
+    "tests.test_pilot_diagnostic": 26,
+    "tests.test_diagnostic_accounting": 43
+  },
+  "new_focused_tests": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "saved_accounting_checks": 36,
+  "synthetic_financial_comparisons": 6,
+  "compiled_arm_window_scenarios": 12,
+  "research_strategy_runs": 0,
+  "performance_ready": false,
+  "next_step": 3,
+  "remaining_performance_prerequisites": [
+    "Implement and verify persistent attempt/time-budget enforcement",
+    "Profile the runner before any performance attempt",
+    "Execute within the separately approved 24-attempt cap; stop on failed input/reconciliation or timeout"
+  ],
+  "paper_authorized": false,
+  "strict_flags_promoted": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "heldout_2024_2025_files_read": 0,
+  "earlier_failed_compilation_attempts": [
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v1",
+      "reason": "Empty outside-window references required explicit retained-ID handling",
+      "strategy_runs": 0
+    },
+    {
+      "path": "data/reports/subset_integration_compiled_2026_10_30_v2",
+      "reason": "Reviewed FCX component already included in its total required explicit context-only routing",
+      "strategy_runs": 0
+    }
+  ],
+  "limitation": "Exploratory data-availability-selected subset; exact arithmetic does not independently certify vendor terms, payment receipt, selection bias or paper readiness"
+}

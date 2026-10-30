@@ -1,5 +1,15 @@
 # Proposed research program before the first paper trial
 
+**Current progress, 2026-10-30: Step 2 complete for the separate 76-stock scope.**
+[Simulator integration verification](subset_simulator_integration.md) passes
+236 focused tests (42 new), 36 saved accounting checks and six synthetic control
+comparisons. **Step 3 is next:** enforced persistent run budgets, profiling, then
+the approved capped performance comparison. Step 4 explains results and the
+decision. No new research return results, purchases or paper activation.
+No additional owner setting or repeat scope approval is needed. The original
+100-stock protocol and its 188 unresolved gates remain preserved separately.
+Earlier entries below are historical.
+
 **Current route, 2026-10-30:** the separately approved
 [76-stock exploratory comparison](faster_research_owner_approval_2026-10-30.json)
 has [prepared Step 1 inputs](approved_subset_preparation_results.md).
