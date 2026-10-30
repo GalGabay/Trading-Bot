@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-30",
+  "status": "proposed_not_approved",
+  "owner_approval_received": false,
+  "current_step": 3,
+  "original_protocol": {
+    "path": "docs/subset_comparison_execution_protocol_2026-10-30.json",
+    "sha256": "8f48d61675b34dc846b74b39afb9e3fe3f200cb0085d34eb76738983ad82071c"
+  },
+  "original_ledger": {
+    "path": "data/reports/approved_subset_comparison_v1/budget/ledger.json",
+    "sha256": "704bf33d16868b928022e474da08443287e3259260b1214985d0ae2e5925be83"
+  },
+  "partial_results": {
+    "path": "docs/research_data/subset_partial_2026-10-30_summary.json",
+    "sha256": "8110b2600dc12b283515691302866132561c8c5dde30fcbed497b12351dfed11"
+  },
+  "engineering_verification": {
+    "path": "docs/subset_recovery_verification_2026-10-30.json",
+    "sha256": "287aa2a0e3eee9a49d56c7007595fbba10d69d7573521a60e82b526ec6e065ec"
+  },
+  "original_attempts_consumed": 4,
+  "completed_unique_cases_retained": 3,
+  "additional_attempts_limit": 21,
+  "lifetime_attempts_limit": 25,
+  "one_retry_case": {
+    "arm": "availability_selected_subset",
+    "window": "development_2017_2021",
+    "cost": "base",
+    "scenario": "delayed_five_sessions",
+    "id": "availability_selected_subset__development_2017_2021__base__delayed_five_sessions"
+  },
+  "remaining_ordered_cases": [
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_2017_2021__base__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_2017_2021__base__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_2017_2021__base__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__no_credit"
+    }
+  ],
+  "worker_limit": 1,
+  "case_seconds": 600,
+  "recovery_segment_seconds": 3600,
+  "stop_on_failure": true,
+  "automatic_retry": false,
+  "original_ledger_may_be_reset": false,
+  "unchanged": [
+    "76-stock basket and matched two-stock control",
+    "Original 2017-2021 and 2022-2023 windows, costs and accounting scenarios",
+    "Frozen strategy, 70% total entry exposure, 5% per stock, 20 positions",
+    "Acceptance criteria and held-out 2024-2025 restriction"
+  ],
+  "required_before_execution": [
+    "Explicit owner approval of one retry, 25 lifetime attempts and a separate 60-minute recovery segment",
+    "Implement and verify a separate recovery driver with immutable lineage, original-attempt offset and combined reporting; default refuses missing approval",
+    "Pin current source and data checks, preserve original stopped ledger and all three accepted cases"
+  ],
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "paper_authorized": false
+}

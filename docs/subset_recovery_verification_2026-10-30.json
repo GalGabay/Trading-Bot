@@ -1,0 +1,205 @@
+{
+  "date": "2026-10-30",
+  "status": "passed_offline_recovery_engineering_only",
+  "current_step": 3,
+  "step3_complete": false,
+  "tests": {
+    "passed": true,
+    "tests_run": 184,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "execution": [
+      {
+        "path": "tests/test_diagnostic_bridge.py",
+        "sha256": "dc923b3fbcbdbef015df6b9cba4e8d75a5f21b13c3f974b213e304341adfc107"
+      },
+      {
+        "path": "tests/test_subset_integration.py",
+        "sha256": "71f00bb4e048298692f48ad988cb4680662b131ed95b523a0eca1dcd136f355e"
+      },
+      {
+        "path": "tests/test_ownership_adapter.py",
+        "sha256": "34be929e82bf6a6026e02ccdf783a4e195b1be82959a5af87364f2122d9dec26"
+      },
+      {
+        "path": "tests/test_diagnostic_accounting.py",
+        "sha256": "0c388c9564edc0a880c69235f62167241b014ff88c506afd35136fe084d8045e"
+      },
+      {
+        "path": "tests/test_subset_runner.py",
+        "sha256": "2a552ba4c93b89c2aa0cc2438e71c2ed9a78f23a1716e39096be42100fee1cc9"
+      },
+      {
+        "path": "tests/test_subset_results.py",
+        "sha256": "0807c877bccf279cda79113ec50c9f16a6a56571d3770327786af10c5d74d692"
+      },
+      {
+        "path": "backtesting/diagnostic_bridge.py",
+        "sha256": "b5d62dea47f941f31e392b26cf7d4b6078985a7032510a06c52abdee3a566b0a"
+      },
+      {
+        "path": "backtesting/subset_runner.py",
+        "sha256": "f8f6428b31d413e06f3a816ea766a37b798a8408a8d02c8a1e0fa81edc772810"
+      },
+      {
+        "path": "backtesting/subset_integration.py",
+        "sha256": "80096fae2a45f3ac0b2dcbd373ce0475d34be907466498fd4b672063a0b63017"
+      },
+      {
+        "path": "backtesting/subset_results.py",
+        "sha256": "1398ac8922b797ed7de7fd6cfe590f0c4360617a8cd1c35aaea5877d19141eb5"
+      },
+      {
+        "path": "backtesting/claim_accounting.py",
+        "sha256": "821f2d4c97ad79c186e5bddad2130909ec96df9c33751ea0d37f19a42162e34a"
+      },
+      {
+        "path": "backtesting/diagnostic_accounting.py",
+        "sha256": "6c1e852b5354eb878c7493cb69022b1fa851a39bf3209e785149f9bfc325a922"
+      },
+      {
+        "path": "backtesting/ownership_adapter.py",
+        "sha256": "ae3c0063c5af9a9c28827f23abb3fa1859cdc34132674b1b7e26e18a99ef05fc"
+      },
+      {
+        "path": "backtesting/portfolio_engine.py",
+        "sha256": "720616fdaf041ce8c4098161bbe744d246356ed46ea81f94c4ca64effc827ed9"
+      },
+      {
+        "path": "backtesting/daily_research.py",
+        "sha256": "af044513e5ddd53c694b5aff7ee705b48a6e820377fa638cfebfe62cb9b2c454"
+      },
+      {
+        "path": "backtesting/risk_diagnostics.py",
+        "sha256": "b8f57653d7a67f0ea8231047ce8e87c148c7345a128ec743bd98d760bcb491b2"
+      }
+    ],
+    "log": {
+      "path": "data/reports/subset_recovery_tests_2026_10_30_v1/unittest.log",
+      "sha256": "a84ebd12540b7922658b69ddc5395aae3648d9a12c73233cacdb2b628018135b"
+    },
+    "elapsed_seconds": 37.8785733000841,
+    "research_strategy_runs": 0,
+    "purchases_usd": 0,
+    "orders": 0
+  },
+  "saved_case_replays": {
+    "passed": true,
+    "cases": [
+      {
+        "id": "matched_two_stock_control__development_2017_2021__base__base",
+        "case_file": {
+          "path": "data/reports/approved_subset_comparison_v1/case-01/case.json.gz",
+          "sha256": "c3e8ddfbfeb85d09a12a53344a3b5a8e91ddd83192e5b0d00db8f0092495d98c"
+        },
+        "internal_replay_seconds": 1.4107166999019682,
+        "external_replay_seconds": 1.8341606999747455,
+        "report_exactly_matches_original": true,
+        "financial_result_unchanged": true
+      },
+      {
+        "id": "availability_selected_subset__development_2017_2021__base__base",
+        "case_file": {
+          "path": "data/reports/approved_subset_comparison_v1/case-02/case.json.gz",
+          "sha256": "19cc91332eb23225f6550aa5b213389c312e69c373ec829e952283b586eec3b4"
+        },
+        "internal_replay_seconds": 5.5114056000020355,
+        "external_replay_seconds": 11.872346499934793,
+        "report_exactly_matches_original": true,
+        "financial_result_unchanged": true
+      },
+      {
+        "id": "matched_two_stock_control__development_2017_2021__base__delayed_five_sessions",
+        "case_file": {
+          "path": "data/reports/approved_subset_comparison_v1/case-03/case.json.gz",
+          "sha256": "5c4da5848268f6c397b47bce901b8136f6d00e4bd9f1aa7d40cc91035e9a2a4a"
+        },
+        "internal_replay_seconds": 1.285141000058502,
+        "external_replay_seconds": 1.564844099804759,
+        "report_exactly_matches_original": true,
+        "financial_result_unchanged": true
+      }
+    ],
+    "execution": {
+      "path": "backtesting/diagnostic_bridge.py",
+      "sha256": "b5d62dea47f941f31e392b26cf7d4b6078985a7032510a06c52abdee3a566b0a"
+    },
+    "research_strategy_runs": 0,
+    "kind": "Saved-case financial/external-price replay only",
+    "purchases_usd": 0,
+    "orders": 0
+  },
+  "baseline_replay": {
+    "kind": "saved financial replay only, zero strategy calls",
+    "case_file": {
+      "path": "data/reports/approved_subset_comparison_v1/case-01/case.json.gz",
+      "sha256": "c3e8ddfbfeb85d09a12a53344a3b5a8e91ddd83192e5b0d00db8f0092495d98c"
+    },
+    "archived_source": {
+      "path": "data/reports/subset_comparison_before_recovery_2026_10_30_v1/diagnostic_bridge.py",
+      "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+    },
+    "elapsed_seconds": 36.1738857999444,
+    "report_matches_original": true,
+    "research_strategy_runs": 0
+  },
+  "archived_executed_sources": [
+    {
+      "original": {
+        "path": "data/reports/subset_comparison_before_recovery_2026_10_30_v1/subset_runner.py",
+        "sha256": "61598eb7a13338a44189531a28d546d4e8e35a8386ddfaeabe8ecc2017ad922e"
+      },
+      "tracked_snapshot": {
+        "path": "docs/research_data/subset_execution_sources_v1/subset_runner.py.snapshot",
+        "sha256": "61598eb7a13338a44189531a28d546d4e8e35a8386ddfaeabe8ecc2017ad922e"
+      }
+    },
+    {
+      "original": {
+        "path": "data/reports/subset_comparison_before_recovery_2026_10_30_v1/test_subset_runner.py",
+        "sha256": "10ecd35fd6d8b0f218367cff442a96bd4ec86fd1e3a63e0e480d56420a707c8a"
+      },
+      "tracked_snapshot": {
+        "path": "docs/research_data/subset_execution_sources_v1/test_subset_runner.py.snapshot",
+        "sha256": "10ecd35fd6d8b0f218367cff442a96bd4ec86fd1e3a63e0e480d56420a707c8a"
+      }
+    },
+    {
+      "original": {
+        "path": "data/reports/subset_comparison_before_recovery_2026_10_30_v1/diagnostic_bridge.py",
+        "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+      },
+      "tracked_snapshot": {
+        "path": "docs/research_data/subset_execution_sources_v1/diagnostic_bridge.py.snapshot",
+        "sha256": "6a1d26efe930cd6355c5f506f6beda1da75b486cecb8381e55fd086913858750"
+      }
+    },
+    {
+      "original": {
+        "path": "data/reports/subset_comparison_before_recovery_2026_10_30_v1/test_diagnostic_bridge.py",
+        "sha256": "21efdd4b66c20c5173a10afb737b9d7953243e4b9a0723a6d0efdfad8fd7f6df"
+      },
+      "tracked_snapshot": {
+        "path": "docs/research_data/subset_execution_sources_v1/test_diagnostic_bridge.py.snapshot",
+        "sha256": "21efdd4b66c20c5173a10afb737b9d7953243e4b9a0723a6d0efdfad8fd7f6df"
+      }
+    }
+  ],
+  "research_strategy_runs_after_stop": 0,
+  "purchases_usd": 0,
+  "orders": 0,
+  "original_batch": {
+    "path": "data/reports/approved_subset_comparison_v1/summary.json",
+    "sha256": "96236782c3c4d546d4e30485e1a100a46a679f0c6d07de14fe1c592f1c553d6f"
+  },
+  "original_ledger": {
+    "path": "data/reports/approved_subset_comparison_v1/budget/ledger.json",
+    "sha256": "704bf33d16868b928022e474da08443287e3259260b1214985d0ae2e5925be83"
+  },
+  "notes": [
+    "Historical Step 2 and runner proofs refer to the archived executed implementation. Their current-path source checks intentionally fail after the performance/deadline fixes. Do not overwrite old proofs or restart the original batch.",
+    "Saved-case accounting and external-price reports exactly match all three original accepted cases; this verification runs no new research strategy.",
+    "Raspberry Pi execution/timing remains unverified."
+  ]
+}

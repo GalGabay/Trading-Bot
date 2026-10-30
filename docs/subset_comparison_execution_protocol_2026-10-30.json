@@ -1,0 +1,237 @@
+{
+  "date": "2026-10-30",
+  "status": "registered_before_execution",
+  "approval": {
+    "path": "docs/faster_research_owner_approval_2026-10-30.json",
+    "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+  },
+  "step2": {
+    "path": "docs/subset_integration_verification_2026-10-30.json",
+    "sha256": "2475add8ac5882733ac8d5d3c0609722950778774b277c1bd1791016829cb25f"
+  },
+  "runner_verification": {
+    "path": "docs/subset_runner_verification_v2_2026-10-30.json",
+    "sha256": "b719d937ad28c8a49322424b3e91f5dae9185813ca54165e294791e35d81b4dd"
+  },
+  "runner_source": {
+    "path": "backtesting/subset_runner.py",
+    "sha256": "61598eb7a13338a44189531a28d546d4e8e35a8386ddfaeabe8ecc2017ad922e"
+  },
+  "output_directory": "data/reports/approved_subset_comparison_v1",
+  "persistent_ledger": "data/reports/approved_subset_comparison_v1/budget/ledger.json",
+  "ordered_cases": [
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_2017_2021__base__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_2017_2021__base__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_2017_2021__base__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_2017_2021__base__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_2017_2021__base__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_2017_2021__base__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_2017_2021__pessimistic__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__base__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__no_credit"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__base"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "base",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__base"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "delayed_five_sessions",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__delayed_five_sessions"
+    },
+    {
+      "arm": "matched_two_stock_control",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "matched_two_stock_control__development_robustness_2022_2023__pessimistic__no_credit"
+    },
+    {
+      "arm": "availability_selected_subset",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "scenario": "no_credit",
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__no_credit"
+    }
+  ],
+  "max_strategy_attempts": 24,
+  "max_case_seconds": 600,
+  "max_total_seconds": 7200,
+  "max_workers": 1,
+  "no_automatic_retry_resume_or_budget_reset": true,
+  "profile_uses_strategy_calls": false,
+  "research_windows": [
+    {
+      "id": "development_2017_2021",
+      "warmup_start": "2016-01-01",
+      "evaluation_start": "2017-01-01",
+      "end_exclusive": "2022-01-01"
+    },
+    {
+      "id": "development_robustness_2022_2023",
+      "warmup_start": "2019-01-01",
+      "evaluation_start": "2022-01-01",
+      "end_exclusive": "2024-01-01"
+    }
+  ],
+  "allocation": {
+    "total_entry_exposure": 0.7,
+    "per_stock_entry_cap": 0.05,
+    "max_positions": 20
+  },
+  "costs": [
+    {
+      "id": "base",
+      "slippage_bps_per_side": 5,
+      "full_spread_bps": 2,
+      "commission_per_order_usd": 0
+    },
+    {
+      "id": "pessimistic",
+      "slippage_bps_per_side": 20,
+      "full_spread_bps": 10,
+      "commission_per_order_usd": 1
+    }
+  ],
+  "selection_bias": "ex_post_data_availability_selection_may_distort_returns_and_does_not_establish_survivorship_control",
+  "paper_authorized": false,
+  "broker_requests": 0,
+  "purchases_usd": 0,
+  "heldout_2024_2025_access": false,
+  "account_value_is_simulated": true
+}

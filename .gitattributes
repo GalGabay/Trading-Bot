@@ -155,3 +155,16 @@ tests/test_subset_integration.py -text
 tests/subset_control_replay.py -text
 docs/subset_integration_*.json -text
 docs/research_data/before_subset_integration_v1/* -text
+# Preserve the approved finite runner, report code and verification evidence.
+backtesting/subset_runner.py -text
+backtesting/subset_results.py -text
+tests/test_subset_runner.py -text
+tests/test_subset_results.py -text
+docs/subset_runner_*.json -text
+docs/subset_results_*.json -text
+docs/subset_comparison_*.json -text
+
+# Preserve stopped-run evidence and proposed recovery source hashes.
+docs/subset_recovery_*.json -text
+docs/research_data/subset_partial_* -text
+docs/research_data/subset_execution_sources_v1/* -text

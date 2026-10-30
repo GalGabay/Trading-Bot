@@ -1,0 +1,429 @@
+"""One-shot offline execution of the approved 24-case exploratory comparison.
+
+Persistent reservations precede worker launches. Crashes/failures/timeouts stop
+the batch; another invocation cannot reset its budget or automatically retry.
+Subprocess deadlines work on Windows and Linux without Unix-only signals.
+"""
+
+import argparse
+from collections import Counter
+from datetime import datetime, timezone
+from fractions import Fraction
+import gzip
+import hashlib
+import json
+from math import isclose, isfinite
+import os
+from pathlib import Path
+import platform
+import subprocess
+import sys
+import time
+
+APPROVAL=Path("docs/faster_research_owner_approval_2026-10-30.json")
+STEP2=Path("docs/subset_integration_verification_2026-10-30.json")
+VERIFICATION=Path("docs/subset_runner_verification_v2_2026-10-30.json")
+OUTPUT=Path("data/reports/approved_subset_comparison_v1")
+
+
+def pin(path):
+    path=Path(path)
+    resolved=path.resolve()
+    name=resolved.relative_to(Path.cwd().resolve()) if resolved.is_relative_to(Path.cwd().resolve()) else resolved
+    return dict(path=name.as_posix(),sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+
+
+def checked(entry):
+    path=Path(entry["path"]).resolve()
+    if not path.is_relative_to(Path.cwd().resolve()) or pin(path)["sha256"]!=entry["sha256"]:
+        raise ValueError("Execution input path/checksum changed")
+    return path
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def atomic_json(path, value):
+    path=Path(path)
+    temporary=path.with_name(path.name+".tmp")
+    with temporary.open("x",encoding="utf-8",newline="\n") as handle:
+        handle.write(json.dumps(value,indent=2,allow_nan=False)+"\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.replace(temporary,path)
+
+
+def cases_for(proposal):
+    cases=[]
+    for window in proposal["windows"]:
+        for cost in proposal["costs"]:
+            for scenario in proposal["scenarios"]:
+                for arm in proposal["proposed_arms"]:
+                    row=dict(arm=arm["id"],window=window["id"],cost=cost["id"],scenario=scenario)
+                    row["id"]="__".join(row.values())
+                    cases.append(row)
+    if len(cases)!=24 or len({c["id"] for c in cases})!=24:
+        raise ValueError("Exactly 24 unique approved cases required")
+    return cases
+
+
+class Budget:
+    """One writer, one active case, immutable per-attempt reservation files."""
+
+    def __init__(self, directory, scope, case_ids, *, total_seconds=7200, case_seconds=600, now=time.time):
+        if (not case_ids or len(case_ids)>24 or len(set(case_ids))!=len(case_ids) or
+                isinstance(total_seconds,bool) or isinstance(case_seconds,bool) or
+                not 0<total_seconds<=7200 or not 0<case_seconds<=600):
+            raise ValueError("Invalid finite execution limits")
+        self.directory,self.now=Path(directory),now
+        self.directory.mkdir(parents=True,exist_ok=False)
+        self.path=self.directory/"ledger.json"
+        self.state=dict(schema_version=1,scope=scope,status="profiling",started_at_epoch=now(),
+            total_seconds=total_seconds,case_seconds=case_seconds,case_ids=list(case_ids),
+            attempts=[],active=None,profile=None,completed=[],max_workers=1,
+            research_strategy_attempts=0,purchases_usd=0,broker_requests=0,orders=0,paper_authorized=False)
+        self._monotonic=time.monotonic()
+        self.save()
+
+    def save(self):
+        atomic_json(self.path,self.state)
+
+    def remaining(self):
+        wall=self.now()-self.state["started_at_epoch"]
+        if wall < -1:
+            raise ValueError("Wall clock moved backwards; execution cannot continue")
+        return self.state["total_seconds"]-max(wall,time.monotonic()-self._monotonic)
+
+    def profile_passed(self, profile):
+        if self.state["status"]!="profiling" or self.remaining()<=0:
+            raise ValueError("Profile cannot authorize an expired or already started batch")
+        self.state.update(profile=profile,status="running")
+        self.save()
+
+    def reserve(self, case_id, task):
+        i=len(self.state["attempts"])
+        if (self.state["status"]!="running" or self.state["active"] is not None or
+                self.remaining()<=0 or i>=len(self.state["case_ids"]) or self.state["case_ids"][i]!=case_id):
+            raise ValueError("Attempt limit, sequence, active-worker or deadline gate prevents this launch")
+        entry=dict(number=i+1,id=case_id,task=task,status="reserved",reserved_at_epoch=self.now())
+        reservation=self.directory/f"attempt-{i+1:02d}.reservation.json"
+        with reservation.open("x",encoding="utf-8") as handle:
+            json.dump(entry,handle,allow_nan=False)
+            handle.flush()
+            os.fsync(handle.fileno())
+        self.state["attempts"].append(entry)
+        self.state.update(active=case_id,research_strategy_attempts=i+1)
+        self.save()
+        return min(self.state["case_seconds"],self.remaining())
+
+    def finish(self, result):
+        if self.state["active"] is None or result["id"]!=self.state["active"] or self.remaining()<=0:
+            raise ValueError("Cannot accept an unreserved, mismatched or late result")
+        self.state["attempts"][-1]["status"]="completed"
+        self.state["completed"].append(result)
+        self.state["active"]=None
+        self.save()
+
+    def stop(self, reason):
+        self.state.update(status="stopped",stop_reason=str(reason),stopped_at_epoch=self.now())
+        if self.state["active"] is not None:
+            self.state["attempts"][-1]["status"]="failed_or_interrupted_no_retry"
+        self.save()
+
+
+def supervise(command, directory, timeout_seconds):
+    """Return only after the sole compute worker finishes or has been killed."""
+    if not isfinite(timeout_seconds) or timeout_seconds<=0:
+        raise TimeoutError("No worker time remains")
+    directory=Path(directory)
+    directory.mkdir(exist_ok=False)
+    started=time.monotonic()
+    wall_started=time.time()
+    def elapsed_time():
+        wall=time.time()-wall_started
+        if wall < -1:
+            raise TimeoutError("Wall clock moved backwards during worker supervision")
+        return max(time.monotonic()-started,wall)
+    env=dict(os.environ)
+    env.update(OMP_NUM_THREADS="1",OPENBLAS_NUM_THREADS="1",MKL_NUM_THREADS="1",NUMEXPR_NUM_THREADS="1",PYTHONUNBUFFERED="1")
+    with (directory/"stdout.log").open("wb") as out,(directory/"stderr.log").open("wb") as err:
+        process=subprocess.Popen(command,stdin=subprocess.DEVNULL,stdout=out,stderr=err,env=env,
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name=="nt" else 0)
+        try:
+            while process.poll() is None:
+                if elapsed_time()>=timeout_seconds:
+                    raise TimeoutError("Worker exceeded the case/overall deadline")
+                time.sleep(min(.1,max(.001,timeout_seconds-elapsed_time())))
+            elapsed=elapsed_time()
+            if elapsed>=timeout_seconds:
+                raise TimeoutError("Worker finished outside the enforced deadline")
+            if process.returncode!=0:
+                raise RuntimeError(f"Worker failed with exit code {process.returncode}; see {directory/'stderr.log'}")
+            return elapsed
+        finally:
+            if process.poll() is None:
+                process.kill()
+                process.wait(timeout=10)
+
+
+def install_worker_deadline(seconds):
+    """The worker also exits on time if its supervising parent crashes."""
+    import threading
+    if not isfinite(seconds) or seconds<=0:
+        raise TimeoutError("Worker reservation has already expired")
+    wall_started,monotonic_started=time.time(),time.monotonic()
+    def enforce():
+        while True:
+            wall=time.time()-wall_started
+            elapsed=max(wall,time.monotonic()-monotonic_started)
+            if wall < -1 or elapsed>=seconds:
+                os._exit(124)
+            time.sleep(min(.1,seconds-elapsed))
+    watchdog=threading.Thread(target=enforce)
+    watchdog.daemon=True
+    watchdog.start()
+    return watchdog
+
+
+def claim_worker(directory):
+    """No second worker can execute the same reservation, even via its CLI."""
+    with (Path(directory)/"worker.claim").open("x",encoding="utf-8") as handle:
+        json.dump(dict(pid=os.getpid(),claimed_at_epoch=time.time()),handle)
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def authority(verification_path=VERIFICATION):
+    approval=read(APPROVAL)
+    proposal=read(checked(approval["proposal"]))
+    if (approval.get("owner_approved") is not True or approval.get("performance_authorized_conditionally") is not True or
+            approval.get("max_strategy_attempts")!=24 or approval.get("paper_authorized") is not False or
+            approval.get("purchases_usd")!=0 or approval.get("broker_requests_authorized") is not False or
+            proposal["max_total_wall_clock_minutes"]!=120 or proposal["max_case_wall_clock_minutes"]!=10 or
+            proposal["max_concurrent_workers"]!=1):
+        raise ValueError("Only the explicitly approved bounded offline comparison is supported")
+    checked(approval["review_context"])
+    checked(approval["acceptance"])
+    gate=read(STEP2)
+    if gate["step2_integration_complete"] is not True or gate["approval"]!=pin(APPROVAL):
+        raise ValueError("Verified current Step 2 integration required")
+    compilation=read(checked(gate["compilation"]))
+    previous=read(checked(gate["unit_verification"]))
+    controls=read(checked(gate["synthetic_control_comparisons"]))
+    checked(gate["saved_accounting_audit"])
+    for entry in compilation["executions"]+previous["execution"]+controls["execution"]:
+        checked(entry)
+    verification=read(verification_path)
+    if (verification.get("passed") is not True or verification.get("tests_run",0)<20 or
+            any(verification.get(k)!=0 for k in ("failures","errors","skipped")) or
+            verification["approval"]!=pin(APPROVAL) or verification["step2"]!=pin(STEP2) or
+            pin("backtesting/subset_runner.py") not in verification["execution"]):
+        raise ValueError("Current passing timeout/budget/runner verification required")
+    for entry in verification["execution"]:
+        checked(entry)
+    return approval,proposal,verification
+
+
+def summarize_case(result, case, risk, window, acceptance):
+    """Marked economics include unpaid rights; not a fully liquidated cash gain."""
+    metrics=dict(case["metrics"])
+    years=int(window["end_exclusive"][:4])-int(window["evaluation_start"][:4])
+    net_return=(metrics["final_equity"]-metrics["hypothetical_exit_cost"])/metrics["initial_cash"]-1
+    if not isfinite(net_return) or net_return<=-1:
+        raise ValueError("Estimated exit-adjusted equity must remain positive and finite")
+    daily=[metrics["initial_cash"]]+[p.equity for p in result.equity_curve]
+    fraction=(result.costs.slippage_bps+result.costs.spread_bps/2)/10000
+    slippage=spread=0.0
+    for f in result.fills:
+        reference=f.fill_price/(1-fraction) if f.signal_reason.startswith("PROTECTIVE_STOP_") else f.reference_open
+        expected=reference*(1+fraction if f.side.value=="BUY" else 1-fraction)
+        if not isclose(expected,f.fill_price,abs_tol=1e-8):
+            raise ValueError("Execution cost attribution failed")
+        slippage+=reference*f.quantity*result.costs.slippage_bps/10000
+        spread+=reference*f.quantity*result.costs.spread_bps/20000
+    metrics.update(net_marked_return_after_estimated_whole_share_exits=net_return,
+        net_marked_cagr=(1+net_return)**(1/years)-1,
+        net_marked_profit_after_estimated_whole_share_exits=metrics["initial_cash"]*net_return,
+        final_spendable_cash=result.equity_curve[-1].cash,
+        mean_cash_fraction=sum(p.cash/p.equity for p in result.equity_curve)/len(result.equity_curve),
+        mean_position_count=sum(p.position_count for p in result.equity_curve)/len(result.equity_curve),
+        sessions_with_no_stock_or_pending_share_positions=sum(p.position_count==0 for p in result.equity_curve),
+        worst_closing_daily_return=min(b/a-1 for a,b in zip(daily,daily[1:])),
+        conservative_drawdown_bound=risk["conservative_drawdown_bound"],
+        conservative_daily_return_bound=risk["conservative_daily_return_bound"],
+        modeled_slippage_cost=slippage,modeled_spread_cost=spread,
+        total_modeled_trade_cost=slippage+spread+metrics["commissions_paid"],
+        permanent_halt_reason=result.permanent_halt_reason)
+    def below(value,limit):
+        return value > -limit and not isclose(value,-limit,abs_tol=1e-12,rel_tol=0)
+    metrics["evaluation_checks"]=dict(
+        cagr_at_least_six_percent=metrics["net_marked_cagr"]>=acceptance["annual_return_cagr_minimum"] or
+            isclose(metrics["net_marked_cagr"],acceptance["annual_return_cagr_minimum"],abs_tol=1e-12,rel_tol=0),
+        closing_drawdown_below_five_percent=below(metrics["max_drawdown"],acceptance["drawdown_rejection_level"]),
+        daily_closing_loss_below_two_percent=below(metrics["worst_closing_daily_return"],acceptance["daily_loss_rejection_level"]),
+        at_least_thirty_closed_trades=metrics["completed_trades"]>=acceptance["minimum_completed_trades"],
+        at_least_five_closed_instruments=metrics["instruments_with_closed_trades"]>=acceptance["minimum_instruments"],
+        profit_factor_at_least_one_point_two=metrics["profit_factor"] is not None and metrics["profit_factor"]>=acceptance["minimum_profit_factor"],
+        positive_realized_profit=metrics["realized_pnl"]>0,
+        no_permanent_halt=result.permanent_halt_reason is None)
+    metrics["entry_blockers"]=dict(Counter(reason for r in result.buy_decisions if r["status"]=="blocked" for reason in r["blockers"]))
+    maxima={}
+    roots={s["instrument_id"]:s["root_id"] for s in result.diagnostic_accounting["universe"]["streams"]}
+    for mark,day in zip(result.diagnostic_accounting["marks"],result.diagnostic_accounting["days"]):
+        values=Counter()
+        for lot in mark["lots"]:
+            key=lot["instrument_id"]
+            values[roots[key]]+=lot["quantity"]*float(day["quotes"][key]["close"])
+        for claim in mark["claims"]:
+            key=claim["instrument_id"]
+            if claim["kind"]=="cash":
+                value=float(Fraction(claim["amount"]))
+            else:
+                value=float(Fraction(claim["units"]))*float(day["quotes"][key]["close"])
+            values[roots[key]]+=value
+        for key,value in values.items():
+            maxima[key]=max(maxima.get(key,0),value/float(Fraction(mark["equity"])))
+    metrics["maximum_root_exposure_fractions"]=maxima
+    metrics["maximum_single_root_exposure"]=max(maxima.values(),default=0)
+    metrics["holding_time_basis"]="Calendar days between modeled session opens; exact intraday exit time is unknown"
+    return metrics
+
+
+def worker(task_path):
+    task_path=Path(task_path).resolve()
+    if not task_path.is_relative_to(OUTPUT.resolve()):
+        raise ValueError("Worker task must belong to the single approved execution directory")
+    task=read(task_path)
+    ledger=read(OUTPUT/"budget/ledger.json")
+    if ledger["scope"]!=pin(APPROVAL):
+        raise ValueError("Worker detached from approval budget")
+    if task["kind"]=="case":
+        if ledger["status"]!="running" or ledger["active"]!=task["case"]["id"] or ledger["attempts"][-1]["task"]!=pin(task_path):
+            raise ValueError("Worker lacks a persisted active reservation")
+    elif task["kind"]!="profile" or ledger["status"]!="profiling":
+        raise ValueError("Unsupported or repeated worker task")
+    claim_worker(task_path.parent)
+    anchor=ledger["started_at_epoch"] if task["kind"]=="profile" else ledger["attempts"][-1]["reserved_at_epoch"]
+    wall=time.time()
+    if wall<anchor-1:
+        raise ValueError("Worker clock moved backwards")
+    install_worker_deadline(min(anchor+ledger["case_seconds"],ledger["started_at_epoch"]+ledger["total_seconds"])-wall)
+    for entry in task["execution"]:
+        checked(entry)
+    from backtesting.subset_integration import load_inputs,build_window,make_engine
+    from backtesting.pilot_readiness_review import offline_only
+    folder=task_path.parent
+    def phase(name):
+        atomic_json(folder/"progress.json",dict(phase=name,at=datetime.now(timezone.utc).isoformat()))
+    with offline_only():
+        phase("loading_verified_inputs")
+        inputs=load_inputs()
+        if task["kind"]=="profile":
+            from backtesting.corporate_actions import feature_views
+            from backtesting.subset_accounting_audit import audit_saved_accounting
+            started=time.perf_counter()
+            u,s,data,context=build_window(inputs,"availability_selected_subset","development_2017_2021","base")
+            phase("profiling_features_without_strategy_calls")
+            feature_rows=0
+            for key,frame in data.items():
+                prepared=u.prepare(key,frame)
+                views,_=feature_views(prepared,key,u,252,reset_indices=s.reset_indices(u,key))
+                feature_rows+=len(views)
+            audit=audit_saved_accounting(inputs)
+            atomic_json(folder/"result.json",dict(kind="profile",passed=True,feature_rows=feature_rows,
+                feature_preparation_seconds=time.perf_counter()-started,accounting_checks=audit["checks_passed"],
+                research_strategy_runs=0,python=sys.version.split()[0],platform=platform.system(),
+                limitation="Preparation/accounting profile, not a prediction or exemption from case timeouts"))
+            return
+        spec=task["case"]
+        u,s,data,context=build_window(inputs,spec["arm"],spec["window"],spec["scenario"])
+        engine=make_engine(inputs,context,spec["cost"])
+        window=next(w for w in inputs["proposal"]["windows"] if w["id"]==spec["window"])
+        import pandas as pd
+        phase("running_frozen_strategy")
+        result=engine.run(data,trade_start=pd.Timestamp(window["evaluation_start"],tz="UTC"),
+            trade_end=pd.Timestamp(window["end_exclusive"],tz="UTC"),universe=u,diagnostic=s)
+        phase("replaying_financial_ledger")
+        from backtesting.daily_research import pack
+        from backtesting.risk_diagnostics import daily_risk_envelope
+        packed=pack(result)
+        phase("reconciling_external_prices_and_risk")
+        risk=daily_risk_envelope(packed,data)
+        if not risk["ledger_reconciled"] or not risk["external_source_prices_verified"]:
+            raise ValueError("Complete external accounting reconciliation required")
+        metrics=summarize_case(result,packed,risk,window,read(checked(inputs["approval"]["acceptance"])))
+        packed.update(diagnostic_risk=risk,holding_reviews=list(result.holding_reviews),buy_decisions=list(result.buy_decisions),
+            research_case=spec,approval=pin(APPROVAL),preparation=inputs["preparation"],paper_authorized=False)
+        phase("saving_verified_case")
+        output=folder/"case.json.gz"
+        with gzip.open(output,"wt",encoding="utf-8") as handle:
+            json.dump(packed,handle,allow_nan=False,separators=(",",":"))
+        # Compact metrics avoid duplicating every pending claim in the ledger.
+        compact={k:v for k,v in metrics.items() if k not in {"diagnostic_claims","open_positions","realized_pnl_by_symbol"}}
+        atomic_json(folder/"result.json",dict(**spec,metrics=compact,case_file=pin(output),
+            ledger_reconciled=True,external_source_prices_verified=True,paper_authorized=False))
+
+
+def run(verification_path=VERIFICATION):
+    approval,proposal,verification=authority(verification_path)
+    if OUTPUT.exists():
+        raise ValueError("This execution directory already exists; no automatic retry, resume or budget reset")
+    OUTPUT.mkdir(parents=True,exist_ok=False)
+    cases=cases_for(proposal)
+    budget=Budget(OUTPUT/"budget",pin(APPROVAL),[c["id"] for c in cases])
+    executions=verification["execution"]
+    executions+=read(read(STEP2)["compilation"]["path"])["executions"]
+    def task(kind,case=None):
+        folder=OUTPUT/("profile" if kind=="profile" else f"case-{len(budget.state['attempts'])+1:02d}")
+        folder.mkdir()
+        path=folder/"task.json"
+        atomic_json(path,dict(kind=kind,case=case,execution=executions))
+        return path
+    try:
+        profile_task=task("profile")
+        elapsed=supervise([sys.executable,"-m","backtesting.subset_runner","--worker",str(profile_task)],
+            profile_task.parent/"process",min(600,budget.remaining()))
+        profile=read(profile_task.parent/"result.json")
+        if profile.get("passed") is not True or profile.get("research_strategy_runs")!=0:
+            raise ValueError("A successful zero-strategy profile is required")
+        budget.profile_passed(dict(result=pin(profile_task.parent/"result.json"),elapsed_seconds=elapsed))
+        print(f"Profile passed in {elapsed:.1f}s; starting at most 24 reserved strategy attempts.",flush=True)
+        for case in cases:
+            for entry in executions:
+                checked(entry)
+            path=task("case",case)
+            allowance=budget.reserve(case["id"],pin(path))
+            print(f"Starting {len(budget.state['attempts'])}/24: {case['id']}",flush=True)
+            elapsed=supervise([sys.executable,"-m","backtesting.subset_runner","--worker",str(path)],path.parent/"process",allowance)
+            result=read(path.parent/"result.json")
+            for entry in executions:
+                checked(entry)
+            checked(result["case_file"])
+            if any(result[k]!=case[k] for k in case) or result.get("ledger_reconciled") is not True:
+                raise ValueError("Reserved case/result identity or reconciliation differs")
+            budget.finish(dict(**result,result_file=pin(path.parent/"result.json"),elapsed_seconds=elapsed))
+            print(f"Completed {len(budget.state['completed'])}/24: net marked return {result['metrics']['net_marked_return_after_estimated_whole_share_exits']:.4%}",flush=True)
+        budget.state.update(status="completed",completed_at_epoch=time.time())
+        budget.save()
+    except BaseException as exc:
+        budget.stop(f"{type(exc).__name__}: {exc}")
+        raise
+    finally:
+        atomic_json(OUTPUT/"summary.json",dict(status=budget.state["status"],approval=pin(APPROVAL),
+            verification=pin(verification_path),step2=pin(STEP2),ledger=pin(budget.path),
+            attempts=len(budget.state["attempts"]),completed=len(budget.state["completed"]),
+            stop_reason=budget.state.get("stop_reason"),purchases_usd=0,broker_requests=0,orders=0,
+            heldout_2024_2025_files_read=0,paper_authorized=False))
+    return budget.state
+
+
+if __name__=="__main__":
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--worker",type=Path)
+    parser.add_argument("--verification",type=Path,default=VERIFICATION)
+    args=parser.parse_args()
+    if args.worker is not None:
+        worker(args.worker)
+    else:
+        run(args.verification)

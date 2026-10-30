@@ -6,6 +6,7 @@ The strict ownership adapter and its evidence contract are unchanged.
 """
 
 from copy import deepcopy
+from contextlib import contextmanager
 from dataclasses import asdict, replace
 from fractions import Fraction
 from math import isclose
@@ -36,6 +37,42 @@ class DiagnosticLedger(ClaimLedger):
         super().__init__(initial_cash)
         self.rights = DiagnosticRightsBook(clock)
         self.right_details = {}
+
+    @contextmanager
+    def _operation(self, at):
+        """Snapshot mutable financial state without cloning the saved calendar.
+
+        Lots, claims, pending rights, amounts and timestamps are immutable.
+        Journals append records; updates to a newly appended release row stay
+        within its operation. Rollback truncates those new rows. Fail closed
+        if future changes add state without extending this snapshot contract.
+        """
+        fields={"initial_cash","cash","realized_pnl","_lots","_claims","_events","_instructions",
+            "_journal","_clock","rights","right_details"}
+        book_fields={"clock","_pending","_seen","released_cash","delivered_shares","_journal","_at"}
+        if set(self.__dict__)!=fields or set(self.rights.__dict__)!=book_fields:
+            raise AccountingError("Extend the diagnostic atomic snapshot contract for new mutable state")
+        at=instant(at)
+        if self._clock is not None and at<self._clock:
+            raise AccountingError("Accounting clock cannot move backwards")
+        prior=dict(self.__dict__)
+        prior.update(_lots=list(self._lots),_claims=dict(self._claims),_events=set(self._events),
+            _instructions=set(self._instructions),right_details=dict(self.right_details))
+        book=self.rights
+        book_prior=dict(book.__dict__)
+        book_prior.update(_pending=dict(book._pending),_seen=set(book._seen),delivered_shares=dict(book.delivered_shares))
+        journal_length,book_length=len(self._journal),len(book._journal)
+        try:
+            self._clock=at
+            yield at
+        except BaseException:
+            del prior["_journal"][journal_length:]
+            del book_prior["_journal"][book_length:]
+            book.__dict__.clear()
+            book.__dict__.update(book_prior)
+            self.__dict__.clear()
+            self.__dict__.update(prior)
+            raise
 
     def _right(self, claim, *, release_at=None, acquired_at=None, stop=None):
         if claim.claim_id in self._claims:
@@ -235,7 +272,8 @@ class DiagnosticUniverse:
         self.clock = DiagnosticClock([dict(opens_at=s.opens_at.isoformat(), closes_at=s.closes_at.isoformat()) for s in sessions])
         self.streams = deepcopy(streams)
         self.provenance = deepcopy(provenance or {})
-        self._streams = {s["instrument_id"]: s for s in streams}
+        self._streams = {s["instrument_id"]: s for s in self.streams}
+        self._expected_cache = {}
         if not streams or len(self._streams) != len(streams):
             raise UniverseDataError("Unique, explicitly retained diagnostic stream IDs are required")
         self.dates = pd.Series([s.opens_at.tz_convert("America/New_York").normalize().tz_convert("UTC") for s in sessions])
@@ -254,7 +292,12 @@ class DiagnosticUniverse:
 
     def expected(self, key):
         parts = self._streams[key]["parts"]
-        return {t for t in self.dates if any(p["start"] <= t.date().isoformat() < p["end_exclusive"] for p in parts)}
+        signature=tuple((p["start"],p["end_exclusive"]) for p in parts)
+        cached=self._expected_cache.get(key)
+        if cached is None or cached[0]!=signature:
+            cached=(signature,frozenset(t for t in self.dates if any(start<=t.date().isoformat()<end for start,end in signature)))
+            self._expected_cache[key]=cached
+        return cached[1]
 
     def prepare(self, key, source):
         if key not in self.instrument_ids:

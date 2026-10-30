@@ -7,6 +7,7 @@ Synthetic approval strings and weekday calendars are fixtures, not evidence.
 from copy import deepcopy
 from fractions import Fraction
 import json
+from unittest.mock import patch
 
 import pandas as pd
 
@@ -14,6 +15,7 @@ from app.strategy.base import SignalAction
 from backtesting.claim_accounting import AccountingError, Quote
 from backtesting.daily_research import pack
 from backtesting.diagnostic_bridge import DiagnosticLedger, DiagnosticRuntime, DiagnosticSchedule, DiagnosticUniverse, replay_diagnostic
+from backtesting.diagnostic_accounting import DiagnosticRightsBook
 from backtesting.portfolio_engine import ResearchPortfolioLimits
 from backtesting.protective_exits import ProtectiveExitConfig
 from backtesting.risk_diagnostics import daily_risk_envelope
@@ -214,6 +216,66 @@ class PendingRightsEngineTests(DiagnosticFixture):
 
 
 class DiagnosticAdmissionAndReplayTests(DiagnosticFixture):
+    def test_partial_recognition_failure_restores_lots_rights_and_calendar(self):
+        u,s,data=self.make_case()
+        ledger=DiagnosticLedger('10000',u.clock)
+        ledger.buy('BUY','ID-A',10,'100',at=self.sessions[200].opens_at)
+        before=(ledger.cash,ledger.lots,ledger.claims,ledger.journal,ledger.rights.pending,ledger.rights.journal)
+        original=DiagnosticRightsBook.recognize
+        def fail_after_recognition(book,right):
+            original(book,right)
+            raise AccountingError('SYNTHETIC late failure')
+        at=self.sessions[201].opens_at
+        quotes={key:Quote(key,at,price,price,price) for key,price in (('ID-A','70'),('ID-B','120'))}
+        with patch.object(DiagnosticRightsBook,'recognize',new=fail_after_recognition):
+            with self.assertRaises(AccountingError):ledger.action(s.material[0],quotes,at=at)
+        self.assertEqual((ledger.cash,ledger.lots,ledger.claims,ledger.journal,ledger.rights.pending,ledger.rights.journal),before)
+        self.assertIs(ledger.rights.clock,u.clock)
+        ledger.action(s.material[0],quotes,at=at)
+        self.assertEqual(ledger.quantity('ID-A'),10)
+
+    def test_partial_release_failure_rolls_back_both_books(self):
+        u,s,data=self.make_case(kind=None,dividend=True,release=204)
+        ledger=DiagnosticLedger('10000',u.clock)
+        ledger.buy('BUY','ID-A',10,'100',at=self.sessions[200].opens_at)
+        first=s.dividends[0]
+        second=deepcopy(first);second['event_id']='SECOND'
+        ledger.dividend_right(first,at=self.sessions[201].opens_at)
+        ledger.dividend_right(second,at=self.sessions[201].opens_at)
+        before=(ledger.cash,ledger.claims,ledger.journal,ledger.rights.pending,ledger.rights.journal)
+        original=DiagnosticLedger.pay
+        calls=[0]
+        def fail_second(self,*args,**kwargs):
+            calls[0]+=1
+            if calls[0]==2:raise AccountingError('SYNTHETIC second release failure')
+            return original(self,*args,**kwargs)
+        with patch.object(DiagnosticLedger,'pay',new=fail_second):
+            with self.assertRaises(AccountingError):ledger.release_due(at=self.sessions[204].opens_at)
+        self.assertEqual((ledger.cash,ledger.claims,ledger.journal,ledger.rights.pending,ledger.rights.journal),before)
+        self.assertEqual(ledger.rights.released_cash,0)
+        ledger.release_due(at=self.sessions[204].opens_at)
+        self.assertEqual(ledger.cash,9010)
+
+    def test_unknown_mutable_state_requires_snapshot_contract_update(self):
+        u,s,data=self.make_case()
+        ledger=DiagnosticLedger('10000',u.clock)
+        ledger.new_unreviewed_state=[]
+        with self.assertRaisesRegex(AccountingError,'snapshot contract'):
+            ledger.buy('BUY','ID-A',1,'100',at=self.sessions[200].opens_at)
+
+    def test_session_cache_cannot_hide_changed_configured_interval(self):
+        u,s,data=self.make_case()
+        before=u.expected('ID-A')
+        u._streams['ID-A']['parts'][0]['end_exclusive']=self.day(200)
+        self.assertEqual(len(before),209)
+        self.assertEqual(len(u.expected('ID-A')),200)
+
+    def test_input_stream_mutation_does_not_change_owned_universe_configuration(self):
+        streams=[dict(instrument_id='ID-A',parts=[dict(start=self.day(0),end_exclusive=self.day(209))])]
+        u=DiagnosticUniverse(self.sessions[:209],streams)
+        streams[0]['parts'][0]['end_exclusive']=self.day(1)
+        self.assertEqual(len(u.expected('ID-A')),209)
+
     def test_correct_prior_close_ownership_is_required(self):
         u,s,data=self.make_case()
         s.material[0]["required_ownership_snapshot_at"]=self.sessions[199].closes_at.isoformat()

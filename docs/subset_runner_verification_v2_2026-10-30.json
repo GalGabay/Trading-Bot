@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "tests_run": 35,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "execution": [
+    {
+      "path": "backtesting/subset_runner.py",
+      "sha256": "61598eb7a13338a44189531a28d546d4e8e35a8386ddfaeabe8ecc2017ad922e"
+    },
+    {
+      "path": "tests/test_subset_runner.py",
+      "sha256": "10ecd35fd6d8b0f218367cff442a96bd4ec86fd1e3a63e0e480d56420a707c8a"
+    }
+  ],
+  "approval": {
+    "path": "docs/faster_research_owner_approval_2026-10-30.json",
+    "sha256": "7f9686cddae0797c057ad641d95f12e2ec7ac7790d96c48c93905068c887f848"
+  },
+  "step2": {
+    "path": "docs/subset_integration_verification_2026-10-30.json",
+    "sha256": "2475add8ac5882733ac8d5d3c0609722950778774b277c1bd1791016829cb25f"
+  },
+  "log": {
+    "path": "data/reports/subset_runner_verification_2026_10_30_v2/unittest.log",
+    "sha256": "5503018c1b63a06aa5ca676838352681a8b582d433d70b5cd8e8f482beb79d23"
+  },
+  "elapsed_seconds": 2.430621099891141,
+  "research_strategy_runs": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0
+}

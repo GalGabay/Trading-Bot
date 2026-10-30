@@ -1,9 +1,28 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Current research status, 2026-10-30: Step 3 stopped, incomplete.**
+[Three completed cases and one timeout](docs/subset_partial_results_2026-10-30.md) are preserved.
+The 76-stock 2017?2021 base-cost case returned +6.29% total (+1.23% annualized),
+with a ?10.02% closing drawdown; it fails the approved return/drawdown goals.
+No pessimistic-cost or 2022?2023 case completed. Post-stop fixes pass 184 offline
+tests and all three saved financial reports match exactly. No retry ran.
+A [separate recovery proposal](docs/subset_recovery_for_review.md) needs your decision because it
+requires one retry, 25 lifetime attempts and a fresh 60-minute window. No risk
+setting, purchase or installation is needed. Step 4 and paper activation remain
+incomplete. Earlier status entries below describe historical work.
+
 An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
-**Current research status, 2026-10-30:** [Step 2 simulator integration is
+**Historical execution start, 2026-10-30: Step 3 was running.** The
+[finite runner and result reporter](docs/subset_runner.md) passed 35 runner
+tests and 12 report tests. The zero-strategy preparation profile passed in
+26.7 seconds. The approved 24-case comparison now uses persistent reservations,
+one worker, 600 seconds per case and 7,200 seconds overall, stopping on a failed
+check or timeout without automatic retries. No purchases or broker orders.
+See the [four-step tracker](docs/broad_backtest_step_tracker.md).
+
+**Previous Step 2 status, 2026-10-30:** [Step 2 simulator integration is
 verified](docs/subset_simulator_integration.md) for the approved 76-stock scope.
 236 focused tests pass (42 new), together with 36 saved-data accounting checks
 and six synthetic financial compatibility comparisons. Pending cash/share

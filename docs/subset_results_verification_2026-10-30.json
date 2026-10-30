@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "execution": [
+    {
+      "path": "backtesting/subset_results.py",
+      "sha256": "1398ac8922b797ed7de7fd6cfe590f0c4360617a8cd1c35aaea5877d19141eb5"
+    },
+    {
+      "path": "tests/test_subset_results.py",
+      "sha256": "0807c877bccf279cda79113ec50c9f16a6a56571d3770327786af10c5d74d692"
+    }
+  ],
+  "log": {
+    "path": "data/reports/subset_results_verification_2026_10_30_v1/unittest.log",
+    "sha256": "df6e91ec6e1964fb2ec77dad4cec9b9c92b5ad5114100d47ca85f70c87b08adf"
+  },
+  "research_strategy_runs": 0,
+  "orders": 0,
+  "purchases_usd": 0
+}

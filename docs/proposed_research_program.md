@@ -1,5 +1,16 @@
 # Proposed research program before the first paper trial
 
+**Current progress, 2026-10-30: Step 3 stopped, incomplete.**
+[Three completed cases and one timeout](subset_partial_results_2026-10-30.md) are preserved.
+The 76-stock 2017?2021 base-cost case returned +6.29% total (+1.23% annualized),
+with a ?10.02% closing drawdown; it fails the approved return/drawdown goals.
+No pessimistic-cost or 2022?2023 case completed. Post-stop fixes pass 184 offline
+tests and all three saved financial reports match exactly. No retry ran.
+A [separate recovery proposal](subset_recovery_for_review.md) needs your decision because it
+requires one retry, 25 lifetime attempts and a fresh 60-minute window. No risk
+setting, purchase or installation is needed. Step 4 and paper activation remain
+incomplete. Earlier status entries below describe historical work.
+
 **Current progress, 2026-10-30: Step 2 complete for the separate 76-stock scope.**
 [Simulator integration verification](subset_simulator_integration.md) passes
 236 focused tests (42 new), 36 saved accounting checks and six synthetic control

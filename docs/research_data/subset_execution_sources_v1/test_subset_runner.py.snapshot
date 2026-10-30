@@ -1,0 +1,246 @@
+"""Offline budget/timeout/report checks; no frozen research strategy runs."""
+
+from copy import deepcopy
+import json
+from pathlib import Path
+import subprocess
+import sys
+from tempfile import TemporaryDirectory
+from types import SimpleNamespace as NS
+from unittest import TestCase
+from unittest.mock import patch
+
+from backtesting.subset_runner import Budget,atomic_json,authority,cases_for,claim_worker,install_worker_deadline,pin,read,supervise,summarize_case
+
+
+class BudgetTests(TestCase):
+    def setUp(self):
+        self.temp=TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root=Path(self.temp.name)
+        self.clock=[1000.0]
+
+    def budget(self,ids=("a","b"),**kwargs):
+        return Budget(self.root/"budget",dict(sha256="SYNTHETIC"),ids,now=lambda:self.clock[0],**kwargs)
+
+    def ready(self,**kwargs):
+        b=self.budget(**kwargs)
+        b.profile_passed(dict(passed=True))
+        return b
+
+    def test_reservation_is_persisted_before_launch(self):
+        b=self.ready()
+        b.reserve("a",dict(path="task",sha256="SYNTHETIC"))
+        saved=read(b.path)
+        self.assertEqual(saved["research_strategy_attempts"],1)
+        self.assertEqual(saved["active"],"a")
+        self.assertTrue((b.directory/"attempt-01.reservation.json").exists())
+
+    def test_existing_directory_cannot_reset_budget(self):
+        self.ready()
+        with self.assertRaises(FileExistsError): self.budget()
+
+    def test_profile_required_before_reservation(self):
+        b=self.budget()
+        with self.assertRaises(ValueError): b.reserve("a",{})
+        self.assertFalse(b.state["attempts"])
+
+    def test_only_one_active_worker(self):
+        b=self.ready()
+        b.reserve("a",{})
+        with self.assertRaises(ValueError): b.reserve("b",{})
+        self.assertEqual(len(read(b.path)["attempts"]),1)
+
+    def test_case_order_cannot_be_reselected(self):
+        b=self.ready()
+        with self.assertRaises(ValueError): b.reserve("b",{})
+
+    def test_failed_attempt_is_consumed_and_batch_stops(self):
+        b=self.ready()
+        b.reserve("a",{})
+        b.stop("SYNTHETIC timeout")
+        self.assertEqual(read(b.path)["attempts"][0]["status"],"failed_or_interrupted_no_retry")
+        with self.assertRaises(ValueError): b.reserve("a",{})
+        with self.assertRaises(ValueError): b.reserve("b",{})
+
+    def test_case_limit_prevents_extra_attempt(self):
+        b=self.ready(ids=("a",))
+        b.reserve("a",{})
+        b.finish(dict(id="a"))
+        with self.assertRaises(ValueError): b.reserve("b",{})
+
+    def test_duplicate_case_never_reruns(self):
+        b=self.ready()
+        b.reserve("a",{})
+        b.finish(dict(id="a"))
+        with self.assertRaises(ValueError): b.reserve("a",{})
+
+    def test_total_timeout_blocks_new_attempt(self):
+        b=self.ready(total_seconds=1)
+        self.clock[0]+=2
+        with self.assertRaises(ValueError): b.reserve("a",{})
+
+    def test_total_timeout_rejects_late_result(self):
+        b=self.ready(total_seconds=1)
+        b.reserve("a",{})
+        self.clock[0]+=2
+        with self.assertRaises(ValueError): b.finish(dict(id="a"))
+
+    def test_result_identity_must_match_reservation(self):
+        b=self.ready()
+        b.reserve("a",{})
+        with self.assertRaises(ValueError): b.finish(dict(id="b"))
+
+    def test_allowance_never_exceeds_overall_time_remaining(self):
+        b=self.ready(total_seconds=10,case_seconds=600)
+        self.clock[0]+=7
+        self.assertLessEqual(b.reserve("a",{}),3)
+
+    def test_backward_wall_clock_stops_execution(self):
+        b=self.ready()
+        self.clock[0]-=2
+        with self.assertRaises(ValueError): b.reserve("a",{})
+
+    def test_invalid_scope_and_limits(self):
+        for kw in (dict(ids=("a","a")),dict(ids=()),dict(ids=tuple(map(str,range(25)))),
+                   dict(total_seconds=7201),dict(case_seconds=601),dict(total_seconds=0),dict(case_seconds=True)):
+            with self.subTest(kw=kw),self.assertRaises(ValueError): self.budget(**kw)
+
+    def test_cannot_restart_profile(self):
+        b=self.ready()
+        with self.assertRaises(ValueError): b.profile_passed({})
+
+    def test_atomic_json_updates_complete_records(self):
+        path=self.root/"record.json"
+        atomic_json(path,dict(x=1))
+        atomic_json(path,dict(x=2))
+        self.assertEqual(read(path),dict(x=2))
+        self.assertFalse(path.with_name(path.name+".tmp").exists())
+
+    def test_atomic_json_rejects_nonfinite_output(self):
+        path=self.root/"record.json"
+        atomic_json(path,dict(x=1))
+        with self.assertRaises(ValueError): atomic_json(path,dict(x=float("nan")))
+        self.assertEqual(read(path),dict(x=1))
+
+    def test_one_worker_claim_per_reservation(self):
+        claim_worker(self.root)
+        with self.assertRaises(FileExistsError): claim_worker(self.root)
+
+
+class SupervisorTests(TestCase):
+    def setUp(self):
+        self.temp=TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.path=Path(self.temp.name)/"worker"
+
+    def test_successful_process_logs_are_saved(self):
+        elapsed=supervise([sys.executable,"-c","print('SYNTHETIC WORKER')"],self.path,10)
+        self.assertLess(elapsed,10)
+        self.assertIn("SYNTHETIC",(self.path/"stdout.log").read_text())
+
+    def test_nonzero_exit_is_not_accepted(self):
+        with self.assertRaisesRegex(RuntimeError,"exit code 7"):
+            supervise([sys.executable,"-c","raise SystemExit(7)"],self.path,10)
+
+    def test_timed_out_worker_is_killed_and_reaped(self):
+        children=[]
+        original=subprocess.Popen
+        def spawn(*args,**kwargs):
+            p=original(*args,**kwargs)
+            children.append(p)
+            return p
+        with patch("backtesting.subset_runner.subprocess.Popen",side_effect=spawn):
+            with self.assertRaises(TimeoutError):
+                supervise([sys.executable,"-c","import time;time.sleep(10)"],self.path,.2)
+        self.assertIsNotNone(children[0].poll())
+
+    def test_expired_allowance_never_launches_worker(self):
+        with patch("backtesting.subset_runner.subprocess.Popen") as spawn:
+            with self.assertRaises(TimeoutError): supervise([],self.path,0)
+            spawn.assert_not_called()
+
+    def test_worker_watchdog_operates_without_parent_supervisor(self):
+        p=subprocess.run([sys.executable,"-c","from backtesting.subset_runner import install_worker_deadline;import time;install_worker_deadline(.1);time.sleep(5)"],
+            capture_output=True,timeout=10,creationflags=subprocess.CREATE_NO_WINDOW if sys.platform=="win32" else 0)
+        self.assertEqual(p.returncode,124)
+
+    def test_invalid_worker_deadline_never_installs_timer(self):
+        for seconds in (0,-1,float("nan"),float("inf")):
+            with self.subTest(seconds=seconds),self.assertRaises(TimeoutError): install_worker_deadline(seconds)
+
+
+class PlanAndMetricTests(TestCase):
+    def test_absolute_and_relative_pins_have_identical_identity(self):
+        path=Path('backtesting/subset_runner.py')
+        self.assertEqual(pin(path),pin(path.resolve()))
+
+    def test_exactly_24_unique_cases_with_both_arms(self):
+        p=read("docs/faster_research_scope_proposal.json")
+        cases=cases_for(p)
+        self.assertEqual(len(cases),24)
+        self.assertEqual(len({c["id"] for c in cases}),24)
+        self.assertEqual(cases[0]["arm"],"matched_two_stock_control")
+        self.assertEqual(cases[1]["arm"],"availability_selected_subset")
+
+    def test_extra_cost_case_cannot_expand_execution(self):
+        p=read("docs/faster_research_scope_proposal.json")
+        p["costs"].append(dict(id="other"))
+        with self.assertRaises(ValueError): cases_for(p)
+
+    def test_unverified_runner_cannot_use_approved_performance_budget(self):
+        with TemporaryDirectory() as tmp:
+            path=Path(tmp)/"verification.json"
+            atomic_json(path,dict(passed=False))
+            with self.assertRaisesRegex(ValueError,"runner verification"):
+                authority(path)
+
+    def sample(self):
+        policy=read("config/research_acceptance.json")
+        metrics=dict(initial_cash=10000,final_equity=11000,hypothetical_exit_cost=10,commissions_paid=0,
+            max_drawdown=-.01,completed_trades=30,instruments_with_closed_trades=5,profit_factor=1.2,realized_pnl=900)
+        result=NS(costs=NS(slippage_bps=5,spread_bps=2),fills=[],buy_decisions=[],permanent_halt_reason=None,
+            equity_curve=[NS(equity=10000,cash=9000,position_count=1),NS(equity=11000,cash=9000,position_count=1)],
+            diagnostic_accounting=dict(universe=dict(streams=[dict(instrument_id="A",root_id="ROOT")]),
+                marks=[dict(equity="10000",lots=[dict(instrument_id="A",quantity=10)],claims=[]),dict(equity="11000",lots=[dict(instrument_id="A",quantity=10)],claims=[])],
+                days=[dict(quotes=dict(A=dict(close="100"))),dict(quotes=dict(A=dict(close="200")))]))
+        risk=dict(conservative_drawdown_bound=-.06,conservative_daily_return_bound=-.03)
+        window=dict(evaluation_start="2017-01-01",end_exclusive="2022-01-01")
+        return result,dict(metrics=metrics),risk,window,policy
+
+    def test_total_return_and_annualized_return_are_distinct(self):
+        args=self.sample()
+        m=summarize_case(*args)
+        self.assertAlmostEqual(m["net_marked_return_after_estimated_whole_share_exits"],.099)
+        self.assertLess(m["net_marked_cagr"],.02)
+        self.assertFalse(m["evaluation_checks"]["cagr_at_least_six_percent"])
+
+    def test_cash_fraction_is_actual_cash_not_one_minus_exposure(self):
+        m=summarize_case(*self.sample())
+        self.assertAlmostEqual(m["mean_cash_fraction"],(.9+9000/11000)/2)
+
+    def test_root_concentration_uses_exact_fraction_marks(self):
+        args=self.sample()
+        args[0].diagnostic_accounting["marks"][1]["equity"]="22000/2"
+        m=summarize_case(*args)
+        self.assertAlmostEqual(m["maximum_single_root_exposure"],2000/11000)
+
+    def test_exact_five_percent_drawdown_is_rejected(self):
+        args=self.sample()
+        args[1]["metrics"]["max_drawdown"]=-.05
+        self.assertFalse(summarize_case(*args)["evaluation_checks"]["closing_drawdown_below_five_percent"])
+
+    def test_exact_two_percent_daily_loss_is_rejected(self):
+        args=self.sample()
+        args[0].equity_curve[1].equity=9800
+        self.assertFalse(summarize_case(*args)["evaluation_checks"]["daily_closing_loss_below_two_percent"])
+
+    def test_exit_cost_cannot_be_presented_as_already_liquidated_cash(self):
+        m=summarize_case(*self.sample())
+        self.assertEqual(m["final_spendable_cash"],9000)
+        self.assertAlmostEqual(m["net_marked_profit_after_estimated_whole_share_exits"],990)
+
+    def test_nonpositive_estimated_final_equity_blocks_scoring(self):
+        args=self.sample()
+        args[1]["metrics"]["hypothetical_exit_cost"]=11001
+        with self.assertRaises(ValueError): summarize_case(*args)
