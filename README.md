@@ -4,11 +4,12 @@ An incremental, paper-only US-equities trading-system project. The detailed
 roadmap is in `AI_Enhanced_Alpaca_Trading_Bot_Development_Plan_For_Coding_AI.md`.
 
 **Current broad-input status, 2026-10-30:**
-[Focused action/election verification](docs/broad_action_election_results_2026-10-30.md)
-passes 571 offline tests, including 87 new tests, and replays all three saved
-accounting scenarios. SLG's January 2022 no-election default is now established;
-exact allocation and other event terms remain gated. **Still Step 1:** 191
-overlapping blocking rows remain before Step 2 integration. See the
+[Source-backed holder schedules](docs/broad_holder_terms_results_2026-10-30.md)
+resolve K/KLG regular-way due-bill ownership and corroborate SLG's December 2020
+ex-distribution boundary from saved primary evidence. All three scenarios
+prepare offline. **Still Step 1:** 188 overlapping blocking rows remain, down
+from 191, before Step 2 integration. The preceding 571-test result covers earlier
+code; the new holder module's focused tests remain. See the
 [four-step progress tracker](docs/broad_backtest_step_tracker.md).
 There are no new broader-basket return results or purchases.
 

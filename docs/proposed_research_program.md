@@ -1,5 +1,11 @@
 # Proposed research program before the first paper trial
 
+**Latest work, still Step 1:** [reviewed holder schedules](broad_holder_terms_results_2026-10-30.md)
+reduce overlapping data gates from 191 to 188, retaining all 100 selected members.
+New holder-module tests, exact election allocations and remaining event/dividend
+terms precede Step 2 integration. No new performance batch or purchase occurred.
+Earlier entries remain historical; see the [current tracker](broad_backtest_step_tracker.md).
+
 **Current progress: [Step 1 of 4](broad_backtest_step_tracker.md), in progress.**
 [Action/election verification](broad_action_election_results_2026-10-30.md)
 passes 571 offline tests, including 87 new tests. One additional issuer default

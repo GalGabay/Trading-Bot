@@ -20,6 +20,8 @@
 
 > **Latest verification and progress, 2026-10-30:** [571 offline tests pass, including 87 new action/election/cash-merger tests](docs/broad_action_election_results_2026-10-30.md). Duplicate, date, evidence and admission checks were corrected; all saved scenario preparations replay successfully. SLG January 2022's documented no-election default is now selected, with approximate allocations still blocked. **Still Step 1 of the [four-step research track](docs/broad_backtest_step_tracker.md):** 191 overlapping data gates remain. Report the current step and remaining work after every implementation response through Step 4 completion. Step 2 integration, new performance runs and paper activation remain incomplete. No purchases or trades occurred.
 
+> **Latest holder schedules, still Step 1 of 4:** [K/KLG regular-way due-bill ownership and corroborated SLG ex-distribution boundary](docs/broad_holder_terms_results_2026-10-30.md). Offline preparation completes for all three scenarios; remaining overlapping blocking rows fall from 191 to 188. All 100 selected members and 2,698 dividend identities remain. The new holder module requires focused unit tests; the preceding 571-test result describes earlier code. Exact election allocations and other dated event/dividend terms still block Step 2. No purchase, broker request, price download or new performance run occurred. Continue reporting the current step through Step 4 completion.
+
 ## Instructions to the Coding AI
 
 1. **Inspect before modifying.**

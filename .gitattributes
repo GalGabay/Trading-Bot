@@ -123,3 +123,8 @@ docs/broad_action_election_*.json -text
 docs/broad_election_completion_*.json -text
 docs/research_data/election_source_*_2026-10-30.json -text
 docs/research_data/diagnostic_executed_before_focused_tests_v1/*.py -text
+# Preserve source-bound holder schedules and the separately closed review.
+backtesting/holder_terms.py -text
+docs/broad_holder_terms_*.json -text
+docs/research_data/holder_*_2026-10-30.json -text
+docs/research_data/diagnostic_executed_before_holder_terms_v1/*.py -text

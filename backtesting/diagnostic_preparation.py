@@ -20,6 +20,7 @@ from backtesting.dividend_components import apply_review, load_review
 from backtesting.diagnostic_event_terms import apply_material_terms, load_event_terms
 from backtesting.corporate_action_terms import load_actions
 from backtesting.election_schedule import compile_schedules, load_holder_policy
+from backtesting.holder_terms import load_holder_terms, apply_spinoff_terms, annotate_election_boundary
 from backtesting.pilot_readiness_review import offline_only, write_csv, write_json
 
 
@@ -108,7 +109,7 @@ def dividend_multiplicity(rows):
 
 
 def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_terms_path=None,
-            corporate_review_path=None, election_inputs_path=None):
+            corporate_review_path=None, election_inputs_path=None, holder_terms_path=None):
     if output.exists() or not output.resolve().is_relative_to(Path.cwd().resolve()):
         raise ValueError("Choose a fresh policy-preparation directory in the workspace")
     policy = json.loads(policy_path.read_text(encoding="utf-8"))
@@ -153,6 +154,16 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
         election_schedules = compile_schedules(provider_rows, clock,
             *(checked_file(Path.cwd(),inputs[k]) for k in ("terms","split_review","resolution","mac_review")),
             holder_policy=holder_policy)
+    holder_spinoffs, regular_start_aliases, election_boundaries = ({}, {}, {}) if holder_terms_path is None else load_holder_terms(
+        holder_terms_path, spec, provider_rows, report["event_roles"], clock)
+    matched_boundaries = set()
+    for schedule in election_schedules:
+        if schedule["event_id"] in election_boundaries:
+            annotate_election_boundary(schedule, election_boundaries[schedule["event_id"]])
+            matched_boundaries.add(schedule["event_id"])
+    if matched_boundaries != set(election_boundaries):
+        raise ValueError("Holder review references a missing election schedule")
+    holder_provider_routes = {(p["parent_id"], p["provider_event_id"]): p["event_id"] for p in holder_spinoffs.values()}
     # An unresolved future election cannot change the number of shares used by
     # an earlier ordinary cash dividend. After the first share-changing event,
     # later dividends and received descendants still depend on its resolution.
@@ -195,6 +206,12 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
             disposition = "handled_by_reviewed_corporate_action"
         elif identity in context_decisions:
             disposition = "context_only_no_portfolio_credit"
+        elif identity in holder_provider_routes:
+            disposition = "represented_by_reviewed_due_bill_spinoff"
+            related = [holder_provider_routes[identity]]
+        elif identity in regular_start_aliases:
+            disposition = "represented_by_reviewed_regular_start_context"
+            related = [regular_start_aliases[identity]]
         elif identity in ambiguous:
             disposition = ambiguous[identity]["status"]
         elif row["role"] == "acquirer_context_only_no_holder_credit":
@@ -232,6 +249,10 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
     for item in material:
         if item["event_id"] in material_decisions:
             apply_material_terms(item, material_decisions[item["event_id"]], clock)
+        if item["event_id"] in holder_spinoffs:
+            if policy["owner_approved"] is not True:
+                raise ValueError("Diagnostic holder schedules require approved accounting defaults")
+            apply_spinoff_terms(item, holder_spinoffs[item["event_id"]], clock)
     output.mkdir(parents=True)
     write_json(output/"frozen_policy.json",policy)
     write_json(output/"dividend_candidates.json",dividends)
@@ -242,11 +263,14 @@ def prepare(revision_dir, policy_path, output, dividend_review_path=None, event_
     summary = dict(revision=pin(revision_dir/"summary.json"),policy=pin(policy_path),
         execution=[pin("backtesting/diagnostic_preparation.py"),pin("backtesting/diagnostic_accounting.py"),
                    pin("backtesting/dividend_components.py"),pin("backtesting/diagnostic_event_terms.py"),
-                   pin("backtesting/corporate_action_terms.py"),pin("backtesting/election_schedule.py"),pin("backtesting/election_terms.py")],
+                   pin("backtesting/corporate_action_terms.py"),pin("backtesting/election_schedule.py"),pin("backtesting/election_terms.py"),
+                   pin("backtesting/holder_terms.py")],
         dividend_component_review=None if dividend_review_path is None else pin(dividend_review_path),
         event_terms_review=None if event_terms_path is None else pin(event_terms_path),
         corporate_action_review=None if corporate_review_path is None else pin(corporate_review_path),
         election_schedule_inputs=None if election_inputs_path is None else pin(election_inputs_path),
+        holder_terms_review=None if holder_terms_path is None else pin(holder_terms_path),
+        reviewed_due_bill_spinoffs=len(holder_spinoffs),reviewed_election_ownership_boundaries=len(election_boundaries),
         reviewed_corporate_actions=len(corporate_actions),election_schedules=len(election_schedules),
         holder_election_policy=None if holder_policy is None else holder_policy["choice"],
         holder_election_approval=None if holder_policy is None else holder_policy["approval"],
@@ -279,7 +303,8 @@ if __name__ == "__main__":
     parser.add_argument("--event-terms",type=Path,help="Explicit warmup exclusions, primary ratio facts and incoming-context review")
     parser.add_argument("--corporate-actions",type=Path,help="Pinned same-instrument aliases, split and preinvestment review")
     parser.add_argument("--election-inputs",type=Path,help="Conditional election inventory; no investor choice is inferred")
+    parser.add_argument("--holder-terms",type=Path,help="Source-backed regular-way ownership and due-bill schedules")
     args=parser.parse_args()
     with offline_only():
         print(json.dumps(prepare(args.revision,args.policy,args.output,args.dividend_review,args.event_terms,
-                                 args.corporate_actions,args.election_inputs),indent=2))
+                                 args.corporate_actions,args.election_inputs,args.holder_terms),indent=2))

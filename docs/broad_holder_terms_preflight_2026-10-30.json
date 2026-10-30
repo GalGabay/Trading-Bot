@@ -1,0 +1,1219 @@
+{
+  "data_gates_clear": false,
+  "blockers": [
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0130",
+      "event_id": "cash_CSRA",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0387",
+      "event_id": "rtn_stock",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0272",
+      "event_id": "lll_stock",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0321",
+      "event_id": "myl_stock",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0181",
+      "event_id": "esrx_mixed",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0059",
+      "event_id": "bhi_mixed",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0140",
+      "event_id": "delphi_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0140.DLPH-CHILD",
+      "event_id": "delphi_child_merger",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0152",
+      "event_id": "dow_merger",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0152.DWDP",
+      "event_id": "dow_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0152.DWDP",
+      "event_id": "corteva_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0152.DWDP",
+      "event_id": "dwdp_reverse_split",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0473",
+      "event_id": "vf_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0476",
+      "event_id": "vno_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0178",
+      "event_id": "exc_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "aiv_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "material_terms",
+      "instrument_id": "COHORT-2016-0140.BWA",
+      "event_id": "bwa_phin_distribution",
+      "reason": "Conditional economic terms/holder entitlement/order not yet admitted; owner timing approval does not fill them"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "2173a9b2-a5ac-4fec-88e4-d5bde3a115ce",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "2c4ed7a0-f17c-4397-8c8d-a02a039442dc",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "e5e1ddca-a852-42c6-8a29-12a4a7b45985",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "79a9a19d-ad09-4518-a34e-734cd38f9942",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "82099a57-3467-4494-ba7e-d9fea4cf2c5f",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "74b82d85-6141-483a-8364-6f5140404804",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "7d0a24b2-0d68-4b62-a34c-59b34f67c5e5",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0170",
+      "event_id": "da21bb8e-b969-4b75-8c9e-b5389effaa36",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0140",
+      "event_id": "154acc6c-63b7-4a5a-a2a3-7bf24ceb6861",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0127",
+      "event_id": "6b1a0e2b-1a9a-47b0-ab45-75f4cc2056e6",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0399",
+      "event_id": "1d18d0bf-4e73-4012-a96e-b64943079d21",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "8355c8f5-88e8-4dd8-ba73-549e5c3917b6",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "dfae5d4a-28ce-4ac5-8972-56759880f7e2",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "1fbfecd1-8392-4ebd-8856-f6fc8a31db9e",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "7978d473-7642-4260-9115-3448d41655f1",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "aba8a178-47fb-4b65-a5af-17ef1cb40fcb",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "9e47e23b-1720-4861-bfb8-f623c2aea908",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "0be626e0-1778-44d2-b606-5ce3599cd466",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "9f712685-d791-40fe-b0eb-be29589f7ec9",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "98565c2f-72a1-4650-90b7-b47749bf2f0d",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0333",
+      "event_id": "6cf77bde-b1e6-4dd3-abbe-dbaf06c0dda8",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "9b9c1daa-90da-4af5-9fb1-c123d278e731",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "c2027f7a-b0a3-45a6-889b-377b216be5ca",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "68877d58-3ec8-4d43-898f-869a64737010",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "edac851d-d9e0-4cd1-805d-8c6445fc6311",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "f1d1fdee-1fd4-47a8-b169-2cd2ecf29d5b",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "41b127bb-bd78-4967-9996-e4f2158e86c3",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms; multiple_records_same_security_ex_date_require_component_review"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "d08ea098-e6bd-4775-9bb6-abda5545428d",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms; multiple_records_same_security_ex_date_require_component_review"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "2c662e11-9bd0-48e4-8ea1-2984efac4d1a",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "b46c734a-fa4b-4c26-9cdd-c9a8d771b775",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "ab68da9f-b0fb-4820-8048-9b6660044e72",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "27683ad7-60bd-48ad-8354-56bd97577c9a",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "e52ccf62-d9f4-46a3-8158-a3e30446c75e",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "b643a205-9675-407c-9e96-879e3656e637",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "89feba18-c146-4177-9409-aa71152a3251",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "62ea7357-370b-45a3-9979-81e8b2c40e74",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0406",
+      "event_id": "e9be5727-2093-4b3f-8872-3672bad96e9a",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "754b42fe-c1e7-49cb-92fb-953b802c7333",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "5184549e-58a6-4497-8f81-d130801a362b",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "d99f9dc4-61ca-45fe-807a-aaa8370f91f5",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "5677d0e0-49b5-4096-af8b-adc812838752",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "1f8ba35f-0b84-45a1-9ef2-199b0ffc4b70",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "09cc20d9-00a1-4cb2-89e7-ac8661a01d36",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "e817a11e-18bc-4a80-a778-068f4bb18bbb",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "be8fefd3-3080-4c81-96f6-0104cd305aa7",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "6b677cac-f1c6-4c98-ad48-cb0b20558a3c",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "f6d35330-6b42-4855-8a25-2d3fd5180f0d",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "bd53a939-56c5-446e-a084-2b32d76b03b2",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "c64c50c9-b280-4e31-9fe7-90f0d219ecbf",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "375442db-62db-46b5-ae86-8bcab0764baa",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "bb2533a9-1ce5-4675-a348-f75cee246c07",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0258",
+      "event_id": "9d043645-4909-47dc-a8d4-50ae904144d0",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "2bfe0bb9-2c53-4f6a-b440-e4cae6286411",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "c6bdb980-70d8-4767-aea6-c4a73c1ea2a7",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "f2d532e5-b3bc-4c82-a0d9-4eac3f22ca1d",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "93775e8e-fd96-493d-aa36-bbda59a55c81",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "a8c8565c-5162-4c6e-8a25-88fe634c548c",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "0ce7e1d2-360d-43ba-b3bd-821d3fa3c925",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "8009b714-a31c-46d8-bbc8-9328ec4fe68a",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "55b7e8c1-7499-4100-a2f1-bb980914cb15",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "a56e7ca3-3858-48ac-a856-bfe8a162eaec",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "24fac673-96f4-41c5-a3bc-93857ecada7f",
+      "reason": "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "ec5a712d-f182-4138-97d3-01a9c66a2107",
+      "reason": "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "a5d87a8b-f5e9-44c3-9574-36eb3635c4ef",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "1a5e6304-9bd2-4cb2-8a8f-7f8c1f0e333f",
+      "reason": "conflicting_provider_and_issuer_hosted_ex_dates_require_review"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "71648ac1-431f-47b5-a26f-1c0e7d921077",
+      "reason": "conflicting_provider_and_issuer_hosted_ex_dates_require_review"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "3a5e0d9e-3d22-4729-8098-5d737bf10d68",
+      "reason": "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "eda3364e-7fd6-4ee7-b243-10d2669e8bb9",
+      "reason": "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "0128a638-6e52-49e5-99ef-3ea8d3d0342c",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "efe06968-14bb-4eb2-99af-05cc92a5d9e9",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "4a4a811f-15a7-49e6-b1fa-e29f8b938a9c",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "699a883e-ef77-4e06-ad01-5096c292519e",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "200a0d27-3f10-4f96-8f86-8529569e1184",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "528bc6ee-02aa-4a53-afa5-589af3677677",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "acbf24bd-9ef4-4ad3-87db-1e3f5ea53fc7",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "ea19186f-3794-46a8-a592-8ef093ca41cf",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "38eee67d-02c0-4702-8780-4b2c68ecd9ae",
+      "reason": "conflicting_provider_and_issuer_hosted_ex_dates_require_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "8dfac438-2df5-4d5f-b816-88398a9fdd49",
+      "reason": "conflicting_provider_and_issuer_hosted_ex_dates_require_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "0af12e74-4251-4de4-9528-307613f1e582",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "4df53bb2-9cc0-402b-afa8-1f84f912e690",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "8a178cb2-8f4d-4be7-838e-0fbb4a17cd12",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "a4879057-05e9-4964-82bb-5ccf05c0b8e7",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "3cc3c071-3c51-45c8-9840-60d41f8109bf",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "d987c966-3ddd-4b30-b130-3eba3805236d",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "2cd9d46d-febb-4e56-a3ab-1027006668ba",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "57cd0c7a-d51c-4803-b971-41f5e157b781",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "3999f9e6-2a8e-45c8-8b07-62a32496e0c9",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "89f0e5e1-2467-4f0c-8af2-8377c5f6f079",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "11ebda91-8dc5-4da6-a809-14bb21f66c8c",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "98450861-fffc-4555-be97-3c397b3c14e0",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "9d3a4433-b063-4e4f-b476-7d61242e0855",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "d5b7acbc-6fb6-40ca-86e7-61a21c3f6f2c",
+      "reason": "multiple_records_same_security_ex_date_require_component_review; lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "627aa98c-e518-40c0-9894-965fd562f4d1",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "d9f09696-1e9d-4c87-b7eb-5bbc31e3a2b4",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "df721223-57e2-4dd9-bb6a-ca3ad69bed43",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "cd57a89b-5085-480d-a341-09dc70bce871",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "0b1d6032-3d91-4216-8722-87d752c1505c",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "85e4d840-15b8-4c9c-8c3e-0f384beedb83",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "ca7593ea-8e94-46a0-bdc5-58ed3d620ee8",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "494300eb-b4b7-4dc7-be2d-0200dd4686b2",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "a46ce6cd-4fa9-4231-b5d6-fa88a43af754",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "1240add9-8d91-4ad9-81e8-7e08bf91e835",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "c280db52-5603-4a96-b6cf-49552378afd3",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "805d4965-e695-4e94-a723-c85d85ff6ebb",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "cb7c04b1-d242-4ee6-81ec-2c9b36c550db",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "7ec0a8bb-95fb-4be6-b803-5b4630e20e5e",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "9b32b7f3-17f0-49d1-9f9e-ed3a8fda4f10",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "2d950960-12ea-4cdc-b6e3-e754c17157dd",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "6cdb9dae-81ed-4507-b6ab-e5f60063ff3e",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "13accfa1-3644-4749-8ec7-b7b1e3fe4aa9",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "7b38d3d9-5a60-43cf-8899-bf8885967321",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "c2938872-8131-4d4e-805f-09e84e8c97fb",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "882ebf24-1e4c-4522-be9c-ed27779d82f0",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "109d9faf-6ba4-4496-aee1-dae9f11dfd63",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0077",
+      "event_id": "125db3ef-4cc2-4306-9bd1-b2e9198932ca",
+      "reason": "special_foreign_or_unclassified_distribution_requires_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "1fb7f269-006f-4e83-ae23-2a4d3f39d650",
+      "reason": "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "42f0d9e4-ec50-438a-8a12-0ed344459922",
+      "reason": "reviewed_cash_stock_election_requires_holder_allocation_and_exact_share_terms"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "b04e9c32-0d7a-482e-9876-aa3336343c31",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "4e9ab6f9-02e5-4371-bc61-5fcbbf4a3e58",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "1361b6ae-177f-4016-aad4-f94c44158b0c",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "510a5a7d-2f31-424e-9b98-51b7a564e645",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "3c2b69db-96c2-40b0-a909-8d2f25c8044c",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "42fd14cc-dcc1-4db8-b549-59ba3bc58804",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "0990bef8-b1e0-4080-b5ef-b7a4e8becea3",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "c04db17a-b7d4-41ea-b000-069506c60912",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "49c199d6-d6c0-405c-8ca9-c6f1be362cd2",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "a845dc2e-e095-4446-b718-b0fd67c78025",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "39a4c2a5-4433-4f59-9a1b-cef4d2e0cd2a",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "cbfea978-fe97-469d-938f-c1ac15829503",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "2f639e33-adde-46ab-951e-4a8d557a59f4",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "33b2e6c8-10aa-4e6b-9a21-84426cd4bb77",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "71535c60-3082-49c3-b0d4-6be8e927de97",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "5690e228-5900-41ff-8c95-00f90f573279",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "661e47e1-97fb-4cc8-adb1-a2b1ae54d47d",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "4aa111b8-0ab9-4992-b608-010238c1dda0",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "c65e007c-2d22-4443-96d3-41a940d898a5",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "176a84b6-d490-4873-abe7-12e4f4df4add",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "8945bae6-1aae-410f-beaa-f6494d9cb36c",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "913ba3f5-aaad-4dce-a90f-276fcf1397c2",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "e17a3ff0-746f-4b1a-b81d-64755ea54f61",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "17a74f5e-777b-4c46-8413-7ccd26e2b615",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "fb126de9-1b65-482f-94a7-ac46d4a957a3",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "dividend_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "78b8ff55-ae0e-4dca-ae57-f161f0d7ef78",
+      "reason": "lineage_contains_unresolved_special_election_dividend"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0060",
+      "event_id": "51789b59-13fd-4604-bf41-6e6a5f4683ad",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0060",
+      "event_id": "c00b267d-f373-4413-b5f7-cb493ef431aa",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0193",
+      "event_id": "dae11272-26b3-4656-a6a0-61422277f9ab",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0321",
+      "event_id": "319a05b7-8c4e-4e9f-98b6-ed57b5576479",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0476",
+      "event_id": "62930b67-0de0-495b-97d7-a0b3db291ab0",
+      "reason": "linked_candidate_economic_event"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0473",
+      "event_id": "a660b171-cb35-4d6e-b73d-91db229728ad",
+      "reason": "linked_candidate_economic_event"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "3915f4ad-7977-4e8a-a6e7-9fef37c8ffc8",
+      "reason": "linked_candidate_economic_event"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "1d9ff083-8088-4ef7-a97a-30fb49c0e9a2",
+      "reason": "reverse_split_with_election_dividend"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "2e31ba9d-6d82-4628-834e-2e08416a263e",
+      "reason": "reverse_split_with_election_dividend"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "ed321784-4ec1-4b16-8c94-4d4c114981b2",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0227",
+      "event_id": "aeb6a11a-695c-448c-a221-5e8e4332d010",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "2e6d81d4-4980-47c2-8075-1f81a2b7b530",
+      "reason": "reverse_split_with_election_dividend"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "81603d67-4fee-4f20-bbd4-95e5ca280d10",
+      "reason": "search_only_reverse_split_election"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0387.RTX",
+      "event_id": "083b2000-6c87-4ab7-9e58-3ca5253eae36",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0321.VTRS",
+      "event_id": "ace6bf15-e02d-4185-a30c-8bf6d4b4d767",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0140.BWA",
+      "event_id": "31a6f13d-f0e9-4e3e-b3a9-418f0c9f6d49",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0178.CEG",
+      "event_id": "2ecff1f7-c35a-45b0-b1e0-65cf3f218029",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0046.AIRC",
+      "event_id": "598c2cb8-4468-4842-bbe6-e57c10dc392a",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0152.DWDP",
+      "event_id": "646911b1-d521-4e71-8729-04dfde18632b",
+      "reason": "linked_candidate_economic_event"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0152.DWDP",
+      "event_id": "b4fcc1fc-5210-458d-9e9e-c08b52cd9b7b",
+      "reason": "linked_candidate_economic_event"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0140.DLPH-CHILD",
+      "event_id": "e5998543-8036-4008-9c2a-e519b3229bfa",
+      "reason": "linked_candidate_economic_event"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0140.DLPH-CHILD",
+      "event_id": "3ce25092-79d4-4d46-bfbd-5b87113fb2c4",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "provider_terms",
+      "instrument_id": "COHORT-2016-0140.PHIN",
+      "event_id": "20c9d4ca-4b97-4f0e-93f0-8dc18c04acc5",
+      "reason": "requires_identity_or_economic_review"
+    },
+    {
+      "kind": "election_schedule",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "aiv_2019",
+      "reason": "Issuer event is absent from cached provider dividend inventory; entitlement boundary requires primary review; Record-date/ex-date/due-bill ownership and fractional fixing instructions require schedule admission"
+    },
+    {
+      "kind": "election_schedule",
+      "instrument_id": "COHORT-2016-0046",
+      "event_id": "aiv_2020",
+      "reason": "Record-date/ex-date/due-bill ownership and fractional fixing instructions require schedule admission"
+    },
+    {
+      "kind": "election_schedule",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "slg_2021",
+      "reason": "Reported holder shares are approximate; no exact allocation inferred from VWAP or issuer totals; Record-date/ex-date/due-bill ownership and fractional fixing instructions require schedule admission"
+    },
+    {
+      "kind": "election_schedule",
+      "instrument_id": "COHORT-2016-0413",
+      "event_id": "slg_2022",
+      "reason": "Reported holder shares are approximate; no exact allocation inferred from VWAP or issuer totals; Record-date/ex-date/due-bill ownership and fractional fixing instructions require schedule admission"
+    },
+    {
+      "kind": "election_schedule",
+      "instrument_id": "COHORT-2016-0288",
+      "event_id": "mac_2020",
+      "reason": "Final stock conversion, holder allocation and fractional settlement terms unresolved; Conflicting provider rates are not ordinary cash entitlements"
+    }
+  ],
+  "effective_feature_resets": [
+    {
+      "instrument_id": "COHORT-2016-0258",
+      "from_session": "2016-10-31",
+      "reason": "Reviewed ADNT warmup distribution: reset features, no invested entitlement",
+      "source": {
+        "id": "source_1",
+        "url": "https://www.sec.gov/Archives/edgar/data/833444/000110465916153134/a16-20376_1ex99d2.htm",
+        "browser_text": {
+          "path": "data/reports/remaining_terms_2026_10_30/page_1.txt",
+          "sha256": "ff1d3cc176dbc44eaaf551d592d1936172d924b94487ecc2553fab4aab95b3c4"
+        },
+        "access": "primary_browser_text_reviewed",
+        "original_html_archive": false
+      }
+    },
+    {
+      "instrument_id": "COHORT-2016-0262",
+      "from_session": "2023-10-02",
+      "reason": "Retained-parent raw-price distribution: discard pre-distribution feature history"
+    },
+    {
+      "instrument_id": "COHORT-2016-0014",
+      "from_session": "2016-10-03",
+      "reason": "Preinvestment provider action: start fresh features; no quantity or cash credit"
+    },
+    {
+      "instrument_id": "COHORT-2016-0227",
+      "from_session": "2016-10-31",
+      "reason": "Uninvested warmup distribution; do not carry earlier features"
+    },
+    {
+      "instrument_id": "COHORT-2016-0503",
+      "from_session": "2016-10-31",
+      "reason": "Uninvested warmup distribution; do not carry earlier features"
+    },
+    {
+      "instrument_id": "COHORT-2016-0023",
+      "from_session": "2016-05-20",
+      "reason": "Preinvestment provider action: start fresh features; no quantity or cash credit"
+    },
+    {
+      "instrument_id": "COHORT-2016-0077",
+      "from_session": "2016-08-19",
+      "reason": "Preinvestment provider action: start fresh features; no quantity or cash credit"
+    }
+  ],
+  "date": "2026-10-30",
+  "owner_assumptions_approved": true,
+  "approval": {
+    "path": "docs/broad_diagnostic_owner_approval_2026-10-30.json",
+    "sha256": "6c77a824eecc388c5c20f30225a1fc6d4fac90ccef7e616437cd7ed190f1279d"
+  },
+  "holder_election_policy": "no_election",
+  "holder_election_approval": {
+    "path": "docs/research_election_owner_approval_2026-10-30.json",
+    "sha256": "cfedebaf25f3e6740d652cbcd6750ac85cf0d76ace6c05cd93e0676301e8ad24"
+  },
+  "allocation": {
+    "total_entry_exposure": 0.7,
+    "per_stock_entry_cap": 0.05,
+    "max_positions": 20
+  },
+  "preparation": {
+    "path": "data/reports/broad_diagnostic_approved_2026_10_30_v13/summary.json",
+    "sha256": "8dcaaabdad75f124b9e284eb4862a5d6e4f51e808c4eea00299f0bb543018a4f"
+  },
+  "terms_review": {
+    "path": "docs/broad_remaining_terms_review_2026-10-30.json",
+    "sha256": "7f9dc19e8c90f0128f11d519009a880a1533c3f2f6195d7413dd22495ef5259a"
+  },
+  "execution": {
+    "path": "backtesting/diagnostic_preflight.py",
+    "sha256": "d71f56b6137b6b653162b77f7b6147ce9c80b8f47b0995f8aa0358f87b7dd2e0"
+  },
+  "selected_originals": 100,
+  "original_members_dropped": 0,
+  "strict_flags_promoted": false,
+  "engine_handoff_ready": false,
+  "engine_adapter_integrated": false,
+  "performance_authorized": false,
+  "paper_authorized": false,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "strategy_runs": 0
+}

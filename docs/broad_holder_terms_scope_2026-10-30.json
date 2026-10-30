@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Owner-requested continuation: resolve shared no-election ownership/allocation and dated dividend terms before Step 2",
+  "max_search_queries": 12,
+  "max_page_opens": 16,
+  "purchase_budget_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "price_downloads": 0,
+  "performance_runs": 0,
+  "primary_sources_only": true,
+  "prior_batches_remain_closed": true,
+  "retry_previously_denied_or_failed_urls": false,
+  "stop_new_requests_on_access_barrier_or_fetch_failure": true,
+  "automatic_followup_collection": false,
+  "targets": [
+    "AIV 2019 and 2020 ex-distribution ownership and per-holder no-election economics",
+    "SLG 2021 and 2022 ex-distribution ownership and precise final stock election terms",
+    "MAC 2020 final conversion and fractional settlement terms",
+    "Unresolved ordinary dividend components and foreign/special distribution context"
+  ],
+  "constraints": [
+    "Search excerpts remain discovery until a primary document is directly reviewed",
+    "Option deliverables are not per-holder common-share allocations",
+    "Do not infer exact quantities from approximate numbers or issuer totals",
+    "Do not infer cash availability or actual receipt from legal or publication dates",
+    "Keep all fixed members and original provider rows; no paid alternative"
+  ]
+}

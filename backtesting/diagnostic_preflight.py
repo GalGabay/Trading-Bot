@@ -18,6 +18,7 @@ from backtesting.dividend_components import validate_review_evidence
 from backtesting.corporate_action_terms import gate_action
 from backtesting.claim_accounting import number
 from backtesting.election_schedule import load_holder_policy
+from backtesting.holder_terms import gate_due_bill_spinoff
 
 
 class DiagnosticIntegrationBlocked(ValueError):
@@ -29,6 +30,8 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
     blockers=[]
     resets=[]
     admitted_cash=set()
+    admitted_spinoffs=set()
+    admitted_regular_aliases=set()
     corrections={e["instrument_id"]:e for e in terms_review["feature_corrections"]}
     for event in feature_events:
         correction=corrections.get(event["instrument_id"])
@@ -48,6 +51,12 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
                 continue
             if (event["event_id"]=="peak_holding_company_reorganization" and
                     event.get("diagnostic_terms_admitted") is True):
+                continue
+            if gate_due_bill_spinoff(event):
+                admitted_spinoffs.add((event["parent_id"], event["event_id"]))
+                for alias in event["holder_terms_review"]["regular_start_aliases"]:
+                    admitted_regular_aliases.add((alias["instrument_id"], alias["event_id"], event["event_id"]))
+                resets.append(event["required_feature_reset"])
                 continue
             if (event.get("status")=="admitted_diagnostic_cash_receivable" and event.get("kind")=="cash_merger" and
                     event.get("data_terms_resolved") is True and event.get("execution_ready") is False and
@@ -75,6 +84,17 @@ def assess(material,dividends,routes,feature_events,terms_review,membership_not_
     if len(reviewed_actions)!=len(corporate_actions):
         raise ValueError("Repeated corporate-action instruction identity")
     for event in routes:
+        if event["disposition"] in {"represented_by_reviewed_due_bill_spinoff", "represented_by_reviewed_regular_start_context"}:
+            related=event.get("related_material_events", [])
+            if isinstance(related, str):
+                related=json.loads(related)
+            if len(related)==1:
+                if (event["disposition"]=="represented_by_reviewed_due_bill_spinoff" and
+                        (event["instrument_id"], related[0]) in admitted_spinoffs):
+                    continue
+                if (event["disposition"]=="represented_by_reviewed_regular_start_context" and
+                        (event["instrument_id"], event["event_id"], related[0]) in admitted_regular_aliases):
+                    continue
         if event["disposition"]=="represented_by_reviewed_cash_merger":
             related=event.get("related_material_events",[])
             if isinstance(related,str):
@@ -125,6 +145,10 @@ def prepare(preparation_dir,terms_review_path,output):
         validate_review_evidence(review)
     if preparation.get("corporate_action_review") is not None:
         review=json.loads(checked_file(Path.cwd(),preparation["corporate_action_review"]).read_text(encoding="utf-8"))
+        checked_file(Path.cwd(),review["spec"])
+        validate_review_evidence(review)
+    if preparation.get("holder_terms_review") is not None:
+        review=json.loads(checked_file(Path.cwd(),preparation["holder_terms_review"]).read_text(encoding="utf-8"))
         checked_file(Path.cwd(),review["spec"])
         validate_review_evidence(review)
     if preparation.get("election_schedule_inputs") is not None:

@@ -1,5 +1,12 @@
 # How far are we from paper trading?
 
+**Latest holder-term work, still Step 1:**
+[K/KLG ownership and SLG ex-date corroboration](broad_holder_terms_results_2026-10-30.md)
+reduce overlapping data gates from 191 to 188. All three scenario preparations
+complete offline; focused new-module tests and unresolved election/event terms
+remain before Step 2. No new performance run or paper activation occurred.
+Earlier entries below describe earlier code.
+
 **Latest status: Step 1 of the [four-step research track](broad_backtest_step_tracker.md).**
 [571 offline tests pass](broad_action_election_results_2026-10-30.md), including
 87 new action/election/cash-merger tests. Saved-event preparation passes, but

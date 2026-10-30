@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "provider_source": {
+    "path": "data/reports/broad_corrected_input_v1/candidate/provider_event_roles.csv",
+    "sha256": "66f4fafc17b147f29a9f583c371440daff41013d871cb01cb44f44b5cada98dd"
+  },
+  "spec": {
+    "path": "docs/broad_corrected_historical_input_spec.json",
+    "sha256": "f15e1ffd61fe211ad1ff4c37c488b0ff5de41c5a7d21ce6c98455863f2465bc1"
+  },
+  "sources": [
+    {
+      "id": "cached_primary",
+      "evidence": {
+        "path": "docs/broad_holder_terms_cached_facts_2026-10-30.json",
+        "sha256": "3859a822a034fc05b0c2aa8a021b537cba8a1f64d147fb70a8d2adf71b13587a"
+      }
+    }
+  ],
+  "spinoffs": [
+    {
+      "event_id": "k_distribution",
+      "parent_id": "COHORT-2016-0262",
+      "child_id": "COHORT-2016-0262.KLG",
+      "source_id": "cached_primary",
+      "fact_id": "klg_regular_way",
+      "completion_fact_id": "klg_completed",
+      "provider_event_id": "991848a6-eee7-43ab-80fc-6559343d02f1"
+    }
+  ],
+  "regular_start_aliases": [
+    {
+      "event_id": "k_distribution",
+      "instrument_id": "COHORT-2016-0262.KLG",
+      "provider_event_id": "6c44342f-275b-4578-b0fa-41b90a703cc2"
+    }
+  ],
+  "election_boundaries": [
+    {
+      "event_id": "slg_2021",
+      "instrument_id": "COHORT-2016-0413",
+      "source_id": "cached_primary",
+      "fact_id": "slg_2021_ex"
+    }
+  ],
+  "execution_ready": false,
+  "performance_authorized": false,
+  "paper_authorized": false
+}

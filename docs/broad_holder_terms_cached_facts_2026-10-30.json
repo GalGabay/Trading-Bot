@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Additional review of previously saved primary evidence; zero new primary retrievals",
+  "sources": [
+    {
+      "id": "klg_regular_way",
+      "access": "primary_browser_text_reviewed",
+      "url": "https://newsroom.kellanova.com/2023-09-11-KELLOGG-COMPANY-BOARD-OF-DIRECTORS-APPROVES-SEPARATION-INTO-TWO-COMPANIES%2C-KELLANOVA-AND-WK-KELLOGG-CO",
+      "browser_evidence": {
+        "path": "docs/research_data/terms_followup_browser_2026-10-30_2.txt",
+        "sha256": "02af4bb168662cf710ee62be582b90b3dd6b0a59a0e6e57cd8aa0994545d66af"
+      },
+      "information_statement": {
+        "path": "docs/research_data/terms_followup_browser_2026-10-30_1.txt",
+        "sha256": "788ecd846a968a170a5f9ff506334512977b0dcbe7c078cbb31202dc239254ef"
+      },
+      "prior_review": {
+        "path": "docs/broad_terms_followup_facts_2026-10-30.json",
+        "sha256": "a4c5edb6131d2d8b14517c60a5d651ca75efebde7b06e15017da2456a41d835e"
+      },
+      "parent_symbol": "K",
+      "child_symbol": "KLG",
+      "shares_per_parent": "1/4",
+      "economic_date": "2023-10-02",
+      "economic_effective_at": "2023-10-02T00:01:00-04:00",
+      "record_date": "2023-09-21",
+      "ex_date": "2023-10-02",
+      "first_regular_session": "2023-10-02",
+      "regular_way_due_bills_start": "2023-09-20",
+      "regular_way_due_bills_end": "2023-09-29",
+      "regular_way_sale_transfers_child_right": true,
+      "fixed_cash_per_parent": "0",
+      "fractional_treatment": "aggregate_sell_net_proceeds_actual_price_and_receipt_unknown",
+      "clause_locations": [
+        "Saved issuer announcement lines 49-52: regular-way and ex-distribution markets",
+        "Saved information statement lines 493 and 670-671: fractional shares are aggregated and sold"
+      ],
+      "ex_date_basis": "first regular-way parent session after announced final due-bill trading day; supported completion date",
+      "actual_delivery_at": null,
+      "fractional_cash_fixing": null,
+      "fractional_model": "approved exact pending share claim; never assumed actual sale proceeds"
+    },
+    {
+      "id": "klg_completed",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001959348/f6b6505e-0648-4614-8fe1-0f36f10313de.pdf",
+      "access": "primary_audited_plan_filing_browser_text_reviewed",
+      "economic_date": "2023-10-02",
+      "shares_per_parent": "1/4",
+      "record_date": "2023-09-21",
+      "retrospective": true,
+      "prior_review": {
+        "path": "docs/broad_terms_followup_facts_2026-10-30.json",
+        "sha256": "a4c5edb6131d2d8b14517c60a5d651ca75efebde7b06e15017da2456a41d835e"
+      },
+      "browser_evidence": {
+        "path": "docs/research_data/terms_followup_browser_2026-10-30_3.txt",
+        "sha256": "b6bd30175b9ff7db72aa3bcbf044b86844a3a00c04b44682dd0d2624074de820"
+      }
+    },
+    {
+      "id": "slg_2021_ex",
+      "url": "https://www.miaxglobal.com/sites/default/files/alert-files/SLG_Dividend_47969.pdf",
+      "access": "primary_clearinghouse_browser_pdf_text_reviewed",
+      "browser_evidence": {
+        "path": "docs/research_data/resolution_browser_2026-10-30_4.txt",
+        "sha256": "134618b72d54b45a98ade0e0b197365eb38707b36f1117adc93c1625bcc95275"
+      },
+      "record_date": "2020-12-15",
+      "ex_date": "2020-12-14",
+      "no_election_branch": "stock_subject_to_proration",
+      "note": "OCC original memo archived on exchange; no options deliverable used as holder allocation",
+      "prior_review": {
+        "path": "docs/broad_resolution_facts_v2_2026-10-30.json",
+        "sha256": "dcf3fc0b17e6f7db612de97bc2000e4e30bafd24dbf4a34c48437d9c4a9f9c6c"
+      }
+    }
+  ],
+  "collection": {
+    "path": "docs/broad_holder_terms_collection_2026-10-30.json",
+    "sha256": "4c79441f620a2bf346e150e171f4cdee661943ec01c98f3d75b2a5c4d0ae7df2"
+  },
+  "strict_flags_promoted": false,
+  "broker_requests": 0,
+  "purchases_usd": 0,
+  "orders": 0,
+  "strategy_runs": 0
+}

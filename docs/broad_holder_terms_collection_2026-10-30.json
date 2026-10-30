@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-30",
+  "scope": {
+    "path": "docs/broad_holder_terms_scope_2026-10-30.json",
+    "sha256": "a0b15c2472f34fa69c47819a777cf52949c80ce34f21ed15055371f89668a2f7"
+  },
+  "search_queries": 3,
+  "page_opens": 1,
+  "successful_opens": 0,
+  "failed_opens": 1,
+  "closed": true,
+  "additional_requests_allowed": false,
+  "stopped_on_first_fetch_failure": true,
+  "search_discovery": {
+    "path": "docs/research_data/holder_search1_2026-10-30.json",
+    "sha256": "d72ebbf676dd1a6927efdc84680f0d03bc185246949e364add0679c24f936dfd"
+  },
+  "failure": {
+    "url": "https://www.dtcc.com/globals/pdfs/2019/february/25/10744-19",
+    "status": "404_not_found",
+    "evidence": {
+      "path": "docs/research_data/holder_open1_2026-10-30.json",
+      "sha256": "28ab25c1200f6bd6c4d39e19c70320b8cacea08e921f23634846b2b10bd9cea6"
+    },
+    "retry": false
+  },
+  "new_primary_sources_admitted": 0,
+  "prices_downloaded": 0,
+  "purchases_usd": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "strategy_runs": 0,
+  "prior_failed_urls_retried": 0,
+  "original_html_archive": false
+}
