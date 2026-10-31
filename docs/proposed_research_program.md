@@ -1,5 +1,20 @@
 # Proposed research program before the first paper trial
 
+**Current proposal, October 31, 2026:** the
+[entry, risk and capital-deployment follow-up](subset_followup_improvement_proposal_2026-10-31.md)
+is written for review: six fixed policies, 24 new attempts including four
+baseline checks, one worker, ten minutes per case and 90 minutes overall.
+It separates ranking/entry changes, earlier risk controls, an 85% entry ceiling
+and a weekly 70% stock-deployment target. The owner's preference for roughly
+70% invested and a possible 80-85% ceiling is recorded; risk-first exceptions
+and the proposed utilization tolerance are not yet accepted. No performance
+run or paper activation is authorized by the proposal. Research acceptance
+remains 6% annual return/5% drawdown. The document also defines a route through
+shadow observation and verified execution to a separately approved paper
+engineering trial. Personal risk approval remains due before paper orders.
+The preceding comparison's Steps 1-4 remain complete; earlier status entries
+below are historical.
+
 **Latest completed research, 2026-10-30: Steps 3 and 4 complete.**
 [Final comparison and assessment](subset_comparison_results_2026-10-30.md)
 retain all 24 distinct cases and 25 lifetime attempts, including the original

@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "status": "proposal_for_review_not_approved",
+  "owner_approved": false,
+  "performance_authorized": false,
+  "max_currently_authorized_strategy_runs": 0,
+  "paper_authorized": false,
+  "scope": "fixed_76_root_exploratory_followup_entries_risk_capital",
+  "review_document": {
+    "path": "docs/subset_followup_improvement_proposal_2026-10-31.md",
+    "sha256": "cc83b9d0d6890c2b01efe65e4957a502df831bde619239f33bd0f4e09b50b363"
+  },
+  "prior_final_verification": {
+    "path": "docs/subset_final_verification_2026-10-30.json",
+    "sha256": "a1084e3c00bea15545ce93385671d4f769000150c6183471a5a222f2a7c64a4d"
+  },
+  "prior_summary": {
+    "path": "docs/research_data/subset_final_2026-10-30_summary.json",
+    "sha256": "c440af352e88227b17ed611a2d31ceb68908978a318a77587d82c9244b7f349b"
+  },
+  "prior_scope": {
+    "path": "docs/faster_research_scope_proposal.json",
+    "sha256": "c9e129f4e536265430f5f38a9bb8b2992e202aba153023262c94a1ee532be7c8"
+  },
+  "unchanged_acceptance": {
+    "path": "config/research_acceptance.json",
+    "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+  },
+  "prior_entry_threshold_reference": {
+    "path": "docs/broad_entry_selection_study.md",
+    "sha256": "adb3c2da2566e3205e3f1f488fd919c57d7aedccc3966a4a420b4083446f991e"
+  },
+  "universe_root_ids": [
+    "COHORT-2016-0047",
+    "COHORT-2016-0088",
+    "COHORT-2016-0479",
+    "COHORT-2016-0014",
+    "COHORT-2016-0257",
+    "COHORT-2016-0012",
+    "COHORT-2016-0287",
+    "COHORT-2016-0048",
+    "COHORT-2016-0332",
+    "COHORT-2016-0179",
+    "COHORT-2016-0185",
+    "COHORT-2016-0397",
+    "COHORT-2016-0269",
+    "COHORT-2016-0150",
+    "COHORT-2016-0095",
+    "COHORT-2016-0089",
+    "COHORT-2016-0071",
+    "COHORT-2016-0144",
+    "COHORT-2016-0029",
+    "COHORT-2016-0169",
+    "COHORT-2016-0267",
+    "COHORT-2016-0124",
+    "COHORT-2016-0096",
+    "COHORT-2016-0339",
+    "COHORT-2016-0028",
+    "COHORT-2016-0300",
+    "COHORT-2016-0500",
+    "COHORT-2016-0133",
+    "COHORT-2016-0364",
+    "COHORT-2016-0247",
+    "COHORT-2016-0093",
+    "COHORT-2016-0280",
+    "COHORT-2016-0058",
+    "COHORT-2016-0389",
+    "COHORT-2016-0488",
+    "COHORT-2016-0434",
+    "COHORT-2016-0427",
+    "COHORT-2016-0097",
+    "COHORT-2016-0463",
+    "COHORT-2016-0368",
+    "COHORT-2016-0023",
+    "COHORT-2016-0429",
+    "COHORT-2016-0196",
+    "COHORT-2016-0030",
+    "COHORT-2016-0155",
+    "COHORT-2016-0148",
+    "COHORT-2016-0007",
+    "COHORT-2016-0106",
+    "COHORT-2016-0002",
+    "COHORT-2016-0454",
+    "COHORT-2016-0311",
+    "COHORT-2016-0475",
+    "COHORT-2016-0174",
+    "COHORT-2016-0293",
+    "COHORT-2016-0374",
+    "COHORT-2016-0264",
+    "COHORT-2016-0073",
+    "COHORT-2016-0204",
+    "COHORT-2016-0137",
+    "COHORT-2016-0464",
+    "COHORT-2016-0001",
+    "COHORT-2016-0330",
+    "COHORT-2016-0262",
+    "COHORT-2016-0436",
+    "COHORT-2016-0503",
+    "COHORT-2016-0314",
+    "COHORT-2016-0219",
+    "COHORT-2016-0289",
+    "COHORT-2016-0428",
+    "COHORT-2016-0447",
+    "COHORT-2016-0324",
+    "COHORT-2016-0166",
+    "COHORT-2016-0352",
+    "COHORT-2016-0466",
+    "COHORT-2016-0076",
+    "COHORT-2016-0208"
+  ],
+  "selected_originals": 76,
+  "deferred_originals": 24,
+  "selection_bias_acknowledged": true,
+  "windows": [
+    {
+      "id": "development_2017_2021",
+      "warmup_start": "2016-01-01",
+      "evaluation_start": "2017-01-01",
+      "end_exclusive": "2022-01-01"
+    },
+    {
+      "id": "development_robustness_2022_2023",
+      "warmup_start": "2019-01-01",
+      "evaluation_start": "2022-01-01",
+      "end_exclusive": "2024-01-01"
+    }
+  ],
+  "costs": [
+    {
+      "id": "base",
+      "slippage_bps_per_side": 5,
+      "full_spread_bps": 2,
+      "commission_per_order_usd": 0
+    },
+    {
+      "id": "pessimistic",
+      "slippage_bps_per_side": 20,
+      "full_spread_bps": 10,
+      "commission_per_order_usd": 1
+    }
+  ],
+  "simulated_initial_cash_usd": 10000,
+  "availability_scenarios": [
+    "base"
+  ],
+  "frozen_baseline": {
+    "id": "existing_breakout55_exit20_vol_latched_continuation30",
+    "entry_sessions": 55,
+    "exit_sessions": 20,
+    "stock_and_market_filter": "EMA200",
+    "initial_fixed_stop_atr14_multiple": 3,
+    "reentry_cooldown_sessions": 10,
+    "holding_policy": "Existing continuation_30: reviews 30,35,40,45,50,55,60,90,120,...; retain only with fresh prior-20-session high, positive estimated net sale profit, stock/SPY above EMA200; no hard maximum",
+    "position_cap": 0.05,
+    "portfolio_cap": 0.7,
+    "stop_risk_cap": 0.005,
+    "annualized_volatility_contribution": 0.01,
+    "max_positions": 20,
+    "daily_loss_latched_halt": 0.03,
+    "drawdown_latched_halt": 0.1,
+    "risk_settings_role": "Frozen old research controls; not personal paper-risk approval and not a guarantee of 5% maximum loss",
+    "buy_priority": "alphabetical",
+    "fill_timing": "Next actual session open after a completed-close signal; ordinary stop conventions retained",
+    "parameter_search": false,
+    "ml": false
+  },
+  "policies": [
+    {
+      "id": "P0",
+      "group": "baseline",
+      "comparator": "four_pinned_prior_baseline_cases",
+      "settings": "Exact frozen existing strategy, sizing, order and halts",
+      "fresh_strategy_replays_count_against_budget": true
+    },
+    {
+      "id": "E1",
+      "group": "entry_selection",
+      "comparator": "P0",
+      "ranking": "descending_completed_63_session_stock_price_return_minus_SPY",
+      "tie_break": "stable_instrument_id_ascending",
+      "entry_filters_unchanged": true
+    },
+    {
+      "id": "E2",
+      "group": "entry_selection",
+      "comparator": "E1",
+      "ranking": "same_as_E1",
+      "signal_volume_over_prior_20_session_median_min": 1.5,
+      "stock_minus_SPY_63_session_return_min": 0.05,
+      "volume_median_excludes_signal_session": true,
+      "missing_required_data": "exclude_candidate_and_count"
+    },
+    {
+      "id": "R1",
+      "group": "risk_halts",
+      "comparator": "P0",
+      "entry_rule_and_order": "P0",
+      "portfolio_entry_cap": 0.7,
+      "planned_combined_position_stop_risk_cap": 0.0025,
+      "annualized_volatility_contribution": 0.005,
+      "daily_loss_pause_trigger": 0.01,
+      "daily_pause_complete_sessions": 5,
+      "restart_review": "prior_completed_SPY_close_above_EMA200_after_five_full_sessions_fresh_BUY_required",
+      "drawdown_trigger": 0.03,
+      "drawdown_action": "permanent_entry_block_for_account_window_and_queue_deliverable_whole_share_sales_at_next_session_open",
+      "checkpoint_timing": "existing_open_and_close_checkpoints; even_an_open_trigger_sells_no_earlier_than_following_session_open",
+      "equity_peak_reset": false,
+      "automatic_drawdown_restart": false
+    },
+    {
+      "id": "C1",
+      "group": "capital_deployment",
+      "comparator": "P0",
+      "portfolio_entry_cap": 0.85,
+      "other_settings": "P0"
+    },
+    {
+      "id": "C2",
+      "group": "capital_deployment",
+      "comparator": "C1",
+      "ordinary_daily_signal_processing": "C1_remains_active",
+      "portfolio_entry_cap": 0.85,
+      "target_delivered_stock_exposure": 0.7,
+      "weekly_rebalance_band": [
+        0.65,
+        0.75
+      ],
+      "rebalance_signal_time": "final_completed_session_of_each_calendar_trading_week",
+      "rebalance_fill_time": "following_actual_session_open_sells_before_buys",
+      "initial_weight": "min(0.05,0.70/selected_name_count)",
+      "weight_adjustment": "reduce_for_existing_volatility_and_combined_position_stop_risk_no_upward_renormalization",
+      "existing_position_additions": "only_above_historical_average_entry_cost_with_trend_review_pass_and_combined_stop_risk_capacity",
+      "existing_stop_and_holding_clock": "unchanged_on_topup",
+      "partial_sales_and_additions_require_exact_accounting": true,
+      "new_position_entry_rule_and_order": "P0",
+      "ceiling_drift": "daily_completed_close_above_85_percent_economic_exposure_queues_trim_toward_70_percent_at_next_actual_open",
+      "risk_checks_override_target": true,
+      "forced_minimum_stock_exposure": false,
+      "leverage": false,
+      "ETF_filler": false
+    }
+  ],
+  "ordered_cases": [
+    {
+      "id": "P0__development_2017_2021__base__base",
+      "policy": "P0",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "P0__development_2017_2021__pessimistic__base",
+      "policy": "P0",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "P0__development_robustness_2022_2023__base__base",
+      "policy": "P0",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "P0__development_robustness_2022_2023__pessimistic__base",
+      "policy": "P0",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E1__development_2017_2021__base__base",
+      "policy": "E1",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E1__development_2017_2021__pessimistic__base",
+      "policy": "E1",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E1__development_robustness_2022_2023__base__base",
+      "policy": "E1",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E1__development_robustness_2022_2023__pessimistic__base",
+      "policy": "E1",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E2__development_2017_2021__base__base",
+      "policy": "E2",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E2__development_2017_2021__pessimistic__base",
+      "policy": "E2",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E2__development_robustness_2022_2023__base__base",
+      "policy": "E2",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "E2__development_robustness_2022_2023__pessimistic__base",
+      "policy": "E2",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "R1__development_2017_2021__base__base",
+      "policy": "R1",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "R1__development_2017_2021__pessimistic__base",
+      "policy": "R1",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "R1__development_robustness_2022_2023__base__base",
+      "policy": "R1",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "R1__development_robustness_2022_2023__pessimistic__base",
+      "policy": "R1",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C1__development_2017_2021__base__base",
+      "policy": "C1",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C1__development_2017_2021__pessimistic__base",
+      "policy": "C1",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C1__development_robustness_2022_2023__base__base",
+      "policy": "C1",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C1__development_robustness_2022_2023__pessimistic__base",
+      "policy": "C1",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C2__development_2017_2021__base__base",
+      "policy": "C2",
+      "window": "development_2017_2021",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C2__development_2017_2021__pessimistic__base",
+      "policy": "C2",
+      "window": "development_2017_2021",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C2__development_robustness_2022_2023__base__base",
+      "policy": "C2",
+      "window": "development_robustness_2022_2023",
+      "cost": "base",
+      "availability_scenario": "base"
+    },
+    {
+      "id": "C2__development_robustness_2022_2023__pessimistic__base",
+      "policy": "C2",
+      "window": "development_robustness_2022_2023",
+      "cost": "pessimistic",
+      "availability_scenario": "base"
+    }
+  ],
+  "prior_baseline_case_evidence": [
+    {
+      "id": "availability_selected_subset__development_2017_2021__base__base",
+      "compact": {
+        "path": "data/reports/approved_subset_comparison_v1/case-02/result.json",
+        "sha256": "44f7ba89b36c2c5e0f8360f522fc1e294f79ccd16b25741bcea500a0db349f31"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_comparison_v1/case-02/case.json.gz",
+        "sha256": "19cc91332eb23225f6550aa5b213389c312e69c373ec829e952283b586eec3b4"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_2017_2021__pessimistic__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-05/result.json",
+        "sha256": "53de3d49a6caeb2cc7a1e6c369d44724ef8d22c5de132bc5cfae91b13a6fd935"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-05/case.json.gz",
+        "sha256": "eebfd49a8a8eed9478fe86f03f0c08299eee464e0806779784fecf0a30a70e75"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__base__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-11/result.json",
+        "sha256": "838afed3c0e0c5ff087c8d68acbd18095368f393a1014cc4fab890a5a14d698c"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-11/case.json.gz",
+        "sha256": "cb8ef1da1ee4ba208ada254ea78a2f3c2c7d139b4474070e812d63da9afa4d78"
+      },
+      "internal_and_external_reconciliation": true
+    },
+    {
+      "id": "availability_selected_subset__development_robustness_2022_2023__pessimistic__base",
+      "compact": {
+        "path": "data/reports/approved_subset_recovery_v1/case-17/result.json",
+        "sha256": "003e7fc6fbe4f4c6b56de81647911c313d7b19d23071cf15bfb9997221002f01"
+      },
+      "full_case": {
+        "path": "data/reports/approved_subset_recovery_v1/case-17/case.json.gz",
+        "sha256": "24c17859e4a1f5c1b5369cf14215dffcbde83842646c9e66147dd41e1b459d8e"
+      },
+      "internal_and_external_reconciliation": true
+    }
+  ],
+  "baseline_gate": "First_four_reserved_fresh_strategy_runs_must_reproduce_prior_financial_curves_fills_and_metrics_before_any_challenger_runs",
+  "max_strategy_attempts": 24,
+  "max_case_wall_clock_seconds": 600,
+  "max_total_wall_clock_seconds": 5400,
+  "max_concurrent_workers": 1,
+  "stop_on_first_failure": true,
+  "automatic_retry": false,
+  "budget_reset_allowed": false,
+  "extra_parameter_searches": 0,
+  "combined_policy_winner_runs_authorized": false,
+  "primary_assessment": "pessimistic_cost_base_availability_all_existing_acceptance_criteria",
+  "proposed_utilization_screen": {
+    "policy": "C2",
+    "target": 0.7,
+    "mean_delivered_stock_exposure_min": 0.65,
+    "fraction_all_evaluation_daily_closes_at_or_above_65_percent_min": 0.75,
+    "denominator_includes_halts_and_market_off_sessions": true,
+    "owner_accepted": false,
+    "continuous_intraday_exposure_claim": false
+  },
+  "shadow_and_operational_paper_workstream": "separate_future_scope_requires_implementation_verification_complete_personal_risk_policy_and_explicit_paper_activation",
+  "purchases_usd": 0,
+  "broker_requests_authorized": false,
+  "credentials_access_authorized": false,
+  "heldout_2024_2025_access": false,
+  "ML": false,
+  "tests_run_this_documentation_task": 0,
+  "new_strategy_runs_this_task": 0
+}

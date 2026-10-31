@@ -1,5 +1,12 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**New proposal, 2026-10-31:** [six-policy follow-up for entries, risk and invested capital](docs/subset_followup_improvement_proposal_2026-10-31.md).
+Proposes a bounded 24-case study, a 70% stock target and an 85% ceiling as
+separate hypotheses. It also explains the shadow-to-paper engineering route.
+Owner review precedes implementation/performance under this proposed scope;
+no new backtest or paper execution has started. Prior research Steps 1-4
+remain complete; earlier status entries below are historical.
+
 **Latest completed research, 2026-10-30: Steps 3 and 4 complete.**
 [Final comparison and assessment](docs/subset_comparison_results_2026-10-30.md)
 retain all 24 distinct cases and 25 lifetime attempts, including the original

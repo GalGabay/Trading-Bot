@@ -180,3 +180,8 @@ docs/subset_comparison_results_2026-10-30.md -text
 app/**/*.py -text
 backtesting/**/*.py -text
 tests/**/*.py -text
+
+# Preserve the separately proposed October 31 scope and exposure preference.
+docs/subset_followup_*.json -text
+docs/subset_followup_*.md -text
+docs/subset_exposure_preference_*.json -text

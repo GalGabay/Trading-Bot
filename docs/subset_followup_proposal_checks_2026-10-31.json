@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-31",
+  "kind": "documentation_metadata_checks_not_unit_tests",
+  "proposal": {
+    "path": "docs/subset_followup_improvement_proposal_2026-10-31.json",
+    "sha256": "95e4906fddfd137a770d158fd47acf98bfdda93e0583d6e418447cc961352781"
+  },
+  "preference": {
+    "path": "docs/subset_exposure_preference_2026-10-31.json",
+    "sha256": "3c86c088ecde137d2132f31c04ba8458b009e9abc7c27395c983083de9641508"
+  },
+  "review_document": {
+    "path": "docs/subset_followup_improvement_proposal_2026-10-31.md",
+    "sha256": "cc83b9d0d6890c2b01efe65e4957a502df831bde619239f33bd0f4e09b50b363"
+  },
+  "proposed_policies": 6,
+  "proposed_cases": 24,
+  "unique_case_ids": true,
+  "baseline_runs_included_in_budget": 4,
+  "references_checked": true,
+  "new_document_links_checked": 1,
+  "paper_risk_configuration_unchanged": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "investment_acceptance_unchanged": {
+    "path": "config/research_acceptance.json",
+    "sha256": "b1782e587b6b01b2288d423f98dc457eb91f81bba8399c3b662bfa424a88d78d"
+  },
+  "prior_research_steps_complete": true,
+  "unit_tests_run": 0,
+  "strategy_runs": 0,
+  "broker_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "performance_authorized": false,
+  "paper_authorized": false
+}

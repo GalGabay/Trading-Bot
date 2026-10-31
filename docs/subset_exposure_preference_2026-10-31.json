@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-31",
+  "owner_statement": "i want most of the money to be invested each single minute. meaning that i want about 70% to be in stocks at evrey moment. and maybe get the ceiling higher to 80-85%.",
+  "desired_stock_exposure": 0.7,
+  "ceiling_range_under_consideration": [
+    0.8,
+    0.85
+  ],
+  "literal_continuous_minimum_requested": true,
+  "engineering_recommendation": "study_70_percent_target_85_percent_ceiling_risk_first_exceptions_and_explicit_utilization_tolerance",
+  "target_exceptions_or_tolerance_accepted_by_owner": false,
+  "research_proposal": {
+    "path": "docs/subset_followup_improvement_proposal_2026-10-31.json",
+    "sha256": "95e4906fddfd137a770d158fd47acf98bfdda93e0583d6e418447cc961352781"
+  },
+  "paper_risk_approval": false,
+  "personal_risk_configuration_unchanged": true,
+  "investment_acceptance_unchanged": true,
+  "paper_trial_requested_for_discussion": true,
+  "paper_submission_authorized": false
+}

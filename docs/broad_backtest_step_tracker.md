@@ -4,6 +4,13 @@ Updated October 30, 2026. These four steps describe the current broader-stock
 research work, not development phases 1-4. After each implementation response,
 report the current step and its remaining work until Step 4 is complete.
 
+**October 31 follow-up:** the [new proposal](subset_followup_improvement_proposal_2026-10-31.md)
+is prepared for review, with six policies and 24 proposed new attempts.
+It records the new deployment preference without changing the paper-risk
+configuration or approving new runs. It also explains a separate path toward
+a paper engineering trial. The completed comparison below stays complete;
+its four-step numbering is not restarted for this proposed scope.
+
 **Current route: the separately approved 76-stock exploratory comparison.**
 **Steps 1-4 are complete for this approved diagnostic comparison.**
 [Final results and the Step 4 decision](subset_comparison_results_2026-10-30.md)
