@@ -1,5 +1,12 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Latest verified observation, 2026-10-31:** [207 tests pass and one repeat tick is reviewed](docs/shadow_repeat_validation_results_2026-10-31.md).
+Includes 70 new controller tests; zero failures/errors/skips. The actual tick
+correctly waited with no credentials, requests, new report or state changes.
+No recurring task is installed. Next: concrete schedule/failure-reporting files
+for host review. Personal risk approval is later, before paper orders. Prior
+research Steps 1-4 remain complete; earlier entries below are historical.
+
 **Latest implementation, 2026-10-31:** [calendar-aware repeat controller](docs/shadow_repeat.md).
 Adds bounded campaigns, status, durable request reservations, locking and
 restart recovery. Initialized from the saved October 30 report without new

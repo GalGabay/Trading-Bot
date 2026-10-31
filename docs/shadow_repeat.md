@@ -5,10 +5,13 @@ with a separate repeat controller. **No scheduled task, background process or
 service is installed or running.** Initialization adopted the reviewed October
 30 observation without new requests, orders or purchases.
 
-Compilation, CLI help, `init` and `status --json` completed on Windows.
-**Focused unit tests for this controller have not been added or run.** The
-earlier 137 passing tests cover the underlying observer and related modules,
-not this new orchestration. Raspberry Pi execution remains unverified.
+**Current verification:** [207 offline tests passed and one reviewed tick completed](shadow_repeat_validation_results_2026-10-31.md).
+This includes 70 controller tests and the earlier 137 observer/regression
+checks. The actual tick correctly waited without credentials, requests or a
+duplicate report. No recurring task/process is running. Real due collection
+through the controller and Raspberry Pi execution remain unverified. The
+earlier implementation record remains historical, with its guide snapshot
+preserved in [the archive record](shadow_repeat_history_2026-10-31.json).
 
 ## Calendar and reporting
 
@@ -86,7 +89,8 @@ does **not** mean a process is currently watching the market.
 
 ### One tick or foreground repetition
 
-After focused controller verification:
+The focused verification and reviewed no-op tick are complete. For a later
+explicit manual tick or foreground session:
 
 ```powershell
 .\.venv\Scripts\python.exe -m app.shadow.repeat tick
@@ -159,7 +163,7 @@ campaign to Linux is not a supported migration. Real Pi execution remains due.
 
 ## Proposed schedule and next work
 
-After focused verification, review one `tick` **every 30 minutes**, on one
+Focused verification is complete. Next review one `tick` **every 30 minutes**, on one
 host, plus its startup trigger. Calendar logic decides whether data is due;
 there is no fixed US-close hour in the OS schedule. The machine must be awake
 and online. A report may arrive up to about 30 minutes after the 15-minute
@@ -171,10 +175,11 @@ parallel task instances. Pi would use a systemd timer/service with explicit
 interpreter/working directory. Review the actual task/service and failure
 reporting before installation. **Nothing has been installed by this work.**
 
-**Engineering next:** focused offline tests for calendar/date/DST boundaries,
-budgets, locking, interrupted attempts, resume, saved-bundle recovery and CLI
-status; then one reviewed no-op/due tick within an explicit collection limit.
-Verify the chosen host before installing recurring execution.
+**Engineering next:** prepare concrete recurring-task definitions, visible
+failure reporting and installation/removal instructions for Windows and Pi.
+Review the actual schedule and verify the chosen host before installation.
+The existing default campaign still expires November 30; verification did
+not extend its duration or reset its counters.
 
 **Owner now:** no risk-file edits, purchase or settings needed. Later choose
 Windows PC or Pi as the single observation host when the concrete schedule

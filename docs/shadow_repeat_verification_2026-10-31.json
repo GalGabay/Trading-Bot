@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "tests_run": 207,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "modules": {
+    "tests.test_shadow_repeat": 70,
+    "tests.test_shadow_observer": 66,
+    "tests.test_market_data": 14,
+    "tests.test_features": 5,
+    "tests.test_strategy": 8,
+    "tests.test_holding_policy": 23,
+    "tests.test_daily_research": 21
+  },
+  "elapsed_seconds": 30.015999999828637,
+  "execution": [
+    {
+      "path": "app/shadow/config.py",
+      "sha256": "e7c59fdc5695730c94e15479a3f377426e504f26055aa91a50449ef49b307623"
+    },
+    {
+      "path": "app/shadow/data.py",
+      "sha256": "af5a3501b1980daff63e298cf5660571769b437a532536b51b1078b8d7a303f2"
+    },
+    {
+      "path": "app/shadow/observer.py",
+      "sha256": "faca7c815a26087fb02c391e1368b3f75ed25cae298e35452709833ba5e7d446"
+    },
+    {
+      "path": "app/shadow/store.py",
+      "sha256": "d609b804a10aae1bc7f8584e7725fad8e1b95a5518f0ba1ef4e6b393fb2a67f6"
+    },
+    {
+      "path": "app/ai/features.py",
+      "sha256": "f1e64f1ae7d364de2c906ed0a5c13a54380e7194d63261c4071c5b608fa7d8e0"
+    },
+    {
+      "path": "app/data/market_data.py",
+      "sha256": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb"
+    },
+    {
+      "path": "app/data/market_calendar.py",
+      "sha256": "06a1e20b4e34334e1a4789933490306f1c7facb20a2b8caa854413bb180e83ae"
+    },
+    {
+      "path": "app/strategy/base.py",
+      "sha256": "f101286b96db83b3d4e63de7ddf0c9499a44c5c97e5ac998b760dee48cc80268"
+    },
+    {
+      "path": "backtesting/daily_strategies.py",
+      "sha256": "3dc5d5028e67f3394074516b6d5c2ea6d0f1ae8cbf9a7a1d9d2f7584be7b76bb"
+    },
+    {
+      "path": "backtesting/holding_policy.py",
+      "sha256": "59d267c833caff38a376d3cb5a72993ee15cb71ee2563235685ede22d58624aa"
+    },
+    {
+      "path": "backtesting/research_policy.py",
+      "sha256": "e08b23c2c182507ea769b77044668caf5bea9a1607fc9377a6f2eae274bd5f3e"
+    },
+    {
+      "path": "app/broker/alpaca_client.py",
+      "sha256": "42fa66a350865351302dd5278ad80deff09e601fb3aef323bbb285fb02a72bc5"
+    },
+    {
+      "path": "app/shadow/repeat.py",
+      "sha256": "c57fec40bf0007db85d2757ba583995a04d1b9d772bbaabc1247475a87522712"
+    },
+    {
+      "path": "app/shadow/repeat_state.py",
+      "sha256": "6ba97d525f6867001f92662d9e1b0e863aef73321b0e83eeb1fabbb76509fb61"
+    },
+    {
+      "path": "tests/test_shadow_repeat.py",
+      "sha256": "79d52f1952b74d45859065cd7a32072620670f4274d6c103d3879ca399782862"
+    },
+    {
+      "path": "tests/test_shadow_observer.py",
+      "sha256": "8e28da79f7dcf42add9cce8c06c0e7f537bd90a22b642043a40fa162769f5cca"
+    },
+    {
+      "path": "tests/test_market_data.py",
+      "sha256": "431c0873785d695fa0c3b81955813a4e455e41c73fc14f45313aecddfdaf41e1"
+    },
+    {
+      "path": "tests/test_features.py",
+      "sha256": "a58b85a9e616a23ea23e3c36fb000bcb578c2784576291a60432839fc5b97c7d"
+    },
+    {
+      "path": "tests/test_strategy.py",
+      "sha256": "16be3b0ccd328dce620b53585af421825698975f31985896f9286992ddff84a5"
+    },
+    {
+      "path": "tests/test_holding_policy.py",
+      "sha256": "2124d67ec58f790a2d5731d4faba61b7ce14a0cee243439c727cba0a8f412277"
+    },
+    {
+      "path": "tests/test_daily_research.py",
+      "sha256": "5bd2b4111221dd28023dd5c47300bf1b2d44f42b3f04cab890269d38c4506cbe"
+    },
+    {
+      "path": "config/shadow_repeat.json",
+      "sha256": "46fd87f1c5908c4ed9e3f2c47bb29b11ac941de98890eb1ac73ecfd1681b3441"
+    },
+    {
+      "path": "config/shadow_observer.json",
+      "sha256": "b333c7225239c1216c7e1aeb0c980b077bb8011be40fe52bc00e28ca4f4ddb8a"
+    }
+  ],
+  "network_requests": 0,
+  "credentials_loaded": false,
+  "orders": 0,
+  "date": "2026-10-31",
+  "new_controller_tests": 70,
+  "observer_tests": 66,
+  "related_regression_tests": 71,
+  "log": {
+    "path": "data/reports/shadow_repeat_tests_2026_10_31_v2/unittest.log",
+    "sha256": "8df002a64b35898deb6071f589b1d4c1e8454ae691edd2b9254639abe6c3dd31"
+  },
+  "initial_run": {
+    "path": "data/reports/shadow_repeat_tests_2026_10_31_v1/summary.json",
+    "sha256": "0ca6ebfbcb49ce3a74890e50b3930fd1e93828ec17dd0275075d4c316362fab4"
+  },
+  "initial_failures": 1,
+  "initial_errors": 0,
+  "initial_failure_resolution": "Test assertion compared in-memory tuple with JSON list; canonical content comparison corrected",
+  "production_code_changes": false,
+  "raspberry_pi_verified": false
+}

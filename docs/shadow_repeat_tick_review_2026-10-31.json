@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-31",
+  "passed": true,
+  "tick_attempts": 1,
+  "exit_code": 0,
+  "action": {
+    "action": "waiting",
+    "next_at": "2026-11-01T04:00:00+00:00",
+    "reason": "No new completed, settled session"
+  },
+  "last_session": "2026-10-30",
+  "observed_at": "2026-10-31T12:23:46.712992+00:00",
+  "known_requests": 0,
+  "reserved_requests": 0,
+  "collection_attempts": 0,
+  "calendar_attempts": 0,
+  "campaign_bytes_unchanged": true,
+  "original_journal_unchanged": true,
+  "risk_file_unchanged": true,
+  "policy_matches": true,
+  "verification": {
+    "path": "docs/shadow_repeat_verification_2026-10-31.json",
+    "sha256": "ae9f4c7082af497d1ac5faa11f5a08cd176ec79a154995539d3ebacdb9bb7c4e"
+  },
+  "protocol": {
+    "path": "docs/shadow_repeat_tick_protocol_2026-10-31.json",
+    "sha256": "02c0ec83fc5d0e1d6f438070ef857c8e61a7c014ae5a1ea9c48e2e3a8f6a2985"
+  },
+  "before": {
+    "path": "data/reports/shadow_repeat_tick_2026_10_31_v1/status_before.json",
+    "sha256": "6b51b340279e8b13d63bdc1e8ae5974703a38861d9456c6d715a1e216d49d3e7"
+  },
+  "after": {
+    "path": "data/reports/shadow_repeat_tick_2026_10_31_v1/status_after.json",
+    "sha256": "02b06142f6919891b0fe0b960ac5a5e5124cf53a00b2f81f277067c9a658d711"
+  },
+  "stdout": {
+    "path": "data/reports/shadow_repeat_tick_2026_10_31_v1/stdout.log",
+    "sha256": "94632c9617a7b40946035f95db65c82c26bb58ecfca16c9f9cb56ee4c7a6012a"
+  },
+  "stderr": {
+    "path": "data/reports/shadow_repeat_tick_2026_10_31_v1/stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "observations_added": 0,
+  "network_requests": 0,
+  "orders": 0,
+  "simulated_fills": 0,
+  "purchases_usd": 0,
+  "scheduler_installed": false,
+  "repeat_loop_started": false,
+  "raspberry_pi_verified": false,
+  "credential_loads": 0,
+  "trading_client_constructions": 0,
+  "transport_constructions": 0
+}

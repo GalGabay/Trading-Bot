@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "registered_before_execution": true,
+  "tick_limit": 1,
+  "expected_action": "waiting",
+  "max_network_requests": 0,
+  "credential_loading_allowed": false,
+  "transport_construction_allowed": false,
+  "automatic_retry": false,
+  "orders_allowed": false,
+  "scheduler_installation_allowed": false,
+  "verification": {
+    "path": "docs/shadow_repeat_verification_2026-10-31.json",
+    "sha256": "ae9f4c7082af497d1ac5faa11f5a08cd176ec79a154995539d3ebacdb9bb7c4e"
+  }
+}

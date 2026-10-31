@@ -1,0 +1,15 @@
+{
+  "historical_only": true,
+  "original_implementation": {
+    "path": "docs/shadow_repeat_implementation_2026-10-31.json",
+    "sha256": "fd6880f6ad0fd89d48957c5a6c32ad37ca8b131e13dd417b088c7b220f576b3b"
+  },
+  "original_guide": {
+    "path": "docs/shadow_repeat.md",
+    "sha256": "89a9e9a686d2d09b7214999b1f0f2df1c6b54ee0e699c82e145bce7c9c18a30f"
+  },
+  "snapshot": {
+    "path": "docs/research_data/before_shadow_repeat_verification_v1/shadow_repeat.md.snapshot",
+    "sha256": "89a9e9a686d2d09b7214999b1f0f2df1c6b54ee0e699c82e145bce7c9c18a30f"
+  }
+}

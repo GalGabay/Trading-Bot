@@ -199,3 +199,4 @@ docs/research_data/before_shadow_observer_verification_v1/* -text
 config/shadow_repeat.json -text
 docs/shadow_repeat*.json -text
 docs/shadow_repeat*.md -text
+docs/research_data/before_shadow_repeat_verification_v1/* -text

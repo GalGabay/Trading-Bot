@@ -1,5 +1,27 @@
 # Your responsibilities in the trading-bot project
 
+## Upcoming decisions in order
+
+**Current status, October 31:** [207 tests pass and one repeat-controller tick is reviewed](shadow_repeat_validation_results_2026-10-31.md).
+It correctly waited without requests. No recurring task or paper order is
+active. There is nothing you need to configure now.
+
+| When | Your responsibility | How |
+| --- | --- | --- |
+| Before installing repeated shadow observation | Choose **one host: Windows PC or Raspberry Pi**, operating hours, and review the concrete schedule. Personal trading-risk approval is not needed here. | Tell me your choice in plain language when the task definitions are ready. I prepare the commands and verify that host. If using Pi, you provide the machine, environment and its own paper keys; do not send key values. |
+| Before any actual paper order | Choose or explicitly approve the complete personal paper-risk policy and account size. Research allocations and shadow sizing are not this approval. | Use [the risk workbook](risk_limit_decision_workbook.md); tell me the values or review `config/risk_limits.json` that I prepare. The current file remains unapproved. |
+| Before choosing the paper candidate | Review the exact strategy, stock scope, historical results, costs, losses and known limitations, and agree on the purpose/bounds of the paper trial. | I present the evidence and proposed frozen candidate; you review it. The earlier frozen backtest did not meet the return/drawdown goals, and shadow signals are not new profit evidence. Previously approved research choices do not need repeating. |
+| Before the first paper submission or unattended trading | Understand existing paper positions/open orders and review healthy startup recovery, fill accounting and protective-exit checks. | I build/check the workflows and present reports; you confirm the account state and resolve unexpected broker activity with guidance. |
+| When the verified paper workflow is ready | Explicitly decide to start the bounded paper trial, then monitor activity and incidents. | Review the concrete activation/configuration and authorize it. During the trial, review reports; record proposed risk/strategy changes and verify them before restart. |
+
+Yes: risk decisions and host choice are both future tasks, but paper activation
+also needs the reviews above. **The nearer decision is the observation host;
+the risk-policy approval is later, before paper orders.** You do not need to
+edit Python or write new Markdown files to communicate these choices. ML
+research choices are only relevant if we pursue that optional path.
+
+## Earlier status entries (historical)
+
 **Latest implementation, October 31: [repeat observation](shadow_repeat.md).**
 Calendar-aware ticks, bounded campaigns, status and restart handling are
 implemented; the existing saved report seeds the local campaign without new

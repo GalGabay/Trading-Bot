@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-31",
+  "status": "offline_tests_passed_one_noop_tick_reviewed_not_scheduled",
+  "verification": {
+    "path": "docs/shadow_repeat_verification_2026-10-31.json",
+    "sha256": "ae9f4c7082af497d1ac5faa11f5a08cd176ec79a154995539d3ebacdb9bb7c4e"
+  },
+  "tick_protocol": {
+    "path": "docs/shadow_repeat_tick_protocol_2026-10-31.json",
+    "sha256": "02c0ec83fc5d0e1d6f438070ef857c8e61a7c014ae5a1ea9c48e2e3a8f6a2985"
+  },
+  "tick_review": {
+    "path": "docs/shadow_repeat_tick_review_2026-10-31.json",
+    "sha256": "0186dd31e91b6a38f0b63d0936043bfdbd2ddd58b58a7bb8fb44bd3acb0d8338"
+  },
+  "results": {
+    "path": "docs/shadow_repeat_validation_results_2026-10-31.md",
+    "sha256": "fc9e06e1cacf0194a18e32ae0aaa318f9a6cc4d4af75cb6d32cd34ae57941a41"
+  },
+  "operating_guide": {
+    "path": "docs/shadow_repeat.md",
+    "sha256": "a6e39860d7920a0e124216a218733f336da7bf5308aa148be50077fad009980c"
+  },
+  "historical_guide": {
+    "path": "docs/shadow_repeat_history_2026-10-31.json",
+    "sha256": "43bf2862d7549cf5c77bee0e7661e933a9be594131a12a5ca910edb78eec18fd"
+  },
+  "owner_checklist": {
+    "path": "docs/owner_responsibilities.md",
+    "sha256": "4397f6c44c017b8ccd81944618d65c6fd84b878faed0774fd96a754177a47f2b"
+  },
+  "tests_run": 207,
+  "new_repeat_tests": 70,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "initial_test_failures": 1,
+  "production_controller_code_changes": false,
+  "tick_attempts": 1,
+  "tick_action": "waiting",
+  "requests": 0,
+  "credentials_loaded": false,
+  "orders": 0,
+  "purchases_usd": 0,
+  "observations_added": 0,
+  "scheduler_installed": false,
+  "paper_risk_approved": false,
+  "raspberry_pi_verified": false,
+  "next_work": "Concrete recurring-task definitions and failure reporting for host/schedule review",
+  "owner_next": "Choose observation host/schedule when concrete; personal risk and paper activation reviews later"
+}

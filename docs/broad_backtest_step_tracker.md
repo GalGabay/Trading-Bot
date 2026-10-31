@@ -1,5 +1,10 @@
 # Broader backtest: four-step progress tracker
 
+**Latest observation verification, October 31:** [207 tests pass and one tick is reviewed](shadow_repeat_validation_results_2026-10-31.md).
+The tick waited without requests; no recurring task is installed. Next is
+concrete scheduling/failure reporting and host review, then host checks before
+installation. Historical research **Steps 1-4 remain complete**.
+
 **Latest observation implementation, October 31:** [repeat controller](shadow_repeat.md)
 adds calendar-aware ticks, status, budgets and restart handling. Initialized
 from saved data; no new requests or recurring installation. Focused controller

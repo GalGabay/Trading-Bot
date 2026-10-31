@@ -1,5 +1,13 @@
 # How far are we from paper trading?
 
+**Latest observation verification, October 31:** [207 tests pass; one tick correctly waits](shadow_repeat_validation_results_2026-10-31.md).
+No requests or recurring installation occurred. Next is a concrete host/schedule
+review and host checks. Risk approval is not needed for observation; actual
+paper orders still require reviewed personal limits, strategy/account/recovery
+checks, fill/protection workflows and explicit activation. See the
+[upcoming owner decisions](owner_responsibilities.md#upcoming-decisions-in-order).
+Research Steps 1-4 remain complete; earlier status entries are historical.
+
 **Latest observation implementation, October 31: [repeat controller](shadow_repeat.md).**
 Calendar-aware repetition, status, budgets and restart handling are implemented
 and initialized offline. New controller tests and a reviewed tick remain due;
