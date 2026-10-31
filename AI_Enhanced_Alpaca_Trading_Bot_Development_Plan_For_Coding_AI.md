@@ -1,5 +1,7 @@
 # AI-Enhanced Alpaca Trading Bot — Coding AI Handoff
 
+> **Latest observation implementation, 2026-10-31:** [Calendar-aware repeat controller](docs/shadow_repeat.md) adds completed-session scheduling, status, durable request reservations, process locking and restart recovery. The campaign was initialized from the saved October 30 report without new requests. No recurring task/process is installed or running. Compilation, CLI help and saved-state init/status completed; focused controller tests remain next. The earlier 137 passing tests cover the underlying observer, not this new orchestration. Personal risk settings are unchanged; no purchase, paper order or follow-up backtest occurred. Historical research Steps 1-4 remain complete; earlier status entries follow historically.
+>
 > **Purpose of this file:** This document is the authoritative development plan and handoff specification for a coding AI (Codex or another coding agent) that will implement this project.
 >
 > **How to use it:** Give this entire Markdown file to the coding AI together with the repository. The coding AI should treat the requirements below as the project specification, but should implement the project **incrementally**, validating each milestone before moving to the next.

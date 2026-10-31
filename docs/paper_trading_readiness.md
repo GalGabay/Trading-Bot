@@ -1,5 +1,12 @@
 # How far are we from paper trading?
 
+**Latest observation implementation, October 31: [repeat controller](shadow_repeat.md).**
+Calendar-aware repetition, status, budgets and restart handling are implemented
+and initialized offline. New controller tests and a reviewed tick remain due;
+no recurring task or paper trading is active. This continues the observation
+route without new risk approvals or purchases. Prior Steps 1-4 remain complete.
+Earlier status entries follow historically.
+
 **Current verified status, October 31, 2026: [observer tests and first collection complete](shadow_observer_validation_results_2026-10-31.md).**
 137 offline tests pass, including 66 new observer tests; Windows SQLite handle
 cleanup is fixed. One bounded read-only collection evaluated October 30 using

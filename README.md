@@ -1,5 +1,13 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Latest implementation, 2026-10-31:** [calendar-aware repeat controller](docs/shadow_repeat.md).
+Adds bounded campaigns, status, durable request reservations, locking and
+restart recovery. Initialized from the saved October 30 report without new
+requests. No recurring task/process is installed or running. Compilation/help
+and saved-state init/status completed; focused controller tests are next.
+The earlier 137 passing tests do not cover this new orchestration. Research
+Steps 1-4 remain complete; earlier entries follow historically.
+
 **Current verified status, 2026-10-31:** [137 observer/regression tests pass and one collection is reviewed](docs/shadow_observer_validation_results_2026-10-31.md).
 The October 30 session produced three BUY / 17 HOLD signals and a 10.40%
 hypothetical flat-start allocation. No orders, fills or purchases occurred.

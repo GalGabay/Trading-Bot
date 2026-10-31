@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-31",
+  "status": "implemented_initialized_offline_not_scheduled_not_unit_tested",
+  "implementation": [
+    {
+      "path": "app/shadow/repeat.py",
+      "sha256": "c57fec40bf0007db85d2757ba583995a04d1b9d772bbaabc1247475a87522712"
+    },
+    {
+      "path": "app/shadow/repeat_state.py",
+      "sha256": "6ba97d525f6867001f92662d9e1b0e863aef73321b0e83eeb1fabbb76509fb61"
+    },
+    {
+      "path": "config/shadow_repeat.json",
+      "sha256": "46fd87f1c5908c4ed9e3f2c47bb29b11ac941de98890eb1ac73ecfd1681b3441"
+    },
+    {
+      "path": "docs/shadow_repeat.md",
+      "sha256": "89a9e9a686d2d09b7214999b1f0f2df1c6b54ee0e699c82e145bce7c9c18a30f"
+    }
+  ],
+  "underlying_observer_verification": {
+    "path": "docs/shadow_observer_verification_2026-10-31.json",
+    "sha256": "ce2b3b22e76ec93c83b3f384708d6f5ec35c2c213252393b56168e7d7be3702a"
+  },
+  "prior_collection": {
+    "path": "docs/shadow_observer_reviewed_run_2026-10-31.json",
+    "sha256": "bd80fae68a92c412103d150f15dbc2b2927df5fec9cabf4a4705f4a39731999c"
+  },
+  "checks": [
+    {
+      "name": "compile",
+      "command": [
+        "-m",
+        "py_compile",
+        "app/shadow/repeat.py",
+        "app/shadow/repeat_state.py"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "data/reports/shadow_repeat_implementation_2026_10_31/compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "help",
+      "command": [
+        "-m",
+        "app.shadow.repeat",
+        "--help"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "data/reports/shadow_repeat_implementation_2026_10_31/help.log",
+        "sha256": "24c8399f8912e9b469a7f5b326813675186f73179ad32ce1bec8f5a33f96c7ba"
+      }
+    },
+    {
+      "name": "status",
+      "command": [
+        "-m",
+        "app.shadow.repeat",
+        "status",
+        "--json"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "data/reports/shadow_repeat_implementation_2026_10_31/status.log",
+        "sha256": "0f30d77be29f14508f83ec1f3fc917afe07d67b9eb2d5e5dc78b3c4f875778ba"
+      }
+    }
+  ],
+  "campaign_initialization": {
+    "command": "python -m app.shadow.repeat init",
+    "exit_code": 0,
+    "snapshot": {
+      "path": "data/reports/shadow_repeat_implementation_2026_10_31/campaign.json.snapshot",
+      "sha256": "a1c37de9ce69ce572aac6e27309421003dbca22d7aedcb849aa083f7c6730f7c"
+    }
+  },
+  "saved_status": {
+    "action": {
+      "action": "waiting",
+      "next_at": "2026-11-01T04:00:00+00:00",
+      "reason": "No new completed, settled session"
+    },
+    "calendar_attempts": 0,
+    "calendar_limit": 35,
+    "collection_attempts": 0,
+    "collection_limit": 22,
+    "expires_at": "2026-11-30T11:58:23.080548+00:00",
+    "known_requests": 0,
+    "last_session": "2026-10-30",
+    "latest_global_blockers": [],
+    "latest_report": "C:\\Users\\galga\\Documents\\repos\\Raspberry Pi 3B\\Trading Bot\\data\\shadow\\repeat\\reports\\5466bdfc08b2139b0d876fed42c2d72324809ed32e3f0d1c679975f17452a379.json",
+    "latest_unavailable_symbols": [],
+    "mode": "shadow_observation_only",
+    "now": "2026-10-31T12:01:37.174668+00:00",
+    "orders": 0,
+    "pending": null,
+    "policy_matches": true,
+    "recent_events": [],
+    "report_observed_at": "2026-10-31T09:16:56.622558+00:00",
+    "request_limit": 2500,
+    "reserved_requests": 0,
+    "scheduler_installed_by_this_controller": false,
+    "signal_expires_at": "2026-11-02T14:30:00+00:00",
+    "signals_expired": false,
+    "simulated_fills": 0,
+    "state": "ready",
+    "unknown_request_attempts": 0
+  },
+  "unit_tests_run_this_change": 0,
+  "underlying_prior_tests_passed": 137,
+  "prior_tests_cover_new_controller": false,
+  "new_requests": 0,
+  "orders": 0,
+  "simulated_fills": 0,
+  "purchases_usd": 0,
+  "scheduler_installed": false,
+  "foreground_repeat_loop_started": false,
+  "raspberry_pi_verified": false,
+  "paper_risk_file": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "prior_research_steps_complete": true,
+  "next_work": "Focused offline controller tests, reviewed tick, then host/schedule review before installation"
+}

@@ -1,5 +1,11 @@
 # Broader backtest: four-step progress tracker
 
+**Latest observation implementation, October 31:** [repeat controller](shadow_repeat.md)
+adds calendar-aware ticks, status, budgets and restart handling. Initialized
+from saved data; no new requests or recurring installation. Focused controller
+tests are next. Historical research **Steps 1-4 remain complete**; this does
+not restart them or activate paper orders.
+
 Updated October 30, 2026. These four steps describe the current broader-stock
 research work, not development phases 1-4. After each implementation response,
 report the current step and its remaining work until Step 4 is complete.

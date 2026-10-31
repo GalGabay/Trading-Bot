@@ -194,3 +194,8 @@ docs/shadow_observer.md -text
 # Preserve reviewed observer reports and historical guide/source snapshots.
 docs/shadow_observer*.md -text
 docs/research_data/before_shadow_observer_verification_v1/* -text
+
+# Repeat-controller settings and implementation record.
+config/shadow_repeat.json -text
+docs/shadow_repeat*.json -text
+docs/shadow_repeat*.md -text

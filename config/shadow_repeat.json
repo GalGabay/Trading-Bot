@@ -1,0 +1,7 @@
+{
+  "campaign_days": 30,
+  "max_collection_attempts": 22,
+  "max_calendar_attempts": 35,
+  "max_reserved_requests": 2500,
+  "poll_seconds": 300
+}

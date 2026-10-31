@@ -1,5 +1,14 @@
 # Your responsibilities in the trading-bot project
 
+**Latest implementation, October 31: [repeat observation](shadow_repeat.md).**
+Calendar-aware ticks, bounded campaigns, status and restart handling are
+implemented; the existing saved report seeds the local campaign without new
+requests. No recurring task is installed. My next work is focused controller
+tests and a reviewed tick. You have no risk-file edits or purchases now;
+later choose Windows or Pi as the single host when scheduling is concrete.
+The earlier 137 tests apply to the observer, not this new controller.
+Prior research Steps 1-4 remain complete; earlier entries are historical.
+
 **Current verified status, October 31, 2026: [observer tests and first collection complete](shadow_observer_validation_results_2026-10-31.md).**
 137 offline tests pass, including 66 new observer tests; Windows SQLite handle
 cleanup is fixed. One bounded read-only collection evaluated October 30 using
