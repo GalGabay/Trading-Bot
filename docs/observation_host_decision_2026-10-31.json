@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "source": "Owner selected Windows for the start, including initial paper trading later, and Pi migration after stable operation",
+  "initial_shadow_host": "windows",
+  "intended_initial_paper_host": "windows",
+  "future_host": "raspberry_pi_after_validation",
+  "host_choice_recorded": true,
+  "schedule_proposal": "One tick every 30 minutes plus sign-in, current user logged in and PC awake/online, no wake-from-sleep",
+  "recurring_installation_authorized": false,
+  "scheduler_installed": false,
+  "paper_activation_authorized": false,
+  "personal_paper_risk_approved": false,
+  "pi_setup_needed_now": false,
+  "notes": "Host choice does not bypass remaining execution, recovery, strategy review or risk gates. Do not run Windows and Pi collection against the same campaign."
+}

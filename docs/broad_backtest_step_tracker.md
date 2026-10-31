@@ -1,5 +1,10 @@
 # Broader backtest: four-step progress tracker
 
+**Latest preparation, October 31:** [Windows-first scheduling](shadow_schedule.md)
+and local failure-reporting files are prepared; Windows host choice is resolved.
+New wrapper/deployment tests and schedule installation review are next. No
+schedule or paper workflow is active. Historical Steps 1-4 remain complete.
+
 **Latest observation verification, October 31:** [207 tests pass and one tick is reviewed](shadow_repeat_validation_results_2026-10-31.md).
 The tick waited without requests; no recurring task is installed. Next is
 concrete scheduling/failure reporting and host review, then host checks before

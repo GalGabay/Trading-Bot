@@ -1,5 +1,13 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Latest preparation, 2026-10-31:** [Windows-first scheduling files and local failure reporting](docs/shadow_schedule.md)
+are prepared for review, with future Pi units and installation/removal commands.
+Windows is the selected initial observation/paper host; Pi migration is later.
+Python compilation, PowerShell parsing, Task Scheduler XML parsing and installer
+`-WhatIf` are preparation checks; new wrapper/deployment tests remain next.
+Nothing is installed or running, and no requests/orders occurred. Earlier 207
+tests cover the controller/observer, not this new wrapper. Steps 1-4 remain complete.
+
 **Latest verified observation, 2026-10-31:** [207 tests pass and one repeat tick is reviewed](docs/shadow_repeat_validation_results_2026-10-31.md).
 Includes 70 new controller tests; zero failures/errors/skips. The actual tick
 correctly waited with no credentials, requests, new report or state changes.

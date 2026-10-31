@@ -1,5 +1,12 @@
 # How far are we from paper trading?
 
+**Windows-first route recorded, October 31:** [scheduling files and failure reports](shadow_schedule.md)
+are prepared without installation. Windows is chosen for initial observation
+and the intended initial paper trial; Pi is a later migration after host checks.
+The next engineering work is focused wrapper/deployment tests, then review the
+concrete Windows task before installation. This does not approve paper orders,
+change risk limits or establish strategy profitability. Steps 1-4 remain complete.
+
 **Latest observation verification, October 31:** [207 tests pass; one tick correctly waits](shadow_repeat_validation_results_2026-10-31.md).
 No requests or recurring installation occurred. Next is a concrete host/schedule
 review and host checks. Risk approval is not needed for observation; actual

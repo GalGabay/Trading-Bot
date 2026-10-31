@@ -1,0 +1,13 @@
+[Unit]
+Description=Check shadow observation every 30 minutes
+
+[Timer]
+OnBootSec=2min
+OnCalendar=*-*-* *:00,30:00
+Persistent=true
+AccuracySec=1min
+WakeSystem=false
+Unit=shadow-observer.service
+
+[Install]
+WantedBy=timers.target

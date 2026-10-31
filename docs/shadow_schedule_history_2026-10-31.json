@@ -1,0 +1,11 @@
+{
+  "historical_only": true,
+  "original": {
+    "path": "docs/owner_responsibilities.md",
+    "sha256": "4397f6c44c017b8ccd81944618d65c6fd84b878faed0774fd96a754177a47f2b"
+  },
+  "snapshot": {
+    "path": "docs/research_data/before_shadow_schedule_v1/owner_responsibilities.md.snapshot",
+    "sha256": "4397f6c44c017b8ccd81944618d65c6fd84b878faed0774fd96a754177a47f2b"
+  }
+}

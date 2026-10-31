@@ -1,0 +1,21 @@
+[Unit]
+Description=TradingBot shadow-only observer tick
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=@USER@
+WorkingDirectory=@REPO@
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=@REPO@/.venv/bin/python -m app.shadow.scheduled tick --directory @REPO@/data/shadow/repeat --report-directory @REPO@/data/shadow/schedule --review-directory @REVIEW@
+TimeoutStartSec=300
+KillMode=control-group
+Restart=no
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=@REPO@/data/shadow
+StandardOutput=journal
+StandardError=journal

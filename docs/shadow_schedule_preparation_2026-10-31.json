@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-31",
+  "status": "prepared_for_review_not_installed_new_modules_not_unit_tested",
+  "host_decision": {
+    "path": "docs/observation_host_decision_2026-10-31.json",
+    "sha256": "9f72155704ef00423be6b0b69cffa50bdaa5a378991143830a4e4a6453288842"
+  },
+  "guide": {
+    "path": "docs/shadow_schedule.md",
+    "sha256": "608e720720ea9696198e5acb208d9bd7bb41e443980531149fb7cbf872effe8c"
+  },
+  "owner_checklist": {
+    "path": "docs/owner_responsibilities.md",
+    "sha256": "03d74eeca80394a11f669c44dc7f82e760df5147246d05a423512c174c95c299"
+  },
+  "historical_checklist": {
+    "path": "docs/shadow_schedule_history_2026-10-31.json",
+    "sha256": "8572204f43d4cc80bd6c14fa221c9b494a25a24b7098718de515d4a3dbc67a4a"
+  },
+  "implementation": [
+    {
+      "path": "app/shadow/schedule.py",
+      "sha256": "ee2f8755e855c4412a5afecd9faea75212432e278a37a70b85fd5d6155f5e815"
+    },
+    {
+      "path": "app/shadow/scheduled.py",
+      "sha256": "f248d01f4221508522a471ace4f4048f99cb11df973c38f5f2fccc76c48011da"
+    },
+    {
+      "path": "deploy/windows/Invoke-ShadowObserver.ps1",
+      "sha256": "9c7e0ade9f19e7e8c1d1168131c2ef21dcd51d42b59f83be5a191a0d06a42926"
+    },
+    {
+      "path": "deploy/windows/Install-ShadowObserver.ps1",
+      "sha256": "2a0a10b6fe329cdc7d393ada459a3812c3721cd209a45881fc9c28d55775085a"
+    },
+    {
+      "path": "deploy/windows/Remove-ShadowObserver.ps1",
+      "sha256": "dad4828ad6ff1a58f078a3ce65e38af80c8c6495a7256ebd48fef3158f235ea0"
+    },
+    {
+      "path": "deploy/systemd/shadow-observer.service.in",
+      "sha256": "f8b3d24d5a18e68679a8d5fbf282e8c5184014b5cfe98de0aeea7a46fe9c135a"
+    },
+    {
+      "path": "deploy/systemd/shadow-observer.timer.in",
+      "sha256": "ffbacd290afb56868878a8ad920096e7c0bb4aa2d88cc885f6af3707b12490a7"
+    }
+  ],
+  "generated_artifacts": [
+    {
+      "path": "data/shadow/schedule/review/windows-task.xml",
+      "sha256": "cee07c205d606280006d621599e2703643564bd31e93394c6c1bbe0185c7405e"
+    },
+    {
+      "path": "data/shadow/schedule/review/shadow-observer.service",
+      "sha256": "a90f543e3bf59559d7b6c99f9f29e60174629f3eaed17ccd5e880fafb0a81a50"
+    },
+    {
+      "path": "data/shadow/schedule/review/shadow-observer.timer",
+      "sha256": "ffbacd290afb56868878a8ad920096e7c0bb4aa2d88cc885f6af3707b12490a7"
+    },
+    {
+      "path": "data/shadow/schedule/review/manifest.json",
+      "sha256": "04601be499aa7dcbe43b99ec11534b30309b2db42551d827210e97e11ec6434d"
+    }
+  ],
+  "checks": [
+    {
+      "name": "compile",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "schedule_help",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/schedule_help.log",
+        "sha256": "554fe486bf3226be95b8a791da26c860dadebbf43b9e359fe75d256495cca88f"
+      }
+    },
+    {
+      "name": "report_help",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/report_help.log",
+        "sha256": "7fbfe6fa834912560013242de82860ccbba8435e847dd0809693c2ff86f2f7c5"
+      }
+    },
+    {
+      "name": "verify",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/verify.log",
+        "sha256": "e1b0005885221b9b3e85cfddba2ffc35a7215545c067cb69f9b0d0e1a00cdad0"
+      }
+    },
+    {
+      "name": "runtime_verify",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/runtime_verify.log",
+        "sha256": "e1b0005885221b9b3e85cfddba2ffc35a7215545c067cb69f9b0d0e1a00cdad0"
+      }
+    },
+    {
+      "name": "health_before_install",
+      "exit_code": 3,
+      "expected_exit_code": 3,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/health_before_install.log",
+        "sha256": "9a4e2eb98877586380b16357f9de6d98f594119fa6474f2f6d9985cb751eaa55"
+      }
+    },
+    {
+      "name": "windows_preparation",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "log": {
+        "path": "data/reports/shadow_schedule_preparation_2026_10_31/windows_preparation.log",
+        "sha256": "33a989ea3056d08aeb0fb0835bcbb19c13bb6a1faf3651835fff0a891d29f194"
+      }
+    }
+  ],
+  "initial_xml_encoding_error_fixed": true,
+  "initial_draft_directory": "data/reports/shadow_schedule_preparation_2026_10_31/initial_xml_draft",
+  "old_207_tested_sources_unchanged": true,
+  "underlying_verification": {
+    "path": "docs/shadow_repeat_verification_2026-10-31.json",
+    "sha256": "ae9f4c7082af497d1ac5faa11f5a08cd176ec79a154995539d3ebacdb9bb7c4e"
+  },
+  "unit_tests_run_this_change": 0,
+  "prior_tests_cover_new_modules": false,
+  "wrapper_tick_run": false,
+  "heartbeat_created": false,
+  "new_requests": 0,
+  "credentials_loaded": false,
+  "orders": 0,
+  "purchases_usd": 0,
+  "scheduler_installed": false,
+  "task_started": false,
+  "windows_xml_accepted_in_memory": true,
+  "installer_whatif_only": true,
+  "remover_whatif_only": true,
+  "pi_units_executed_or_verified": false,
+  "campaign_unchanged": true,
+  "paper_risk_file": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "next_work": "Focused offline wrapper/generator/deployment tests, then Windows schedule installation review"
+}

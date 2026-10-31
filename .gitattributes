@@ -200,3 +200,12 @@ config/shadow_repeat.json -text
 docs/shadow_repeat*.json -text
 docs/shadow_repeat*.md -text
 docs/research_data/before_shadow_repeat_verification_v1/* -text
+
+# Preserve schedule-template bytes and preparation fingerprints across hosts.
+deploy/**/*.ps1 -text
+deploy/**/*.in -text
+docs/shadow_schedule*.md -text
+docs/shadow_schedule*.json -text
+docs/observation_host_decision_*.json -text
+docs/research_data/before_shadow_schedule_v1/* -text
+docs/owner_responsibilities.md -text
