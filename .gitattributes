@@ -209,3 +209,6 @@ docs/shadow_schedule*.json -text
 docs/observation_host_decision_*.json -text
 docs/research_data/before_shadow_schedule_v1/* -text
 docs/owner_responsibilities.md -text
+tests/helpers/*.ps1 -text
+docs/windows_shadow_installation*.md -text
+docs/windows_shadow_installation*.json -text

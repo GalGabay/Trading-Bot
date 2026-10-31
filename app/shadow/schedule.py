@@ -135,7 +135,10 @@ def verify(review_directory, *, require_ready=True):
             or manifest.get('task_name') != TASK_NAME):
         raise ValueError("Reviewed task belongs to another repository or version")
     expected_sources = {str(p.resolve()) for p in source_paths()}
-    if {entry['path'] for entry in manifest['sources']} != expected_sources:
+    sources = manifest.get('sources')
+    if (not isinstance(sources,list) or len(sources) != len(expected_sources) or
+            any(not isinstance(entry,dict) or set(entry) != {'path','sha256'} for entry in sources) or
+            {entry['path'] for entry in sources} != expected_sources):
         raise ValueError("Reviewed source set differs")
     if manifest.get('platform') not in ('windows','linux'):
         raise ValueError('Unsupported review platform')
@@ -143,7 +146,10 @@ def verify(review_directory, *, require_ready=True):
     if manifest['platform'] == 'windows':
         names.append('windows-task.xml')
     expected_artifacts = {str(directory/name) for name in names}
-    if {entry['path'] for entry in manifest['artifacts']} != expected_artifacts:
+    artifacts = manifest.get('artifacts')
+    if (not isinstance(artifacts,list) or len(artifacts) != len(expected_artifacts) or
+            any(not isinstance(entry,dict) or set(entry) != {'path','sha256'} for entry in artifacts) or
+            {entry['path'] for entry in artifacts} != expected_artifacts):
         raise ValueError("Reviewed output paths differ")
     for entry in [*manifest['sources'],*manifest['artifacts']]:
         if reference(entry['path']) != entry:
@@ -159,8 +165,20 @@ def verify(review_directory, *, require_ready=True):
     if manifest['platform'] == 'windows':
         tree = ET.parse(directory/'windows-task.xml')
         ns={'t':'http://schemas.microsoft.com/windows/2004/02/mit/task'}
-        if tree.findtext('.//t:UserId',namespaces=ns) != manifest['windows_user_sid']:
-            raise ValueError("Reviewed Windows principal differs")
+        if manifest['windows_end_boundary'] != value['expires_at']:
+            raise ValueError("Reviewed Windows expiry differs from campaign")
+        expected = ET.fromstring(windows_xml(Path(manifest['campaign']),Path(manifest['reports']),
+            manifest['windows_user_sid'],value['expires_at'],directory))
+        # The original local StartBoundary remains fixed across later review
+        # dates. Every other XML element must match the current manifest/code.
+        start_path = './/t:CalendarTrigger/t:StartBoundary'
+        start = tree.findtext(start_path,namespaces=ns)
+        local_start = datetime.fromisoformat(start)
+        if local_start.tzinfo is not None or repeat.utc(local_start.astimezone()) >= repeat.utc(value['expires_at']):
+            raise ValueError("Reviewed Windows start boundary is invalid")
+        expected.find(start_path,ns).text = start
+        if ET.tostring(tree.getroot()) != ET.tostring(expected):
+            raise ValueError("Reviewed Windows task differs from manifest settings/paths")
     return dict(verified=True,task_name=TASK_NAME,repository=str(ROOT),
         campaign=manifest['campaign'],expires_at=value['expires_at'],installed=False,
         message='Local files/preflight only; no scheduler registration or requests')

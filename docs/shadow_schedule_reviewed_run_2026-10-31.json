@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-31",
+  "status": "verified_definition_ready_for_installation_approval_not_installed",
+  "verification": {
+    "path": "docs/shadow_schedule_verification_2026-10-31.json",
+    "sha256": "32890b6d32294e37cfc5215b7f32b5d47978064d77e4c0fa9d46223d5bacf013"
+  },
+  "approval_review": {
+    "path": "docs/windows_shadow_installation_review_2026-10-31.json",
+    "sha256": "6d0b9c1adc0820e2d35fa78356569a205c030c6b57a82d1f8dd30bc4e2697700"
+  },
+  "results": {
+    "path": "docs/shadow_schedule_validation_results_2026-10-31.md",
+    "sha256": "e83ba06d6803a79c73090c52e526a097226967c3f3a8d1570d8fc828367ca189"
+  },
+  "guide": {
+    "path": "docs/shadow_schedule.md",
+    "sha256": "f5dc97e41c9bd3c2e2b4e73e284bc0ff11c7d93075086eeb2ea0ae782a1ee31c"
+  },
+  "owner_checklist": {
+    "path": "docs/owner_responsibilities.md",
+    "sha256": "1d94cb9c704673539ea0b8273dc734682b2d9234fe4730abdcb14ad9247cdd7c"
+  },
+  "windows_preflight": {
+    "path": "data/reports/shadow_schedule_installation_review_2026_10_31/windows_preflight.log",
+    "sha256": "5c0f970c3b57644bb86880000313e651727f0303716fda9ed79cf68b34d4eed2"
+  },
+  "tests_passed": 272,
+  "new_tests": 65,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "original_draft_retained": true,
+  "approved_host": "windows",
+  "installation_approved": false,
+  "scheduler_installed": false,
+  "network_requests": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "real_campaign_unchanged": true,
+  "prior_research_steps_complete": true,
+  "next_owner_action": "Approve or decline the exact persistent Windows observer task",
+  "next_engineering_action": "After explicit approval, install the reviewed task and inspect its first invocation"
+}

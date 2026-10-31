@@ -101,9 +101,21 @@ def health(report_directory, *, stale_minutes=90):
         if hashlib.sha256(path.read_bytes()).hexdigest() != pointer["sha256"]:
             raise ValueError("Heartbeat checksum differs")
         event = read_json(path)
+        if (not isinstance(event,dict) or event.get("phase") not in ("started","finished") or
+                not isinstance(event.get("issues"),list) or
+                any(not isinstance(issue,str) for issue in event["issues"]) or
+                not isinstance(event.get("controller",{}),dict)):
+            raise ValueError("Malformed heartbeat event")
+        if event["phase"] == "finished":
+            if type(event.get("exit_code")) is not int or event["exit_code"] not in (0,2,3):
+                raise ValueError("Malformed heartbeat exit code")
+        elif event.get("exit_code") is not None:
+            raise ValueError("Started event must not claim a completion code")
         result["last_run"] = event
-        age = (utc(result["checked_at"]) - utc(event.get("finished_at", event["started_at"]))).total_seconds()
-        if age < -5:
+        started = utc(event["started_at"])
+        ended = utc(event["finished_at"]) if event["phase"] == "finished" else started
+        age = (utc(result["checked_at"]) - ended).total_seconds()
+        if age < -5 or ended < started or (started-utc(result["checked_at"])).total_seconds() > 5:
             result.update(issues=["heartbeat_clock_inconsistent"], exit_code=2)
         elif event["phase"] == "started":
             result.update(issues=["interrupted_or_stuck" if age > 600 else "tick_in_progress"],

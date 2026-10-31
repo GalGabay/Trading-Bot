@@ -9,6 +9,12 @@ orders or approve personal trading-risk limits.
 failure reporting. No new data request, credential load, purchase or order is
 needed for preparation. Historical research Steps 1-4 remain complete.
 
+**Current verification:** [272 offline tests passed](shadow_schedule_validation_results_2026-10-31.md),
+including 65 new schedule/deployment tests. The tested code produced the
+fresh `review_v2` task; in-memory XML validation and installer/remover
+`-WhatIf` checks passed. See [the exact installation review](windows_shadow_installation_for_review_2026-10-31.md).
+The earlier preparation record remains historical; no real task was registered.
+
 ## What you chose, and what remains to review
 
 | Option | What it means | Current decision |
@@ -67,7 +73,8 @@ be a separate explicit step after review of this concrete result.
 | [service template](../deploy/systemd/shadow-observer.service.in) / [timer template](../deploy/systemd/shadow-observer.timer.in) | Future Pi oneshot job and 30-minute/boot timer. No automatic retry/reset. |
 
 The exact current Windows XML, future Pi examples and checksum manifest are
-generated locally under `data/shadow/schedule/review/`. They contain actual
+generated locally under `data/shadow/schedule/review_v2/`. The original
+`review/` is an earlier draft; use the verified version explicitly. They contain actual
 paths and your Windows user SID, but no keys/passwords. Runtime files are
 ignored by Git; the generator, scripts and templates are in the repository.
 
@@ -119,14 +126,14 @@ directory and use:
 
 ```powershell
 $taskOwnerSid = [Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-.\.venv\Scripts\python.exe -m app.shadow.schedule prepare --windows-user $taskOwnerSid --review-directory data/shadow/schedule/review_v2
+.\.venv\Scripts\python.exe -m app.shadow.schedule prepare --windows-user $taskOwnerSid --review-directory data/shadow/schedule/review_v3
 ```
 
 Review the XML, manifest and scripts. `verify` and `-WhatIf` are local:
 
 ```powershell
-.\.venv\Scripts\python.exe -m app.shadow.schedule verify
-.\deploy\windows\Install-ShadowObserver.ps1 -WhatIf
+.\.venv\Scripts\python.exe -m app.shadow.schedule verify --review-directory data/shadow/schedule/review_v2
+.\deploy\windows\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v2 -WhatIf
 ```
 
 If using a versioned review directory, supply `--review-directory` to `verify`
@@ -142,7 +149,7 @@ appropriately; it never resets the campaign.
 **Only after the new code is verified and installation explicitly accepted:**
 
 ```powershell
-.\deploy\windows\Install-ShadowObserver.ps1
+.\deploy\windows\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v2
 ```
 
 This creates `TradingBot-ShadowObserver` for the current user. It does not
@@ -245,13 +252,13 @@ Task Scheduler XML parsing, review-fingerprint preflight and installer
 the corrected draft omits that declaration and is accepted. No task was
 registered. The earlier draft remains in the local preparation archive.
 
-**New wrapper/generator/deployment unit tests have not been added or run.**
-The previous 207 passing tests cover the observer/controller and regressions,
-not these new modules/scripts. The new wrapper has not made a tick or claimed
-a heartbeat. Linux/Pi validation remains due.
+**Current result: 272 tests pass**, including 65 new wrapper/generator/
+deployment cases. See the [verification report](shadow_schedule_validation_results_2026-10-31.md)
+for issues found and fixed. Native scheduler mutations in unit tests are
+mocked; actual registration/triggering and Linux/Pi operation remain unverified.
+No heartbeat has been created against the real campaign.
 
-**Next engineering:** focused offline wrapper/generator tests and install/remove
-safeguard checks, then present the verified Windows task for installation
-review. Your host choice is already resolved; no personal risk-file change
-is needed now. Before paper orders, the remaining strategy/account/operational
-reviews, personal risk approval and explicit paper activation still apply.
+**Next:** owner review of the [verified Windows task](windows_shadow_installation_for_review_2026-10-31.md).
+After approval, engineering installs it and inspects its first invocation and
+local reports. Host choice is resolved; personal risk-file changes are not
+needed for observation. Paper orders retain their separate approvals/gates.

@@ -1,5 +1,9 @@
 # Broader backtest: four-step progress tracker
 
+**Latest observation verification, October 31:** [272 tests pass](shadow_schedule_validation_results_2026-10-31.md).
+The Windows task is ready for explicit installation review, with no requests
+or registration during verification. Historical research Steps 1-4 remain complete.
+
 **Latest preparation, October 31:** [Windows-first scheduling](shadow_schedule.md)
 and local failure-reporting files are prepared; Windows host choice is resolved.
 New wrapper/deployment tests and schedule installation review are next. No

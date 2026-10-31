@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "tests_run": 272,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "modules": {
+    "tests.test_shadow_schedule": 65,
+    "tests.test_shadow_repeat": 70,
+    "tests.test_shadow_observer": 66,
+    "tests.test_market_data": 14,
+    "tests.test_features": 5,
+    "tests.test_strategy": 8,
+    "tests.test_holding_policy": 23,
+    "tests.test_daily_research": 21
+  },
+  "elapsed_seconds": 44.25,
+  "execution": [
+    {
+      "path": "app/shadow/config.py",
+      "sha256": "e7c59fdc5695730c94e15479a3f377426e504f26055aa91a50449ef49b307623"
+    },
+    {
+      "path": "app/shadow/data.py",
+      "sha256": "af5a3501b1980daff63e298cf5660571769b437a532536b51b1078b8d7a303f2"
+    },
+    {
+      "path": "app/shadow/observer.py",
+      "sha256": "faca7c815a26087fb02c391e1368b3f75ed25cae298e35452709833ba5e7d446"
+    },
+    {
+      "path": "app/shadow/store.py",
+      "sha256": "d609b804a10aae1bc7f8584e7725fad8e1b95a5518f0ba1ef4e6b393fb2a67f6"
+    },
+    {
+      "path": "app/ai/features.py",
+      "sha256": "f1e64f1ae7d364de2c906ed0a5c13a54380e7194d63261c4071c5b608fa7d8e0"
+    },
+    {
+      "path": "app/data/market_data.py",
+      "sha256": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb"
+    },
+    {
+      "path": "app/data/market_calendar.py",
+      "sha256": "06a1e20b4e34334e1a4789933490306f1c7facb20a2b8caa854413bb180e83ae"
+    },
+    {
+      "path": "app/strategy/base.py",
+      "sha256": "f101286b96db83b3d4e63de7ddf0c9499a44c5c97e5ac998b760dee48cc80268"
+    },
+    {
+      "path": "backtesting/daily_strategies.py",
+      "sha256": "3dc5d5028e67f3394074516b6d5c2ea6d0f1ae8cbf9a7a1d9d2f7584be7b76bb"
+    },
+    {
+      "path": "backtesting/holding_policy.py",
+      "sha256": "59d267c833caff38a376d3cb5a72993ee15cb71ee2563235685ede22d58624aa"
+    },
+    {
+      "path": "backtesting/research_policy.py",
+      "sha256": "e08b23c2c182507ea769b77044668caf5bea9a1607fc9377a6f2eae274bd5f3e"
+    },
+    {
+      "path": "app/broker/alpaca_client.py",
+      "sha256": "42fa66a350865351302dd5278ad80deff09e601fb3aef323bbb285fb02a72bc5"
+    },
+    {
+      "path": "app/shadow/repeat.py",
+      "sha256": "c57fec40bf0007db85d2757ba583995a04d1b9d772bbaabc1247475a87522712"
+    },
+    {
+      "path": "app/shadow/repeat_state.py",
+      "sha256": "6ba97d525f6867001f92662d9e1b0e863aef73321b0e83eeb1fabbb76509fb61"
+    },
+    {
+      "path": "app/shadow/schedule.py",
+      "sha256": "5242f3b63efa55bda239811418d83d052a622e877294f04b749d2e2ade88ff46"
+    },
+    {
+      "path": "app/shadow/scheduled.py",
+      "sha256": "44eb0a687cc6b5399ae0b004a3d98a8abf45f90936524e9031750bf85cbd7402"
+    },
+    {
+      "path": "deploy/windows/Invoke-ShadowObserver.ps1",
+      "sha256": "9c7e0ade9f19e7e8c1d1168131c2ef21dcd51d42b59f83be5a191a0d06a42926"
+    },
+    {
+      "path": "deploy/windows/Install-ShadowObserver.ps1",
+      "sha256": "cb2a0b7657fc7c03416dc26eea08635d12f85d61a30eb69bc378800302d3b4ed"
+    },
+    {
+      "path": "deploy/windows/Remove-ShadowObserver.ps1",
+      "sha256": "dad4828ad6ff1a58f078a3ce65e38af80c8c6495a7256ebd48fef3158f235ea0"
+    },
+    {
+      "path": "deploy/systemd/shadow-observer.service.in",
+      "sha256": "f8b3d24d5a18e68679a8d5fbf282e8c5184014b5cfe98de0aeea7a46fe9c135a"
+    },
+    {
+      "path": "deploy/systemd/shadow-observer.timer.in",
+      "sha256": "ffbacd290afb56868878a8ad920096e7c0bb4aa2d88cc885f6af3707b12490a7"
+    },
+    {
+      "path": "tests/test_shadow_schedule.py",
+      "sha256": "c84f1fe67238bfd2784dab606103dc8b94041b22ec73f56fa33738ff749c851a"
+    },
+    {
+      "path": "tests/test_shadow_repeat.py",
+      "sha256": "79d52f1952b74d45859065cd7a32072620670f4274d6c103d3879ca399782862"
+    },
+    {
+      "path": "tests/test_shadow_observer.py",
+      "sha256": "8e28da79f7dcf42add9cce8c06c0e7f537bd90a22b642043a40fa162769f5cca"
+    },
+    {
+      "path": "tests/test_market_data.py",
+      "sha256": "431c0873785d695fa0c3b81955813a4e455e41c73fc14f45313aecddfdaf41e1"
+    },
+    {
+      "path": "tests/test_features.py",
+      "sha256": "a58b85a9e616a23ea23e3c36fb000bcb578c2784576291a60432839fc5b97c7d"
+    },
+    {
+      "path": "tests/test_strategy.py",
+      "sha256": "16be3b0ccd328dce620b53585af421825698975f31985896f9286992ddff84a5"
+    },
+    {
+      "path": "tests/test_holding_policy.py",
+      "sha256": "2124d67ec58f790a2d5731d4faba61b7ce14a0cee243439c727cba0a8f412277"
+    },
+    {
+      "path": "tests/test_daily_research.py",
+      "sha256": "5bd2b4111221dd28023dd5c47300bf1b2d44f42b3f04cab890269d38c4506cbe"
+    },
+    {
+      "path": "tests/helpers/shadow_deployment_harness.ps1",
+      "sha256": "995703219367b76b674d917dc403e383d16811b3395156f70548caaa6886f44e"
+    },
+    {
+      "path": "config/shadow_repeat.json",
+      "sha256": "46fd87f1c5908c4ed9e3f2c47bb29b11ac941de98890eb1ac73ecfd1681b3441"
+    },
+    {
+      "path": "config/shadow_observer.json",
+      "sha256": "b333c7225239c1216c7e1aeb0c980b077bb8011be40fe52bc00e28ca4f4ddb8a"
+    }
+  ],
+  "network_requests": 0,
+  "credentials_loaded": false,
+  "real_scheduler_mutations": 0,
+  "date": "2026-10-31",
+  "new_schedule_tests": 65,
+  "prior_regression_tests": 207,
+  "windows_boundary_and_launcher_cases": 17,
+  "log": {
+    "path": "data/reports/shadow_schedule_tests_2026_10_31_v2/unittest.log",
+    "sha256": "8a11f867dfbe34011abb79e7f09cf5183a13d2c3c29e2411d73ea37a5b69c9bc"
+  },
+  "initial_run": {
+    "path": "data/reports/shadow_schedule_tests_2026_10_31_v1/summary.json",
+    "sha256": "0c4379bb345ba7249310a13785e069e2c48644579053ccd8f5387941efb109d3"
+  },
+  "initial_failures": 8,
+  "initial_errors": 1,
+  "previous_preparation": {
+    "path": "docs/shadow_schedule_preparation_2026-10-31.json",
+    "sha256": "498de55ca2976081c962695c389cfc2ebf1e10825b1922b69442880f39092b77"
+  },
+  "previous_versions_git_revision": "aee3b82eb4fb0c19ad2ba59c933182ee1585e598",
+  "fixes": [
+    "Reject duplicate manifest source/output records and bind full Windows XML to paths/settings/expiry",
+    "Validate heartbeat shapes, phases, completion codes and timestamp ordering",
+    "Resolve review directory before installer changes working directory"
+  ],
+  "real_registration_tested": false,
+  "raspberry_pi_verified": false
+}

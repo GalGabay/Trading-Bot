@@ -2,6 +2,13 @@
 
 ## Upcoming decisions in order
 
+**Ready for review, October 31:** [272 tests pass and the verified Windows task is presented](windows_shadow_installation_for_review_2026-10-31.md).
+Your next decision is whether to install this persistent **read-only observer**
+every 30 minutes plus sign-in. Windows is already chosen. It will not wake
+the PC, enable orders or change risk limits. No task is installed yet. After
+approval I can install it and inspect the first run. Paper-risk approval and
+paper-trial activation remain later decisions. Earlier status entries follow.
+
 **Host decision recorded, October 31:** start on **Windows**, including the
 intended initial paper trial later; consider Pi after stability and checks
 there. [Concrete schedule/files and instructions](shadow_schedule.md) are

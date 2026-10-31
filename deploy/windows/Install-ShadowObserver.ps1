@@ -5,6 +5,7 @@ $repositoryPath = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..\..')).
 if ([string]::IsNullOrWhiteSpace($ReviewDirectory)) {
     $ReviewDirectory = Join-Path $repositoryPath 'data\shadow\schedule\review'
 }
+$ReviewDirectory = (Resolve-Path -LiteralPath $ReviewDirectory).Path
 $pythonPath = Join-Path $repositoryPath '.venv\Scripts\python.exe'
 Push-Location -LiteralPath $repositoryPath
 try {

@@ -1,5 +1,11 @@
 # How far are we from paper trading?
 
+**Latest, October 31:** [272 offline tests pass](shadow_schedule_validation_results_2026-10-31.md)
+and [the exact Windows observer task is ready for installation review](windows_shadow_installation_for_review_2026-10-31.md).
+Nothing is installed; approval would enable recurring observation only.
+Personal risk approval and paper execution/account/recovery reviews remain
+separate. Historical Steps 1-4 remain complete; earlier entries follow.
+
 **Windows-first route recorded, October 31:** [scheduling files and failure reports](shadow_schedule.md)
 are prepared without installation. Windows is chosen for initial observation
 and the intended initial paper trial; Pi is a later migration after host checks.

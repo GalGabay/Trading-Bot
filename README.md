@@ -1,5 +1,13 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Latest verification, 2026-10-31:** [272 offline tests pass](docs/shadow_schedule_validation_results_2026-10-31.md),
+including 65 new schedule/heartbeat/deployment tests. Manifest consistency,
+malformed heartbeat handling and relative installer paths are fixed. The fresh
+Windows `review_v2` definition passed XML/preflight/`-WhatIf` checks. No task
+is installed. [The exact installation scope awaits owner approval](docs/windows_shadow_installation_for_review_2026-10-31.md).
+Windows host choice is resolved; paper activation remains separate. Earlier
+entries below are historical; research Steps 1-4 remain complete.
+
 **Latest preparation, 2026-10-31:** [Windows-first scheduling files and local failure reporting](docs/shadow_schedule.md)
 are prepared for review, with future Pi units and installation/removal commands.
 Windows is the selected initial observation/paper host; Pi migration is later.

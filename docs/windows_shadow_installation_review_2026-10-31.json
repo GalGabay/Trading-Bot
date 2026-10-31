@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-31",
+  "status": "awaiting_owner_installation_approval",
+  "task_name": "TradingBot-ShadowObserver",
+  "review_directory": "data/shadow/schedule/review_v2",
+  "manifest": {
+    "path": "data/shadow/schedule/review_v2/manifest.json",
+    "sha256": "6eaa6607a51a145824093ba6d7b9478d78f8ebcd2fa0ca29de72b747fb244a17"
+  },
+  "windows_xml": {
+    "path": "data/shadow/schedule/review_v2/windows-task.xml",
+    "sha256": "6f497ec12029f2427b6e78939d2a57aeb195105c850e8ea26327e9ae163d1aac"
+  },
+  "verification": {
+    "path": "docs/shadow_schedule_verification_2026-10-31.json",
+    "sha256": "32890b6d32294e37cfc5215b7f32b5d47978064d77e4c0fa9d46223d5bacf013"
+  },
+  "human_review": {
+    "path": "docs/windows_shadow_installation_for_review_2026-10-31.md",
+    "sha256": "facfa8bf862bfd25906feaf4b3ee471addec8967d9edd0cbbff68fc87f983846"
+  },
+  "interval_minutes": 30,
+  "extra_trigger": "current user sign-in",
+  "host": "this Windows PC",
+  "account": "current Windows user; InteractiveToken; LeastPrivilege",
+  "wake_computer": false,
+  "require_awake_online_logged_in": true,
+  "max_execution_minutes": 5,
+  "campaign_expires_at": "2026-11-30T11:58:23.080548+00:00",
+  "max_full_attempts": 22,
+  "max_calendar_attempts": 35,
+  "max_reserved_requests": 2500,
+  "operation": "read-only shadow observation and local heartbeat reports; no orders or purchases",
+  "install_command": ".\\deploy\\windows\\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v2",
+  "actual_preflight_exit_code": 0,
+  "preflight_log": {
+    "path": "data/reports/shadow_schedule_installation_review_2026_10_31/windows_preflight.log",
+    "sha256": "5c0f970c3b57644bb86880000313e651727f0303716fda9ed79cf68b34d4eed2"
+  },
+  "scheduler_installed": false,
+  "recurring_installation_approved": false,
+  "paper_activation_approved": false,
+  "network_requests_during_work": 0,
+  "credentials_loaded_during_work": false,
+  "real_scheduler_mutations": 0,
+  "real_campaign_unchanged": true,
+  "paper_risk_file": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "raspberry_pi_verified": false
+}
