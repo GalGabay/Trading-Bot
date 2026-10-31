@@ -7,7 +7,7 @@ phase when your decision is needed, see the
 
 The bot is paper-only. These limits are for a *paper account's equity*, not a
 percentage of household savings. The values in
-`config/risk_limits.example.json` are provisional development examples; they
+`config/risk_limits.example.json` are provisional b development examples; they
 are not a recommended allocation or a claim that a strategy is profitable.
 
 ## What each value means
