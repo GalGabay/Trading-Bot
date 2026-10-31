@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "collection_attempts": 1,
+  "protocol": {
+    "path": "docs/shadow_observer_collection_protocol_2026-10-31.json",
+    "sha256": "6e129a9688fdf42eda927a9cf31246887ffd17eaa90fcad77310b81a3b619e8a"
+  },
+  "verification": {
+    "path": "docs/shadow_observer_verification_2026-10-31.json",
+    "sha256": "ce2b3b22e76ec93c83b3f384708d6f5ec35c2c213252393b56168e7d7be3702a"
+  },
+  "observed_at": "2026-10-31T09:16:56.622558+00:00",
+  "session": "2026-10-30",
+  "next_session_open": "2026-11-02T14:30:00+00:00",
+  "data_requests": 43,
+  "request_audit": {
+    "path": "data/reports/shadow_first_collection_2026_10_31_v1/requests.json",
+    "sha256": "219d3f06c4a9b44362a98f9a02041e01ceee7ac6b2ecbe231d979d38c2b99c2c"
+  },
+  "bundle": {
+    "path": "data/shadow/bundles/e78ea3871f9345cb927ad1aa908a17cd96f26f9c7112935bf99e5433e96dac08.json",
+    "sha256": "b534187ba92f3d7312b4821437643fa114afcafb07a49bd1945f41dc4edf68da"
+  },
+  "report": {
+    "path": "data/shadow/reports/5466bdfc08b2139b0d876fed42c2d72324809ed32e3f0d1c679975f17452a379.json",
+    "sha256": "0e793cf600f4d7c035ef678ff99a199873f02c7b13b9add23f9346a4858a578d"
+  },
+  "markdown": {
+    "path": "data/shadow/reports/5466bdfc08b2139b0d876fed42c2d72324809ed32e3f0d1c679975f17452a379.md",
+    "sha256": "e604c12261065aef09027f78b077f9af58838f531c41c8d28e3e3edfe26a0821"
+  },
+  "journal": "data/shadow/observer.sqlite3",
+  "signal_counts": {
+    "HOLD": 17,
+    "BUY": 3
+  },
+  "proposed_buy_positions": 3,
+  "preview": {
+    "target": 0.7,
+    "ceiling": 0.85,
+    "current_stock_exposure": 0.0,
+    "planned_stock_exposure": 0.1040488919,
+    "reference_cash_after_planned_buys": 8959.511080999999,
+    "target_shortfall": 0.5959511081
+  },
+  "global_blockers": [],
+  "market_filter_on": true,
+  "blocked_symbols": [],
+  "incomplete_bars_excluded": 0,
+  "broker_account_requests": 0,
+  "orders": 0,
+  "simulated_fills": 0,
+  "purchases_usd": 0,
+  "heldout_2024_2025_files_read": 0,
+  "scheduler_installed": false,
+  "automatic_retry": false
+}

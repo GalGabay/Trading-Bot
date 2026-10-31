@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-31",
+  "status": "reviewed_one_observation_no_schedule",
+  "collection": {
+    "path": "data/reports/shadow_first_collection_2026_10_31_v1/summary.json",
+    "sha256": "608f66813eb42072dd66a69726c38684a745b80f510db1710c4a033b960a8114"
+  },
+  "supervision": {
+    "path": "data/reports/shadow_first_collection_2026_10_31_v1/supervision.json",
+    "sha256": "f83bdbdfdde031b1350e8c48809e76256b26f070c8f9da5857a40c3dffa2f568"
+  },
+  "offline_exact_replay": true,
+  "duplicate_record_was_idempotent": true,
+  "journal_rows": 1,
+  "input_bars": 4389,
+  "bars_per_stream": 209,
+  "stocks": 20,
+  "context_streams": 1,
+  "data_quality_warnings": 0,
+  "global_blockers": [],
+  "source_request_categories": {
+    "calendar": 1,
+    "assets": 21,
+    "bars": 21
+  },
+  "signals": {
+    "HOLD": 17,
+    "BUY": 3
+  },
+  "reference_cash": 10000,
+  "reference_positions": 0,
+  "planned_notional": 1040.488919,
+  "planned_exposure": 0.1040488919,
+  "proposed_positions": [
+    {
+      "symbol": "XOM",
+      "preview_quantity": 2,
+      "estimated_entry": 187.37235599999997,
+      "preview_notional": 374.74471199999994,
+      "proposed_stop": 175.62722729074437,
+      "binding_cap": "volatility_sizing"
+    },
+    {
+      "symbol": "WMT",
+      "preview_quantity": 3,
+      "estimated_entry": 123.58410599999999,
+      "preview_notional": 370.75231799999995,
+      "proposed_stop": 116.3801261179348,
+      "binding_cap": "volatility_sizing"
+    },
+    {
+      "symbol": "ABBV",
+      "preview_quantity": 1,
+      "estimated_entry": 294.99188899999996,
+      "preview_notional": 294.99188899999996,
+      "proposed_stop": 276.3929522944912,
+      "binding_cap": "volatility_sizing"
+    }
+  ],
+  "credentials_loaded_for_offline_review": false,
+  "credential_values_logged": false,
+  "broker_account_requests": 0,
+  "orders": 0,
+  "simulated_fills": 0,
+  "purchases_usd": 0,
+  "heldout_2024_2025_files_read": 0,
+  "scheduler_installed": false,
+  "paper_risk_configuration_unchanged": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "implementation": {
+    "app/shadow/config.py": "e7c59fdc5695730c94e15479a3f377426e504f26055aa91a50449ef49b307623",
+    "app/shadow/data.py": "af5a3501b1980daff63e298cf5660571769b437a532536b51b1078b8d7a303f2",
+    "app/shadow/observer.py": "faca7c815a26087fb02c391e1368b3f75ed25cae298e35452709833ba5e7d446",
+    "app/shadow/store.py": "d609b804a10aae1bc7f8584e7725fad8e1b95a5518f0ba1ef4e6b393fb2a67f6",
+    "app/ai/features.py": "f1e64f1ae7d364de2c906ed0a5c13a54380e7194d63261c4071c5b608fa7d8e0",
+    "app/data/market_data.py": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb",
+    "app/data/market_calendar.py": "06a1e20b4e34334e1a4789933490306f1c7facb20a2b8caa854413bb180e83ae",
+    "app/strategy/base.py": "f101286b96db83b3d4e63de7ddf0c9499a44c5c97e5ac998b760dee48cc80268",
+    "backtesting/daily_strategies.py": "3dc5d5028e67f3394074516b6d5c2ea6d0f1ae8cbf9a7a1d9d2f7584be7b76bb",
+    "backtesting/holding_policy.py": "59d267c833caff38a376d3cb5a72993ee15cb71ee2563235685ede22d58624aa",
+    "backtesting/research_policy.py": "e08b23c2c182507ea769b77044668caf5bea9a1607fc9377a6f2eae274bd5f3e",
+    "app/broker/alpaca_client.py": "42fa66a350865351302dd5278ad80deff09e601fb3aef323bbb285fb02a72bc5"
+  }
+}

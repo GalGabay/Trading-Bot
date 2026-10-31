@@ -59,15 +59,17 @@ class ShadowConfig:
 
     def __post_init__(self):
         import datetime
-        if not self.symbols or len(self.symbols) > 50 or len(set(self.symbols)) != len(self.symbols):
+        if not isinstance(self.symbols, tuple) or not self.symbols or len(self.symbols) > 50 or len(set(self.symbols)) != len(self.symbols):
             raise ValueError("Shadow watchlist requires 1-50 unique symbols")
         for value in self.symbols:
             symbol(value)
         if "SPY" in self.symbols:
             raise ValueError("SPY is market context, not an allocation candidate")
+        if not isinstance(self.history_start, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", self.history_start):
+            raise ValueError("history_start must be an explicit YYYY-MM-DD date")
         if datetime.date.fromisoformat(self.history_start) < datetime.date(2026, 1, 1):
             raise ValueError("Shadow warmup must not access the reserved 2024-2025 history")
-        if isinstance(self.reference_cash, bool) or not isfinite(self.reference_cash) or self.reference_cash <= 0:
+        if isinstance(self.reference_cash, bool) or not isinstance(self.reference_cash, (int, float)) or not isfinite(self.reference_cash) or self.reference_cash <= 0:
             raise ValueError("Reference cash must be positive and finite")
         for name in ("target_exposure", "entry_ceiling", "position_cap", "planned_stop_risk", "volatility_contribution"):
             value = getattr(self, name)

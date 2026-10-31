@@ -1,5 +1,13 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Current verified status, 2026-10-31:** [137 observer/regression tests pass and one collection is reviewed](docs/shadow_observer_validation_results_2026-10-31.md).
+The October 30 session produced three BUY / 17 HOLD signals and a 10.40%
+hypothetical flat-start allocation. No orders, fills or purchases occurred.
+View the saved report without another request:
+`.\.venv\Scripts\python.exe -m app.shadow.observer latest`.
+No repeat schedule is installed. Next: calendar-aware observation scheduling;
+previous research Steps 1-4 remain complete. Earlier entries are historical.
+
 **Current implementation, 2026-10-31: [daily shadow observer](docs/shadow_observer.md).**
 Records completed-session signals, data blockers and intended allocations
 without orders or hypothetical fills. Uses a separate journal, a configurable

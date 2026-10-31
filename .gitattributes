@@ -190,3 +190,7 @@ docs/subset_exposure_preference_*.json -text
 config/shadow_observer.json -text
 docs/shadow_observer*.json -text
 docs/shadow_observer.md -text
+
+# Preserve reviewed observer reports and historical guide/source snapshots.
+docs/shadow_observer*.md -text
+docs/research_data/before_shadow_observer_verification_v1/* -text

@@ -4,6 +4,12 @@ Updated October 30, 2026. These four steps describe the current broader-stock
 research work, not development phases 1-4. After each implementation response,
 report the current step and its remaining work until Step 4 is complete.
 
+**Current observation work:** [137 tests pass; one collection and offline review are complete](shadow_observer_validation_results_2026-10-31.md).
+The first report is saved with no orders/fills or purchases. Repeat scheduling
+is next and remains uninstalled. Personal risk approval is not needed for this
+observer. The completed research Steps 1-4 below remain complete; the new
+24-case follow-up has not run. Earlier observation status follows historically.
+
 **Current work, October 31: [shadow observer implemented](shadow_observer.md).**
 Prospective observation now has a separate no-order code path and journal.
 Syntax compilation and CLI help passed; unit tests, first data collection and

@@ -4,6 +4,18 @@ Implemented October 31, 2026. **This records observations, not broker orders or
 simulated trades.** Personal paper-risk approval is not needed to use it.
 The preceding research comparison's Steps 1-4 remain complete.
 
+## Current verified status
+
+[137 offline tests and the first collection are complete](shadow_observer_validation_results_2026-10-31.md).
+This includes 66 new observer tests and 71 regressions, with zero final
+failures/errors/skips. Tests exposed and fixed Windows SQLite connection
+cleanup. One authorized collection used 43 GETs and produced the October 30
+observation: three BUY / 17 HOLD, with a 10.40% hypothetical allocation from
+an unchanged flat reference book. Offline replay matched exactly; duplicate
+recording retained one journal row. There were no orders, simulated fills,
+purchases or account queries. No scheduler is installed; Pi remains unverified.
+Use `latest` below to inspect the saved report without another request.
+
 ## What you can see
 
 - Each watched stock's BUY, SELL, HOLD or UNAVAILABLE signal and explanation.
@@ -117,7 +129,7 @@ Only `collect` constructs the read-only transport and loads existing credentials
 through the central loader. No credential values are printed. It reads the
 existing environment/repository `.env`; do not paste keys into these commands.
 No dependency installation, subscription change or paper-risk approval is
-performed. This implementation task did not execute collection or inspect keys.
+performed. The first verified collection loaded credentials through this loader; no values were inspected or logged.
 
 ### View the latest saved observation
 
@@ -161,17 +173,15 @@ Ongoing collection/scheduling can follow the first reviewed run.
 
 ## Implementation status and next work
 
-Python syntax compilation and CLI help were checked. **Unit tests have not
-been added or run for this new module**, and no current-data collection,
-observation database, live shadow session or Pi run has been started here.
-This is an implementation, not a claim of verified ongoing operation.
+Focused verification and one current-data collection are now complete; see
+[the result and review](shadow_observer_validation_results_2026-10-31.md).
+The first implementation record and initial failing-test evidence remain
+historical, with original guide/source snapshots preserved separately.
 
-Next engineering work is focused offline tests for completed-bar selection,
-holidays/early closes, coverage/warmup, stale signals, references, allocation
-caps, transport limits/access stops and immutable/idempotent persistence.
-Then review a bounded first current-data collection and its output before
-setting a repeat schedule. You do not need personal paper-risk approvals for
-those no-order steps.
+Next engineering work is calendar-aware repeated observation with a visible
+status/report command, explicit request/run budgets and restart behaviour.
+Review the concrete schedule before installing an OS task or unattended
+service. You do not need personal paper-risk approvals for these no-order steps.
 
 Before actual paper orders, complete the broker fill ledger, protective exits,
 recovery and supervised loop, then review full paper-risk limits/account state

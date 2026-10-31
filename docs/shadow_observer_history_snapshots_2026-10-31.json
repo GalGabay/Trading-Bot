@@ -1,0 +1,39 @@
+{
+  "original_implementation": {
+    "path": "docs/shadow_observer_implementation_2026-10-31.json",
+    "sha256": "fd225f90fea82d74b9fac19641c0283d1a3e6a9897462acda594b6e02460e2ba"
+  },
+  "historical_only": true,
+  "snapshots": [
+    {
+      "original": {
+        "path": "docs/shadow_observer.md",
+        "sha256": "e48268912f09319f2db1ebf47aa2309ad079586f4b4ef72b8667cdf6a0c5f090"
+      },
+      "snapshot": {
+        "path": "docs/research_data/before_shadow_observer_verification_v1/shadow_observer.md.snapshot",
+        "sha256": "e48268912f09319f2db1ebf47aa2309ad079586f4b4ef72b8667cdf6a0c5f090"
+      }
+    },
+    {
+      "original": {
+        "path": "data/reports/shadow_observer_tests_2026_10_31_v1/executed_sources/app__shadow__config.py",
+        "sha256": "d33f702488ae9ebea79240b65c2b0fd23928770b6eac9d55789a3e576ea3d568"
+      },
+      "snapshot": {
+        "path": "docs/research_data/before_shadow_observer_verification_v1/app__shadow__config.py.snapshot",
+        "sha256": "d33f702488ae9ebea79240b65c2b0fd23928770b6eac9d55789a3e576ea3d568"
+      }
+    },
+    {
+      "original": {
+        "path": "data/reports/shadow_observer_tests_2026_10_31_v1/executed_sources/app__shadow__store.py",
+        "sha256": "2fa6a8134efd2aee00feb363ddd2bfa81ead70483cf1211a71500d2dc978d288"
+      },
+      "snapshot": {
+        "path": "docs/research_data/before_shadow_observer_verification_v1/app__shadow__store.py.snapshot",
+        "sha256": "2fa6a8134efd2aee00feb363ddd2bfa81ead70483cf1211a71500d2dc978d288"
+      }
+    }
+  ]
+}

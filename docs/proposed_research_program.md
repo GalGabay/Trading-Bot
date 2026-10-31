@@ -1,5 +1,18 @@
 # Proposed research program before the first paper trial
 
+**Current verified status, October 31, 2026: [observer tests and first collection complete](shadow_observer_validation_results_2026-10-31.md).**
+137 offline tests pass, including 66 new observer tests; Windows SQLite handle
+cleanup is fixed. One bounded read-only collection evaluated October 30 using
+43 GETs and 209 daily candles per stream. All 20 watched stocks plus SPY passed
+coverage checks. Three BUY / 17 HOLD signals produced a 10.40% hypothetical
+allocation from the unchanged flat $10,000 reference. Saved replay matches
+exactly and duplicate recording leaves one observation. No orders, fills,
+purchases, account requests or reserved-year candle reads occurred. No scheduler
+is installed and Pi execution remains unverified. Next: calendar-aware repeated
+observation and a concrete schedule, followed by the remaining paper-execution
+work. Personal risk approval is not needed for observation. Earlier entries
+below are historical; previous research Steps 1-4 remain complete.
+
 **Current implementation, October 31, 2026: [shadow observer](shadow_observer.md).**
 The daily no-order observer now records signals, data blockers and reference
 allocations toward a 70% target under an 85% entry ceiling. It uses a separate

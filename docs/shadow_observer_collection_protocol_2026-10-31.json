@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "status": "registered_before_execution",
+  "owner_request": "focused offline unit tests, then one reviewed read-only collection before arranging repeated observation",
+  "verification": {
+    "path": "docs/shadow_observer_verification_2026-10-31.json",
+    "sha256": "ce2b3b22e76ec93c83b3f384708d6f5ec35c2c213252393b56168e7d7be3702a"
+  },
+  "configuration": {
+    "path": "config/shadow_observer.json",
+    "sha256": "b333c7225239c1216c7e1aeb0c980b077bb8011be40fe52bc00e28ca4f4ddb8a"
+  },
+  "runner": {
+    "path": "data/reports/shadow_first_collection_2026_10_31_v1/run.py",
+    "sha256": "eaf29ad29f6abb9d7ebc8d90c12f78f310db0ae234b8e6969dadb5185aa00fe7"
+  },
+  "collection_attempt_limit": 1,
+  "max_requests": 110,
+  "request_timeout_seconds": 20,
+  "collector_budget_seconds": 180,
+  "supervisor_seconds": 240,
+  "feed": "iex",
+  "adjustment": "split",
+  "price_history_start": "2026-01-01",
+  "allowed_paths": [
+    "/v2/calendar",
+    "/v2/assets/{explicit_symbol}",
+    "/v2/stocks/bars"
+  ],
+  "account_positions_orders_billing_endpoints_allowed": false,
+  "automatic_retry": false,
+  "paid_fallback": false,
+  "purchases_usd": 0,
+  "paper_orders_allowed": false,
+  "scheduling_authorized": false
+}
