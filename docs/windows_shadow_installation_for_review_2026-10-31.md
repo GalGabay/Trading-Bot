@@ -1,6 +1,12 @@
 # Windows shadow task: installation approval
 
-Status: **verified and ready for owner review; not installed**.
+**Update: approved and installed.** See [the actual activation report](windows_shadow_activation_2026-10-31.md).
+The task runs under the signed-in `galga` account using `review_v3`. An owner
+mismatch correctly blocked the isolated-tool-account draft before registration.
+The following proposal/commands document the earlier review and are historical;
+use the activation/operating guide for the installed version.
+
+Original status: verified and ready for owner review; not yet installed.
 The owner selected Windows as the starting host. [272 tests passed](shadow_schedule_validation_results_2026-10-31.md),
 including 65 new scheduling/deployment tests. Actual registration/trigger
 operation has not happened, and Pi operation remains unverified.

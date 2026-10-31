@@ -1,5 +1,10 @@
 # Broader backtest: four-step progress tracker
 
+**Latest operation, October 31:** [Windows observer installed with approval](windows_shadow_activation_2026-10-31.md).
+The first Task Scheduler invocation and heartbeat passed without requests.
+The campaign/risk limits were not reset. Automatic triggers/new-session data
+remain to be observed. Historical research Steps 1-4 remain complete.
+
 **Latest observation verification, October 31:** [272 tests pass](shadow_schedule_validation_results_2026-10-31.md).
 The Windows task is ready for explicit installation review, with no requests
 or registration during verification. Historical research Steps 1-4 remain complete.

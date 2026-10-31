@@ -2,6 +2,13 @@
 
 ## Upcoming decisions in order
 
+**Installed October 31, after your approval:** [Windows observer activation](windows_shadow_activation_2026-10-31.md).
+The task runs as your normal `galga` account. Its first Task Scheduler
+invocation returned 0 with a healthy heartbeat and zero requests. Keep the
+PC awake, online and logged in when observation should run; VS Code can be
+closed. Host/schedule approval is complete. Personal risk approval and paper
+activation remain later. Earlier approval/preparation status below is historical.
+
 **Ready for review, October 31:** [272 tests pass and the verified Windows task is presented](windows_shadow_installation_for_review_2026-10-31.md).
 Your next decision is whether to install this persistent **read-only observer**
 every 30 minutes plus sign-in. Windows is already chosen. It will not wake
@@ -24,15 +31,15 @@ active. There is nothing you need to configure now.
 
 | When | Your responsibility | How |
 | --- | --- | --- |
-| Before installing repeated shadow observation | **Windows is chosen.** Review the proposed 30-minute/sign-in schedule, with the PC awake, online and logged in; approve installation only after focused verification. Personal trading-risk approval is not needed here. | The files are in [the Windows-first schedule guide](shadow_schedule.md). I verify the wrapper/task and present the concrete installation result for review. Pi setup is later. |
+| During the approved recurring observation campaign | **Windows installation is complete.** Keep the PC awake, online and logged in; review heartbeat/report issues. Personal trading-risk approval is not needed here. | Use [the installed-task guide](windows_shadow_activation_2026-10-31.md). The task checks every 30 minutes plus sign-in and ends with the existing campaign. Pi setup is later. |
 | Before any actual paper order | Choose or explicitly approve the complete personal paper-risk policy and account size. Research allocations and shadow sizing are not this approval. | Use [the risk workbook](risk_limit_decision_workbook.md); tell me the values or review `config/risk_limits.json` that I prepare. The current file remains unapproved. |
 | Before choosing the paper candidate | Review the exact strategy, stock scope, historical results, costs, losses and known limitations, and agree on the purpose/bounds of the paper trial. | I present the evidence and proposed frozen candidate; you review it. The earlier frozen backtest did not meet the return/drawdown goals, and shadow signals are not new profit evidence. Previously approved research choices do not need repeating. |
 | Before the first paper submission or unattended trading | Understand existing paper positions/open orders and review healthy startup recovery, fill accounting and protective-exit checks. | I build/check the workflows and present reports; you confirm the account state and resolve unexpected broker activity with guidance. |
 | When the verified paper workflow is ready | Explicitly decide to start the bounded paper trial, then monitor activity and incidents. | Review the concrete activation/configuration and authorize it. During the trial, review reports; record proposed risk/strategy changes and verify them before restart. |
 
-The Windows host choice is resolved. Paper activation also needs the reviews
-above. **The nearer review is the concrete Windows schedule;
-the risk-policy approval is later, before paper orders.** You do not need to
+The Windows host and installation decisions are resolved. Paper activation
+also needs the reviews above. **Risk-policy approval is later, before paper
+orders.** You do not need to
 edit Python or write new Markdown files to communicate these choices. ML
 research choices are only relevant if we pursue that optional path.
 

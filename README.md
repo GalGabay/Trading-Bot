@@ -1,5 +1,14 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Installed, 2026-10-31:** [Windows recurring observer and first invocation verified](docs/windows_shadow_activation_2026-10-31.md).
+Owner approved installation. The signed-in non-administrator `galga` account
+runs the Limited task every 30 minutes plus sign-in, without waking the PC.
+Its first requested Task Scheduler launch returned 0 with a healthy heartbeat,
+zero requests and unchanged campaign/risk settings. The corrected installed
+definition is `review_v3`; the earlier draft used the isolated tool account.
+Keep Windows awake, online and logged in; VS Code can close. Paper orders
+remain disabled. Historical Steps 1-4 are complete; older entries follow.
+
 **Latest verification, 2026-10-31:** [272 offline tests pass](docs/shadow_schedule_validation_results_2026-10-31.md),
 including 65 new schedule/heartbeat/deployment tests. Manifest consistency,
 malformed heartbeat handling and relative installer paths are fixed. The fresh

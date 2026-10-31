@@ -212,3 +212,6 @@ docs/owner_responsibilities.md -text
 tests/helpers/*.ps1 -text
 docs/windows_shadow_installation*.md -text
 docs/windows_shadow_installation*.json -text
+docs/windows_shadow_activation*.md -text
+docs/windows_shadow_activation*.json -text
+docs/windows_shadow_owner_correction*.json -text

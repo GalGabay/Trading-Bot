@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-31",
+  "owner_approval": "Approve Windows installation",
+  "scope": "Approved current-user Windows observer; no trades or purchases",
+  "earlier_draft": {
+    "path": "data/shadow/schedule/review_v2/manifest.json",
+    "sha256": "6eaa6607a51a145824093ba6d7b9478d78f8ebcd2fa0ca29de72b747fb244a17"
+  },
+  "corrected_draft": {
+    "path": "data/shadow/schedule/review_v3/manifest.json",
+    "sha256": "626db5b5bef947f3aa7d3b55eb46a3e4ac93e495b00a4cf5b42511752d1b87c7"
+  },
+  "old_process_account": "GALGABAY-LAPTOP\\CodexSandboxOffline",
+  "intended_signed_in_account": "GALGABAY-LAPTOP\\galga",
+  "intended_account_confirmed_non_administrator": true,
+  "guard_prevented_wrong_owner_registration": true,
+  "meaningful_xml_differences": [
+    "Two UserId fields corrected to actual signed-in owner",
+    "Review-directory argument updated to review_v3"
+  ],
+  "all_other_xml_unchanged": true,
+  "tested_sources_unchanged": true,
+  "installation_authorized": true,
+  "registration_attempted": false,
+  "orders_authorized": false
+}

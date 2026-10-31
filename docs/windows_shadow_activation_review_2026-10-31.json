@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-31",
+  "status": "owner_approved_windows_task_installed_first_invocation_verified",
+  "approval": "Approve Windows installation",
+  "activation": {
+    "path": "docs/windows_shadow_activation_2026-10-31.json",
+    "sha256": "f11a073124a0ab8010786833819c7e982115632d9add01cf7bbe3bce6baf8376"
+  },
+  "owner_correction": {
+    "path": "docs/windows_shadow_owner_correction_2026-10-31.json",
+    "sha256": "5c33bc7b797a7ca1699c3a50bf8e8fb3f924002b9dae9c59d50995c7d132c90f"
+  },
+  "operating_result": {
+    "path": "docs/windows_shadow_activation_2026-10-31.md",
+    "sha256": "dc0d4a6bb0aa0cc3a1ef1e94f61ce63c62437df7589063cab589e80908cb69f4"
+  },
+  "guide": {
+    "path": "docs/shadow_schedule.md",
+    "sha256": "f7a3790f736e079fa4c3863eb5b61339df857c365ececbae5404df16d478195c"
+  },
+  "owner_checklist": {
+    "path": "docs/owner_responsibilities.md",
+    "sha256": "8256c02d539a95ed8c5110aa08642d6f7121d3269255518521d2cb2af54aca12"
+  },
+  "verification": {
+    "path": "docs/shadow_schedule_verification_2026-10-31.json",
+    "sha256": "32890b6d32294e37cfc5215b7f32b5d47978064d77e4c0fa9d46223d5bacf013"
+  },
+  "source_changes": false,
+  "unit_tests_rerun": false,
+  "prior_tests_passed": 272,
+  "installed": true,
+  "owner_is_signed_in_non_administrator": true,
+  "first_task_result": 0,
+  "first_heartbeat_healthy": true,
+  "first_task_invocation_requested_manually": true,
+  "natural_timer_trigger_observed": false,
+  "requests_first_invocation": 0,
+  "orders": 0,
+  "purchases_usd": 0,
+  "personal_risk_config_changed": false,
+  "campaign_expiry_or_budgets_changed": false,
+  "prior_research_steps_complete": true,
+  "next_engineering": "Review automatic/new-session observations, then continue fill-ledger/protective-exit work in a separate checkout",
+  "owner_part": "Keep Windows awake/online/logged in for observation; personal risk and paper activation decisions remain later"
+}

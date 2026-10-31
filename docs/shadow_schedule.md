@@ -5,15 +5,17 @@ the intended initial paper-trading stage later. Pi migration comes after the
 workflow is stable and verified there. This decision does not enable paper
 orders or approve personal trading-risk limits.
 
-**Nothing is installed or running.** This task prepares the files and local
-failure reporting. No new data request, credential load, purchase or order is
-needed for preparation. Historical research Steps 1-4 remain complete.
+**Installed and enabled after owner approval:** [activation and first invocation](windows_shadow_activation_2026-10-31.md).
+The actual signed-in user `galga` runs the least-privilege `review_v3` task.
+Its first Task Scheduler invocation returned 0 with a healthy heartbeat and
+zero requests. Campaign/risk settings are unchanged and no paper orders are
+enabled. Historical research Steps 1-4 remain complete.
 
 **Current verification:** [272 offline tests passed](shadow_schedule_validation_results_2026-10-31.md),
 including 65 new schedule/deployment tests. The tested code produced the
 fresh `review_v2` task; in-memory XML validation and installer/remover
 `-WhatIf` checks passed. See [the exact installation review](windows_shadow_installation_for_review_2026-10-31.md).
-The earlier preparation record remains historical; no real task was registered.
+Those preflight-only records preceded installation. The installed owner correction and actual results are in the activation report.
 
 ## What you chose, and what remains to review
 
@@ -27,7 +29,7 @@ approved Windows paper trial after the execution workflow is ready, then
 possible migration to Pi. Moving hosts does not improve strategy returns.
 Stable operation and a profitable strategy are separate questions.
 
-The remaining schedule proposal is concrete:
+The installed schedule is:
 
 - **One check every 30 minutes, every day, plus a check when you sign in.**
 - Runs as your current Windows user, without administrator privileges or a
@@ -52,14 +54,12 @@ The remaining schedule proposal is concrete:
   requests**. The current Windows triggers expire with the campaign on
   **November 30, 2026**; no counters or duration reset automatically.
 
-After installation, VS Code can be closed: Task Scheduler starts the program
-independently. Before installation there is no watcher running in the background.
-Installing the task can cause an eligible/missed trigger to execute soon.
+VS Code can be closed: Task Scheduler starts the program independently.
+The task is now registered and can run while the PC is available.
 
-**Your host choice is already recorded.** After focused verification, review
-whether the 30-minute/sign-in schedule and awake/logged-in requirement suit
-you. No risk JSON needs changing for shadow observation. Installation will
-be a separate explicit step after review of this concrete result.
+**Host choice and installation approval are complete.** Keep Windows awake,
+online and logged in when observation should run. Personal risk approval is
+still a later decision before paper orders.
 
 ## Files prepared
 
@@ -73,8 +73,9 @@ be a separate explicit step after review of this concrete result.
 | [service template](../deploy/systemd/shadow-observer.service.in) / [timer template](../deploy/systemd/shadow-observer.timer.in) | Future Pi oneshot job and 30-minute/boot timer. No automatic retry/reset. |
 
 The exact current Windows XML, future Pi examples and checksum manifest are
-generated locally under `data/shadow/schedule/review_v2/`. The original
-`review/` is an earlier draft; use the verified version explicitly. They contain actual
+generated locally under `data/shadow/schedule/review_v3/` for the installed
+signed-in owner. `review/` and `review_v2/` are historical drafts; the latter
+used the isolated tool account. They contain actual
 paths and your Windows user SID, but no keys/passwords. Runtime files are
 ignored by Git; the generator, scripts and templates are in the repository.
 
@@ -94,10 +95,11 @@ Read health without network or credential access:
 | `2` | Failure: policy change, halted controller, blocked observation, interrupted/stuck run, unreadable report or launcher failure. |
 | `3` | Attention: no heartbeat yet, stale heartbeat, paused/finished/expired campaign, unavailable symbols or a tick currently in progress. |
 
-The first status check before any wrapper run should say
-`no_heartbeat_or_missing_artifact`, with exit 3. That is expected here: the
-new wrapper has not been started. The earlier reviewed controller tick is
-separate evidence, not a fabricated scheduler heartbeat.
+Before activation, a missing heartbeat correctly returned exit 3. The installed
+task now has a real successful wrapper heartbeat; use `scheduled status` to
+read its current result. The standalone repeat controller does not query OS
+registration; use `Get-ScheduledTask` for that, rather than inferring it from
+the controller's own `scheduler_installed_by_this_controller` field.
 
 New local artifacts under `data/shadow/schedule/`:
 
@@ -118,22 +120,22 @@ These are **local reports**, not email, Telegram or push notifications.
 Read them and the Windows task result. Nothing can send an immediate alert
 from a powered-off PC. No connection to a messaging service was created.
 
-## Windows installation instructions (for later, after verification/review)
+## Windows installation and future reinstallation
 
-Run from the repository root. The current review is already generated. To
-prepare a fresh review after code/config changes, choose a new empty review
-directory and use:
+Run from the repository root in your normal Windows terminal. The task is
+already installed; do not register it again. For a deliberately reviewed
+future version after stopping/removing the old task, choose a fresh directory:
 
 ```powershell
 $taskOwnerSid = [Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-.\.venv\Scripts\python.exe -m app.shadow.schedule prepare --windows-user $taskOwnerSid --review-directory data/shadow/schedule/review_v3
+.\.venv\Scripts\python.exe -m app.shadow.schedule prepare --windows-user $taskOwnerSid --review-directory data/shadow/schedule/review_v4
 ```
 
 Review the XML, manifest and scripts. `verify` and `-WhatIf` are local:
 
 ```powershell
-.\.venv\Scripts\python.exe -m app.shadow.schedule verify --review-directory data/shadow/schedule/review_v2
-.\deploy\windows\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v2 -WhatIf
+.\.venv\Scripts\python.exe -m app.shadow.schedule verify --review-directory data/shadow/schedule/review_v3
+.\deploy\windows\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v3 -WhatIf
 ```
 
 If using a versioned review directory, supply `--review-directory` to `verify`
@@ -146,10 +148,10 @@ fresh reviewed definition; it cannot silently switch an installed job's version.
 Runtime verification permits halted/finished state so it can report/recover
 appropriately; it never resets the campaign.
 
-**Only after the new code is verified and installation explicitly accepted:**
+**For an explicitly reviewed reinstallation after removing the existing task only:**
 
 ```powershell
-.\deploy\windows\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v2
+.\deploy\windows\Install-ShadowObserver.ps1 -ReviewDirectory data/shadow/schedule/review_v3
 ```
 
 This creates `TradingBot-ShadowObserver` for the current user. It does not
@@ -249,16 +251,20 @@ flat shadow-reference migration steps as a trading-state transfer.
 Preparation checks include Python compilation, PowerShell parsing, local
 Task Scheduler XML parsing, review-fingerprint preflight and installer
 `-WhatIf`. The first XML draft's encoding declaration was rejected by COM;
-the corrected draft omits that declaration and is accepted. No task was
-registered. The earlier draft remains in the local preparation archive.
+the corrected draft omits that declaration and is accepted. Those checks did
+not register a task. Approved installation followed afterward; the earlier
+draft remains in the local preparation archive.
 
 **Current result: 272 tests pass**, including 65 new wrapper/generator/
 deployment cases. See the [verification report](shadow_schedule_validation_results_2026-10-31.md)
 for issues found and fixed. Native scheduler mutations in unit tests are
-mocked; actual registration/triggering and Linux/Pi operation remain unverified.
-No heartbeat has been created against the real campaign.
+mocked. Actual Windows registration and a requested Task Scheduler launch
+are now checked; natural triggers, due collection and Pi operation remain
+to be observed. A real healthy heartbeat was saved without changing campaign
+state or making requests.
 
-**Next:** owner review of the [verified Windows task](windows_shadow_installation_for_review_2026-10-31.md).
-After approval, engineering installs it and inspects its first invocation and
-local reports. Host choice is resolved; personal risk-file changes are not
-needed for observation. Paper orders retain their separate approvals/gates.
+**Next:** review the first automatic trigger/new-session report, then continue
+paper fill-accounting and protective-exit engineering in a separate checkout,
+keeping this deployed revision stable. No further installation approval or
+personal risk-file change is needed for the approved observation campaign.
+Paper orders retain their separate approvals/gates.

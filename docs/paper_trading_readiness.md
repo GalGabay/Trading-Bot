@@ -1,5 +1,12 @@
 # How far are we from paper trading?
 
+**Installed October 31:** [the approved Windows observer is enabled](windows_shadow_activation_2026-10-31.md).
+The first real Task Scheduler launch returned 0 with a healthy heartbeat and
+zero requests. Next: inspect automatic/new-session observations and continue
+fill-accounting/protective-exit engineering in an isolated checkout. Personal
+risk approval, strategy/account/recovery review and paper activation are still
+later gates. This is read-only observation. Steps 1-4 remain complete.
+
 **Latest, October 31:** [272 offline tests pass](shadow_schedule_validation_results_2026-10-31.md)
 and [the exact Windows observer task is ready for installation review](windows_shadow_installation_for_review_2026-10-31.md).
 Nothing is installed; approval would enable recurring observation only.

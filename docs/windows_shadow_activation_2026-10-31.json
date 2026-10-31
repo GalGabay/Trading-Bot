@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-31",
+  "status": "installed_first_task_scheduler_invocation_passed",
+  "owner_approval": "Approve Windows installation",
+  "task_name": "TradingBot-ShadowObserver",
+  "registered_owner": "GALGABAY-LAPTOP\\galga",
+  "administrator": false,
+  "run_level": "Limited",
+  "registered_definition": {
+    "path": "data/reports/shadow_windows_activation_2026_10_31/registered-task.xml",
+    "sha256": "e23d1963798dd41ff7125e1c100558f4da9b27d7bf0a01c09a8a98389b2ba6fd"
+  },
+  "registration": {
+    "path": "data/reports/shadow_windows_activation_2026_10_31/registration.json",
+    "sha256": "13d5dc07cbbe50a8069ec097fce5c7ac595766a4c932048f247f4bcd04037157"
+  },
+  "registration_checks": {
+    "path": "data/reports/shadow_windows_activation_2026_10_31/registration_checks.json",
+    "sha256": "2e378232622894d3a4394a1dcd087b243e881e176d7c775f3a2f8d126610e42f"
+  },
+  "normalization": {
+    "path": "data/reports/shadow_windows_activation_2026_10_31/export_normalization.json",
+    "sha256": "110cfa28332d85237321e4215dd0854e150872bda534ee9409d49f33de18ec4b"
+  },
+  "installed_manifest": {
+    "path": "data/shadow/schedule/review_v3/manifest.json",
+    "sha256": "626db5b5bef947f3aa7d3b55eb46a3e4ac93e495b00a4cf5b42511752d1b87c7"
+  },
+  "owner_correction": {
+    "path": "docs/windows_shadow_owner_correction_2026-10-31.json",
+    "sha256": "5c33bc7b797a7ca1699c3a50bf8e8fb3f924002b9dae9c59d50995c7d132c90f"
+  },
+  "first_invocation": {
+    "path": "data/shadow/schedule/runs/20261031T173615-a930f0d8b0dc45ffa32464b35257c5db.finished.json",
+    "sha256": "7d6cfef5bb77adcb25308ec07cdf11f146da185cb7bb15f204f6ecba3093f393"
+  },
+  "health": {
+    "path": "data/reports/shadow_windows_activation_2026_10_31/health.json",
+    "sha256": "589c7d16be26783ca0cce8eafe2d4580a3b0ab5de85340b529900a9b25237458"
+  },
+  "controller": {
+    "path": "data/reports/shadow_windows_activation_2026_10_31/controller_status.json",
+    "sha256": "c6b7edd3560a349b6c0ac43c2b3dc0de8296be0cde9e8f1064b9e342aad2a286"
+  },
+  "first_run_time": "2026-10-31T19:36:12.0000000+02:00",
+  "first_run_result": 0,
+  "first_run_trigger": "explicit first invocation through Task Scheduler after registration",
+  "timer_trigger_observed": false,
+  "next_regular_run_at_capture": "2026-10-31T20:00:00.0000000+02:00",
+  "interval_minutes": 30,
+  "extra_trigger": "sign-in",
+  "wake_to_run": false,
+  "campaign_expires_at": "2026-11-30T11:58:23.080548+00:00",
+  "requests_first_run": 0,
+  "collection_attempts": 0,
+  "reserved_requests": 0,
+  "scheduler_installed": true,
+  "recurring_installation_approved": true,
+  "paper_activation_approved": false,
+  "orders": 0,
+  "purchases_usd": 0,
+  "paper_risk_file": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "tested_sources_changed": false,
+  "raspberry_pi_verified": false,
+  "prior_research_steps_complete": true
+}
