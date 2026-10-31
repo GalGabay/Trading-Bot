@@ -1,5 +1,18 @@
 # How far are we from paper trading?
 
+**Current implementation, October 31, 2026: [shadow observer](shadow_observer.md).**
+The daily no-order observer now records signals, data blockers and reference
+allocations toward a 70% target under an 85% entry ceiling. It uses a separate
+journal and JSON/Markdown reports, with saved-data observation or explicit
+bounded IEX collection. It does not create fills, carry virtual positions,
+report profit or access account/order endpoints. The 20-name default watchlist
+is an observation sample, not the historical 76-stock or approved paper universe.
+Personal risk approvals do not block observation. Syntax compilation and CLI
+help were checked; new unit tests and the first current-data run remain due.
+No observer session, background task or paper orders started in this task.
+Next: focused offline observer tests, then review one collection before repeat
+scheduling. Prior research Steps 1-4 remain complete. Earlier entries follow.
+
 **Current proposal, October 31, 2026:** the
 [entry, risk and capital-deployment follow-up](subset_followup_improvement_proposal_2026-10-31.md)
 is written for review: six fixed policies, 24 new attempts including four

@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-31",
+  "status": "implemented_pending_focused_unit_tests_and_first_collection",
+  "owner_request": "do next- shaddow observer!!",
+  "implementation": {
+    "app/shadow/config.py": "d33f702488ae9ebea79240b65c2b0fd23928770b6eac9d55789a3e576ea3d568",
+    "app/shadow/data.py": "af5a3501b1980daff63e298cf5660571769b437a532536b51b1078b8d7a303f2",
+    "app/shadow/observer.py": "faca7c815a26087fb02c391e1368b3f75ed25cae298e35452709833ba5e7d446",
+    "app/shadow/store.py": "2fa6a8134efd2aee00feb363ddd2bfa81ead70483cf1211a71500d2dc978d288",
+    "app/ai/features.py": "f1e64f1ae7d364de2c906ed0a5c13a54380e7194d63261c4071c5b608fa7d8e0",
+    "app/data/market_data.py": "3c72d9461052f91e0a40fe2ae9f1a0c3b765a88d5ad0e5ac1c227b6b595ab1fb",
+    "app/data/market_calendar.py": "06a1e20b4e34334e1a4789933490306f1c7facb20a2b8caa854413bb180e83ae",
+    "app/strategy/base.py": "f101286b96db83b3d4e63de7ddf0c9499a44c5c97e5ac998b760dee48cc80268",
+    "backtesting/daily_strategies.py": "3dc5d5028e67f3394074516b6d5c2ea6d0f1ae8cbf9a7a1d9d2f7584be7b76bb",
+    "backtesting/holding_policy.py": "59d267c833caff38a376d3cb5a72993ee15cb71ee2563235685ede22d58624aa",
+    "backtesting/research_policy.py": "e08b23c2c182507ea769b77044668caf5bea9a1607fc9377a6f2eae274bd5f3e",
+    "app/broker/alpaca_client.py": "42fa66a350865351302dd5278ad80deff09e601fb3aef323bbb285fb02a72bc5"
+  },
+  "configuration": {
+    "path": "config/shadow_observer.json",
+    "sha256": "b333c7225239c1216c7e1aeb0c980b077bb8011be40fe52bc00e28ca4f4ddb8a"
+  },
+  "guide": {
+    "path": "docs/shadow_observer.md",
+    "sha256": "e48268912f09319f2db1ebf47aa2309ad079586f4b4ef72b8667cdf6a0c5f090"
+  },
+  "target_exposure": 0.7,
+  "entry_ceiling": 0.85,
+  "default_watchlist_size": 20,
+  "watchlist_role": "operational_observation_sample_not_approved_paper_universe",
+  "strategy": "existing_daily_breakout_55_20_EMA200_signal_path",
+  "sizing_role": "reference_only_not_paper_approval",
+  "unit_tests_added": 0,
+  "unit_tests_run": 0,
+  "checks": [
+    "Python syntax compilation succeeded",
+    "CLI help succeeded",
+    "Configuration parses and guide links resolve"
+  ],
+  "market_data_collection_run": false,
+  "observer_session_started": false,
+  "scheduler_installed": false,
+  "credentials_loaded": false,
+  "broker_account_requests": 0,
+  "orders": 0,
+  "simulated_fills": 0,
+  "new_research_performance_runs": 0,
+  "purchases_usd": 0,
+  "paper_risk_file": {
+    "path": "config/risk_limits.json",
+    "sha256": "d5d0bcd92e9cebd8f001de9cc0bc36ce4c891a5531655091ed1e430cba3b6bf7"
+  },
+  "paper_risk_approved": false,
+  "prior_research_steps_1_to_4_complete": true,
+  "raspberry_pi_verified": false,
+  "next": "Focused offline tests, then one reviewed bounded collection before repeat scheduling"
+}

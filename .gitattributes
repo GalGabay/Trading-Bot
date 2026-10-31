@@ -185,3 +185,8 @@ tests/**/*.py -text
 docs/subset_followup_*.json -text
 docs/subset_followup_*.md -text
 docs/subset_exposure_preference_*.json -text
+
+# Preserve shadow configuration and observation implementation evidence.
+config/shadow_observer.json -text
+docs/shadow_observer*.json -text
+docs/shadow_observer.md -text

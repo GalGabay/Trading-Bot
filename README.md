@@ -1,5 +1,13 @@
 # AI-Enhanced Alpaca Trading Bot
 
+**Current implementation, 2026-10-31: [daily shadow observer](docs/shadow_observer.md).**
+Records completed-session signals, data blockers and intended allocations
+without orders or hypothetical fills. Uses a separate journal, a configurable
+observation watchlist and the 70% target/85% ceiling. No paper-risk approval is
+needed. Syntax/CLI checks completed; focused unit tests and the first data run
+are next. From the repository root: `.\.venv\Scripts\python.exe -m app.shadow.observer --help`.
+Prior research Steps 1-4 remain complete; earlier entries below are historical.
+
 **New proposal, 2026-10-31:** [six-policy follow-up for entries, risk and invested capital](docs/subset_followup_improvement_proposal_2026-10-31.md).
 Proposes a bounded 24-case study, a 70% stock target and an 85% ceiling as
 separate hypotheses. It also explains the shadow-to-paper engineering route.

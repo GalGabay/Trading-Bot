@@ -4,6 +4,13 @@ Updated October 30, 2026. These four steps describe the current broader-stock
 research work, not development phases 1-4. After each implementation response,
 report the current step and its remaining work until Step 4 is complete.
 
+**Current work, October 31: [shadow observer implemented](shadow_observer.md).**
+Prospective observation now has a separate no-order code path and journal.
+Syntax compilation and CLI help passed; unit tests, first data collection and
+ongoing scheduling remain due. No paper-risk approval is required for this
+observer. This work does not restart the completed research steps below, run
+the proposed 24-case follow-up or activate paper trading.
+
 **October 31 follow-up:** the [new proposal](subset_followup_improvement_proposal_2026-10-31.md)
 is prepared for review, with six policies and 24 proposed new attempts.
 It records the new deployment preference without changing the paper-risk

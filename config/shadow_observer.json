@@ -1,0 +1,12 @@
+{
+  "symbols": ["AAPL", "MSFT", "AMZN", "GOOGL", "META", "NVDA", "JPM", "JNJ", "XOM", "WMT", "CAT", "PG", "NEE", "COST", "HD", "UNH", "ABBV", "PEP", "KO", "V"],
+  "history_start": "2026-01-01",
+  "reference_cash": 10000.0,
+  "target_exposure": 0.70,
+  "entry_ceiling": 0.85,
+  "position_cap": 0.05,
+  "planned_stop_risk": 0.005,
+  "volatility_contribution": 0.01,
+  "max_positions": 20,
+  "close_settle_minutes": 15
+}
